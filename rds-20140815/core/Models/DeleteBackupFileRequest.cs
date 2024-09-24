@@ -10,36 +10,47 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteBackupFileRequest : TeaModel {
         /// <summary>
-        /// The backup set ID. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).
+        /// <para>The backup set ID. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If the instance runs SQL Server, only the ID of the backup set for an individual database is supported.</description></item>
+        /// <item><description>You can call the DescribeBackups operation to query the backup set ID.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > 
-        /// 
-        /// *   If the instance runs SQL Server, only the ID of the backup set for an individual database is supported.
-        /// 
-        /// *   You can call the DescribeBackups operation to query the backup set ID.
+        /// <b>Example:</b>
+        /// <para>29304****</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// Specifies whether to delete the backup sets that are generated before the specified point in time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <para>Specifies whether to delete the backup sets that are generated before the specified point in time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2011-06-11T16:00:00Z</para>
         /// </summary>
         [NameInMap("BackupTime")]
         [Validation(Required=false)]
         public string BackupTime { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-bp6wjk5******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testdb</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
@@ -50,7 +61,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.
+        /// <para>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

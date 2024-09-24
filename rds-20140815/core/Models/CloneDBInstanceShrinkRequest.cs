@@ -10,200 +10,273 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CloneDBInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the automatic payment feature for the new instance. Valid values:
+        /// <para>Specifies whether to enable the automatic payment feature for the new instance. Valid values:</para>
+        /// <ol>
+        /// <item><description><b>true</b>: enables the feature. You must make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b>: disables the feature. An unpaid order is generated.</description></item>
+        /// </ol>
+        /// <remarks>
+        /// <para> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// </remarks>
         /// 
-        /// 1.  **true**: enables the feature. You must make sure that your account balance is sufficient.
-        /// 2.  **false**: disables the feature. An unpaid order is generated.
-        /// 
-        /// >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The backup set ID.
+        /// <para>The backup set ID.</para>
+        /// <para>You can call the DescribeBackups operation to query the backup set ID.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the <b>BackupId</b> or <b>RestoreTime</b> parameters.</para>
+        /// </remarks>
         /// 
-        /// You can call the DescribeBackups operation to query the backup set ID.
-        /// 
-        /// >  You must specify at least one of the **BackupId** or **RestoreTime** parameters.
+        /// <b>Example:</b>
+        /// <para>902****</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The type of backup that is used to restore the data of the original instance. Valid values:
+        /// <para>The type of backup that is used to restore the data of the original instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>FullBackup</b></description></item>
+        /// <item><description><b>IncrementalBackup</b></description></item>
+        /// </list>
         /// 
-        /// *   **FullBackup**
-        /// *   **IncrementalBackup**
+        /// <b>Example:</b>
+        /// <para>FullBackup</para>
         /// </summary>
         [NameInMap("BackupType")]
         [Validation(Required=false)]
         public string BackupType { get; set; }
 
         /// <summary>
-        /// A reserved parameter. You do not need to specify this parameter.
+        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("BpeEnabled")]
         [Validation(Required=false)]
         public string BpeEnabled { get; set; }
 
         /// <summary>
-        /// An invalid parameter. You do not need to specify this parameter.
+        /// <para>An invalid parameter. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
         public bool? BurstingEnabled { get; set; }
 
         /// <summary>
-        /// The RDS edition of the instance. Valid values:
+        /// <para>The RDS edition of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Basic</b>: RDS Basic Edition.</description></item>
+        /// <item><description><b>HighAvailability</b>: RDS High-availability Edition.</description></item>
+        /// <item><description><b>AlwaysOn</b>: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</description></item>
+        /// <item><description><b>cluster</b>: RDS Cluster Edition for ApsaraDB RDS for MySQL.</description></item>
+        /// <item><description><b>Finance</b>: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).</description></item>
+        /// </list>
+        /// <para><b>Serverless instances</b></para>
+        /// <list type="bullet">
+        /// <item><description><b>serverless_basic</b>: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</description></item>
+        /// <item><description><b>serverless_standard</b>: RDS High-availability Edition for ApsaraDB RDS for MySQL</description></item>
+        /// <item><description><b>serverless_ha</b>: RDS High-availability Edition for ApsaraDB RDS for SQL Server</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You do not need to configure this parameter. The value of this parameter is the same as that of the original instance.</para>
+        /// </remarks>
         /// 
-        /// *   **Basic**: RDS Basic Edition.
-        /// *   **HighAvailability**: RDS High-availability Edition.
-        /// *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server.
-        /// *   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.
-        /// *   **Finance**: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).
-        /// 
-        /// **Serverless instances**
-        /// 
-        /// *   **serverless_basic**: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.
-        /// *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL
-        /// *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server
-        /// 
-        /// >  You do not need to configure this parameter. The value of this parameter is the same as that of the original instance.
+        /// <b>Example:</b>
+        /// <para>HighAvailability</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0c593ea1-3bea-11e9-b96b-88**********</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The instance type of the new instance. For information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
+        /// <para>The instance type of the new instance. For information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
+        /// <remarks>
+        /// <para>By default, the new instance uses the same instance type as the original primary instance.</para>
+        /// </remarks>
         /// 
-        /// > By default, the new instance uses the same instance type as the original primary instance.
+        /// <b>Example:</b>
+        /// <para>mysql.n1.micro.1</para>
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
+        /// <para>The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
+        /// <remarks>
+        /// <para>By default, the new instance has the same storage capacity as the original primary instance.</para>
+        /// </remarks>
         /// 
-        /// > By default, the new instance has the same storage capacity as the original primary instance.
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// The storage type of the new instance. Valid values:
+        /// <para>The storage type of the new instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>general_essd</b> (recommend): general Enterprise SSD (ESSD)</description></item>
+        /// <item><description><b>local_ssd</b>: local SSD</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
+        /// <item><description><b>cloud_essd</b>: performance level 1 (PL1) ESSD</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> Serverless instances support only PL1 ESSDs and general ESSDs.</para>
+        /// </remarks>
         /// 
-        /// *   **general_essd** (recommend): general Enterprise SSD (ESSD)
-        /// *   **local_ssd**: local SSD
-        /// *   **cloud_ssd**: standard SSD
-        /// *   **cloud_essd**: performance level 1 (PL1) ESSD
-        /// *   **cloud_essd2**: PL2 ESSD
-        /// *   **cloud_essd3**: PL3 ESSD
-        /// 
-        /// >  Serverless instances support only PL1 ESSDs and general ESSDs.
+        /// <b>Example:</b>
+        /// <para>cloud_essd</para>
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// The name of the database. If you specify more than one database, the value is in the following format: `Original database name 1,Original database name 2`.
+        /// <para>The name of the database. If you specify more than one database, the value is in the following format: <c>Original database name 1,Original database name 2</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test1,test2</para>
         /// </summary>
         [NameInMap("DbNames")]
         [Validation(Required=false)]
         public string DbNames { get; set; }
 
         /// <summary>
-        /// The ID of the dedicated cluster.
+        /// <para>The ID of the dedicated cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dhg-7a9xxxxxxxx</para>
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the release protection feature for the new instance. Valid values:
+        /// <para>Specifies whether to enable the release protection feature for the new instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false** (default)
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// The network type of the new instance. Valid values:
+        /// <para>The network type of the new instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>Classic</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>By default, the new instance has the same network type as the original primary instance.</para>
+        /// </remarks>
         /// 
-        /// *   **VPC**
-        /// *   **Classic**
-        /// 
-        /// > By default, the new instance has the same network type as the original primary instance.
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// A reserved parameter.
+        /// <para>A reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("IoAccelerationEnabled")]
         [Validation(Required=false)]
         public string IoAccelerationEnabled { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription.</description></item>
+        /// <item><description><b>Serverless</b>: serverless. This value is not supported for instances that run MariaDB. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of serverless ApsaraDB RDS for MySQL instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of serverless ApsaraDB RDS for SQL Server instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of serverless ApsaraDB RDS for PostgreSQL instances</a>.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Postpaid**: pay-as-you-go.
-        /// *   **Prepaid**: subscription.
-        /// *   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/411291.html), [Overview of serverless ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/604344.html), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/607742.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Postpaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// The unit that is used to calculate the billing cycle of the new instance. This parameter takes effect only when you select the subscription billing method for the new instance. Valid values:
+        /// <para>The unit that is used to calculate the billing cycle of the new instance. This parameter takes effect only when you select the subscription billing method for the new instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Year</b></description></item>
+        /// <item><description><b>Month</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you set the PayType parameter to <b>Prepaid</b>, you must specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// *   **Year**
-        /// *   **Month**
-        /// 
-        /// >  If you set the PayType parameter to **Prepaid**, you must specify this parameter.
+        /// <b>Example:</b>
+        /// <para>Year</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
 
         /// <summary>
-        /// The internal IP address of the new instance, which must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the **VPCId** and **VSwitchId** parameters.
+        /// <para>The internal IP address of the new instance, which must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.XX.XXX.69</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -214,86 +287,120 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to restore only the databases and tables that you specify. The value **1** specifies to restore only the specified databases and tables. If you do not want to restore only the specified databases or tables, you do not need to specify this parameter.
+        /// <para>Specifies whether to restore only the databases and tables that you specify. The value <b>1</b> specifies to restore only the specified databases and tables. If you do not want to restore only the specified databases or tables, you do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RestoreTable")]
         [Validation(Required=false)]
         public string RestoreTable { get; set; }
 
         /// <summary>
-        /// The point in time to which you want to restore data. The point in time must fall within the specified backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// <para>The point in time to which you want to restore data. The point in time must fall within the specified backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of the <b>BackupId</b> and <b>RestoreTime</b> parameters.</para>
+        /// </remarks>
         /// 
-        /// > You must specify at least one of the **BackupId** and **RestoreTime** parameters.
+        /// <b>Example:</b>
+        /// <para>2011-06-11T16:00:00Z</para>
         /// </summary>
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// The specifications for the serverless instance. You must specify this parameter only when you restore data to a new serverless instance.
-        /// 
-        /// >  This parameter is available only on the China site (aliyun.com).
+        /// <para>The specifications for the serverless instance. You must specify this parameter only when you restore data to a new serverless instance.</para>
+        /// <remarks>
+        /// <para> This parameter is available only on the China site (aliyun.com).</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
         public string ServerlessConfigShrink { get; set; }
 
         /// <summary>
-        /// The information about the database and table that you want to restore. The value is in the following format: `[{"type":"db","name":"Name of Database 1","newname":"New name of Database 1","tables":[{"type":"table","name":"Name of Table 1 in Database 1","newname":"New name of Table 1"},{"type":"table","name":"Name of Table 2 in Database 1","newname":"New name of Table 2"}]},{"type":"db","name":"Name of Database 2","newname":"New name of Database 2","tables":[{"type":"table","name":"Name of Table 1 in Database 2","newname":"New name of Table 1"},{"type":"table","name":"Name of Table 2 in Database 2","newname":"New name of Table 2"}]}]`
+        /// <para>The information about the database and table that you want to restore. The value is in the following format: <c>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Name of Database 1&quot;,&quot;newname&quot;:&quot;New name of Database 1&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 1 in Database 1&quot;,&quot;newname&quot;:&quot;New name of Table 1&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 2 in Database 1&quot;,&quot;newname&quot;:&quot;New name of Table 2&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Name of Database 2&quot;,&quot;newname&quot;:&quot;New name of Database 2&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 1 in Database 2&quot;,&quot;newname&quot;:&quot;New name of Table 1&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 2 in Database 2&quot;,&quot;newname&quot;:&quot;New name of Table 2&quot;}]}]</c></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;testdb1&quot;,&quot;newname&quot;:&quot;testdb1_new&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;testdb1table1&quot;,&quot;newname&quot;:&quot;testdb1table1_new&quot;}]}]</para>
         /// </summary>
         [NameInMap("TableMeta")]
         [Validation(Required=false)]
         public string TableMeta { get; set; }
 
         /// <summary>
-        /// The subscription duration of the new instance. Valid values:
+        /// <para>The subscription duration of the new instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If you set the <b>Period</b> parameter to <b>Year</b>, the value of the UsedTime parameter ranges from <b>1 to 3</b>.</description></item>
+        /// <item><description>If you set the <b>Period</b> parameter to <b>Month</b>, the value of the UsedTime parameter ranges from <b>1 to 9</b>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you set the PayType parameter to <b>Prepaid</b>, you must also specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// *   If you set the **Period** parameter to **Year**, the value of the UsedTime parameter ranges from **1 to 3**.
-        /// *   If you set the **Period** parameter to **Month**, the value of the UsedTime parameter ranges from **1 to 9**.
-        /// 
-        /// > If you set the PayType parameter to **Prepaid**, you must also specify this parameter.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
         public int? UsedTime { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC).
+        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <remarks>
+        /// <para> Make sure that the VPC belongs to the required region.</para>
+        /// </remarks>
         /// 
-        /// >  Make sure that the VPC belongs to the required region.
+        /// <b>Example:</b>
+        /// <para>vpc-uf6f7l4fg90xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch. The vSwitch must belong to the zone that is specified by **ZoneId**.
+        /// <para>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by <b>ZoneId</b>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set <b>InstanceNetworkType</b> to <b>VPC</b>, you must also specify this parameter.</description></item>
+        /// <item><description>If you specify the <b>ZoneSlaveId1</b> parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</description></item>
+        /// </list>
         /// 
-        /// *   If you set **InstanceNetworkType** to **VPC**, you must also specify this parameter.
-        /// *   If you specify the **ZoneSlaveId1** parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).
+        /// <b>Example:</b>
+        /// <para>vsw-uf6adz52c2pxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The zone ID of the primary instance. You can call the DescribeRegions operation to query the zone ID.
+        /// <para>The zone ID of the primary instance. You can call the DescribeRegions operation to query the zone ID.</para>
+        /// <remarks>
+        /// <para> Set this value to the zone ID of the original instance.</para>
+        /// </remarks>
         /// 
-        /// >  Set this value to the zone ID of the original instance.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-b</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// The zone ID of the secondary instance. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to the same value, the single-zone deployment method is used. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to different values, the multi-zone deployment method is used.
+        /// <para>The zone ID of the secondary instance. If you set the ZoneIdSlave1 parameter and the <b>ZoneId</b> parameter to the same value, the single-zone deployment method is used. If you set the ZoneIdSlave1 parameter and the <b>ZoneId</b> parameter to different values, the multi-zone deployment method is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-c</para>
         /// </summary>
         [NameInMap("ZoneIdSlave1")]
         [Validation(Required=false)]
         public string ZoneIdSlave1 { get; set; }
 
         /// <summary>
-        /// The zone ID of the logger instance. If you set the ZoneIdSlave2 parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used. If you set the ZoneIdSlave2 parameter to a different value from the **ZoneId** parameter, the multi-zone deployment method is used.
+        /// <para>The zone ID of the logger instance. If you set the ZoneIdSlave2 parameter to the same value as the <b>ZoneId</b> parameter, the single-zone deployment method is used. If you set the ZoneIdSlave2 parameter to a different value from the <b>ZoneId</b> parameter, the multi-zone deployment method is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-d</para>
         /// </summary>
         [NameInMap("ZoneIdSlave2")]
         [Validation(Required=false)]

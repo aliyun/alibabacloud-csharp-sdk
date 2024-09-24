@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLLogFilesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the returned audit log files.
+        /// <para>An array that consists of the returned audit log files.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,46 +21,65 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeSQLLogFilesResponseBodyItemsLogFile> LogFile { get; set; }
             public class DescribeSQLLogFilesResponseBodyItemsLogFile : TeaModel {
                 /// <summary>
-                /// The file name.
+                /// <para>The file name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>custinsxxxxx.csv</para>
                 /// </summary>
                 [NameInMap("FileID")]
                 [Validation(Required=false)]
                 public string FileID { get; set; }
 
                 /// <summary>
-                /// The download URL of the file. If the audit log file cannot be downloaded, this parameter is null.
+                /// <para>The download URL of the file. If the audit log file cannot be downloaded, this parameter is null.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></para>
                 /// </summary>
                 [NameInMap("LogDownloadURL")]
                 [Validation(Required=false)]
                 public string LogDownloadURL { get; set; }
 
                 /// <summary>
-                /// The time at which the last SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// <para>The time at which the last SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-05-24T07:00:00Z</para>
                 /// </summary>
                 [NameInMap("LogEndTime")]
                 [Validation(Required=false)]
                 public string LogEndTime { get; set; }
 
                 /// <summary>
-                /// The size of the audit log file. Unit: bytes.
+                /// <para>The size of the audit log file. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3000</para>
                 /// </summary>
                 [NameInMap("LogSize")]
                 [Validation(Required=false)]
                 public string LogSize { get; set; }
 
                 /// <summary>
-                /// The time at which the first SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// <para>The time at which the first SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-05-23T07:00:00Z</para>
                 /// </summary>
                 [NameInMap("LogStartTime")]
                 [Validation(Required=false)]
                 public string LogStartTime { get; set; }
 
                 /// <summary>
-                /// The status of the audit log file. Valid values:
+                /// <para>The status of the audit log file. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Success</b></description></item>
+                /// <item><description><b>Failed</b></description></item>
+                /// <item><description><b>Generating</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Success**
-                /// *   **Failed**
-                /// *   **Generating**
+                /// <b>Example:</b>
+                /// <para>Success</para>
                 /// </summary>
                 [NameInMap("LogStatus")]
                 [Validation(Required=false)]
@@ -71,28 +90,40 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

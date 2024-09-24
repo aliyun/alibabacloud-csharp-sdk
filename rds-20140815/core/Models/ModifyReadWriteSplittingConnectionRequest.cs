@@ -10,40 +10,57 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyReadWriteSplittingConnectionRequest : TeaModel {
         /// <summary>
-        /// The prefix of the read/write splitting endpoint. The prefix must be unique. It can be up to 30 characters in length and can contain lowercase letters and hyphens (-). It must start with a lowercase letter.
+        /// <para>The prefix of the read/write splitting endpoint. The prefix must be unique. It can be up to 30 characters in length and can contain lowercase letters and hyphens (-). It must start with a lowercase letter.</para>
+        /// <remarks>
+        /// <para>The default prefix consists of the name of the primary instance followed by the letters rw.</para>
+        /// </remarks>
         /// 
-        /// > The default prefix consists of the name of the primary instance followed by the letters rw.
+        /// <b>Example:</b>
+        /// <para>rm-m5xxxxxxxxrw.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The ID of the primary instance. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The ID of the primary instance. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The method that is used to assign read weights. Valid values:
+        /// <para>The method that is used to assign read weights. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Standard</b>: The system automatically assigns read weights to the primary and read-only instances based on the specifications of these instances.</description></item>
+        /// <item><description><b>Custom</b>: You must manually assign a read weight to each instance.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You must specify at least one of <b>MaxDelayTime</b> and <b>DistributionType</b>.</para>
+        /// </remarks>
         /// 
-        /// *   **Standard**: The system automatically assigns read weights to the primary and read-only instances based on the specifications of these instances.
-        /// *   **Custom**: You must manually assign a read weight to each instance.
-        /// 
-        /// > You must specify at least one of **MaxDelayTime** and **DistributionType**.
+        /// <b>Example:</b>
+        /// <para>Standard</para>
         /// </summary>
         [NameInMap("DistributionType")]
         [Validation(Required=false)]
         public string DistributionType { get; set; }
 
         /// <summary>
-        /// The latency threshold that is allowed by the read/write splitting link. Unit: seconds. If the latency on a read-only instance exceeds the specified threshold, the system no longer routes read requests to the read-only instance. If you do not specify this parameter, the default value of this parameter is retained.
+        /// <para>The latency threshold that is allowed by the read/write splitting link. Unit: seconds. If the latency on a read-only instance exceeds the specified threshold, the system no longer routes read requests to the read-only instance. If you do not specify this parameter, the default value of this parameter is retained.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If the primary instance runs SQL Server 2017 on RDS Cluster Edition, the <b>MaxDelayTime</b> parameter is not supported.</description></item>
+        /// <item><description>You must specify at least one of <b>MaxDelayTime</b> and <b>DistributionType</b>.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > *   If the primary instance runs SQL Server 2017 on RDS Cluster Edition, the **MaxDelayTime** parameter is not supported.
-        /// > *   You must specify at least one of **MaxDelayTime** and **DistributionType**.
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("MaxDelayTime")]
         [Validation(Required=false)]
@@ -58,7 +75,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The port that is associated with the read/write splitting endpoint.
+        /// <para>The port that is associated with the read/write splitting endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
@@ -73,16 +93,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The read weights of the primary instance and its read-only instances. A read weight must be a multiple of 100 and cannot exceed 10,000.
+        /// <para>The read weights of the primary instance and its read-only instances. A read weight must be a multiple of 100 and cannot exceed 10,000.</para>
+        /// <list type="bullet">
+        /// <item><description>For ApsaraDB RDS instances, the value of this parameter is in the following format: <c>{&quot;&lt;ID of the read-only instance &gt;&quot;:&lt;Weight&gt;,&quot;master&quot;:&lt;Weight&gt;,&quot;slave&quot;:&lt;Weight&gt;}</c>.</description></item>
+        /// <item><description>For ApsaraDB MyBase instances, the value of this parameter is in the following format: <c>[{&quot;instanceName&quot;:&quot;&lt;ID of the primary instance&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;},{&quot;instanceName&quot;:&quot;&lt;ID of the primary instance&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;slave&quot;},{&quot;instanceName&quot;:&quot;&lt;ID of the read-only instance&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;}]</c></description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter must be specified when <b>DistributionType</b> is set to <b>Custom</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>DistributionType</b> is set to <b>Standard</b>, this parameter is invalid.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   For ApsaraDB RDS instances, the value of this parameter is in the following format: `{"<ID of the read-only instance >":<Weight>,"master":<Weight>,"slave":<Weight>}`.
-        /// *   For ApsaraDB MyBase instances, the value of this parameter is in the following format: `[{"instanceName":"<ID of the primary instance>","weight":<Weight>,"role":"master"},{"instanceName":"<ID of the primary instance>","weight":<Weight>,"role":"slave"},{"instanceName":"<ID of the read-only instance>","weight":<Weight>,"role":"master"}]`
-        /// 
-        /// > 
-        /// 
-        /// *   This parameter must be specified when **DistributionType** is set to **Custom**.
-        /// 
-        /// *   If **DistributionType** is set to **Standard**, this parameter is invalid.
+        /// <b>Example:</b>
+        /// <para>{&quot;rm-bp1**********&quot;:800,&quot;master&quot;:400,&quot;slave&quot;:400}</para>
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

@@ -10,63 +10,75 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableZonesResponseBody : TeaModel {
         /// <summary>
-        /// The available zones in the region.
+        /// <para>The available zones in the region.</para>
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
         public List<DescribeAvailableZonesResponseBodyAvailableZones> AvailableZones { get; set; }
         public class DescribeAvailableZonesResponseBodyAvailableZones : TeaModel {
             /// <summary>
-            /// The region ID.
+            /// <para>The region ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The database engines that are available for purchase.
+            /// <para>The database engines that are available for purchase.</para>
             /// </summary>
             [NameInMap("SupportedEngines")]
             [Validation(Required=false)]
             public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> SupportedEngines { get; set; }
             public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines : TeaModel {
                 /// <summary>
-                /// The database engine of the instance.
+                /// <para>The database engine of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MySQL</para>
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The database engine versions that are available for purchase.
+                /// <para>The database engine versions that are available for purchase.</para>
                 /// </summary>
                 [NameInMap("SupportedEngineVersions")]
                 [Validation(Required=false)]
                 public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions> SupportedEngineVersions { get; set; }
                 public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions : TeaModel {
                     /// <summary>
-                    /// The RDS editions that are available that are available for purchase.
+                    /// <para>The RDS editions that are available that are available for purchase.</para>
                     /// </summary>
                     [NameInMap("SupportedCategorys")]
                     [Validation(Required=false)]
                     public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> SupportedCategorys { get; set; }
                     public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys : TeaModel {
                         /// <summary>
-                        /// The RDS edition of the instance.
+                        /// <para>The RDS edition of the instance.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>HighAvailability</para>
                         /// </summary>
                         [NameInMap("Category")]
                         [Validation(Required=false)]
                         public string Category { get; set; }
 
                         /// <summary>
-                        /// The storage types that are available for purchase.
+                        /// <para>The storage types that are available for purchase.</para>
                         /// </summary>
                         [NameInMap("SupportedStorageTypes")]
                         [Validation(Required=false)]
                         public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes> SupportedStorageTypes { get; set; }
                         public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes : TeaModel {
                             /// <summary>
-                            /// The storage type of the instance.
+                            /// <para>The storage type of the instance.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>local_ssd</para>
                             /// </summary>
                             [NameInMap("StorageType")]
                             [Validation(Required=false)]
@@ -77,7 +89,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                     /// <summary>
-                    /// The database engine version.
+                    /// <para>The database engine version.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>8.0</para>
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -88,7 +103,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// The zone ID.
+            /// <para>The zone ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-e</para>
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
@@ -97,7 +115,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4256E149-C3C4-4FA7-BDEA-13CA415E8763</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

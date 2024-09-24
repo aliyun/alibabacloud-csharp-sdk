@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DetachWhitelistTemplateToInstanceRequest : TeaModel {
         /// <summary>
-        /// The instance name.
+        /// <para>The instance name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-bp191w771k******</para>
         /// </summary>
         [NameInMap("InsName")]
         [Validation(Required=false)]
         public string InsName { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID. For more information about resource groups, see Resource groups.
+        /// <para>The resource group ID. For more information about resource groups, see Resource groups.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmz3kjr******</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -41,9 +49,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.
+        /// <para>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>412</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

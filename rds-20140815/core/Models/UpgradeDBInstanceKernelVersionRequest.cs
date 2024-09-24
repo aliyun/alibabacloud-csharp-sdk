@@ -10,12 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBInstanceKernelVersionRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If your instance runs PostgreSQL, you must make sure that the instance uses <b>cloud disks</b>. If the instance uses local disks, you must call the <a href="https://help.aliyun.com/document_detail/26230.html">RestartDBInstance</a> operation to restart the instance. The system automatically updates the minor engine version of the instance to the latest version during the restart.</description></item>
+        /// <item><description>If your instance runs SQL Server, you must make sure that the instance runs SQL Server 2019.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > *   If your instance runs PostgreSQL, you must make sure that the instance uses **cloud disks**. If the instance uses local disks, you must call the [RestartDBInstance](https://help.aliyun.com/document_detail/26230.html) operation to restart the instance. The system automatically updates the minor engine version of the instance to the latest version during the restart.
-        /// > *   If your instance runs SQL Server, you must make sure that the instance runs SQL Server 2019.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-bpxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -34,41 +39,55 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The update time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// <para>The update time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>This parameter takes effect only when you set <b>UpgradeTime</b> to <b>SpecifyTime</b>.</para>
+        /// </remarks>
         /// 
-        /// > This parameter takes effect only when you set **UpgradeTime** to **SpecifyTime**.
+        /// <b>Example:</b>
+        /// <para>2020-01-15T00:00:00Z</para>
         /// </summary>
         [NameInMap("SwitchTime")]
         [Validation(Required=false)]
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// The minor engine version to which you want to update. Format:
+        /// <para>The minor engine version to which you want to update. Format:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>PostgreSQL</b>: <c>rds_postgres_&lt;Major engine version&gt;00_&lt;Minor engine version&gt;</c>. Example: <c>rds_postgres_1200_20200830</c>.</para>
+        /// </description></item>
+        /// <item><description><para><b>MySQL</b>: <c>&lt;RDS edition and MySQL version&gt;_&lt;Minor engine version&gt;</c>. Examples: <c>rds_20200229</c>, <c>xcluster_20200229</c>, and <c>xcluster80_20200229</c>. The following RDS editions and MySQL versions are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><b>rds</b>: RDS Basic Edition or RDS High-availability Edition</description></item>
+        /// <item><description><b>xcluster</b>: MySQL 5.7 on RDS Enterprise Edition</description></item>
+        /// <item><description><b>xcluster80</b>: MySQL 8.0 on RDS Enterprise Edition</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>SQLServer</b>: <c>&lt;Minor engine version&gt;</c>. Example: <c>15.0.4073.23</c>.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>If you do not specify this parameter, the instance is updated to the latest minor engine version.</para>
+        /// <remarks>
+        /// <para> For more information about minor engine versions, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes of AliPG</a>, <a href="https://help.aliyun.com/document_detail/96060.html">Release notes of AliSQL</a>, and <a href="https://help.aliyun.com/document_detail/213577.html">Release notes of minor engine versions of ApsaraDB RDS for SQL Server</a>.</para>
+        /// </remarks>
         /// 
-        /// *   **PostgreSQL**: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1200_20200830`.
-        /// 
-        /// *   **MySQL**: `<RDS edition and MySQL version>_<Minor engine version>`. Examples: `rds_20200229`, `xcluster_20200229`, and `xcluster80_20200229`. The following RDS editions and MySQL versions are supported:
-        /// 
-        ///     *   **rds**: RDS Basic Edition or RDS High-availability Edition
-        ///     *   **xcluster**: MySQL 5.7 on RDS Enterprise Edition
-        ///     *   **xcluster80**: MySQL 8.0 on RDS Enterprise Edition
-        /// 
-        /// *   **SQLServer**: `<Minor engine version>`. Example: `15.0.4073.23`.
-        /// 
-        /// If you do not specify this parameter, the instance is updated to the latest minor engine version.
-        /// 
-        /// >  For more information about minor engine versions, see [Release notes of AliPG](https://help.aliyun.com/document_detail/126002.html), [Release notes of AliSQL](https://help.aliyun.com/document_detail/96060.html), and [Release notes of minor engine versions of ApsaraDB RDS for SQL Server](https://help.aliyun.com/document_detail/213577.html).
+        /// <b>Example:</b>
+        /// <para>xcluster80_20210305</para>
         /// </summary>
         [NameInMap("TargetMinorVersion")]
         [Validation(Required=false)]
         public string TargetMinorVersion { get; set; }
 
         /// <summary>
-        /// The time when the update takes effect. Valid values:
+        /// <para>The time when the update takes effect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediate</b> (default): The update takes effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: The update takes effect during the maintenance window that you specify. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.</description></item>
+        /// <item><description><b>SpecifyTime</b>: The update takes effect at the point in time you specify.</description></item>
+        /// </list>
         /// 
-        /// *   **Immediate** (default): The update takes effect immediately.
-        /// *   **MaintainTime**: The update takes effect during the maintenance window that you specify. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
-        /// *   **SpecifyTime**: The update takes effect at the point in time you specify.
+        /// <b>Example:</b>
+        /// <para>Immediate</para>
         /// </summary>
         [NameInMap("UpgradeTime")]
         [Validation(Required=false)]

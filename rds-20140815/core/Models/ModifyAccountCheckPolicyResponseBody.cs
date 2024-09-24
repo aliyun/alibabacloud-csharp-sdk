@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyAccountCheckPolicyResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>866F5EB8-4650-4061-87F0-379F6F968BCE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

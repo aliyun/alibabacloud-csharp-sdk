@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class StopDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A417FB41-A3D9-464E-AD0A-C7FE05C72E98</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,42 +10,52 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchDBInstanceHARequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The time when the switching takes effect. Valid values:
+        /// <para>The time when the switching takes effect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediate</b>: The switching immediately takes effect.</description></item>
+        /// <item><description><b>MaintainTime</b>: The switching takes effect during the maintenance time.</description></item>
+        /// </list>
+        /// <para>Default value: <b>Immediate</b>.</para>
         /// 
-        /// *   **Immediate**: The switching immediately takes effect.
-        /// *   **MaintainTime**: The switching takes effect during the maintenance time.
-        /// 
-        /// Default value: **Immediate**.
+        /// <b>Example:</b>
+        /// <para>Immediate</para>
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable forcible switching. Valid values:
+        /// <para>Specifies whether to enable forcible switching. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Yes</b></description></item>
+        /// <item><description><b>No</b></description></item>
+        /// </list>
+        /// <para>Default value: <b>No</b>.</para>
         /// 
-        /// *   **Yes**
-        /// *   **No**
-        /// 
-        /// Default value: **No**.
+        /// <b>Example:</b>
+        /// <para>No</para>
         /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public string Force { get; set; }
 
         /// <summary>
-        /// The secondary instance ID. You can call the DescribeDBInstanceHAConfig operation to query the secondary instance ID.
+        /// <para>The secondary instance ID. You can call the DescribeDBInstanceHAConfig operation to query the secondary instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>349054</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

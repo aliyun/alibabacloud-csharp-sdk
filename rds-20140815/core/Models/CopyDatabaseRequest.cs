@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CopyDatabaseRequest : TeaModel {
         /// <summary>
-        /// The instance name.
+        /// <para>The instance name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5******</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// Destination database name.
+        /// <para>Destination database name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>db2***</para>
         /// </summary>
         [NameInMap("DstDBName")]
         [Validation(Required=false)]
@@ -28,14 +34,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Reserve account.
+        /// <para>Reserve account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ReserveAccount")]
         [Validation(Required=false)]
         public int? ReserveAccount { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy*****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -50,7 +62,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Source database name.
+        /// <para>Source database name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>db1***</para>
         /// </summary>
         [NameInMap("SrcDBName")]
         [Validation(Required=false)]

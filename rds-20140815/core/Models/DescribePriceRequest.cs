@@ -10,89 +10,121 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePriceRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ETnLKlblzczshOTUbOCz*****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The commodity code of the instance. Valid values:
+        /// <para>The commodity code of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>bards</b>: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).</description></item>
+        /// <item><description><b>rds</b> (default): The instance is a subscription primary instance. This value is available on the China site (aliyun.com).</description></item>
+        /// <item><description><b>rords</b>: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).</description></item>
+        /// <item><description><b>rds_rordspre_public_cn</b>: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).</description></item>
+        /// <item><description><b>bards_intl</b>: The instance is a pay-as-you-go primary instance. This value is available at the international site (alibabacloud.com).</description></item>
+        /// <item><description><b>rds_intl</b>: The instance is a subscription primary instance. This value is available at the international site (alibabacloud.com).</description></item>
+        /// <item><description><b>rords_intl</b>: The instance is a pay-as-you-go read-only instance. This value is available at the international site (alibabacloud.com).</description></item>
+        /// <item><description><b>rds_rordspre_public_intl</b>: The instance is a subscription read-only instance. This value is available on the international site (alibabacloud.com).</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you want to query the price of a read-only instance, you must specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// *   **bards**: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).
-        /// *   **rds** (default): The instance is a subscription primary instance. This value is available on the China site (aliyun.com).
-        /// *   **rords**: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).
-        /// *   **rds_rordspre_public_cn**: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).
-        /// *   **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available at the international site (alibabacloud.com).
-        /// *   **rds_intl**: The instance is a subscription primary instance. This value is available at the international site (alibabacloud.com).
-        /// *   **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available at the international site (alibabacloud.com).
-        /// *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance. This value is available on the international site (alibabacloud.com).
-        /// 
-        /// >  If you want to query the price of a read-only instance, you must specify this parameter.
+        /// <b>Example:</b>
+        /// <para>rds</para>
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
+        /// <para>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rds.mysql.s1.small</para>
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The ID of the instance for which you want to change the specifications or the instance that you want to renew.
+        /// <para>The ID of the instance for which you want to change the specifications or the instance that you want to renew.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you want to query the price of a specification change order or a renewal order, you must specify this parameter.</description></item>
+        /// <item><description>If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > *   If you want to query the price of a specification change order or a renewal order, you must specify this parameter.
-        /// > *   If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.
+        /// <b>Example:</b>
+        /// <para>rm-*****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The storage capacity of the instance. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
+        /// <para>The storage capacity of the instance. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// The storage type of the instance. Valid values:
+        /// <para>The storage type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>local_ssd</b>: local SSD</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
+        /// <item><description><b>cloud_essd</b>: PL1 ESSD</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+        /// </list>
         /// 
-        /// *   **local_ssd**: local SSD
-        /// *   **cloud_ssd**: standard SSD
-        /// *   **cloud_essd**: PL1 ESSD
-        /// *   **cloud_essd2**: PL2 ESSD
-        /// *   **cloud_essd3**: PL3 ESSD
+        /// <b>Example:</b>
+        /// <para>local_ssd</para>
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// The information about the node.
+        /// <para>The information about the node.</para>
+        /// <remarks>
+        /// <para> This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("DBNode")]
         [Validation(Required=false)]
         public List<DescribePriceRequestDBNode> DBNode { get; set; }
         public class DescribePriceRequestDBNode : TeaModel {
             /// <summary>
-            /// The instance type of the node.
+            /// <para>The instance type of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mysql.n2.small.xc</para>
             /// </summary>
             [NameInMap("ClassCode")]
             [Validation(Required=false)]
             public string ClassCode { get; set; }
 
             /// <summary>
-            /// The zone ID of the node.
+            /// <para>The zone ID of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-j</para>
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
@@ -101,51 +133,66 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The database engine of the instance. Valid values:
+        /// <para>The database engine of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>SQLServer</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>MariaDB</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **MySQL**
-        /// *   **SQLServer**
-        /// *   **PostgreSQL**
-        /// *   **MariaDB**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance.
+        /// <para>The database engine version of the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values if you set Engine to <b>MySQL</b>: <b>5.5</b>, <b>5.6</b>, <b>5.7</b>, and <b>8.0</b></description></item>
+        /// <item><description>Valid values if you set Engine to <b>SQLServer</b>: <b>08r2_ent_ha</b> (cloud disks, discontinued), <b>2008r2</b>(local disks, discontinued), <b>2012</b> (SQL Server EE Basic), <b>2012_ent_ha</b>, <b>2012_std_ha</b>, <b>2012_web</b>, <b>2016_ent_ha</b>, <b>2016_std_ha</b>, <b>2016_web</b>, <b>2017_ent</b>, <b>2017_std_ha</b>, <b>2017_web</b>, <b>2019_ent</b>, <b>2019_std_ha</b>, <b>2019_web</b>, <b>2022_ent</b>, <b>2022_std_ha</b>, and <b>2022_web</b></description></item>
+        /// <item><description>Valid values if you set Engine to <b>PostgreSQL</b>: <b>10.0</b>, <b>11.0</b>, <b>12.0</b>, <b>13.0</b>, <b>14.0</b>, and <b>15.0</b></description></item>
+        /// <item><description>Valid value if you set Engine to <b>MariaDB</b>: <b>10.3</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The following information describes the valid values when you set Engine to SQLServer: <c>_ent</c> specifies SQL Server EE on RDS Cluster Edition, <c>_ent_ha</c> specifies SQL Server EE, <c>_std_ha</c> specifies SQL Server SE, and <c>_web</c> specifies SQL Server Web.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Valid values if you set Engine to **MySQL**: **5.5**, **5.6**, **5.7**, and **8.0**
-        /// *   Valid values if you set Engine to **SQLServer**: **08r2_ent_ha** (cloud disks, discontinued), **2008r2**(local disks, discontinued), **2012** (SQL Server EE Basic), **2012_ent_ha**, **2012_std_ha**, **2012_web**, **2016_ent_ha**, **2016_std_ha**, **2016_web**, **2017_ent**, **2017_std_ha**, **2017_web**, **2019_ent**, **2019_std_ha**, **2019_web**, **2022_ent**, **2022_std_ha**, and **2022_web**
-        /// *   Valid values if you set Engine to **PostgreSQL**: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**
-        /// *   Valid value if you set Engine to **MariaDB**: **10.3**
-        /// 
-        /// >  The following information describes the valid values when you set Engine to SQLServer: `_ent` specifies SQL Server EE on RDS Cluster Edition, `_ent_ha` specifies SQL Server EE, `_std_ha` specifies SQL Server SE, and `_web` specifies SQL Server Web.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>5.5</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The role of the instance. Valid values:
+        /// <para>The role of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: primary instance</description></item>
+        /// <item><description><b>3</b>: read-only instance</description></item>
+        /// </list>
         /// 
-        /// *   **0**: primary instance
-        /// *   **3**: read-only instance
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("InstanceUsedType")]
         [Validation(Required=false)]
         public int? InstanceUsedType { get; set; }
 
         /// <summary>
-        /// The order type. Valid values:
+        /// <para>The order type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>BUY</b>: purchase order</description></item>
+        /// <item><description><b>UPGRADE</b>: specification change order</description></item>
+        /// <item><description><b>RENEW</b>: renewal order</description></item>
+        /// </list>
         /// 
-        /// *   **BUY**: purchase order
-        /// *   **UPGRADE**: specification change order
-        /// *   **RENEW**: renewal order
+        /// <b>Example:</b>
+        /// <para>BUY</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -160,26 +207,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Prepaid</b>: subscription</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+        /// </list>
         /// 
-        /// *   **Prepaid**: subscription
-        /// *   **Postpaid**: pay-as-you-go
+        /// <b>Example:</b>
+        /// <para>Prepaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// The number of instances that you want to purchase. Valid values: **0 to 30**.
+        /// <para>The number of instances that you want to purchase. Valid values: <b>0 to 30</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Quantity")]
         [Validation(Required=false)]
         public int? Quantity { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -194,23 +250,30 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The settings of the serverless instance.
-        /// 
-        /// > ApsaraDB RDS for MariaDB does not support serverless instances.
+        /// <para>The settings of the serverless instance.</para>
+        /// <remarks>
+        /// <para>ApsaraDB RDS for MariaDB does not support serverless instances.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
         public DescribePriceRequestServerlessConfig ServerlessConfig { get; set; }
         public class DescribePriceRequestServerlessConfig : TeaModel {
             /// <summary>
-            /// The maximum number of RDS Capacity Units (RCUs).
+            /// <para>The maximum number of RDS Capacity Units (RCUs).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8</para>
             /// </summary>
             [NameInMap("MaxCapacity")]
             [Validation(Required=false)]
             public double? MaxCapacity { get; set; }
 
             /// <summary>
-            /// The minimum number of RCUs.
+            /// <para>The minimum number of RCUs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.5</para>
             /// </summary>
             [NameInMap("MinCapacity")]
             [Validation(Required=false)]
@@ -219,31 +282,42 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The billing cycle of the subscription instance. This parameter is required when **CommodityCode** is set to **rds**, **rds_rordspre_public_cn**, **rds_intl**, or **rds_rordspre_public_intl**. Valid values:
+        /// <para>The billing cycle of the subscription instance. This parameter is required when <b>CommodityCode</b> is set to <b>rds</b>, <b>rds_rordspre_public_cn</b>, <b>rds_intl</b>, or <b>rds_rordspre_public_intl</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Year</b></description></item>
+        /// <item><description><b>Month</b></description></item>
+        /// </list>
         /// 
-        /// *   **Year**
-        /// *   **Month**
+        /// <b>Example:</b>
+        /// <para>Year</para>
         /// </summary>
         [NameInMap("TimeType")]
         [Validation(Required=false)]
         public string TimeType { get; set; }
 
         /// <summary>
-        /// The subscription duration of the instance.
+        /// <para>The subscription duration of the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set the <b>TimeType</b> parameter to <b>Year</b>, the value of the UsedTime parameter ranges from <b>1 to 100</b>.</description></item>
+        /// <item><description>If you set the <b>TimeType</b> parameter to <b>Month</b>, the value of the UsedTime parameter ranges from <b>1 to 999</b>.</description></item>
+        /// </list>
+        /// <para>Default value: <b>1</b>.</para>
         /// 
-        /// *   If you set the **TimeType** parameter to **Year**, the value of the UsedTime parameter ranges from **1 to 100**.
-        /// *   If you set the **TimeType** parameter to **Month**, the value of the UsedTime parameter ranges from **1 to 999**.
-        /// 
-        /// Default value: **1**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
         public int? UsedTime { get; set; }
 
         /// <summary>
-        /// The zone ID of the primary instance. You can call the DescribeRegions operation to query the most recent zone list.
+        /// <para>The zone ID of the primary instance. You can call the DescribeRegions operation to query the most recent zone list.</para>
+        /// <remarks>
+        /// <para> If you specify a virtual private cloud (VPC) and a vSwitch, this parameter is required to identify the zone for the vSwitch.</para>
+        /// </remarks>
         /// 
-        /// >  If you specify a virtual private cloud (VPC) and a vSwitch, this parameter is required to identify the zone for the vSwitch.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-b</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

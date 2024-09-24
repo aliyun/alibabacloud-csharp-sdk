@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateYouhuiForOrderRequest : TeaModel {
         /// <summary>
-        /// The activity ID.
+        /// <para>The activity ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1711510887******</para>
         /// </summary>
         [NameInMap("ActivityId")]
         [Validation(Required=false)]
@@ -23,18 +25,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.
+        /// <para>The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2000001******</para>
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public long? PromotionId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

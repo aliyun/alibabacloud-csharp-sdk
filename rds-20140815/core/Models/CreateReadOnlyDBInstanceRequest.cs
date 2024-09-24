@@ -10,188 +10,259 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateReadOnlyDBInstanceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically create database proxies. Valid values:
+        /// <para>Specifies whether to automatically create database proxies. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables the feature. By default, general-purpose database proxies are created.</description></item>
+        /// <item><description><b>false</b>: disables the feature. No database proxies are created.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: enables the feature. By default, general-purpose database proxies are created.
-        /// *   **false**: disables the feature. No database proxies are created.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoCreateProxy")]
         [Validation(Required=false)]
         public bool? AutoCreateProxy { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the automatic payment feature. Valid values:
+        /// <para>Specifies whether to enable the automatic payment feature. Valid values:</para>
+        /// <ol>
+        /// <item><description><b>true</b>: enables the feature. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b>: disables the feature. An unpaid order is generated.</description></item>
+        /// </ol>
+        /// <remarks>
+        /// <para> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// </remarks>
         /// 
-        /// 1.  **true**: enables the feature. Make sure that your account balance is sufficient.
-        /// 2.  **false**: disables the feature. An unpaid order is generated.
-        /// 
-        /// >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the auto-renewal feature for the read-only instance. If you set the PayType parameter to Prepaid, you must also specify this parameter. Valid values:
+        /// <para>Specifies whether to enable the auto-renewal feature for the read-only instance. If you set the PayType parameter to Prepaid, you must also specify this parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables the feature.</description></item>
+        /// <item><description><b>false</b>: disables the feature.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set the Period parameter to Month, the auto-renewal cycle is one month.</description></item>
+        /// <item><description>If you set the Period parameter to Year, the auto-renewal cycle is one year.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   **true**: enables the feature.
-        /// *   **false**: disables the feature.
-        /// 
-        /// > * If you set the Period parameter to Month, the auto-renewal cycle is one month.
-        /// > * If you set the Period parameter to Year, the auto-renewal cycle is one year.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// A reserved parameter. You do not need to specify this parameter.
+        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("BpeEnabled")]
         [Validation(Required=false)]
         public string BpeEnabled { get; set; }
 
         /// <summary>
-        /// An invalid parameter. You do not need to specify this parameter.
+        /// <para>An invalid parameter. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
         public bool? BurstingEnabled { get; set; }
 
         /// <summary>
-        /// The RDS edition of the instance. Valid values:
+        /// <para>The RDS edition of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Basic</b>: RDS Basic Edition</description></item>
+        /// <item><description><b>HighAvailability</b> (default): RDS High-availability Edition</description></item>
+        /// <item><description><b>AlwaysOn</b>: RDS Cluster Edition</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The read-only instances of the primary instance that run PostgreSQL and use cloud disks run RDS Basic Edition. Therefore, set this parameter to <b>Basic</b>.</para>
+        /// </remarks>
         /// 
-        /// *   **Basic**: RDS Basic Edition
-        /// *   **HighAvailability** (default): RDS High-availability Edition
-        /// *   **AlwaysOn**: RDS Cluster Edition
-        /// 
-        /// >  The read-only instances of the primary instance that run PostgreSQL and use cloud disks run RDS Basic Edition. Therefore, set this parameter to **Basic**.
+        /// <b>Example:</b>
+        /// <para>HighAvailability</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ETnLKlblzczshOTUbOC****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The instance type of the read-only instance. For more information, see [Read-only instance types](https://help.aliyun.com/document_detail/145759.html). We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.
+        /// <para>The instance type of the read-only instance. For more information, see <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rds.mys2.small</para>
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The value must start with a letter
+        /// <para>The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The value must start with a letter</para>
+        /// <remarks>
+        /// <para>The value cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></para>
+        /// </remarks>
         /// 
-        /// > The value cannot start with [http:// or https://.](http://https://。)
+        /// <b>Example:</b>
+        /// <para>Test read-only instance</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The storage capacity of the read-only instance. The storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the **Storage capacity** column in [Read-only instance types](https://help.aliyun.com/document_detail/145759.html). This value must be a multiple of 5. Unit: GB.
+        /// <para>The storage capacity of the read-only instance. The storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the <b>Storage capacity</b> column in <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. This value must be a multiple of 5. Unit: GB.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// The storage type of the instance. Valid values:
+        /// <para>The storage type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>local_ssd</b>: local SSDs</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSDs</description></item>
+        /// <item><description><b>cloud_essd</b>: enhanced SSDs (ESSDs) of performance level 1 (PL1)</description></item>
+        /// <item><description><b>cloud_essd2</b>: ESSDs of PL2</description></item>
+        /// <item><description><b>cloud_essd3</b>: ESSDs of PL3</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If the primary instance runs MySQL with local disks, you must set this parameter to <b>local_ssd</b>. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</description></item>
+        /// <item><description>If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   **local_ssd**: local SSDs
-        /// *   **cloud_ssd**: standard SSDs
-        /// *   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)
-        /// *   **cloud_essd2**: ESSDs of PL2
-        /// *   **cloud_essd3**: ESSDs of PL3
-        /// 
-        /// > *   If the primary instance runs MySQL with local disks, you must set this parameter to **local_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
-        /// > *   If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
+        /// <b>Example:</b>
+        /// <para>local_ssd</para>
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// The ID of the dedicated cluster to which the read-only instance belongs. This parameter is valid when you create the read-only instance in a dedicated cluster.
+        /// <para>The ID of the dedicated cluster to which the read-only instance belongs. This parameter is valid when you create the read-only instance in a dedicated cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dhg-4n****</para>
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the release protection feature for the read-only instance. Valid values:
+        /// <para>Specifies whether to enable the release protection feature for the read-only instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can enable the release protection feature for the read-only instance only when you set the <b>PayType</b> parameter to <b>Postpaid</b>.</para>
+        /// </remarks>
         /// 
-        /// *   **true**
-        /// *   **false** (default)
-        /// 
-        /// >  You can enable the release protection feature for the read-only instance only when you set the **PayType** parameter to **Postpaid**.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// The version of the database engine. The read-only instance and the primary instance must run the same major engine version.
+        /// <para>The version of the database engine. The read-only instance and the primary instance must run the same major engine version.</para>
+        /// <list type="bullet">
+        /// <item><description>If the read-only instance runs MySQL, set this parameter to <b>5.6</b>, <b>5.7</b>, or <b>8.0</b>.</description></item>
+        /// <item><description>If the read-only instance runs MySQL, set this parameter to <b>2017_ent, 2019_ent, or 2022_ent</b>.</description></item>
+        /// <item><description>If the read-only instance runs PostgreSQL, set this parameter to <b>10.0, 11.0, 12.0, 13.0, 14.0, or 15.0</b>.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If the read-only instance runs MySQL, set this parameter to **5.6**, **5.7**, or **8.0**.
-        /// *   If the read-only instance runs MySQL, set this parameter to **2017_ent, 2019_ent, or 2022_ent**.
-        /// *   If the read-only instance runs PostgreSQL, set this parameter to **10.0, 11.0, 12.0, 13.0, 14.0, or 15.0**.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>5.6</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// A reserved parameter.
+        /// <para>A reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("GdnInstanceName")]
         [Validation(Required=false)]
         public string GdnInstanceName { get; set; }
 
         /// <summary>
-        /// The network type of the read-only instance. Valid values:
+        /// <para>The network type of the read-only instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>Classic</b></description></item>
+        /// </list>
+        /// <para>Default value: VPC. If you set this parameter to VPC, you must also specify the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
+        /// <remarks>
+        /// <para>The network type of the read-only instance can be different from the network type of the primary instance.</para>
+        /// </remarks>
         /// 
-        /// *   **VPC**
-        /// *   **Classic**
-        /// 
-        /// Default value: VPC. If you set this parameter to VPC, you must also specify the **VPCId** and **VSwitchId** parameters.
-        /// 
-        /// > The network type of the read-only instance can be different from the network type of the primary instance.
+        /// <b>Example:</b>
+        /// <para>Classic</para>
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// A reserved parameter.
+        /// <para>A reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("InstructionSetArch")]
         [Validation(Required=false)]
         public string InstructionSetArch { get; set; }
 
         /// <summary>
-        /// A reserved parameter.
+        /// <para>A reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("IoAccelerationEnabled")]
         [Validation(Required=false)]
@@ -206,54 +277,71 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The billing method of the read-only instance. Valid values:
+        /// <para>The billing method of the read-only instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>Prepaid</b>: subscription</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Postpaid**: pay-as-you-go
-        /// *   **Prepaid**: subscription
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Postpaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// The renewal cycle of the read-only instance. Valid values:
+        /// <para>The renewal cycle of the read-only instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Year</b></description></item>
+        /// <item><description><b>Month</b></description></item>
+        /// </list>
         /// 
-        /// *   **Year**
-        /// *   **Month**
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
 
         /// <summary>
-        /// The port that can be initialized when you create a read-only ApsaraDB RDS for MySQL instance.
+        /// <para>The port that can be initialized when you create a read-only ApsaraDB RDS for MySQL instance.</para>
+        /// <para>Valid values: 1000 to 65534.</para>
         /// 
-        /// Valid values: 1000 to 65534.
+        /// <b>Example:</b>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }
 
         /// <summary>
-        /// The private IP address of the read-only instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system assigns a private IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.
+        /// <para>The private IP address of the read-only instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system assigns a private IP address to the read-only instance based on the values of the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.16.XX.XX</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The region ID. The read-only instance and the primary instance must reside in the same region. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. The read-only instance and the primary instance must reside in the same region. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -268,59 +356,84 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the host on which the primary instance resides. This parameter is valid when you create the read-only instance in a dedicated cluster.
+        /// <para>The ID of the host on which the primary instance resides. This parameter is valid when you create the read-only instance in a dedicated cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-bp****</para>
         /// </summary>
         [NameInMap("TargetDedicatedHostIdForMaster")]
         [Validation(Required=false)]
         public string TargetDedicatedHostIdForMaster { get; set; }
 
         /// <summary>
-        /// A reserved parameter.
+        /// <para>A reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("TddlBizType")]
         [Validation(Required=false)]
         public string TddlBizType { get; set; }
 
         /// <summary>
-        /// A reserved parameter.
+        /// <para>A reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("TddlRegionConfig")]
         [Validation(Required=false)]
         public string TddlRegionConfig { get; set; }
 
         /// <summary>
-        /// The subscription duration of the read-only instance. Valid values:
+        /// <para>The subscription duration of the read-only instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If you set the <b>Period</b> parameter to <b>Year</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>5</b>.</description></item>
+        /// <item><description>If you set the <b>Period</b> parameter to <b>Month</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>9</b>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you set the <b>PayType</b> parameter to <b>Prepaid</b>, you must specify the UsedTime parameter.</para>
+        /// </remarks>
         /// 
-        /// *   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from **1** to **5**.
-        /// *   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from **1** to **9**.
-        /// 
-        /// > If you set the **PayType** parameter to **Prepaid**, you must specify the UsedTime parameter.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// The virtual private cloud (VPC) ID of the read-only instance. If you leave the **InstanceNetworkType** parameter empty or set it to **VPC**, you must also specify this parameter.
+        /// <para>The virtual private cloud (VPC) ID of the read-only instance. If you leave the <b>InstanceNetworkType</b> parameter empty or set it to <b>VPC</b>, you must also specify this parameter.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If the primary instance uses local disks, the read-only instance and the primary instance can belong to the same VPC or different VPCs.</description></item>
+        /// <item><description>If the primary instance uses cloud disks, the read-only instance and the primary instance must belong to the same VPC.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > * If the primary instance uses local disks, the read-only instance and the primary instance can belong to the same VPC or different VPCs.
-        /// > * If the primary instance uses cloud disks, the read-only instance and the primary instance must belong to the same VPC.
+        /// <b>Example:</b>
+        /// <para>vpc-uf6f7l4fg90****</para>
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
         /// <summary>
-        /// The vSwitch ID of the read-only instance. If you leave the **InstanceNetworkType** parameter empty or set it to **VPC**, you must specify the VSwitchId parameter.
+        /// <para>The vSwitch ID of the read-only instance. If you leave the <b>InstanceNetworkType</b> parameter empty or set it to <b>VPC</b>, you must specify the VSwitchId parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-uf6adz52c2p****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The zone ID. You can call the DescribeRegions operation to query the zone ID.
+        /// <para>The zone ID. You can call the DescribeRegions operation to query the zone ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-b</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

@@ -10,30 +10,38 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AttachWhitelistTemplateToInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The response code returned. Valid values:
+        /// <para>The response code returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>200</b>: success</description></item>
+        /// <item><description><b>400</b>: client error</description></item>
+        /// <item><description><b>401</b>: identity authentication failed</description></item>
+        /// <item><description><b>404</b>: request page not found</description></item>
+        /// <item><description><b>500</b>: server error</description></item>
+        /// </list>
         /// 
-        /// *   **200**: success
-        /// *   **400**: client error
-        /// *   **401**: identity authentication failed
-        /// *   **404**: request page not found
-        /// *   **500**: server error
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AttachWhitelistTemplateToInstanceResponseBodyData Data { get; set; }
         public class AttachWhitelistTemplateToInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// The status code returned. Valid values:
+            /// <para>The status code returned. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ok</b>: The request is successful.</description></item>
+            /// <item><description><b>error</b>: The request fails.</description></item>
+            /// </list>
             /// 
-            /// *   **ok**: The request is successful.
-            /// *   **error**: The request fails.
+            /// <b>Example:</b>
+            /// <para>ok</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -42,35 +50,49 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned. Valid values:
+        /// <para>The HTTP status code returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>200</b>: success</description></item>
+        /// <item><description><b>400</b>: client error</description></item>
+        /// <item><description><b>500</b>: server error</description></item>
+        /// </list>
         /// 
-        /// *   **200**: success
-        /// *   **400**: client error
-        /// *   **500**: server error
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

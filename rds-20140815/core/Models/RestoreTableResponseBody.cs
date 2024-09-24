@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RestoreTableResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EA2D4F34-01A7-46EB-A339-D80882135206</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,85 +10,120 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListClassesResponseBody : TeaModel {
         /// <summary>
-        /// The list of instance specifications.
+        /// <para>The list of instance specifications.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListClassesResponseBodyItems> Items { get; set; }
         public class ListClassesResponseBodyItems : TeaModel {
             /// <summary>
-            /// The code of the instance type. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html) and [Read-only ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/145759.html).
+            /// <para>The code of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only ApsaraDB RDS instance types</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mysql.n1.micro.1</para>
             /// </summary>
             [NameInMap("ClassCode")]
             [Validation(Required=false)]
             public string ClassCode { get; set; }
 
             /// <summary>
-            /// The instance family. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/57184.html).
+            /// <para>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Overview of instance families</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>General</para>
             /// </summary>
             [NameInMap("ClassGroup")]
             [Validation(Required=false)]
             public string ClassGroup { get; set; }
 
             /// <summary>
-            /// The number of CPU cores that are supported by the instance type. Unit: cores.
+            /// <para>The number of CPU cores that are supported by the instance type. Unit: cores.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public string Cpu { get; set; }
 
             /// <summary>
-            /// The size of the encrypted memory that is supported by the security-enhanced instance type. Unit: GB.
+            /// <para>The size of the encrypted memory that is supported by the security-enhanced instance type. Unit: GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("EncryptedMemory")]
             [Validation(Required=false)]
             public string EncryptedMemory { get; set; }
 
             /// <summary>
-            /// The architecture of the instance type. Valid values:
+            /// <para>The architecture of the instance type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>If the architecture of the instance type is <b>x86</b>, an empty string is returned by default.</description></item>
+            /// <item><description>If the architecture of the instance type is <b>ARM</b>, <b>arm</b> is returned.</description></item>
+            /// </list>
             /// 
-            /// *   If the architecture of the instance type is **x86**, an empty string is returned by default.
-            /// *   If the architecture of the instance type is **ARM**, **arm** is returned.
+            /// <b>Example:</b>
+            /// <para>arm</para>
             /// </summary>
             [NameInMap("InstructionSetArch")]
             [Validation(Required=false)]
             public string InstructionSetArch { get; set; }
 
             /// <summary>
-            /// The maximum number of connections that are supported by the instance type. Unit: connections.
+            /// <para>The maximum number of connections that are supported by the instance type. Unit: connections.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2000</para>
             /// </summary>
             [NameInMap("MaxConnections")]
             [Validation(Required=false)]
             public string MaxConnections { get; set; }
 
             /// <summary>
-            /// The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.
+            /// <para>The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1024Mbps</para>
             /// </summary>
             [NameInMap("MaxIOMBPS")]
             [Validation(Required=false)]
             public string MaxIOMBPS { get; set; }
 
             /// <summary>
-            /// The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.
+            /// <para>The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000</para>
             /// </summary>
             [NameInMap("MaxIOPS")]
             [Validation(Required=false)]
             public string MaxIOPS { get; set; }
 
             /// <summary>
-            /// The memory size that is supported by the instance type. Unit: GB.
+            /// <para>The memory size that is supported by the instance type. Unit: GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1 GB (RDS Basic Edition)</para>
             /// </summary>
             [NameInMap("MemoryClass")]
             [Validation(Required=false)]
             public string MemoryClass { get; set; }
 
             /// <summary>
-            /// The fee that you must pay for the instance type.
+            /// <para>The fee that you must pay for the instance type.</para>
+            /// <list type="bullet">
+            /// <item><description>Unit: cents (USD).</description></item>
+            /// </list>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>If you set <b>CommodityCode</b> to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</description></item>
+            /// <item><description>If you set <b>CommodityCode</b> to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</description></item>
+            /// </list>
+            /// </remarks>
             /// 
-            /// *   Unit: cents (USD).
-            /// 
-            /// > *   If you set **CommodityCode** to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.
-            /// > *   If you set **CommodityCode** to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.
+            /// <b>Example:</b>
+            /// <para>2500</para>
             /// </summary>
             [NameInMap("ReferencePrice")]
             [Validation(Required=false)]
@@ -97,14 +132,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CF8D35BF-263D-4F7B-883A-1163B79A9EC6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeLogBackupFilesResponseBody : TeaModel {
         /// <summary>
-        /// The details of log files.
+        /// <para>The details of log files.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,42 +21,60 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeLogBackupFilesResponseBodyItemsBinLogFile> BinLogFile { get; set; }
             public class DescribeLogBackupFilesResponseBodyItemsBinLogFile : TeaModel {
                 /// <summary>
-                /// The HTTP-based download URL of the log file. If the log file cannot be downloaded, an empty string is returned.
+                /// <para>The HTTP-based download URL of the log file. If the log file cannot be downloaded, an empty string is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></para>
                 /// </summary>
                 [NameInMap("DownloadLink")]
                 [Validation(Required=false)]
                 public string DownloadLink { get; set; }
 
                 /// <summary>
-                /// The size of the log file. Unit: bytes.
+                /// <para>The size of the log file. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>788480</para>
                 /// </summary>
                 [NameInMap("FileSize")]
                 [Validation(Required=false)]
                 public long? FileSize { get; set; }
 
                 /// <summary>
-                /// The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned. This URL is valid for one hour.
+                /// <para>The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned. This URL is valid for one hour.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></para>
                 /// </summary>
                 [NameInMap("IntranetDownloadLink")]
                 [Validation(Required=false)]
                 public string IntranetDownloadLink { get; set; }
 
                 /// <summary>
-                /// The expiration time of the URL. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// <para>The expiration time of the URL. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-03-01T15:04:13Z</para>
                 /// </summary>
                 [NameInMap("LinkExpiredTime")]
                 [Validation(Required=false)]
                 public string LinkExpiredTime { get; set; }
 
                 /// <summary>
-                /// The start time of the log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+                /// <para>The start time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-10-31T08:40Z</para>
                 /// </summary>
                 [NameInMap("LogBeginTime")]
                 [Validation(Required=false)]
                 public string LogBeginTime { get; set; }
 
                 /// <summary>
-                /// The end time of the log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+                /// <para>The end time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-10-31T08:40Z</para>
                 /// </summary>
                 [NameInMap("LogEndTime")]
                 [Validation(Required=false)]
@@ -67,35 +85,50 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The page number of the page returned.
+        /// <para>The page number of the page returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of log files on the current page.
+        /// <para>The number of log files on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F8EC669C-FC85-43D7-AF06-C3641626B37E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total size of log files. Unit: bytes.
+        /// <para>The total size of log files. Unit: bytes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2300</para>
         /// </summary>
         [NameInMap("TotalFileSize")]
         [Validation(Required=false)]
         public long? TotalFileSize { get; set; }
 
         /// <summary>
-        /// The total number of log files.
+        /// <para>The total number of log files.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>17</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

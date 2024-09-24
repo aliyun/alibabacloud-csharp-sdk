@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RemoveTagsFromResourceResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AE00ACCD-1CF9-4920-9BB9-0175EFF43405</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

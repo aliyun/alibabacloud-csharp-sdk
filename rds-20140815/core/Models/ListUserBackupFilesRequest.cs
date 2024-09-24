@@ -10,23 +10,33 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListUserBackupFilesRequest : TeaModel {
         /// <summary>
-        /// The ID of the full backup file.
+        /// <para>The ID of the full backup file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b-kwwvr7v8t7of********</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The description of the full backup file.
+        /// <para>The description of the full backup file.</para>
+        /// <remarks>
+        /// <para>The system implements a fuzzy match based on the value of this parameter.</para>
+        /// </remarks>
         /// 
-        /// > The system implements a fuzzy match based on the value of this parameter.
+        /// <b>Example:</b>
+        /// <para>BackupTest</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// The URL from which you can download the full backup file that is stored as an object in an Object Storage Service (OSS) bucket. For more information about how to obtain the URL, see [Obtain the access URL after you upload objects](https://help.aliyun.com/document_detail/39607.html).
+        /// <para>The URL from which you can download the full backup file that is stored as an object in an Object Storage Service (OSS) bucket. For more information about how to obtain the URL, see <a href="https://help.aliyun.com/document_detail/39607.html">Obtain the access URL after you upload objects</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>https://<b><b><b>.oss-ap-</b></b></b>**.aliyuncs.com/backup_qp.xb</para>
         /// </summary>
         [NameInMap("OssUrl")]
         [Validation(Required=false)]
@@ -37,16 +47,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy*****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -61,20 +76,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the full backup file. Valid values:
+        /// <para>The status of the full backup file. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Importing</b>: The full backup file is being imported.</description></item>
+        /// <item><description><b>Failed</b>: The full backup file fails to be imported.</description></item>
+        /// <item><description><b>CheckSucccess</b>: The full backup file passes the check.</description></item>
+        /// <item><description><b>BackupSuccess</b>: The full backup file is imported.</description></item>
+        /// <item><description><b>Deleted</b>: The full backup file is deleted.</description></item>
+        /// </list>
         /// 
-        /// *   **Importing**: The full backup file is being imported.
-        /// *   **Failed**: The full backup file fails to be imported.
-        /// *   **CheckSucccess**: The full backup file passes the check.
-        /// *   **BackupSuccess**: The full backup file is imported.
-        /// *   **Deleted**: The full backup file is deleted.
+        /// <b>Example:</b>
+        /// <para>CheckSuccess</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The tag that is added to the full backup file.
+        /// <para>The tag that is added to the full backup file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>key1:value1</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

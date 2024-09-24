@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesByExpireTimeRequest : TeaModel {
         /// <summary>
-        /// The number of remaining days for which the instances are available. Valid values: **0 to 180**.
+        /// <para>The number of remaining days for which the instances are available. Valid values: <b>0 to 180</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>180</para>
         /// </summary>
         [NameInMap("ExpirePeriod")]
         [Validation(Required=false)]
         public int? ExpirePeriod { get; set; }
 
         /// <summary>
-        /// Specifies whether to query instances that have expired. Valid values:
+        /// <para>Specifies whether to query instances that have expired. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>True</b>: queries instances that have expired.</description></item>
+        /// <item><description><b>False</b>: does not query instances that have expired.</description></item>
+        /// </list>
         /// 
-        /// *   **True**: queries instances that have expired.
-        /// *   **False**: does not query instances that have expired.
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Expired")]
         [Validation(Required=false)]
@@ -35,32 +42,42 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Valid values: any **non-zero** positive integer.
+        /// <para>The number of the page to return. Valid values: any <b>non-zero</b> positive integer.</para>
+        /// <para>Default value: <b>1</b>.</para>
         /// 
-        /// Default value: **1**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1 to 100**.
+        /// <para>The number of entries to return on each page. Valid values: <b>1 to 100</b>.</para>
+        /// <para>Default value: <b>30</b>.</para>
         /// 
-        /// Default value: **30**.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -75,14 +92,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tag that is added to the instance. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: `{"key1":"value1","key2":"value2"...}`.
+        /// <para>The tag that is added to the instance. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: <c>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
 
         /// <summary>
-        /// A deprecated parameter. You do not need to configure this parameter.
+        /// <para>A deprecated parameter. You do not need to configure this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("proxyId")]
         [Validation(Required=false)]

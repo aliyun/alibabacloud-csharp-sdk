@@ -10,53 +10,75 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceTDERequest : TeaModel {
         /// <summary>
-        /// The file that contains the certificate.\\
-        /// Format:
+        /// <para>The file that contains the certificate.\
+        /// Format:</para>
+        /// <list type="bullet">
+        /// <item><description>Public endpoint: <c>oss-&lt;The ID of the region&gt;.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the certificate file&gt;</c> (The file name contains the extension.)</description></item>
+        /// <item><description>Internal endpoint: <c>oss-&lt;The ID of the region&gt;-internal.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the certificate file&gt;</c> (The file name contains the extension.)</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)
-        /// *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)
-        /// 
-        /// > *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
-        /// > *   You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>oss-ap-southeast-1.aliyuncs.com:****:key.cer</para>
         /// </summary>
         [NameInMap("Certificate")]
         [Validation(Required=false)]
         public string Certificate { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the database for which you want to enable TDE. You can specify up to 50 database names in a single request. If you specify multiple database names, separate the database names with commas (,).
+        /// <para>The name of the database for which you want to enable TDE. You can specify up to 50 database names in a single request. If you specify multiple database names, separate the database names with commas (,).</para>
+        /// <remarks>
+        /// <para>This parameter is available and must be specified only when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is available and must be specified only when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
+        /// <b>Example:</b>
+        /// <para>testDB</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }
 
         /// <summary>
-        /// The ID of the custom key.
+        /// <para>The ID of the custom key.</para>
+        /// <remarks>
+        /// <para>This parameter is available when the instance runs MySQL or PostgreSQL.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is available when the instance runs MySQL or PostgreSQL.
+        /// <b>Example:</b>
+        /// <para>749c1df7-<b><b>-</b></b>-<b><b>-</b></b></para>
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// Specifies whether to replace the key. Valid values:
+        /// <para>Specifies whether to replace the key. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is available for only ApsaraDB RDS for PostgreSQL instances.</para>
+        /// </remarks>
         /// 
-        /// *   **true**
-        /// *   **false** (default)
-        /// 
-        /// >  This parameter is available for only ApsaraDB RDS for PostgreSQL instances.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsRotate")]
         [Validation(Required=false)]
@@ -71,23 +93,34 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The password of the certificate.
+        /// <para>The password of the certificate.</para>
+        /// <remarks>
+        /// <para>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
+        /// <b>Example:</b>
+        /// <para>1qaz@WSX</para>
         /// </summary>
         [NameInMap("PassWord")]
         [Validation(Required=false)]
         public string PassWord { get; set; }
 
         /// <summary>
-        /// The file that contains the private key of the certificate.\\
-        /// Format:
+        /// <para>The file that contains the private key of the certificate.\
+        /// Format:</para>
+        /// <list type="bullet">
+        /// <item><description>Public endpoint: <c>oss-&lt;The ID of the region&gt;.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the file that contains the private key&gt;</c> (The file name contains the extension.)</description></item>
+        /// <item><description>Internal endpoint: <c>oss-&lt;The ID of the region&gt;-internal.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the file that contains the private key&gt;</c> (The file name contains the extension.)</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)
-        /// *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)
-        /// 
-        /// > *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
-        /// > *   You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>oss-ap-southeast-1.aliyuncs.com:****:key.pvk</para>
         /// </summary>
         [NameInMap("PrivateKey")]
         [Validation(Required=false)]
@@ -102,21 +135,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](https://help.aliyun.com/document_detail/93689.html).
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
+        /// <remarks>
+        /// <para>This parameter is available when the instance runs MySQL or PostgreSQL.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is available when the instance runs MySQL or PostgreSQL.
+        /// <b>Example:</b>
+        /// <para>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</para>
         /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// The status of TDE. Valid values:
+        /// <para>The status of TDE. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enabled</b></description></item>
+        /// <item><description><b>Disabled</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Enabled**
-        /// *   **Disabled**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Enabled</para>
         /// </summary>
         [NameInMap("TDEStatus")]
         [Validation(Required=false)]

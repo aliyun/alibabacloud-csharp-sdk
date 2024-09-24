@@ -10,91 +10,126 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateReplicationLinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pgm-bp1trqb4p1xd****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run but does not create the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the instance is created.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **true**: performs a dry run but does not create the instance. The system checks items such as the request parameters, request format, service limits, and available resources.
-        /// *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, the instance is created.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The account of the database that is used for data synchronization.
+        /// <para>The account of the database that is used for data synchronization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testdbuser</para>
         /// </summary>
         [NameInMap("ReplicatorAccount")]
         [Validation(Required=false)]
         public string ReplicatorAccount { get; set; }
 
         /// <summary>
-        /// The password of the account.
+        /// <para>The password of the account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testpassword</para>
         /// </summary>
         [NameInMap("ReplicatorPassword")]
         [Validation(Required=false)]
         public string ReplicatorPassword { get; set; }
 
         /// <summary>
-        /// The endpoint of the source instance.
+        /// <para>The endpoint of the source instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pgm-****.pg.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("SourceAddress")]
         [Validation(Required=false)]
         public string SourceAddress { get; set; }
 
         /// <summary>
-        /// The type of the source instance. Valid values:
+        /// <para>The type of the source instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>other</b>: other instances</description></item>
+        /// <item><description><b>aliyunRDS</b>: an ApsaraDB RDS instance</description></item>
+        /// </list>
         /// 
-        /// *   **other**: other instances
-        /// *   **aliyunRDS**: an ApsaraDB RDS instance
+        /// <b>Example:</b>
+        /// <para>aliyunRDS</para>
         /// </summary>
         [NameInMap("SourceCategory")]
         [Validation(Required=false)]
         public string SourceCategory { get; set; }
 
         /// <summary>
-        /// The name of the source instance.
+        /// <para>The name of the source instance.</para>
+        /// <remarks>
+        /// <para> This parameter is required when you set the <b>SourceCategory</b> parameter to <b>aliyunRDS</b>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required when you set the **SourceCategory** parameter to **aliyunRDS**.
+        /// <b>Example:</b>
+        /// <para>testInstance</para>
         /// </summary>
         [NameInMap("SourceInstanceName")]
         [Validation(Required=false)]
         public string SourceInstanceName { get; set; }
 
         /// <summary>
-        /// The region ID of the source instance.
+        /// <para>The region ID of the source instance.</para>
+        /// <remarks>
+        /// <para> This parameter is required when you set the <b>SourceCategory</b> parameter to <b>aliyunRDS</b>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required when you set the **SourceCategory** parameter to **aliyunRDS**.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("SourceInstanceRegionId")]
         [Validation(Required=false)]
         public string SourceInstanceRegionId { get; set; }
 
         /// <summary>
-        /// The port of the source instance.
+        /// <para>The port of the source instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5432</para>
         /// </summary>
         [NameInMap("SourcePort")]
         [Validation(Required=false)]
         public long? SourcePort { get; set; }
 
         /// <summary>
-        /// The task ID of the successful dry run.
+        /// <para>The task ID of the successful dry run.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>439946016</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// The name of the task. You can specify a custom task name. If you do not specify this parameter, ApsaraDB RDS automatically generates a task name.
+        /// <para>The name of the task. You can specify a custom task name. If you do not specify this parameter, ApsaraDB RDS automatically generates a task name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test01</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The token required to obtain more results. This parameter is not required in the first query. If a query does not return all results, you can specify the token returned from the previous query for the next query to obtain more results.
+        /// <para>The token required to obtain more results. This parameter is not required in the first query. If a query does not return all results, you can specify the token returned from the previous query for the next query to obtain more results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>212db86sca4384811e0b5e8707ec21345</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -21,18 +24,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The instance ID. You can specify a maximum of **50** instance IDs.****
+        /// <para>The instance ID. You can specify a maximum of <b>50</b> instance IDs.****</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the <b>ResourceId</b> and <b>Key</b> parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify at least one of the **ResourceId** and **Key** parameters.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxx</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -47,32 +56,41 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to **INSTANCE**.
+        /// <para>The type of the resource. Set the value to <b>INSTANCE</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>INSTANCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag list.
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The tag key. You can query N tag keys at a time. Valid values of N: **1** to **20**. The value cannot be an empty string.
+            /// <para>The tag key. You can query N tag keys at a time. Valid values of N: <b>1</b> to <b>20</b>. The value cannot be an empty string.</para>
+            /// <remarks>
+            /// <para> You must specify at least one of the <b>ResourceId</b> and <b>Key</b> parameters.</para>
+            /// </remarks>
             /// 
-            /// >  You must specify at least one of the **ResourceId** and **Key** parameters.
+            /// <b>Example:</b>
+            /// <para>testkey1</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: **1** to **20**. The value can be an empty string.
+            /// <para>The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: <b>1</b> to <b>20</b>. The value can be an empty string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testvalue1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

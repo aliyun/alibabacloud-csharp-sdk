@@ -10,63 +10,86 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateBackupRequest : TeaModel {
         /// <summary>
-        /// The backup type of the instance. Valid values:
+        /// <para>The backup type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Logical</b>: logical backup</description></item>
+        /// <item><description><b>Physical</b>: physical backup</description></item>
+        /// <item><description><b>Snapshot</b>: snapshot backup</description></item>
+        /// </list>
+        /// <para>Default value: <b>Physical</b>.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can perform a logical backup only when databases are created on the instance.</description></item>
+        /// <item><description>When you perform a snapshot backup on an ApsaraDB RDS for MariaDB instance, you must set this parameter to <b>Physical</b>.</description></item>
+        /// <item><description>For more information about the supported backup types, see <a href="https://help.aliyun.com/document_detail/98818.html">Use the data backup feature</a>.</description></item>
+        /// <item><description>When you perform a snapshot backup on an ApsaraDB RDS for SQL Server instance that uses cloud disks, you must set this parameter to <b>Snapshot</b>.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   **Logical**: logical backup
-        /// *   **Physical**: physical backup
-        /// *   **Snapshot**: snapshot backup
-        /// 
-        /// Default value: **Physical**.
-        /// 
-        /// > *   You can perform a logical backup only when databases are created on the instance.
-        /// > *   When you perform a snapshot backup on an ApsaraDB RDS for MariaDB instance, you must set this parameter to **Physical**.
-        /// > *   For more information about the supported backup types, see [Use the data backup feature](https://help.aliyun.com/document_detail/98818.html).
-        /// > *   When you perform a snapshot backup on an ApsaraDB RDS for SQL Server instance that uses cloud disks, you must set this parameter to **Snapshot**.
+        /// <b>Example:</b>
+        /// <para>Physical</para>
         /// </summary>
         [NameInMap("BackupMethod")]
         [Validation(Required=false)]
         public string BackupMethod { get; set; }
 
         /// <summary>
-        /// The backup policy. Valid values:
+        /// <para>The backup policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>db</b>: a database-level backup.</description></item>
+        /// <item><description><b>instance</b>: an instance-level backup.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You can specify this parameter when you perform a logical backup on an ApsaraDB RDS for MySQL instance. You can also specify this parameter when you perform a full physical backup on an ApsaraDB RDS for SQL Server instance.</para>
+        /// </remarks>
         /// 
-        /// *   **db**: a database-level backup.
-        /// *   **instance**: an instance-level backup.
-        /// 
-        /// > You can specify this parameter when you perform a logical backup on an ApsaraDB RDS for MySQL instance. You can also specify this parameter when you perform a full physical backup on an ApsaraDB RDS for SQL Server instance.
+        /// <b>Example:</b>
+        /// <para>db</para>
         /// </summary>
         [NameInMap("BackupStrategy")]
         [Validation(Required=false)]
         public string BackupStrategy { get; set; }
 
         /// <summary>
-        /// The backup method. Valid values:
+        /// <para>The backup method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Auto</b>: full or incremental backup that is automatically selected</description></item>
+        /// <item><description><b>FullBackup</b>: full backup</description></item>
+        /// </list>
+        /// <para>Default value: <b>Auto</b>.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You must set this parameter only when the instance runs SQL Server.</description></item>
+        /// <item><description>This parameter is valid only when you set the <b>BackupMethod</b> parameter to <b>Physical</b>.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   **Auto**: full or incremental backup that is automatically selected
-        /// *   **FullBackup**: full backup
-        /// 
-        /// Default value: **Auto**.
-        /// 
-        /// > *   You must set this parameter only when the instance runs SQL Server.
-        /// > *   This parameter is valid only when you set the **BackupMethod** parameter to **Physical**.
+        /// <b>Example:</b>
+        /// <para>Auto</para>
         /// </summary>
         [NameInMap("BackupType")]
         [Validation(Required=false)]
         public string BackupType { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The names of the databases whose data you want to back up. Separate the names of the databases with commas (,).
+        /// <para>The names of the databases whose data you want to back up. Separate the names of the databases with commas (,).</para>
+        /// <remarks>
+        /// <para>You can specify this parameter when you perform a logical backup on individual databases of an ApsaraDB RDS for MySQL instance. You can also specify this parameter when you perform a full physical backup on individual databases of an ApsaraDB RDS for SQL Server instance.</para>
+        /// </remarks>
         /// 
-        /// > You can specify this parameter when you perform a logical backup on individual databases of an ApsaraDB RDS for MySQL instance. You can also specify this parameter when you perform a full physical backup on individual databases of an ApsaraDB RDS for SQL Server instance.
+        /// <b>Example:</b>
+        /// <para>rds_mysql</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

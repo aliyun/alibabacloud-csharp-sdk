@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesAsCsvResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the fields in **DBInstanceAttribute**.
+        /// <para>An array that consists of the fields in <b>DBInstanceAttribute</b>.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,270 +21,381 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttribute> DBInstanceAttribute { get; set; }
             public class DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttribute : TeaModel {
                 /// <summary>
-                /// The maximum number of accounts.
+                /// <para>The maximum number of accounts.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>500</para>
                 /// </summary>
                 [NameInMap("AccountMaxQuantity")]
                 [Validation(Required=false)]
                 public int? AccountMaxQuantity { get; set; }
 
                 /// <summary>
-                /// The type of the account.
+                /// <para>The type of the account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>super</para>
                 /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
                 public string AccountType { get; set; }
 
                 /// <summary>
-                /// The service availability of the instance in percentage.
+                /// <para>The service availability of the instance in percentage.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("AvailabilityValue")]
                 [Validation(Required=false)]
                 public string AvailabilityValue { get; set; }
 
                 /// <summary>
-                /// The category of the instance.
+                /// <para>The category of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The connection mode of the instance. Valid values:
+                /// <para>The connection mode of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Performance</b>: standard mode.</description></item>
+                /// <item><description><b>Safety</b>: enhanced mode</description></item>
+                /// </list>
                 /// 
-                /// *   **Performance**: standard mode.
-                /// *   **Safety**: enhanced mode
+                /// <b>Example:</b>
+                /// <para>Performance</para>
                 /// </summary>
                 [NameInMap("ConnectionMode")]
                 [Validation(Required=false)]
                 public string ConnectionMode { get; set; }
 
                 /// <summary>
-                /// The internal endpoint.
+                /// <para>The internal endpoint.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// The creation time.
+                /// <para>The creation time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2011-05-30T12:11:04Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The number of CPU cores.
+                /// <para>The number of CPU cores.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("DBInstanceCPU")]
                 [Validation(Required=false)]
                 public string DBInstanceCPU { get; set; }
 
                 /// <summary>
-                /// The instance type of the instance.
+                /// <para>The instance type of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rds.mys2.small</para>
                 /// </summary>
                 [NameInMap("DBInstanceClass")]
                 [Validation(Required=false)]
                 public string DBInstanceClass { get; set; }
 
                 /// <summary>
-                /// The instance family.
+                /// <para>The instance family.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>s</para>
                 /// </summary>
                 [NameInMap("DBInstanceClassType")]
                 [Validation(Required=false)]
                 public string DBInstanceClassType { get; set; }
 
                 /// <summary>
-                /// The instance description.
+                /// <para>The instance description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("DBInstanceDescription")]
                 [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// The instance ID.
+                /// <para>The instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-uf6wjk5xxxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The memory capacity of the instance. Unit: MB.
+                /// <para>The memory capacity of the instance. Unit: MB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4096</para>
                 /// </summary>
                 [NameInMap("DBInstanceMemory")]
                 [Validation(Required=false)]
                 public long? DBInstanceMemory { get; set; }
 
                 /// <summary>
-                /// The network type of the instance. Valid values:
+                /// <para>The network type of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Internet</b></description></item>
+                /// <item><description><b>Intranet</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Internet**
-                /// *   **Intranet**
+                /// <b>Example:</b>
+                /// <para>Internet</para>
                 /// </summary>
                 [NameInMap("DBInstanceNetType")]
                 [Validation(Required=false)]
                 public string DBInstanceNetType { get; set; }
 
                 /// <summary>
-                /// The instance status.
+                /// <para>The instance status.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Running</para>
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
                 public string DBInstanceStatus { get; set; }
 
                 /// <summary>
-                /// The storage capacity of the instance. Unit: GB.
+                /// <para>The storage capacity of the instance. Unit: GB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("DBInstanceStorage")]
                 [Validation(Required=false)]
                 public int? DBInstanceStorage { get; set; }
 
                 /// <summary>
-                /// The instance type. Valid values:
+                /// <para>The instance type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Primary</b>: primary instance</description></item>
+                /// <item><description><b>ReadOnly</b>: read-only instance</description></item>
+                /// <item><description><b>Guard</b>: disaster recovery instance</description></item>
+                /// <item><description><b>Temp</b>: temporary instance</description></item>
+                /// </list>
                 /// 
-                /// *   **Primary**: primary instance
-                /// *   **ReadOnly**: read-only instance
-                /// *   **Guard**: disaster recovery instance
-                /// *   **Temp**: temporary instance
+                /// <b>Example:</b>
+                /// <para>Primary</para>
                 /// </summary>
                 [NameInMap("DBInstanceType")]
                 [Validation(Required=false)]
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
-                /// The maximum number of databases that can be created on the instance.
+                /// <para>The maximum number of databases that can be created on the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>200</para>
                 /// </summary>
                 [NameInMap("DBMaxQuantity")]
                 [Validation(Required=false)]
                 public int? DBMaxQuantity { get; set; }
 
                 /// <summary>
-                /// The database engine of the instance.
+                /// <para>The database engine of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MySQL</para>
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The engine version.
+                /// <para>The engine version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8.0</para>
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
                 public string EngineVersion { get; set; }
 
                 /// <summary>
-                /// The expiration time.
+                /// <para>The expiration time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-03-27T16:00:00Z</para>
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// A deprecated parameter. You do not need to specify this parameter.
+                /// <para>A deprecated parameter. You do not need to specify this parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>API</para>
                 /// </summary>
                 [NameInMap("ExportKey")]
                 [Validation(Required=false)]
                 public string ExportKey { get; set; }
 
                 /// <summary>
-                /// The ID of the disaster recovery instance that is attached to the primary instance.
+                /// <para>The ID of the disaster recovery instance that is attached to the primary instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-uf64zsuxxxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("GuardDBInstanceId")]
                 [Validation(Required=false)]
                 public string GuardDBInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance comes from its primary instance. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
+                /// <para>The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance comes from its primary instance. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-uf6wjk5xxxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("IncrementSourceDBInstanceId")]
                 [Validation(Required=false)]
                 public string IncrementSourceDBInstanceId { get; set; }
 
                 /// <summary>
-                /// The network type.
+                /// <para>The network type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("InstanceNetworkType")]
                 [Validation(Required=false)]
                 public string InstanceNetworkType { get; set; }
 
                 /// <summary>
-                /// The lock mode of the instance.
+                /// <para>The lock mode of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Unlock</para>
                 /// </summary>
                 [NameInMap("LockMode")]
                 [Validation(Required=false)]
                 public string LockMode { get; set; }
 
                 /// <summary>
-                /// The reason why the instance was locked.
+                /// <para>The reason why the instance was locked.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>instance_expired</para>
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// The maintenance window of the instance. The time follows the ISO 8601 standard and is displayed in UTC. In the ApsaraDB RDS console, the maintenance window is displayed in UTC+8.
+                /// <para>The maintenance window of the instance. The time follows the ISO 8601 standard and is displayed in UTC. In the ApsaraDB RDS console, the maintenance window is displayed in UTC+8.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>00:00Z-02:00Z</para>
                 /// </summary>
                 [NameInMap("MaintainTime")]
                 [Validation(Required=false)]
                 public string MaintainTime { get; set; }
 
                 /// <summary>
-                /// The primary instance ID.
+                /// <para>The primary instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-uf6wjk5xxxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("MasterInstanceId")]
                 [Validation(Required=false)]
                 public string MasterInstanceId { get; set; }
 
                 /// <summary>
-                /// The maximum number of concurrent connections.
+                /// <para>The maximum number of concurrent connections.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>60</para>
                 /// </summary>
                 [NameInMap("MaxConnections")]
                 [Validation(Required=false)]
                 public int? MaxConnections { get; set; }
 
                 /// <summary>
-                /// The maximum number of I/O requests per second.
+                /// <para>The maximum number of I/O requests per second.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>150</para>
                 /// </summary>
                 [NameInMap("MaxIOPS")]
                 [Validation(Required=false)]
                 public int? MaxIOPS { get; set; }
 
                 /// <summary>
-                /// The billing method of the instance.
+                /// <para>The billing method of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Postpaid</para>
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// The port that is used to connect to the instance over an internal network.
+                /// <para>The port that is used to connect to the instance over an internal network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3306</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
                 /// <summary>
-                /// The latency of data replication from the primary instance to the read-only instance. This parameter is valid for read-only instances.
+                /// <para>The latency of data replication from the primary instance to the read-only instance. This parameter is valid for read-only instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ReadDelayTime")]
                 [Validation(Required=false)]
                 public string ReadDelayTime { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The IP addresses in the whitelist.
+                /// <para>The IP addresses in the whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>42.xx.xx.xx</para>
                 /// </summary>
                 [NameInMap("SecurityIPList")]
                 [Validation(Required=false)]
                 public string SecurityIPList { get; set; }
 
                 /// <summary>
-                /// A deprecated parameter. You do not need to specify this parameter.
+                /// <para>A deprecated parameter. You do not need to specify this parameter.</para>
                 /// </summary>
                 [NameInMap("SlaveZones")]
                 [Validation(Required=false)]
@@ -297,42 +408,60 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// N/A.
+                /// <para>N/A.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>No</para>
                 /// </summary>
                 [NameInMap("SupportUpgradeAccountType")]
                 [Validation(Required=false)]
                 public string SupportUpgradeAccountType { get; set; }
 
                 /// <summary>
-                /// The tags.
+                /// <para>The tags.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// The ID of the temporary instance that is attached to the primary instance.
+                /// <para>The ID of the temporary instance that is attached to the primary instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-uf64zsuxxxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("TempDBInstanceId")]
                 [Validation(Required=false)]
                 public string TempDBInstanceId { get; set; }
 
                 /// <summary>
-                /// The vSwitch ID.
+                /// <para>The vSwitch ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-uf6adz52c2pxxxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The virtual private cloud (VPC) ID.
+                /// <para>The virtual private cloud (VPC) ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-uf6f7l4fg90xxxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The zone ID.
+                /// <para>The zone ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-h</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -343,7 +472,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A444291****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

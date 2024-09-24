@@ -10,58 +10,80 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBMiniEngineVersionsRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5*******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.
+        /// <para>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dhg-4n*****</para>
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// The database engine of the instance. Valid values: **MySQL** and **PostgreSQL**.
+        /// <para>The database engine of the instance. Valid values: <b>MySQL</b> and <b>PostgreSQL</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance. Valid values:
+        /// <para>The database engine version of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values when you set the Engine parameter to MySQL: <b>8.0</b>, <b>5.7</b>, <b>5.6</b>, and <b>5.5</b></description></item>
+        /// <item><description>Valid values when you set the Engine parameter to PostgreSQL: <b>15.0</b>, <b>14.0</b>, <b>13.0</b>, <b>12.0</b>, <b>11.0</b>, and <b>10.0</b></description></item>
+        /// </list>
         /// 
-        /// *   Valid values when you set the Engine parameter to MySQL: **8.0**, **5.7**, **5.6**, and **5.5**
-        /// *   Valid values when you set the Engine parameter to PostgreSQL: **15.0**, **14.0**, **13.0**, **12.0**, **11.0**, and **10.0**
+        /// <b>Example:</b>
+        /// <para>5.7</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The minor engine version of the instance. You can specify this parameter to query the minor engine version of the instance.
+        /// <para>The minor engine version of the instance. You can specify this parameter to query the minor engine version of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rds_20220731</para>
         /// </summary>
         [NameInMap("MinorVersionTag")]
         [Validation(Required=false)]
         public string MinorVersionTag { get; set; }
 
         /// <summary>
-        /// The instance edition. Valid values:
+        /// <para>The instance edition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Basic</b>: RDS Basic Edition</description></item>
+        /// <item><description><b>HighAvailability</b>: RDS High-availability Edition</description></item>
+        /// <item><description><b>Finance</b>: RDS Enterprise Edition</description></item>
+        /// </list>
         /// 
-        /// *   **Basic**: RDS Basic Edition
-        /// *   **HighAvailability**: RDS High-availability Edition
-        /// *   **Finance**: RDS Enterprise Edition
+        /// <b>Example:</b>
+        /// <para>HighAvailability</para>
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -72,13 +94,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The storage type of the instance. Valid values:
+        /// <para>The storage type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>local_ssd</b>: local SSD</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
+        /// <item><description><b>cloud_essd</b>: enhanced SSD (ESSD) of performance level 1 (PL1)</description></item>
+        /// <item><description><b>cloud_essd2</b>: ESSD of PL2</description></item>
+        /// <item><description><b>cloud_essd3</b>: ESSD of PL3</description></item>
+        /// </list>
         /// 
-        /// *   **local_ssd**: local SSD
-        /// *   **cloud_ssd**: standard SSD
-        /// *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)
-        /// *   **cloud_essd2**: ESSD of PL2
-        /// *   **cloud_essd3**: ESSD of PL3
+        /// <b>Example:</b>
+        /// <para>local_ssd</para>
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

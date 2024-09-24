@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceIPArrayListRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -27,13 +29,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The network type of the IP address whitelist. Valid values:
+        /// <para>The network type of the IP address whitelist. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Classic</b>: classic network in enhanced whitelist mode</description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC) in enhanced whitelist mode</description></item>
+        /// <item><description><b>MIX</b>: standard whitelist mode</description></item>
+        /// </list>
+        /// <para>By default, this operation returns IP address whitelists of all network types.</para>
         /// 
-        /// *   **Classic**: classic network in enhanced whitelist mode
-        /// *   **VPC**: virtual private cloud (VPC) in enhanced whitelist mode
-        /// *   **MIX**: standard whitelist mode
-        /// 
-        /// By default, this operation returns IP address whitelists of all network types.
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("WhitelistNetworkType")]
         [Validation(Required=false)]
