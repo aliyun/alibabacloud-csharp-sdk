@@ -167,6 +167,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public int? Cpu { get; set; }
 
+                [NameInMap("ImageUrl")]
+                [Validation(Required=false)]
+                public string ImageUrl { get; set; }
+
                 /// <summary>
                 /// The number of application instances.
                 /// </summary>
@@ -206,6 +210,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("NamespaceId")]
                 [Validation(Required=false)]
                 public string NamespaceId { get; set; }
+
+                [NameInMap("PackageUrl")]
+                [Validation(Required=false)]
+                public string PackageUrl { get; set; }
 
                 [NameInMap("ProgrammingLanguage")]
                 [Validation(Required=false)]

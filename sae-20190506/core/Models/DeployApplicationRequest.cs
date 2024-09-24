@@ -130,6 +130,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Deploy { get; set; }
 
+        [NameInMap("Dotnet")]
+        [Validation(Required=false)]
+        public string Dotnet { get; set; }
+
         /// <summary>
         /// The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.
         /// </summary>

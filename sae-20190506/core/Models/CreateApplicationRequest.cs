@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public bool? Deploy { get; set; }
 
+        [NameInMap("Dotnet")]
+        [Validation(Required=false)]
+        public string Dotnet { get; set; }
+
         /// <summary>
         /// 3.5.3
         /// </summary>

@@ -36,6 +36,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Memory { get; set; }
 
+        [NameInMap("autoEnableApplicationScalingRule")]
+        [Validation(Required=false)]
+        public bool? AutoEnableApplicationScalingRule { get; set; }
+
+        [NameInMap("minReadyInstanceRatio")]
+        [Validation(Required=false)]
+        public int? MinReadyInstanceRatio { get; set; }
+
+        [NameInMap("minReadyInstances")]
+        [Validation(Required=false)]
+        public int? MinReadyInstances { get; set; }
+
     }
 
 }
