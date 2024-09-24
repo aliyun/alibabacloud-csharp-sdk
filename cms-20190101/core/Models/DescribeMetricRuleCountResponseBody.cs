@@ -10,58 +10,80 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleCountResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The responses code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Request is not authorization.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The number of alert rules in each state.
+        /// <para>The number of alert rules in each state.</para>
         /// </summary>
         [NameInMap("MetricRuleCount")]
         [Validation(Required=false)]
         public DescribeMetricRuleCountResponseBodyMetricRuleCount MetricRuleCount { get; set; }
         public class DescribeMetricRuleCountResponseBodyMetricRuleCount : TeaModel {
             /// <summary>
-            /// The number of alert rules with active alerts.
+            /// <para>The number of alert rules with active alerts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("Alarm")]
             [Validation(Required=false)]
             public int? Alarm { get; set; }
 
             /// <summary>
-            /// The number of disabled alert rules.
+            /// <para>The number of disabled alert rules.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Disable")]
             [Validation(Required=false)]
             public int? Disable { get; set; }
 
             /// <summary>
-            /// The number of alert rules without data.
+            /// <para>The number of alert rules without data.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Nodata")]
             [Validation(Required=false)]
             public int? Nodata { get; set; }
 
             /// <summary>
-            /// The number of alert rules without active alerts.
+            /// <para>The number of alert rules without active alerts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40</para>
             /// </summary>
             [NameInMap("Ok")]
             [Validation(Required=false)]
             public int? Ok { get; set; }
 
             /// <summary>
-            /// The total number of alert rules.
+            /// <para>The total number of alert rules.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>45</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -70,17 +92,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FF38D33A-67C1-40EB-AB65-FAEE51EDB644</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

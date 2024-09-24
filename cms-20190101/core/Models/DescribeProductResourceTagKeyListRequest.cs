@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeProductResourceTagKeyListRequest : TeaModel {
         /// <summary>
-        /// The pagination cursor.
+        /// <para>The pagination cursor.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dbc2826f237e****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

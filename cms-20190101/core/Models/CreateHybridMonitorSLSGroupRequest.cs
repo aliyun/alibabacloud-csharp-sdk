@@ -14,57 +14,60 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The configurations of the Logstore group.
-        /// 
-        /// Valid values of N: 1 to 25.
-        /// 
-        /// This parameter is required.
+        /// <para>The configurations of the Logstore group.</para>
+        /// <para>Valid values of N: 1 to 25.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SLSGroupConfig")]
         [Validation(Required=false)]
         public List<CreateHybridMonitorSLSGroupRequestSLSGroupConfig> SLSGroupConfig { get; set; }
         public class CreateHybridMonitorSLSGroupRequestSLSGroupConfig : TeaModel {
             /// <summary>
-            /// The Logstore.
+            /// <para>The Logstore.</para>
+            /// <para>Valid values of N: 1 to 25.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// Valid values of N: 1 to 25.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>Logstore-ECS</para>
             /// </summary>
             [NameInMap("SLSLogstore")]
             [Validation(Required=false)]
             public string SLSLogstore { get; set; }
 
             /// <summary>
-            /// The Simple Log Service project.
+            /// <para>The Simple Log Service project.</para>
+            /// <para>Valid values of N: 1 to 25.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// Valid values of N: 1 to 25.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>aliyun-project</para>
             /// </summary>
             [NameInMap("SLSProject")]
             [Validation(Required=false)]
             public string SLSProject { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// <para>The region ID.</para>
+            /// <para>Valid values of N: 1 to 25.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// Valid values of N: 1 to 25.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("SLSRegion")]
             [Validation(Required=false)]
             public string SLSRegion { get; set; }
 
             /// <summary>
-            /// The member ID.
+            /// <para>The member ID.</para>
+            /// <para>Valid values of N: 1 to 25.</para>
+            /// <para>If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</para>
+            /// <remarks>
+            /// <para>If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see <a href="https://help.aliyun.com/document_detail/170423.html">Manage the service-linked role for CloudMonitor</a>.</para>
+            /// </remarks>
             /// 
-            /// Valid values of N: 1 to 25.
-            /// 
-            /// If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.
-            /// 
-            /// > If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see [Manage the service-linked role for CloudMonitor](https://help.aliyun.com/document_detail/170423.html).
+            /// <b>Example:</b>
+            /// <para>120886317861****</para>
             /// </summary>
             [NameInMap("SLSUserId")]
             [Validation(Required=false)]
@@ -73,18 +76,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The description of the Logstore group.
+        /// <para>The description of the Logstore group.</para>
         /// </summary>
         [NameInMap("SLSGroupDescription")]
         [Validation(Required=false)]
         public string SLSGroupDescription { get; set; }
 
         /// <summary>
-        /// The name of the Logstore group.
+        /// <para>The name of the Logstore group.</para>
+        /// <para>The name must be 2 to 32 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (_). The name must start with a letter.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name must be 2 to 32 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (_). The name must start with a letter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Logstore_test</para>
         /// </summary>
         [NameInMap("SLSGroupName")]
         [Validation(Required=false)]

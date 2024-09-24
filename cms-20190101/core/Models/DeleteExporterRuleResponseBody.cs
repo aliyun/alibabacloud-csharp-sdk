@@ -10,33 +10,47 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteExporterRuleResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// <remarks>
+        /// <para>The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</para>
+        /// </remarks>
         /// 
-        /// > The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6A5F022D-AC7C-460E-94AE-B9E75083D023</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c></description></item>
+        /// <item><description><c>false</c></description></item>
+        /// </list>
         /// 
-        /// *   `true`
-        /// *   `false`
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

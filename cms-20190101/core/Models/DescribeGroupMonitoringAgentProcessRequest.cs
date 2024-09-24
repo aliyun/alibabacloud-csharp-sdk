@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeGroupMonitoringAgentProcessRequest : TeaModel {
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: 1
+        /// <para>The page number. Default value: 1</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 10.
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The process name.
+        /// <para>The process name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sshd</para>
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]

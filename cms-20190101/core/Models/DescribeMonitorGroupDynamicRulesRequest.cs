@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupDynamicRulesRequest : TeaModel {
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

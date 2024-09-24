@@ -10,54 +10,66 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// The abbreviation of the cloud service name.
+        /// <para>The abbreviation of the cloud service name.</para>
+        /// <para>For more information about how to obtain the abbreviation of a cloud service name, see <c>metricCategory</c> in the response parameter <c>Labels</c> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
         /// 
-        /// For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](https://help.aliyun.com/document_detail/114916.html) operation.
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// The resource ID. Separate multiple resource IDs with commas (,). You can query the details about a maximum of 20 resources at a time.
+        /// <para>The resource ID. Separate multiple resource IDs with commas (,). You can query the details about a maximum of 20 resources at a time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-m5e0k0bexac8tykr****</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The keyword that is used to search for resources.
+        /// <para>The keyword that is used to search for resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>portal</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Valid values: 1 to 1000000000.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Valid values: 1 to 1000000000.
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 1000000000.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 1000000000.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -68,10 +80,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the total number of resources in the specified application group. Valid values:
+        /// <para>Specifies whether to return the total number of resources in the specified application group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true (default)</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true (default)
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

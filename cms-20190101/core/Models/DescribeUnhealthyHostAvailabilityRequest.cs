@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeUnhealthyHostAvailabilityRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

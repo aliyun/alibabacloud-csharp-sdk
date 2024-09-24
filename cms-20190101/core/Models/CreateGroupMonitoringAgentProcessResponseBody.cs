@@ -10,37 +10,50 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateGroupMonitoringAgentProcessResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// <remarks>
+        /// <para>The status code 200 indicates that the call is successful.</para>
+        /// </remarks>
         /// 
-        /// > The status code 200 indicates that the call is successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Request is not authorization.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3F6150F9-45C7-43F9-9578-A58B2E726C90</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The group process information.
+        /// <para>The group process information.</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public CreateGroupMonitoringAgentProcessResponseBodyResource Resource { get; set; }
         public class CreateGroupMonitoringAgentProcessResponseBodyResource : TeaModel {
             /// <summary>
-            /// The ID of the group process.
+            /// <para>The ID of the group process.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>7F2B0024-4F21-48B9-A764-211CEC48****</para>
             /// </summary>
             [NameInMap("GroupProcessId")]
             [Validation(Required=false)]
@@ -49,10 +62,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
+        /// </list>
         /// 
-        /// *   true: The call is successful.
-        /// *   false: The call fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

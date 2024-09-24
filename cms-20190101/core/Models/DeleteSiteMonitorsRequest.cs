@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteSiteMonitorsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:
+        /// <para>Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true (default value)</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true (default value)
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsDeleteAlarms")]
         [Validation(Required=false)]
@@ -24,9 +28,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the site monitoring tasks that you want to delete. Separate multiple task IDs with commas (,).
+        /// <para>The IDs of the site monitoring tasks that you want to delete. Separate multiple task IDs with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>01adacc2-ece5-41b6-afa2-3143ab5d****,43bd1ead-514f-4524-813e-228ce091****</para>
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]

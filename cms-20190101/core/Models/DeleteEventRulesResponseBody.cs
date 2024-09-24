@@ -10,30 +10,43 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteEventRulesResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E5A72B5B-4F44-438C-B68A-147FD5DC53A8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+        /// <para>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,37 +10,50 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMetricRuleTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7B63F8CF-D48D-4608-A402-04FB5B2B4B6A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the alert template.
+        /// <para>The information about the alert template.</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public DeleteMetricRuleTemplateResponseBodyResource Resource { get; set; }
         public class DeleteMetricRuleTemplateResponseBodyResource : TeaModel {
             /// <summary>
-            /// The ID of the template.
+            /// <para>The ID of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123****</para>
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
@@ -49,7 +62,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+        /// <para>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSystemEventMetaListResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The detailed meta information.
+        /// <para>The detailed meta information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,36 +34,50 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeSystemEventMetaListResponseBodyDataResource> Resource { get; set; }
             public class DescribeSystemEventMetaListResponseBodyDataResource : TeaModel {
                 /// <summary>
-                /// The type of the system event. Valid values:
+                /// <para>The type of the system event. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>StatusNotification</description></item>
+                /// <item><description>Exception</description></item>
+                /// <item><description>Maintenance</description></item>
+                /// </list>
                 /// 
-                /// *   StatusNotification
-                /// *   Exception
-                /// *   Maintenance
+                /// <b>Example:</b>
+                /// <para>Exception</para>
                 /// </summary>
                 [NameInMap("EventType")]
                 [Validation(Required=false)]
                 public string EventType { get; set; }
 
                 /// <summary>
-                /// The level of the alert. Valid values:
+                /// <para>The level of the alert. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>CRITICAL</description></item>
+                /// <item><description>WARN</description></item>
+                /// <item><description>INFO</description></item>
+                /// </list>
                 /// 
-                /// *   CRITICAL
-                /// *   WARN
-                /// *   INFO
+                /// <b>Example:</b>
+                /// <para>INFO</para>
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
 
                 /// <summary>
-                /// The name of the system event.
+                /// <para>The name of the system event.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SelectFailureRate</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The description of the system event, in Chinese.
+                /// <para>The description of the system event, in Chinese.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>High query failure rate</para>
                 /// </summary>
                 [NameInMap("NameDesc")]
                 [Validation(Required=false)]
@@ -70,21 +88,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string NameDesc_en { get; set; }
 
                 /// <summary>
-                /// The abbreviation of the service name.
+                /// <para>The abbreviation of the service name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ADS</para>
                 /// </summary>
                 [NameInMap("Product")]
                 [Validation(Required=false)]
                 public string Product { get; set; }
 
                 /// <summary>
-                /// The status of the system event.
+                /// <para>The status of the system event.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>failed</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The description of the event status.
+                /// <para>The description of the event status.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Operation Failed</para>
                 /// </summary>
                 [NameInMap("StatusDesc")]
                 [Validation(Required=false)]
@@ -95,24 +122,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A6582C8B-E67C-4A19-BC15-EAEFEBDC7995</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
+        /// </list>
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

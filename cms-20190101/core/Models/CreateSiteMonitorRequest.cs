@@ -10,54 +10,66 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateSiteMonitorRequest : TeaModel {
         /// <summary>
-        /// The URL or IP address that is monitored by the task.
+        /// <para>The URL or IP address that is monitored by the task.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
         /// <summary>
-        /// The ID of the alert rule.
+        /// <para>The ID of the alert rule.</para>
+        /// <para>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
         /// 
-        /// For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
+        /// <b>Example:</b>
+        /// <para>SystemDefault_acs_ecs_dashboard_InternetOutRate_Percent</para>
         /// </summary>
         [NameInMap("AlertIds")]
         [Validation(Required=false)]
         public string AlertIds { get; set; }
 
         /// <summary>
-        /// The custom detection period. You can only select a time period from Monday to Sunday for detection.
+        /// <para>The custom detection period. You can only select a time period from Monday to Sunday for detection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;start_hour&quot;:0,&quot;end_hour&quot;:24, &quot;days&quot;:[0], &quot;time_zone&quot;:&quot;Local&quot;}</para>
         /// </summary>
         [NameInMap("CustomSchedule")]
         [Validation(Required=false)]
         public string CustomSchedule { get; set; }
 
         /// <summary>
-        /// The interval at which detection requests are sent.
+        /// <para>The interval at which detection requests are sent.</para>
+        /// <para>Valid values: 1, 5, 15, 30, and 60. Unit: minutes.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Valid values: 1, 5, 15, 30, and 60. Unit: minutes.
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public string Interval { get; set; }
 
         /// <summary>
-        /// The information of the detection points. If you leave this parameter empty, the system randomly selects three detection points.
+        /// <para>The information of the detection points. If you leave this parameter empty, the system randomly selects three detection points.</para>
+        /// <para>The value is a JSON array. Example: <c>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</c>. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</para>
+        /// <para>For information about how to obtain detection points, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</para>
         /// 
-        /// The value is a JSON array. Example: `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`. The values of the city field indicate Beijing, Hangzhou, and Qingdao.
-        /// 
-        /// For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](https://help.aliyun.com/document_detail/115045.html).
+        /// <b>Example:</b>
+        /// <para>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</para>
         /// </summary>
         [NameInMap("IspCities")]
         [Validation(Required=false)]
         public string IspCities { get; set; }
 
         /// <summary>
-        /// The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.
+        /// <para>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;time_out&quot;:5000}</para>
         /// </summary>
         [NameInMap("OptionsJson")]
         [Validation(Required=false)]
@@ -68,22 +80,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the site monitoring task.
+        /// <para>The name of the site monitoring task.</para>
+        /// <para>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>HanZhou_ECS1</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// The type of the site monitoring task.
+        /// <para>The protocol that is used by the site monitoring task.</para>
+        /// <para>Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, FTP, and WEBSOCKET.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>HTTPS</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

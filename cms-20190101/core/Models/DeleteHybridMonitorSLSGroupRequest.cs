@@ -14,11 +14,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the Logstore group.
+        /// <para>The name of the Logstore group.</para>
+        /// <para>For information about how to obtain the name of a Logstore group, see <a href="https://help.aliyun.com/document_detail/429526.html">DescribeHybridMonitorSLSGroup</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For information about how to obtain the name of a Logstore group, see [DescribeHybridMonitorSLSGroup](https://help.aliyun.com/document_detail/429526.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Logstore_test</para>
         /// </summary>
         [NameInMap("SLSGroupName")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitoringAgentProcessesRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-hp3hl3cx1pbahzy8****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

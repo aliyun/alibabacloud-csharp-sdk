@@ -10,23 +10,27 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitorGroupResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The deleted application group.
+        /// <para>The deleted application group.</para>
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public DeleteMonitorGroupResponseBodyGroup Group { get; set; }
         public class DeleteMonitorGroupResponseBodyGroup : TeaModel {
             /// <summary>
-            /// The alert groups that receive alert notifications for the application group.
+            /// <para>The alert groups that receive alert notifications for the application group.</para>
             /// </summary>
             [NameInMap("ContactGroups")]
             [Validation(Required=false)]
@@ -37,7 +41,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public List<DeleteMonitorGroupResponseBodyGroupContactGroupsContactGroup> ContactGroup { get; set; }
                 public class DeleteMonitorGroupResponseBodyGroupContactGroupsContactGroup : TeaModel {
                     /// <summary>
-                    /// The name of the alert group.
+                    /// <para>The name of the alert group.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ECS_Group</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -48,7 +55,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The name of the application group.
+            /// <para>The name of the application group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ECS_test</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -57,21 +67,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Request is not authorization.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CA35B3AE-4FFD-4A33-AE67-67EF68711EFA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+        /// <para>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

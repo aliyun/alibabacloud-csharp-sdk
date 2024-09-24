@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteHybridMonitorTaskRequest : TeaModel {
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// <para>The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).</para>
+        /// <remarks>
+        /// <para>This parameter is required only if you call this operation to delete metric import tasks for Alibaba Cloud services. In this case, the <c>TaskType</c> parameter is set to <c>aliyun_fc</c>.</para>
+        /// </remarks>
         /// 
-        /// The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).
-        /// 
-        /// > This parameter is required only if you call this operation to delete metric import tasks for Alibaba Cloud services. In this case, the `TaskType` parameter is set to `aliyun_fc`.
+        /// <b>Example:</b>
+        /// <para>aliyun</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -25,20 +28,27 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the member account.
+        /// <para>The ID of the member account.</para>
+        /// <remarks>
+        /// <para>This parameter is required only if you use a management account to call this operation to query metric import tasks that belong to a member in a resource directory. In this case, the <c>TaskType</c> parameter is set to <c>aliyun_fc</c>.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is required only if you use a management account to call this operation to query metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.
+        /// <b>Example:</b>
+        /// <para>120886317861****</para>
         /// </summary>
         [NameInMap("TargetUserId")]
         [Validation(Required=false)]
         public string TargetUserId { get; set; }
 
         /// <summary>
-        /// The ID of the metric import task.
+        /// <para>The ID of the metric import task.</para>
+        /// <para>For information about how to obtain the ID of a metric import task, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</para>
+        /// <remarks>
+        /// <para>This parameter is required only if you call this operation to delete metrics for the logs that are imported from Log Service. In this case, the <c>TaskType</c> parameter is set to <c>aliyun_sls</c>.</para>
+        /// </remarks>
         /// 
-        /// For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](https://help.aliyun.com/document_detail/428624.html).
-        /// 
-        /// > This parameter is required only if you call this operation to delete metrics for the logs that are imported from Log Service. In this case, the `TaskType` parameter is set to `aliyun_sls`.
+        /// <b>Example:</b>
+        /// <para>36****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -10,42 +10,55 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSystemEventCountResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status codes.
+        /// <para>The HTTP status codes.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <para>If the request was successful, a success message is returned. If the request failed, an error message is returned.</para>
         /// 
-        /// If the request was successful, a success message is returned. If the request failed, an error message is returned.
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C7A7B776-0ACE-5A93-9B07-DE8008D9CCDF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// The details of the system event.
+        /// <para>The details of the system event.</para>
         /// </summary>
         [NameInMap("SystemEventCounts")]
         [Validation(Required=false)]
@@ -56,81 +69,112 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount> SystemEventCount { get; set; }
             public class DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount : TeaModel {
                 /// <summary>
-                /// The description of the system event.
+                /// <para>The description of the system event.</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
-                /// The ID of the application group.
+                /// <para>The ID of the application group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>17285****</para>
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The name of the instance.
+                /// <para>The name of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS-test</para>
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// The level of the system event. Valid values:
+                /// <para>The level of the system event. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Critical</description></item>
+                /// <item><description>Warn</description></item>
+                /// <item><description>Info</description></item>
+                /// </list>
                 /// 
-                /// *   Critical
-                /// *   Warn
-                /// *   Info
+                /// <b>Example:</b>
+                /// <para>Info</para>
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
 
                 /// <summary>
-                /// The name of the system event.
+                /// <para>The name of the system event.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Instance:StateChange</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The number of times that the system event has occurred.
+                /// <para>The number of times that the system event has occurred.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Num")]
                 [Validation(Required=false)]
                 public long? Num { get; set; }
 
                 /// <summary>
-                /// The name of the cloud service in which the system event occurred.
+                /// <para>The name of the cloud service in which the system event occurred.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS</para>
                 /// </summary>
                 [NameInMap("Product")]
                 [Validation(Required=false)]
                 public string Product { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The resource ID.
+                /// <para>The resource ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-rj99xc6cptkk64ml****</para>
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The status of the system event.
+                /// <para>The status of the system event.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Normal</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The time when the system event occurred. The value is a timestamp. Unit: milliseconds.
+                /// <para>The time when the system event occurred. The value is a timestamp. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1635993751000</para>
                 /// </summary>
                 [NameInMap("Time")]
                 [Validation(Required=false)]

@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ruleName1</para>
         /// </summary>
         [NameInMap("RuleNames")]
         [Validation(Required=false)]

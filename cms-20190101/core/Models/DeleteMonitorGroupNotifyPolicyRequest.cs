@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitorGroupNotifyPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6780****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The policy type.
+        /// <para>The policy type.</para>
+        /// <para>Valid value: PauseNotify.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid value: PauseNotify.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PauseNotify</para>
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]

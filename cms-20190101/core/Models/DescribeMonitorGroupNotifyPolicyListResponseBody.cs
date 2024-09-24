@@ -10,23 +10,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupNotifyPolicyListResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// <remarks>
+        /// <para>The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// > The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Request is not authorization.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The returned policies.
+        /// <para>The returned policies.</para>
         /// </summary>
         [NameInMap("NotifyPolicyList")]
         [Validation(Required=false)]
@@ -37,39 +44,52 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy> NotifyPolicy { get; set; }
             public class DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy : TeaModel {
                 /// <summary>
-                /// The end of the time range to query.
+                /// <para>The end of the time range to query.</para>
+                /// <para>Unit: milliseconds.</para>
                 /// 
-                /// Unit: milliseconds.
+                /// <b>Example:</b>
+                /// <para>1551761781273</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// The ID of the application group.
+                /// <para>The ID of the application group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>6780****</para>
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The policy ID.
+                /// <para>The policy ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123****</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The beginning of the time range to query.
+                /// <para>The beginning of the time range to query.</para>
+                /// <para>Unit: milliseconds.</para>
                 /// 
-                /// Unit: milliseconds.
+                /// <b>Example:</b>
+                /// <para>1551761781273</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public long? StartTime { get; set; }
 
                 /// <summary>
-                /// The policy type.
+                /// <para>The policy type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PauseNotify</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -80,24 +100,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6072F026-C441-41A6-B114-35A1E8F8FDD3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

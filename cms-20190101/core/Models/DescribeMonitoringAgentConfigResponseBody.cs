@@ -10,60 +10,85 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitoringAgentConfigResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the Cloud Monitor agent is automatically installed on existing Elastic Compute Service (ECS) instances. Valid values:
+        /// <para>Indicates whether the Cloud Monitor agent is automatically installed on existing Elastic Compute Service (ECS) instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoInstall")]
         [Validation(Required=false)]
         public bool? AutoInstall { get; set; }
 
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates a success.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates a success.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The service for which one-click alert is enabled.
+        /// <para>The service for which one-click alert is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>redis,rds,ecs</para>
         /// </summary>
         [NameInMap("EnableActiveAlert")]
         [Validation(Required=false)]
         public string EnableActiveAlert { get; set; }
 
         /// <summary>
-        /// Indicates whether the Cloud Monitor agent is automatically installed on new ECS instances. Valid values:
+        /// <para>Indicates whether the Cloud Monitor agent is automatically installed on new ECS instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableInstallAgentNewECS")]
         [Validation(Required=false)]
         public bool? EnableInstallAgentNewECS { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Request is not authorization.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E9F4FA2A-54BE-4EF9-9D1D-1A0B1DC86B8D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation was successful. Valid values:
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: successful.</description></item>
+        /// <item><description>false: failed.</description></item>
+        /// </list>
         /// 
-        /// *   true: successful.
-        /// *   false: failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

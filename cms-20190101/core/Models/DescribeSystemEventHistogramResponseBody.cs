@@ -10,37 +10,50 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSystemEventHistogramResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Request is not authorization.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>486029C9-53E1-44B4-85A8-16A571A043FD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.
+        /// <para>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// The information about the number of times the system event occurred during each interval of a time period.
+        /// <para>The information about the number of times the system event occurred during each interval of a time period.</para>
         /// </summary>
         [NameInMap("SystemEventHistograms")]
         [Validation(Required=false)]
@@ -51,25 +64,32 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram> SystemEventHistogram { get; set; }
             public class DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram : TeaModel {
                 /// <summary>
-                /// The number of times the system event occurred.
+                /// <para>The number of times the system event occurred.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// The end time.
+                /// <para>The end time.</para>
+                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// <b>Example:</b>
+                /// <para>1552225753000</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// The start time.
+                /// <para>The start time.</para>
+                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// <b>Example:</b>
+                /// <para>1552225770000</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]

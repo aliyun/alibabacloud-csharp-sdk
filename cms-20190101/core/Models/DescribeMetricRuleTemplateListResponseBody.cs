@@ -10,40 +10,54 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleTemplateListResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// <remarks>
+        /// <para>The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// > The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Request is not authorization.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>659401C0-6214-5C02-972A-CFA929D717B7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The queried alert templates.
+        /// <para>The queried alert templates.</para>
         /// </summary>
         [NameInMap("Templates")]
         [Validation(Required=false)]
@@ -54,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate> Template { get; set; }
             public class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate : TeaModel {
                 /// <summary>
-                /// The history of applying the alert templates to application groups.
+                /// <para>The history of applying the alert templates to application groups.</para>
                 /// </summary>
                 [NameInMap("ApplyHistories")]
                 [Validation(Required=false)]
@@ -65,23 +79,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public List<DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory> ApplyHistory { get; set; }
                     public class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory : TeaModel {
                         /// <summary>
-                        /// The timestamp when the alert template was applied to the application group.
+                        /// <para>The timestamp when the alert template was applied to the application group.</para>
+                        /// <para>Unit: milliseconds.</para>
                         /// 
-                        /// Unit: milliseconds.
+                        /// <b>Example:</b>
+                        /// <para>1646055898000</para>
                         /// </summary>
                         [NameInMap("ApplyTime")]
                         [Validation(Required=false)]
                         public long? ApplyTime { get; set; }
 
                         /// <summary>
-                        /// The ID of the application group.
+                        /// <para>The ID of the application group.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>3607****</para>
                         /// </summary>
                         [NameInMap("GroupId")]
                         [Validation(Required=false)]
                         public long? GroupId { get; set; }
 
                         /// <summary>
-                        /// The name of the application group.
+                        /// <para>The name of the application group.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>ECS_Group</para>
                         /// </summary>
                         [NameInMap("GroupName")]
                         [Validation(Required=false)]
@@ -92,48 +114,60 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The description of the alert template.
+                /// <para>The description of the alert template.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The timestamp when the alert template was created.
+                /// <para>The timestamp when the alert template was created.</para>
+                /// <para>Unit: milliseconds.</para>
                 /// 
-                /// Unit: milliseconds.
+                /// <b>Example:</b>
+                /// <para>1646018798000</para>
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// The timestamp when the alert template was modified.
+                /// <para>The timestamp when the alert template was modified.</para>
+                /// <para>Unit: milliseconds.</para>
                 /// 
-                /// Unit: milliseconds.
+                /// <b>Example:</b>
+                /// <para>1646054798000</para>
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public long? GmtModified { get; set; }
 
                 /// <summary>
-                /// The name of the alert template.
+                /// <para>The name of the alert template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS_Template1</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The version of the alert template.
+                /// <para>The version of the alert template.</para>
+                /// <para>Default value: 0.</para>
                 /// 
-                /// Default value: 0.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("RestVersion")]
                 [Validation(Required=false)]
                 public long? RestVersion { get; set; }
 
                 /// <summary>
-                /// The ID of the alert template.
+                /// <para>The ID of the alert template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>70****</para>
                 /// </summary>
                 [NameInMap("TemplateId")]
                 [Validation(Required=false)]
@@ -144,7 +178,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

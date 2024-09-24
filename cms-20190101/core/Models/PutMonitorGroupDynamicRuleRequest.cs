@@ -10,86 +10,98 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutMonitorGroupDynamicRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// None.
-        /// 
-        /// This parameter is required.
+        /// <para>None.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("GroupRules")]
         [Validation(Required=false)]
         public List<PutMonitorGroupDynamicRuleRequestGroupRules> GroupRules { get; set; }
         public class PutMonitorGroupDynamicRuleRequestGroupRules : TeaModel {
             /// <summary>
-            /// The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:
+            /// <para>The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ecs: Elastic Compute Service (ECS)</description></item>
+            /// <item><description>rds: ApsaraDB RDS</description></item>
+            /// <item><description>slb: Server Load Balancer (SLB)</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   ecs: Elastic Compute Service (ECS)
-            /// *   rds: ApsaraDB RDS
-            /// *   slb: Server Load Balancer (SLB)
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>ecs</para>
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
             /// <summary>
-            /// The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:
+            /// <para>The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>and: The instances that meet all the conditional expressions are automatically added to the application group.</description></item>
+            /// <item><description>or: The instances that meet one of the conditional expressions are automatically added to the application group.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   and: The instances that meet all the conditional expressions are automatically added to the application group.
-            /// *   or: The instances that meet one of the conditional expressions are automatically added to the application group.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>and</para>
             /// </summary>
             [NameInMap("FilterRelation")]
             [Validation(Required=false)]
             public string FilterRelation { get; set; }
 
             /// <summary>
-            /// None.
-            /// 
-            /// This parameter is required.
+            /// <para>None.</para>
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Filters")]
             [Validation(Required=false)]
             public List<PutMonitorGroupDynamicRuleRequestGroupRulesFilters> Filters { get; set; }
             public class PutMonitorGroupDynamicRuleRequestGroupRulesFilters : TeaModel {
                 /// <summary>
-                /// The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:
+                /// <para>The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>contains: contains</description></item>
+                /// <item><description>notContains: does not contain</description></item>
+                /// <item><description>startWith: starts with a prefix</description></item>
+                /// <item><description>endWith: ends with a suffix</description></item>
+                /// </list>
+                /// <para>This parameter is required.</para>
                 /// 
-                /// *   contains: contains
-                /// *   notContains: does not contain
-                /// *   startWith: starts with a prefix
-                /// *   endWith: ends with a suffix
-                /// 
-                /// This parameter is required.
+                /// <b>Example:</b>
+                /// <para>contains</para>
                 /// </summary>
                 [NameInMap("Function")]
                 [Validation(Required=false)]
                 public string Function { get; set; }
 
                 /// <summary>
-                /// The name of the field based on which instances are filtered. Valid values of N: 1 to 3.
+                /// <para>The name of the field based on which instances are filtered. Valid values of N: 1 to 3.</para>
+                /// <para>Only hostnames are supported. Example: hostName.</para>
+                /// <para>This parameter is required.</para>
                 /// 
-                /// Only hostnames are supported. Example: hostName.
-                /// 
-                /// This parameter is required.
+                /// <b>Example:</b>
+                /// <para>hostName</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The value to be matched with the specified field. Valid values of N: 1 to 3.
+                /// <para>The value to be matched with the specified field. Valid values of N: 1 to 3.</para>
+                /// <para>This parameter is required.</para>
                 /// 
-                /// This parameter is required.
+                /// <b>Example:</b>
+                /// <para>nginx</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -100,10 +112,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The mode for creating the alert rule. Valid values:
+        /// <para>The mode for creating the alert rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: creates asynchronously</description></item>
+        /// <item><description>false (default): creates synchronously</description></item>
+        /// </list>
         /// 
-        /// *   true: creates asynchronously
-        /// *   false (default): creates synchronously
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsAsync")]
         [Validation(Required=false)]

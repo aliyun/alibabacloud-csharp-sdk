@@ -10,29 +10,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitorGroupNotifyPolicyRequest : TeaModel {
         /// <summary>
-        /// The timestamp that indicates the end time of the validity period for the policy.
+        /// <para>The timestamp that indicates the end time of the validity period for the policy.</para>
+        /// <para>This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1623208500000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>7301****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The type of the policy. Valid value: PauseNotify.
+        /// <para>The type of the policy. Valid value: PauseNotify.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PauseNotify</para>
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]
@@ -43,11 +48,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The timestamp that indicates the start time of the validity period for the policy.
+        /// <para>The timestamp that indicates the start time of the validity period for the policy.</para>
+        /// <para>This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1622949300000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -10,50 +10,66 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeDynamicTagRuleListRequest : TeaModel {
         /// <summary>
-        /// The ID of the tag rule.
+        /// <para>The ID of the tag rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>004155fa-15ba-466d-b61a-***********</para>
         /// </summary>
         [NameInMap("DynamicTagRuleId")]
         [Validation(Required=false)]
         public string DynamicTagRuleId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Minimum value: 1. Default value: 30.</para>
         /// 
-        /// Minimum value: 1. Default value: 30.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The tag key.
+        /// <para>The tag key.</para>
+        /// <para>For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</para>
         /// 
-        /// For more information about how to obtain a tag key, see [DescribeTagKeyList](https://help.aliyun.com/document_detail/145558.html).
+        /// <b>Example:</b>
+        /// <para>tagkey1</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public string TagKey { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the tags belong.
+        /// <para>The ID of the region to which the tags belong.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("TagRegionId")]
         [Validation(Required=false)]
         public string TagRegionId { get; set; }
 
         /// <summary>
-        /// The tag value.
+        /// <para>The tag value.</para>
+        /// <para>For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagKeyList</a>.</para>
         /// 
-        /// For more information about how to obtain a tag value, see [DescribeTagKeyList](https://help.aliyun.com/document_detail/145557.html).
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("TagValue")]
         [Validation(Required=false)]

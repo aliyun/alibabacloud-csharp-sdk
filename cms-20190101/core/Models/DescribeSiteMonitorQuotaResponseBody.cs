@@ -10,64 +10,88 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorQuotaResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The responses code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The quotas and version of site monitoring.
+        /// <para>The quota.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSiteMonitorQuotaResponseBodyData Data { get; set; }
         public class DescribeSiteMonitorQuotaResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether the second-level monitoring is enabled. Valid values:
+            /// <para>Indicates whether second-level monitoring is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Second-level monitoring is enabled.</description></item>
+            /// <item><description>false: Second-level monitoring is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   true
-            /// *   false
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("SecondMonitor")]
             [Validation(Required=false)]
             public bool? SecondMonitor { get; set; }
 
             /// <summary>
-            /// The quota of detection points that are provided by Alibaba Cloud. Five detection points are provided for free.
+            /// <para>The quota of detection points that are provided by Alibaba Cloud. Five detection points are provided for free.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("SiteMonitorIdcQuota")]
             [Validation(Required=false)]
             public int? SiteMonitorIdcQuota { get; set; }
 
             /// <summary>
-            /// The quota of detection points that are not provided by Alibaba Cloud. Default value: 0.
+            /// <para>The quota of detection points that are not provided by Alibaba Cloud. Default value: 0.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("SiteMonitorOperatorQuotaQuota")]
             [Validation(Required=false)]
             public int? SiteMonitorOperatorQuotaQuota { get; set; }
 
             /// <summary>
-            /// The used quota of site monitoring tasks.
+            /// <para>The used quota of site monitoring tasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6</para>
             /// </summary>
             [NameInMap("SiteMonitorQuotaTaskUsed")]
             [Validation(Required=false)]
             public int? SiteMonitorQuotaTaskUsed { get; set; }
 
             /// <summary>
-            /// The quota of site monitoring tasks.
+            /// <para>The quota of site monitoring tasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("SiteMonitorTaskQuota")]
             [Validation(Required=false)]
             public int? SiteMonitorTaskQuota { get; set; }
 
             /// <summary>
-            /// The version of site monitoring. Valid values:
+            /// <para>The version of site monitoring. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>V1</description></item>
+            /// <item><description>V2</description></item>
+            /// </list>
             /// 
-            /// *   V1
-            /// *   V2
+            /// <b>Example:</b>
+            /// <para>V1</para>
             /// </summary>
             [NameInMap("SiteMonitorVersion")]
             [Validation(Required=false)]
@@ -76,24 +100,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>26860260-76C6-404E-AB7A-EB98D36A6885</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

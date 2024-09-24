@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleTemplateAttributeRequest : TeaModel {
         /// <summary>
-        /// The name of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.
+        /// <para>The name of the alert template. You must specify at least one of the <c>Name</c> and <c>TemplateId</c> parameters.</para>
+        /// <para>For information about how to obtain the name of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</para>
         /// 
-        /// For information about how to obtain the name of an alert template, see [DescribeMetricRuleTemplateList](https://help.aliyun.com/document_detail/114982.html).
+        /// <b>Example:</b>
+        /// <para>ECS_Template1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -23,9 +25,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.
+        /// <para>The ID of the alert template. You must specify at least one of the <c>Name</c> and <c>TemplateId</c> parameters.</para>
+        /// <para>For information about how to obtain the ID of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</para>
         /// 
-        /// For information about how to obtain the ID of an alert template, see [DescribeMetricRuleTemplateList](https://help.aliyun.com/document_detail/114982.html).
+        /// <b>Example:</b>
+        /// <para>70****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

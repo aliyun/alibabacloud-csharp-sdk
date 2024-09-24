@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeContactListByContactGroupRequest : TeaModel {
         /// <summary>
-        /// The name of the alert contact group.
+        /// <para>The name of the alert contact group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>CloudMonitor</para>
         /// </summary>
         [NameInMap("ContactGroupName")]
         [Validation(Required=false)]

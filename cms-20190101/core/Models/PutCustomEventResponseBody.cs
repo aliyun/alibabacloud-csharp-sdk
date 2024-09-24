@@ -10,23 +10,33 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutCustomEventResponseBody : TeaModel {
         /// <summary>
-        /// The responses code.
+        /// <para>The responses code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>131DD9C8-9A32-4428-AD2E-4E3013B6E3A7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

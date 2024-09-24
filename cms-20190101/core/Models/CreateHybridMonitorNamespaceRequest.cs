@@ -10,37 +10,46 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateHybridMonitorNamespaceRequest : TeaModel {
         /// <summary>
-        /// The description of the namespace.
+        /// <para>The description of the namespace.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// <para>The name can contain lowercase letters, digits, and hyphens (-).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name can contain lowercase letters, digits, and hyphens (-).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>aliyun</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The region where the metric data is stored.
+        /// <para>The region where the metric data is stored.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("NamespaceRegion")]
         [Validation(Required=false)]
         public string NamespaceRegion { get; set; }
 
         /// <summary>
-        /// The storage scheme of metric data. Valid values:
+        /// <para>The storage scheme of metric data. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>m_prom_user: The metric data is stored in Simple Log Service.</description></item>
+        /// <item><description>m_prom_pool: The metric data is stored in the private storage space provided by CloudMonitor.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> For more information about the storage schemes of metric data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Data storage schemes for Hybrid Cloud Monitoring</a>.</para>
+        /// </remarks>
         /// 
-        /// *   m_prom_user: The metric data is stored in Simple Log Service.
-        /// *   m_prom_pool: The metric data is stored in the private storage space provided by CloudMonitor.
-        /// 
-        /// >  For more information about the storage schemes of metric data, see [Data storage schemes for Hybrid Cloud Monitoring](https://help.aliyun.com/document_detail/2594921.html).
+        /// <b>Example:</b>
+        /// <para>m_prometheus</para>
         /// </summary>
         [NameInMap("NamespaceType")]
         [Validation(Required=false)]
@@ -51,16 +60,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The data retention period. Valid values:
+        /// <para>The data retention period. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cms.s1.large (Retention Period 15 Days)</description></item>
+        /// <item><description>cms.s1.xlarge (Retention Period 32 Days)</description></item>
+        /// <item><description>cms.s1.2xlarge (Retention Period 63 Days)</description></item>
+        /// <item><description>cms.s1.3xlarge (Retention Period 93 Days) (default)</description></item>
+        /// <item><description>cms.s1.6xlarge (Retention Period 185 Days)</description></item>
+        /// <item><description>cms.s1.12xlarge (Retention Period 367 Days)</description></item>
+        /// </list>
+        /// <para>For information about the pricing for different retention periods, see the <b>Pricing</b> section in <a href="https://help.aliyun.com/document_detail/223532.html">Billing of the dashboard feature</a>.</para>
         /// 
-        /// *   cms.s1.large (Retention Period 15 Days)
-        /// *   cms.s1.xlarge (Retention Period 32 Days)
-        /// *   cms.s1.2xlarge (Retention Period 63 Days)
-        /// *   cms.s1.3xlarge (Retention Period 93 Days) (default)
-        /// *   cms.s1.6xlarge (Retention Period 185 Days)
-        /// *   cms.s1.12xlarge (Retention Period 367 Days)
-        /// 
-        /// For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](https://help.aliyun.com/document_detail/223532.html).
+        /// <b>Example:</b>
+        /// <para>cms.s1.3xlarge</para>
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

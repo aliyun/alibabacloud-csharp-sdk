@@ -10,75 +10,95 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleListRequest : TeaModel {
         /// <summary>
-        /// The status of the alert rule. Valid values:
+        /// <para>The status of the alert rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>OK: The alert rule has no active alerts.</description></item>
+        /// <item><description>ALARM: The alert rule has active alerts.</description></item>
+        /// <item><description>INSUFFICIENT_DATA: No data is available.</description></item>
+        /// </list>
         /// 
-        /// *   OK: The alert rule has no active alerts.
-        /// *   ALARM: The alert rule has active alerts.
-        /// *   INSUFFICIENT_DATA: No data is available.
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("AlertState")]
         [Validation(Required=false)]
         public string AlertState { get; set; }
 
         /// <summary>
-        /// The monitoring dimensions of the specified resource.
+        /// <para>The monitoring dimensions of the specified resource.</para>
+        /// <para>Set the value to a collection of <c>key:value</c> pairs. Example: <c>{&quot;userId&quot;:&quot;120886317861****&quot;}</c> or <c>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</c>.</para>
         /// 
-        /// Set the value to a collection of `key:value` pairs. Example: `{"userId":"120886317861****"}` or `{"instanceId":"i-2ze2d6j5uhg20x47****"}`.
+        /// <b>Example:</b>
+        /// <para>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</para>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public string Dimensions { get; set; }
 
         /// <summary>
-        /// Specifies whether to query enabled or disabled alert rules. Valid values:
+        /// <para>Specifies whether to query enabled or disabled alert rules. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: queries enabled alert rules.</description></item>
+        /// <item><description>false: queries disabled alert rules.</description></item>
+        /// </list>
         /// 
-        /// *   true: queries enabled alert rules.
-        /// *   false: queries disabled alert rules.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableState")]
         [Validation(Required=false)]
         public bool? EnableState { get; set; }
 
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
         /// 
-        /// For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
+        /// <b>Example:</b>
+        /// <para>7301****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The name of the metric.
+        /// <para>The name of the metric.</para>
+        /// <para>For information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
         /// 
-        /// For information about how to obtain the name of a metric, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// <b>Example:</b>
+        /// <para>cpu_total</para>
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The namespace of the cloud service.
+        /// <para>The namespace of the cloud service.</para>
+        /// <para>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
         /// 
-        /// For information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// <b>Example:</b>
+        /// <para>acs_ecs_dashboard</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The page number of the page to return.
+        /// <para>The page number of the page to return.</para>
+        /// <para>Minimum value: 1. Default value: 1.</para>
         /// 
-        /// Minimum value: 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Minimum value: 1. Default value: 10.</para>
         /// 
-        /// Minimum value: 1. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -89,16 +109,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the alert rule. You can specify up to 20 IDs at a time. Separate multiple IDs with commas (,).
+        /// <para>The ID of the alert rule. You can specify up to 20 IDs at a time. Separate multiple IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</para>
         /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]
         public string RuleIds { get; set; }
 
         /// <summary>
-        /// The name of the alert rule.
+        /// <para>The name of the alert rule.</para>
+        /// <para>This parameter supports fuzzy match.</para>
         /// 
-        /// This parameter supports fuzzy match.
+        /// <b>Example:</b>
+        /// <para>Rule_01</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

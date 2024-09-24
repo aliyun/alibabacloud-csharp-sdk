@@ -10,49 +10,56 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutCustomEventRequest : TeaModel {
         /// <summary>
-        /// The event details.
-        /// 
-        /// This parameter is required.
+        /// <para>The event details.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EventInfo")]
         [Validation(Required=false)]
         public List<PutCustomEventRequestEventInfo> EventInfo { get; set; }
         public class PutCustomEventRequestEventInfo : TeaModel {
             /// <summary>
-            /// The event content. Valid values of N: 1 to 50.
+            /// <para>The event content. Valid values of N: 1 to 50.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>IOException</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// The event name. Valid values of N: 1 to 50.
+            /// <para>The event name. Valid values of N: 1 to 50.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>myEvent</para>
             /// </summary>
             [NameInMap("EventName")]
             [Validation(Required=false)]
             public string EventName { get; set; }
 
             /// <summary>
-            /// The ID of the application group. Valid values of N: 1 to 50.
+            /// <para>The ID of the application group. Valid values of N: 1 to 50.</para>
+            /// <para>Default value: 0. This value indicates that the event to be reported does not belong to any application group.</para>
             /// 
-            /// Default value: 0. This value indicates that the event to be reported does not belong to any application group.
+            /// <b>Example:</b>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
             /// <summary>
-            /// The time when the event occurred.
+            /// <para>The time when the event occurred.</para>
+            /// <para>Format: <c>yyyyMMddTHHmmss.SSSZ</c>.</para>
+            /// <para>Valid values of N: 1 to 50.</para>
+            /// <remarks>
+            /// <para> You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.</para>
+            /// </remarks>
             /// 
-            /// Format: `yyyyMMddTHHmmss.SSSZ`.
-            /// 
-            /// Valid values of N: 1 to 50.
-            /// 
-            /// >  You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.
+            /// <b>Example:</b>
+            /// <para>20171013T170923.456+0800</para>
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]

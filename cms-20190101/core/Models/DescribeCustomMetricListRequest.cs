@@ -10,48 +10,63 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeCustomMetricListRequest : TeaModel {
         /// <summary>
-        /// The dimensions that specify the resources for which you want to query custom metrics.
+        /// <para>The dimensions based on which the resources are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{sampleName1=value1&amp;sampleName2=value2}</para>
         /// </summary>
         [NameInMap("Dimension")]
         [Validation(Required=false)]
         public string Dimension { get; set; }
 
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>For information about how to query the IDs of application groups, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
         /// 
-        /// For more information, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
+        /// <b>Example:</b>
+        /// <para>7378****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported custom metrics.
+        /// <para>The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported monitoring data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>97c25982d9745a231276bff27469****</para>
         /// </summary>
         [NameInMap("Md5")]
         [Validation(Required=false)]
         public string Md5 { get; set; }
 
         /// <summary>
-        /// The name of the custom metric.
+        /// <para>The name of the custom metric.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cpu_total</para>
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Pages start from page 1. Default value: 10.</para>
         /// 
-        /// Pages start from page 1. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

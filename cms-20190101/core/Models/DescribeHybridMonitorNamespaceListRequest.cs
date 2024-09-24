@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorNamespaceListRequest : TeaModel {
         /// <summary>
-        /// The search keyword.
+        /// <para>The search keyword.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aliyun</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// <para>The name can contain letters, digits, and hyphens (-).</para>
         /// 
-        /// The name can contain letters, digits, and hyphens (-).
+        /// <b>Example:</b>
+        /// <para>aliyun-test</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Page numbers start from 1. Default value: 1.</para>
         /// 
-        /// Page numbers start from 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Page numbers start from 1. Default value: 10.</para>
         /// 
-        /// Page numbers start from 1. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -48,10 +57,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:
+        /// <para>Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false (default)</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false (default)
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ShowTaskStatistic")]
         [Validation(Required=false)]

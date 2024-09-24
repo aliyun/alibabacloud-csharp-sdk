@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<NotificationStrategyEscalationSettingCustomChannels> CustomChannels { get; set; }
             public class NotificationStrategyEscalationSettingCustomChannels : TeaModel {
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("ChannelType")]
                 [Validation(Required=false)]
@@ -73,21 +73,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<List<NotificationStrategyFilterSettingBlackList>> BlackList { get; set; }
             public class NotificationStrategyFilterSettingBlackList : TeaModel {
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Field")]
                 [Validation(Required=false)]
                 public string Field { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Op")]
                 [Validation(Required=false)]
                 public string Op { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -100,21 +100,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<List<NotificationStrategyFilterSettingWhiteList>> WhiteList { get; set; }
             public class NotificationStrategyFilterSettingWhiteList : TeaModel {
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Field")]
                 [Validation(Required=false)]
                 public string Field { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Op")]
                 [Validation(Required=false)]
                 public string Op { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

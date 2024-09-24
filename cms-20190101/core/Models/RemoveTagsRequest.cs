@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class RemoveTagsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the application groups.
+        /// <para>The IDs of the application groups.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
@@ -23,31 +25,36 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The tags.
-        /// 
-        /// This parameter is required.
+        /// <para>The tags.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<RemoveTagsRequestTag> Tag { get; set; }
         public class RemoveTagsRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// <remarks>
+            /// <para>The tag key (<c>Tag.N.Key</c>) and tag value (<c>Tag.N.Value</c>) must be specified at the same time.</para>
+            /// </remarks>
+            /// <para>This parameter is required.</para>
             /// 
-            /// > The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>Key1</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// <remarks>
+            /// <para>The tag key (<c>Tag.N.Key</c>) and tag value (<c>Tag.N.Value</c>) must be specified at the same time.</para>
+            /// </remarks>
+            /// <para>This parameter is required.</para>
             /// 
-            /// > The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>Value1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

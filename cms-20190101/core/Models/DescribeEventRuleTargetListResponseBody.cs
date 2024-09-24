@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeEventRuleTargetListResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The information about the recipients if alert notifications are sent to the alert contacts of an alert contact group.
+        /// <para>The information about the recipients if alert notifications are sent to the alert contacts of an alert contact group.</para>
         /// </summary>
         [NameInMap("ContactParameters")]
         [Validation(Required=false)]
@@ -30,23 +34,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeEventRuleTargetListResponseBodyContactParametersContactParameter> ContactParameter { get; set; }
             public class DescribeEventRuleTargetListResponseBodyContactParametersContactParameter : TeaModel {
                 /// <summary>
-                /// The name of the alert group.
+                /// <para>The name of the alert group.</para>
                 /// </summary>
                 [NameInMap("ContactGroupName")]
                 [Validation(Required=false)]
                 public string ContactGroupName { get; set; }
 
                 /// <summary>
-                /// The ID of the recipient.
+                /// <para>The ID of the recipient.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The alert notification methods. Valid values:
+                /// <para>The alert notification methods. Valid values:</para>
+                /// <para>4: Alert notifications are sent by using DingTalk chatbots and emails.</para>
                 /// 
-                /// 4: Alert notifications are sent by using DingTalk chatbots and emails.
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
@@ -57,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The information about the recipients in Function Compute.
+        /// <para>The information about the recipients in Function Compute.</para>
         /// </summary>
         [NameInMap("FcParameters")]
         [Validation(Required=false)]
@@ -68,43 +77,55 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeEventRuleTargetListResponseBodyFcParametersFCParameter> FCParameter { get; set; }
             public class DescribeEventRuleTargetListResponseBodyFcParametersFCParameter : TeaModel {
                 /// <summary>
-                /// The Alibaba Cloud Resource Name (ARN) of the function. 
-                /// 
-                /// Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
-                /// 
-                /// - Service: the code of an Alibaba Cloud service
-                /// - Region: the region ID
-                /// - Account: the ID of an Alibaba Cloud account
-                /// - ResourceType: the resource type
-                /// - ResourceId: the resource ID
+                /// <para>The Alibaba Cloud Resource Name (ARN) of the function. </para>
+                /// <para>Format: <c>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</c>. Fields: </para>
+                /// <list type="bullet">
+                /// <item><description>Service: the code of an Alibaba Cloud service</description></item>
+                /// <item><description>Region: the region ID</description></item>
+                /// <item><description>Account: the ID of an Alibaba Cloud account</description></item>
+                /// <item><description>ResourceType: the resource type</description></item>
+                /// <item><description>ResourceId: the resource ID</description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// The name of the function.
+                /// <para>The name of the function.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>fcTest1</para>
                 /// </summary>
                 [NameInMap("FunctionName")]
                 [Validation(Required=false)]
                 public string FunctionName { get; set; }
 
                 /// <summary>
-                /// The ID of the recipient.
+                /// <para>The ID of the recipient.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The region where Function Compute is deployed.
+                /// <para>The region where Function Compute is deployed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-qingdao</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
                 /// <summary>
-                /// The name of the Function Compute service.
+                /// <para>The name of the Function Compute service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>service1</para>
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
@@ -115,14 +136,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Request is not authorization.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The information about the recipients in Message Service (MNS).
+        /// <para>The information about the recipients in Message Service (MNS).</para>
         /// </summary>
         [NameInMap("MnsParameters")]
         [Validation(Required=false)]
@@ -133,43 +157,55 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter> MnsParameter { get; set; }
             public class DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter : TeaModel {
                 /// <summary>
-                /// The ARN of the MNS queue. 
-                /// 
-                /// Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
-                /// 
-                /// - Service: the code of an Alibaba Cloud service
-                /// - Region: the region ID
-                /// - Account: the ID of an Alibaba Cloud account
-                /// - ResourceType: the resource type
-                /// - ResourceId: the resource ID
+                /// <para>The ARN of the MNS queue. </para>
+                /// <para>Format: <c>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</c>. Fields: </para>
+                /// <list type="bullet">
+                /// <item><description>Service: the code of an Alibaba Cloud service</description></item>
+                /// <item><description>Region: the region ID</description></item>
+                /// <item><description>Account: the ID of an Alibaba Cloud account</description></item>
+                /// <item><description>ResourceType: the resource type</description></item>
+                /// <item><description>ResourceId: the resource ID</description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// The ID of the recipient.
+                /// <para>The ID of the recipient.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The name of the MNS queue.
+                /// <para>The name of the MNS queue.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testQueue</para>
                 /// </summary>
                 [NameInMap("Queue")]
                 [Validation(Required=false)]
                 public string Queue { get; set; }
 
                 /// <summary>
-                /// The region where MNS is deployed.
+                /// <para>The region where MNS is deployed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
                 /// <summary>
-                /// The MNS topic.
+                /// <para>The MNS topic.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>topic_sample</para>
                 /// </summary>
                 [NameInMap("Topic")]
                 [Validation(Required=false)]
@@ -180,7 +216,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The information about the recipients in OpenAPI Explorer.
+        /// <para>The information about the recipients in OpenAPI Explorer.</para>
         /// </summary>
         [NameInMap("OpenApiParameters")]
         [Validation(Required=false)]
@@ -191,64 +227,83 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters> OpenApiParameters { get; set; }
             public class DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters : TeaModel {
                 /// <summary>
-                /// The name of the API operation.
+                /// <para>The name of the API operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PutLogs</para>
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public string Action { get; set; }
 
                 /// <summary>
-                /// The ARN of the API operation. 
-                /// 
-                /// Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
-                /// 
-                /// - Service: the code of an Alibaba Cloud service
-                /// - Region: the region ID
-                /// - Account: the ID of an Alibaba Cloud account
-                /// - ResourceType: the resource type
-                /// - ResourceId: the resource ID The ARN of the Log Service Logstore. 
-                /// 
-                /// Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:
-                /// - Service: the code of an Alibaba Cloud service
-                /// - Region: the region ID
-                /// - Account: the ID of an Alibaba Cloud account
-                /// - ResourceType: the resource type
-                /// - ResourceId: the resource ID
+                /// <para>The ARN of the API operation. </para>
+                /// <para>Format: <c>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</c>. Fields: </para>
+                /// <list type="bullet">
+                /// <item><description>Service: the code of an Alibaba Cloud service</description></item>
+                /// <item><description>Region: the region ID</description></item>
+                /// <item><description>Account: the ID of an Alibaba Cloud account</description></item>
+                /// <item><description>ResourceType: the resource type</description></item>
+                /// <item><description>ResourceId: the resource ID The ARN of the Log Service Logstore.</description></item>
+                /// </list>
+                /// <para>Format: <c>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</c>. Fields:</para>
+                /// <list type="bullet">
+                /// <item><description>Service: the code of an Alibaba Cloud service</description></item>
+                /// <item><description>Region: the region ID</description></item>
+                /// <item><description>Account: the ID of an Alibaba Cloud account</description></item>
+                /// <item><description>ResourceType: the resource type</description></item>
+                /// <item><description>ResourceId: the resource ID</description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// The ID of the recipient.
+                /// <para>The ID of the recipient.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The ID of the cloud service to which the API operation belongs.
+                /// <para>The ID of the cloud service to which the API operation belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>log</para>
                 /// </summary>
                 [NameInMap("Product")]
                 [Validation(Required=false)]
                 public string Product { get; set; }
 
                 /// <summary>
-                /// The region where the resource resides.
+                /// <para>The region where the resource resides.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
                 /// <summary>
-                /// The name of the role.
+                /// <para>The name of the role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MyRole</para>
                 /// </summary>
                 [NameInMap("Role")]
                 [Validation(Required=false)]
                 public string Role { get; set; }
 
                 /// <summary>
-                /// The version of the API.
+                /// <para>The version of the API.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-01-01</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -259,14 +314,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>87170bc7-e28a-4c93-b9bf-90a1dbe84736</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the recipients in Log Service.
+        /// <para>The information about the recipients in Log Service.</para>
         /// </summary>
         [NameInMap("SlsParameters")]
         [Validation(Required=false)]
@@ -277,43 +335,55 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter> SlsParameter { get; set; }
             public class DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter : TeaModel {
                 /// <summary>
-                /// The ARN of the Log Service Logstore. 
-                /// 
-                /// Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
-                /// 
-                /// - Service: the code of an Alibaba Cloud service
-                /// - Region: the region ID
-                /// - Account: the ID of an Alibaba Cloud account
-                /// - ResourceType: the resource type
-                /// - ResourceId: the resource ID
+                /// <para>The ARN of the Log Service Logstore. </para>
+                /// <para>Format: <c>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</c>. Fields: </para>
+                /// <list type="bullet">
+                /// <item><description>Service: the code of an Alibaba Cloud service</description></item>
+                /// <item><description>Region: the region ID</description></item>
+                /// <item><description>Account: the ID of an Alibaba Cloud account</description></item>
+                /// <item><description>ResourceType: the resource type</description></item>
+                /// <item><description>ResourceId: the resource ID</description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// The ID of the recipient.
+                /// <para>The ID of the recipient.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The name of the Logstore.
+                /// <para>The name of the Logstore.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>logstore_test</para>
                 /// </summary>
                 [NameInMap("LogStore")]
                 [Validation(Required=false)]
                 public string LogStore { get; set; }
 
                 /// <summary>
-                /// The name of the project.
+                /// <para>The name of the project.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>project_test</para>
                 /// </summary>
                 [NameInMap("Project")]
                 [Validation(Required=false)]
                 public string Project { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the Log Service project resides.
+                /// <para>The ID of the region where the Log Service project resides.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
@@ -324,7 +394,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The information about the recipients if alert notifications are sent by sending a request to a callback URL.
+        /// <para>The information about the recipients if alert notifications are sent by sending a request to a callback URL.</para>
         /// </summary>
         [NameInMap("WebhookParameters")]
         [Validation(Required=false)]
@@ -335,28 +405,40 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter> WebhookParameter { get; set; }
             public class DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter : TeaModel {
                 /// <summary>
-                /// The ID of the recipient.
+                /// <para>The ID of the recipient.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The HTTP request method. Valid values: GET and POST.
+                /// <para>The HTTP request method. Valid values: GET and POST.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>GET</para>
                 /// </summary>
                 [NameInMap("Method")]
                 [Validation(Required=false)]
                 public string Method { get; set; }
 
                 /// <summary>
-                /// The protocol type.
+                /// <para>The protocol type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>HTTP</para>
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// The callback URL.
+                /// <para>The callback URL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>
                 /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]

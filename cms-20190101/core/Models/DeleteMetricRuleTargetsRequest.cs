@@ -14,18 +14,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the alert rule.
+        /// <para>The ID of the alert rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ruleId-xxxxxx</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public string RuleId { get; set; }
 
         /// <summary>
-        /// The resource IDs.
+        /// <para>The resource IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("TargetIds")]
         [Validation(Required=false)]

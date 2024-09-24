@@ -10,27 +10,35 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteCustomMetricRequest : TeaModel {
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3607****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported monitoring data.
+        /// <para>The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported monitoring data.</para>
+        /// <remarks>
+        /// <para> <c>Md5</c> is returned when you query the reported monitoring data of a metric.</para>
+        /// </remarks>
         /// 
-        /// >  `Md5` is returned when you query the reported monitoring data of a metric.
+        /// <b>Example:</b>
+        /// <para>38796C8CFFEB8F89BB2A626C7BD7****</para>
         /// </summary>
         [NameInMap("Md5")]
         [Validation(Required=false)]
         public string Md5 { get; set; }
 
         /// <summary>
-        /// The name of the metric.
+        /// <para>The name of the metric.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>AdvanceCredit</para>
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -41,9 +49,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request for reporting monitoring data.
+        /// <para>The ID of the request for reporting monitoring data.</para>
+        /// <remarks>
+        /// <para> <c>UUID</c> is returned when you query the reported monitoring data of a metric. We recommend that you specify the <c>Md5</c> parameter.</para>
+        /// </remarks>
         /// 
-        /// >  `UUID` is returned when you query the reported monitoring data of a metric. We recommend that you specify the `Md5` parameter.
+        /// <b>Example:</b>
+        /// <para>5497633c-66c5-4eae-abaa-89db5adb****</para>
         /// </summary>
         [NameInMap("UUID")]
         [Validation(Required=false)]

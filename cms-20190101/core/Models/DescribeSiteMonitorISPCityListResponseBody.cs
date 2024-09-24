@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorISPCityListResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// <remarks>
+        /// <para>The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// > The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The queried detection points.
+        /// <para>The queried detection points.</para>
         /// </summary>
         [NameInMap("IspCityList")]
         [Validation(Required=false)]
@@ -38,7 +42,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Area_zh_cN { get; set; }
 
                 /// <summary>
-                /// The city ID.
+                /// <para>The city ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4</para>
                 /// </summary>
                 [NameInMap("City")]
                 [Validation(Required=false)]
@@ -53,9 +60,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string CityName_zh_cN { get; set; }
 
                 /// <summary>
-                /// The country name.
+                /// <para>The country name.</para>
+                /// <remarks>
+                /// <para>This parameter is valid only on the China site (aliyun.com).</para>
+                /// </remarks>
                 /// 
-                /// > This parameter is valid only on the China site (aliyun.com).
+                /// <b>Example:</b>
+                /// <para>629</para>
                 /// </summary>
                 [NameInMap("Country")]
                 [Validation(Required=false)]
@@ -70,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Country_zh_cN { get; set; }
 
                 /// <summary>
-                /// The IP address pool.
+                /// <para>The IP address pool.</para>
                 /// </summary>
                 [NameInMap("IPPool")]
                 [Validation(Required=false)]
@@ -83,21 +94,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The number of IPv4 probes.
+                /// <para>The number of IPv4 probes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4</para>
                 /// </summary>
                 [NameInMap("IPV4ProbeCount")]
                 [Validation(Required=false)]
                 public string IPV4ProbeCount { get; set; }
 
                 /// <summary>
-                /// The number of IPv6 probes.
+                /// <para>The number of IPv6 probes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("IPV6ProbeCount")]
                 [Validation(Required=false)]
                 public string IPV6ProbeCount { get; set; }
 
                 /// <summary>
-                /// The carrier ID.
+                /// <para>The carrier ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>232</para>
                 /// </summary>
                 [NameInMap("Isp")]
                 [Validation(Required=false)]
@@ -112,7 +132,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string IspName_zh_cN { get; set; }
 
                 /// <summary>
-                /// The province name.
+                /// <para>The province name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>264</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
@@ -131,24 +154,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B35D7D84-547B-4E61-B909-48A1F8A0C756</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeTagValueListRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100. Pages start from page 1. Default value: 50.</para>
         /// 
-        /// Valid values: 1 to 100. Pages start from page 1. Default value: 50.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -32,11 +36,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The key of the tag whose values you want to query.
+        /// <para>The key of the tag whose values you want to query.</para>
+        /// <para>For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain a tag key, see [DescribeTagKeyList](https://help.aliyun.com/document_detail/145558.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tagKey1</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

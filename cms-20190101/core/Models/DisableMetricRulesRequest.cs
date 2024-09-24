@@ -14,7 +14,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The ID of the alert rule. Valid values of N: 1 to 20.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>detect_87****_HTTP_HttpLatency</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

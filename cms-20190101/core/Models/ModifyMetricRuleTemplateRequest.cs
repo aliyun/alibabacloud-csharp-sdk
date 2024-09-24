@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyMetricRuleTemplateRequest : TeaModel {
         /// <summary>
-        /// The details of the alert template.
+        /// <para>The details of the alert template.</para>
         /// </summary>
         [NameInMap("AlertTemplates")]
         [Validation(Required=false)]
@@ -101,77 +101,88 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The abbreviation of the cloud service name.
+            /// <para>The abbreviation of the cloud service name.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For more information about how to obtain the abbreviation of a cloud service name, see <c>metricCategory</c> in the response parameter <c>Labels</c> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
             /// 
-            /// Valid values of N: 1 to 200.
-            /// 
-            /// For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](https://help.aliyun.com/document_detail/114916.html) operation.
+            /// <b>Example:</b>
+            /// <para>ecs</para>
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
             /// <summary>
-            /// The metric name.
+            /// <para>The metric name.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For information about how to obtain metrics, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
             /// 
-            /// Valid values of N: 1 to 200.
-            /// 
-            /// For information about how to obtain metrics, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+            /// <b>Example:</b>
+            /// <para>cpu_total</para>
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }
 
             /// <summary>
-            /// The namespace of the cloud service.
+            /// <para>The namespace of the cloud service.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
             /// 
-            /// Valid values of N: 1 to 200.
-            /// 
-            /// For information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+            /// <b>Example:</b>
+            /// <para>acs_ecs_dashboard</para>
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The statistical period of the monitoring data.
+            /// <para>The statistical period of the monitoring data.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <remarks>
+            /// <para>If the value is set to 300 seconds, the monitoring data is collected every 300 seconds. If the monitoring data is reported every 1 minute, the alert system calculates the average, maximum, and minimum values of the monitoring data of 5 minutes and checks whether the aggregated values exceed the threshold. To prevent unexpected alerts, we recommend that you set this parameter together with other parameters.</para>
+            /// </remarks>
             /// 
-            /// Valid values of N: 1 to 200.
-            /// 
-            /// > If the value is set to 300 seconds, the monitoring data is collected every 300 seconds. If the monitoring data is reported every 1 minute, the alert system calculates the average, maximum, and minimum values of the monitoring data of 5 minutes and checks whether the aggregated values exceed the threshold. To prevent unexpected alerts, we recommend that you set this parameter together with other parameters.
+            /// <b>Example:</b>
+            /// <para>60</para>
             /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
             public int? Period { get; set; }
 
             /// <summary>
-            /// The name of the alert rule.
+            /// <para>The name of the alert rule.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
             /// 
-            /// Valid values of N: 1 to 200.
+            /// <b>Example:</b>
+            /// <para>rule1</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// The dimension of the alert. It is an extended field.
+            /// <para>The dimension of the alert. It is an extended field.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For example, an alert template is applied to an application group, this parameter is set to <c>{&quot;disk&quot;:&quot;/&quot;}</c>, and the MetricName parameter is set to <c>DiskUtilization</c>. In this case, the generated alert rule is applied to the root disk partition (<c>&quot;/&quot;</c>) of all instances in the application group to which the alert template is applied.</para>
+            /// <remarks>
+            /// <para>For more information about the values of extended fields, see <a href="https://help.aliyun.com/document_detail/114979.html">DescribeMetricRuleTemplateAttribute</a>.</para>
+            /// </remarks>
             /// 
-            /// Valid values of N: 1 to 200.
-            /// 
-            /// For example, an alert template is applied to an application group, this parameter is set to `{"disk":"/"}`, and the MetricName parameter is set to `DiskUtilization`. In this case, the generated alert rule is applied to the root disk partition (`"/"`) of all instances in the application group to which the alert template is applied.
-            /// 
-            /// > For more information about the values of extended fields, see [DescribeMetricRuleTemplateAttribute](https://help.aliyun.com/document_detail/114979.html).
+            /// <b>Example:</b>
+            /// <para>{&quot;disk&quot;:&quot;/&quot;}</para>
             /// </summary>
             [NameInMap("Selector")]
             [Validation(Required=false)]
             public string Selector { get; set; }
 
             /// <summary>
-            /// The callback URL.
+            /// <para>The callback URL.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</para>
             /// 
-            /// Valid values of N: 1 to 200.
-            /// 
-            /// The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.
+            /// <b>Example:</b>
+            /// <para><a href="https://apiwebhook.hipac.cn/api/v1/alarm/aly/eregfeeferrtbnmkdszp">https://apiwebhook.hipac.cn/api/v1/alarm/aly/eregfeeferrtbnmkdszp</a></para>
             /// </summary>
             [NameInMap("Webhook")]
             [Validation(Required=false)]
@@ -180,16 +191,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The description of the alert template.
+        /// <para>The description of the alert template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECS_template1</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the alert template.
+        /// <para>The name of the alert template.</para>
+        /// <para>For information about how to obtain the name of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</para>
         /// 
-        /// For information about how to obtain the name of an alert template, see [DescribeMetricRuleTemplateList](https://help.aliyun.com/document_detail/114982.html).
+        /// <b>Example:</b>
+        /// <para>test123</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -200,22 +216,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The version of the alert template. The version changes with the number of times that the alert template is modified.
+        /// <para>The version of the alert template. The version changes with the number of times that the alert template is modified.</para>
+        /// <para>For information about how to obtain the version of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For information about how to obtain the version of an alert template, see [DescribeMetricRuleTemplateList](https://help.aliyun.com/document_detail/114982.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("RestVersion")]
         [Validation(Required=false)]
         public long? RestVersion { get; set; }
 
         /// <summary>
-        /// The ID of the alert template.
+        /// <para>The ID of the alert template.</para>
+        /// <para>For information about how to obtain the ID of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For information about how to obtain the ID of an alert template, see [DescribeMetricRuleTemplateList](https://help.aliyun.com/document_detail/114982.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

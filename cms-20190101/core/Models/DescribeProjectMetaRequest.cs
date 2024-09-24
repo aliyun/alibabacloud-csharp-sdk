@@ -10,35 +10,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeProjectMetaRequest : TeaModel {
         /// <summary>
-        /// The tags. Tags are used to filter services.
+        /// <para>The tags. Tags are used to filter services.</para>
+        /// <para>You can filter services only by the tag whose <c>name</c> is <c>product</c>. Example: {&quot;name&quot;:&quot;product&quot;,&quot;value&quot;:&quot;ECS&quot;}.</para>
+        /// <remarks>
+        /// <para>We recommend that you do not use the special tags in the CloudMonitor console.</para>
+        /// </remarks>
         /// 
-        /// You can filter services only by the tag whose `name` is `product`. Example: {"name":"product","value":"ECS"}.
-        /// 
-        /// > We recommend that you do not use the special tags in the CloudMonitor console.
+        /// <b>Example:</b>
+        /// <para>[{&quot;name&quot;:&quot;product&quot;,&quot;value&quot;:&quot;ECS&quot;}]</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public string Labels { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Valid values: 1 to 100.
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 10000.</para>
+        /// <para>Default value: 30.</para>
+        /// <remarks>
+        /// <para>The value of this parameter is not limited. You can view a large number of entries per page.</para>
+        /// </remarks>
         /// 
-        /// Valid values: 1 to 10000.
-        /// 
-        /// Default value: 30.
-        /// 
-        /// > The value of this parameter is not limited. You can view a large number of entries per page.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

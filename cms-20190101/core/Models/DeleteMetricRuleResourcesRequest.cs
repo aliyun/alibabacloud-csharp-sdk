@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMetricRuleResourcesRequest : TeaModel {
         /// <summary>
-        /// The resources to be disassociated from the alert rule.
+        /// <para>The resources that are associated with the alert rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{&quot;instanceId&quot;:&quot;i-uf6hm9lnlzsarrc7****&quot;}]</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public string Resources { get; set; }
 
         /// <summary>
-        /// The ID of the alert rule.
+        /// <para>The ID of the alert rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rr-bp18017n6iolv****</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

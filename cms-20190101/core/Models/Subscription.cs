@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

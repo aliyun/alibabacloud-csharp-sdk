@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutResourceMetricRulesResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The alert rules that failed to be created for the resource.
+        /// <para>The alert rules that failed to be created for the resource.</para>
         /// </summary>
         [NameInMap("FailedListResult")]
         [Validation(Required=false)]
@@ -30,31 +34,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<PutResourceMetricRulesResponseBodyFailedListResultTarget> Target { get; set; }
             public class PutResourceMetricRulesResponseBodyFailedListResultTarget : TeaModel {
                 /// <summary>
-                /// The alert rule that failed to be created.
+                /// <para>The alert rule that failed to be created.</para>
                 /// </summary>
                 [NameInMap("Result")]
                 [Validation(Required=false)]
                 public PutResourceMetricRulesResponseBodyFailedListResultTargetResult Result { get; set; }
                 public class PutResourceMetricRulesResponseBodyFailedListResultTargetResult : TeaModel {
                     /// <summary>
-                    /// The response code.
+                    /// <para>The response code.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>404</para>
                     /// </summary>
                     [NameInMap("Code")]
                     [Validation(Required=false)]
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// The error message returned.
+                    /// <para>The error message returned.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>The request processing has failed due to some unknown error.</para>
                     /// </summary>
                     [NameInMap("Message")]
                     [Validation(Required=false)]
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the request was successful. Valid values:
+                    /// <para>Indicates whether the request was successful. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
+                    /// </list>
                     /// 
-                    /// *   true
-                    /// *   false
+                    /// <b>Example:</b>
+                    /// <para>false</para>
                     /// </summary>
                     [NameInMap("Success")]
                     [Validation(Required=false)]
@@ -63,7 +77,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The ID of the alert rule.
+                /// <para>The ID of the alert rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>a151cd6023eacee2f0978e03863cc1697c89508****</para>
                 /// </summary>
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]
@@ -74,24 +91,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request processing has failed due to some unknown error.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15D1440E-BF24-5A41-93E4-36864635179E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

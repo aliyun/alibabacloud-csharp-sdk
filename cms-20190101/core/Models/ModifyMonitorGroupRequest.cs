@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyMonitorGroupRequest : TeaModel {
         /// <summary>
-        /// The alert groups that can receive alert notifications for the application group.
+        /// <para>The alert groups that can receive alert notifications for the application group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alarm_ecs_group</para>
         /// </summary>
         [NameInMap("ContactGroups")]
         [Validation(Required=false)]
         public string ContactGroups { get; set; }
 
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The name of the application group.
+        /// <para>The name of the application group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs_group</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

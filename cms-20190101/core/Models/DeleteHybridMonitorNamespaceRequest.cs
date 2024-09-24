@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteHybridMonitorNamespaceRequest : TeaModel {
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// <para>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](https://help.aliyun.com/document_detail/428880.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>aliyun</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

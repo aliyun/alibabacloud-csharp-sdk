@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleCountRequest : TeaModel {
         /// <summary>
-        /// The name of the metric. For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// <para>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cpu_total</para>
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The namespace of the service. For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// <para>The namespace of the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs_ecs_dashboard</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

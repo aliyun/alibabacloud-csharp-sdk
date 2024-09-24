@@ -10,36 +10,47 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutExporterRuleRequest : TeaModel {
         /// <summary>
-        /// The description of the data export rule.
+        /// <para>The description of the data export rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Export CPU metrics</para>
         /// </summary>
         [NameInMap("Describe")]
         [Validation(Required=false)]
         public string Describe { get; set; }
 
         /// <summary>
-        /// The destination to which the data is exported. Valid values of N: 1 to 20.
+        /// <para>The destination to which the data is exported. Valid values of N: 1 to 20.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>distName1</para>
         /// </summary>
         [NameInMap("DstNames")]
         [Validation(Required=false)]
         public List<string> DstNames { get; set; }
 
         /// <summary>
-        /// The name of the metric.
+        /// <para>The name of the metric.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
         /// 
-        /// > 
-        /// 
-        /// For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// <b>Example:</b>
+        /// <para>cpu_total</para>
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The namespace of the cloud service.
+        /// <para>The namespace of the cloud service.</para>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// </remarks>
         /// 
-        /// > For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// <b>Example:</b>
+        /// <para>acs_ecs_dashboard</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -50,22 +61,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// <remarks>
+        /// <para>If the specified rule exists, the existing rule is modified. Otherwise, a rule is created.</para>
+        /// </remarks>
         /// 
-        /// > If the specified rule exists, the existing rule is modified. Otherwise, a rule is created.
+        /// <b>Example:</b>
+        /// <para>MyRuleName</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The time window of the exported data. Unit: seconds.
+        /// <para>The time window of the exported data. Unit: seconds.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>Separate multiple time windows with commas (,).</para>
+        /// </description></item>
+        /// <item><description><para>Data in a time window of less than 60 seconds cannot be exported.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   Separate multiple time windows with commas (,).
-        /// 
-        /// *   Data in a time window of less than 60 seconds cannot be exported.
+        /// <b>Example:</b>
+        /// <para>60,300</para>
         /// </summary>
         [NameInMap("TargetWindows")]
         [Validation(Required=false)]

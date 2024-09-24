@@ -10,45 +10,62 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorDataRequest : TeaModel {
         /// <summary>
-        /// The end of the time range for the query. Supported formats:
+        /// <para>The end of the time range to query. The following formats are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</description></item>
+        /// <item><description>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</description></item>
+        /// </list>
         /// 
-        /// *   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
-        /// *   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.
+        /// <b>Example:</b>
+        /// <para>1551581437000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The number of data points to return.
+        /// <para>The number of data points to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("Length")]
         [Validation(Required=false)]
         public int? Length { get; set; }
 
         /// <summary>
-        /// The name of the metric. Valid values:
+        /// <para>The metric name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Availability</description></item>
+        /// <item><description>ResponseTime</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Availability
-        /// *   ResponseTime
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Availability</para>
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The pagination cursor.
+        /// <para>The pagination token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>49f7b317-7645-4cc9-94fd-ea42e5220930ea42e5220930ea42e522****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The interval at which monitoring data is returned. The value is an integral multiple of 60. Unit: seconds.
+        /// <para>The statistical period. The value is an integral multiple of 60. Unit: seconds.</para>
+        /// <remarks>
+        /// <para> The default value equals the minimum interval at which detection requests are sent to the monitored address.</para>
+        /// </remarks>
         /// 
-        /// >  The default value equals the minimum interval at which detection requests are sent to the monitored address.
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -59,29 +76,39 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range for the query. Supported formats:
+        /// <para>The start of the time range to query. The following formats are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</description></item>
+        /// <item><description>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</description></item>
+        /// </list>
         /// 
-        /// *   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
-        /// *   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.
+        /// <b>Example:</b>
+        /// <para>1551579637000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The ID of the site monitoring task.
+        /// <para>The job ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>49f7b317-7645-4cc9-94fd-ea42e522****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The type of the monitored object whose monitoring data is to be queried. Valid values:
+        /// <para>The type of the monitored object whose monitoring data is to be queried. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>metric</description></item>
+        /// <item><description>event</description></item>
+        /// </list>
         /// 
-        /// *   metric
-        /// *   event
+        /// <b>Example:</b>
+        /// <para>metric</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

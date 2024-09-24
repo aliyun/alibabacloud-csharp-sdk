@@ -10,32 +10,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutHybridMonitorMetricDataResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The details of invalid parameters.
-        /// 
-        /// If a request parameter is invalid, the details of the invalid parameter are returned.
+        /// <para>The details of invalid parameters.</para>
+        /// <para>If a request parameter is invalid, the details of the invalid parameter are returned.</para>
         /// </summary>
         [NameInMap("ErrorDetail")]
         [Validation(Required=false)]
         public List<PutHybridMonitorMetricDataResponseBodyErrorDetail> ErrorDetail { get; set; }
         public class PutHybridMonitorMetricDataResponseBodyErrorDetail : TeaModel {
             /// <summary>
-            /// The error message of the invalid parameter.
+            /// <para>The error message of the invalid parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>label name :123 not match [a-zA-Z_][a-zA-Z0-9_]*</para>
             /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// The position of the error message in the array.
+            /// <para>The position of the error message in the array.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Index")]
             [Validation(Required=false)]
@@ -44,7 +53,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5DB1CBCA-D14A-55FA-814F-B4DBD9735F68</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

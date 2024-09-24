@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutMonitoringConfigRequest : TeaModel {
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoInstall")]
         [Validation(Required=false)]
         public bool? AutoInstall { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:
+        /// <para>Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true (default): The CloudMonitor agent is automatically installed on new ECS instances.</description></item>
+        /// <item><description>false: The CloudMonitor agent is not automatically installed on new ECS instances.</description></item>
+        /// </list>
         /// 
-        /// *   true (default): The CloudMonitor agent is automatically installed on new ECS instances.
-        /// *   false: The CloudMonitor agent is not automatically installed on new ECS instances.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableInstallAgentNewECS")]
         [Validation(Required=false)]

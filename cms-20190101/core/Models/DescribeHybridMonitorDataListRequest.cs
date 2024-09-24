@@ -10,42 +10,49 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorDataListRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query.
+        /// <para>The end of the time range to query.</para>
+        /// <para>Unit: seconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Unit: seconds.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1653805225</para>
         /// </summary>
         [NameInMap("End")]
         [Validation(Required=false)]
         public long? End { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// <para>For more information about how to query the names of namespaces, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to query the names of namespaces, see [DescribeHybridMonitorNamespaceList](https://help.aliyun.com/document_detail/428880.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>default-aliyun</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The statistical period of the monitoring data.
+        /// <para>The statistical period of the monitoring data.</para>
+        /// <para>Unit: seconds.</para>
         /// 
-        /// Unit: seconds.
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
 
         /// <summary>
-        /// The metric name.
+        /// <para>The metric name.</para>
+        /// <remarks>
+        /// <para> PromQL statements are supported.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  PromQL statements are supported.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>AliyunEcs_cpu_total</para>
         /// </summary>
         [NameInMap("PromSQL")]
         [Validation(Required=false)]
@@ -56,11 +63,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The start of the time range to query.
+        /// <para>The start of the time range to query.</para>
+        /// <para>Unit: seconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Unit: seconds.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1653804865</para>
         /// </summary>
         [NameInMap("Start")]
         [Validation(Required=false)]

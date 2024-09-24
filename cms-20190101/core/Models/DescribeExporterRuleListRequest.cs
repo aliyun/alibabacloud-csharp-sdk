@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeExporterRuleListRequest : TeaModel {
         /// <summary>
-        /// The page number. Default value: 1.
+        /// <para>The page number. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 1000.
+        /// <para>The number of entries per page. Default value: 1000.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

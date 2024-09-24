@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteGroupMonitoringAgentProcessRequest : TeaModel {
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the process monitoring task.
+        /// <para>The ID of the process monitoring task.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>48F83746-C817-478C-9B06-7158F56B****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

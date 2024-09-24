@@ -10,76 +10,99 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSystemEventAttributeRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query.
+        /// <para>The end of the time range to query.</para>
+        /// <para>The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.</para>
         /// 
-        /// The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.
+        /// <b>Example:</b>
+        /// <para>1552221584949</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The type of the system event.
+        /// <para>The type of the system event.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the types of system events.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the types of system events.
+        /// <b>Example:</b>
+        /// <para>Exception</para>
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12346</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The level of the system event. Valid values:
+        /// <para>The level of the system event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CRITICAL: critical</description></item>
+        /// <item><description>WARN: warning</description></item>
+        /// <item><description>INFO: information</description></item>
+        /// </list>
         /// 
-        /// *   CRITICAL: critical
-        /// *   WARN: warning
-        /// *   INFO: information
+        /// <b>Example:</b>
+        /// <para>CRITICAL</para>
         /// </summary>
         [NameInMap("Level")]
         [Validation(Required=false)]
         public string Level { get; set; }
 
         /// <summary>
-        /// The name of the system event.
+        /// <para>The name of the system event.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the names of system events.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the names of system events.
+        /// <b>Example:</b>
+        /// <para>BucketIngressBandwidth</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Valid values: 1 to 100000000.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Valid values: 1 to 100000000.
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 10</para>
         /// 
-        /// Valid values: 1 to 100.
-        /// 
-        /// Default value: 10
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The abbreviation of the service name.
+        /// <para>The abbreviation of the service name.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the abbreviations of service names.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the abbreviations of service names.
+        /// <b>Example:</b>
+        /// <para>oss</para>
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]
@@ -90,28 +113,38 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The keywords that are used to search for the system event. Valid values:
+        /// <para>The keywords that are used to search for the system event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If you want to search for the system event whose content contains a and b, set the value to <c>a and b</c>.</description></item>
+        /// <item><description>If you want to search for the system event whose content contains a or b, set the value to <c>a or b</c>.</description></item>
+        /// </list>
         /// 
-        /// *   If you want to search for the system event whose content contains a and b, set the value to `a and b`.
-        /// *   If you want to search for the system event whose content contains a or b, set the value to `a or b`.
+        /// <b>Example:</b>
+        /// <para>cms</para>
         /// </summary>
         [NameInMap("SearchKeywords")]
         [Validation(Required=false)]
         public string SearchKeywords { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query.
+        /// <para>The beginning of the time range to query.</para>
+        /// <para>The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.</para>
         /// 
-        /// The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.
+        /// <b>Example:</b>
+        /// <para>1552199984949</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The status of the system event.
+        /// <para>The status of the system event.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the statuses of system events.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the statuses of system events.
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

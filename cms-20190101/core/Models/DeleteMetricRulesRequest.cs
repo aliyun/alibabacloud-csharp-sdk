@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMetricRulesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ab05733c97b7ce239fb1b53393dc1697c7e12****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

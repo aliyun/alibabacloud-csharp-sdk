@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitoringAgentStatusesRequest : TeaModel {
         /// <summary>
-        /// The ID of the availability monitoring task.
+        /// <para>The ID of the availability monitoring task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>126****</para>
         /// </summary>
         [NameInMap("HostAvailabilityTaskId")]
         [Validation(Required=false)]
         public string HostAvailabilityTaskId { get; set; }
 
         /// <summary>
-        /// The instance IDs. Separate multiple instance IDs with commas (,).
+        /// <para>The instance IDs. Separate multiple instance IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-hp3dunahluwajv6f****</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

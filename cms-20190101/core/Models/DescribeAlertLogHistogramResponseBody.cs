@@ -10,32 +10,39 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertLogHistogramResponseBody : TeaModel {
         /// <summary>
-        /// The number of alert logs that were generated during each interval of a time period.
+        /// <para>The number of alert logs that were generated during each interval of a time period.</para>
         /// </summary>
         [NameInMap("AlertLogHistogramList")]
         [Validation(Required=false)]
         public List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> AlertLogHistogramList { get; set; }
         public class DescribeAlertLogHistogramResponseBodyAlertLogHistogramList : TeaModel {
             /// <summary>
-            /// The number of alert logs.
+            /// <para>The number of alert logs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The start timestamp of the queried alert logs.
+            /// <para>The start timestamp of the queried alert logs.</para>
+            /// <para>Unit: seconds.</para>
             /// 
-            /// Unit: seconds.
+            /// <b>Example:</b>
+            /// <para>1610074791</para>
             /// </summary>
             [NameInMap("From")]
             [Validation(Required=false)]
             public long? From { get; set; }
 
             /// <summary>
-            /// The end timestamp of the queried alert logs.
+            /// <para>The end timestamp of the queried alert logs.</para>
+            /// <para>Unit: seconds.</para>
             /// 
-            /// Unit: seconds.
+            /// <b>Example:</b>
+            /// <para>1610074800</para>
             /// </summary>
             [NameInMap("To")]
             [Validation(Required=false)]
@@ -44,33 +51,47 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The specified resource is not found.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1C4A3709-BF52-42EE-87B5-7435F0929585</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

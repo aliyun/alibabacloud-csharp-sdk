@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitoringAgentProcessRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-2ze51wjtwox01r8g****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the process.
+        /// <para>The name of the process.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>java</para>
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]
         public string ProcessName { get; set; }
 
         /// <summary>
-        /// The user who launches the process.
+        /// <para>The user who launches the process.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>admin</para>
         /// </summary>
         [NameInMap("ProcessUser")]
         [Validation(Required=false)]

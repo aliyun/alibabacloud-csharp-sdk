@@ -14,11 +14,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the alert rule.
+        /// <para>The ID of the alert rule.</para>
+        /// <para>For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ae06917_75a8c43178ab66****</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

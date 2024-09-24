@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeContactListByContactGroupResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The alert contacts that receive alert notifications.
+        /// <para>The alert contacts that receive alert notifications.</para>
         /// </summary>
         [NameInMap("Contacts")]
         [Validation(Required=false)]
@@ -30,39 +34,53 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeContactListByContactGroupResponseBodyContactsContact> Contact { get; set; }
             public class DescribeContactListByContactGroupResponseBodyContactsContact : TeaModel {
                 /// <summary>
-                /// The alert notification methods.
+                /// <para>The alert notification methods.</para>
                 /// </summary>
                 [NameInMap("Channels")]
                 [Validation(Required=false)]
                 public DescribeContactListByContactGroupResponseBodyContactsContactChannels Channels { get; set; }
                 public class DescribeContactListByContactGroupResponseBodyContactsContactChannels : TeaModel {
                     /// <summary>
-                    /// The TradeManager ID of the alert contact.
+                    /// <para>The TradeManager ID of the alert contact.</para>
+                    /// <remarks>
+                    /// <para> This parameter can be returned only on the China site (aliyun.com).</para>
+                    /// </remarks>
                     /// 
-                    /// >  This parameter can be returned only on the China site (aliyun.com).
+                    /// <b>Example:</b>
+                    /// <para>Alice</para>
                     /// </summary>
                     [NameInMap("AliIM")]
                     [Validation(Required=false)]
                     public string AliIM { get; set; }
 
                     /// <summary>
-                    /// The webhook URL of the DingTalk chatbot.
+                    /// <para>The webhook URL of the DingTalk chatbot.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112">https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112</a>****</para>
                     /// </summary>
                     [NameInMap("DingWebHook")]
                     [Validation(Required=false)]
                     public string DingWebHook { get; set; }
 
                     /// <summary>
-                    /// The email address of the alert contact.
+                    /// <para>The email address of the alert contact.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para><a href="mailto:alice@example.com">alice@example.com</a></para>
                     /// </summary>
                     [NameInMap("Mail")]
                     [Validation(Required=false)]
                     public string Mail { get; set; }
 
                     /// <summary>
-                    /// The mobile number of the alert contact.
+                    /// <para>The mobile number of the alert contact.</para>
+                    /// <remarks>
+                    /// <para> This parameter can be returned only on the China site (aliyun.com).</para>
+                    /// </remarks>
                     /// 
-                    /// >  This parameter can be returned only on the China site (aliyun.com).
+                    /// <b>Example:</b>
+                    /// <para>1333333****</para>
                     /// </summary>
                     [NameInMap("SMS")]
                     [Validation(Required=false)]
@@ -71,32 +89,42 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The time when the alert contact was created.
+                /// <para>The time when the alert contact was created.</para>
+                /// <para>Unit: milliseconds.</para>
                 /// 
-                /// Unit: milliseconds.
+                /// <b>Example:</b>
+                /// <para>1552314252000</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The description of the alert contact.
+                /// <para>The description of the alert contact.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS</para>
                 /// </summary>
                 [NameInMap("Desc")]
                 [Validation(Required=false)]
                 public string Desc { get; set; }
 
                 /// <summary>
-                /// The name of the alert contact.
+                /// <para>The name of the alert contact.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Alice</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The time when the alert contact was modified.
+                /// <para>The time when the alert contact was modified.</para>
+                /// <para>Unit: milliseconds.</para>
                 /// 
-                /// Unit: milliseconds.
+                /// <b>Example:</b>
+                /// <para>1552314252000</para>
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
@@ -107,24 +135,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The group is not exists.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>06D5ECC2-B9BE-42A4-8FA3-1A610FB08B83</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

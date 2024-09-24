@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeCustomEventCountRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query.
+        /// <para>The end of the time range to query.</para>
+        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
         /// 
-        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// <b>Example:</b>
+        /// <para>1552220485596</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the custom event.
+        /// <para>The ID of the custom event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public string EventId { get; set; }
 
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The name of the custom event.
+        /// <para>The name of the custom event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BABEL_BUY</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -44,19 +55,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The keywords that are contained in the content of the custom event to query. You can use a logical operator between keywords.
+        /// <para>The keywords that are contained in the content of the custom event to query. You can use a logical operator between keywords.</para>
+        /// <list type="bullet">
+        /// <item><description>If you need to query the custom event whose content contains a and b, set the value to a and b.</description></item>
+        /// <item><description>If you need to query the custom event whose content contains a or b, set the value to a or b.</description></item>
+        /// </list>
         /// 
-        /// *   If you need to query the custom event whose content contains a and b, set the value to a and b.
-        /// *   If you need to query the custom event whose content contains a or b, set the value to a or b.
+        /// <b>Example:</b>
+        /// <para>cms</para>
         /// </summary>
         [NameInMap("SearchKeywords")]
         [Validation(Required=false)]
         public string SearchKeywords { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query.
+        /// <para>The beginning of the time range to query.</para>
+        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
         /// 
-        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// <b>Example:</b>
+        /// <para>1552209685596</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -10,46 +10,64 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupInstancesRequest : TeaModel {
         /// <summary>
-        /// The abbreviation of the cloud service name. Valid values of N: 1 to 200.
+        /// <para>The abbreviation of the cloud service name. Valid values of N: 1 to 200.</para>
+        /// <remarks>
+        /// <para> For more information about how to obtain the abbreviation of a cloud service name, see <c>metricCategory</c> in the response parameter <c>Labels</c> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
+        /// </remarks>
         /// 
-        /// >  For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](https://help.aliyun.com/document_detail/114916.html) operation.
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// The instance ID. You can query multiple instances by specifying multiple IDs.
+        /// <para>The instance ID. You can query multiple instances by specifying multiple IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-x1234568</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The keyword used to search for instances. Fuzzy search based on instance names is supported.
+        /// <para>The keyword used to search for instances. Fuzzy search based on instance names is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s1</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The page number. Default value: 1.
+        /// <para>The page number. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 10.
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

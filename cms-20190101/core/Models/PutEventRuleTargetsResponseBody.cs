@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutEventRuleTargetsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// This parameter is returned if the specified alert contact groups in the request failed to be created or modified.
+        /// <para>This parameter is returned if the specified alert contact groups in the request failed to be created or modified.</para>
         /// </summary>
         [NameInMap("FailedContactParameters")]
         [Validation(Required=false)]
@@ -30,23 +34,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<PutEventRuleTargetsResponseBodyFailedContactParametersContactParameter> ContactParameter { get; set; }
             public class PutEventRuleTargetsResponseBodyFailedContactParametersContactParameter : TeaModel {
                 /// <summary>
-                /// The name of the alert contact group.
+                /// <para>The name of the alert contact group.</para>
                 /// </summary>
                 [NameInMap("ContactGroupName")]
                 [Validation(Required=false)]
                 public string ContactGroupName { get; set; }
 
                 /// <summary>
-                /// The ID of the recipient.
+                /// <para>The ID of the recipient.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// The alert level and the corresponding notification methods. Valid values:
+                /// <para>The alert level and the corresponding notification methods. Valid values:</para>
+                /// <para>4: Alert notifications are sent by using DingTalk chatbots and emails.</para>
                 /// 
-                /// 4: Alert notifications are sent by using DingTalk chatbots and emails.
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
@@ -57,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// This parameter is returned if the specified functions in the request failed to be created or modified in Function Compute.
+        /// <para>This parameter is returned if the specified functions in the request failed to be created or modified in Function Compute.</para>
         /// </summary>
         [NameInMap("FailedFcParameters")]
         [Validation(Required=false)]
@@ -68,28 +77,40 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter> FcParameter { get; set; }
             public class PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter : TeaModel {
                 /// <summary>
-                /// The name of the function.
+                /// <para>The name of the function.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>functionTest1</para>
                 /// </summary>
                 [NameInMap("FunctionName")]
                 [Validation(Required=false)]
                 public string FunctionName { get; set; }
 
                 /// <summary>
-                /// The ID of the recipient.
+                /// <para>The ID of the recipient.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
                 /// <summary>
-                /// The name of the Function Compute service.
+                /// <para>The name of the Function Compute service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>serviceTest1</para>
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
@@ -100,7 +121,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// This parameter is returned if the specified queues in the request failed to be created or modified in MNS.
+        /// <para>This parameter is returned if the specified queues in the request failed to be created or modified in MNS.</para>
         /// </summary>
         [NameInMap("FailedMnsParameters")]
         [Validation(Required=false)]
@@ -111,21 +132,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter> MnsParameter { get; set; }
             public class PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter : TeaModel {
                 /// <summary>
-                /// The ID of the recipient.
+                /// <para>The ID of the recipient.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// The name of the MNS queue.
+                /// <para>The name of the MNS queue.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testQueue</para>
                 /// </summary>
                 [NameInMap("Queue")]
                 [Validation(Required=false)]
                 public string Queue { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
@@ -136,28 +166,40 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The number of resources that failed to be created or modified.
+        /// <para>The number of resources that failed to be created or modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("FailedParameterCount")]
         [Validation(Required=false)]
         public string FailedParameterCount { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Request is not authorization.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>409C64DA-CF14-45DF-B463-471C790DD15A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values: true and false.
+        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,44 +10,63 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The responses code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned monitoring data.
+        /// <para>The monitoring data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;Maximum&quot;:247,&quot;Mimimum&quot;:61,&quot;Average&quot;:154,&quot;userId&quot;:&quot;127067667954****&quot;,&quot;taskId&quot;:&quot;49f7b317-7645-4cc9-94fd-ea42e522****&quot;,&quot;timestamp&quot;:1551581760000}]</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The pagination cursor.
+        /// <para>The pagination token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ea42e5220930ea42e522****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3febb181-0d98-4af9-8b04-7faf36b048b9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+        /// <para>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

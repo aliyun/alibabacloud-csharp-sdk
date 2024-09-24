@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class UninstallMonitoringAgentRequest : TeaModel {
         /// <summary>
-        /// The ID of the host.
+        /// <para>The ID of the host.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>host-****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

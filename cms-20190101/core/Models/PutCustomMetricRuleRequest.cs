@@ -10,149 +10,193 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutCustomMetricRuleRequest : TeaModel {
         /// <summary>
-        /// The comparison operator before the threshold. Valid values:
+        /// <para>The comparison operator before the threshold. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>&gt;=</c></description></item>
+        /// <item><description><c>=</c></description></item>
+        /// <item><description><c>&lt;=</c></description></item>
+        /// <item><description><c>&gt;</c></description></item>
+        /// <item><description><c>&lt;</c></description></item>
+        /// <item><description><c>!=</c></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   `>=`
-        /// *   `=`
-        /// *   `<=`
-        /// *   `>`
-        /// *   `<`
-        /// *   `!=`
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <remarks>
+        /// <para>=</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("ComparisonOperator")]
         [Validation(Required=false)]
         public string ComparisonOperator { get; set; }
 
         /// <summary>
-        /// The alert group that receives alert notifications. Separate multiple alert groups with commas (,).
+        /// <para>The alert group that receives alert notifications. Separate multiple alert groups with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ECS_Group</para>
         /// </summary>
         [NameInMap("ContactGroups")]
         [Validation(Required=false)]
         public string ContactGroups { get; set; }
 
         /// <summary>
-        /// The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.
+        /// <para>The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00:00-23:59</para>
         /// </summary>
         [NameInMap("EffectiveInterval")]
         [Validation(Required=false)]
         public string EffectiveInterval { get; set; }
 
         /// <summary>
-        /// The subject of the alert notification email.
+        /// <para>The subject of the alert notification email.</para>
         /// </summary>
         [NameInMap("EmailSubject")]
         [Validation(Required=false)]
         public string EmailSubject { get; set; }
 
         /// <summary>
-        /// The consecutive number of times for which the metric value is measured before an alert is triggered.
+        /// <para>The consecutive number of times for which the metric value is measured before an alert is triggered.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
         public int? EvaluationCount { get; set; }
 
         /// <summary>
-        /// The ID of the application group to which the custom monitoring data belongs.
+        /// <para>The ID of the application group to which the custom monitoring data belongs.</para>
+        /// <remarks>
+        /// <para> The value 0 indicates that the reported custom monitoring data does not belong to an application group.</para>
+        /// </remarks>
         /// 
-        /// >  The value 0 indicates that the reported custom monitoring data does not belong to an application group.
+        /// <b>Example:</b>
+        /// <para>7378****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The level of the alert. Valid values:
+        /// <para>The level of the alert. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CRITICAL</description></item>
+        /// <item><description>WARN</description></item>
+        /// <item><description>INFO</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   CRITICAL
-        /// *   WARN
-        /// *   INFO
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>CRITICAL</para>
         /// </summary>
         [NameInMap("Level")]
         [Validation(Required=false)]
         public string Level { get; set; }
 
         /// <summary>
-        /// The name of the metric.
+        /// <para>The name of the metric.</para>
+        /// <remarks>
+        /// <para> For more information about how to obtain the metric name, see <a href="https://help.aliyun.com/document_detail/115005.html">DescribeCustomMetricList</a>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  For more information about how to obtain the metric name, see [DescribeCustomMetricList](https://help.aliyun.com/document_detail/115005.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cpu_total</para>
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The cycle that is used to aggregate custom monitoring data. Unit: seconds. Set the value to an integral multiple of 60. The original reporting cycle of custom monitoring data is used by default.
+        /// <para>The cycle that is used to aggregate custom monitoring data. Unit: seconds. Set the value to an integral multiple of 60. The original reporting cycle of custom monitoring data is used by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
 
         /// <summary>
-        /// The custom monitoring data to which the alert rule applies. The value includes the application group ID to which the custom monitoring data belongs and the dimension to which the metric belongs.
+        /// <para>The custom monitoring data to which the alert rule applies. The value includes the application group ID to which the custom monitoring data belongs and the dimension to which the metric belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{&quot;groupId&quot;:7378****,&quot;dimension&quot;:&quot;instanceId=i-hp3543t5e4sudb3s****&quot;}]</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public string Resources { get; set; }
 
         /// <summary>
-        /// The ID of the alert rule.
+        /// <para>The ID of the alert rule.</para>
+        /// <remarks>
+        /// <para> You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MyRuleId1</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public string RuleId { get; set; }
 
         /// <summary>
-        /// The name of the alert rule.
+        /// <para>The name of the alert rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CpuUsage</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The mute period during which notifications are not repeatedly sent for an alert. Unit: seconds. Default value: 86400. The default value indicates one day.
+        /// <para>The mute period during which notifications are not repeatedly sent for an alert. Unit: seconds. Default value: 86400. The default value indicates one day.</para>
+        /// <remarks>
+        /// <para> Only one alert notification is sent during each mute period even if the metric value consecutively exceeds the alert threshold several times.</para>
+        /// </remarks>
         /// 
-        /// >  Only one alert notification is sent during each mute period even if the metric value consecutively exceeds the alert threshold several times.
+        /// <b>Example:</b>
+        /// <para>86400</para>
         /// </summary>
         [NameInMap("SilenceTime")]
         [Validation(Required=false)]
         public int? SilenceTime { get; set; }
 
         /// <summary>
-        /// The method that is used to calculate the metric values that trigger alerts.
+        /// <para>The method that is used to calculate the metric values that trigger alerts.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Average</para>
         /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
         public string Statistics { get; set; }
 
         /// <summary>
-        /// The threshold of the metric value.
+        /// <para>The threshold of the metric value.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>90</para>
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]
         public string Threshold { get; set; }
 
         /// <summary>
-        /// The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+        /// <para>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>
         /// </summary>
         [NameInMap("Webhook")]
         [Validation(Required=false)]

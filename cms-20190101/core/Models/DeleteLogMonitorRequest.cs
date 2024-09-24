@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteLogMonitorRequest : TeaModel {
         /// <summary>
-        /// The ID returned by Log Service.
+        /// <para>The ID returned by Log Service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("LogId")]
         [Validation(Required=false)]

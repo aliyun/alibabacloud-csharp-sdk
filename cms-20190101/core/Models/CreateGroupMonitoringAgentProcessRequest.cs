@@ -10,150 +10,176 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateGroupMonitoringAgentProcessRequest : TeaModel {
         /// <summary>
-        /// The alert rule configurations.
-        /// 
-        /// Valid values of N: 1 to 3.
-        /// 
-        /// This parameter is required.
+        /// <para>The alert rule configurations.</para>
+        /// <para>Valid values of N: 1 to 3.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AlertConfig")]
         [Validation(Required=false)]
         public List<CreateGroupMonitoringAgentProcessRequestAlertConfig> AlertConfig { get; set; }
         public class CreateGroupMonitoringAgentProcessRequestAlertConfig : TeaModel {
             /// <summary>
-            /// The operator that is used to compare the metric value with the threshold. Valid values:
+            /// <para>The operator that is used to compare the metric value with the threshold. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
+            /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
+            /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
+            /// <item><description>LessThanThreshold: less than the threshold</description></item>
+            /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
+            /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
+            /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
+            /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
+            /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
+            /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
+            /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+            /// </list>
+            /// <para>Valid values of N: 1 to 3.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-            /// *   GreaterThanThreshold: greater than the threshold
-            /// *   LessThanOrEqualToThreshold: less than or equal to the threshold
-            /// *   LessThanThreshold: less than the threshold
-            /// *   NotEqualToThreshold: not equal to the threshold
-            /// *   GreaterThanYesterday: greater than the metric value at the same time yesterday
-            /// *   LessThanYesterday: less than the metric value at the same time yesterday
-            /// *   GreaterThanLastWeek: greater than the metric value at the same time last week
-            /// *   LessThanLastWeek: less than the metric value at the same time last week
-            /// *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-            /// *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
-            /// 
-            /// Valid values of N: 1 to 3.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>GreaterThanOrEqualToThreshold</para>
             /// </summary>
             [NameInMap("ComparisonOperator")]
             [Validation(Required=false)]
             public string ComparisonOperator { get; set; }
 
             /// <summary>
-            /// The time period during which the alert rule is effective.
+            /// <para>The time period during which the alert rule is effective.</para>
+            /// <para>Valid values of N: 1 to 3.</para>
             /// 
-            /// Valid values of N: 1 to 3.
+            /// <b>Example:</b>
+            /// <para>00:00-23:59</para>
             /// </summary>
             [NameInMap("EffectiveInterval")]
             [Validation(Required=false)]
             public string EffectiveInterval { get; set; }
 
             /// <summary>
-            /// The alert level. Valid values:
+            /// <para>The alert level. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>critical (default): critical</description></item>
+            /// <item><description>warn: warning</description></item>
+            /// <item><description>info: information</description></item>
+            /// </list>
+            /// <para>Valid values of N: 1 to 3.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   critical (default): critical
-            /// *   warn: warning
-            /// *   info: information
-            /// 
-            /// Valid values of N: 1 to 3.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>warn</para>
             /// </summary>
             [NameInMap("EscalationsLevel")]
             [Validation(Required=false)]
             public string EscalationsLevel { get; set; }
 
             /// <summary>
-            /// This parameter is deprecated.
+            /// <para>This parameter is deprecated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>00:00-23:59</para>
             /// </summary>
             [NameInMap("NoEffectiveInterval")]
             [Validation(Required=false)]
             public string NoEffectiveInterval { get; set; }
 
             /// <summary>
-            /// The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
+            /// <para>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</para>
+            /// <para>Valid values of N: 1 to 3.</para>
+            /// <remarks>
+            /// <para> Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</para>
+            /// </remarks>
             /// 
-            /// Valid values of N: 1 to 3.
-            /// 
-            /// >  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.
+            /// <b>Example:</b>
+            /// <para>86400</para>
             /// </summary>
             [NameInMap("SilenceTime")]
             [Validation(Required=false)]
             public string SilenceTime { get; set; }
 
             /// <summary>
-            /// The statistical method for alerts.
+            /// <para>The statistical method for alerts.</para>
+            /// <para>Valid values of N: 1 to 3.</para>
+            /// <remarks>
+            /// <para> Set the value to Average.</para>
+            /// </remarks>
+            /// <para>This parameter is required.</para>
             /// 
-            /// Valid values of N: 1 to 3.
-            /// 
-            /// >  Set the value to Average.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>Average</para>
             /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
             public string Statistics { get; set; }
 
             /// <summary>
-            /// The alert triggers.
+            /// <para>The alert triggers.</para>
             /// </summary>
             [NameInMap("TargetList")]
             [Validation(Required=false)]
             public List<CreateGroupMonitoringAgentProcessRequestAlertConfigTargetList> TargetList { get; set; }
             public class CreateGroupMonitoringAgentProcessRequestAlertConfigTargetList : TeaModel {
                 /// <summary>
-                /// The Alibaba Cloud Resource Name (ARN) of the resource.
+                /// <para>The Alibaba Cloud Resource Name (ARN) of the resource.</para>
+                /// <para>For information about how to obtain the ARN of a resource, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</para>
+                /// <para>Format: <c>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</c>. Example: <c>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</c>. Fields:</para>
+                /// <list type="bullet">
+                /// <item><description><para>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</para>
+                /// </description></item>
+                /// <item><description><para>{userId}: the ID of the Alibaba Cloud account.</para>
+                /// </description></item>
+                /// <item><description><para>{regionId}: the region ID of the message queue or topic.</para>
+                /// </description></item>
+                /// <item><description><para>{Resource type}: the type of the resource that triggers the alert. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>queues</b></description></item>
+                /// <item><description><b>topics</b></description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para>{Resource name}: the resource name.</para>
+                /// <list type="bullet">
+                /// <item><description>If the resource type is <b>queues</b>, the resource name is the queue name.</description></item>
+                /// <item><description>If the resource type is <b>topics</b>, the resource name is the topic name.</description></item>
+                /// </list>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](https://help.aliyun.com/document_detail/121592.html).
-                /// 
-                /// Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
-                /// 
-                /// *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
-                /// 
-                /// *   {userId}: the ID of the Alibaba Cloud account.
-                /// 
-                /// *   {regionId}: the region ID of the message queue or topic.
-                /// 
-                /// *   {Resource type}: the type of the resource that triggers the alert. Valid values:
-                /// 
-                ///     *   **queues**
-                ///     *   **topics**
-                /// 
-                /// *   {Resource name}: the resource name.
-                /// 
-                ///     *   If the resource type is **queues**, the resource name is the queue name.
-                ///     *   If the resource type is **topics**, the resource name is the topic name.
+                /// <b>Example:</b>
+                /// <para>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</para>
                 /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// The ID of the resource for which alerts are triggered.
+                /// <para>The ID of the resource for which alerts are triggered.</para>
+                /// <para>For information about how to obtain the ID of a resource for which alerts are triggered, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</para>
                 /// 
-                /// For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](https://help.aliyun.com/document_detail/121592.html).
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The parameters of the alert callback. Specify the parameters in the JSON format.
+                /// <para>The parameters of the alert callback. Specify the parameters in the JSON format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</para>
                 /// </summary>
                 [NameInMap("JsonParams")]
                 [Validation(Required=false)]
                 public string JsonParams { get; set; }
 
                 /// <summary>
-                /// The alert level. Valid values:
+                /// <para>The alert level. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>INFO</description></item>
+                /// <item><description>WARN</description></item>
+                /// <item><description>CRITICAL</description></item>
+                /// </list>
                 /// 
-                /// *   INFO
-                /// *   WARN
-                /// *   CRITICAL
+                /// <b>Example:</b>
+                /// <para>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</para>
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
@@ -162,35 +188,39 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The alert threshold.
+            /// <para>The alert threshold.</para>
+            /// <para>Valid values of N: 1 to 3.</para>
+            /// <para>Unit: cores.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// Valid values of N: 1 to 3.
-            /// 
-            /// Unit: cores.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("Threshold")]
             [Validation(Required=false)]
             public string Threshold { get; set; }
 
             /// <summary>
-            /// The number of times for which the threshold can be consecutively exceeded. Default value: 3.
+            /// <para>The number of times for which the threshold can be consecutively exceeded. Default value: 3.</para>
+            /// <para>Valid values of N: 1 to 3.</para>
+            /// <remarks>
+            /// <para> An alert is triggered only if the number of times for which the threshold can be consecutively exceeded is reached.</para>
+            /// </remarks>
+            /// <para>This parameter is required.</para>
             /// 
-            /// Valid values of N: 1 to 3.
-            /// 
-            /// >  An alert is triggered only if the number of times for which the threshold can be consecutively exceeded is reached.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("Times")]
             [Validation(Required=false)]
             public string Times { get; set; }
 
             /// <summary>
-            /// The callback URL.
+            /// <para>The callback URL.</para>
+            /// <para>Valid values of N: 1 to 3.</para>
             /// 
-            /// Valid values of N: 1 to 3.
+            /// <b>Example:</b>
+            /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>
             /// </summary>
             [NameInMap("Webhook")]
             [Validation(Required=false)]
@@ -199,56 +229,64 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The expressions used to match instances.
-        /// 
-        /// Valid values of N: 1 to 3.
+        /// <para>The expressions used to match instances.</para>
+        /// <para>Valid values of N: 1 to 3.</para>
         /// </summary>
         [NameInMap("MatchExpress")]
         [Validation(Required=false)]
         public List<CreateGroupMonitoringAgentProcessRequestMatchExpress> MatchExpress { get; set; }
         public class CreateGroupMonitoringAgentProcessRequestMatchExpress : TeaModel {
             /// <summary>
-            /// The matching condition. Valid values:
+            /// <para>The matching condition. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>all (default value): matches all</description></item>
+            /// <item><description>startWith: starts with a prefix</description></item>
+            /// <item><description>endWith: ends with a suffix</description></item>
+            /// <item><description>contains: contains</description></item>
+            /// <item><description>notContains: does not contain</description></item>
+            /// <item><description>equals: equals</description></item>
+            /// </list>
+            /// <para>Valid values of N: 1 to 3.</para>
             /// 
-            /// *   all (default value): matches all
-            /// *   startWith: starts with a prefix
-            /// *   endWith: ends with a suffix
-            /// *   contains: contains
-            /// *   notContains: does not contain
-            /// *   equals: equals
-            /// 
-            /// Valid values of N: 1 to 3.
+            /// <b>Example:</b>
+            /// <para>startWith</para>
             /// </summary>
             [NameInMap("Function")]
             [Validation(Required=false)]
             public string Function { get; set; }
 
             /// <summary>
-            /// The criteria based on which the instances are matched.
+            /// <para>The criteria based on which the instances are matched.</para>
+            /// <para>Valid values of N: 1 to 3.</para>
+            /// <remarks>
+            /// <para>Set the value to name. The value name indicates that the instances are matched based on the instance name.</para>
+            /// </remarks>
             /// 
-            /// Valid values of N: 1 to 3.
-            /// 
-            /// > Set the value to name. The value name indicates that the instances are matched based on the instance name.
+            /// <b>Example:</b>
+            /// <para>name1</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The keyword used to match the instance name.
+            /// <para>The keyword used to match the instance name.</para>
+            /// <para>Valid values of N: 1 to 3.</para>
             /// 
-            /// Valid values of N: 1 to 3.
+            /// <b>Example:</b>
+            /// <para>portalHost</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -257,20 +295,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The logical operator used between conditional expressions that are used to match instances. Valid values:
+        /// <para>The logical operator used between conditional expressions that are used to match instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>all</description></item>
+        /// <item><description>and</description></item>
+        /// <item><description>or</description></item>
+        /// </list>
         /// 
-        /// *   all
-        /// *   and
-        /// *   or
+        /// <b>Example:</b>
+        /// <para>and</para>
         /// </summary>
         [NameInMap("MatchExpressFilterRelation")]
         [Validation(Required=false)]
         public string MatchExpressFilterRelation { get; set; }
 
         /// <summary>
-        /// The process name.
+        /// <para>The process name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test1</para>
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]

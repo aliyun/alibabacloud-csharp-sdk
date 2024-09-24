@@ -10,61 +10,81 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorDataListResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>end timestamp must not be before start time.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C240412F-3F5F-50E2-ACEC-DE808EF9C4BE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// The returned monitoring data.
+        /// <para>The returned monitoring data.</para>
         /// </summary>
         [NameInMap("TimeSeries")]
         [Validation(Required=false)]
         public List<DescribeHybridMonitorDataListResponseBodyTimeSeries> TimeSeries { get; set; }
         public class DescribeHybridMonitorDataListResponseBodyTimeSeries : TeaModel {
             /// <summary>
-            /// The tags of the time dimension.
+            /// <para>The tags of the time dimension.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<DescribeHybridMonitorDataListResponseBodyTimeSeriesLabels> Labels { get; set; }
             public class DescribeHybridMonitorDataListResponseBodyTimeSeriesLabels : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>instanceId</para>
                 /// </summary>
                 [NameInMap("K")]
                 [Validation(Required=false)]
                 public string K { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-rj99xc6cptkk64ml****</para>
                 /// </summary>
                 [NameInMap("V")]
                 [Validation(Required=false)]
@@ -73,30 +93,38 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The metric name.
+            /// <para>The metric name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AliyunEcs_cpu_total</para>
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }
 
             /// <summary>
-            /// The metric values that are collected at different timestamps.
+            /// <para>The metric values that are collected at different timestamps.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
             public List<DescribeHybridMonitorDataListResponseBodyTimeSeriesValues> Values { get; set; }
             public class DescribeHybridMonitorDataListResponseBodyTimeSeriesValues : TeaModel {
                 /// <summary>
-                /// The timestamp that indicates the time when the metric value is collected.
+                /// <para>The timestamp that indicates the time when the metric value is collected.</para>
+                /// <para>Unit: seconds.</para>
                 /// 
-                /// Unit: seconds.
+                /// <b>Example:</b>
+                /// <para>1653804865</para>
                 /// </summary>
                 [NameInMap("Ts")]
                 [Validation(Required=false)]
                 public string Ts { get; set; }
 
                 /// <summary>
-                /// The metric value.
+                /// <para>The metric value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.13</para>
                 /// </summary>
                 [NameInMap("V")]
                 [Validation(Required=false)]

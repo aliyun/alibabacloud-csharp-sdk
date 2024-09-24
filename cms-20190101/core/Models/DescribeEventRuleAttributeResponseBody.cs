@@ -10,51 +10,64 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeEventRuleAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// <remarks>
+        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// </remarks>
         /// 
-        /// >  The status code 200 indicates that the request was successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The alert does not exist.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9AA3F210-C03D-4C86-8DB6-21C84FF692A1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the event-triggered alert rule.
+        /// <para>The details of the event-triggered alert rule.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DescribeEventRuleAttributeResponseBodyResult Result { get; set; }
         public class DescribeEventRuleAttributeResponseBodyResult : TeaModel {
             /// <summary>
-            /// The description of the event-triggered alert rule.
+            /// <para>The description of the event-triggered alert rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Default group event rule.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The event pattern. This parameter describes the trigger conditions of an event.
+            /// <para>The event pattern. This parameter describes the trigger conditions of an event.</para>
             /// </summary>
             [NameInMap("EventPattern")]
             [Validation(Required=false)]
             public DescribeEventRuleAttributeResponseBodyResultEventPattern EventPattern { get; set; }
             public class DescribeEventRuleAttributeResponseBodyResultEventPattern : TeaModel {
                 /// <summary>
-                /// The types of the event-triggered alert rules.
+                /// <para>The types of the event-triggered alert rules.</para>
                 /// </summary>
                 [NameInMap("EventTypeList")]
                 [Validation(Required=false)]
@@ -67,14 +80,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The keyword for filtering.
+                /// <para>The keyword for filtering.</para>
                 /// </summary>
                 [NameInMap("KeywordFilterObj")]
                 [Validation(Required=false)]
                 public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj KeywordFilterObj { get; set; }
                 public class DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj : TeaModel {
                     /// <summary>
-                    /// The keywords that are used to match events.
+                    /// <para>The keywords that are used to match events.</para>
                     /// </summary>
                     [NameInMap("Keywords")]
                     [Validation(Required=false)]
@@ -87,10 +100,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     }
 
                     /// <summary>
-                    /// The relationship between multiple keywords in a condition. Valid values:
+                    /// <para>The relationship between multiple keywords in a condition. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>OR: The relationship between keywords is OR.</description></item>
+                    /// <item><description>NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</description></item>
+                    /// </list>
                     /// 
-                    /// *   OR: The relationship between keywords is OR.
-                    /// *   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.
+                    /// <b>Example:</b>
+                    /// <para>OR</para>
                     /// </summary>
                     [NameInMap("Relation")]
                     [Validation(Required=false)]
@@ -119,14 +136,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The name of the cloud service.
+                /// <para>The name of the cloud service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CloudMonitor</para>
                 /// </summary>
                 [NameInMap("Product")]
                 [Validation(Required=false)]
                 public string Product { get; set; }
 
                 /// <summary>
-                /// Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.
+                /// <para>Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ycccluster1 and (i-23ij0o82612 or Executed1) or Asimulated not 222</para>
                 /// </summary>
                 [NameInMap("SQLFilter")]
                 [Validation(Required=false)]
@@ -145,34 +168,48 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The event type. Valid values:
+            /// <para>The event type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>SYSTEM: system event</description></item>
+            /// <item><description>CUSTOM: custom event</description></item>
+            /// </list>
             /// 
-            /// *   SYSTEM: system event
-            /// *   CUSTOM: custom event
+            /// <b>Example:</b>
+            /// <para>SYSTEM</para>
             /// </summary>
             [NameInMap("EventType")]
             [Validation(Required=false)]
             public string EventType { get; set; }
 
             /// <summary>
-            /// The ID of the application group.
+            /// <para>The ID of the application group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3607****</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
             /// <summary>
-            /// The name of the event-triggered alert rule.
+            /// <para>The name of the event-triggered alert rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_DefaultEventRule_7378****</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The status of the event-triggered alert rule. Valid values:
+            /// <para>The status of the event-triggered alert rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ENABLED</description></item>
+            /// <item><description>DISABLED</description></item>
+            /// </list>
             /// 
-            /// *   ENABLED
-            /// *   DISABLED
+            /// <b>Example:</b>
+            /// <para>ENABLED</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -181,10 +218,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
