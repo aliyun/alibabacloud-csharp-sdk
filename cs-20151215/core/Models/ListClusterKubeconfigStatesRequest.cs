@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// The number of entries per page.
         /// 
         /// *   Valid values: 10 to 50.
-        /// *   Default value: 10.
+        /// *   Default value: 10
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]

@@ -476,7 +476,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// The configurations of the scaling group.
+            /// The configuration of the scaling group.
             /// </summary>
             [NameInMap("scaling_group")]
             [Validation(Required=false)]
@@ -703,7 +703,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
 
                 /// <summary>
-                /// The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.
+                /// This field is deprecated and replaced by the ram_role_name parameter.
                 /// </summary>
                 [NameInMap("ram_policy")]
                 [Validation(Required=false)]
@@ -751,14 +751,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public List<string> SecurityGroupIds { get; set; }
 
-                /// <summary>
-                /// 阿里云OS安全加固。取值：
-                /// 
-                /// - `true`：开启阿里云OS安全加固。
-                /// - `false`：不开启阿里云OS安全加固。
-                /// 
-                /// 默认值：`false`。
-                /// </summary>
                 [NameInMap("security_hardening_os")]
                 [Validation(Required=false)]
                 public bool? SecurityHardeningOs { get; set; }

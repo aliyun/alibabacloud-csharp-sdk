@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The type of service that you want to activate. Valid values:
         /// 
-        /// *   `propayasgo`: professional managed Kubernetes service.
-        /// *   `edgepayasgo`: ACK Edge.
+        /// *   `propayasgo`: ACK clusters (including ACK managed clusters and ACK dedicated clusters), ACK Serverless clusters, and registered clusters.
+        /// *   `edgepayasgo`: ACK Edge clusters.
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

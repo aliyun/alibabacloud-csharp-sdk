@@ -157,11 +157,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// The type of the resource creator. Valid values:
+            /// The resource creator. Valid values:
             /// 
-            /// *   user: the resource is created by the user.
-            /// *   system: the resource is created by the ACK management system.
-            /// *   addon: the resource is created by a cluster component.
+            /// *   user: The resource is created by the user.
+            /// *   system: The resource is created by the ACK management system.
+            /// *   addon: The resource is created by a cluster component.
             /// </summary>
             [NameInMap("creator_type")]
             [Validation(Required=false)]

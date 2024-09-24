@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImageType { get; set; }
 
                 /// <summary>
-                /// The type of operating system. Examples:
+                /// The type of OS. Examples:
                 /// 
                 /// *   `Windows`
                 /// *   `Linux`
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<Runtime> Runtimes { get; set; }
 
             /// <summary>
-            /// The Kubernetes version that is supported by ACK. For more information, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
+            /// The Kubernetes version supported by ACK. For more information, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]
@@ -158,6 +158,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public bool? Creatable { get; set; }
 
+            /// <summary>
+            /// The list of available versions for updates.
+            /// </summary>
             [NameInMap("upgradable_versions")]
             [Validation(Required=false)]
             public List<string> UpgradableVersions { get; set; }

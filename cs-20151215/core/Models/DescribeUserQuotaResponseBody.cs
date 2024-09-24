@@ -38,38 +38,38 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? ClusterQuota { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated.
+        /// This parameter is discontinued.
         /// 
-        /// The quota of enhanced edge node pools.
+        /// The quotas of enhanced edge node pools.
         /// </summary>
         [NameInMap("edge_improved_nodepool_quota")]
         [Validation(Required=false)]
         public DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota EdgeImprovedNodepoolQuota { get; set; }
         public class DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota : TeaModel {
             /// <summary>
-            /// This parameter is deprecated.
+            /// This parameter is discontinued.
             /// 
-            /// The maximum bandwidth of each enhanced node pool. Unit: Mbit/s.
+            /// The maximum bandwidth of each enhanced edge node pool. Unit: Mbit/s.
             /// </summary>
             [NameInMap("bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// This parameter is deprecated.
+            /// This parameter is discontinued.
             /// 
-            /// The quota of enhanced edge node pools that belong to an Alibaba Cloud account.
+            /// The maximum number of enhanced edge node pools that you can create within an Alibaba Cloud account.
             /// </summary>
             [NameInMap("count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// This parameter is deprecated.
+            /// This parameter is discontinued.
             /// 
             /// The maximum subscription duration of an enhanced edge node pool. Unit: months.
             /// 
-            /// > You can ignore this parameter because enhanced edge node pools are pay-as-you-go resources.
+            /// >  You are charged for enhanced edge node pools based on the pay-as-you-go billing method. Therefore, you can ignore this parameter.
             /// </summary>
             [NameInMap("period")]
             [Validation(Required=false)]

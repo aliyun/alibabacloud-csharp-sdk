@@ -10,59 +10,67 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// The access control list (ACL) rule of the SLB instance associated with the API server if the cluster is a registered cluster.
+        /// The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.
         /// </summary>
         [NameInMap("access_control_list")]
         [Validation(Required=false)]
         public List<string> AccessControlList { get; set; }
 
         /// <summary>
-        /// The components that you want to install in the cluster. When you create a cluster, you can configure the `addons` parameter to install specific components.
+        /// The components that you want to install in the cluster. When you create a cluster, you can configure the `addons` parameter to specify the components that you want to install.
         /// 
         /// **Network plug-in**: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.
         /// 
-        /// *   Specify the Flannel plug-in in the following format: [{"name":"flannel","config":""}].
-        /// *   Specify the Flannel plug-in in the following format: [{"name": "terway-eniip","config": ""}].
+        /// *   If you want to use the Terway component, specify the network plug-in in the [{"name":"flannel","config":""}] format.
+        /// *   If you want to use the Terway component, specify the value network plug-in in the [{"Name": "terway-eniip","Config": ""}] format.
         /// 
-        /// **Volume plug-in**: optional. Only the `CSI` plug-in is supported.
+        /// **Volume plug-in**: optional. Only the `Container Storage Interface (CSI)` plug-in is supported.
         /// 
         /// Specify the `CSI` plug-in in the following format: [{"name":"csi-plugin","config": ""},{"name": "csi-provisioner","config": ""}].
         /// 
         /// **Simple Log Service component**: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.
         /// 
-        /// *   To use an existing `Simple Log Service project`, specify the value in the following format: [{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true","sls_project_name":"your_sls_project_name"}"}].
-        /// *   To create a `Simple Log Service project`, specify the value in the following format: [{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true"}"}].
+        /// *   Specify an existing `Simple Log Service project` in the following format: [{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true","sls_project_name":"your_sls_project_name"}"}].
+        /// *   To create a `Simple Log Service project`, specify the component in the following format: [{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true"}"}].
         /// 
         /// **Ingress controller**: optional. By default, the `nginx-ingress-controller` component is installed in ACK dedicated clusters.
         /// 
-        /// *   To install nginx-ingress-controller and enable Internet access, specify the value in the following format: [{"name":"nginx-ingress-controller","config":"{"IngressSlbNetworkType":"internet"}"}].
-        /// *   To disable the system to automatically install nginx-ingress-controller, specify the value in the following format: [{"name": "nginx-ingress-controller","config": "","disabled": true}].
+        /// *   To install nginx-ingress-controller and enable Internet access, specify the Ingress controller in the following format: [{"name":"nginx-ingress-controller","config":"{"IngressSlbNetworkType":"internet"}"}].
+        /// *   To disable the automatic installation of nginx-ingress-controller, specify the Ingress controller in the following format: [{"name": "nginx-ingress-controller","config": "","disabled": true}].
         /// 
         /// **Event center**: optional. By default, the event center feature is enabled.
         /// 
-        /// You can use Kubernetes event centers to store and query events and configure alerts. You can use the Logstores that are associated with Kubernetes event centers free of charge within 90 days. For more information, see [Create and use a Kubernetes event center](https://help.aliyun.com/document_detail/150476.html).
+        /// You can use ACK event centers to store and query events and configure alerts. You can use the Logstores that are associated with ACK event centers free of charge within 90 days. For more information, see [Create and use an event center](https://help.aliyun.com/document_detail/150476.html).
         /// 
-        /// To enable the ack-node-problem-detector component, specify the value in the following format: [{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].
+        /// To enable the event center feature, specify the event center component in the following format: [{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].
         /// </summary>
         [NameInMap("addons")]
         [Validation(Required=false)]
         public List<Addon> Addons { get; set; }
 
         /// <summary>
-        /// Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. `api-audiences` are used by the `API server` to check whether the `tokens` of requests are legitimate.`` Separate multiple `audiences` with commas (,).
+        /// Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. The `api-audiences` parameter validates `tokens` and is used by the `API server` to check whether the `tokens` of requests are valid. Separate multiple values with commas (,).``
         /// 
-        /// For more information about `ServiceAccount`, see [Enable service account token volume projection](https://help.aliyun.com/document_detail/160384.html).
+        /// For more information about `service accounts`, see [Enable service account token volume projection](https://help.aliyun.com/document_detail/160384.html).
         /// </summary>
         [NameInMap("api_audiences")]
         [Validation(Required=false)]
         public string ApiAudiences { get; set; }
+
+        [NameInMap("auto_renew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
+        [NameInMap("auto_renew_period")]
+        [Validation(Required=false)]
+        public long? AutoRenewPeriod { get; set; }
 
         /// <summary>
         /// The billing method of the cluster. The following resources are billed on a subscription basis:
         /// 
         /// ECS instances in node pools.
         /// 
-        /// The internal-facing SLB instance used by the API server.
+        /// The internal-facing SLB instance associated with the API server.
         /// 
         /// Valid values:
         /// 
@@ -77,9 +85,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// [This parameter is deprecated]
-        /// 
-        /// Please replace this parameter with security_hardening_os.
+        /// This parameter is deprecated. Use security_hardening_os instead.
         /// </summary>
         [NameInMap("cis_enabled")]
         [Validation(Required=false)]
@@ -108,10 +114,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterDomain { get; set; }
 
         /// <summary>
-        /// After you set `cluster_type` to `ManagedKubernetes` and configure the `profile` parameter, you can further specify the edition of the cluster. Valid values:
+        /// After you set `cluster_type` to `ManagedKubernetes` and configure the `profile` parameter, you can further specify the cluster edition. Valid values:
         /// 
-        /// *   `ack.pro.small`: Pro.
-        /// *   `ack.standard`: Basic. If you leave the parameter empty, the Basic edition is selected.
+        /// *   `ack.pro.small`: Pro Edition.
+        /// *   `ack.standard`: Basic Edition. If you leave the parameter empty, an ACK Basic cluster is created.
         /// </summary>
         [NameInMap("cluster_spec")]
         [Validation(Required=false)]
@@ -119,7 +125,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// *   `Kubernetes`: ACK dedicated cluster.
-        /// *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).
+        /// *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic Edition and Pro Edition), ACK Edge clusters (Basic Edition and Pro Edition), and ACK Lingjun clusters (Pro Edition).
         /// *   `ExternalKubernetes`: registered cluster.
         /// 
         /// This parameter is required.
@@ -129,11 +135,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The CIDR block of pods. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the CIDR block of pods. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.
+        /// The pod CIDR block. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the pod CIDR block. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.
         /// 
-        /// For more information about subnetting for ACK clusters, see [Plan CIDR blocks for an ACK cluster that is deployed in a VPC](https://help.aliyun.com/document_detail/86500.html).
+        /// For more information about how to plan the network of an ACK cluster, see [Plan the network of an ACK cluster](https://help.aliyun.com/document_detail/86500.html).
         /// 
-        /// >  This parameter is required if the cluster uses Flannel as the network plug-in.
+        /// >  This parameter is required if the cluster uses the Flannel plug-in.
         /// </summary>
         [NameInMap("container_cidr")]
         [Validation(Required=false)]
@@ -142,7 +148,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The list of control plane components for which you want to enable log collection.
         /// 
-        /// By default, the log of kube-apiserver, kube-controller-manager, and kube-scheduler is collected.
+        /// By default, the logs of kube-apiserver, kube-controller-manager, and kube-scheduler are collected.
         /// </summary>
         [NameInMap("controlplane_log_components")]
         [Validation(Required=false)]
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ControlplaneLogTtl { get; set; }
 
         /// <summary>
-        /// The CPU management policy of the nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:
+        /// The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:
         /// 
         /// *   `static`: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.
         /// *   `none`: specifies that the default CPU affinity is used.
@@ -175,17 +181,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CpuPolicy { get; set; }
 
         /// <summary>
-        /// Specifies custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses or domain names with commas (,).
+        /// The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses and domain names with commas (,).
         /// </summary>
         [NameInMap("custom_san")]
         [Validation(Required=false)]
         public string CustomSan { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:
+        /// Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:
         /// 
-        /// *   `true`: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the Container Service console or by calling API operations.
-        /// *   `false`: disables deletion protection for the cluster. This way, the cluster can be deleted in the Container Service console or by calling API operations.
+        /// *   `true`: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.
+        /// *   `false`: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.
         /// 
         /// Default value: `false`.
         /// </summary>
@@ -194,10 +200,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a rollback if the cluster fails to be created. Valid values:
+        /// Specifies whether to perform a rollback when the cluster fails to be created. Valid values:
         /// 
-        /// *   `true`: performs a rollback if the system fails to create the cluster.
-        /// *   `false`: does not perform a rollback if the system fails to create the cluster.
+        /// *   `true`: performs a rollback when the cluster fails to be created.
+        /// *   `false`: does not perform a rollback when the cluster fails to be created.
         /// 
         /// Default value: `true`.
         /// </summary>
@@ -214,7 +220,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? EnableRrsa { get; set; }
 
         /// <summary>
-        /// The ID of a key that is managed by Key Management Service (KMS). The key is used to encrypt data disks. For more information, see [KMS](https://help.aliyun.com/document_detail/28935.html).
+        /// The ID of the Key Management Service (KMS) key that is used to encrypt the system disk. For more information, see [What is KMS?](https://help.aliyun.com/document_detail/28935.html)
         /// 
         /// >  The key can be used only in ACK Pro clusters.
         /// </summary>
@@ -225,8 +231,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// Specifies whether to enable Internet access for the cluster. You can use an elastic IP address (EIP) to expose the API server. This way, you can access the cluster over the Internet. Valid values:
         /// 
-        /// *   `true`: enables Internet access.
-        /// *   `false`: disables Internet access. If you set this parameter to false, the API server cannot be accessed over the Internet.
+        /// *   `true`: enables Internet access for the cluster.
+        /// *   `false`: disables Internet access for the cluster. If you set the value to false, the API server cannot be accessed over the Internet.
         /// 
         /// Default value: `false`.
         /// </summary>
@@ -237,7 +243,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// Specifies whether to mount a data disk to a node that is created based on an existing ECS instance. Valid values:
         /// 
-        /// *   `true`: stores the data of containers and images on a data disk. Back up the existing data on the data disk first.
+        /// *   `true`: stores the data of containers and images on a data disk. The existing data stored on the data disk is lost. Back up the existing data first.
         /// *   `false`: does not store the data of containers and images on a data disk.
         /// 
         /// Default value: `false`.
@@ -252,7 +258,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? FormatDisk { get; set; }
 
         /// <summary>
-        /// Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see [Custom images](https://help.aliyun.com/document_detail/146647.html).
+        /// The custom image. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see [Use a custom image to create an ACK cluster](https://help.aliyun.com/document_detail/146647.html).
         /// </summary>
         [NameInMap("image_id")]
         [Validation(Required=false)]
@@ -278,9 +284,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ImageType { get; set; }
 
         /// <summary>
-        /// The list of existing Elastic Compute Service (ECS) instances that are specified as worker nodes for the cluster.
+        /// The existing ECS instances that are specified as worker nodes for the cluster.
         /// 
-        /// >  This parameter is required when you create worker nodes based on existing ECS instances.
+        /// >  This parameter is required if you create worker nodes on existing ECS instances.
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
@@ -294,9 +300,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string IpStack { get; set; }
 
         /// <summary>
-        /// Specifies whether to create an advanced security group. This parameter takes effect only if `security_group_id` is left empty.
+        /// Specifies whether to create an advanced security group. This parameter takes effect only if `security_group_id` is not specified.
         /// 
-        /// >  To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, we recommend that you specify an advanced security group for a cluster that has Terway installed.
+        /// >  To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, we recommend that you specify an advanced security group for a cluster that uses Terway.
         /// 
         /// *   `true`: creates an advanced security group.
         /// *   `false`: does not create an advanced security group.
@@ -320,16 +326,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? KeepInstanceName { get; set; }
 
         /// <summary>
-        /// The name of the key pair. You must configure this parameter or the `login_password` parameter.
+        /// The name of the key pair. You must specify this parameter or the `login_password` parameter.
         /// </summary>
         [NameInMap("key_pair")]
         [Validation(Required=false)]
         public string KeyPair { get; set; }
 
         /// <summary>
-        /// The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.
+        /// The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.
         /// 
-        /// You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the API. For more information about the Kubernetes versions supported by ACK, see [Release notes on Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
+        /// You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the ACK API. For more information about the Kubernetes versions supported by ACK, see [Support for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
         /// </summary>
         [NameInMap("kubernetes_version")]
         [Validation(Required=false)]
@@ -356,21 +362,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string LoadBalancerSpec { get; set; }
 
         /// <summary>
-        /// Enables Simple Log Service for the cluster. This parameter takes effect only on ACK Serverless clusters. Set the value to `SLS`.
+        /// Enables Simple Log Service for the cluster. This parameter takes effect only for ACK Serverless clusters. Valid value: `SLS`.
         /// </summary>
         [NameInMap("logging_type")]
         [Validation(Required=false)]
         public string LoggingType { get; set; }
 
         /// <summary>
-        /// The password for SSH logon. You must configure this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+        /// The password for SSH logon. You must specify this parameter or `key_pair`. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
         /// </summary>
         [NameInMap("login_password")]
         [Validation(Required=false)]
         public string LoginPassword { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only if `master_instance_charge_type` is set to `PrePaid`. Valid values:
+        /// Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when `master_instance_charge_type` is set to `PrePaid`. Valid values:
         /// 
         /// *   `true`: enables auto-renewal.
         /// *   `false`: disables auto-renewal.
@@ -382,7 +388,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? MasterAutoRenew { get; set; }
 
         /// <summary>
-        /// The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.
+        /// The auto-renewal duration. This parameter takes effect and is required only when the subscription billing method is selected for master nodes.
         /// 
         /// Valid values: 1, 2, 3, 6, and 12.
         /// 
@@ -405,7 +411,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// The billing method of master nodes. Valid values:
         /// 
         /// *   `PrePaid`: subscription.
-        /// *   `PostPaid`: pay-as-you-go.
+        /// *   `PostPaid`: the pay-as-you-go.
         /// 
         /// Default value: `PostPaid`.
         /// </summary>
@@ -421,7 +427,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> MasterInstanceTypes { get; set; }
 
         /// <summary>
-        /// The subscription duration of master nodes. This parameter takes effect and is required only if `master_instance_charge_type` is set to `PrePaid`.
+        /// The subscription duration of master nodes. This parameter takes effect and is required only when `master_instance_charge_type` is set to `PrePaid`.
         /// 
         /// Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
         /// 
@@ -432,20 +438,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? MasterPeriod { get; set; }
 
         /// <summary>
-        /// The billing cycle of master nodes. This parameter is required if master_instance_charge_type is set to `PrePaid`.
+        /// The billing cycle of the master nodes in the cluster. This parameter is required if master_instance_charge_type is set to `PrePaid`.
         /// 
-        /// Set the value to `Month`. Master nodes are billed only on a monthly basis.
+        /// Valid value: `Month`, which indicates that master nodes are billed only on a monthly basis.
         /// </summary>
         [NameInMap("master_period_unit")]
         [Validation(Required=false)]
         public string MasterPeriodUnit { get; set; }
 
         /// <summary>
-        /// The type of system disk that you want to use for the master nodes. Valid values:
+        /// The system disk type of master nodes. Valid values:
         /// 
         /// *   `cloud_efficiency`: ultra disk.
         /// *   `cloud_ssd`: standard SSD.
-        /// *   `cloud_essd`: enhanced SSD (ESSD).
+        /// *   `cloud_essd`: Enterprise SSD (ESSD).
         /// 
         /// Default value: `cloud_ssd`. The default value may vary in different zones.
         /// </summary>
@@ -461,7 +467,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string MasterSystemDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// The size of the system disk that is specified for master nodes. Valid values: 40 to 500. Unit: GiB.
+        /// The system disk size of master nodes. Valid values: 40 to 500. Unit: GiB.
         /// 
         /// Default value: `120`.
         /// </summary>
@@ -479,14 +485,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The IDs of the vSwitches that are specified for master nodes. You can specify up to three vSwitches. We recommend that you specify three vSwitches in different zones to ensure high availability.
         /// 
-        /// The number of vSwitches must be the same as that specified in `master_count` and the same as those specified in `master_vswitch_ids`.
+        /// The number of vSwitches must be the same as the value of the `master_count` parameter and also the same as the number of vSwitches specified in the `master_vswitch_ids` parameter.
         /// </summary>
         [NameInMap("master_vswitch_ids")]
         [Validation(Required=false)]
         public List<string> MasterVswitchIds { get; set; }
 
         /// <summary>
-        /// The name of the cluster.
+        /// The cluster name.
         /// 
         /// The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
         /// 
@@ -497,10 +503,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// Specifies whether to create a NAT gateway and configure SNAT rules when the system creates the ACK Serverless cluster. Valid values:
+        /// Specifies whether to create a NAT gateway and configure SNAT rules if you create an ACK Serverless cluster. Valid values:
         /// 
         /// *   `true`: automatically creates a NAT gateway and configures SNAT rules. This enables Internet access for the VPC in which the cluster is deployed.
-        /// *   `false`: does not create a NAT gateway or configure SNAT rules. In this case, the cluster in the VPC cannot access the Internet.
+        /// *   `false`: does not create a NAT gateway or configure SNAT rules. If you specify this value, the cluster in the VPC cannot access the Internet.
         /// 
         /// Default value: `false`.
         /// </summary>
@@ -509,7 +515,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? NatGateway { get; set; }
 
         /// <summary>
-        /// The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel as the network plug-in.
+        /// The maximum number of IP addresses that can be assigned to each node. This number is determined by the subnet mask of the specified CIDR block. This parameter takes effect only if the cluster uses the Flannel plug-in.
         /// 
         /// Default value: `26`.
         /// </summary>
@@ -518,14 +524,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodeCidrMask { get; set; }
 
         /// <summary>
-        /// The name of the custom node.
+        /// The custom node name.
         /// 
-        /// A node name consists of a prefix, an IP substring, and a suffix.
+        /// A custom node name consists of a prefix, a node IP address, and a suffix.
         /// 
         /// *   The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit.
         /// *   The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.
         /// 
-        /// For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
+        /// For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the IP substring length is 5, and the suffix is test, the node name will aliyun.com00055test.
         /// </summary>
         [NameInMap("node_name_mode")]
         [Validation(Required=false)]
@@ -568,7 +574,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string OsType { get; set; }
 
         /// <summary>
-        /// The subscription duration. This parameter takes effect and is required only if you set charge_type to PrePaid.
+        /// The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.
         /// 
         /// Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
         /// 
@@ -581,14 +587,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The billing cycle. This parameter is required if charge_type is set to PrePaid.
         /// 
-        /// Set the value to Month. Master nodes are billed only on a monthly basis.
+        /// Set the value to Month. Subscription clusters are billed only on a monthly basis.
         /// </summary>
         [NameInMap("period_unit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The OS distribution. Valid values:
+        /// The OS distribution that is used. Valid values:
         /// 
         /// *   CentOS
         /// *   AliyunLinux
@@ -604,9 +610,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// The list of pod vSwitches. You need to specify at least one pod vSwitch for each node vSwitch, and the pod vSwitches must be different from the node vSwitches (`vswitch`). We recommend that you specify pod vSwitches whose mask lengths are no longer than 19.
+        /// If you select Terway as the network plug-in, you must allocate vSwitches to pods. For each vSwitch that allocates IP addresses to worker nodes, you must select a vSwitch in the same zone to allocate IP addresses to pods.
         /// 
-        /// >  The `pod_vswitch_ids` parameter is required if the cluster uses Terway as the network plug-in.
+        /// >  We recommend that you select pod vSwitches whose subnet masks that do not exceed 19 bits in length. The maximum subnet mask length of a pod vSwitch is 25 bits. If you select a pod vSwitch whose subnet mask exceeds 25 bits in length, the IP addresses that can be allocated to pods may be insufficient.
         /// </summary>
         [NameInMap("pod_vswitch_ids")]
         [Validation(Required=false)]
@@ -627,8 +633,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The kube-proxy mode. Valid values:
         /// 
-        /// *   `iptables`: iptables is a kube-proxy mode. It uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.
-        /// *   `ipvs`: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios when high load balancing performance is required.
+        /// *   `iptables`: a mature and stable mode that uses iptables rules to conduct service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.
+        /// *   `ipvs`: a mode that provides high performance and uses IP Virtual Server (IPVS) to conduct service discovery and load balancing. This mode is suitable for clusters that run a large number of Services. We recommend that you use this mode in scenarios that require high-performance load balancing.
         /// 
         /// Default value: `ipvs`.
         /// </summary>
@@ -637,14 +643,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ProxyMode { get; set; }
 
         /// <summary>
-        /// The list of ApsaraDB RDS instances. Select the ApsaraDB RDS instances that you want to add to the whitelist. We recommend that you add the CIDR block of pods and CIDR block of nodes to the ApsaraDB RDS instances in the ApsaraDB RDS console. When you set the ApsaraDB RDS instances, you cannot scale out the number of nodes because the instances are not in the Running state.
+        /// The ApsaraDB RDS instances. The pod CIDR block and node CIDR block are added to the whitelists of the ApsaraDB RDS instances. We recommend that you add the pod CIDR block and node CIDR block to the whitelists of the ApsaraDB RDS instances in the ApsaraDB RDS console. If the RDS instances are not in the Running state, new nodes cannot be added to the cluster.
         /// </summary>
         [NameInMap("rds_instances")]
         [Validation(Required=false)]
         public List<string> RdsInstances { get; set; }
 
         /// <summary>
-        /// The ID of the region in which you want to deploy the cluster.
+        /// The ID of the region in which the cluster is deployed.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -662,46 +668,44 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.
         /// 
-        /// For more information about how to select a proper container runtime, see [How to select between Docker and Sandboxed-Container](https://help.aliyun.com/document_detail/160313.html).
+        /// For more information about how to select a proper container runtime, see [Comparison among Docker, containerd, and Sandboxed-Container](https://help.aliyun.com/document_detail/160313.html).
         /// </summary>
         [NameInMap("runtime")]
         [Validation(Required=false)]
         public Runtime Runtime { get; set; }
 
         /// <summary>
-        /// The ID of an existing security group. You need to choose between this parameter and the `is_enterprise_security_group` parameter. Cluster nodes are automatically added to the security group.
+        /// The ID of an existing security group. You must specify this parameter or the `is_enterprise_security_group` parameter. Cluster nodes are automatically added to the security group.
         /// </summary>
         [NameInMap("security_group_id")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Alibaba Cloud Linux Security Hardening. 
+        /// Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:
         /// 
-        /// Valid values:
+        /// *   `true`: enables Alibaba Cloud Linux Security Hardening.
+        /// *   `false`: disables Alibaba Cloud Linux Security Hardening.
         /// 
-        /// - true: enables Alibaba Cloud Linux Security Hardening.
-        /// - false: disables Alibaba Cloud Linux Security Hardening.
-        /// 
-        /// Default value: false
+        /// Default value: `false`.
         /// </summary>
         [NameInMap("security_hardening_os")]
         [Validation(Required=false)]
         public bool? SecurityHardeningOs { get; set; }
 
         /// <summary>
-        /// Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. `service-account-issuer` is the issuer of the `serviceaccount token`, which corresponds to the `iss` field in the `token payload`.
+        /// Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. The `service-account-issuer` parameter specifies the issuer of the `service account token`, which is specified by using the `iss` field in the `token payload`.
         /// 
-        /// For more information about `ServiceAccount`, see [Enable service account token volume projection](https://help.aliyun.com/document_detail/160384.html).
+        /// For more information about `service accounts`, see [Enable service account token volume projection](https://help.aliyun.com/document_detail/160384.html).
         /// </summary>
         [NameInMap("service_account_issuer")]
         [Validation(Required=false)]
         public string ServiceAccountIssuer { get; set; }
 
         /// <summary>
-        /// The CIDR block of Services. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The CIDR block of Services cannot overlap with the CIDR block of the VPC (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the CIDR block of Services after the cluster is created.
+        /// The Service CIDR block. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The Service CIDR block cannot overlap with the VPC CIDR block (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the Service CIDR block after the cluster is created.
         /// 
-        /// By default, the CIDR block of Services is set to 172.19.0.0/20.
+        /// By default, the Service CIDR block is set to 172.19.0.0/20.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -712,8 +716,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The type of service discovery that is implemented in the `ACK Serverless` cluster.
         /// 
-        /// *   `CoreDNS`: CoreDNS is a standard service discovery plug-in that is provided by open source Kubernetes. To use DNS resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 vCores and 512 MiB of memory.
-        /// *   `PrivateZone`: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it for service discovery.
+        /// *   `CoreDNS`: a standard service discovery plug-in provided by open source Kubernetes. To use DNS resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 vCPUs and 512 MiB of memory.
+        /// *   `PrivateZone`: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it to implement service discovery.
         /// 
         /// By default, this parameter is not specified.
         /// </summary>
@@ -722,12 +726,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> ServiceDiscoveryTypes { get; set; }
 
         /// <summary>
-        /// Specifies whether to configure Source Network Address Translation (SNAT) rules for the VPC in which the cluster is deployed. Valid values:
+        /// Specifies whether to configure SNAT rules for the VPC in which your cluster is deployed. Valid values:
         /// 
-        /// *   `true`: automatically creates a NAT gateway and configures SNAT rules. Set this parameter to `true` if nodes and applications in the cluster need to access the Internet.
+        /// *   `true`: automatically creates a NAT gateway and configures SNAT rules. Set the value to `true` if nodes and applications in the cluster need to access the Internet.
         /// *   `false`: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.
         /// 
-        /// >  If this feature is disabled when you create the cluster, you can manually enable this feature after you create the cluster. For more information, see [Manually create a NAT gateway and configure SNAT rules](https://help.aliyun.com/document_detail/178480.html).
+        /// >  If this feature is disabled when you create the cluster, you can also manually enable this feature after you create the cluster. For more information, see [Enable an existing ACK cluster to access the Internet](https://help.aliyun.com/document_detail/178480.html).
         /// 
         /// Default value: `true`.
         /// </summary>
@@ -736,12 +740,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? SnatEntry { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable reinforcement based on Multi-Level Protection Scheme (MLPS). For more information, see [ACK reinforcement based on classified protection](https://help.aliyun.com/document_detail/196148.html).
+        /// Specifies whether to enable security hardening based on Multi-Level Protection Scheme (MLPS). For more information, see [ACK security hardening based on MLPS](https://help.aliyun.com/document_detail/196148.html).
         /// 
         /// Valid values:
         /// 
-        /// *   `true`: enables reinforcement based on MLPS.
-        /// *   `false`: disables reinforcement based on MLPS.
+        /// *   `true`: enables security hardening based on MLPS.
+        /// *   `false`: disables security hardening based on MLPS.
         /// 
         /// Default value: `false`.
         /// </summary>
@@ -772,7 +776,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<Tag> Tags { get; set; }
 
         /// <summary>
-        /// The taints of the nodes in the node pool. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
+        /// The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specific nodes. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
         /// </summary>
         [NameInMap("taints")]
         [Validation(Required=false)]
@@ -809,30 +813,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string UserData { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.
-        /// 
-        /// This parameter is required.
+        /// The virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.
         /// </summary>
         [NameInMap("vpcid")]
         [Validation(Required=false)]
         public string Vpcid { get; set; }
 
         /// <summary>
-        /// The vSwitches that are specified for nodes in the cluster. This parameter is required when you create an ACK managed cluster that does not contain nodes.
-        /// 
-        /// This parameter is required.
+        /// The vSwitches for nodes in the cluster. This parameter is required if you create an ACK managed cluster that does not contain nodes.
         /// </summary>
         [NameInMap("vswitch_ids")]
         [Validation(Required=false)]
         public List<string> VswitchIds { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only if `worker_instance_charge_type` is set to `PrePaid`. Valid values:
+        /// Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only when `worker_instance_charge_type` is set to `PrePaid`. Valid values:
         /// 
         /// *   `true`: enables auto-renewal.
         /// *   `false`: disables auto-renewal.
         /// 
-        /// Default value: `true`.
+        /// Default value: `true`
         /// </summary>
         [NameInMap("worker_auto_renew")]
         [Validation(Required=false)]
@@ -840,7 +840,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? WorkerAutoRenew { get; set; }
 
         /// <summary>
-        /// The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.
+        /// The auto-renewal duration. This parameter takes effect and is required only when the subscription billing method is selected for worker nodes.
         /// 
         /// Valid values: 1, 2, 3, 6, and 12.
         /// </summary>
@@ -858,7 +858,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<CreateClusterRequestWorkerDataDisks> WorkerDataDisks { get; set; }
         public class CreateClusterRequestWorkerDataDisks : TeaModel {
             /// <summary>
-            /// The type of a data disk.
+            /// The data disk type.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -879,14 +879,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Encrypted { get; set; }
 
             /// <summary>
-            /// The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).
+            /// The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [Enterprise SSDs](https://help.aliyun.com/document_detail/122389.html).
             /// </summary>
             [NameInMap("performance_level")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// The size of the data disk. Valid values: 40 to 32767. Unit: GiB.
+            /// The data disk size. Valid values: 40 to 32767. Unit: GiB.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -918,7 +918,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> WorkerInstanceTypes { get; set; }
 
         /// <summary>
-        /// The subscription duration of worker nodes. This parameter takes effect and is required only if `worker_instance_charge_type` is set to `PrePaid`.
+        /// The subscription duration of worker nodes. This parameter takes effect and is required only when `worker_instance_charge_type` is set to `PrePaid`.
         /// 
         /// Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
         /// 
@@ -932,7 +932,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The billing cycle of worker nodes. This parameter is required if worker_instance_charge_type is set to `PrePaid`.
         /// 
-        /// Set the value to `Month`. Worker nodes are billed only on a monthly basis.
+        /// Set the value to `Month`. Subscription worker nodes are billed only on a monthly basis.
         /// </summary>
         [NameInMap("worker_period_unit")]
         [Validation(Required=false)]
@@ -940,7 +940,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string WorkerPeriodUnit { get; set; }
 
         /// <summary>
-        /// The category of the system disks for worker nodes. For more information, see [Elastic Block Storage devices](https://help.aliyun.com/document_detail/63136.html).
+        /// The system disk type of worker nodes. For more information, see [Overview of Block Storage](https://help.aliyun.com/document_detail/63136.html).
         /// 
         /// Valid values:
         /// 
@@ -955,7 +955,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string WorkerSystemDiskCategory { get; set; }
 
         /// <summary>
-        /// If the system disk is an ESSD, you can set the PL of the ESSD. For more information, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).
+        /// If the system disk is an ESSD, you can specify the PL of the ESSD. For more information, see [Enterprise SSDs](https://help.aliyun.com/document_detail/122389.html).
         /// 
         /// Valid values:
         /// 
@@ -974,7 +974,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// 
         /// Valid values: 40 to 500.
         /// 
-        /// The value of this parameter must be at least 40 and no less than the image size.
+        /// The value of this parameter must be at least 40 and greater than or equal to the image size.
         /// 
         /// Default value: `120`.
         /// </summary>
@@ -992,9 +992,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string WorkerSystemDiskSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// The list of vSwitches that are specified for nodes. Each node is allocated a vSwitch.
+        /// The vSwitches for worker nodes. Each worker node is allocated a vSwitch.
         /// 
-        /// The `worker_vswitch_ids` parameter is optional but the `vswitch_ids` parameter is required when you create an ACK managed cluster that does not contain nodes.
+        /// `worker_vswitch_ids` is optional but `vswitch_ids` is required if you create an ACK managed cluster that does not contain nodes.
         /// </summary>
         [NameInMap("worker_vswitch_ids")]
         [Validation(Required=false)]
@@ -1002,13 +1002,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> WorkerVswitchIds { get; set; }
 
         /// <summary>
-        /// The ID of the zone to which the cluster belongs. This parameter takes effect for only ACK Serverless clusters.
+        /// The ID of the zone to which the cluster belongs. This parameter takes effect only for ACK Serverless clusters.
         /// 
-        /// When you create an ACK Serverless cluster, you must configure `zone_id` if `vpc_id` and `vswitch_ids` are not configured. This way, the system automatically creates a VPC in the specified zone.
+        /// If you create an ACK Serverless cluster, you must specify `zone_id` if `vpc_id` and `vswitch_ids` are not specified. This way, the system automatically creates a VPC in the specified zone.
         /// </summary>
         [NameInMap("zone_id")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ZoneId { get; set; }
+
+        [NameInMap("zone_ids")]
+        [Validation(Required=false)]
+        public List<string> ZoneIds { get; set; }
 
     }
 

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Components { get; set; }
 
         /// <summary>
-        /// The name of the Simple Log Service project that you want to use to store the logs of control plane components.
+        /// The name of the Simple Log Service Project that you want to use to store the logs of control plane components.
         /// 
         /// Default value: k8s-log-$Cluster ID.
         /// </summary>

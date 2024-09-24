@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RemoveNodePoolNodesShrinkRequest : TeaModel {
-        /// <summary>
-        /// 是否并发移除。
-        /// </summary>
         [NameInMap("concurrency")]
         [Validation(Required=false)]
         public bool? Concurrency { get; set; }

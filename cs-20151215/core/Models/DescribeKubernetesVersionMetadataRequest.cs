@@ -58,6 +58,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Profile { get; set; }
 
+        /// <summary>
+        /// Specify whether to query the Kubernetes versions available for updates. This parameter takes effect only when the KubernetesVersion parameter is specified.
+        /// </summary>
         [NameInMap("QueryUpgradableVersion")]
         [Validation(Required=false)]
         public bool? QueryUpgradableVersion { get; set; }

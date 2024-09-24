@@ -17,20 +17,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The edition of the cluster if the cluster is an ACK managed cluster. Valid values:
+        /// After you set `cluster_type` to `ManagedKubernetes` and configure the `profile` parameter, you can further specify the edition of the cluster.
         /// 
-        /// *   `ack.pro.small`: ACK Pro
-        /// *   `ack.standard`: ACK Basic
+        /// *   `ack.pro.small`: Pro.
+        /// *   `ack.standard`: Basic. If you leave the parameter empty, the Basic edition is selected.
         /// </summary>
         [NameInMap("cluster_spec")]
         [Validation(Required=false)]
         public string ClusterSpec { get; set; }
 
         /// <summary>
-        /// The type of cluster. Valid values:
-        /// 
         /// *   `Kubernetes`: ACK dedicated cluster.
-        /// *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.
+        /// *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).
         /// *   `ExternalKubernetes`: registered cluster.
         /// </summary>
         [NameInMap("cluster_type")]
@@ -129,10 +127,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? PrivateZone { get; set; }
 
         /// <summary>
-        /// Indicates the scenario in which the cluster is used. Valid values:
+        /// If you set `cluster_type` to `ManagedKubernetes`, an ACK managed cluster is created. In this case, you can further specify the cluster edition.
         /// 
-        /// *   `Default`: non-edge computing scenarios
-        /// *   `Edge`: edge computing scenarios
+        /// *   `Default`. ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.
+        /// *   `Edge`: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.
+        /// *   `Serverless`: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.
+        /// *   `Lingjun`: ACK Lingjun Pro cluster.
         /// </summary>
         [NameInMap("profile")]
         [Validation(Required=false)]

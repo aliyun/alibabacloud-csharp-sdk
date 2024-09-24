@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The status of the kubeconfig files associated with the cluster.
+        /// The status list of the kubeconfig files associated with the cluster.
         /// </summary>
         [NameInMap("states")]
         [Validation(Required=false)]
         public List<ListClusterKubeconfigStatesResponseBodyStates> States { get; set; }
         public class ListClusterKubeconfigStatesResponseBodyStates : TeaModel {
             /// <summary>
-            /// The display name of the account.
+            /// The displayed name or role name of the RAM user.
             /// </summary>
             [NameInMap("account_display_name")]
             [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// The name of the account.
+            /// The logon name or role name of the RAM user.
             /// </summary>
             [NameInMap("account_name")]
             [Validation(Required=false)]
             public string AccountName { get; set; }
 
             /// <summary>
-            /// The status of the account. Valid values:
+            /// The status of the account.
             /// 
             /// *   Active: The account is active.
             /// *   InActive: The account is locked.
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string AccountState { get; set; }
 
             /// <summary>
-            /// The type of the account. Valid values:
+            /// The type of the account.
             /// 
             /// *   RootAccount: Alibaba Cloud account.
             /// *   RamUser: RAM user.
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// Expiration time of the certificate.
+            /// The expiration time of the client certificate for the kubeconfig file.
             /// </summary>
             [NameInMap("cert_expire_time")]
             [Validation(Required=false)]
             public string CertExpireTime { get; set; }
 
             /// <summary>
-            /// The status of the certificate.
+            /// The status of the client certificate for the kubeconfig file.
             /// 
             /// *   Unexpired: The certificate is not expired.
             /// *   Expired: The certificate is expired.
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CertState { get; set; }
 
             /// <summary>
-            /// Indicates whether the certificate can be revoked.
+            /// Indicates whether the client certificate for the kubeconfig file can be revoked.
             /// </summary>
             [NameInMap("revokable")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpgradeClusterRequest : TeaModel {
         /// <summary>
-        /// This parameter is discontinued.
+        /// This parameter is deprecated.
         /// </summary>
         [NameInMap("component_name")]
         [Validation(Required=false)]
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// Specifies whether to update only the master nodes. Valid values:
         /// 
-        /// *   true: Updates only the master nodes.
-        /// *   false: Updates the master nodes and worker nodes.
+        /// *   true: updates only the master nodes.
+        /// *   false: updates the master nodes and worker nodes.
         /// </summary>
         [NameInMap("master_only")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// This parameter is discontinued. Specify the Kubernetes version by using the next_version parameter.
+        /// This parameter is deprecated. Specify the Kubernetes version by using the next_version parameter.
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]
