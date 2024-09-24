@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryTags))
+            {
+                body["categoryTags"] = request.CategoryTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dialogue))
             {
                 body["dialogue"] = request.Dialogue;
@@ -80,6 +84,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
             {
                 body["stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserProfiles))
+            {
+                body["userProfiles"] = request.UserProfiles;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -113,6 +121,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryTags))
+            {
+                body["categoryTags"] = request.CategoryTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dialogue))
             {
                 body["dialogue"] = request.Dialogue;
@@ -144,6 +156,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
             {
                 body["stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserProfiles))
+            {
+                body["userProfiles"] = request.UserProfiles;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

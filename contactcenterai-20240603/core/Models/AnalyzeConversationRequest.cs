@@ -12,6 +12,20 @@ using Tea;
 namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 {
     public class AnalyzeConversationRequest : TeaModel {
+        [NameInMap("categoryTags")]
+        [Validation(Required=false)]
+        public List<AnalyzeConversationRequestCategoryTags> CategoryTags { get; set; }
+        public class AnalyzeConversationRequestCategoryTags : TeaModel {
+            [NameInMap("tagDesc")]
+            [Validation(Required=false)]
+            public string TagDesc { get; set; }
+
+            [NameInMap("tagName")]
+            [Validation(Required=false)]
+            public string TagName { get; set; }
+
+        }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -196,6 +210,20 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [NameInMap("stream")]
         [Validation(Required=false)]
         public bool? Stream { get; set; }
+
+        [NameInMap("userProfiles")]
+        [Validation(Required=false)]
+        public List<AnalyzeConversationRequestUserProfiles> UserProfiles { get; set; }
+        public class AnalyzeConversationRequestUserProfiles : TeaModel {
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 
