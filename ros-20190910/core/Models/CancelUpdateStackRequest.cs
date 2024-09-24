@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CancelUpdateStackRequest : TeaModel {
         /// <summary>
-        /// The method to cancel the update operation. Valid values:
+        /// <para>The method to cancel the update operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Quick: cancels the update of a stack as soon as possible.</description></item>
+        /// <item><description>Safe: cancels the update of a stack as safely as possible.</description></item>
+        /// </list>
         /// 
-        /// *   Quick: cancels the update of a stack as soon as possible.
-        /// *   Safe: cancels the update of a stack as safely as possible.
+        /// <b>Example:</b>
+        /// <para>Safe</para>
         /// </summary>
         [NameInMap("CancelType")]
         [Validation(Required=false)]
         public string CancelType { get; set; }
 
         /// <summary>
-        /// The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// <para>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the stack.
+        /// <para>The ID of the stack.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</para>
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]

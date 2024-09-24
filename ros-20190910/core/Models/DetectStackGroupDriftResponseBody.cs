@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DetectStackGroupDriftResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the operation.
+        /// <para>The ID of the operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6da106ca-1784-4a6f-a7e1-e723863d****</para>
         /// </summary>
         [NameInMap("OperationId")]
         [Validation(Required=false)]
         public string OperationId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B288A0BE-D927-4888-B0F7-B35EF84B6E6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

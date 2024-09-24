@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The language in which you want to display the results. Valid values:
+        /// <para>The language in which you want to display the results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN (default): Chinese</description></item>
+        /// <item><description>en-US: English</description></item>
+        /// <item><description>ja: Japanese</description></item>
+        /// </list>
         /// 
-        /// *   zh-CN (default): Chinese
-        /// *   en-US: English
-        /// *   ja: Japanese
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

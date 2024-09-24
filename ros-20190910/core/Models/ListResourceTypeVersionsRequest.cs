@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListResourceTypeVersionsRequest : TeaModel {
         /// <summary>
-        /// The resource type.
+        /// <para>The resource type.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MODULE::MyOrganization::MyService::MyUsecase</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

@@ -10,85 +10,113 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplateScratchesResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D1C09606-C58B-558F-9B4E-5BF263D17D09</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resource scenarios.
+        /// <para>The resource scenarios.</para>
         /// </summary>
         [NameInMap("TemplateScratches")]
         [Validation(Required=false)]
         public List<ListTemplateScratchesResponseBodyTemplateScratches> TemplateScratches { get; set; }
         public class ListTemplateScratchesResponseBodyTemplateScratches : TeaModel {
             /// <summary>
-            /// The time when the resource scenario was created.
+            /// <para>The time when the resource scenario was created.</para>
+            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
             /// 
-            /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+            /// <b>Example:</b>
+            /// <para>2021-12-07T08:06:44</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The description of the resource scenario.
+            /// <para>The description of the resource scenario.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The description of the scenario.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The status code of the resource scenario that failed to be generated.
+            /// <para>The status code of the resource scenario that failed to be generated.</para>
+            /// <remarks>
+            /// <para> This parameter is returned only if the value of Status is GENERATE_FAILED.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is returned only if the value of Status is GENERATE_FAILED.
+            /// <b>Example:</b>
+            /// <para>InvalidZoneId</para>
             /// </summary>
             [NameInMap("FailedCode")]
             [Validation(Required=false)]
             public string FailedCode { get; set; }
 
             /// <summary>
-            /// The policy based on which the logical ID is generated. Valid values:
+            /// <para>The policy based on which the logical ID is generated. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</description></item>
+            /// <item><description>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</description></item>
+            /// <item><description>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</description></item>
+            /// </list>
             /// 
-            /// *   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix
-            /// *   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix
-            /// *   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix
+            /// <b>Example:</b>
+            /// <para>LongTypePrefixAndIndexSuffix</para>
             /// </summary>
             [NameInMap("LogicalIdStrategy")]
             [Validation(Required=false)]
             public string LogicalIdStrategy { get; set; }
 
             /// <summary>
-            /// The preference parameters of the resource scenario.
+            /// <para>The preference parameters of the resource scenario.</para>
             /// </summary>
             [NameInMap("PreferenceParameters")]
             [Validation(Required=false)]
             public List<ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters> PreferenceParameters { get; set; }
             public class ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters : TeaModel {
                 /// <summary>
-                /// The parameter name.
+                /// <para>The parameter name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DeletionPolicy</para>
                 /// </summary>
                 [NameInMap("ParameterKey")]
                 [Validation(Required=false)]
                 public string ParameterKey { get; set; }
 
                 /// <summary>
-                /// The parameter value.
+                /// <para>The parameter value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Retain</para>
                 /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
@@ -97,28 +125,34 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfm4nxcvht4pmi</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The source resource group.
+            /// <para>The source resource group.</para>
             /// </summary>
             [NameInMap("SourceResourceGroup")]
             [Validation(Required=false)]
             public ListTemplateScratchesResponseBodyTemplateScratchesSourceResourceGroup SourceResourceGroup { get; set; }
             public class ListTemplateScratchesResponseBodyTemplateScratchesSourceResourceGroup : TeaModel {
                 /// <summary>
-                /// The ID of the source resource group.
+                /// <para>The ID of the source resource group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-acfmzawhxxc****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The resource types for filtering resources.
+                /// <para>The resource types for filtering resources.</para>
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -127,21 +161,27 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The source resources.
+            /// <para>The source resources.</para>
             /// </summary>
             [NameInMap("SourceResources")]
             [Validation(Required=false)]
             public List<ListTemplateScratchesResponseBodyTemplateScratchesSourceResources> SourceResources { get; set; }
             public class ListTemplateScratchesResponseBodyTemplateScratchesSourceResources : TeaModel {
                 /// <summary>
-                /// The resource ID.
+                /// <para>The resource ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-m5eauuq80anx59v28****</para>
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The resource type.
+                /// <para>The resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALIYUN::ECS::VPC</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -150,21 +190,24 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The source tag.
+            /// <para>The source tag.</para>
             /// </summary>
             [NameInMap("SourceTag")]
             [Validation(Required=false)]
             public ListTemplateScratchesResponseBodyTemplateScratchesSourceTag SourceTag { get; set; }
             public class ListTemplateScratchesResponseBodyTemplateScratchesSourceTag : TeaModel {
                 /// <summary>
-                /// The source tags.
+                /// <para>The source tags.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;a&quot;: &quot;b&quot;}</para>
                 /// </summary>
                 [NameInMap("ResourceTags")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> ResourceTags { get; set; }
 
                 /// <summary>
-                /// The resource types for filtering resources.
+                /// <para>The resource types for filtering resources.</para>
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -173,37 +216,50 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The state of the resource scenario.
+            /// <para>The state of the resource scenario.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>GENERATE_COMPLETE</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The reason why the resource scenario failed to be generated.
+            /// <para>The reason why the resource scenario failed to be generated.</para>
+            /// <remarks>
+            /// <para> This parameter is returned only if the value of Status is GENERATE_FAILED.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is returned only if the value of Status is GENERATE_FAILED.
+            /// <b>Example:</b>
+            /// <para>Resource ALIYUN::ECS::VPC vpc-m5eauuq80anx59v28**** could not be found for template scratch.</para>
             /// </summary>
             [NameInMap("StatusReason")]
             [Validation(Required=false)]
             public string StatusReason { get; set; }
 
             /// <summary>
-            /// The tags of the resource scenario.
+            /// <para>The tags of the resource scenario.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListTemplateScratchesResponseBodyTemplateScratchesTags> Tags { get; set; }
             public class ListTemplateScratchesResponseBodyTemplateScratchesTags : TeaModel {
                 /// <summary>
-                /// The tag key of the resource scenario.
+                /// <para>The tag key of the resource scenario.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>usage1</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value of the resource scenario.
+                /// <para>The tag value of the resource scenario.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test1</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -212,26 +268,35 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The ID of the resource scenario.
+            /// <para>The ID of the resource scenario.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ts-48ad85d66cca4620****</para>
             /// </summary>
             [NameInMap("TemplateScratchId")]
             [Validation(Required=false)]
             public string TemplateScratchId { get; set; }
 
             /// <summary>
-            /// The type of the resource scenario. Valid values:
+            /// <para>The type of the resource scenario. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ResourceImport: resource management</description></item>
+            /// <item><description>ArchitectureReplication: resource replication</description></item>
+            /// </list>
             /// 
-            /// *   ResourceImport: resource management
-            /// *   ArchitectureReplication: resource replication
+            /// <b>Example:</b>
+            /// <para>ResourceImport</para>
             /// </summary>
             [NameInMap("TemplateScratchType")]
             [Validation(Required=false)]
             public string TemplateScratchType { get; set; }
 
             /// <summary>
-            /// The time when the resource scenario was updated.
+            /// <para>The time when the resource scenario was updated.</para>
+            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
             /// 
-            /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+            /// <b>Example:</b>
+            /// <para>2021-12-07T08:06:44</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -240,7 +305,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The total number of scenarios.
+        /// <para>The total number of scenarios.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

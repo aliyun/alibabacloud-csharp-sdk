@@ -10,20 +10,23 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteTemplateScratchRequest : TeaModel {
         /// <summary>
-        /// The region ID of the scenario.
+        /// <para>The region ID of the scenario.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the scenario.
+        /// <para>The ID of the scenario.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ts-4f83704400994409****</para>
         /// </summary>
         [NameInMap("TemplateScratchId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class UpdateTemplateRequest : TeaModel {
         /// <summary>
-        /// The description of the template. It can be up to 256 characters in length.
+        /// <para>The description of the template. It can be up to 256 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>It is a demo.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -29,29 +32,36 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// The ID of the template. This parameter applies to shared and private templates.
+        /// <para>The ID of the template. This parameter applies to shared and private templates.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>5ecd1e10-b0e9-4389-a565-e4c15efc****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// The name of the template.
+        /// <para>The name of the template.</para>
+        /// <para>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</para>
         /// 
-        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
+        /// <b>Example:</b>
+        /// <para>MyTemplate</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template can be up to 524,288 bytes in length, and the URL can be up to 1,024 bytes in length.
+        /// <para>The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template can be up to 524,288 bytes in length, and the URL can be up to 1,024 bytes in length.</para>
+        /// <remarks>
+        /// <para> If the region of the OSS bucket is not specified, the RegionId value is used.</para>
+        /// </remarks>
+        /// <para>You can specify only one of the TemplateBody and TemplateURL parameters.</para>
         /// 
-        /// >  If the region of the OSS bucket is not specified, the RegionId value is used.
-        /// 
-        /// You can specify only one of the TemplateBody and TemplateURL parameters.
+        /// <b>Example:</b>
+        /// <para>oss://ros/template/demo</para>
         /// </summary>
         [NameInMap("TemplateURL")]
         [Validation(Required=false)]

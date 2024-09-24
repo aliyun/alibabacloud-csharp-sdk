@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class StopStackGroupOperationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>14A07460-EBE7-47CA-9757-12CC4761D47A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetResourceTypeTemplateRequest : TeaModel {
         /// <summary>
-        /// The resource type.
+        /// <para>The resource type.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ALIYUN::ECS::VPC</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The version ID. If you want to query a specific version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is queried.
+        /// <para>The version ID. If you want to query a specific version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is queried.</para>
+        /// <remarks>
+        /// <para>This parameter is supported only for modules.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is supported only for modules.
+        /// <b>Example:</b>
+        /// <para>v1</para>
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetFeatureDetailsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the drift detection feature.
+        /// <para>Details of the drift detection feature.</para>
         /// </summary>
         [NameInMap("DriftDetection")]
         [Validation(Required=false)]
         public GetFeatureDetailsResponseBodyDriftDetection DriftDetection { get; set; }
         public class GetFeatureDetailsResponseBodyDriftDetection : TeaModel {
             /// <summary>
-            /// The resource types that are supported by the drift detection feature.
+            /// <para>The resource types that are supported by the drift detection feature.</para>
             /// </summary>
             [NameInMap("SupportedResourceTypes")]
             [Validation(Required=false)]
@@ -26,42 +26,48 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EBF833DA-D0E2-52BE-92E2-59CA56BE834E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the resource cleaner feature.
+        /// <para>Details of the resource cleaner feature.</para>
         /// </summary>
         [NameInMap("ResourceCleaner")]
         [Validation(Required=false)]
         public GetFeatureDetailsResponseBodyResourceCleaner ResourceCleaner { get; set; }
         public class GetFeatureDetailsResponseBodyResourceCleaner : TeaModel {
             /// <summary>
-            /// The resource types that can be cleaned up.
+            /// <para>The resource types that can be cleaned up.</para>
             /// </summary>
             [NameInMap("SupportedResourceTypes")]
             [Validation(Required=false)]
             public List<GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes> SupportedResourceTypes { get; set; }
             public class GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes : TeaModel {
                 /// <summary>
-                /// The resource type that supports the resource cleaner feature.
+                /// <para>The resource type that supports the resource cleaner feature.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS:Instance</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The names of the side effects that may be caused by the cleanup operation performed on the resources of the specified type.
+                /// <para>The names of the side effects that may be caused by the cleanup operation performed on the resources of the specified type.</para>
                 /// </summary>
                 [NameInMap("SideEffects")]
                 [Validation(Required=false)]
                 public List<string> SideEffects { get; set; }
 
                 /// <summary>
-                /// The names of the filters that are supported by the resource type.
+                /// <para>The names of the filters that are supported by the resource type.</para>
                 /// </summary>
                 [NameInMap("SupportedFilters")]
                 [Validation(Required=false)]
@@ -72,28 +78,31 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// Details of the resource import feature.
+        /// <para>Details of the resource import feature.</para>
         /// </summary>
         [NameInMap("ResourceImport")]
         [Validation(Required=false)]
         public GetFeatureDetailsResponseBodyResourceImport ResourceImport { get; set; }
         public class GetFeatureDetailsResponseBodyResourceImport : TeaModel {
             /// <summary>
-            /// The resource types that are supported by the resource import feature.
+            /// <para>The resource types that are supported by the resource import feature.</para>
             /// </summary>
             [NameInMap("SupportedResourceTypes")]
             [Validation(Required=false)]
             public List<GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes> SupportedResourceTypes { get; set; }
             public class GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes : TeaModel {
                 /// <summary>
-                /// The resource identifiers.
+                /// <para>The resource identifiers.</para>
                 /// </summary>
                 [NameInMap("ResourceIdentifiers")]
                 [Validation(Required=false)]
                 public List<string> ResourceIdentifiers { get; set; }
 
                 /// <summary>
-                /// The resource type.
+                /// <para>The resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALIYUN::ECS::Disk</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -104,28 +113,31 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// Details of the template parameter constraint feature.
+        /// <para>Details of the template parameter constraint feature.</para>
         /// </summary>
         [NameInMap("TemplateParameterConstraints")]
         [Validation(Required=false)]
         public GetFeatureDetailsResponseBodyTemplateParameterConstraints TemplateParameterConstraints { get; set; }
         public class GetFeatureDetailsResponseBodyTemplateParameterConstraints : TeaModel {
             /// <summary>
-            /// The resource types that support the template parameter constraint feature.
+            /// <para>The resource types that support the template parameter constraint feature.</para>
             /// </summary>
             [NameInMap("SupportedResourceTypes")]
             [Validation(Required=false)]
             public List<GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes> SupportedResourceTypes { get; set; }
             public class GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes : TeaModel {
                 /// <summary>
-                /// The names of properties that are supported by the resource type.
+                /// <para>The names of properties that are supported by the resource type.</para>
                 /// </summary>
                 [NameInMap("Properties")]
                 [Validation(Required=false)]
                 public List<string> Properties { get; set; }
 
                 /// <summary>
-                /// The resource type.
+                /// <para>The resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALIYUN::ECS::Disk</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -136,68 +148,87 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// Details of the scenario feature.
+        /// <para>Details of the scenario feature.</para>
         /// </summary>
         [NameInMap("TemplateScratch")]
         [Validation(Required=false)]
         public GetFeatureDetailsResponseBodyTemplateScratch TemplateScratch { get; set; }
         public class GetFeatureDetailsResponseBodyTemplateScratch : TeaModel {
             /// <summary>
-            /// The resource types that are supported by the scenario feature.
+            /// <para>The resource types that are supported by the scenario feature.</para>
             /// </summary>
             [NameInMap("SupportedResourceTypes")]
             [Validation(Required=false)]
             public List<GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes> SupportedResourceTypes { get; set; }
             public class GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes : TeaModel {
                 /// <summary>
-                /// The resource type.
+                /// <para>The resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALIYUN::ECS::Disk</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resource scope can be specified by source resource group. Valid values:
+                /// <para>Indicates whether the resource scope can be specified by source resource group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
                 /// 
-                /// *   true
-                /// *   false
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("SourceResourceGroupSupported")]
                 [Validation(Required=false)]
                 public bool? SourceResourceGroupSupported { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resource scope can be specified by source resource. Valid values:
+                /// <para>Indicates whether the resource scope can be specified by source resource. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
                 /// 
-                /// *   true
-                /// *   false
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("SourceResourcesSupported")]
                 [Validation(Required=false)]
                 public bool? SourceResourcesSupported { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resource scope can be specified by source tag, resource group, or resource. Valid values:
+                /// <para>Indicates whether the resource scope can be specified by source tag, resource group, or resource. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
                 /// 
-                /// *   true
-                /// *   false
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("SourceSupported")]
                 [Validation(Required=false)]
                 public bool? SourceSupported { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resource scope can be specified by source tag. Valid values:
+                /// <para>Indicates whether the resource scope can be specified by source tag. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
                 /// 
-                /// *   true
-                /// *   false
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("SourceTagSupported")]
                 [Validation(Required=false)]
                 public bool? SourceTagSupported { get; set; }
 
                 /// <summary>
-                /// The scenario types that are supported.
+                /// <para>The scenario types that are supported.</para>
                 /// </summary>
                 [NameInMap("SupportedTemplateScratchTypes")]
                 [Validation(Required=false)]
@@ -208,49 +239,49 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// Details of the Terraform hosting feature.
+        /// <para>Details of the Terraform hosting feature.</para>
         /// </summary>
         [NameInMap("Terraform")]
         [Validation(Required=false)]
         public GetFeatureDetailsResponseBodyTerraform Terraform { get; set; }
         public class GetFeatureDetailsResponseBodyTerraform : TeaModel {
             /// <summary>
-            /// The resource types that support the scenario feature.
+            /// <para>The resource types that support the scenario feature.</para>
             /// </summary>
             [NameInMap("SupportedResourceTypes")]
             [Validation(Required=false)]
             public GetFeatureDetailsResponseBodyTerraformSupportedResourceTypes SupportedResourceTypes { get; set; }
             public class GetFeatureDetailsResponseBodyTerraformSupportedResourceTypes : TeaModel {
                 /// <summary>
-                /// The resource types that support the custom tag feature.
+                /// <para>The resource types that support the custom tag feature.</para>
                 /// </summary>
                 [NameInMap("CustomTag")]
                 [Validation(Required=false)]
                 public List<string> CustomTag { get; set; }
 
                 /// <summary>
-                /// The resource types that support the price inquiry feature.
+                /// <para>The resource types that support the price inquiry feature.</para>
                 /// </summary>
                 [NameInMap("EstimateCost")]
                 [Validation(Required=false)]
                 public List<string> EstimateCost { get; set; }
 
                 /// <summary>
-                /// The resource types that support the resource group feature.
+                /// <para>The resource types that support the resource group feature.</para>
                 /// </summary>
                 [NameInMap("ResourceGroup")]
                 [Validation(Required=false)]
                 public List<string> ResourceGroup { get; set; }
 
                 /// <summary>
-                /// The resource type that support the risk check feature.
+                /// <para>The resource type that support the risk check feature.</para>
                 /// </summary>
                 [NameInMap("StackOperationRisk")]
                 [Validation(Required=false)]
                 public GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk StackOperationRisk { get; set; }
                 public class GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk : TeaModel {
                     /// <summary>
-                    /// The resource types that support the risk check performed to detect risks caused by a stack deletion operation.
+                    /// <para>The resource types that support the risk check performed to detect risks caused by a stack deletion operation.</para>
                     /// </summary>
                     [NameInMap("DeleteStack")]
                     [Validation(Required=false)]
@@ -259,7 +290,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 }
 
                 /// <summary>
-                /// The resource types that support the system tag `acs:ros:stackId`.
+                /// <para>The resource types that support the system tag <c>acs:ros:stackId</c>.</para>
                 /// </summary>
                 [NameInMap("SystemTag")]
                 [Validation(Required=false)]
@@ -268,28 +299,31 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The Terraform versions.
+            /// <para>The Terraform versions.</para>
             /// </summary>
             [NameInMap("SupportedVersions")]
             [Validation(Required=false)]
             public List<GetFeatureDetailsResponseBodyTerraformSupportedVersions> SupportedVersions { get; set; }
             public class GetFeatureDetailsResponseBodyTerraformSupportedVersions : TeaModel {
                 /// <summary>
-                /// The names and versions of the providers that correspond to the Terraform versions.
+                /// <para>The names and versions of the providers that correspond to the Terraform versions.</para>
                 /// </summary>
                 [NameInMap("ProviderVersions")]
                 [Validation(Required=false)]
                 public List<GetFeatureDetailsResponseBodyTerraformSupportedVersionsProviderVersions> ProviderVersions { get; set; }
                 public class GetFeatureDetailsResponseBodyTerraformSupportedVersionsProviderVersions : TeaModel {
                     /// <summary>
-                    /// The name of the provider.
+                    /// <para>The name of the provider.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>alicloud</para>
                     /// </summary>
                     [NameInMap("ProviderName")]
                     [Validation(Required=false)]
                     public string ProviderName { get; set; }
 
                     /// <summary>
-                    /// The provider versions.
+                    /// <para>The provider versions.</para>
                     /// </summary>
                     [NameInMap("SupportedVersions")]
                     [Validation(Required=false)]
@@ -298,21 +332,27 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 }
 
                 /// <summary>
-                /// The Terraform version.
+                /// <para>The Terraform version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.0.11</para>
                 /// </summary>
                 [NameInMap("TerraformVersion")]
                 [Validation(Required=false)]
                 public string TerraformVersion { get; set; }
 
                 /// <summary>
-                /// The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
+                /// <para>The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Aliyun::Terraform-v1.0</para>
                 /// </summary>
                 [NameInMap("Transform")]
                 [Validation(Required=false)]
                 public string Transform { get; set; }
 
                 /// <summary>
-                /// The Terraform versions that can be updated in ROS.
+                /// <para>The Terraform versions that can be updated in ROS.</para>
                 /// </summary>
                 [NameInMap("UpdateAllowedTransforms")]
                 [Validation(Required=false)]

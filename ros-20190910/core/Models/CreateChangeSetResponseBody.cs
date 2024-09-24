@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateChangeSetResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the change set.
+        /// <para>The ID of the change set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e85abe0c-6528-43fb-ae93-fdf8de22****</para>
         /// </summary>
         [NameInMap("ChangeSetId")]
         [Validation(Required=false)]
         public string ChangeSetId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the stack.
+        /// <para>The ID of the stack.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</para>
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteDiagnosticRequest : TeaModel {
         /// <summary>
-        /// The report ID. You can troubleshoot issues based on the report.
+        /// <para>The report ID. You can troubleshoot issues based on the report.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dr-56a0e30bf9854b00****</para>
         /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]

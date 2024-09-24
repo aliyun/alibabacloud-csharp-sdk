@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateStackResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The stack ID.
+        /// <para>The stack ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</para>
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]

@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ContinueCreateStackResponseBody : TeaModel {
         /// <summary>
-        /// The validation result.
+        /// <para>The validation result.</para>
         /// </summary>
         [NameInMap("DryRunResult")]
         [Validation(Required=false)]
         public ContinueCreateStackResponseBodyDryRunResult DryRunResult { get; set; }
         public class ContinueCreateStackResponseBodyDryRunResult : TeaModel {
             /// <summary>
-            /// The parameters that can be modified.
+            /// <para>The parameters that can be modified.</para>
             /// </summary>
             [NameInMap("ParametersAllowedToBeModified")]
             [Validation(Required=false)]
             public List<string> ParametersAllowedToBeModified { get; set; }
 
             /// <summary>
-            /// The parameters that can be modified under specific conditions.
+            /// <para>The parameters that can be modified under specific conditions.</para>
             /// </summary>
             [NameInMap("ParametersConditionallyAllowedToBeModified")]
             [Validation(Required=false)]
             public List<string> ParametersConditionallyAllowedToBeModified { get; set; }
 
             /// <summary>
-            /// The parameters that cannot be modified.
+            /// <para>The parameters that cannot be modified.</para>
             /// </summary>
             [NameInMap("ParametersNotAllowedToBeModified")]
             [Validation(Required=false)]
@@ -40,14 +40,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B288A0BE-D927-4888-B0F7-B35EF84B6E6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The stack ID.
+        /// <para>The stack ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</para>
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]

@@ -10,22 +10,24 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackDriftDetectionStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the drift detection operation.
+        /// <para>The ID of the drift detection operation.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/155098.html">ListStackResourceDrifts</a> operation to obtain the ID of the drift detection operation.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListStackResourceDrifts](https://help.aliyun.com/document_detail/155098.html) operation to obtain the ID of the drift detection operation.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>a7044f0d-6f2e-4128-a307-4524ef88****</para>
         /// </summary>
         [NameInMap("DriftDetectionId")]
         [Validation(Required=false)]
         public string DriftDetectionId { get; set; }
 
         /// <summary>
-        /// The region ID of the stack to be detected for drift.
+        /// <para>The region ID of the stack to be detected for drift.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

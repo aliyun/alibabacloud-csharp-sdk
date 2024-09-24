@@ -10,80 +10,96 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetTemplateParameterConstraintsResponseBody : TeaModel {
         /// <summary>
-        /// The constraints of the parameters.
+        /// <para>The constraints of the parameters.</para>
         /// </summary>
         [NameInMap("ParameterConstraints")]
         [Validation(Required=false)]
         public List<GetTemplateParameterConstraintsResponseBodyParameterConstraints> ParameterConstraints { get; set; }
         public class GetTemplateParameterConstraintsResponseBodyParameterConstraints : TeaModel {
             /// <summary>
-            /// The values of the parameter.
+            /// <para>The values of the parameter.</para>
             /// </summary>
             [NameInMap("AllowedValues")]
             [Validation(Required=false)]
             public List<string> AllowedValues { get; set; }
 
             /// <summary>
-            /// The names of the associated parameters.
+            /// <para>The names of the associated parameters.</para>
             /// </summary>
             [NameInMap("AssociationParameterNames")]
             [Validation(Required=false)]
             public List<string> AssociationParameterNames { get; set; }
 
             /// <summary>
-            /// The behavior of the parameter. Valid values:
+            /// <para>The behavior of the parameter. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NoLimit: No limit is imposed on the value of this parameter.</description></item>
+            /// <item><description>NotSupport: The value of this parameter cannot be queried.</description></item>
+            /// <item><description>QueryError: This parameter failed to be queried.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>If AllowedValues is not returned, Behavior and BehaviorReason are returned.</para>
+            /// </remarks>
             /// 
-            /// *   NoLimit: No limit is imposed on the value of this parameter.
-            /// *   NotSupport: The value of this parameter cannot be queried.
-            /// *   QueryError: This parameter failed to be queried.
-            /// 
-            /// > If AllowedValues is not returned, Behavior and BehaviorReason are returned.
+            /// <b>Example:</b>
+            /// <para>NoLimit</para>
             /// </summary>
             [NameInMap("Behavior")]
             [Validation(Required=false)]
             public string Behavior { get; set; }
 
             /// <summary>
-            /// The reason why the behavior of the parameter is returned.
+            /// <para>The reason why the behavior of the parameter is returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>No resource property refer to the parameter</para>
             /// </summary>
             [NameInMap("BehaviorReason")]
             [Validation(Required=false)]
             public string BehaviorReason { get; set; }
 
             /// <summary>
-            /// The values that do not conform to the parameter constraints.
-            /// 
-            /// > If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.
+            /// <para>The values that do not conform to the parameter constraints.</para>
+            /// <remarks>
+            /// <para>If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("IllegalValueByParameterConstraints")]
             [Validation(Required=false)]
             public List<object> IllegalValueByParameterConstraints { get; set; }
 
             /// <summary>
-            /// The values that do not match the rules in the template.
-            /// 
-            /// > If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.
+            /// <para>The values that do not match the rules in the template.</para>
+            /// <remarks>
+            /// <para>If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("IllegalValueByRules")]
             [Validation(Required=false)]
             public List<object> IllegalValueByRules { get; set; }
 
             /// <summary>
-            /// The unsupported resource in the template.
+            /// <para>The unsupported resource in the template.</para>
             /// </summary>
             [NameInMap("NotSupportResources")]
             [Validation(Required=false)]
             public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources> NotSupportResources { get; set; }
             public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources : TeaModel {
                 /// <summary>
-                /// The name of the resource property.
+                /// <para>The name of the resource property.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>InstanceName</para>
                 /// </summary>
                 [NameInMap("PropertyName")]
                 [Validation(Required=false)]
                 public string PropertyName { get; set; }
 
                 /// <summary>
-                /// The resource type.
+                /// <para>The resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALIYUN::ECS::InstanceGroup</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -92,35 +108,44 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The original constraint information.
+            /// <para>The original constraint information.</para>
             /// </summary>
             [NameInMap("OriginalConstraints")]
             [Validation(Required=false)]
             public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints> OriginalConstraints { get; set; }
             public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints : TeaModel {
                 /// <summary>
-                /// The values of the parameter.
+                /// <para>The values of the parameter.</para>
                 /// </summary>
                 [NameInMap("AllowedValues")]
                 [Validation(Required=false)]
                 public List<object> AllowedValues { get; set; }
 
                 /// <summary>
-                /// The name of the resource property.
+                /// <para>The name of the resource property.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ZoneId</para>
                 /// </summary>
                 [NameInMap("PropertyName")]
                 [Validation(Required=false)]
                 public string PropertyName { get; set; }
 
                 /// <summary>
-                /// The name of the resource that is defined in the template.
+                /// <para>The name of the resource that is defined in the template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MyECS</para>
                 /// </summary>
                 [NameInMap("ResourceName")]
                 [Validation(Required=false)]
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// The resource type.
+                /// <para>The resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALIYUN::ECS::InstanceGroup</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -129,35 +154,47 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The name of the parameter.
+            /// <para>The name of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ZoneInfo</para>
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// The error that is returned when the request fails.
+            /// <para>The error that is returned when the request fails.</para>
             /// </summary>
             [NameInMap("QueryErrors")]
             [Validation(Required=false)]
             public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> QueryErrors { get; set; }
             public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors : TeaModel {
                 /// <summary>
-                /// The error message.
+                /// <para>The error message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALIYUN::ECS::InstanceGroup</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// The resource name.
+                /// <para>The resource name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MyECS</para>
                 /// </summary>
                 [NameInMap("ResourceName")]
                 [Validation(Required=false)]
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// The resource type.
+                /// <para>The resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>InstanceType is needed while query DataDisk</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -184,7 +221,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The data type of the parameter.
+            /// <para>The data type of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>String</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -193,7 +233,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9816785B-BCF8-514D-8B76-C1EC2BC954FC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

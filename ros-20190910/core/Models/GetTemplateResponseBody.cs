@@ -10,100 +10,139 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the change set. This parameter is returned only if you specify ChangeSetId.
+        /// <para>The ID of the change set. This parameter is returned only if you specify ChangeSetId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e85abe0c-6528-43fb-ae93-fdf8de22****</para>
         /// </summary>
         [NameInMap("ChangeSetId")]
         [Validation(Required=false)]
         public string ChangeSetId { get; set; }
 
         /// <summary>
-        /// The time when the template was created. This parameter is returned only if you specify TemplateId.
+        /// <para>The time when the template was created. This parameter is returned only if you specify TemplateId.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you specify TemplateVersion, the creation time of the template whose version is specified by TemplateVersion is returned.</description></item>
+        /// <item><description>If you do not specify TemplateVersion, the creation time of the template whose version is the default version is returned.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > - If you specify TemplateVersion, the creation time of the template whose version is specified by TemplateVersion is returned.
-        /// > - If you do not specify TemplateVersion, the creation time of the template whose version is the default version is returned.
+        /// <b>Example:</b>
+        /// <para>2020-11-18T08:49:26</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// The description of the template. This parameter is returned only if you specify TemplateId.
+        /// <para>The description of the template. This parameter is returned only if you specify TemplateId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ROS template for create ECS instance.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The description of the web UI in the ROS console.
+        /// <para>The description of the web UI in the ROS console.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Interface")]
         [Validation(Required=false)]
         public string Interface { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the template belongs. This parameter is returned only if you specify TemplateId.
+        /// <para>The ID of the Alibaba Cloud account to which the template belongs. This parameter is returned only if you specify TemplateId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>151266687691****</para>
         /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// Details of the sharing status of the template. This parameter is returned only if you specify TemplateId and set IncludePermission to Enabled.
-        /// 
-        /// > - If TemplateVersion is not specified or does not take effect, the details of the sharing status of the template whose version is the default version is returned.
-        /// > - If TemplateVersion is specified and takes effect, the details of the sharing status of the template whose version is specified by TemplateVersion is returned.
+        /// <para>Details of the sharing status of the template. This parameter is returned only if you specify TemplateId and set IncludePermission to Enabled.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If TemplateVersion is not specified or does not take effect, the details of the sharing status of the template whose version is the default version is returned.</description></item>
+        /// <item><description>If TemplateVersion is specified and takes effect, the details of the sharing status of the template whose version is specified by TemplateVersion is returned.</description></item>
+        /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public List<GetTemplateResponseBodyPermissions> Permissions { get; set; }
         public class GetTemplateResponseBodyPermissions : TeaModel {
             /// <summary>
-            /// The ID of the Alibaba Cloud account with which the template is shared.
+            /// <para>The ID of the Alibaba Cloud account with which the template is shared.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>142437958638****</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
             /// <summary>
-            /// The sharing option.
+            /// <para>The sharing option.</para>
+            /// <para>The value ShareToAccounts indicates that the template is shared with one or more Alibaba Cloud accounts.</para>
             /// 
-            /// The value ShareToAccounts indicates that the template is shared with one or more Alibaba Cloud accounts.
+            /// <b>Example:</b>
+            /// <para>ShareToAccounts</para>
             /// </summary>
             [NameInMap("ShareOption")]
             [Validation(Required=false)]
             public string ShareOption { get; set; }
 
             /// <summary>
-            /// The service that is used for resource sharing. Valid values:
+            /// <para>The service that is used for resource sharing. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ROS: Resources are shared from ROS by using the ROS console or calling the ROS API.</description></item>
+            /// <item><description>ResourceDirectory: Resources are shared with accounts in a resource directory from Resource Management by using the resource sharing feature.<remarks>
+            /// <list type="bullet">
+            /// <item><description>The number of accounts with which resources are shared from ROS is independent of the number of accounts with which resources are shared from the resource directory.</description></item>
+            /// <item><description>The shared resources from ROS cannot override or overwrite the shared resources from the resource directory.</description></item>
+            /// <item><description>The shared resources from the resource directory can overwrite the shared resources from ROS.</description></item>
+            /// </list>
+            /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
-            /// - ROS: Resources are shared from ROS by using the ROS console or calling the ROS API.
-            /// - ResourceDirectory: Resources are shared with accounts in a resource directory from Resource Management by using the resource sharing feature.
-            /// > -  The number of accounts with which resources are shared from ROS is independent of the number of accounts with which resources are shared from the resource directory.
-            /// > -  The shared resources from ROS cannot override or overwrite the shared resources from the resource directory.
-            /// > -  The shared resources from the resource directory can overwrite the shared resources from ROS.
+            /// <b>Example:</b>
+            /// <para>ROS</para>
             /// </summary>
             [NameInMap("ShareSource")]
             [Validation(Required=false)]
             public string ShareSource { get; set; }
 
             /// <summary>
-            /// The version of the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts and set VersionOption to Specified or Current.
+            /// <para>The version of the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts and set VersionOption to Specified or Current.</para>
+            /// <para>Valid values: v1 to v100.</para>
             /// 
-            /// Valid values: v1 to v100.
+            /// <b>Example:</b>
+            /// <para>v1</para>
             /// </summary>
             [NameInMap("TemplateVersion")]
             [Validation(Required=false)]
             public string TemplateVersion { get; set; }
 
             /// <summary>
-            /// The version option for the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts.
+            /// <para>The version option for the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>AllVersions: All template versions are shared.</description></item>
+            /// <item><description>Latest: Only the latest template version is shared. When the version of the template is updated, Resource Orchestration Service (ROS) updates the shared version to the latest version.</description></item>
+            /// <item><description>Current: Only the latest template version is shared. When the version of the template is updated, ROS does not update the shared version.</description></item>
+            /// <item><description>Specified: Only the specified template version is shared.</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   AllVersions: All template versions are shared.
-            /// *   Latest: Only the latest template version is shared. When the version of the template is updated, Resource Orchestration Service (ROS) updates the shared version to the latest version.
-            /// *   Current: Only the latest template version is shared. When the version of the template is updated, ROS does not update the shared version.
-            /// *   Specified: Only the specified template version is shared.
+            /// <b>Example:</b>
+            /// <para>AllVersions</para>
             /// </summary>
             [NameInMap("VersionOption")]
             [Validation(Required=false)]
@@ -112,68 +151,92 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The region ID of the stack or stack group that uses the template. This parameter is returned only if you specify StackId, ChangeSetId, or StackGroupName.
+        /// <para>The region ID of the stack or stack group that uses the template. This parameter is returned only if you specify StackId, ChangeSetId, or StackGroupName.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B288A0BE-D927-4888-B0F7-B35EF84****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxazb4ph6aiy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The sharing type of the template. This parameter is returned only if you specify TemplateId.
+        /// <para>The sharing type of the template. This parameter is returned only if you specify TemplateId.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Private: The template belongs to the template owner.</description></item>
+        /// <item><description>Shared: The template is shared by other users.</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   Private: The template belongs to the template owner.
-        /// *   Shared: The template is shared by other users.
+        /// <b>Example:</b>
+        /// <para>Private</para>
         /// </summary>
         [NameInMap("ShareType")]
         [Validation(Required=false)]
         public string ShareType { get; set; }
 
         /// <summary>
-        /// The name of the stack group. This parameter is returned only if you specify StackGroupName.
+        /// <para>The name of the stack group. This parameter is returned only if you specify StackGroupName.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MyStackGroup</para>
         /// </summary>
         [NameInMap("StackGroupName")]
         [Validation(Required=false)]
         public string StackGroupName { get; set; }
 
         /// <summary>
-        /// The ID of the stack. This parameter is returned only if you specify StackId.
+        /// <para>The ID of the stack. This parameter is returned only if you specify StackId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</para>
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]
         public string StackId { get; set; }
 
         /// <summary>
-        /// The tags of the template.
+        /// <para>The tags of the template.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetTemplateResponseBodyTags> Tags { get; set; }
         public class GetTemplateResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tag key of the template.
+            /// <para>The tag key of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>usage</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the template.
+            /// <para>The tag value of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -182,53 +245,75 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of the template. This parameter is returned only if you specify TemplateId.
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the template. This parameter is returned only if you specify TemplateId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ros:<em>:151266687691</em><em><b>:template/a52f81be-496f-4e1c-a286-8852ab54</b></em>*</para>
         /// </summary>
         [NameInMap("TemplateARN")]
         [Validation(Required=false)]
         public string TemplateARN { get; set; }
 
         /// <summary>
-        /// The content of the template.
+        /// <para>The content of the template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</para>
         /// </summary>
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// The ID of the template. This parameter is returned only if you specify TemplateId.
+        /// <para>The ID of the template. This parameter is returned only if you specify TemplateId.</para>
+        /// <para>If the template is a shared template, the value of this parameter is the same as the value of TemplateARN.</para>
         /// 
-        /// If the template is a shared template, the value of this parameter is the same as the value of TemplateARN.
+        /// <b>Example:</b>
+        /// <para>a52f81be-496f-4e1c-a286-8852ab54****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// The name of the template. This parameter is returned only if you specify TemplateId.
+        /// <para>The name of the template. This parameter is returned only if you specify TemplateId.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.</description></item>
+        /// <item><description>If you not specify TemplateVersion, the name of the template whose version is the default version is returned.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > -   If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.
-        /// > -  If you not specify TemplateVersion, the name of the template whose version is the default version is returned.
+        /// <b>Example:</b>
+        /// <para>MyTemplate</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// The version of the template. This parameter is returned only if you specify TemplateId.\\
-        /// If TemplateVersion is not specified or does not take effect, the default version is used.
+        /// <para>The version of the template. This parameter is returned only if you specify TemplateId.\
+        /// If TemplateVersion is not specified or does not take effect, the default version is used.</para>
+        /// <para>If the template is a shared template, this parameter is returned only if you set VersionOption to AllVersions.</para>
         /// 
-        /// If the template is a shared template, this parameter is returned only if you set VersionOption to AllVersions.
+        /// <b>Example:</b>
+        /// <para>v1</para>
         /// </summary>
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]
         public string TemplateVersion { get; set; }
 
         /// <summary>
-        /// The time when the template was last updated. This parameter is returned only if you specify TemplateId.
+        /// <para>The time when the template was last updated. This parameter is returned only if you specify TemplateId.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you specify TemplateVersion, the last update time of the template whose version is specified by TemplateVersion is returned.</description></item>
+        /// <item><description>If you do not specify TemplateVersion, the last update time of the template whose version is the default version is returned.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > - If you specify TemplateVersion, the last update time of the template whose version is specified by TemplateVersion is returned.
-        /// > - If you do not specify TemplateVersion, the last update time of the template whose version is the default version is returned.
+        /// <b>Example:</b>
+        /// <para>2020-12-07T06:11:48</para>
         /// </summary>
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]

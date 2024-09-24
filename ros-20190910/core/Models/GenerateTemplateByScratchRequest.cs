@@ -10,36 +10,44 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GenerateTemplateByScratchRequest : TeaModel {
         /// <summary>
-        /// The region ID of the new node.
+        /// <para>The region ID of the new node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("ProvisionRegionId")]
         [Validation(Required=false)]
         public string ProvisionRegionId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource scenario.
+        /// <para>The region ID of the resource scenario.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource scenario.
+        /// <para>The ID of the resource scenario.</para>
+        /// <para>For more information about how to query the IDs of resource scenarios, see <a href="https://help.aliyun.com/document_detail/363050.html">ListTemplateScratches</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to query the IDs of resource scenarios, see [ListTemplateScratches](https://help.aliyun.com/document_detail/363050.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ts-aa9c62feab844a6b****</para>
         /// </summary>
         [NameInMap("TemplateScratchId")]
         [Validation(Required=false)]
         public string TemplateScratchId { get; set; }
 
         /// <summary>
-        /// The type of the template that Resource Orchestration Service (ROS) generates. ROS can generate templates of the ROS and Terraform types. Default value: ROS.
+        /// <para>The type of the template that Resource Orchestration Service (ROS) generates. ROS can generate templates of the ROS and Terraform types. Default value: ROS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ROS</para>
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

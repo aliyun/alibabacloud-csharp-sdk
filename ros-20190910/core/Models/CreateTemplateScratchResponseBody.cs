@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateTemplateScratchResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>84980977-22F0-5421-B30D-B201311D5DCF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the resource scenario.
+        /// <para>The ID of the resource scenario.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ts-7f7a704cf71c49a6****</para>
         /// </summary>
         [NameInMap("TemplateScratchId")]
         [Validation(Required=false)]
