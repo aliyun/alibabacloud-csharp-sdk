@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 [Validation(Required=false)]
                 public string Phone { get; set; }
 
+                /// <summary>
+                /// The display name of the end user.
+                /// </summary>
                 [NameInMap("RealNickName")]
                 [Validation(Required=false)]
                 public string RealNickName { get; set; }

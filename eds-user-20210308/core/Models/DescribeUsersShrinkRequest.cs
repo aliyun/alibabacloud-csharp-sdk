@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
-    public class DescribeUsersRequest : TeaModel {
+    public class DescribeUsersShrinkRequest : TeaModel {
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         [NameInMap("FilterWithAssignedResources")]
         [Validation(Required=false)]
-        public Dictionary<string, bool?> FilterWithAssignedResources { get; set; }
+        public string FilterWithAssignedResourcesShrink { get; set; }
 
         /// <summary>
         /// The ID of the organization in which you want to query convenience users.
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         [NameInMap("ShowExtras")]
         [Validation(Required=false)]
-        public Dictionary<string, object> ShowExtras { get; set; }
+        public string ShowExtrasShrink { get; set; }
 
         [NameInMap("SolutionId")]
         [Validation(Required=false)]

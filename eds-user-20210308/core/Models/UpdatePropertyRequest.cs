@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class UpdatePropertyRequest : TeaModel {
         /// <summary>
-        /// The ID of the property that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property ID.
+        /// The ID of the property that you want to modify. You can call the [ListProperty](https://help.aliyun.com/document_detail/410890.html) operation to query the property ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PropertyId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// The new property name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PropertyKey")]
         [Validation(Required=false)]
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string PropertyValue { get; set; }
 
             /// <summary>
-            /// The ID of property value that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property value ID.
+            /// The ID of property value that you want to modify. You can call the [ListProperty](https://help.aliyun.com/document_detail/410890.html) operation to query the property value ID.
             /// </summary>
             [NameInMap("PropertyValueId")]
             [Validation(Required=false)]

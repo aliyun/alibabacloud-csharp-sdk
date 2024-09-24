@@ -10,18 +10,27 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DeleteUserPropertyValueRequest : TeaModel {
         /// <summary>
-        /// DeleteUserPropertyValue
+        /// The property ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PropertyId")]
         [Validation(Required=false)]
         public long? PropertyId { get; set; }
 
+        /// <summary>
+        /// The ID of the property value.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PropertyValueId")]
         [Validation(Required=false)]
         public long? PropertyValueId { get; set; }
 
         /// <summary>
-        /// Dissociates a user property from a user.
+        /// The ID of the convenience user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

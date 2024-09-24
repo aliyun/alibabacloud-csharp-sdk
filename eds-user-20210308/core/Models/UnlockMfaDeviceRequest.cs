@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class UnlockMfaDeviceRequest : TeaModel {
         /// <summary>
-        /// The address of the Active Directory (AD) workspace.
+        /// The domain of the Active Directory (AD) workspace.
         /// </summary>
         [NameInMap("AdDomain")]
         [Validation(Required=false)]
         public string AdDomain { get; set; }
 
         /// <summary>
-        /// The serial number of the virtual MFA device, which is a unique identifier.
+        /// The serial number of the virtual MFA device. The serial number is unique for each device.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]

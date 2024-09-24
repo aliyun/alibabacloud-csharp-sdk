@@ -17,21 +17,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public List<string> ExcludeEndUserIds { get; set; }
 
         /// <summary>
-        /// The string that is used for fuzzy search. You can use usernames and email addresses to perform fuzzy search. Wildcard characters (\*) are supported for this parameter. For example, if you set this parameter to a\*m, the usernames or an email addresses that start with a or end with m are returned.
+        /// The string that is used for fuzzy search. You can use usernames and email addresses to perform fuzzy search. Wildcard characters (\\*) are supported for this parameter. For example, if you set this parameter to a\\*m, the usernames or an email addresses that start with a or end with m are returned.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
 
         /// <summary>
-        /// Specifies whether to return information about cloud desktops that are assigned to the convenience user.
+        /// Specifies whether to return the number of cloud desktops that are assigned to the convenience user.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("IncludeDesktopCount")]
         [Validation(Required=false)]
         public bool? IncludeDesktopCount { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the number of desktop groups that are assigned to the user.
+        /// Specifies whether to return the number of cloud desktop pools that are assigned to the convenience user.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("IncludeDesktopGroupCount")]
         [Validation(Required=false)]
@@ -52,7 +88,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The parameter that supports to sort query results.
+        /// The parameters that are used to sort query results.
         /// </summary>
         [NameInMap("OrderParam")]
         [Validation(Required=false)]
@@ -117,6 +153,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string PropertyValues { get; set; }
 
         }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
 
     }
 

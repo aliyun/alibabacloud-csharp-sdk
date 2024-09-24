@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ListPropertyValueRequest : TeaModel {
         /// <summary>
-        /// The ID of the property. You can call the [ListProperty](~~410890~~) operation to query the property ID.
+        /// The ID of the property. You can call the [ListProperty](https://help.aliyun.com/document_detail/410890.html) operation to query the property ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PropertyId")]
         [Validation(Required=false)]

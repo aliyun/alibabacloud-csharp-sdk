@@ -8,10 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
-    public class RemoveUsersRequest : TeaModel {
+    public class BatchSetDesktopManagerRequest : TeaModel {
+        [NameInMap("IsDesktopManager")]
+        [Validation(Required=false)]
+        public string IsDesktopManager { get; set; }
+
         /// <summary>
-        /// The usernames of the convenience users that you want to remove.
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Users")]

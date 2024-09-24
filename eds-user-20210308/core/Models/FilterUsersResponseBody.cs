@@ -24,35 +24,39 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the convenience users.
+        /// The information about the convenience user.
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<FilterUsersResponseBodyUsers> Users { get; set; }
         public class FilterUsersResponseBodyUsers : TeaModel {
+            [NameInMap("AutoLockTime")]
+            [Validation(Required=false)]
+            public string AutoLockTime { get; set; }
+
             /// <summary>
-            /// The number of cloud desktops that are assigned to the user.
+            /// The number of cloud desktops that are assigned to the convenience user.
             /// </summary>
             [NameInMap("DesktopCount")]
             [Validation(Required=false)]
             public long? DesktopCount { get; set; }
 
             /// <summary>
-            /// The number of authorized desktop groups that are owned by the user. This value is returned if you set `IncludeDesktopGroupCount` to `true`.
+            /// The number of cloud desktop pools that are assigned to the convenience user. This value is returned if you set `IncludeDesktopGroupCount` to `true`.
             /// </summary>
             [NameInMap("DesktopGroupCount")]
             [Validation(Required=false)]
             public long? DesktopGroupCount { get; set; }
 
             /// <summary>
-            /// The email address.
+            /// The email address of the convenience user.
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
             /// <summary>
-            /// Indicates whether the user is a local administrator.
+            /// Indicates whether the convenience user is a local administrator.
             /// 
             /// Valid values:
             /// 
@@ -77,28 +81,28 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public bool? EnableAdminAccess { get; set; }
 
             /// <summary>
-            /// The username.
+            /// The username of the convenience user.
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// The additional information about the user.
+            /// The additional information about the convenience user.
             /// </summary>
             [NameInMap("ExternalInfo")]
             [Validation(Required=false)]
             public FilterUsersResponseBodyUsersExternalInfo ExternalInfo { get; set; }
             public class FilterUsersResponseBodyUsersExternalInfo : TeaModel {
                 /// <summary>
-                /// The account that is connected to the user.
+                /// The account that is associated with the convenience user.
                 /// </summary>
                 [NameInMap("ExternalName")]
                 [Validation(Required=false)]
                 public string ExternalName { get; set; }
 
                 /// <summary>
-                /// The account, student ID, or employee ID that is connected to the user.
+                /// The account, student ID, or employee ID that is associated with the convenience user.
                 /// </summary>
                 [NameInMap("JobNumber")]
                 [Validation(Required=false)]
@@ -107,14 +111,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// The user ID.
+            /// The ID of the convenience user.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// Indicates whether the user is a tenant administrator.
+            /// Indicates whether the convenience user is a tenant administrator.
             /// 
             /// Valid values:
             /// 
@@ -143,58 +147,48 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// 
             /// Valid values:
             /// 
-            /// *   CreateFromManager
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     administrator-activated
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Normal
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     user-activated
-            /// 
-            ///     <!-- -->
+            /// *   CreateFromManager: administrator-activated
+            /// *   Normal: user-activated
             /// </summary>
             [NameInMap("OwnerType")]
             [Validation(Required=false)]
             public string OwnerType { get; set; }
 
+            [NameInMap("PasswordExpireDays")]
+            [Validation(Required=false)]
+            public int? PasswordExpireDays { get; set; }
+
+            [NameInMap("PasswordExpireRestDays")]
+            [Validation(Required=false)]
+            public int? PasswordExpireRestDays { get; set; }
+
             /// <summary>
-            /// The mobile number.
+            /// The mobile number of the convenience user.
             /// </summary>
             [NameInMap("Phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
 
+            /// <summary>
+            /// The nickname of the convenience user.
+            /// </summary>
             [NameInMap("RealNickName")]
             [Validation(Required=false)]
             public string RealNickName { get; set; }
 
             /// <summary>
-            /// The remarks.
+            /// The remarks on the convenience user.
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
             /// <summary>
-            /// The user status.
+            /// The status of the convenience user.
             /// 
             /// Valid values:
             /// 
-            /// *   0: The user status is normal.
+            /// *   0: The convenience user is normal.
             /// 
             ///     <!-- -->
             /// 
@@ -202,7 +196,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   9: The user is locked.
+            /// *   9: The convenience user is locked.
             /// 
             ///     <!-- -->
             /// 
@@ -215,7 +209,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? Status { get; set; }
 
             /// <summary>
-            /// Details of the properties.
+            /// The information about the properties.
             /// </summary>
             [NameInMap("UserSetPropertiesModels")]
             [Validation(Required=false)]
@@ -236,14 +230,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string PropertyKey { get; set; }
 
                 /// <summary>
-                /// The property ID.
+                /// The property type.
                 /// </summary>
                 [NameInMap("PropertyType")]
                 [Validation(Required=false)]
                 public int? PropertyType { get; set; }
 
                 /// <summary>
-                /// The property value.
+                /// The property values.
                 /// </summary>
                 [NameInMap("PropertyValues")]
                 [Validation(Required=false)]
@@ -257,7 +251,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                     public string PropertyValue { get; set; }
 
                     /// <summary>
-                    /// The property value ID.
+                    /// The ID of the property value.
                     /// </summary>
                     [NameInMap("PropertyValueId")]
                     [Validation(Required=false)]
@@ -266,14 +260,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 }
 
                 /// <summary>
-                /// The ID of the user that is bound to the property.
+                /// The ID of the convenience user that is bound to the property.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public long? UserId { get; set; }
 
                 /// <summary>
-                /// The name of the user that is bound to the property.
+                /// The username of the convenience user that is bound to the property.
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]

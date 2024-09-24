@@ -8,10 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
-    public class SetUserPropertyValueResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
+    public class BatchSetDesktopManagerResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

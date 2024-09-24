@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class LockUsersRequest : TeaModel {
+        /// <summary>
+        /// The usernames of the convenience users that you want to lock.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<string> Users { get; set; }

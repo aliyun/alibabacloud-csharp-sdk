@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeMfaDevicesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the virtual MFA devices.
+        /// The information about the virtual MFA devices.
         /// </summary>
         [NameInMap("MfaDevices")]
         [Validation(Required=false)]
         public List<DescribeMfaDevicesResponseBodyMfaDevices> MfaDevices { get; set; }
         public class DescribeMfaDevicesResponseBodyMfaDevices : TeaModel {
             /// <summary>
-            /// The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.
+            /// The number of consecutive failures to bind the virtual MFA device, or the number of authentication failures based on the virtual MFA device.
             /// </summary>
             [NameInMap("ConsecutiveFails")]
             [Validation(Required=false)]
             public int? ConsecutiveFails { get; set; }
 
             /// <summary>
-            /// The types of the virtual MFA device. Set the value to TOTP_VIRTUAL, which indicates that the virtual MFA devices follow the Time-based One-time Password (TOTP) algorithm.
+            /// The type of the virtual MFA device. The value can only be TOTP_VIRTUAL. This value indicates that the virtual MFA device follows the Time-based One-time Password (TOTP) algorithm.
             /// </summary>
             [NameInMap("DeviceType")]
             [Validation(Required=false)]
             public string DeviceType { get; set; }
 
             /// <summary>
-            /// This parameter is unavailable.
+            /// >  This parameter is not publicly available.
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
@@ -52,32 +52,54 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string GmtEnabled { get; set; }
 
             /// <summary>
-            /// The time when a locked virtual MFA device is automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The time when the locked virtual MFA device was automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("GmtUnlock")]
             [Validation(Required=false)]
             public string GmtUnlock { get; set; }
 
             /// <summary>
-            /// This parameter is unavailable.
+            /// >  This parameter is not publicly available.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The serial number of the virtual MFA device, which is a unique identifier.
+            /// The serial number of the virtual MFA device. The serial number is unique for each device.
             /// </summary>
             [NameInMap("SerialNumber")]
             [Validation(Required=false)]
             public string SerialNumber { get; set; }
 
             /// <summary>
-            /// The status of the virtual MFA device. Valid values:
+            /// The status of the virtual MFA device.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   LOCKED
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// 
             /// *   UNBOUND
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
             /// *   NORMAL
-            /// *   LOCKED
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -86,14 +108,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         }
 
         /// <summary>
-        /// The token that determines the start point of the next query.
+        /// The pagination token that is used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
-    public class ListPropertyResponse : TeaModel {
+    public class BatchSetDesktopManagerResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListPropertyResponseBody Body { get; set; }
+        public BatchSetDesktopManagerResponseBody Body { get; set; }
 
     }
 
