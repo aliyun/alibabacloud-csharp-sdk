@@ -888,6 +888,138 @@ namespace AlibabaCloud.SDK.NAS20170626
         }
 
         /**
+         * @summary 取消数据流动任务队列中尚未执行的子任务
+         *
+         * @param request CancelDataFlowSubTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelDataFlowSubTaskResponse
+         */
+        public CancelDataFlowSubTaskResponse CancelDataFlowSubTaskWithOptions(CancelDataFlowSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFlowId))
+            {
+                query["DataFlowId"] = request.DataFlowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFlowSubTaskId))
+            {
+                query["DataFlowSubTaskId"] = request.DataFlowSubTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFlowTaskId))
+            {
+                query["DataFlowTaskId"] = request.DataFlowTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelDataFlowSubTask",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelDataFlowSubTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 取消数据流动任务队列中尚未执行的子任务
+         *
+         * @param request CancelDataFlowSubTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelDataFlowSubTaskResponse
+         */
+        public async Task<CancelDataFlowSubTaskResponse> CancelDataFlowSubTaskWithOptionsAsync(CancelDataFlowSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFlowId))
+            {
+                query["DataFlowId"] = request.DataFlowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFlowSubTaskId))
+            {
+                query["DataFlowSubTaskId"] = request.DataFlowSubTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFlowTaskId))
+            {
+                query["DataFlowTaskId"] = request.DataFlowTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelDataFlowSubTask",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelDataFlowSubTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 取消数据流动任务队列中尚未执行的子任务
+         *
+         * @param request CancelDataFlowSubTaskRequest
+         * @return CancelDataFlowSubTaskResponse
+         */
+        public CancelDataFlowSubTaskResponse CancelDataFlowSubTask(CancelDataFlowSubTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelDataFlowSubTaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 取消数据流动任务队列中尚未执行的子任务
+         *
+         * @param request CancelDataFlowSubTaskRequest
+         * @return CancelDataFlowSubTaskResponse
+         */
+        public async Task<CancelDataFlowSubTaskResponse> CancelDataFlowSubTaskAsync(CancelDataFlowSubTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelDataFlowSubTaskWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Cancels a dataflow task that is not running.
          *
          * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
@@ -2505,6 +2637,154 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDataFlowWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 创建数据流动子任务
+         *
+         * @param request CreateDataFlowSubTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDataFlowSubTaskResponse
+         */
+        public CreateDataFlowSubTaskResponse CreateDataFlowSubTaskWithOptions(CreateDataFlowSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Condition))
+            {
+                query["Condition"] = request.Condition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFlowId))
+            {
+                query["DataFlowId"] = request.DataFlowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFlowTaskId))
+            {
+                query["DataFlowTaskId"] = request.DataFlowTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstFilePath))
+            {
+                query["DstFilePath"] = request.DstFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcFilePath))
+            {
+                query["SrcFilePath"] = request.SrcFilePath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataFlowSubTask",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataFlowSubTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建数据流动子任务
+         *
+         * @param request CreateDataFlowSubTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDataFlowSubTaskResponse
+         */
+        public async Task<CreateDataFlowSubTaskResponse> CreateDataFlowSubTaskWithOptionsAsync(CreateDataFlowSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Condition))
+            {
+                query["Condition"] = request.Condition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFlowId))
+            {
+                query["DataFlowId"] = request.DataFlowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFlowTaskId))
+            {
+                query["DataFlowTaskId"] = request.DataFlowTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstFilePath))
+            {
+                query["DstFilePath"] = request.DstFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcFilePath))
+            {
+                query["SrcFilePath"] = request.SrcFilePath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataFlowSubTask",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataFlowSubTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建数据流动子任务
+         *
+         * @param request CreateDataFlowSubTaskRequest
+         * @return CreateDataFlowSubTaskResponse
+         */
+        public CreateDataFlowSubTaskResponse CreateDataFlowSubTask(CreateDataFlowSubTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataFlowSubTaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建数据流动子任务
+         *
+         * @param request CreateDataFlowSubTaskRequest
+         * @return CreateDataFlowSubTaskResponse
+         */
+        public async Task<CreateDataFlowSubTaskResponse> CreateDataFlowSubTaskAsync(CreateDataFlowSubTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataFlowSubTaskWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -7245,6 +7525,122 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBlackListClientsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询数据流动子任务
+         *
+         * @param request DescribeDataFlowSubTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataFlowSubTasksResponse
+         */
+        public DescribeDataFlowSubTasksResponse DescribeDataFlowSubTasksWithOptions(DescribeDataFlowSubTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDataFlowSubTasks",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDataFlowSubTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询数据流动子任务
+         *
+         * @param request DescribeDataFlowSubTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataFlowSubTasksResponse
+         */
+        public async Task<DescribeDataFlowSubTasksResponse> DescribeDataFlowSubTasksWithOptionsAsync(DescribeDataFlowSubTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDataFlowSubTasks",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDataFlowSubTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询数据流动子任务
+         *
+         * @param request DescribeDataFlowSubTasksRequest
+         * @return DescribeDataFlowSubTasksResponse
+         */
+        public DescribeDataFlowSubTasksResponse DescribeDataFlowSubTasks(DescribeDataFlowSubTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDataFlowSubTasksWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询数据流动子任务
+         *
+         * @param request DescribeDataFlowSubTasksRequest
+         * @return DescribeDataFlowSubTasksResponse
+         */
+        public async Task<DescribeDataFlowSubTasksResponse> DescribeDataFlowSubTasksAsync(DescribeDataFlowSubTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDataFlowSubTasksWithOptionsAsync(request, runtime);
         }
 
         /**
