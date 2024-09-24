@@ -10,16 +10,27 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteMediaFromSearchLibRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("MsgBody")]
         [Validation(Required=false)]
         public string MsgBody { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test1</para>
+        /// </summary>
         [NameInMap("SearchLibName")]
         [Validation(Required=false)]
         public string SearchLibName { get; set; }

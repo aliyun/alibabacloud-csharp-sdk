@@ -10,19 +10,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitIProductionJobShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Cover</para>
         /// </summary>
         [NameInMap("FunctionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string InputShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;Model&quot;:&quot;gif&quot;}</para>
+        /// </summary>
         [NameInMap("JobParams")]
         [Validation(Required=false)]
         public string JobParams { get; set; }
@@ -32,7 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
@@ -42,10 +49,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string ScheduleConfigShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;test&quot;:1}</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

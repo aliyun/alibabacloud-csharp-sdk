@@ -10,16 +10,27 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchIndexJobRerunRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b><b>b48fb04483915d4f2cd8</b></b></b>,<b><b><b>c48fb37407365d4f2cd8</b></b></b></para>
         /// </summary>
         [NameInMap("MediaIds")]
         [Validation(Required=false)]
         public string MediaIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test-1</para>
+        /// </summary>
         [NameInMap("SearchLibName")]
         [Validation(Required=false)]
         public string SearchLibName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AiLabel,Face,Mm</para>
+        /// </summary>
         [NameInMap("Task")]
         [Validation(Required=false)]
         public string Task { get; set; }

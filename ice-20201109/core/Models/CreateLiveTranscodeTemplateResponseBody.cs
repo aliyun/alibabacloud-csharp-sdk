@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLiveTranscodeTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }

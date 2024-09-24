@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteLiveRecordTemplateRequest : TeaModel {
         /// <summary>
-        /// 代表资源一级ID的资源属性字段
+        /// <para>代表资源一级ID的资源属性字段</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

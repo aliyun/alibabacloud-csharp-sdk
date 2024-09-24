@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class StopRtcRobotInstanceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>727dc0e296014bb58670940a3da95592</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

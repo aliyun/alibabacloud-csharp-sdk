@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<string> IgnoredList { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0622C702-41BE-467E-AF2E-883D4517962E</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

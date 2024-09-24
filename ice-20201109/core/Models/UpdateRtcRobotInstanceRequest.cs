@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public UpdateRtcRobotInstanceRequestConfig Config { get; set; }
         public class UpdateRtcRobotInstanceRequestConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("EnableVoiceInterrupt")]
             [Validation(Required=false)]
             public bool? EnableVoiceInterrupt { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>zhixiaoxia</para>
+            /// </summary>
             [NameInMap("VoiceId")]
             [Validation(Required=false)]
             public string VoiceId { get; set; }
@@ -28,7 +36,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>727dc0e296014bb58670940a3da95592</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

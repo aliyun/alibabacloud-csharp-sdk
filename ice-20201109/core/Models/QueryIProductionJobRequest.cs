@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

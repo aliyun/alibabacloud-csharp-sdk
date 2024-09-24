@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAvatarsRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2DAvatar</para>
+        /// </summary>
         [NameInMap("AvatarType")]
         [Validation(Required=false)]
         public string AvatarType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

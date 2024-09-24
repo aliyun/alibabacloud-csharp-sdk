@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListDNADBRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2288c6ca184c0e47098a5b665e2a12****,78dc866518b843259669df58ed30****</para>
+        /// </summary>
         [NameInMap("DBIds")]
         [Validation(Required=false)]
         public string DBIds { get; set; }

@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetLiveRecordTemplateRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</para>
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitDynamicImageJobRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public SubmitDynamicImageJobRequestInput Input { get; set; }
         public class SubmitDynamicImageJobRequestInput : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oss://bucket/object.mp4</para>
             /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OSS</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -32,26 +38,36 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SampleJob</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
         public SubmitDynamicImageJobRequestOutput Output { get; set; }
         public class SubmitDynamicImageJobRequestOutput : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><b><b>96e8864746a0b6f3</b></b></para>
             /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Media</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -63,10 +79,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public SubmitDynamicImageJobRequestScheduleConfig ScheduleConfig { get; set; }
         public class SubmitDynamicImageJobRequestScheduleConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><b><b>96e8864746a0b6f3</b></b></para>
+            /// </summary>
             [NameInMap("PipelineId")]
             [Validation(Required=false)]
             public string PipelineId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>6</para>
+            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
@@ -74,7 +98,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
@@ -84,22 +108,42 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public SubmitDynamicImageJobRequestTemplateConfigOverwriteParams OverwriteParams { get; set; }
             public class SubmitDynamicImageJobRequestTemplateConfigOverwriteParams : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>gif</para>
+                /// </summary>
                 [NameInMap("Format")]
                 [Validation(Required=false)]
                 public string Format { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>15</para>
+                /// </summary>
                 [NameInMap("Fps")]
                 [Validation(Required=false)]
                 public int? Fps { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>720</para>
+                /// </summary>
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public int? Height { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("LongShortMode")]
                 [Validation(Required=false)]
                 public bool? LongShortMode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>progressive</para>
+                /// </summary>
                 [NameInMap("ScanMode")]
                 [Validation(Required=false)]
                 public string ScanMode { get; set; }
@@ -122,6 +166,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1024</para>
+                /// </summary>
                 [NameInMap("Width")]
                 [Validation(Required=false)]
                 public int? Width { get; set; }
@@ -129,7 +177,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><b><b>96e8864746a0b6f3</b></b></para>
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
@@ -137,6 +188,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;SampleKey&quot;: &quot;SampleValue&quot;}</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

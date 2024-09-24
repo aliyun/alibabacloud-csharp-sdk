@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Gender { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><b><b>571c704445f9a0ee011406c2</b></b></para>
+                /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public string JobId { get; set; }
@@ -37,6 +41,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Scenario { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Fail</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
@@ -49,6 +57,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string VoiceDesc { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>xiaozhuan</para>
+                /// </summary>
                 [NameInMap("VoiceId")]
                 [Validation(Required=false)]
                 public string VoiceId { get; set; }
@@ -61,10 +73,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

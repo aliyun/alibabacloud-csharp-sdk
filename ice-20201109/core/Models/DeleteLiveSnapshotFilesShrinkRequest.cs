@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteLiveSnapshotFilesShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateTimestampList")]
         [Validation(Required=false)]
         public string CreateTimestampListShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("DeleteOriginalFile")]
         [Validation(Required=false)]
         public bool? DeleteOriginalFile { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b>a046-263c-3560-978a-fb287782</b></b></para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

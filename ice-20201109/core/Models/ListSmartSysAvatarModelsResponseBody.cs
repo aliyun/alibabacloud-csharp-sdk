@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListSmartSysAvatarModelsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList> SmartSysAvatarModelList { get; set; }
         public class ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>yunqiao</para>
+            /// </summary>
             [NameInMap("AvatarId")]
             [Validation(Required=false)]
             public string AvatarId { get; set; }
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? Bitrate { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4</a></para>
+            /// </summary>
             [NameInMap("CoverUrl")]
             [Validation(Required=false)]
             public string CoverUrl { get; set; }
@@ -41,6 +53,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public bool? OutputMask { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4</a></para>
+            /// </summary>
             [NameInMap("VideoUrl")]
             [Validation(Required=false)]
             public string VideoUrl { get; set; }
@@ -51,6 +67,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteDNAFilesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fb712a6890464059b1b2ea7c8647****</para>
         /// </summary>
         [NameInMap("DBId")]
         [Validation(Required=false)]
@@ -25,7 +28,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>41e6536e4f2250e2e9bf26cdea19****</para>
         /// </summary>
         [NameInMap("PrimaryKeys")]
         [Validation(Required=false)]

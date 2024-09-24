@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<ListAllPublicMediaTagsResponseBodyMediaTagList> MediaTagList { get; set; }
         public class ListAllPublicMediaTagsResponseBodyMediaTagList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>sticker-gif</para>
+            /// </summary>
             [NameInMap("MediaTagId")]
             [Validation(Required=false)]
             public string MediaTagId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Gif</para>
+            /// </summary>
             [NameInMap("MediaTagNameChinese")]
             [Validation(Required=false)]
             public string MediaTagNameChinese { get; set; }
@@ -33,10 +41,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string OptionChineseName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Angry</para>
+                /// </summary>
                 [NameInMap("OptionEnglishName")]
                 [Validation(Required=false)]
                 public string OptionEnglishName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Angry</para>
+                /// </summary>
                 [NameInMap("OptionId")]
                 [Validation(Required=false)]
                 public string OptionId { get; set; }
@@ -45,6 +61,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>B45F83B7-7F87-4792-BFE9-63CD2137CAF0</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

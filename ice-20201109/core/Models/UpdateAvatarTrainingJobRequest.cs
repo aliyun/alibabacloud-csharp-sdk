@@ -18,24 +18,43 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AvatarName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b>cdb3e74639973036bc84</b></b></para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b>571c704445f9a0ee011406c2</b></b></para>
+        /// </summary>
         [NameInMap("Portrait")]
         [Validation(Required=false)]
         public string Portrait { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png</a></para>
+        /// </summary>
         [NameInMap("Thumbnail")]
         [Validation(Required=false)]
         public string Thumbnail { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
         [NameInMap("Transparent")]
         [Validation(Required=false)]
         public bool? Transparent { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b>571c704445f9a0ee011406c2</b></b></para>
+        /// </summary>
         [NameInMap("Video")]
         [Validation(Required=false)]
         public string Video { get; set; }

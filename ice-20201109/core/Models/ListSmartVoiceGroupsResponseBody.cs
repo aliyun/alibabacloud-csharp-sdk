@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListSmartVoiceGroupsResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -48,14 +48,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>zhitian</para>
+                /// </summary>
                 [NameInMap("Voice")]
                 [Validation(Required=false)]
                 public string Voice { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Female</para>
+                /// </summary>
                 [NameInMap("VoiceType")]
                 [Validation(Required=false)]
                 public string VoiceType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>https://***.com/zhiqing.mp3</para>
+                /// </summary>
                 [NameInMap("VoiceUrl")]
                 [Validation(Required=false)]
                 public string VoiceUrl { get; set; }

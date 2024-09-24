@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string AvatarDescription { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Avatar-XXX</para>
+                /// </summary>
                 [NameInMap("AvatarId")]
                 [Validation(Required=false)]
                 public string AvatarId { get; set; }
@@ -29,22 +33,42 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string AvatarName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2DAvatar</para>
+                /// </summary>
                 [NameInMap("AvatarType")]
                 [Validation(Required=false)]
                 public string AvatarType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2020-12-23T13:33:40Z</para>
+                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2020-12-23T13:33:40Z</para>
+                /// </summary>
                 [NameInMap("FirstTrainingTime")]
                 [Validation(Required=false)]
                 public string FirstTrainingTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><em><b><b>aded114489ea02e0addf93</b></b></em></para>
+                /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public string JobId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2020-12-23T13:33:40Z</para>
+                /// </summary>
                 [NameInMap("LastTrainingTime")]
                 [Validation(Required=false)]
                 public string LastTrainingTime { get; set; }
@@ -53,26 +77,46 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><em><b><b>aded114489ea02e0addf93</b></b></em></para>
+                /// </summary>
                 [NameInMap("Portrait")]
                 [Validation(Required=false)]
                 public string Portrait { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Normal</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
