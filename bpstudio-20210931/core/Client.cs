@@ -1630,6 +1630,214 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
+         * @summary 获取询价应用变配记录
+         *
+         * @param request GetResource4ModifyRecordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetResource4ModifyRecordResponse
+         */
+        public GetResource4ModifyRecordResponse GetResource4ModifyRecordWithOptions(GetResource4ModifyRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResource4ModifyRecord",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResource4ModifyRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取询价应用变配记录
+         *
+         * @param request GetResource4ModifyRecordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetResource4ModifyRecordResponse
+         */
+        public async Task<GetResource4ModifyRecordResponse> GetResource4ModifyRecordWithOptionsAsync(GetResource4ModifyRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResource4ModifyRecord",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResource4ModifyRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取询价应用变配记录
+         *
+         * @param request GetResource4ModifyRecordRequest
+         * @return GetResource4ModifyRecordResponse
+         */
+        public GetResource4ModifyRecordResponse GetResource4ModifyRecord(GetResource4ModifyRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetResource4ModifyRecordWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取询价应用变配记录
+         *
+         * @param request GetResource4ModifyRecordRequest
+         * @return GetResource4ModifyRecordResponse
+         */
+        public async Task<GetResource4ModifyRecordResponse> GetResource4ModifyRecordAsync(GetResource4ModifyRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetResource4ModifyRecordWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 获取询价结果
+         *
+         * @param request GetResult4QueryInstancePrice4ModifyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetResult4QueryInstancePrice4ModifyResponse
+         */
+        public GetResult4QueryInstancePrice4ModifyResponse GetResult4QueryInstancePrice4ModifyWithOptions(GetResult4QueryInstancePrice4ModifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResult4QueryInstancePrice4Modify",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResult4QueryInstancePrice4ModifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取询价结果
+         *
+         * @param request GetResult4QueryInstancePrice4ModifyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetResult4QueryInstancePrice4ModifyResponse
+         */
+        public async Task<GetResult4QueryInstancePrice4ModifyResponse> GetResult4QueryInstancePrice4ModifyWithOptionsAsync(GetResult4QueryInstancePrice4ModifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResult4QueryInstancePrice4Modify",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResult4QueryInstancePrice4ModifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取询价结果
+         *
+         * @param request GetResult4QueryInstancePrice4ModifyRequest
+         * @return GetResult4QueryInstancePrice4ModifyResponse
+         */
+        public GetResult4QueryInstancePrice4ModifyResponse GetResult4QueryInstancePrice4Modify(GetResult4QueryInstancePrice4ModifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetResult4QueryInstancePrice4ModifyWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取询价结果
+         *
+         * @param request GetResult4QueryInstancePrice4ModifyRequest
+         * @return GetResult4QueryInstancePrice4ModifyResponse
+         */
+        public async Task<GetResult4QueryInstancePrice4ModifyResponse> GetResult4QueryInstancePrice4ModifyAsync(GetResult4QueryInstancePrice4ModifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetResult4QueryInstancePrice4ModifyWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Get template images and information about architecture diagrams.
          *
          * @param request GetTemplateRequest
@@ -2459,6 +2667,366 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 提交应用变配
+         *
+         * @param tmpReq ModifyApplicationSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyApplicationSpecResponse
+         */
+        public ModifyApplicationSpecResponse ModifyApplicationSpecWithOptions(ModifyApplicationSpecRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyApplicationSpecShrinkRequest request = new ModifyApplicationSpecShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceSpec))
+            {
+                request.InstanceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceSpec, "InstanceSpec", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSpecShrink))
+            {
+                body["InstanceSpec"] = request.InstanceSpecShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApplicationSpec",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApplicationSpecResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交应用变配
+         *
+         * @param tmpReq ModifyApplicationSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyApplicationSpecResponse
+         */
+        public async Task<ModifyApplicationSpecResponse> ModifyApplicationSpecWithOptionsAsync(ModifyApplicationSpecRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyApplicationSpecShrinkRequest request = new ModifyApplicationSpecShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceSpec))
+            {
+                request.InstanceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceSpec, "InstanceSpec", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSpecShrink))
+            {
+                body["InstanceSpec"] = request.InstanceSpecShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApplicationSpec",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApplicationSpecResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交应用变配
+         *
+         * @param request ModifyApplicationSpecRequest
+         * @return ModifyApplicationSpecResponse
+         */
+        public ModifyApplicationSpecResponse ModifyApplicationSpec(ModifyApplicationSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApplicationSpecWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 提交应用变配
+         *
+         * @param request ModifyApplicationSpecRequest
+         * @return ModifyApplicationSpecResponse
+         */
+        public async Task<ModifyApplicationSpecResponse> ModifyApplicationSpecAsync(ModifyApplicationSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApplicationSpecWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询变配价格
+         *
+         * @param tmpReq QueryInstancePrice4ModifyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryInstancePrice4ModifyResponse
+         */
+        public QueryInstancePrice4ModifyResponse QueryInstancePrice4ModifyWithOptions(QueryInstancePrice4ModifyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryInstancePrice4ModifyShrinkRequest request = new QueryInstancePrice4ModifyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Configuration))
+            {
+                request.ConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Configuration, "Configuration", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationShrink))
+            {
+                body["Configuration"] = request.ConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryInstancePrice4Modify",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryInstancePrice4ModifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询变配价格
+         *
+         * @param tmpReq QueryInstancePrice4ModifyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryInstancePrice4ModifyResponse
+         */
+        public async Task<QueryInstancePrice4ModifyResponse> QueryInstancePrice4ModifyWithOptionsAsync(QueryInstancePrice4ModifyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryInstancePrice4ModifyShrinkRequest request = new QueryInstancePrice4ModifyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Configuration))
+            {
+                request.ConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Configuration, "Configuration", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationShrink))
+            {
+                body["Configuration"] = request.ConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryInstancePrice4Modify",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryInstancePrice4ModifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询变配价格
+         *
+         * @param request QueryInstancePrice4ModifyRequest
+         * @return QueryInstancePrice4ModifyResponse
+         */
+        public QueryInstancePrice4ModifyResponse QueryInstancePrice4Modify(QueryInstancePrice4ModifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryInstancePrice4ModifyWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询变配价格
+         *
+         * @param request QueryInstancePrice4ModifyRequest
+         * @return QueryInstancePrice4ModifyResponse
+         */
+        public async Task<QueryInstancePrice4ModifyResponse> QueryInstancePrice4ModifyAsync(QueryInstancePrice4ModifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryInstancePrice4ModifyWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询变配规格列表
+         *
+         * @param tmpReq QueryInstanceSpec4ModifyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryInstanceSpec4ModifyResponse
+         */
+        public QueryInstanceSpec4ModifyResponse QueryInstanceSpec4ModifyWithOptions(QueryInstanceSpec4ModifyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryInstanceSpec4ModifyShrinkRequest request = new QueryInstanceSpec4ModifyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
+            {
+                request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MethodName))
+            {
+                body["MethodName"] = request.MethodName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParametersShrink))
+            {
+                body["Parameters"] = request.ParametersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryInstanceSpec4Modify",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryInstanceSpec4ModifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询变配规格列表
+         *
+         * @param tmpReq QueryInstanceSpec4ModifyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryInstanceSpec4ModifyResponse
+         */
+        public async Task<QueryInstanceSpec4ModifyResponse> QueryInstanceSpec4ModifyWithOptionsAsync(QueryInstanceSpec4ModifyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryInstanceSpec4ModifyShrinkRequest request = new QueryInstanceSpec4ModifyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
+            {
+                request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MethodName))
+            {
+                body["MethodName"] = request.MethodName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParametersShrink))
+            {
+                body["Parameters"] = request.ParametersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryInstanceSpec4Modify",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryInstanceSpec4ModifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询变配规格列表
+         *
+         * @param request QueryInstanceSpec4ModifyRequest
+         * @return QueryInstanceSpec4ModifyResponse
+         */
+        public QueryInstanceSpec4ModifyResponse QueryInstanceSpec4Modify(QueryInstanceSpec4ModifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryInstanceSpec4ModifyWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询变配规格列表
+         *
+         * @param request QueryInstanceSpec4ModifyRequest
+         * @return QueryInstanceSpec4ModifyResponse
+         */
+        public async Task<QueryInstanceSpec4ModifyResponse> QueryInstanceSpec4ModifyAsync(QueryInstanceSpec4ModifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryInstanceSpec4ModifyWithOptionsAsync(request, runtime);
         }
 
         /**
