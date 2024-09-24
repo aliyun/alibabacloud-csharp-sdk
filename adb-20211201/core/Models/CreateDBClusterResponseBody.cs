@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateDBClusterResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>amv-bp1r053byu48p****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The order ID.
+        /// <para>The order ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>202353278****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The default resource group ID.
+        /// <para>The default resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-4690g37929****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,48 +10,58 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListSparkAppsResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListSparkAppsResponseBodyData Data { get; set; }
         public class ListSparkAppsResponseBodyData : TeaModel {
             /// <summary>
-            /// Details of the applications. Fields in the response parameter:
-            /// 
-            /// - **Data**: the data of the Spark application template.
-            /// - **EstimateExecutionCpuTimeInSeconds**: the amount of time it takes to consume CPU resources for running the Spark application. Unit: milliseconds.
-            /// - **LogRootPath**: the storage path of log files.
-            /// - **LastAttemptId**: the most recent attempt ID.
-            /// - **WebUiAddress**: the web UI URL.
-            /// - **SubmittedTimeInMillis**: the time when the Spark application was submitted. The time is displayed in the UNIX timestamp format. Unit: milliseconds.
-            /// - **StartedTimeInMillis**: the time when the Spark application was created. The time is displayed in the UNIX timestamp format. Unit: milliseconds.
-            /// - **LastUpdatedTimeInMillis**: the time when the Spark application was last updated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.
-            /// - **TerminatedTimeInMillis**: the time when the Spark application task was terminated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.
-            /// - **DBClusterId**: the ID of the cluster on which the Spark application runs.
-            /// - **ResourceGroupName**: the name of the job resource group.
-            /// - **DurationInMillis**: the amount of time it takes to run the Spark application. Unit: milliseconds.
+            /// <para>Details of the applications. Fields in the response parameter:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Data</b>: the data of the Spark application template.</description></item>
+            /// <item><description><b>EstimateExecutionCpuTimeInSeconds</b>: the amount of time it takes to consume CPU resources for running the Spark application. Unit: milliseconds.</description></item>
+            /// <item><description><b>LogRootPath</b>: the storage path of log files.</description></item>
+            /// <item><description><b>LastAttemptId</b>: the most recent attempt ID.</description></item>
+            /// <item><description><b>WebUiAddress</b>: the web UI URL.</description></item>
+            /// <item><description><b>SubmittedTimeInMillis</b>: the time when the Spark application was submitted. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</description></item>
+            /// <item><description><b>StartedTimeInMillis</b>: the time when the Spark application was created. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</description></item>
+            /// <item><description><b>LastUpdatedTimeInMillis</b>: the time when the Spark application was last updated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</description></item>
+            /// <item><description><b>TerminatedTimeInMillis</b>: the time when the Spark application task was terminated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</description></item>
+            /// <item><description><b>DBClusterId</b>: the ID of the cluster on which the Spark application runs.</description></item>
+            /// <item><description><b>ResourceGroupName</b>: the name of the job resource group.</description></item>
+            /// <item><description><b>DurationInMillis</b>: the amount of time it takes to run the Spark application. Unit: milliseconds.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AppInfoList")]
             [Validation(Required=false)]
             public List<SparkAppInfo> AppInfoList { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -60,28 +70,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D65A809F-34CE-4550-9BC1-0ED21ETG380</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

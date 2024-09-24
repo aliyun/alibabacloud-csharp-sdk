@@ -10,144 +10,195 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeClusterResourceDetailResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The information about the cluster resource usage.
+        /// <para>The queried resource usage.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeClusterResourceDetailResponseBodyData Data { get; set; }
         public class DescribeClusterResourceDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// The amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs). Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+            /// <para>The amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs). Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16ACU</para>
             /// </summary>
             [NameInMap("ComputeResource")]
             [Validation(Required=false)]
             public string ComputeResource { get; set; }
 
             /// <summary>
-            /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+            /// <para>The cluster ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>amv-adbxxxxx</para>
             /// </summary>
             [NameInMap("DBClusterId")]
             [Validation(Required=false)]
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// The amount of idle reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+            /// <para>The amount of idle reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0ACU</para>
             /// </summary>
             [NameInMap("FreeComputeResource")]
             [Validation(Required=false)]
             public string FreeComputeResource { get; set; }
 
             /// <summary>
-            /// The resource groups.
+            /// <para>The resource groups.</para>
             /// </summary>
             [NameInMap("ResourceGroupList")]
             [Validation(Required=false)]
             public List<DescribeClusterResourceDetailResponseBodyDataResourceGroupList> ResourceGroupList { get; set; }
             public class DescribeClusterResourceDetailResponseBodyDataResourceGroupList : TeaModel {
                 /// <summary>
-                /// A reserved parameter.
+                /// <para>A reserved parameter.</para>
+                /// <para>This parameter is required.</para>
                 /// 
-                /// This parameter is required.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ClusterMode")]
                 [Validation(Required=false)]
                 public string ClusterMode { get; set; }
 
                 /// <summary>
-                /// A reserved parameter.
+                /// <para>A reserved parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ClusterSizeResource")]
                 [Validation(Required=false)]
                 public string ClusterSizeResource { get; set; }
 
                 /// <summary>
-                /// Indicates whether the preemptible instance feature is enabled for the resource group. After the preemptible instance feature is enabled, you are charged for resources at a lower unit price but the resources are probably released. Valid values:
+                /// <para>Indicates whether the preemptible instance feature is enabled for the resource group. After the preemptible instance feature is enabled, you are charged for resources at a lower unit price but the resources are probably released. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
+                /// <para>The True value is returned only for job resource groups.</para>
                 /// 
-                /// *   **true**
-                /// *   **false**
-                /// 
-                /// The True value is returned only for job resource groups.
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("EnableSpot")]
                 [Validation(Required=false)]
                 public bool? EnableSpot { get; set; }
 
                 /// <summary>
-                /// A reserved parameter.
+                /// <para>A reserved parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("MaxClusterCount")]
                 [Validation(Required=false)]
                 public int? MaxClusterCount { get; set; }
 
                 /// <summary>
-                /// The maximum amount of reserved computing resources. Unit: ACUs.
+                /// <para>The maximum amount of reserved computing resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>128ACU</para>
                 /// </summary>
                 [NameInMap("MaxComputeResource")]
                 [Validation(Required=false)]
                 public string MaxComputeResource { get; set; }
 
                 /// <summary>
-                /// A reserved parameter.
+                /// <para>A reserved parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("MinClusterCount")]
                 [Validation(Required=false)]
                 public int? MinClusterCount { get; set; }
 
                 /// <summary>
-                /// The minimum amount of reserved computing resources. Unit: ACUs.
+                /// <para>The minimum amount of reserved computing resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>16ACU</para>
                 /// </summary>
                 [NameInMap("MinComputeResource")]
                 [Validation(Required=false)]
                 public string MinComputeResource { get; set; }
 
                 /// <summary>
-                /// The resource group ID.
+                /// <para>The resource group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>17</para>
                 /// </summary>
                 [NameInMap("PoolId")]
                 [Validation(Required=false)]
                 public long? PoolId { get; set; }
 
                 /// <summary>
-                /// The name of the resource group.
+                /// <para>The name of the resource group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testadb</para>
                 /// </summary>
                 [NameInMap("PoolName")]
                 [Validation(Required=false)]
                 public string PoolName { get; set; }
 
                 /// <summary>
-                /// The type of the resource group.
+                /// <para>The type of the resource group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>interactive</para>
                 /// </summary>
                 [NameInMap("PoolType")]
                 [Validation(Required=false)]
                 public string PoolType { get; set; }
 
                 /// <summary>
-                /// The user of the resource group.
+                /// <para>The user of the resource group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>user1</para>
                 /// </summary>
                 [NameInMap("PoolUsers")]
                 [Validation(Required=false)]
                 public string PoolUsers { get; set; }
 
                 /// <summary>
-                /// A reserved parameter.
+                /// <para>A reserved parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("RunningClusterCount")]
                 [Validation(Required=false)]
                 public int? RunningClusterCount { get; set; }
 
                 /// <summary>
-                /// The status of the resource group. Valid values:
+                /// <para>The status of the resource group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>running</b></description></item>
+                /// <item><description><b>deleting</b></description></item>
+                /// <item><description><b>scaling</b></description></item>
+                /// </list>
                 /// 
-                /// *   **running**
-                /// *   **deleting**
-                /// *   **scaling**
+                /// <b>Example:</b>
+                /// <para>running</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -156,7 +207,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// The amount of reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+            /// <para>The amount of reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>24ACU</para>
             /// </summary>
             [NameInMap("StorageResource")]
             [Validation(Required=false)]
@@ -165,7 +219,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListSparkTemplateFileIdsResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of Spark template files.
+        /// <para>The IDs of Spark template files.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<long?> Data { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,38 +10,50 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListSparkAppAttemptsRequest : TeaModel {
         /// <summary>
-        /// The ID of the Spark application.
+        /// <para>The ID of the Spark application.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [ListSparkApps](https://help.aliyun.com/document_detail/455888.html) operation to query all application IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>s202204132018hzprec1ac****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>amv-uf6o6m8p6x***</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The page number. The value must be an integer that is greater than 0. Default value: **1**.
+        /// <para>The page number. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values:
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>10</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
         /// 
-        /// *   **10** (default)
-        /// *   **50**
-        /// *   **100**
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

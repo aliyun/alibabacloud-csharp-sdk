@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class SubmitSparkLogAnalyzeTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the Spark application.
+        /// <para>The ID of the Spark application.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>s202301121553hzd9c6f7xxxx</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

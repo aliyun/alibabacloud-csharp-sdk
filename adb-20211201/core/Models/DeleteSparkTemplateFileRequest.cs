@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DeleteSparkTemplateFileRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-bp1y769u11748****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the template file to be deleted.
+        /// <para>The ID of the template file to be deleted.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/456205.html">GetSparkTemplateFullTree</a> operation to query all template file IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [GetSparkTemplateFullTree](https://help.aliyun.com/document_detail/456205.html) operation to query all template file IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>284</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

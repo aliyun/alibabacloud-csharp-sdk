@@ -10,103 +10,139 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSQLPatternsRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region, including cluster IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/129857.html) operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region, including cluster IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-8vb8de93v9b****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time.</para>
+        /// </remarks>
         /// 
-        /// > The end time must be later than the start time.
+        /// <b>Example:</b>
+        /// <para>2022-09-07T03:06:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The keyword that is used for the query.
+        /// <para>The keyword that is used for the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SELECT</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The language. Valid values:
+        /// <para>The language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): simplified Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>ja</b>: Japanese.</description></item>
+        /// <item><description><b>zh-tw</b>: traditional Chinese.</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): simplified Chinese.
-        /// *   **en**: English.
-        /// *   **ja**: Japanese.
-        /// *   **zh-tw**: traditional Chinese.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The order by which to sort query results. Specify the parameter value in the JSON format. Example: `[{"Field":"AverageQueryTime","Type":"Asc"}]`.
+        /// <para>The order by which to sort query results. Specify the parameter value in the JSON format. Example: <c>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>.</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>Field</c> specifies the field by which to sort the query results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>PatternCreationTime</c>: the earliest commit time of the SQL pattern within the time range to query.</description></item>
+        /// <item><description><c>AverageQueryTime</c>: the average total amount of time consumed by the SQL pattern within the time range to query.</description></item>
+        /// <item><description><c>MaxQueryTime</c>: the maximum total amount of time consumed by the SQL pattern within the time range to query.</description></item>
+        /// <item><description><c>AverageExecutionTime</c>: the average execution duration of the SQL pattern within the time range to query.</description></item>
+        /// <item><description><c>MaxExecutionTime</c>: the maximum execution duration of the SQL pattern within the time range to query.</description></item>
+        /// <item><description><c>AveragePeakMemory</c>: the average peak memory usage of the SQL pattern within the time range to query.</description></item>
+        /// <item><description><c>MaxPeakMemory</c>: the maximum peak memory usage of the SQL pattern within the time range to query.</description></item>
+        /// <item><description><c>AverageScanSize</c>: the average amount of data scanned based on the SQL pattern within the time range to query.</description></item>
+        /// <item><description><c>MaxScanSize</c>: the maximum amount of data scanned based on the SQL pattern within the time range to query.</description></item>
+        /// <item><description><c>QueryCount</c>: the number of queries performed in association with the SQL pattern within the time range to query.</description></item>
+        /// <item><description><c>FailedCount</c>: the number of failed queries performed in association with the SQL pattern within the time range to query.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><c>Type</c> specifies the sorting order. Valid values (case-insensitive):</para>
+        /// <list type="bullet">
+        /// <item><description><c>Asc</c>: ascending order.</description></item>
+        /// <item><description><c>Desc</c>: descending order.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   `Field` specifies the field by which to sort the query results. Valid values:
-        /// 
-        ///     *   `PatternCreationTime`: the earliest commit time of the SQL pattern within the time range to query.
-        ///     *   `AverageQueryTime`: the average total amount of time consumed by the SQL pattern within the time range to query.
-        ///     *   `MaxQueryTime`: the maximum total amount of time consumed by the SQL pattern within the time range to query.
-        ///     *   `AverageExecutionTime`: the average execution duration of the SQL pattern within the time range to query.
-        ///     *   `MaxExecutionTime`: the maximum execution duration of the SQL pattern within the time range to query.
-        ///     *   `AveragePeakMemory`: the average peak memory usage of the SQL pattern within the time range to query.
-        ///     *   `MaxPeakMemory`: the maximum peak memory usage of the SQL pattern within the time range to query.
-        ///     *   `AverageScanSize`: the average amount of data scanned based on the SQL pattern within the time range to query.
-        ///     *   `MaxScanSize`: the maximum amount of data scanned based on the SQL pattern within the time range to query.
-        ///     *   `QueryCount`: the number of queries performed in association with the SQL pattern within the time range to query.
-        ///     *   `FailedCount`: the number of failed queries performed in association with the SQL pattern within the time range to query.
-        /// 
-        /// *   `Type` specifies the sorting order. Valid values (case-insensitive):
-        /// 
-        ///     *   `Asc`: ascending order.
-        ///     *   `Desc`: descending order.
+        /// <b>Example:</b>
+        /// <para>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page 1. Default value: 1.
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values:
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>10</b> (default)</description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
         /// 
-        /// *   **10** (default)
-        /// *   **30**
-        /// *   **50**
-        /// *   **100**
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// <para>The region ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Only data within the last 14 days can be queried.</description></item>
+        /// <item><description>The maximum time range that can be specified is 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > *   Only data within the last 14 days can be queried.
-        /// > * The maximum time range that can be specified is 24 hours.
+        /// <b>Example:</b>
+        /// <para>2022-09-06T03:06:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

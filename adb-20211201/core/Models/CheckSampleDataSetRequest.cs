@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CheckSampleDataSetRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-wz9r8f67h4cqz41u</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

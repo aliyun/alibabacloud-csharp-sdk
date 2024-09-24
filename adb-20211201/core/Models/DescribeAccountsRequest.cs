@@ -10,28 +10,38 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAccountsRequest : TeaModel {
         /// <summary>
-        /// The name of the database account.
+        /// <para>The name of the database account.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the information about all database accounts in the cluster is returned.</para>
+        /// </remarks>
         /// 
-        /// > If you do not specify this parameter, the information about all database accounts in the cluster is returned.
+        /// <b>Example:</b>
+        /// <para>test_accout</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-bp11q28kvl688****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The database engine of the cluster. Valid values:
+        /// <para>The database engine of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine.</description></item>
+        /// <item><description><b>Clickhouse</b>: the wide table engine.</description></item>
+        /// </list>
         /// 
-        /// *   **AnalyticDB** (default): the AnalyticDB for MySQL engine.
-        /// *   **Clickhouse**: the wide table engine.
+        /// <b>Example:</b>
+        /// <para>Clickhouse</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]

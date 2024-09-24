@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeTablesResponseBody : TeaModel {
         /// <summary>
-        /// The queried tables.
+        /// <para>The queried tables.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<DescribeTablesResponseBodyItemsTable> Table { get; set; }
             public class DescribeTablesResponseBodyItemsTable : TeaModel {
                 /// <summary>
-                /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+                /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>amv-bp1xxxxxxxx47</para>
                 /// </summary>
                 [NameInMap("DBClusterId")]
                 [Validation(Required=false)]
                 public string DBClusterId { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>adb_demo</para>
                 /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
                 /// <summary>
-                /// The name of the table.
+                /// <para>The name of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
@@ -46,7 +55,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

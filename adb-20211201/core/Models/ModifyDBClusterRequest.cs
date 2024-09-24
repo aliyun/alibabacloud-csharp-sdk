@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyDBClusterRequest : TeaModel {
         /// <summary>
-        /// The reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is approximately equal to 1 core and 4 GB memory.
+        /// <para>The reserved computing resources. Valid values: 0ACU to 4096ACU. The value must be in increments of 16ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</para>
+        /// <remarks>
+        /// <para> This parameter must be specified with a unit.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter must be specified with a unit.
+        /// <b>Example:</b>
+        /// <para>16ACU</para>
         /// </summary>
         [NameInMap("ComputeResource")]
         [Validation(Required=false)]
         public string ComputeResource { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/454250.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-bp1r053byu48p****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:
+        /// <para>Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true (default)</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true (default)
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableDefaultResourcePool")]
         [Validation(Required=false)]
@@ -48,9 +59,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// <b>Example:</b>
+        /// <para>LegacyForm</para>
+        /// </summary>
+        [NameInMap("ProductForm")]
+        [Validation(Required=false)]
+        public string ProductForm { get; set; }
+
+        /// <summary>
+        /// <para>The region ID of the cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/454314.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -69,9 +92,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is approximately equal to 1 core and 4 GB memory.
+        /// <para>The reserved storage resources. Valid values: 0ACU to 2064ACU. The value must be in increments of 24ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</para>
+        /// <remarks>
+        /// <para> This parameter must be specified with a unit.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter must be specified with a unit.
+        /// <b>Example:</b>
+        /// <para>24ACU</para>
         /// </summary>
         [NameInMap("StorageResource")]
         [Validation(Required=false)]

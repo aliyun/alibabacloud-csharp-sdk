@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateDBResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A94B6C02-7BD4-5D67-9776-3AC8317E8DD5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

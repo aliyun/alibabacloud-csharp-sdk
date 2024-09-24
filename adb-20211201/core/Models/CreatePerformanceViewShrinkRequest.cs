@@ -9,26 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreatePerformanceViewShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Basic</para>
+        /// </summary>
         [NameInMap("CreateFromViewType")]
         [Validation(Required=false)]
         public string CreateFromViewType { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/612397.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-bp1ub9grke1****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:
+        /// <para>Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("FillOriginViewKeys")]
         [Validation(Required=false)]
@@ -43,11 +54,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -62,16 +76,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The information about the monitoring view.
-        /// 
-        /// This parameter is required.
+        /// <para>The information about the monitoring view.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ViewDetail")]
         [Validation(Required=false)]
         public string ViewDetailShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ViewName")]
         [Validation(Required=false)]

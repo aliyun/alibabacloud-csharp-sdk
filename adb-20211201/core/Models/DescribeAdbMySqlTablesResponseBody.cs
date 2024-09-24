@@ -10,41 +10,55 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAdbMySqlTablesResponseBody : TeaModel {
         /// <summary>
-        /// The message returned for the operation. Valid values:
+        /// <para>The message returned for the operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Success</b> is returned if the operation is successful.</description></item>
+        /// <item><description>An error message is returned if the operation fails.</description></item>
+        /// </list>
         /// 
-        /// *   **Success** is returned if the operation is successful.
-        /// *   An error message is returned if the operation fails.
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7A7D49E3-5585-5DF8-B62C-75C46B4991DC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>adb_demo</para>
         /// </summary>
         [NameInMap("Schema")]
         [Validation(Required=false)]
         public string Schema { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation is successful. Valid values:
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The operation is successful.</description></item>
+        /// <item><description><b>false</b>: The operation fails.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The operation is successful.
-        /// *   **false**: The operation fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The names of tables.
+        /// <para>The names of tables.</para>
         /// </summary>
         [NameInMap("Tables")]
         [Validation(Required=false)]

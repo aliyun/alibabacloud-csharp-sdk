@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyClusterConnectionStringResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>370D09FD-442A-5225-AAD3-7362CAE39177</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

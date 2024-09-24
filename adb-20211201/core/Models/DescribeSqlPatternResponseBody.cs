@@ -10,123 +10,173 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSqlPatternResponseBody : TeaModel {
         /// <summary>
-        /// The queried SQL pattern.
+        /// <para>The queried SQL pattern.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeSqlPatternResponseBodyItems> Items { get; set; }
         public class DescribeSqlPatternResponseBodyItems : TeaModel {
             /// <summary>
-            /// The IP address of the client.
+            /// <para>The IP address of the client.</para>
+            /// <remarks>
+            /// <para> This parameter is returned only when <b>Type</b> is set to <b>accessip</b>.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is returned only when **Type** is set to **accessip**.
+            /// <b>Example:</b>
+            /// <para>100.104.xx.xx</para>
             /// </summary>
             [NameInMap("AccessIP")]
             [Validation(Required=false)]
             public string AccessIP { get; set; }
 
             /// <summary>
-            /// The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.
+            /// <para>The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0625</para>
             /// </summary>
             [NameInMap("AvgCpuTime")]
             [Validation(Required=false)]
             public string AvgCpuTime { get; set; }
 
             /// <summary>
-            /// The average peak memory usage of the SQL pattern within the query time range. Unit: KB.
+            /// <para>The average peak memory usage of the SQL pattern within the query time range. Unit: KB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>240048</para>
             /// </summary>
             [NameInMap("AvgPeakMemory")]
             [Validation(Required=false)]
             public string AvgPeakMemory { get; set; }
 
             /// <summary>
-            /// The average amount of data scanned based on the SQL pattern within the query time range. Unit: KB.
+            /// <para>The average amount of data scanned based on the SQL pattern within the query time range. Unit: KB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>244</para>
             /// </summary>
             [NameInMap("AvgScanSize")]
             [Validation(Required=false)]
             public string AvgScanSize { get; set; }
 
             /// <summary>
-            /// The average number of scanned rows.
+            /// <para>The average number of scanned rows.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("AvgStageCount")]
             [Validation(Required=false)]
             public string AvgStageCount { get; set; }
 
             /// <summary>
-            /// The average number of tasks.
+            /// <para>The average number of tasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("AvgTaskCount")]
             [Validation(Required=false)]
             public string AvgTaskCount { get; set; }
 
             /// <summary>
-            /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+            /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>amv-bp1ej1nq9n6****</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.
+            /// <para>The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>17</para>
             /// </summary>
             [NameInMap("MaxCpuTime")]
             [Validation(Required=false)]
             public string MaxCpuTime { get; set; }
 
             /// <summary>
-            /// The maximum peak memory usage of the SQL pattern within the query time range. Unit: KB.
+            /// <para>The maximum peak memory usage of the SQL pattern within the query time range. Unit: KB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>480096</para>
             /// </summary>
             [NameInMap("MaxPeakMemory")]
             [Validation(Required=false)]
             public string MaxPeakMemory { get; set; }
 
             /// <summary>
-            /// The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: KB.
+            /// <para>The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: KB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1024</para>
             /// </summary>
             [NameInMap("MaxScanSize")]
             [Validation(Required=false)]
             public string MaxScanSize { get; set; }
 
             /// <summary>
-            /// The maximum number of stages.
+            /// <para>The maximum number of stages.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("MaxStageCount")]
             [Validation(Required=false)]
             public string MaxStageCount { get; set; }
 
             /// <summary>
-            /// The maximum number of tasks.
+            /// <para>The maximum number of tasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("MaxTaskCount")]
             [Validation(Required=false)]
             public string MaxTaskCount { get; set; }
 
             /// <summary>
-            /// The SQL pattern.
+            /// <para>The SQL pattern.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SELECT table_name, table_schema AS schema_name, create_time, create_time AS last_ddl_time, table_comment AS description , ceil((data_length + index_length) / ? / ?) AS store_capacity , data_length AS data_bytes, index_length AS index_bytes, table_collation AS collation, auto_increment, table_rows AS num_rows , engine FROM information_schema.tables WHERE table_type != ? AND table_schema = ? AND table_name IN (?) ORDER BY 1</para>
             /// </summary>
             [NameInMap("Pattern")]
             [Validation(Required=false)]
             public string Pattern { get; set; }
 
             /// <summary>
-            /// The number of queries performed in association with the SQL pattern within the query time range.
+            /// <para>The number of queries performed in association with the SQL pattern within the query time range.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16</para>
             /// </summary>
             [NameInMap("QueryCount")]
             [Validation(Required=false)]
             public string QueryCount { get; set; }
 
             /// <summary>
-            /// The start date of the query.
+            /// <para>The start date of the query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-08-30</para>
             /// </summary>
             [NameInMap("ReportDate")]
             [Validation(Required=false)]
             public string ReportDate { get; set; }
 
             /// <summary>
-            /// The username.
+            /// <para>The username.</para>
+            /// <remarks>
+            /// <para> This parameter is returned only when <b>Type</b> is left empty or set to <b>user</b>.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is returned only when **Type** is left empty or set to **user**.
+            /// <b>Example:</b>
+            /// <para>test_acc</para>
             /// </summary>
             [NameInMap("User")]
             [Validation(Required=false)]
@@ -135,28 +185,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DB1F6C23-CBCA-5260-9366-BA7BB5EBF6F1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

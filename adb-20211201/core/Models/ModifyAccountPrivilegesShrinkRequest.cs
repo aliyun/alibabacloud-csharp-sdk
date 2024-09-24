@@ -10,36 +10,41 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyAccountPrivilegesShrinkRequest : TeaModel {
         /// <summary>
-        /// The name of the database account.
+        /// <para>The name of the database account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>account1</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The permissions that you want to grant to the database account.
-        /// 
-        /// This parameter is required.
+        /// <para>The permissions that you want to grant to the database account.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AccountPrivileges")]
         [Validation(Required=false)]
         public string AccountPrivilegesShrink { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-bp1k5p066e1a****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

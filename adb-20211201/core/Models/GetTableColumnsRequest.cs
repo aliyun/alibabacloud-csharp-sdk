@@ -10,57 +10,77 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetTableColumnsRequest : TeaModel {
         /// <summary>
-        /// The name of the column.
+        /// <para>The name of the column.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>assist_user_phone</para>
         /// </summary>
         [NameInMap("ColumnName")]
         [Validation(Required=false)]
         public string ColumnName { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-bp11q28kvl688****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page 1. Default value: **1**.
+        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values:
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
         /// 
-        /// *   **30** (default)
-        /// *   **50**
-        /// *   **100**
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// <para>The region ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>adb_demo</para>
         /// </summary>
         [NameInMap("SchemaName")]
         [Validation(Required=false)]
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// The name of the table.
+        /// <para>The name of the table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

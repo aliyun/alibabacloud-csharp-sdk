@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeUserQuotaResponseBody : TeaModel {
         /// <summary>
-        /// The available elastic AnalyticDB compute units (ACUs).
+        /// <para>The available elastic AnalyticDB compute units (ACUs).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>512ACU</para>
         /// </summary>
         [NameInMap("ElasticACU")]
         [Validation(Required=false)]
         public string ElasticACU { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0322C7FB-4584-5D2A-BF7F-F9036E940C35</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The available reserved computing resources.
+        /// <para>The available reserved computing resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>48ACU</para>
         /// </summary>
         [NameInMap("ReserverdCompteACU")]
         [Validation(Required=false)]
         public string ReserverdCompteACU { get; set; }
 
         /// <summary>
-        /// The available reserved storage resources.
+        /// <para>The available reserved storage resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>24ACU</para>
         /// </summary>
         [NameInMap("ReserverdStorageACU")]
         [Validation(Required=false)]
         public string ReserverdStorageACU { get; set; }
 
         /// <summary>
-        /// The number of available resource groups.
+        /// <para>The number of available resource groups.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("ResourceGroupCount")]
         [Validation(Required=false)]

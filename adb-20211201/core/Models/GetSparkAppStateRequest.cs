@@ -10,20 +10,27 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkAppStateRequest : TeaModel {
         /// <summary>
-        /// The Spark application ID.
+        /// <para>The Spark application ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query Spark application IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [ListSparkApps](https://help.aliyun.com/document_detail/455888.html) operation to query Spark application IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>s202204191546hzpread6a896000****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/612397.html) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
+        /// <b>Example:</b>
+        /// <para>amv-bp1h405854m****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

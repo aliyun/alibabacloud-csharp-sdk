@@ -10,115 +10,156 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeElasticPlanJobsResponseBody : TeaModel {
         /// <summary>
-        /// The queried scaling plan jobs.
+        /// <para>The queried scaling plan jobs.</para>
         /// </summary>
         [NameInMap("Jobs")]
         [Validation(Required=false)]
         public List<DescribeElasticPlanJobsResponseBodyJobs> Jobs { get; set; }
         public class DescribeElasticPlanJobsResponseBodyJobs : TeaModel {
             /// <summary>
-            /// The amount of elastic resources.
+            /// <para>The amount of elastic resources.</para>
+            /// <remarks>
+            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description>If Type is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.</description></item>
+            /// <item><description>If Type is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.</description></item>
+            /// </list>
             /// 
-            /// > 
-            /// 
-            /// *   If Type is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.
-            /// *   If Type is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.
+            /// <b>Example:</b>
+            /// <para>16ACU</para>
             /// </summary>
             [NameInMap("ElasticAcu")]
             [Validation(Required=false)]
             public string ElasticAcu { get; set; }
 
             /// <summary>
-            /// The name of the scaling plan.
+            /// <para>The name of the scaling plan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("ElasticPlanName")]
             [Validation(Required=false)]
             public string ElasticPlanName { get; set; }
 
             /// <summary>
-            /// The end time of the scaling plan job.
+            /// <para>The end time of the scaling plan job.</para>
+            /// <remarks>
+            /// <para> The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// </remarks>
             /// 
-            /// >  The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+            /// <b>Example:</b>
+            /// <para>2022-01-01T12:01:00Z</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
             /// <summary>
-            /// The number of compute nodes or storage replica sets.
+            /// <para>The number of compute nodes or storage replica sets.</para>
+            /// <remarks>
+            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description>If Type is set to EXECUTOR, InstanceSize indicates the number of compute nodes in the cluster.</description></item>
+            /// <item><description>If Type is set to EXECUTOR, InstanceSize indicates the number of storage replica sets in the cluster.</description></item>
+            /// </list>
             /// 
-            /// > 
-            /// 
-            /// *   If Type is set to EXECUTOR, InstanceSize indicates the number of compute nodes in the cluster.
-            /// *   If Type is set to EXECUTOR, InstanceSize indicates the number of storage replica sets in the cluster.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("InstanceSize")]
             [Validation(Required=false)]
             public int? InstanceSize { get; set; }
 
             /// <summary>
-            /// The amount of reserved resources.
+            /// <para>The amount of reserved resources.</para>
+            /// <remarks>
+            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description>If Type is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.</description></item>
+            /// <item><description>If Type is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.</description></item>
+            /// </list>
             /// 
-            /// > 
-            /// 
-            /// *   If Type is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.
-            /// *   If Type is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.
+            /// <b>Example:</b>
+            /// <para>16ACU</para>
             /// </summary>
             [NameInMap("ReserveAcu")]
             [Validation(Required=false)]
             public string ReserveAcu { get; set; }
 
             /// <summary>
-            /// The name of the resource group.
+            /// <para>The name of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("ResourceGroupName")]
             [Validation(Required=false)]
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// The start time of the scaling plan job.
+            /// <para>The start time of the scaling plan job.</para>
+            /// <remarks>
+            /// <para> The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// </remarks>
             /// 
-            /// >  The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+            /// <b>Example:</b>
+            /// <para>2022-01-01T11:01:00Z</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// The state of the scaling plan job. Valid values:
+            /// <para>The state of the scaling plan job. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RUNNING</description></item>
+            /// <item><description>SUCCESSFUL</description></item>
+            /// <item><description>FAILED</description></item>
+            /// </list>
             /// 
-            /// *   RUNNING
-            /// *   SUCCESSFUL
-            /// *   FAILED
+            /// <b>Example:</b>
+            /// <para>SUCCESSFUL</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The desired specifications of elastic resources after scaling.
+            /// <para>The desired specifications of elastic resources after scaling.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>32ACU</para>
             /// </summary>
             [NameInMap("TargetSize")]
             [Validation(Required=false)]
             public string TargetSize { get; set; }
 
             /// <summary>
-            /// The total amount of resources.
+            /// <para>The total amount of resources.</para>
+            /// <remarks>
+            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description>If Type is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.</description></item>
+            /// <item><description>If Type is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.</description></item>
+            /// </list>
             /// 
-            /// > 
-            /// 
-            /// *   If Type is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.
-            /// *   If Type is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.
+            /// <b>Example:</b>
+            /// <para>32ACU</para>
             /// </summary>
             [NameInMap("TotalAcu")]
             [Validation(Required=false)]
             public string TotalAcu { get; set; }
 
             /// <summary>
-            /// The type of the scaling plan job. Valid values:
+            /// <para>The type of the scaling plan job. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>EXECUTOR: the interactive resource group type, which indicates the computing resource type.</description></item>
+            /// <item><description>WORKER: the EIU type.</description></item>
+            /// </list>
             /// 
-            /// *   EXECUTOR: the interactive resource group type, which indicates the computing resource type.
-            /// *   WORKER: the EIU type.
+            /// <b>Example:</b>
+            /// <para>EXECUTOR</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -127,28 +168,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A5C433C2-001F-58E3-99F5-3274C14DF8BD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of scaling plan jobs.
+        /// <para>The total number of scaling plan jobs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

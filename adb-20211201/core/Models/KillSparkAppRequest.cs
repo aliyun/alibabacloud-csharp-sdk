@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class KillSparkAppRequest : TeaModel {
         /// <summary>
-        /// The ID of the Spark application that you want to terminate.
+        /// <para>The ID of the Spark application that you want to terminate.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>s202204132018hzprec1ac****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/454250.html) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
+        /// <b>Example:</b>
+        /// <para>amv-bp1ub9grke1****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

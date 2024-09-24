@@ -10,17 +10,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class RenameSparkTemplateFileResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RenameSparkTemplateFileResponseBodyData Data { get; set; }
         public class RenameSparkTemplateFileResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether the request was successful. Valid values:
+            /// <para>Indicates whether the request was successful. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>True</description></item>
+            /// <item><description>False</description></item>
+            /// </list>
             /// 
-            /// *   True
-            /// *   False
+            /// <b>Example:</b>
+            /// <para>True</para>
             /// </summary>
             [NameInMap("Succeeded")]
             [Validation(Required=false)]
@@ -29,7 +33,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16D332C4-ACEB-526A-9B53-2B708FED594A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkAppMetricsRequest : TeaModel {
         /// <summary>
-        /// The ID of the Spark application.
+        /// <para>The ID of the Spark application.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>s202204221525hzca7d8140000003</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/612397.html) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
+        /// <b>Example:</b>
+        /// <para>amv-bp1ggnu61d77****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

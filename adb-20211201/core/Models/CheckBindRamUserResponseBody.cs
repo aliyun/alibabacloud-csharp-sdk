@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CheckBindRamUserResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2FB9DCA3-DA56-5B43-A9A0-68E3D0E6AA84</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned result of the request. Valid values:
+        /// <para>The returned result of the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: the database account is associated with a RAM user.</description></item>
+        /// <item><description><b>false</b>: the database account is not associated with a RAM user.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: the database account is associated with a RAM user.
-        /// *   **false**: the database account is not associated with a RAM user.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

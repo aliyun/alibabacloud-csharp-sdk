@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClustersResponseBody : TeaModel {
         /// <summary>
-        /// The queried clusters.
+        /// <para>The queried clusters.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -25,85 +25,117 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The billing method of the cluster. Valid values:
+                /// <para>The billing method of the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>ads</b>: pay-as-you-go.</description></item>
+                /// <item><description><b>ads_pre</b>: subscription.</description></item>
+                /// </list>
                 /// 
-                /// *   **ads**: pay-as-you-go.
-                /// *   **ads_pre**: subscription.
+                /// <b>Example:</b>
+                /// <para>ads_pre</para>
                 /// </summary>
                 [NameInMap("CommodityCode")]
                 [Validation(Required=false)]
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The specifications of reserved computing resources. Each ACU is approximately equal to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
+                /// <para>The specifications of reserved computing resources. Each ACU is approximately equal to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>16ACU</para>
                 /// </summary>
                 [NameInMap("ComputeResource")]
                 [Validation(Required=false)]
                 public string ComputeResource { get; set; }
 
                 /// <summary>
-                /// The public endpoint that is used to connect to the cluster.
+                /// <para>The public endpoint that is used to connect to the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>amv-bp163885f8q21****.ads.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// The time when the cluster was created. The time follows the ISO 8601 standard in the *yyyy-mm-ddThh:mm:ssZ* format. The time is displayed in UTC.
+                /// <para>The time when the cluster was created. The time follows the ISO 8601 standard in the <em>yyyy-mm-ddThh:mm:ssZ</em> format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-04-01T09:50:18Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The description of the cluster.
+                /// <para>The description of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>adb_test</para>
                 /// </summary>
                 [NameInMap("DBClusterDescription")]
                 [Validation(Required=false)]
                 public string DBClusterDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+                /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>amv-bp163885f8q21****</para>
                 /// </summary>
                 [NameInMap("DBClusterId")]
                 [Validation(Required=false)]
                 public string DBClusterId { get; set; }
 
                 /// <summary>
-                /// The network type of the cluster. **VPC** is returned.
+                /// <para>The network type of the cluster. <b>VPC</b> is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("DBClusterNetworkType")]
                 [Validation(Required=false)]
                 public string DBClusterNetworkType { get; set; }
 
                 /// <summary>
-                /// The status of the cluster. Valid values:
-                /// 
-                /// *   **Preparing**
-                /// 
+                /// <para>The status of the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Preparing</b></description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                /// *   **Creating**
-                /// *   **Running**
-                /// *   **Deleting**
-                /// 
+                /// <list type="bullet">
+                /// <item><description><b>Creating</b></description></item>
+                /// <item><description><b>Running</b></description></item>
+                /// <item><description><b>Deleting</b></description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                /// *   **Restoring**
-                /// 
+                /// <list type="bullet">
+                /// <item><description><b>Restoring</b></description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                /// *   **ClassChanging**
-                /// *   **NetAddressCreating**
-                /// *   **NetAddressDeleting**
-                /// *   **NetAddressModifying**
+                /// <list type="bullet">
+                /// <item><description><b>ClassChanging</b></description></item>
+                /// <item><description><b>NetAddressCreating</b></description></item>
+                /// <item><description><b>NetAddressDeleting</b></description></item>
+                /// <item><description><b>NetAddressModifying</b></description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Running</para>
                 /// </summary>
                 [NameInMap("DBClusterStatus")]
                 [Validation(Required=false)]
                 public string DBClusterStatus { get; set; }
 
                 /// <summary>
-                /// The type of the cluster. By default, **Common** is returned, which indicates a common cluster.
+                /// <para>The type of the cluster. By default, <b>Common</b> is returned, which indicates a common cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Common</para>
                 /// </summary>
                 [NameInMap("DBClusterType")]
                 [Validation(Required=false)]
@@ -122,7 +154,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? DBNodeStorage { get; set; }
 
                 /// <summary>
-                /// The engine version of the AnalyticDB for MySQL Data Lakehouse Edition cluster. **5.0** is returned.
+                /// <para>The engine version of the AnalyticDB for MySQL Data Lakehouse Edition cluster. <b>5.0</b> is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5.0</para>
                 /// </summary>
                 [NameInMap("DBVersion")]
                 [Validation(Required=false)]
@@ -141,7 +176,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public int? ElasticIOResource { get; set; }
 
                 /// <summary>
-                /// The engine of the cluster. **AnalyticDB** is returned.
+                /// <para>The engine of the cluster. <b>AnalyticDB</b> is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AnalyticDB</para>
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
@@ -152,29 +190,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ExecutorCount { get; set; }
 
                 /// <summary>
-                /// The time when the cluster expires. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
+                /// <para>The time when the cluster expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</para>
+                /// <remarks>
+                /// </remarks>
+                /// <list type="bullet">
+                /// <item><description><para>If the billing method of the cluster is subscription, the actual expiration time is returned.</para>
+                /// </description></item>
+                /// <item><description><para>If the billing method of the cluster is pay-as-you-go, null is returned.</para>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// > 
-                /// 
-                /// *   If the billing method of the cluster is subscription, the actual expiration time is returned.
-                /// 
-                /// *   If the billing method of the cluster is pay-as-you-go, null is returned.
+                /// <b>Example:</b>
+                /// <para>2022-07-01T09:50:18Z</para>
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether the subscription cluster has expired. Valid values:
+                /// <para>Indicates whether the subscription cluster has expired. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
+                /// <remarks>
+                /// </remarks>
+                /// <list type="bullet">
+                /// <item><description><para>If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see <a href="https://help.aliyun.com/document_detail/135246.html">Renewal policy</a>.</para>
+                /// </description></item>
+                /// <item><description><para>This parameter is not returned for pay-as-you-go clusters.</para>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
-                /// 
-                /// > 
-                /// 
-                /// *   If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](https://help.aliyun.com/document_detail/135246.html).
-                /// 
-                /// *   This parameter is not returned for pay-as-you-go clusters.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Expired")]
                 [Validation(Required=false)]
@@ -189,44 +238,62 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string InnerPort { get; set; }
 
                 /// <summary>
-                /// The lock status of the cluster. Valid values:
+                /// <para>The lock status of the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Unlock</b>: The cluster is not locked.</description></item>
+                /// <item><description><b>ManualLock</b>: The cluster is manually locked.</description></item>
+                /// <item><description><b>LockByExpiration</b>: The cluster is automatically locked due to cluster expiration.</description></item>
+                /// </list>
                 /// 
-                /// *   **Unlock**: The cluster is not locked.
-                /// *   **ManualLock**: The cluster is manually locked.
-                /// *   **LockByExpiration**: The cluster is automatically locked due to cluster expiration.
+                /// <b>Example:</b>
+                /// <para>Unlock</para>
                 /// </summary>
                 [NameInMap("LockMode")]
                 [Validation(Required=false)]
                 public string LockMode { get; set; }
 
                 /// <summary>
-                /// The reason why the cluster is locked.
+                /// <para>The reason why the cluster is locked.</para>
+                /// <remarks>
+                /// <para> This parameter is returned only when the cluster was locked. <b>instance_expire</b> is returned.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only when the cluster was locked. **instance_expire** is returned.
+                /// <b>Example:</b>
+                /// <para>instance_expire</para>
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// The mode of the cluster. By default, **flexible** is returned, which indicates that the cluster is in elastic mode.
+                /// <para>The mode of the cluster. By default, <b>flexible</b> is returned, which indicates that the cluster is in elastic mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>flexible</para>
                 /// </summary>
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
                 public string Mode { get; set; }
 
                 /// <summary>
-                /// The billing method of the cluster. Valid values:
+                /// <para>The billing method of the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+                /// <item><description><b>Prepaid</b>: subscription.</description></item>
+                /// </list>
                 /// 
-                /// *   **Postpaid**: pay-as-you-go.
-                /// *   **Prepaid**: subscription.
+                /// <b>Example:</b>
+                /// <para>Prepaid</para>
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// The port number that is used to connect to the cluster.
+                /// <para>The port number that is used to connect to the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3306</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
@@ -245,14 +312,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string RdsInstanceId { get; set; }
 
                 /// <summary>
-                /// The region ID of the cluster.
+                /// <para>The region ID of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The remaining reserved computing resources that are available in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.
+                /// <para>The remaining reserved computing resources that are available in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>32ACU</para>
                 /// </summary>
                 [NameInMap("ReservedACU")]
                 [Validation(Required=false)]
@@ -267,21 +340,27 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ReservedNodeSize { get; set; }
 
                 /// <summary>
-                /// The resource group ID.
+                /// <para>The resource group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-acfmyiu4ekp****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is approximately equal to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
+                /// <para>The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is approximately equal to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>24ACU</para>
                 /// </summary>
                 [NameInMap("StorageResource")]
                 [Validation(Required=false)]
                 public string StorageResource { get; set; }
 
                 /// <summary>
-                /// The tags that are added to the cluster.
+                /// <para>The tags that are added to the cluster.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -292,16 +371,23 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public List<DescribeDBClustersResponseBodyItemsDBClusterTagsTag> Tag { get; set; }
                     public class DescribeDBClustersResponseBodyItemsDBClusterTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// <para>The tag key.</para>
+                        /// <remarks>
+                        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/179253.html">TagResources</a> operation to add tags to a cluster.</para>
+                        /// </remarks>
                         /// 
-                        /// >  You can call the [TagResources](https://help.aliyun.com/document_detail/179253.html) operation to add tags to a cluster.
+                        /// <b>Example:</b>
+                        /// <para>tag1</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// <para>The tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>test1</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -370,21 +456,30 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string VPCCloudInstanceId { get; set; }
 
                 /// <summary>
-                /// The virtual private cloud (VPC) ID of the cluster.
+                /// <para>The virtual private cloud (VPC) ID of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp13h7uzhulpuxvnp****</para>
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// The vSwitch ID of the cluster.
+                /// <para>The vSwitch ID of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-bp1syh8vvw8yech7n****</para>
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The zone ID of the cluster.
+                /// <para>The zone ID of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-h</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -395,28 +490,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A5EDBA27-AF3E-5966-9503-FD1557E19167</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

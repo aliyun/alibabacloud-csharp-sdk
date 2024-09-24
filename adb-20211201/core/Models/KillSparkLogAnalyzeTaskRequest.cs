@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class KillSparkLogAnalyzeTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the Spark log analysis task. You can call the ListSparkLogAnalyzeTasks operation to query the IDs and states of all analysis tasks in the current cluster.
+        /// <para>The ID of the Spark log analysis task. You can call the ListSparkLogAnalyzeTasks operation to query the IDs and states of all analysis tasks in the current cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>15</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

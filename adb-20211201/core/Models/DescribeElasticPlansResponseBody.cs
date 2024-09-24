@@ -10,69 +10,95 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeElasticPlansResponseBody : TeaModel {
         /// <summary>
-        /// The queried scaling plans.
+        /// <para>The queried scaling plans.</para>
         /// </summary>
         [NameInMap("ElasticPlans")]
         [Validation(Required=false)]
         public List<DescribeElasticPlansResponseBodyElasticPlans> ElasticPlans { get; set; }
         public class DescribeElasticPlansResponseBodyElasticPlans : TeaModel {
             /// <summary>
-            /// Indicates whether **Proportional Default Scaling for EIUs** is enabled. Valid values:
+            /// <para>Indicates whether <b>Proportional Default Scaling for EIUs</b> is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   true
-            /// *   false
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("AutoScale")]
             [Validation(Required=false)]
             public bool? AutoScale { get; set; }
 
             /// <summary>
-            /// The name of the scaling plan.
+            /// <para>The name of the scaling plan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("ElasticPlanName")]
             [Validation(Required=false)]
             public string ElasticPlanName { get; set; }
 
             /// <summary>
-            /// Indicates whether the scaling plan was immediately enabled after the plan is created. Valid values:
+            /// <para>Indicates whether the scaling plan is immediately enabled after the plan is created. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   true
-            /// *   false
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// The time when the next scheduling is performed.
+            /// <para>The time when the next scheduling is performed.</para>
+            /// <remarks>
+            /// <para>The time is in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// </remarks>
             /// 
-            /// > The time is in the yyyy-MM-ddTHH:mm:ssZ format.
+            /// <b>Example:</b>
+            /// <para>2022-01-01T12:01:00Z</para>
             /// </summary>
             [NameInMap("NextScheduleTime")]
             [Validation(Required=false)]
             public string NextScheduleTime { get; set; }
 
             /// <summary>
-            /// The name of the resource group.
+            /// <para>The name of the resource group.</para>
+            /// <remarks>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group within a cluster.</para>
+            /// </remarks>
             /// 
-            /// > You can call the [DescribeDBResourceGroup](https://help.aliyun.com/document_detail/459446.html) operation to query the name of a resource group within a cluster.
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("ResourceGroupName")]
             [Validation(Required=false)]
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// The amount of elastic resources after scaling.
+            /// <para>The amount of elastic resources after scaling.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>32ACU</para>
             /// </summary>
             [NameInMap("TargetSize")]
             [Validation(Required=false)]
             public string TargetSize { get; set; }
 
             /// <summary>
-            /// The type of the scaling plan. Valid values:
+            /// <para>The type of the scaling plan. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>EXECUTOR</b>: the interactive resource group type, which specifies the computing resource type.</description></item>
+            /// <item><description><b>WORKER</b>: the EIU type.</description></item>
+            /// </list>
             /// 
-            /// *   EXECUTOR: interactive resource group.
-            /// *   WORKER: EIU.
+            /// <b>Example:</b>
+            /// <para>EXECUTOR</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -81,28 +107,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A5C433C2-001F-58E3-99F5-3274C14DF8BD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkSQLEngineStateRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-bp11q28kvl688****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The name of the job resource group.
+        /// <para>The name of the job resource group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test_instance</para>
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]

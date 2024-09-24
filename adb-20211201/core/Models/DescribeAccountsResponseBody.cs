@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
         /// <summary>
-        /// The queried database accounts.
+        /// <para>The queried database accounts.</para>
         /// </summary>
         [NameInMap("AccountList")]
         [Validation(Required=false)]
@@ -21,52 +21,73 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<DescribeAccountsResponseBodyAccountListDBAccount> DBAccount { get; set; }
             public class DescribeAccountsResponseBodyAccountListDBAccount : TeaModel {
                 /// <summary>
-                /// The description of the database account.
+                /// <para>The description of the database account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_accout_des</para>
                 /// </summary>
                 [NameInMap("AccountDescription")]
                 [Validation(Required=false)]
                 public string AccountDescription { get; set; }
 
                 /// <summary>
-                /// The name of the database account.
+                /// <para>The name of the database account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_accout</para>
                 /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// The status of the database account. Valid values:
+                /// <para>The status of the database account. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Creating</b></description></item>
+                /// <item><description><b>Available</b></description></item>
+                /// <item><description><b>Deleting</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Creating**
-                /// *   **Available**
-                /// *   **Deleting**
+                /// <b>Example:</b>
+                /// <para>Available</para>
                 /// </summary>
                 [NameInMap("AccountStatus")]
                 [Validation(Required=false)]
                 public string AccountStatus { get; set; }
 
                 /// <summary>
-                /// The type of the database account. Valid values:
+                /// <para>The type of the database account. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Normal</b>: standard account.</description></item>
+                /// <item><description><b>Super</b>: privileged account.</description></item>
+                /// </list>
                 /// 
-                /// *   **Normal**: standard account.
-                /// *   **Super**: privileged account.
+                /// <b>Example:</b>
+                /// <para>Normal</para>
                 /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
                 public string AccountType { get; set; }
 
                 /// <summary>
-                /// The database engine of the cluster. Valid values:
+                /// <para>The database engine of the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>AnalyticDB</b>: the AnalyticDB for MySQL engine.</description></item>
+                /// <item><description><b>Clickhouse</b>: the wide table engine.</description></item>
+                /// </list>
                 /// 
-                /// *   **AnalyticDB**: the AnalyticDB for MySQL engine.
-                /// *   **Clickhouse**: the wide table engine.
+                /// <b>Example:</b>
+                /// <para>Clickhouse</para>
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The ID of the Resource Access Management (RAM) user.
+                /// <para>The ID of the Resource Access Management (RAM) user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1958134230****</para>
                 /// </summary>
                 [NameInMap("RamUsers")]
                 [Validation(Required=false)]
@@ -77,7 +98,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9CCFAAB4-97B7-5800-B9F2-685EB596E3EF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

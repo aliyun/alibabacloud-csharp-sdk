@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSchemasResponseBody : TeaModel {
         /// <summary>
-        /// The queried databases.
+        /// <para>The queried databases.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<DescribeSchemasResponseBodyItemsSchema> Schema { get; set; }
             public class DescribeSchemasResponseBodyItemsSchema : TeaModel {
                 /// <summary>
-                /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+                /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>amv-bp11q28kvl688****</para>
                 /// </summary>
                 [NameInMap("DBClusterId")]
                 [Validation(Required=false)]
                 public string DBClusterId { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>adb_demo</para>
                 /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
@@ -39,7 +45,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25B56BC7-4978-40B3-9E48-4B7067******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

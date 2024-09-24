@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyPerformanceViewShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/612397.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-bp1ub9grke1****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -29,11 +32,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -48,18 +54,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The new information about the monitoring view.
-        /// 
-        /// This parameter is required.
+        /// <para>The new information about the monitoring view.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ViewDetail")]
         [Validation(Required=false)]
         public string ViewDetailShrink { get; set; }
 
         /// <summary>
-        /// The name of the monitoring view.
-        /// 
-        /// This parameter is required.
+        /// <para>The name of the monitoring view.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ViewName")]
         [Validation(Required=false)]

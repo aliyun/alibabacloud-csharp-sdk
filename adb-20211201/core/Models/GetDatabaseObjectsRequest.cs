@@ -10,64 +10,83 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetDatabaseObjectsRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bp1565u55p32****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The owner of the database.
+        /// <para>The owner of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>admin</para>
         /// </summary>
         [NameInMap("FilterOwner")]
         [Validation(Required=false)]
         public string FilterOwner { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_db</para>
         /// </summary>
         [NameInMap("FilterSchemaName")]
         [Validation(Required=false)]
         public string FilterSchemaName { get; set; }
 
         /// <summary>
-        /// The order in which you want to sort the query results. Valid values:
+        /// <para>The order in which you want to sort the query results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Asc</description></item>
+        /// <item><description>Desc</description></item>
+        /// </list>
+        /// <para>Valid values for Field: DatabaseName, CreateTime, and UpdateTime. -CreateTime; -UpdateTime;</para>
+        /// <para>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;DatabaseName&quot;}.</para>
         /// 
-        /// *   Asc
-        /// *   Desc
-        /// 
-        /// Valid values for Field: DatabaseName, CreateTime, and UpdateTime. -CreateTime; -UpdateTime;
-        /// 
-        /// Default value: {"Type": "Desc","Field": "DatabaseName"}.
+        /// <b>Example:</b>
+        /// <para>{&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;DbName&quot;}</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page 1. Default value: **1**.
+        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values:
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>30</description></item>
+        /// <item><description>50</description></item>
+        /// <item><description>100</description></item>
+        /// </list>
+        /// <para>Default value: 30.</para>
         /// 
-        /// *   30
-        /// *   50
-        /// *   100
-        /// 
-        /// Default value: 30.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the database.
+        /// <para>The region ID of the database.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

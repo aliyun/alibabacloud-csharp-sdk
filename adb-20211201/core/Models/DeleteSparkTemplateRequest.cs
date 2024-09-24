@@ -10,24 +10,30 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DeleteSparkTemplateRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-bp11q28kvl688****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The directory ID of the template files that you want to delete.
+        /// <para>The directory ID of the template files that you want to delete.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/456205.html">GetSparkTemplateFullTree</a> operation to query the directory ID of template files.</para>
+        /// </description></item>
+        /// <item><description><para>When you specify a directory ID, the directory and all template files that are included in the directory are deleted.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > 
-        /// 
-        /// *   You can call the [GetSparkTemplateFullTree](https://help.aliyun.com/document_detail/456205.html) operation to query the directory ID of template files.
-        /// 
-        /// *   When you specify a directory ID, the directory and all template files that are included in the directory are deleted.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>725204</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

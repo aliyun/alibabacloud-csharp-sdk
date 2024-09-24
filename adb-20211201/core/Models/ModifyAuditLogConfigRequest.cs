@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyAuditLogConfigRequest : TeaModel {
         /// <summary>
-        /// The status to which you want to change the SQL audit feature. Valid values:
+        /// <para>The status to which you want to change the SQL audit feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> After you disable the SQL audit feature, all SQL audit logs are deleted. You must query and export SQL audit logs before you disable SQL audit. For more information, see <a href="https://help.aliyun.com/document_detail/612426.html">DescribeAuditLogRecords</a>. When you re-enable SQL audit, audit logs that are generated from the time when SQL audit was last enabled are available for queries.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **on**
-        /// *   **off**
-        /// 
-        /// >  After you disable the SQL audit feature, all SQL audit logs are deleted. You must query and export SQL audit logs before you disable SQL audit. For more information, see [DescribeAuditLogRecords](https://help.aliyun.com/document_detail/612426.html). When you re-enable SQL audit, audit logs that are generated from the time when SQL audit was last enabled are available for queries.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("AuditLogStatus")]
         [Validation(Required=false)]
         public string AuditLogStatus { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/454250.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-t4nj8619bz2w3****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -47,11 +54,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID of the cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/454314.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetTableRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-*******</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dbName</para>
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the cluster resides.
+        /// <para>The ID of the region in which the cluster resides.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the table.
+        /// <para>The name of the table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tableName</para>
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string AppErrorAdvice { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>EXCEEDED_QUOTA</para>
+        /// </summary>
         [NameInMap("AppErrorCode")]
         [Validation(Required=false)]
         public string AppErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>exception: xxxx</para>
+        /// </summary>
         [NameInMap("AppErrorLog")]
         [Validation(Required=false)]
         public string AppErrorLog { get; set; }

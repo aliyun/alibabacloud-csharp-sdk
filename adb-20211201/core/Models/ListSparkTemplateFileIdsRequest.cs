@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListSparkTemplateFileIdsRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>amv-bp11q28kvl688****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

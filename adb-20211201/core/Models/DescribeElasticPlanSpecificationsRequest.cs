@@ -10,36 +10,47 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeElasticPlanSpecificationsRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/454250.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-wz9509beptiz****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The name of the resource group.
+        /// <para>The name of the resource group.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter must be specified only when you query the resource specifications that are supported by an interactive resource group.</para>
+        /// </description></item>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group within a cluster.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   This parameter must be specified only when you query the resource specifications that are supported by an interactive resource group.
-        /// 
-        /// *   You can call the [DescribeDBResourceGroup](https://help.aliyun.com/document_detail/459446.html) operation to query the name of a resource group within a cluster.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }
 
         /// <summary>
-        /// The type of the scaling plan. Valid values:
+        /// <para>The type of the scaling plan. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EXECUTOR: the interactive resource group type, which specifies the computing resource type.</description></item>
+        /// <item><description>WORKER: the elastic I/O unit (EIU) type.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   EXECUTOR: the interactive resource group type, which specifies the computing resource type.
-        /// *   WORKER: the elastic I/O unit (EIU) type.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>EXECUTOR</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateOssSubDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateOssSubDirectoryResponseBodyData Data { get; set; }
         public class CreateOssSubDirectoryResponseBodyData : TeaModel {
             /// <summary>
-            /// The cyclic redundancy check (CRC) value on the client.
+            /// <para>The cyclic redundancy check (CRC) value on the client.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ClientCRC")]
             [Validation(Required=false)]
             public long? ClientCRC { get; set; }
 
             /// <summary>
-            /// The tag of the OSS path.
+            /// <para>The tag of the OSS path.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ETag")]
             [Validation(Required=false)]
             public string ETag { get; set; }
 
             /// <summary>
-            /// The request ID.
+            /// <para>The request ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3A0DE2E0-A37B-5EE4-9136-C4C473714802</para>
             /// </summary>
             [NameInMap("RequestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
 
             /// <summary>
-            /// The CRC-64 value on the OSS bucket.
+            /// <para>The CRC-64 value on the OSS bucket.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ServerCRC")]
             [Validation(Required=false)]
@@ -47,34 +59,48 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The response code. The status code 200 indicates that the request was successful.
+        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <list type="bullet">
+        /// <item><description>If the request was successful, a <b>success</b> message is returned.</description></item>
+        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// </list>
         /// 
-        /// *   If the request was successful, a **success** message is returned.
-        /// *   If the request failed, an error message is returned.
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3A0DE2E0-A37B-5EE4-9136-C4C473714802</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

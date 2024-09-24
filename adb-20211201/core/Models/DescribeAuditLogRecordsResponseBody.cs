@@ -10,87 +10,121 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAuditLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>amv-t4nj8619bz2w3****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The queried SQL audit logs.
+        /// <para>The queried SQL audit logs.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeAuditLogRecordsResponseBodyItems> Items { get; set; }
         public class DescribeAuditLogRecordsResponseBodyItems : TeaModel {
             /// <summary>
-            /// The connection ID.
+            /// <para>The connection ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>14356****</para>
             /// </summary>
             [NameInMap("ConnId")]
             [Validation(Required=false)]
             public string ConnId { get; set; }
 
             /// <summary>
-            /// The name of the database on which the SQL statement was executed.
+            /// <para>The name of the database on which the SQL statement was executed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>adb_demo</para>
             /// </summary>
             [NameInMap("DBName")]
             [Validation(Required=false)]
             public string DBName { get; set; }
 
             /// <summary>
-            /// The start time of the execution of the SQL statement. The time is displayed in the ISO 8601 standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
+            /// <para>The start time of the execution of the SQL statement. The time is displayed in the ISO 8601 standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-08-12 10:10:00</para>
             /// </summary>
             [NameInMap("ExecuteTime")]
             [Validation(Required=false)]
             public string ExecuteTime { get; set; }
 
             /// <summary>
-            /// The IP address and port number of the client that is used to execute the SQL statement.
+            /// <para>The IP address and port number of the client that is used to execute the SQL statement.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100.104.XX.XX:43908</para>
             /// </summary>
             [NameInMap("HostAddress")]
             [Validation(Required=false)]
             public string HostAddress { get; set; }
 
             /// <summary>
-            /// The task ID.
+            /// <para>The task ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>202106081752021720161662490345362390</para>
             /// </summary>
             [NameInMap("ProcessID")]
             [Validation(Required=false)]
             public string ProcessID { get; set; }
 
             /// <summary>
-            /// The SQL statement.
+            /// <para>The SQL statement.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SELECT * FROM adb_hdfs_import_source</para>
             /// </summary>
             [NameInMap("SQLText")]
             [Validation(Required=false)]
             public string SQLText { get; set; }
 
             /// <summary>
-            /// The type of the SQL statement.
+            /// <para>The type of the SQL statement.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SELECT</para>
             /// </summary>
             [NameInMap("SQLType")]
             [Validation(Required=false)]
             public string SQLType { get; set; }
 
             /// <summary>
-            /// Indicates whether the SQL statement was successfully executed. Valid values:
+            /// <para>Indicates whether the SQL statement was successfully executed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Succeed")]
             [Validation(Required=false)]
             public string Succeed { get; set; }
 
             /// <summary>
-            /// The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.
+            /// <para>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>216</para>
             /// </summary>
             [NameInMap("TotalTime")]
             [Validation(Required=false)]
             public string TotalTime { get; set; }
 
             /// <summary>
-            /// The username that is used to execute the SQL statement.
+            /// <para>The username that is used to execute the SQL statement.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("User")]
             [Validation(Required=false)]
@@ -99,28 +133,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8A564B7F-8C00-43C0-8EC5-919FBB70573</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6974</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

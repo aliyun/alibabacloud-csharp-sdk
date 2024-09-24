@@ -10,41 +10,50 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetDatabaseObjectsResponseBody : TeaModel {
         /// <summary>
-        /// The queried databases.
+        /// <para>The queried databases.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDatabaseObjectsResponseBodyData Data { get; set; }
         public class GetDatabaseObjectsResponseBodyData : TeaModel {
             /// <summary>
-            /// The queried database.
+            /// <para>The queried database.</para>
             /// </summary>
             [NameInMap("DatabaseSummaryModels")]
             [Validation(Required=false)]
             public List<DatabaseSummaryModel> DatabaseSummaryModels { get; set; }
 
             /// <summary>
-            /// The page number. Pages start from page 1. Default value: **1**.
+            /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page. Valid values:
+            /// <para>The number of entries per page. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>30</description></item>
+            /// <item><description>50</description></item>
+            /// <item><description>100</description></item>
+            /// </list>
+            /// <para>Default value: 30.</para>
             /// 
-            /// *   30
-            /// *   50
-            /// *   100
-            /// 
-            /// Default value: 30.
+            /// <b>Example:</b>
+            /// <para>30</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -53,32 +62,45 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The page number. Pages start from page 1. Default value: **1**.
+        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values:
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
         /// 
-        /// *   **30** (default)
-        /// *   **50**
-        /// *   **100**
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>863D51B7-5321-41D8-A0B6-A088B0******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,34 +10,45 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAdbMySqlSchemasResponseBody : TeaModel {
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <list type="bullet">
+        /// <item><description>If the request was successful, a <b>success</b> message is returned.</description></item>
+        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// </list>
         /// 
-        /// *   If the request was successful, a **success** message is returned.
-        /// *   If the request failed, an error message is returned.
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The queried databases.
+        /// <para>The queried databases.</para>
         /// </summary>
         [NameInMap("Schemas")]
         [Validation(Required=false)]
         public List<string> Schemas { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

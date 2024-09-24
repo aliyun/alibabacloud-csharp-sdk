@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateOssSubDirectoryRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region, including cluster IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/612397.html) operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region, including cluster IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amv-bp149vz49b36t****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The OSS path where you want to create a subdirectory.
+        /// <para>The OSS path where you want to create a subdirectory.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>oss://testBucketName/das_lakehouse</para>
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]

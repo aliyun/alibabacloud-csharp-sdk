@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkConfigLogPathResponseBody : TeaModel {
         /// <summary>
-        /// The queried Spark log configuration.
+        /// <para>The queried Spark log configuration.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSparkConfigLogPathResponseBodyData Data { get; set; }
         public class GetSparkConfigLogPathResponseBodyData : TeaModel {
             /// <summary>
-            /// The default log path.
+            /// <para>The default log path.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oss://aliyun-oa-adb-spark-1111-oss-cn-hanghzou/spark-logs</para>
             /// </summary>
             [NameInMap("DefaultLogPath")]
             [Validation(Required=false)]
             public string DefaultLogPath { get; set; }
 
             /// <summary>
-            /// Indicates whether a log path exists.
+            /// <para>Indicates whether a log path exists.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsLogPathExists")]
             [Validation(Required=false)]
             public bool? IsLogPathExists { get; set; }
 
             /// <summary>
-            /// The last modification time.
+            /// <para>The last modification time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1675654361000</para>
             /// </summary>
             [NameInMap("ModifiedTimestamp")]
             [Validation(Required=false)]
             public string ModifiedTimestamp { get; set; }
 
             /// <summary>
-            /// The account ID of the modifier.
+            /// <para>The account ID of the modifier.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10130223128xxx</para>
             /// </summary>
             [NameInMap("ModifiedUid")]
             [Validation(Required=false)]
             public string ModifiedUid { get; set; }
 
             /// <summary>
-            /// The recorded log path.
+            /// <para>The recorded log path.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oss://test/spark-logs/</para>
             /// </summary>
             [NameInMap("RecordedLogPath")]
             [Validation(Required=false)]
@@ -54,7 +69,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1919-xxx-ssdfsdff</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

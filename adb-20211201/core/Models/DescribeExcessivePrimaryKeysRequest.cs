@@ -10,55 +10,65 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeExcessivePrimaryKeysRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/129857.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>am-bp1xxxxxxxx47</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-06-01T16:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The language of file titles and error messages. Valid values:
+        /// <para>The language of file titles and error messages. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh (default)</b>: simplified Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>ja</b>: Japanese.</description></item>
+        /// <item><description><b>zh-tw</b>: traditional Chinese.</description></item>
+        /// </list>
         /// 
-        /// *   **zh (default)**: simplified Chinese.
-        /// *   **en**: English.
-        /// *   **ja**: Japanese.
-        /// *   **zh-tw**: traditional Chinese.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The order in which table fields are sorted. Specify the value in the JSON format.
+        /// <para>The order in which table fields are sorted. Specify the value in the JSON format.</para>
+        /// <para>Example:</para>
+        /// <pre><c>[
         /// 
-        /// Example:
+        ///     {
         /// 
-        ///     [
+        ///         &quot;Field&quot;:&quot;Name&quot;,
         /// 
-        ///         {
+        ///         &quot;Type&quot;:&quot;Asc&quot;
         /// 
-        ///             "Field":"Name",
+        ///     }
         /// 
-        ///             "Type":"Asc"
+        /// ]
+        /// </c></pre>
+        /// <para>In the preceding code, Field specifies the field that is used to sort the table data. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.</para>
+        /// <para>Field and Type are case-insensitive.</para>
         /// 
-        ///         }
-        /// 
-        ///     ]
-        /// 
-        /// In the preceding code, Field specifies the field that is used to sort the table data. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.
-        /// 
-        /// Field and Type are case-insensitive.
+        /// <b>Example:</b>
+        /// <para>[{&quot;Field&quot;:&quot;TableName&quot;, &quot;Type&quot;: &quot;Desc&quot; }]</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
@@ -73,29 +83,39 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values:
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
         /// 
-        /// *   **30** (default)
-        /// *   **50**
-        /// *   **100**
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -110,7 +130,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-06-01T16:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -10,18 +10,38 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DeletePerformanceViewResponseBody : TeaModel {
         /// <summary>
-        /// The details about the access denial.
+        /// <para>The details about the access denial.</para>
+        /// <remarks>
+        /// <para> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is returned only if Resource Access Management (RAM) permission verification failed.
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+        ///     &quot;AuthPrincipalOwnerId&quot;: &quot;1**<em><b><b><b><b><b><b><b>7&quot;,
+        ///     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcKwyhk62IeYly4hQ+5IpXjkh1GQXuDRCQ==&quot;,
+        ///     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+        ///     &quot;AuthPrincipalDisplayName&quot;: &quot;2</b></b></b></b></b></b></b></em>9&quot;,
+        ///     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+        ///     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
+        /// </summary>
         [NameInMap("DeleteStatus")]
         [Validation(Required=false)]
         public bool? DeleteStatus { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
