@@ -10,29 +10,41 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyPolicyAdvancedConfigRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the strict mode for the access control policy. Valid values:
+        /// <para>Specifies whether to enable the strict mode for the access control policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: enables the strict mode.</description></item>
+        /// <item><description><b>off</b>: disables the strict mode.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **on**: enables the strict mode.
-        /// *   **off**: disables the strict mode.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>off</para>
         /// </summary>
         [NameInMap("InternetSwitch")]
         [Validation(Required=false)]
         public string InternetSwitch { get; set; }
 
         /// <summary>
-        /// The natural language of the request and response. Valid values:
+        /// <para>The natural language of the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese (default)</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.0.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

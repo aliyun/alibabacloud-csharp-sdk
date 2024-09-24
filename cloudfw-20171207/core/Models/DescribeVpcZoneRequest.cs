@@ -10,34 +10,48 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcZoneRequest : TeaModel {
         /// <summary>
-        /// The environment. Valid values:
+        /// <para>The environment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>TransitRouter</b></description></item>
+        /// </list>
         /// 
-        /// *   **VPC**
-        /// *   **TransitRouter**
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("Environment")]
         [Validation(Required=false)]
         public string Environment { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The UID of the member in Cloud Firewall.
+        /// <para>The UID of the member in Cloud Firewall.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1415189284827022</para>
         /// </summary>
         [NameInMap("MemberUid")]
         [Validation(Required=false)]
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionNo")]
         [Validation(Required=false)]

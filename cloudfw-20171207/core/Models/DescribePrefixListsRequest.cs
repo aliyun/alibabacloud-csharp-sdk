@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrefixListsRequest : TeaModel {
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shenzhen</para>
         /// </summary>
         [NameInMap("RegionNo")]
         [Validation(Required=false)]
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>47.100.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

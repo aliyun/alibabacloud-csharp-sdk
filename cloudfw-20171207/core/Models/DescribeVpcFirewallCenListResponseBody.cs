@@ -10,80 +10,107 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallCenListResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>850A84D6-0DE4-4797-A1E8-00090125k8g2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of VPC firewalls.
+        /// <para>The total number of VPC firewalls.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// An array that consists of the details about the VPC firewall.
+        /// <para>An array that consists of the details about the VPC firewall.</para>
         /// </summary>
         [NameInMap("VpcFirewalls")]
         [Validation(Required=false)]
         public List<DescribeVpcFirewallCenListResponseBodyVpcFirewalls> VpcFirewalls { get; set; }
         public class DescribeVpcFirewallCenListResponseBodyVpcFirewalls : TeaModel {
             /// <summary>
-            /// The ID of the CEN instance.
+            /// <para>The ID of the CEN instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cen-x5jayxou71ad73****</para>
             /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
             public string CenId { get; set; }
 
             /// <summary>
-            /// The name of the CEN instance.
+            /// <para>The name of the CEN instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test CEN instance</para>
             /// </summary>
             [NameInMap("CenName")]
             [Validation(Required=false)]
             public string CenName { get; set; }
 
             /// <summary>
-            /// The connection type of the VPC firewall. The value is fixed as cen, which indicates a CEN instance.
+            /// <para>The connection type of the VPC firewall. The value is fixed as cen, which indicates a CEN instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cen</para>
             /// </summary>
             [NameInMap("ConnectType")]
             [Validation(Required=false)]
             public string ConnectType { get; set; }
 
             /// <summary>
-            /// The status of the VPC firewall. Valid values:
+            /// <para>The status of the VPC firewall. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>opened</b>: The VPC firewall is enabled.</description></item>
+            /// <item><description><b>closed</b>: The VPC firewall is disabled.</description></item>
+            /// <item><description><b>notconfigured</b>: The VPC firewall is not configured.</description></item>
+            /// </list>
             /// 
-            /// *   **opened**: The VPC firewall is enabled.
-            /// *   **closed**: The VPC firewall is disabled.
-            /// *   **notconfigured**: The VPC firewall is not configured.
+            /// <b>Example:</b>
+            /// <para>opened</para>
             /// </summary>
             [NameInMap("FirewallSwitchStatus")]
             [Validation(Required=false)]
             public string FirewallSwitchStatus { get; set; }
 
             /// <summary>
-            /// The information about the intrusion prevention system (IPS) configuration.
+            /// <para>The information about the intrusion prevention system (IPS) configuration.</para>
             /// </summary>
             [NameInMap("IpsConfig")]
             [Validation(Required=false)]
             public DescribeVpcFirewallCenListResponseBodyVpcFirewallsIpsConfig IpsConfig { get; set; }
             public class DescribeVpcFirewallCenListResponseBodyVpcFirewallsIpsConfig : TeaModel {
                 /// <summary>
-                /// Indicates whether basic protection is enabled. Valid values:
+                /// <para>Indicates whether basic protection is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: yes</description></item>
+                /// <item><description><b>0</b>: no</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: yes
-                /// *   **0**: no
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("BasicRules")]
                 [Validation(Required=false)]
                 public int? BasicRules { get; set; }
 
                 /// <summary>
-                /// Indicates whether virtual patching is enabled. Valid values:
+                /// <para>Indicates whether virtual patching is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: yes</description></item>
+                /// <item><description><b>0</b>: no</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: yes
-                /// *   **0**: no
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("EnableAllPatch")]
                 [Validation(Required=false)]
@@ -94,10 +121,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public int? RuleClass { get; set; }
 
                 /// <summary>
-                /// The mode of the IPS. Valid values:
+                /// <para>The mode of the IPS. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: block mode</description></item>
+                /// <item><description><b>0</b>: monitor mode</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: block mode
-                /// *   **0**: monitor mode
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("RunMode")]
                 [Validation(Required=false)]
@@ -106,125 +137,165 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// The details about the VPC.
+            /// <para>The details about the VPC.</para>
             /// </summary>
             [NameInMap("LocalVpc")]
             [Validation(Required=false)]
             public DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpc LocalVpc { get; set; }
             public class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpc : TeaModel {
                 /// <summary>
-                /// Indicates whether the VPC is granted the required permissions. The value is fixed as **authorized**, which indicates that the VPC is granted the required permissions.
+                /// <para>Indicates whether the VPC is granted the required permissions. The value is fixed as <b>authorized</b>, which indicates that the VPC is granted the required permissions.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>authorized</para>
                 /// </summary>
                 [NameInMap("AuthorizationStatus")]
                 [Validation(Required=false)]
                 public string AuthorizationStatus { get; set; }
 
                 /// <summary>
-                /// An array consisting of the CIDR blocks that are protected by the VPC firewall.
+                /// <para>An array consisting of the CIDR blocks that are protected by the VPC firewall.</para>
                 /// </summary>
                 [NameInMap("DefendCidrList")]
                 [Validation(Required=false)]
                 public List<string> DefendCidrList { get; set; }
 
                 /// <summary>
-                /// The ID of the specified vSwitch when the routing mode is manual.
+                /// <para>The ID of the specified vSwitch when the routing mode is manual.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-zeq4o875u****</para>
                 /// </summary>
                 [NameInMap("ManualVSwitchId")]
                 [Validation(Required=false)]
                 public string ManualVSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the network instance.
+                /// <para>The ID of the network instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-2zefk9fbn8j7v585g****</para>
                 /// </summary>
                 [NameInMap("NetworkInstanceId")]
                 [Validation(Required=false)]
                 public string NetworkInstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the network instance.
+                /// <para>The name of the network instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test VPC</para>
                 /// </summary>
                 [NameInMap("NetworkInstanceName")]
                 [Validation(Required=false)]
                 public string NetworkInstanceName { get; set; }
 
                 /// <summary>
-                /// The type of the network instance. Valid values:
+                /// <para>The type of the network instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>VPC</b></description></item>
+                /// <item><description><b>VBR</b></description></item>
+                /// <item><description><b>CCN</b></description></item>
+                /// </list>
                 /// 
-                /// *   **VPC**
-                /// *   **VBR**
-                /// *   **CCN**
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("NetworkInstanceType")]
                 [Validation(Required=false)]
                 public string NetworkInstanceType { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the VPC belongs.
+                /// <para>The ID of the Alibaba Cloud account to which the VPC belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>158039427902****</para>
                 /// </summary>
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public long? OwnerId { get; set; }
 
                 /// <summary>
-                /// The region ID of the VPC.
+                /// <para>The region ID of the VPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionNo")]
                 [Validation(Required=false)]
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// The routing mode of the VPC firewall. Valid values:
+                /// <para>The routing mode of the VPC firewall. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>auto</b>: automatic mode</description></item>
+                /// <item><description><b>manual</b>: manual mode</description></item>
+                /// </list>
                 /// 
-                /// *   **auto**: automatic mode
-                /// *   **manual**: manual mode
+                /// <b>Example:</b>
+                /// <para>auto</para>
                 /// </summary>
                 [NameInMap("RouteMode")]
                 [Validation(Required=false)]
                 public string RouteMode { get; set; }
 
                 /// <summary>
-                /// Indicates whether the manual routing mode is supported. Valid values:
+                /// <para>Indicates whether the manual routing mode is supported. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: yes</description></item>
+                /// <item><description><b>0</b>: no</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: yes
-                /// *   **0**: no
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("SupportManualMode")]
                 [Validation(Required=false)]
                 public string SupportManualMode { get; set; }
 
                 /// <summary>
-                /// The edition of the CEN transit router. Valid values:
+                /// <para>The edition of the CEN transit router. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Basic</b>: Basic Edition transit router</description></item>
+                /// <item><description><b>Enterprise</b>: Enterprise Edition transit router</description></item>
+                /// </list>
                 /// 
-                /// *   **Basic**: Basic Edition transit router
-                /// *   **Enterprise**: Enterprise Edition transit router
+                /// <b>Example:</b>
+                /// <para>Basic</para>
                 /// </summary>
                 [NameInMap("TransitRouterType")]
                 [Validation(Required=false)]
                 public string TransitRouterType { get; set; }
 
                 /// <summary>
-                /// An array that consists of the CIDR blocks of the VPC.
+                /// <para>An array that consists of the CIDR blocks of the VPC.</para>
                 /// </summary>
                 [NameInMap("VpcCidrTableList")]
                 [Validation(Required=false)]
                 public List<DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList> VpcCidrTableList { get; set; }
                 public class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList : TeaModel {
                     /// <summary>
-                    /// An array that consists of the route entries for the VPC.
+                    /// <para>An array that consists of the route entries for the VPC.</para>
                     /// </summary>
                     [NameInMap("RouteEntryList")]
                     [Validation(Required=false)]
                     public List<DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList> RouteEntryList { get; set; }
                     public class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList : TeaModel {
                         /// <summary>
-                        /// The destination CIDR block of the VPC.
+                        /// <para>The destination CIDR block of the VPC.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>192.168.XX.XX/24</para>
                         /// </summary>
                         [NameInMap("DestinationCidr")]
                         [Validation(Required=false)]
                         public string DestinationCidr { get; set; }
 
                         /// <summary>
-                        /// The instance ID of the next hop for the VPC.
+                        /// <para>The instance ID of the next hop for the VPC.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>vrt-m5eb5me6c3l5sezae****</para>
                         /// </summary>
                         [NameInMap("NextHopInstanceId")]
                         [Validation(Required=false)]
@@ -233,7 +304,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     }
 
                     /// <summary>
-                    /// The route table ID of the VPC.
+                    /// <para>The route table ID of the VPC.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>vtb-1234</para>
                     /// </summary>
                     [NameInMap("RouteTableId")]
                     [Validation(Required=false)]
@@ -242,14 +316,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// <para>The ID of the VPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-8vbwbo90rq0anm6t****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The name of the VPC.
+                /// <para>The name of the VPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test instance</para>
                 /// </summary>
                 [NameInMap("VpcName")]
                 [Validation(Required=false)]
@@ -258,55 +338,76 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// The UID of the member that is manged by your Alibaba Cloud account. The member is also an Alibaba Cloud account.
+            /// <para>The UID of the member that is manged by your Alibaba Cloud account. The member is also an Alibaba Cloud account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>258039427902****</para>
             /// </summary>
             [NameInMap("MemberUid")]
             [Validation(Required=false)]
             public string MemberUid { get; set; }
 
             /// <summary>
-            /// Indicates whether the VPC firewall can be automatically enabled to protect VPC traffic based on route learning. Valid values:
+            /// <para>Indicates whether the VPC firewall can be automatically enabled to protect VPC traffic based on route learning. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>passed</b>: The VPC firewall can be automatically enabled.</description></item>
+            /// <item><description><b>failed</b>: The VPC firewall cannot be automatically enabled.</description></item>
+            /// <item><description><b>unknown</b>: The VPC firewall is in an unknown state.</description></item>
+            /// </list>
             /// 
-            /// *   **passed**: The VPC firewall can be automatically enabled.
-            /// *   **failed**: The VPC firewall cannot be automatically enabled.
-            /// *   **unknown**: The VPC firewall is in an unknown state.
+            /// <b>Example:</b>
+            /// <para>failed</para>
             /// </summary>
             [NameInMap("PrecheckStatus")]
             [Validation(Required=false)]
             public string PrecheckStatus { get; set; }
 
             /// <summary>
-            /// Indicates whether you can create a VPC firewall in a specified region. Valid values:
+            /// <para>Indicates whether you can create a VPC firewall in a specified region. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>enable</b>: yes</description></item>
+            /// <item><description><b>disable</b>: no</description></item>
+            /// </list>
             /// 
-            /// *   **enable**: yes
-            /// *   **disable**: no
+            /// <b>Example:</b>
+            /// <para>enable</para>
             /// </summary>
             [NameInMap("RegionStatus")]
             [Validation(Required=false)]
             public string RegionStatus { get; set; }
 
             /// <summary>
-            /// The result code of the operation that creates the VPC firewall. Valid values:
+            /// <para>The result code of the operation that creates the VPC firewall. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Unauthorized</b>: Cloud Firewall is not authorized to access the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.</description></item>
+            /// <item><description><b>RegionDisable</b>: VPC Firewall is not supported in the region of the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.</description></item>
+            /// <item><description><b>OpsDisable</b>: You are not allowed to create the VPC firewall.</description></item>
+            /// <item><description><b>VbrNotSupport</b>: The VPC firewall cannot be created for a VBR that is attached to the CEN instance.</description></item>
+            /// <item><description>Empty string: You can create a VPC firewall for the network instance.</description></item>
+            /// </list>
             /// 
-            /// *   **Unauthorized**: Cloud Firewall is not authorized to access the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.
-            /// *   **RegionDisable**: VPC Firewall is not supported in the region of the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.
-            /// *   **OpsDisable**: You are not allowed to create the VPC firewall.
-            /// *   **VbrNotSupport**: The VPC firewall cannot be created for a VBR that is attached to the CEN instance.
-            /// *   Empty string: You can create a VPC firewall for the network instance.
+            /// <b>Example:</b>
+            /// <para>Unauthorized</para>
             /// </summary>
             [NameInMap("ResultCode")]
             [Validation(Required=false)]
             public string ResultCode { get; set; }
 
             /// <summary>
-            /// The instance ID of the VPC firewall.
+            /// <para>The instance ID of the VPC firewall.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vfw-m5e7dbc4y****</para>
             /// </summary>
             [NameInMap("VpcFirewallId")]
             [Validation(Required=false)]
             public string VpcFirewallId { get; set; }
 
             /// <summary>
-            /// The instance name of the VPC firewall.
+            /// <para>The instance name of the VPC firewall.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test firewall</para>
             /// </summary>
             [NameInMap("VpcFirewallName")]
             [Validation(Required=false)]

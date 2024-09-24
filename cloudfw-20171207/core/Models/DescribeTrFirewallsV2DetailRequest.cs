@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallsV2DetailRequest : TeaModel {
         /// <summary>
-        /// The instance ID of the VPC firewall.
+        /// <para>The instance ID of the VPC firewall.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vfw-tr-a5a6b89f46764928****</para>
         /// </summary>
         [NameInMap("FirewallId")]
         [Validation(Required=false)]
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// The language of the content within the response. Valid values:
+        /// <para>The language of the content within the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese (default)</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

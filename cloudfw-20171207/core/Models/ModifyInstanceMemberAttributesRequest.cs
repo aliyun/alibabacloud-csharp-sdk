@@ -10,27 +10,30 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyInstanceMemberAttributesRequest : TeaModel {
         /// <summary>
-        /// The members that to be modified.
-        /// 
-        /// This parameter is required.
+        /// <para>The members that to be modified.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<ModifyInstanceMemberAttributesRequestMembers> Members { get; set; }
         public class ModifyInstanceMemberAttributesRequestMembers : TeaModel {
             /// <summary>
-            /// The remarks of the member in Cloud Firewall.
+            /// <para>The remarks of the member in Cloud Firewall.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>renewal</para>
             /// </summary>
             [NameInMap("MemberDesc")]
             [Validation(Required=false)]
             public string MemberDesc { get; set; }
 
             /// <summary>
-            /// The UID of the member in Cloud Firewall.
+            /// <para>The UID of the member in Cloud Firewall.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>123412341234****</para>
             /// </summary>
             [NameInMap("MemberUid")]
             [Validation(Required=false)]

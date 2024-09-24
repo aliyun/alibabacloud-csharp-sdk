@@ -10,37 +10,51 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceMembersRequest : TeaModel {
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// The remarks of the member. The remarks must be 1 to 256 characters in length.
+        /// <para>The remarks of the member. The remarks must be 1 to 256 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>renewal</para>
         /// </summary>
         [NameInMap("MemberDesc")]
         [Validation(Required=false)]
         public string MemberDesc { get; set; }
 
         /// <summary>
-        /// The name of the member.
+        /// <para>The name of the member.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cloudfirewall_2</para>
         /// </summary>
         [NameInMap("MemberDisplayName")]
         [Validation(Required=false)]
         public string MemberDisplayName { get; set; }
 
         /// <summary>
-        /// The UID of the member.
+        /// <para>The UID of the member.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>258039427902****</para>
         /// </summary>
         [NameInMap("MemberUid")]
         [Validation(Required=false)]
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Default value: <b>20</b>.</para>
         /// 
-        /// Default value: **20**.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

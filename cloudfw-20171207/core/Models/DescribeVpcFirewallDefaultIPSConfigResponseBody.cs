@@ -10,27 +10,38 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallDefaultIPSConfigResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether basic policies are enabled. Valid values:
+        /// <para>Indicates whether basic policies are enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("BasicRules")]
         [Validation(Required=false)]
         public int? BasicRules { get; set; }
 
         /// <summary>
-        /// Indicates whether virtual patching is enabled. Valid values:
+        /// <para>Indicates whether virtual patching is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("EnableAllPatch")]
         [Validation(Required=false)]
         public int? EnableAllPatch { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>850A84D6-0DE4-4797-A1E8-00090125adf1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -41,10 +52,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? RuleClass { get; set; }
 
         /// <summary>
-        /// The mode of the intrusion prevention system (IPS). Valid values:
+        /// <para>The mode of the intrusion prevention system (IPS). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: block mode</description></item>
+        /// <item><description><b>0</b>: monitor mode</description></item>
+        /// </list>
         /// 
-        /// *   **1**: block mode
-        /// *   **0**: monitor mode
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("RunMode")]
         [Validation(Required=false)]

@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallV2RoutePolicyListResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>95EB5F3A-67FE-5780-92BD-5ECBA772AB7E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// The routing policies.
+        /// <para>The routing policies.</para>
         /// </summary>
         [NameInMap("TrFirewallRoutePolicies")]
         [Validation(Required=false)]
         public List<DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePolicies> TrFirewallRoutePolicies { get; set; }
         public class DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePolicies : TeaModel {
             /// <summary>
-            /// The secondary traffic redirection instances.
+            /// <para>The secondary traffic redirection instances.</para>
             /// </summary>
             [NameInMap("DestCandidateList")]
             [Validation(Required=false)]
             public List<DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesDestCandidateList> DestCandidateList { get; set; }
             public class DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesDestCandidateList : TeaModel {
                 /// <summary>
-                /// The ID of the secondary traffic redirection instance.
+                /// <para>The ID of the secondary traffic redirection instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-2ze9epancaw8t4sha****</para>
                 /// </summary>
                 [NameInMap("CandidateId")]
                 [Validation(Required=false)]
                 public string CandidateId { get; set; }
 
                 /// <summary>
-                /// The type of the secondary traffic redirection instance.
+                /// <para>The type of the secondary traffic redirection instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("CandidateType")]
                 [Validation(Required=false)]
@@ -54,60 +66,80 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// The description of the routing policy.
+            /// <para>The description of the routing policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("PolicyDescription")]
             [Validation(Required=false)]
             public string PolicyDescription { get; set; }
 
             /// <summary>
-            /// The name of the routing policy.
+            /// <para>The name of the routing policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TEST_VPC_FW</para>
             /// </summary>
             [NameInMap("PolicyName")]
             [Validation(Required=false)]
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// The status of the routing policy. Valid values:
+            /// <para>The status of the routing policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>creating: The policy is being created.</description></item>
+            /// <item><description>deleting: The policy is being deleted.</description></item>
+            /// <item><description>opening: The policy is being enabled.</description></item>
+            /// <item><description>opened: The policy is enabled.</description></item>
+            /// <item><description>closing: The policy is being disabled.</description></item>
+            /// <item><description>closed: The policy is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   creating: The policy is being created.
-            /// *   deleting: The policy is being deleted.
-            /// *   opening: The policy is being enabled.
-            /// *   opened: The policy is enabled.
-            /// *   closing: The policy is being disabled.
-            /// *   closed: The policy is disabled.
+            /// <b>Example:</b>
+            /// <para>opened</para>
             /// </summary>
             [NameInMap("PolicyStatus")]
             [Validation(Required=false)]
             public string PolicyStatus { get; set; }
 
             /// <summary>
-            /// The type of the traffic redirection scenario of the VPC firewall. Valid values:
+            /// <para>The type of the traffic redirection scenario of the VPC firewall. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>fullmesh</b>: interconnected instances</description></item>
+            /// <item><description><b>one_to_one</b>: instance to instance</description></item>
+            /// <item><description><b>end_to_end</b>: instance to instances</description></item>
+            /// </list>
             /// 
-            /// *   **fullmesh**: interconnected instances
-            /// *   **one_to_one**: instance to instance
-            /// *   **end_to_end**: instance to instances
+            /// <b>Example:</b>
+            /// <para>fullmesh</para>
             /// </summary>
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// The primary traffic redirection instances.
+            /// <para>The primary traffic redirection instances.</para>
             /// </summary>
             [NameInMap("SrcCandidateList")]
             [Validation(Required=false)]
             public List<DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesSrcCandidateList> SrcCandidateList { get; set; }
             public class DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesSrcCandidateList : TeaModel {
                 /// <summary>
-                /// The ID of the primary traffic redirection instance.
+                /// <para>The ID of the primary traffic redirection instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-2ze9epancaw8t4sha****</para>
                 /// </summary>
                 [NameInMap("CandidateId")]
                 [Validation(Required=false)]
                 public string CandidateId { get; set; }
 
                 /// <summary>
-                /// The type of the primary traffic redirection instance.
+                /// <para>The type of the primary traffic redirection instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("CandidateType")]
                 [Validation(Required=false)]
@@ -116,7 +148,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// The ID of the routing policy.
+            /// <para>The ID of the routing policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>policy-7b66257c14e141fb****</para>
             /// </summary>
             [NameInMap("TrFirewallRoutePolicyId")]
             [Validation(Required=false)]

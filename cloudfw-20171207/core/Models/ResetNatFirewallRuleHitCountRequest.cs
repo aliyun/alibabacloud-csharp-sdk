@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ResetNatFirewallRuleHitCountRequest : TeaModel {
         /// <summary>
-        /// The UUID of the access control policy.
+        /// <para>The UUID of the access control policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3de3aed5-6de7-4ecd-9106-cfe994b9c49f</para>
         /// </summary>
         [NameInMap("AclUuid")]
         [Validation(Required=false)]
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the NAT gateway.
+        /// <para>The ID of the NAT gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ngw-zm0h3c1exm5bifuorg8c5</para>
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]

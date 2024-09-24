@@ -10,37 +10,47 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceRiskLevelsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the instances.
+        /// <para>The information about the instances.</para>
         /// </summary>
         [NameInMap("InstanceRisks")]
         [Validation(Required=false)]
         public List<DescribeInstanceRiskLevelsResponseBodyInstanceRisks> InstanceRisks { get; set; }
         public class DescribeInstanceRiskLevelsResponseBodyInstanceRisks : TeaModel {
             /// <summary>
-            /// The risk levels of the Elastic Compute Service (ECS) instance.
+            /// <para>The risk levels of the Elastic Compute Service (ECS) instance.</para>
             /// </summary>
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<DescribeInstanceRiskLevelsResponseBodyInstanceRisksDetails> Details { get; set; }
             public class DescribeInstanceRiskLevelsResponseBodyInstanceRisksDetails : TeaModel {
                 /// <summary>
-                /// The IP addresses of servers.
+                /// <para>The IP addresses of servers.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>203.107.XX.XX</para>
                 /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
                 /// <summary>
-                /// The risk levels. Valid values:
+                /// <para>The risk levels. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>medium</b></description></item>
+                /// </list>
                 /// 
-                /// *   **medium**
+                /// <b>Example:</b>
+                /// <para>medium</para>
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
 
                 /// <summary>
-                /// The type.
+                /// <para>The type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ResourceNotProtected</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -49,16 +59,23 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// The instance ID of your Cloud Firewall.
+            /// <para>The instance ID of your Cloud Firewall.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vipcloudfw-cn-7mz2fj8nm0u</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The risk levels. Valid values:
+            /// <para>The risk levels. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>medium</b></description></item>
+            /// </list>
             /// 
-            /// *   **medium**
+            /// <b>Example:</b>
+            /// <para>medium</para>
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
@@ -67,7 +84,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9AABB1B7-C81F-5158-9EF9-B2DD5D3DA014</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

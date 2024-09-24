@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyTrFirewallV2RoutePolicyScopeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E7D4D635-0C70-5CEB-A609-851E94D51FBB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the routing policy.
+        /// <para>The ID of the routing policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>policy-4d724d0139df48f18091</para>
         /// </summary>
         [NameInMap("TrFirewallRoutePolicyId")]
         [Validation(Required=false)]

@@ -10,35 +10,49 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallAclGroupListRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Default value: 1.
+        /// <para>The number of the page to return. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// Specifies whether VPC firewalls are configured. Valid values:
+        /// <para>Specifies whether VPC firewalls are configured. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>notconfigured</b>: VPC firewalls are not configured.</description></item>
+        /// <item><description><b>configured</b>: VPC firewalls are configured.</description></item>
+        /// <item><description>If you do not specify this parameter, the access control policies of all VPC firewalls are queried.</description></item>
+        /// </list>
         /// 
-        /// *   **notconfigured**: VPC firewalls are not configured.
-        /// *   **configured**: VPC firewalls are configured.
-        /// *   If you do not specify this parameter, the access control policies of all VPC firewalls are queried.
+        /// <b>Example:</b>
+        /// <para>configured</para>
         /// </summary>
         [NameInMap("FirewallConfigureStatus")]
         [Validation(Required=false)]
         public string FirewallConfigureStatus { get; set; }
 
         /// <summary>
-        /// The language of the content within the response. Valid values:
+        /// <para>The language of the content within the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese (default)</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 50.
+        /// <para>The number of entries to return on each page. Maximum value: 50.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

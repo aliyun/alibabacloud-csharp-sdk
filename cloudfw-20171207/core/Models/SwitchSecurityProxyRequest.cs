@@ -10,31 +10,40 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class SwitchSecurityProxyRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and the response. Valid values:
+        /// <para>The language of the content within the request and the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default)</description></item>
+        /// <item><description><b>en</b></description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default)
-        /// *   **en**
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the NAT firewall.
+        /// <para>The ID of the NAT firewall.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>proxy-natbfd2fafbb77042308d1b</para>
         /// </summary>
         [NameInMap("ProxyId")]
         [Validation(Required=false)]
         public string ProxyId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the NAT firewall. Valid values:
+        /// <para>Specifies whether to enable the NAT firewall. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>open: yes</description></item>
+        /// <item><description>close: no</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   open: yes
-        /// *   close: no
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>open</para>
         /// </summary>
         [NameInMap("Switch")]
         [Validation(Required=false)]

@@ -10,28 +10,38 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallCenDetailRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese (default)</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the VPC for which the VPC firewall is created.
+        /// <para>The ID of the VPC for which the VPC firewall is created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-2zefk9fbn8j7v585g****</para>
         /// </summary>
         [NameInMap("NetworkInstanceId")]
         [Validation(Required=false)]
         public string NetworkInstanceId { get; set; }
 
         /// <summary>
-        /// The instance ID of the VPC firewall.
+        /// <para>The instance ID of the VPC firewall.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the instance IDs of VPC firewalls.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeVpcFirewallCenList](https://help.aliyun.com/document_detail/345777.html) operation to query the instance IDs of VPC firewalls.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vfw-m5e7dbc4y****</para>
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]

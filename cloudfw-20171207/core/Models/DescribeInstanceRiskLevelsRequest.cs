@@ -10,35 +10,44 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceRiskLevelsRequest : TeaModel {
         /// <summary>
-        /// The information about the instances.
+        /// <para>The information about the instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeInstanceRiskLevelsRequestInstances> Instances { get; set; }
         public class DescribeInstanceRiskLevelsRequestInstances : TeaModel {
             /// <summary>
-            /// The instance ID of your Cloud Firewall.
+            /// <para>The instance ID of your Cloud Firewall.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vipcloudfw-cn-7mz2fj8nm0u</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The public IP addresses of instances.
+            /// <para>The public IP addresses of instances.</para>
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public List<string> InternetIp { get; set; }
 
             /// <summary>
-            /// The private IP address of the instance.
+            /// <para>The private IP address of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>172.17.XX.XX</para>
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// The UUID of the instance.
+            /// <para>The UUID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>181ad081-e4f2-4e3e-b925-03b67f648397</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -47,10 +56,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// The language of the content within the response. Valid values:
+        /// <para>The language of the content within the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

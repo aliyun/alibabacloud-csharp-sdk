@@ -10,77 +10,93 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyObjectGroupOperationRequest : TeaModel {
         /// <summary>
-        /// The remarks of the operation.
+        /// <para>The remarks of the operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// The direction of the traffic to which the access control policy applies.
+        /// <para>The direction of the traffic to which the access control policy applies.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>in</b>: inbound.</description></item>
+        /// <item><description><b>out</b>: outbound.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid values:
-        /// 
-        /// *   **in**: inbound.
-        /// *   **out**: outbound.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>out</para>
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }
 
         /// <summary>
-        /// The language of the content within the response. Valid values:
+        /// <para>The language of the content within the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default)</description></item>
+        /// <item><description><b>en</b></description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default)
-        /// *   **en**
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The operation objects.
-        /// 
-        /// This parameter is required.
+        /// <para>The operation objects.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ObjectList")]
         [Validation(Required=false)]
         public List<string> ObjectList { get; set; }
 
         /// <summary>
-        /// The operation. Valid values:
+        /// <para>The operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ignore</b>: adds the operation object to the whitelist.</description></item>
+        /// <item><description><b>cancelIgnore</b>: removes the operation object from the whitelist.</description></item>
+        /// <item><description><b>subscribe</b>: follows the operation object.</description></item>
+        /// <item><description><b>unsubscribe</b>: unfollows the operation object.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **ignore**: adds the operation object to the whitelist.
-        /// *   **cancelIgnore**: removes the operation object from the whitelist.
-        /// *   **subscribe**: follows the operation object.
-        /// *   **unsubscribe**: unfollows the operation object.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ignore</para>
         /// </summary>
         [NameInMap("ObjectOperation")]
         [Validation(Required=false)]
         public string ObjectOperation { get; set; }
 
         /// <summary>
-        /// The type of the operation object.
+        /// <para>The type of the operation object.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>assetsIp</b>: the asset IP address.</description></item>
+        /// <item><description><b>destinationIp</b>: the destination IP address.</description></item>
+        /// <item><description><b>destinationPort</b>: the destination port.</description></item>
+        /// <item><description><b>destinationDomain</b>: the destination domain name.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid values:
-        /// 
-        /// *   **assetsIp**: the asset IP address.
-        /// *   **destinationIp**: the destination IP address.
-        /// *   **destinationPort**: the destination port.
-        /// *   **destinationDomain**: the destination domain name.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>destinationDomain</para>
         /// </summary>
         [NameInMap("ObjectType")]
         [Validation(Required=false)]
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123.xxx.251.60</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

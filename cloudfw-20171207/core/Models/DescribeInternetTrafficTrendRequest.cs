@@ -10,47 +10,63 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetTrafficTrendRequest : TeaModel {
         /// <summary>
-        /// The direction of the internet traffic.
+        /// <para>The direction of the internet traffic.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>in</b>: inbound traffic</description></item>
+        /// <item><description><b>out</b>: outbound traffic</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   **in**: inbound traffic
-        /// *   **out**: outbound traffic
+        /// <b>Example:</b>
+        /// <para>in</para>
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1674958929</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The language of the content in the request and response. Valid values:
+        /// <para>The language of the content in the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The source code.
+        /// <para>The source code.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>yundun</para>
         /// </summary>
         [NameInMap("SourceCode")]
         [Validation(Required=false)]
         public string SourceCode { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// The IP address of the access source.
+        /// <para>The IP address of the access source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>101.80.171.196</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
@@ -58,33 +74,45 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The private IP address of the source.
+        /// <para>The private IP address of the source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.100.134.60</para>
         /// </summary>
         [NameInMap("SrcPrivateIP")]
         [Validation(Required=false)]
         public string SrcPrivateIP { get; set; }
 
         /// <summary>
-        /// The public IP address of the source.
+        /// <para>The public IP address of the source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>47.112.210.136</para>
         /// </summary>
         [NameInMap("SrcPublicIP")]
         [Validation(Required=false)]
         public string SrcPublicIP { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1670307484</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The type of the traffic that is captured. Valid values:
+        /// <para>The type of the traffic that is captured. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>max</b> (default): peak traffic</description></item>
+        /// <item><description><b>avg</b>: average traffic</description></item>
+        /// </list>
         /// 
-        /// *   **max** (default): peak traffic
-        /// *   **avg**: average traffic
+        /// <b>Example:</b>
+        /// <para>max</para>
         /// </summary>
         [NameInMap("TrafficType")]
         [Validation(Required=false)]

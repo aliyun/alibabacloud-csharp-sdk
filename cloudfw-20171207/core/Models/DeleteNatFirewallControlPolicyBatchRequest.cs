@@ -10,35 +10,45 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteNatFirewallControlPolicyBatchRequest : TeaModel {
         /// <summary>
-        /// The UUIDs of access control policies.
+        /// <para>The UUIDs of access control policies.</para>
         /// </summary>
         [NameInMap("AclUuidList")]
         [Validation(Required=false)]
         public List<string> AclUuidList { get; set; }
 
         /// <summary>
-        /// The direction of the traffic to which the access control policy applies. Valid values:
+        /// <para>The direction of the traffic to which the access control policy applies. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>out</b>: outbound traffic</description></item>
+        /// </list>
         /// 
-        /// *   **out**: outbound traffic
+        /// <b>Example:</b>
+        /// <para>out</para>
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the NAT gateway.
+        /// <para>The ID of the NAT gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ngw-uf6j0426ap74vd6vrb676</para>
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]

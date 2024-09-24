@@ -10,58 +10,81 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeDefaultIPSConfigResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether basic protection is enabled. Valid values:
+        /// <para>Indicates whether basic protection is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("BasicRules")]
         [Validation(Required=false)]
         public int? BasicRules { get; set; }
 
         /// <summary>
-        /// Indicates whether threat intelligence is enabled. Valid values:
+        /// <para>Indicates whether threat intelligence is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("CtiRules")]
         [Validation(Required=false)]
         public int? CtiRules { get; set; }
 
         /// <summary>
-        /// Indicates whether virtual patching is enabled. Valid values:
+        /// <para>Indicates whether virtual patching is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("PatchRules")]
         [Validation(Required=false)]
         public int? PatchRules { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>133173B9-8010-5DF5-8B93-********</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The level of the rule group for the IPS. Valid values:
+        /// <para>The level of the rule group for the IPS. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: loose</description></item>
+        /// <item><description><b>2</b>: medium</description></item>
+        /// <item><description><b>3</b>: strict</description></item>
+        /// </list>
         /// 
-        /// *   **1**: loose
-        /// *   **2**: medium
-        /// *   **3**: strict
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("RuleClass")]
         [Validation(Required=false)]
         public int? RuleClass { get; set; }
 
         /// <summary>
-        /// The mode of the IPS. Valid values:
+        /// <para>The mode of the IPS. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: block mode</description></item>
+        /// <item><description><b>0</b>: monitor mode</description></item>
+        /// </list>
         /// 
-        /// *   **1**: block mode
-        /// *   **0**: monitor mode
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("RunMode")]
         [Validation(Required=false)]

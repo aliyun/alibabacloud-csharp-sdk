@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeDownloadTaskTypeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B835494C-D093-5524-BBDE-BD272077B40E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The task types.
+        /// <para>The task types.</para>
         /// </summary>
         [NameInMap("TaskTypeArray")]
         [Validation(Required=false)]
         public List<DescribeDownloadTaskTypeResponseBodyTaskTypeArray> TaskTypeArray { get; set; }
         public class DescribeDownloadTaskTypeResponseBodyTaskTypeArray : TeaModel {
             /// <summary>
-            /// The name of the task type.
+            /// <para>The name of the task type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Internet Boundary Firewall Assets</para>
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
 
             /// <summary>
-            /// The type of the task.
+            /// <para>The type of the task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>InternetFirewallAsset</para>
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]
@@ -40,7 +49,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyVpcFirewallIPSWhitelistResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F2E8D49A-E5AA-5FF8-8822-25282DCF4BE8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,86 +10,114 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallsV2ListResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1471E2EC-F706-5F11-A79B-BD583ACB8297</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// The VPC firewalls.
+        /// <para>The VPC firewalls.</para>
         /// </summary>
         [NameInMap("VpcTrFirewalls")]
         [Validation(Required=false)]
         public List<DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls> VpcTrFirewalls { get; set; }
         public class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls : TeaModel {
             /// <summary>
-            /// The ID of the CEN instance.
+            /// <para>The ID of the CEN instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cen-03f8s0z052ka3v****</para>
             /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
             public string CenId { get; set; }
 
             /// <summary>
-            /// The name of the CEN instance.
+            /// <para>The name of the CEN instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cen_swas</para>
             /// </summary>
             [NameInMap("CenName")]
             [Validation(Required=false)]
             public string CenName { get; set; }
 
             /// <summary>
-            /// The instance ID of the VPC firewall.
+            /// <para>The instance ID of the VPC firewall.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vfw-tr-99bc4f0fc88b4d00****</para>
             /// </summary>
             [NameInMap("FirewallId")]
             [Validation(Required=false)]
             public string FirewallId { get; set; }
 
             /// <summary>
-            /// The status of the VPC firewall. Valid values:
+            /// <para>The status of the VPC firewall. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>opened</b>: The VPC firewall is enabled.</description></item>
+            /// <item><description><b>closed</b>: The VPC firewall is disabled.</description></item>
+            /// <item><description><b>notconfigured</b>: The VPC firewall is not created.</description></item>
+            /// <item><description><b>configured</b>: The VPC firewall is created but is not enabled.</description></item>
+            /// <item><description><b>creating</b>: The VPC firewall is being created.</description></item>
+            /// <item><description><b>opening</b>: The VPC firewall is being enabled.</description></item>
+            /// <item><description><b>deleting</b>: The VPC firewall is being deleted.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> If you do not specify this parameter, VPC firewalls in all states are queried.</para>
+            /// </remarks>
             /// 
-            /// *   **opened**: The VPC firewall is enabled.
-            /// *   **closed**: The VPC firewall is disabled.
-            /// *   **notconfigured**: The VPC firewall is not created.
-            /// *   **configured**: The VPC firewall is created but is not enabled.
-            /// *   **creating**: The VPC firewall is being created.
-            /// *   **opening**: The VPC firewall is being enabled.
-            /// *   **deleting**: The VPC firewall is being deleted.
-            /// 
-            /// >  If you do not specify this parameter, VPC firewalls in all states are queried.
+            /// <b>Example:</b>
+            /// <para>opened</para>
             /// </summary>
             [NameInMap("FirewallSwitchStatus")]
             [Validation(Required=false)]
             public string FirewallSwitchStatus { get; set; }
 
             /// <summary>
-            /// The information about the intrusion prevention system (IPS) configuration.
+            /// <para>The information about the intrusion prevention system (IPS) configuration.</para>
             /// </summary>
             [NameInMap("IpsConfig")]
             [Validation(Required=false)]
             public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsIpsConfig IpsConfig { get; set; }
             public class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsIpsConfig : TeaModel {
                 /// <summary>
-                /// Indicates whether basic protection is enabled. Valid values:
+                /// <para>Indicates whether basic protection is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: yes</description></item>
+                /// <item><description><b>0</b>: no</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: yes
-                /// *   **0**: no
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("BasicRules")]
                 [Validation(Required=false)]
                 public int? BasicRules { get; set; }
 
                 /// <summary>
-                /// Indicates whether virtual patching is enabled. Valid values:
+                /// <para>Indicates whether virtual patching is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: yes</description></item>
+                /// <item><description><b>0</b>: no</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: yes
-                /// *   **0**: no
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("EnableAllPatch")]
                 [Validation(Required=false)]
@@ -100,10 +128,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public int? RuleClass { get; set; }
 
                 /// <summary>
-                /// The mode of the IPS. Valid values:
+                /// <para>The mode of the IPS. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: block mode</description></item>
+                /// <item><description><b>0</b>: monitor mode</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: block mode
-                /// *   **0**: monitor mode
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("RunMode")]
                 [Validation(Required=false)]
@@ -112,60 +144,70 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account to which the VPC belongs.
+            /// <para>The ID of the Alibaba Cloud account to which the VPC belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>171761785151****</para>
             /// </summary>
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
             public long? OwnerId { get; set; }
 
             /// <summary>
-            /// Indicates whether the VPC firewall can be automatically enabled. Valid values:
+            /// <para>Indicates whether the VPC firewall can be automatically enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>passed</b>: yes</description></item>
+            /// <item><description><b>failed</b>: no</description></item>
+            /// <item><description><b>unknown</b></description></item>
+            /// </list>
             /// 
-            /// *   **passed**: yes
-            /// *   **failed**: no
-            /// *   **unknown**
+            /// <b>Example:</b>
+            /// <para>passed</para>
             /// </summary>
             [NameInMap("PrecheckStatus")]
             [Validation(Required=false)]
             public string PrecheckStatus { get; set; }
 
             /// <summary>
-            /// The protected resources.
+            /// <para>The protected resources.</para>
             /// </summary>
             [NameInMap("ProtectedResource")]
             [Validation(Required=false)]
             public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource ProtectedResource { get; set; }
             public class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource : TeaModel {
                 /// <summary>
-                /// The number of protected resources.
+                /// <para>The number of protected resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// The protected peer transit routers.
+                /// <para>The protected peer transit routers.</para>
                 /// </summary>
                 [NameInMap("PeerTrList")]
                 [Validation(Required=false)]
                 public List<string> PeerTrList { get; set; }
 
                 /// <summary>
-                /// The protected virtual border routers (VBRs).
+                /// <para>The protected virtual border routers (VBRs).</para>
                 /// </summary>
                 [NameInMap("VbrList")]
                 [Validation(Required=false)]
                 public List<string> VbrList { get; set; }
 
                 /// <summary>
-                /// The protected VPCs.
+                /// <para>The protected VPCs.</para>
                 /// </summary>
                 [NameInMap("VpcList")]
                 [Validation(Required=false)]
                 public List<string> VpcList { get; set; }
 
                 /// <summary>
-                /// The protected VPN gateways.
+                /// <para>The protected VPN gateways.</para>
                 /// </summary>
                 [NameInMap("VpnList")]
                 [Validation(Required=false)]
@@ -174,86 +216,107 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// The region ID of the transit router.
+            /// <para>The region ID of the transit router.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionNo")]
             [Validation(Required=false)]
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// Indicates whether you can create a VPC firewall in a specified region. Valid values:
+            /// <para>Indicates whether you can create a VPC firewall in a specified region. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>enable</b>: yes</description></item>
+            /// <item><description><b>disable</b>: no</description></item>
+            /// </list>
             /// 
-            /// *   **enable**: yes
-            /// *   **disable**: no
+            /// <b>Example:</b>
+            /// <para>enable</para>
             /// </summary>
             [NameInMap("RegionStatus")]
             [Validation(Required=false)]
             public string RegionStatus { get; set; }
 
             /// <summary>
-            /// The result code of the operation that creates the VPC firewall. Valid values:
+            /// <para>The result code of the operation that creates the VPC firewall. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>RegionDisable</b>: VPC Firewall is not supported in the region of the network instance. You cannot create a VPC firewall for the network instance.</description></item>
+            /// <item><description><b>Empty string</b>: You can create a VPC firewall for the network instance.</description></item>
+            /// </list>
             /// 
-            /// *   **RegionDisable**: VPC Firewall is not supported in the region of the network instance. You cannot create a VPC firewall for the network instance.
-            /// *   **Empty string**: You can create a VPC firewall for the network instance.
+            /// <b>Example:</b>
+            /// <para>RegionDisable</para>
             /// </summary>
             [NameInMap("ResultCode")]
             [Validation(Required=false)]
             public string ResultCode { get; set; }
 
             /// <summary>
-            /// The routing mode of the VPC firewall. Valid values:
+            /// <para>The routing mode of the VPC firewall. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>managed</b>: automatic mode</description></item>
+            /// <item><description><b>manual</b>: manual mode</description></item>
+            /// </list>
             /// 
-            /// *   **managed**: automatic mode
-            /// *   **manual**: manual mode
+            /// <b>Example:</b>
+            /// <para>managed</para>
             /// </summary>
             [NameInMap("RouteMode")]
             [Validation(Required=false)]
             public string RouteMode { get; set; }
 
             /// <summary>
-            /// The ID of the transit router.
+            /// <para>The ID of the transit router.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tr-2vcmhjs88nil55fvu****</para>
             /// </summary>
             [NameInMap("TransitRouterId")]
             [Validation(Required=false)]
             public string TransitRouterId { get; set; }
 
             /// <summary>
-            /// The unprotected resources.
+            /// <para>The unprotected resources.</para>
             /// </summary>
             [NameInMap("UnprotectedResource")]
             [Validation(Required=false)]
             public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource UnprotectedResource { get; set; }
             public class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource : TeaModel {
                 /// <summary>
-                /// The number of unprotected resources.
+                /// <para>The number of unprotected resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// The unprotected peer transit routers.
+                /// <para>The unprotected peer transit routers.</para>
                 /// </summary>
                 [NameInMap("PeerTrList")]
                 [Validation(Required=false)]
                 public List<string> PeerTrList { get; set; }
 
                 /// <summary>
-                /// The unprotected VBRs.
+                /// <para>The unprotected VBRs.</para>
                 /// </summary>
                 [NameInMap("VbrList")]
                 [Validation(Required=false)]
                 public List<string> VbrList { get; set; }
 
                 /// <summary>
-                /// The unprotected VPCs.
+                /// <para>The unprotected VPCs.</para>
                 /// </summary>
                 [NameInMap("VpcList")]
                 [Validation(Required=false)]
                 public List<string> VpcList { get; set; }
 
                 /// <summary>
-                /// The unprotected VPN gateways.
+                /// <para>The unprotected VPN gateways.</para>
                 /// </summary>
                 [NameInMap("VpnList")]
                 [Validation(Required=false)]
@@ -262,7 +325,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// The instance name of the VPC firewall.
+            /// <para>The instance name of the VPC firewall.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("VpcFirewallName")]
             [Validation(Required=false)]

@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeDefaultIPSConfigRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the response. Valid values:
+        /// <para>The language of the content within the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default)</description></item>
+        /// <item><description><b>en</b></description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default)
-        /// *   **en**
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

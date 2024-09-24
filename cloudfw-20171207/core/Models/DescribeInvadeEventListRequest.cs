@@ -10,115 +10,156 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInvadeEventListRequest : TeaModel {
         /// <summary>
-        /// The IP address of the affected asset.
+        /// <para>The IP address of the affected asset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.0.XX.XX</para>
         /// </summary>
         [NameInMap("AssetsIP")]
         [Validation(Required=false)]
         public string AssetsIP { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ins_1321_asedb_****</para>
         /// </summary>
         [NameInMap("AssetsInstanceId")]
         [Validation(Required=false)]
         public string AssetsInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the instance.
+        /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECS_test</para>
         /// </summary>
         [NameInMap("AssetsInstanceName")]
         [Validation(Required=false)]
         public string AssetsInstanceName { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query ends at the current time.
+        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query ends at the current time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1656837360</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the breach awareness event.
+        /// <para>The ID of the breach awareness event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>69d189e2-ec17-4676-a2fe-02969234****</para>
         /// </summary>
         [NameInMap("EventKey")]
         [Validation(Required=false)]
         public string EventKey { get; set; }
 
         /// <summary>
-        /// The name of the breach awareness event.
+        /// <para>The name of the breach awareness event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>event_test</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
         public string EventName { get; set; }
 
         /// <summary>
-        /// The UUID of the breach awareness event.
+        /// <para>The UUID of the breach awareness event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fadd-dfdd-****</para>
         /// </summary>
         [NameInMap("EventUuid")]
         [Validation(Required=false)]
         public string EventUuid { get; set; }
 
         /// <summary>
-        /// Specifies whether the breach awareness event is ignored. Valid values:
+        /// <para>Specifies whether the breach awareness event is ignored. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The breach awareness event is ignored.</description></item>
+        /// <item><description><b>false</b>: The breach awareness event is not ignored.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The breach awareness event is ignored.
-        /// *   **false**: The breach awareness event is not ignored.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsIgnore")]
         [Validation(Required=false)]
         public string IsIgnore { get; set; }
 
         /// <summary>
-        /// The language of the content within the response. Valid values:
+        /// <para>The language of the content within the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese (default)</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the member.
+        /// <para>The ID of the member.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>135809047715****</para>
         /// </summary>
         [NameInMap("MemberUid")]
         [Validation(Required=false)]
         public long? MemberUid { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Default value: 6. Maximum value: 10.</para>
         /// 
-        /// Default value: 6. Maximum value: 10.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The handling status of breach awareness events.
+        /// <para>The handling status of breach awareness events.</para>
         /// </summary>
         [NameInMap("ProcessStatusList")]
         [Validation(Required=false)]
         public List<int?> ProcessStatusList { get; set; }
 
         /// <summary>
-        /// The risk levels.
+        /// <para>The risk levels.</para>
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public List<int?> RiskLevel { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.0.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
@@ -126,7 +167,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query starts from 30 days before the current time.
+        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query starts from 30 days before the current time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1656750960</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

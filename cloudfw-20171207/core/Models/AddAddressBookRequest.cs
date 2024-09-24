@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,72 +10,97 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddAddressBookRequest : TeaModel {
         /// <summary>
-        /// The addresses that you want to add to the address book. Separate multiple addresses with commas (,).
+        /// <para>The addresses that you want to add to the address book. Separate multiple addresses with commas (,).</para>
+        /// <remarks>
+        /// <para> If you set GroupType to <c>ip</c>, <c>port</c> or <c>domain</c>, you must specify AddressList.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set GroupType to <c>ip</c>, you must add IP addresses to the address book. Example: 192.0.XX.XX/32,192.0.XX.XX/24.</description></item>
+        /// <item><description>If you set GroupType to <c>port</c>, you must add port numbers or port ranges to the address book. Example: 80,100/200.</description></item>
+        /// <item><description>If you set GroupType to <c>domain</c>, you must add domain names to the address book. Example: example.com,aliyundoc.com.</description></item>
+        /// </list>
         /// 
-        /// >  If you set GroupType to `ip`, `port` or `domain`, you must specify AddressList.
-        /// 
-        /// *   If you set GroupType to `ip`, you must add IP addresses to the address book. Example: 192.0.XX.XX/32,192.0.XX.XX/24.
-        /// *   If you set GroupType to `port`, you must add port numbers or port ranges to the address book. Example: 80,100/200.
-        /// *   If you set GroupType to `domain`, you must add domain names to the address book. Example: example.com,aliyundoc.com.
+        /// <b>Example:</b>
+        /// <para>192.0.XX.XX/32, 192.0.XX.XX/24</para>
         /// </summary>
         [NameInMap("AddressList")]
         [Validation(Required=false)]
         public string AddressList { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically add public IP addresses of ECS instances to the address book if the instances match the specified tags. Valid values:
+        /// <para>Specifies whether to automatically add public IP addresses of ECS instances to the address book if the instances match the specified tags. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b> (default): no</description></item>
+        /// </list>
         /// 
-        /// *   **1**: yes
-        /// *   **0** (default): no
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("AutoAddTagEcs")]
         [Validation(Required=false)]
         public string AutoAddTagEcs { get; set; }
 
         /// <summary>
-        /// The description of the address book.
+        /// <para>The description of the address book.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sz-001</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the address book.
+        /// <para>The name of the address book.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sz-001</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The type of the address book. Valid values:
+        /// <para>The type of the address book. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ip</b>: IP address book</description></item>
+        /// <item><description><b>domain</b>: domain address book</description></item>
+        /// <item><description><b>port</b>: port address book</description></item>
+        /// <item><description><b>tag</b>: ECS tag-based address book</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **ip**: IP address book
-        /// *   **domain**: domain address book
-        /// *   **port**: port address book
-        /// *   **tag**: ECS tag-based address book
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ip</para>
         /// </summary>
         [NameInMap("GroupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
         /// <summary>
-        /// The language of the content within the response. Valid values:
+        /// <para>The language of the content within the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.0.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
@@ -86,21 +108,27 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The ECS tags that you want to match.
+        /// <para>The ECS tags that you want to match.</para>
         /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]
         public List<AddAddressBookRequestTagList> TagList { get; set; }
         public class AddAddressBookRequestTagList : TeaModel {
             /// <summary>
-            /// The key of the ECS tag.
+            /// <para>The key of the ECS tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TXY</para>
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
             /// <summary>
-            /// The value of the ECS tag.
+            /// <para>The value of the ECS tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]
@@ -109,10 +137,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// The logical relation among the ECS tags that you want to match. Valid values:
+        /// <para>The logical relation among the ECS tags that you want to match. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>and</b> (default): Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</description></item>
+        /// <item><description><b>or</b>: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.</description></item>
+        /// </list>
         /// 
-        /// *   **and** (default): Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.
-        /// *   **or**: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.
+        /// <b>Example:</b>
+        /// <para>and</para>
         /// </summary>
         [NameInMap("TagRelation")]
         [Validation(Required=false)]

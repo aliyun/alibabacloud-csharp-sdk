@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyInstanceMemberAttributesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AB74E747-BA5C-492C-87DD-CEA67FCFFFE5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

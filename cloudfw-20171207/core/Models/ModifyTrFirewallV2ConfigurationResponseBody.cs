@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyTrFirewallV2ConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A74C8FDD-2BEF-52D5-8B01-EB6FD94606F9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

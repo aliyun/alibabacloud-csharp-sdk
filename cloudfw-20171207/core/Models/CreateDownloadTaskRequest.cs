@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateDownloadTaskRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the response.
+        /// <para>The language of the content within the response.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese (default)</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The query condition of the download task.
+        /// <para>The query condition of the download task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;SearchItem\&quot;:\&quot;\&quot;,\&quot;UserType\&quot;:\&quot;buy\&quot;,\&quot;IpVersion\&quot;:\&quot;4\&quot;}</para>
         /// </summary>
         [NameInMap("TaskData")]
         [Validation(Required=false)]
         public string TaskData { get; set; }
 
         /// <summary>
-        /// The time zone of the time information in the downloaded file. The value must be an identifier of a time zone in the Internet Assigned Numbers Authority (IANA) database. The default value is Asia/Shanghai, which indicates UTC+8.
+        /// <para>The time zone of the time information in the downloaded file. The value must be an identifier of a time zone in the Internet Assigned Numbers Authority (IANA) database. The default value is Asia/Shanghai, which indicates UTC+8.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Asia/Shanghai</para>
         /// </summary>
         [NameInMap("TimeZone")]
         [Validation(Required=false)]

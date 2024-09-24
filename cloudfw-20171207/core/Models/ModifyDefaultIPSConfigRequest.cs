@@ -10,67 +10,88 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyDefaultIPSConfigRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable basic protection. Valid values:
+        /// <para>Specifies whether to enable basic protection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: no</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("BasicRules")]
         [Validation(Required=false)]
         public string BasicRules { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable threat intelligence. Valid values:
+        /// <para>Specifies whether to enable threat intelligence. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: no</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("CtiRules")]
         [Validation(Required=false)]
         public string CtiRules { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default)</description></item>
+        /// <item><description><b>en</b></description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default)
-        /// *   **en**
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable virtual patching. Valid values:
+        /// <para>Specifies whether to enable virtual patching. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PatchRules")]
         [Validation(Required=false)]
         public string PatchRules { get; set; }
 
         /// <summary>
-        /// The level of the rule group for the IPS. Valid values:
+        /// <para>The level of the rule group for the IPS. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: loose</description></item>
+        /// <item><description><b>2</b>: medium</description></item>
+        /// <item><description><b>3</b>: strict</description></item>
+        /// </list>
         /// 
-        /// *   **1**: loose
-        /// *   **2**: medium
-        /// *   **3**: strict
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleClass")]
         [Validation(Required=false)]
         public string RuleClass { get; set; }
 
         /// <summary>
-        /// The mode of the IPS. Valid values:
+        /// <para>The mode of the IPS. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: block mode</description></item>
+        /// <item><description><b>0</b>: monitor mode</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1**: block mode
-        /// *   **0**: monitor mode
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("RunMode")]
         [Validation(Required=false)]

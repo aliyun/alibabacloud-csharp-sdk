@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyTrFirewallV2RoutePolicyScopeRequest : TeaModel {
         /// <summary>
-        /// The secondary traffic redirection instances.
+        /// <para>The secondary traffic redirection instances.</para>
         /// </summary>
         [NameInMap("DestCandidateList")]
         [Validation(Required=false)]
         public List<ModifyTrFirewallV2RoutePolicyScopeRequestDestCandidateList> DestCandidateList { get; set; }
         public class ModifyTrFirewallV2RoutePolicyScopeRequestDestCandidateList : TeaModel {
             /// <summary>
-            /// The ID of the traffic redirection instance.
+            /// <para>The ID of the traffic redirection instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-2ze9epancaw8t4shajuzi</para>
             /// </summary>
             [NameInMap("CandidateId")]
             [Validation(Required=false)]
             public string CandidateId { get; set; }
 
             /// <summary>
-            /// The type of the traffic redirection instance.
+            /// <para>The type of the traffic redirection instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VPC</para>
             /// </summary>
             [NameInMap("CandidateType")]
             [Validation(Required=false)]
@@ -33,50 +39,66 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// The instance ID of the virtual private cloud (VPC) firewall.
+        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vfw-tr-6520de0253bc4669bbd9</para>
         /// </summary>
         [NameInMap("FirewallId")]
         [Validation(Required=false)]
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// The language of the content within the response. Valid values:
+        /// <para>The language of the content within the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *  **zh** (default): Chinese
-        /// *  **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// Specifies whether to restore the traffic redirection configurations. Valid values:
+        /// <para>Specifies whether to restore the traffic redirection configurations. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: roll back</description></item>
+        /// <item><description>false: withdraw</description></item>
+        /// </list>
         /// 
-        /// *   true: roll back
-        /// *   false: withdraw
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ShouldRecover")]
         [Validation(Required=false)]
         public string ShouldRecover { get; set; }
 
         /// <summary>
-        /// The primary traffic redirection instances.
+        /// <para>The primary traffic redirection instances.</para>
         /// </summary>
         [NameInMap("SrcCandidateList")]
         [Validation(Required=false)]
         public List<ModifyTrFirewallV2RoutePolicyScopeRequestSrcCandidateList> SrcCandidateList { get; set; }
         public class ModifyTrFirewallV2RoutePolicyScopeRequestSrcCandidateList : TeaModel {
             /// <summary>
-            /// The ID of the traffic redirection instance.
+            /// <para>The ID of the traffic redirection instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-2ze9epancaw8t4shajuzi</para>
             /// </summary>
             [NameInMap("CandidateId")]
             [Validation(Required=false)]
             public string CandidateId { get; set; }
 
             /// <summary>
-            /// The type of the traffic redirection instance.
+            /// <para>The type of the traffic redirection instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VPC</para>
             /// </summary>
             [NameInMap("CandidateType")]
             [Validation(Required=false)]
@@ -85,9 +107,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// The ID of the routing policy.
+        /// <para>The ID of the routing policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>policy-4d724d0139df48f18091</para>
         /// </summary>
         [NameInMap("TrFirewallRoutePolicyId")]
         [Validation(Required=false)]

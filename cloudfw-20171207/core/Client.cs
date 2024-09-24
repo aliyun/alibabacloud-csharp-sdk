@@ -42,17 +42,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.
-         *
-         * @description You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddAddressBookRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddAddressBookRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAddressBookResponse
+        /// </returns>
         public AddAddressBookResponse AddAddressBookWithOptions(AddAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -112,17 +123,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddAddressBookResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.
-         *
-         * @description You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddAddressBookRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddAddressBookRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAddressBookResponse
+        /// </returns>
         public async Task<AddAddressBookResponse> AddAddressBookWithOptionsAsync(AddAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -182,49 +204,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddAddressBookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.
-         *
-         * @description You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddAddressBookRequest
-         * @return AddAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddAddressBookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAddressBookResponse
+        /// </returns>
         public AddAddressBookResponse AddAddressBook(AddAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddAddressBookWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.
-         *
-         * @description You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddAddressBookRequest
-         * @return AddAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddAddressBookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAddressBookResponse
+        /// </returns>
         public async Task<AddAddressBookResponse> AddAddressBookAsync(AddAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddAddressBookWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an access control policy.
-         *
-         * @description You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddControlPolicyResponse
+        /// </returns>
         public AddControlPolicyResponse AddControlPolicyWithOptions(AddControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -348,17 +399,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an access control policy.
-         *
-         * @description You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddControlPolicyResponse
+        /// </returns>
         public async Task<AddControlPolicyResponse> AddControlPolicyWithOptionsAsync(AddControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -482,49 +544,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an access control policy.
-         *
-         * @description You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddControlPolicyRequest
-         * @return AddControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddControlPolicyResponse
+        /// </returns>
         public AddControlPolicyResponse AddControlPolicy(AddControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an access control policy.
-         *
-         * @description You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddControlPolicyRequest
-         * @return AddControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddControlPolicyResponse
+        /// </returns>
         public async Task<AddControlPolicyResponse> AddControlPolicyAsync(AddControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Adds members to Cloud Firewall.
-         *
-         * @description You can call this operation to add members to Cloud Firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddInstanceMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds members to Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to add members to Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddInstanceMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceMembersResponse
+        /// </returns>
         public AddInstanceMembersResponse AddInstanceMembersWithOptions(AddInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -552,17 +643,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddInstanceMembersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds members to Cloud Firewall.
-         *
-         * @description You can call this operation to add members to Cloud Firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddInstanceMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds members to Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to add members to Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddInstanceMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceMembersResponse
+        /// </returns>
         public async Task<AddInstanceMembersResponse> AddInstanceMembersWithOptionsAsync(AddInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -590,52 +692,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddInstanceMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds members to Cloud Firewall.
-         *
-         * @description You can call this operation to add members to Cloud Firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddInstanceMembersRequest
-         * @return AddInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds members to Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to add members to Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddInstanceMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceMembersResponse
+        /// </returns>
         public AddInstanceMembersResponse AddInstanceMembers(AddInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddInstanceMembersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Adds members to Cloud Firewall.
-         *
-         * @description You can call this operation to add members to Cloud Firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request AddInstanceMembersRequest
-         * @return AddInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds members to Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to add members to Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddInstanceMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceMembersResponse
+        /// </returns>
         public async Task<AddInstanceMembersResponse> AddInstanceMembersAsync(AddInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddInstanceMembersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.
-         *
-         * @description You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
-         * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
-         * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
-         * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
-         *
-         * @param request BatchCopyVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchCopyVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.<br>Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy">Back up an access control policy</a>.<br>After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.<br>The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchCopyVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCopyVpcFirewallControlPolicyResponse
+        /// </returns>
         public BatchCopyVpcFirewallControlPolicyResponse BatchCopyVpcFirewallControlPolicyWithOptions(BatchCopyVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -675,20 +803,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<BatchCopyVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.
-         *
-         * @description You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
-         * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
-         * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
-         * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
-         *
-         * @param request BatchCopyVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchCopyVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.<br>Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy">Back up an access control policy</a>.<br>After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.<br>The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchCopyVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCopyVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<BatchCopyVpcFirewallControlPolicyResponse> BatchCopyVpcFirewallControlPolicyWithOptionsAsync(BatchCopyVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -728,51 +864,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<BatchCopyVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.
-         *
-         * @description You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
-         * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
-         * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
-         * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
-         *
-         * @param request BatchCopyVpcFirewallControlPolicyRequest
-         * @return BatchCopyVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.<br>Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy">Back up an access control policy</a>.<br>After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.<br>The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchCopyVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCopyVpcFirewallControlPolicyResponse
+        /// </returns>
         public BatchCopyVpcFirewallControlPolicyResponse BatchCopyVpcFirewallControlPolicy(BatchCopyVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchCopyVpcFirewallControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.
-         *
-         * @description You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
-         * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
-         * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
-         * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
-         *
-         * @param request BatchCopyVpcFirewallControlPolicyRequest
-         * @return BatchCopyVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.<br>Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy">Back up an access control policy</a>.<br>After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.<br>The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchCopyVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCopyVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<BatchCopyVpcFirewallControlPolicyResponse> BatchCopyVpcFirewallControlPolicyAsync(BatchCopyVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchCopyVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.
-         *
-         * @param request BatchDeleteVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchDeleteVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteVpcFirewallControlPolicyResponse
+        /// </returns>
         public BatchDeleteVpcFirewallControlPolicyResponse BatchDeleteVpcFirewallControlPolicyWithOptions(BatchDeleteVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -804,13 +960,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<BatchDeleteVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.
-         *
-         * @param request BatchDeleteVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchDeleteVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<BatchDeleteVpcFirewallControlPolicyResponse> BatchDeleteVpcFirewallControlPolicyWithOptionsAsync(BatchDeleteVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -842,37 +1006,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<BatchDeleteVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.
-         *
-         * @param request BatchDeleteVpcFirewallControlPolicyRequest
-         * @return BatchDeleteVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteVpcFirewallControlPolicyResponse
+        /// </returns>
         public BatchDeleteVpcFirewallControlPolicyResponse BatchDeleteVpcFirewallControlPolicy(BatchDeleteVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchDeleteVpcFirewallControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.
-         *
-         * @param request BatchDeleteVpcFirewallControlPolicyRequest
-         * @return BatchDeleteVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<BatchDeleteVpcFirewallControlPolicyResponse> BatchDeleteVpcFirewallControlPolicyAsync(BatchDeleteVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchDeleteVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a file download task.
-         *
-         * @param request CreateDownloadTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file download task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDownloadTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDownloadTaskResponse
+        /// </returns>
         public CreateDownloadTaskResponse CreateDownloadTaskWithOptions(CreateDownloadTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -908,13 +1092,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateDownloadTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a file download task.
-         *
-         * @param request CreateDownloadTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file download task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDownloadTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDownloadTaskResponse
+        /// </returns>
         public async Task<CreateDownloadTaskResponse> CreateDownloadTaskWithOptionsAsync(CreateDownloadTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -950,39 +1142,62 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateDownloadTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a file download task.
-         *
-         * @param request CreateDownloadTaskRequest
-         * @return CreateDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file download task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDownloadTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDownloadTaskResponse
+        /// </returns>
         public CreateDownloadTaskResponse CreateDownloadTask(CreateDownloadTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDownloadTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a file download task.
-         *
-         * @param request CreateDownloadTaskRequest
-         * @return CreateDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file download task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDownloadTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDownloadTaskResponse
+        /// </returns>
         public async Task<CreateDownloadTaskResponse> CreateDownloadTaskAsync(CreateDownloadTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDownloadTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an access control policy for a NAT firewall.
-         *
-         * @description You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
-         *
-         * @param request CreateNatFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNatFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNatFirewallControlPolicyResponse
+        /// </returns>
         public CreateNatFirewallControlPolicyResponse CreateNatFirewallControlPolicyWithOptions(CreateNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1102,15 +1317,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an access control policy for a NAT firewall.
-         *
-         * @description You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
-         *
-         * @param request CreateNatFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNatFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNatFirewallControlPolicyResponse
+        /// </returns>
         public async Task<CreateNatFirewallControlPolicyResponse> CreateNatFirewallControlPolicyWithOptionsAsync(CreateNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1230,41 +1456,67 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an access control policy for a NAT firewall.
-         *
-         * @description You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
-         *
-         * @param request CreateNatFirewallControlPolicyRequest
-         * @return CreateNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNatFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNatFirewallControlPolicyResponse
+        /// </returns>
         public CreateNatFirewallControlPolicyResponse CreateNatFirewallControlPolicy(CreateNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNatFirewallControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an access control policy for a NAT firewall.
-         *
-         * @description You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
-         *
-         * @param request CreateNatFirewallControlPolicyRequest
-         * @return CreateNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNatFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNatFirewallControlPolicyResponse
+        /// </returns>
         public async Task<CreateNatFirewallControlPolicyResponse> CreateNatFirewallControlPolicyAsync(CreateNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateNatFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a NAT firewall.
-         *
-         * @param request CreateSecurityProxyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecurityProxyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityProxyResponse
+        /// </returns>
         public CreateSecurityProxyResponse CreateSecurityProxyWithOptions(CreateSecurityProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1332,13 +1584,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateSecurityProxyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a NAT firewall.
-         *
-         * @param request CreateSecurityProxyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecurityProxyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityProxyResponse
+        /// </returns>
         public async Task<CreateSecurityProxyResponse> CreateSecurityProxyWithOptionsAsync(CreateSecurityProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1406,37 +1666,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateSecurityProxyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a NAT firewall.
-         *
-         * @param request CreateSecurityProxyRequest
-         * @return CreateSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecurityProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityProxyResponse
+        /// </returns>
         public CreateSecurityProxyResponse CreateSecurityProxy(CreateSecurityProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSecurityProxyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a NAT firewall.
-         *
-         * @param request CreateSecurityProxyRequest
-         * @return CreateSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecurityProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityProxyResponse
+        /// </returns>
         public async Task<CreateSecurityProxyResponse> CreateSecurityProxyAsync(CreateSecurityProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSecurityProxyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建云防火墙SLS日志投递
-         *
-         * @param request CreateSlsLogDispatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSlsLogDispatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建云防火墙SLS日志投递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlsLogDispatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlsLogDispatchResponse
+        /// </returns>
         public CreateSlsLogDispatchResponse CreateSlsLogDispatchWithOptions(CreateSlsLogDispatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1468,13 +1748,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateSlsLogDispatchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建云防火墙SLS日志投递
-         *
-         * @param request CreateSlsLogDispatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSlsLogDispatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建云防火墙SLS日志投递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlsLogDispatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlsLogDispatchResponse
+        /// </returns>
         public async Task<CreateSlsLogDispatchResponse> CreateSlsLogDispatchWithOptionsAsync(CreateSlsLogDispatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1506,37 +1794,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateSlsLogDispatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建云防火墙SLS日志投递
-         *
-         * @param request CreateSlsLogDispatchRequest
-         * @return CreateSlsLogDispatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建云防火墙SLS日志投递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlsLogDispatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlsLogDispatchResponse
+        /// </returns>
         public CreateSlsLogDispatchResponse CreateSlsLogDispatch(CreateSlsLogDispatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSlsLogDispatchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建云防火墙SLS日志投递
-         *
-         * @param request CreateSlsLogDispatchRequest
-         * @return CreateSlsLogDispatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建云防火墙SLS日志投递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlsLogDispatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlsLogDispatchResponse
+        /// </returns>
         public async Task<CreateSlsLogDispatchResponse> CreateSlsLogDispatchAsync(CreateSlsLogDispatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSlsLogDispatchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a virtual private cloud (VPC) firewall for a transit router.
-         *
-         * @param request CreateTrFirewallV2Request
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTrFirewallV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual private cloud (VPC) firewall for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrFirewallV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrFirewallV2Response
+        /// </returns>
         public CreateTrFirewallV2Response CreateTrFirewallV2WithOptions(CreateTrFirewallV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1620,13 +1928,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateTrFirewallV2Response>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a virtual private cloud (VPC) firewall for a transit router.
-         *
-         * @param request CreateTrFirewallV2Request
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTrFirewallV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual private cloud (VPC) firewall for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrFirewallV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrFirewallV2Response
+        /// </returns>
         public async Task<CreateTrFirewallV2Response> CreateTrFirewallV2WithOptionsAsync(CreateTrFirewallV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1710,37 +2026,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateTrFirewallV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a virtual private cloud (VPC) firewall for a transit router.
-         *
-         * @param request CreateTrFirewallV2Request
-         * @return CreateTrFirewallV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual private cloud (VPC) firewall for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrFirewallV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrFirewallV2Response
+        /// </returns>
         public CreateTrFirewallV2Response CreateTrFirewallV2(CreateTrFirewallV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTrFirewallV2WithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a virtual private cloud (VPC) firewall for a transit router.
-         *
-         * @param request CreateTrFirewallV2Request
-         * @return CreateTrFirewallV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual private cloud (VPC) firewall for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrFirewallV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrFirewallV2Response
+        /// </returns>
         public async Task<CreateTrFirewallV2Response> CreateTrFirewallV2Async(CreateTrFirewallV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTrFirewallV2WithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a routing policy for a VPC firewall of a transit router.
-         *
-         * @param tmpReq CreateTrFirewallV2RoutePolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTrFirewallV2RoutePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a routing policy for a VPC firewall of a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateTrFirewallV2RoutePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrFirewallV2RoutePolicyResponse
+        /// </returns>
         public CreateTrFirewallV2RoutePolicyResponse CreateTrFirewallV2RoutePolicyWithOptions(CreateTrFirewallV2RoutePolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1802,13 +2138,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateTrFirewallV2RoutePolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a routing policy for a VPC firewall of a transit router.
-         *
-         * @param tmpReq CreateTrFirewallV2RoutePolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTrFirewallV2RoutePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a routing policy for a VPC firewall of a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateTrFirewallV2RoutePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrFirewallV2RoutePolicyResponse
+        /// </returns>
         public async Task<CreateTrFirewallV2RoutePolicyResponse> CreateTrFirewallV2RoutePolicyWithOptionsAsync(CreateTrFirewallV2RoutePolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1870,41 +2214,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateTrFirewallV2RoutePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a routing policy for a VPC firewall of a transit router.
-         *
-         * @param request CreateTrFirewallV2RoutePolicyRequest
-         * @return CreateTrFirewallV2RoutePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a routing policy for a VPC firewall of a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrFirewallV2RoutePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrFirewallV2RoutePolicyResponse
+        /// </returns>
         public CreateTrFirewallV2RoutePolicyResponse CreateTrFirewallV2RoutePolicy(CreateTrFirewallV2RoutePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTrFirewallV2RoutePolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a routing policy for a VPC firewall of a transit router.
-         *
-         * @param request CreateTrFirewallV2RoutePolicyRequest
-         * @return CreateTrFirewallV2RoutePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a routing policy for a VPC firewall of a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrFirewallV2RoutePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrFirewallV2RoutePolicyResponse
+        /// </returns>
         public async Task<CreateTrFirewallV2RoutePolicyResponse> CreateTrFirewallV2RoutePolicyAsync(CreateTrFirewallV2RoutePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTrFirewallV2RoutePolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallCenConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallCenConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallCenConfigureResponse
+        /// </returns>
         public CreateVpcFirewallCenConfigureResponse CreateVpcFirewallCenConfigureWithOptions(CreateVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1972,17 +2339,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateVpcFirewallCenConfigureResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallCenConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallCenConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallCenConfigureResponse
+        /// </returns>
         public async Task<CreateVpcFirewallCenConfigureResponse> CreateVpcFirewallCenConfigureWithOptionsAsync(CreateVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2050,49 +2428,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateVpcFirewallCenConfigureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallCenConfigureRequest
-         * @return CreateVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallCenConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallCenConfigureResponse
+        /// </returns>
         public CreateVpcFirewallCenConfigureResponse CreateVpcFirewallCenConfigure(CreateVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateVpcFirewallCenConfigureWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallCenConfigureRequest
-         * @return CreateVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallCenConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallCenConfigureResponse
+        /// </returns>
         public async Task<CreateVpcFirewallCenConfigureResponse> CreateVpcFirewallCenConfigureAsync(CreateVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVpcFirewallCenConfigureWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.
-         *
-         * @description You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-         * ### [](#qps)QPS limit
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h3><a href="#qps"></a>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallConfigureResponse
+        /// </returns>
         public CreateVpcFirewallConfigureResponse CreateVpcFirewallConfigureWithOptions(CreateVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2156,17 +2563,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateVpcFirewallConfigureResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.
-         *
-         * @description You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-         * ### [](#qps)QPS limit
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h3><a href="#qps"></a>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallConfigureResponse
+        /// </returns>
         public async Task<CreateVpcFirewallConfigureResponse> CreateVpcFirewallConfigureWithOptionsAsync(CreateVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2230,49 +2648,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateVpcFirewallConfigureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.
-         *
-         * @description You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-         * ### [](#qps)QPS limit
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallConfigureRequest
-         * @return CreateVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h3><a href="#qps"></a>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallConfigureResponse
+        /// </returns>
         public CreateVpcFirewallConfigureResponse CreateVpcFirewallConfigure(CreateVpcFirewallConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateVpcFirewallConfigureWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.
-         *
-         * @description You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-         * ### [](#qps)QPS limit
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallConfigureRequest
-         * @return CreateVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h3><a href="#qps"></a>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallConfigureResponse
+        /// </returns>
         public async Task<CreateVpcFirewallConfigureResponse> CreateVpcFirewallConfigureAsync(CreateVpcFirewallConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVpcFirewallConfigureWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallControlPolicyResponse
+        /// </returns>
         public CreateVpcFirewallControlPolicyResponse CreateVpcFirewallControlPolicyWithOptions(CreateVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2392,17 +2839,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<CreateVpcFirewallControlPolicyResponse> CreateVpcFirewallControlPolicyWithOptionsAsync(CreateVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2522,49 +2980,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallControlPolicyRequest
-         * @return CreateVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallControlPolicyResponse
+        /// </returns>
         public CreateVpcFirewallControlPolicyResponse CreateVpcFirewallControlPolicy(CreateVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateVpcFirewallControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request CreateVpcFirewallControlPolicyRequest
-         * @return CreateVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<CreateVpcFirewallControlPolicyResponse> CreateVpcFirewallControlPolicyAsync(CreateVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an address book for access control.
-         *
-         * @description You can call the DeleteAddressBook operation to delete an address book for access control.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteAddressBookRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an address book for access control.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteAddressBook operation to delete an address book for access control.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAddressBookRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAddressBookResponse
+        /// </returns>
         public DeleteAddressBookResponse DeleteAddressBookWithOptions(DeleteAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2600,17 +3087,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteAddressBookResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an address book for access control.
-         *
-         * @description You can call the DeleteAddressBook operation to delete an address book for access control.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteAddressBookRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an address book for access control.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteAddressBook operation to delete an address book for access control.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAddressBookRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAddressBookResponse
+        /// </returns>
         public async Task<DeleteAddressBookResponse> DeleteAddressBookWithOptionsAsync(DeleteAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2646,49 +3144,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteAddressBookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an address book for access control.
-         *
-         * @description You can call the DeleteAddressBook operation to delete an address book for access control.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteAddressBookRequest
-         * @return DeleteAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an address book for access control.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteAddressBook operation to delete an address book for access control.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAddressBookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAddressBookResponse
+        /// </returns>
         public DeleteAddressBookResponse DeleteAddressBook(DeleteAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAddressBookWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an address book for access control.
-         *
-         * @description You can call the DeleteAddressBook operation to delete an address book for access control.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteAddressBookRequest
-         * @return DeleteAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an address book for access control.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteAddressBook operation to delete an address book for access control.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAddressBookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAddressBookResponse
+        /// </returns>
         public async Task<DeleteAddressBookResponse> DeleteAddressBookAsync(DeleteAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAddressBookWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access control policy.
-         *
-         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyResponse
+        /// </returns>
         public DeleteControlPolicyResponse DeleteControlPolicyWithOptions(DeleteControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2728,17 +3255,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access control policy.
-         *
-         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyResponse
+        /// </returns>
         public async Task<DeleteControlPolicyResponse> DeleteControlPolicyWithOptionsAsync(DeleteControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2778,45 +3316,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access control policy.
-         *
-         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteControlPolicyRequest
-         * @return DeleteControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyResponse
+        /// </returns>
         public DeleteControlPolicyResponse DeleteControlPolicy(DeleteControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access control policy.
-         *
-         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteControlPolicyRequest
-         * @return DeleteControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyResponse
+        /// </returns>
         public async Task<DeleteControlPolicyResponse> DeleteControlPolicyAsync(DeleteControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access control policy template.
-         *
-         * @param request DeleteControlPolicyTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteControlPolicyTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyTemplateResponse
+        /// </returns>
         public DeleteControlPolicyTemplateResponse DeleteControlPolicyTemplateWithOptions(DeleteControlPolicyTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2856,13 +3420,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteControlPolicyTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access control policy template.
-         *
-         * @param request DeleteControlPolicyTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteControlPolicyTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyTemplateResponse
+        /// </returns>
         public async Task<DeleteControlPolicyTemplateResponse> DeleteControlPolicyTemplateWithOptionsAsync(DeleteControlPolicyTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2902,41 +3474,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteControlPolicyTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access control policy template.
-         *
-         * @param request DeleteControlPolicyTemplateRequest
-         * @return DeleteControlPolicyTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyTemplateResponse
+        /// </returns>
         public DeleteControlPolicyTemplateResponse DeleteControlPolicyTemplate(DeleteControlPolicyTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteControlPolicyTemplateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access control policy template.
-         *
-         * @param request DeleteControlPolicyTemplateRequest
-         * @return DeleteControlPolicyTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyTemplateResponse
+        /// </returns>
         public async Task<DeleteControlPolicyTemplateResponse> DeleteControlPolicyTemplateAsync(DeleteControlPolicyTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteControlPolicyTemplateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes file download tasks.
-         *
-         * @description You can call this operation to delete file download tasks and delete the files.
-         * **
-         * **Warning** Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.
-         *
-         * @param request DeleteDownloadTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes file download tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete file download tasks and delete the files.
+        /// **
+        /// <b>Warning</b> Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDownloadTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDownloadTaskResponse
+        /// </returns>
         public DeleteDownloadTaskResponse DeleteDownloadTaskWithOptions(DeleteDownloadTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2968,17 +3563,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteDownloadTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes file download tasks.
-         *
-         * @description You can call this operation to delete file download tasks and delete the files.
-         * **
-         * **Warning** Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.
-         *
-         * @param request DeleteDownloadTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes file download tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete file download tasks and delete the files.
+        /// **
+        /// <b>Warning</b> Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDownloadTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDownloadTaskResponse
+        /// </returns>
         public async Task<DeleteDownloadTaskResponse> DeleteDownloadTaskWithOptionsAsync(DeleteDownloadTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3010,45 +3616,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteDownloadTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes file download tasks.
-         *
-         * @description You can call this operation to delete file download tasks and delete the files.
-         * **
-         * **Warning** Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.
-         *
-         * @param request DeleteDownloadTaskRequest
-         * @return DeleteDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes file download tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete file download tasks and delete the files.
+        /// **
+        /// <b>Warning</b> Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDownloadTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDownloadTaskResponse
+        /// </returns>
         public DeleteDownloadTaskResponse DeleteDownloadTask(DeleteDownloadTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDownloadTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes file download tasks.
-         *
-         * @description You can call this operation to delete file download tasks and delete the files.
-         * **
-         * **Warning** Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.
-         *
-         * @param request DeleteDownloadTaskRequest
-         * @return DeleteDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes file download tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete file download tasks and delete the files.
+        /// **
+        /// <b>Warning</b> Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDownloadTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDownloadTaskResponse
+        /// </returns>
         public async Task<DeleteDownloadTaskResponse> DeleteDownloadTaskAsync(DeleteDownloadTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDownloadTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.
-         *
-         * @param request DeleteFirewallV2RoutePoliciesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFirewallV2RoutePoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFirewallV2RoutePoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFirewallV2RoutePoliciesResponse
+        /// </returns>
         public DeleteFirewallV2RoutePoliciesResponse DeleteFirewallV2RoutePoliciesWithOptions(DeleteFirewallV2RoutePoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3084,13 +3716,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteFirewallV2RoutePoliciesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.
-         *
-         * @param request DeleteFirewallV2RoutePoliciesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFirewallV2RoutePoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFirewallV2RoutePoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFirewallV2RoutePoliciesResponse
+        /// </returns>
         public async Task<DeleteFirewallV2RoutePoliciesResponse> DeleteFirewallV2RoutePoliciesWithOptionsAsync(DeleteFirewallV2RoutePoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3126,41 +3766,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteFirewallV2RoutePoliciesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.
-         *
-         * @param request DeleteFirewallV2RoutePoliciesRequest
-         * @return DeleteFirewallV2RoutePoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFirewallV2RoutePoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFirewallV2RoutePoliciesResponse
+        /// </returns>
         public DeleteFirewallV2RoutePoliciesResponse DeleteFirewallV2RoutePolicies(DeleteFirewallV2RoutePoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFirewallV2RoutePoliciesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.
-         *
-         * @param request DeleteFirewallV2RoutePoliciesRequest
-         * @return DeleteFirewallV2RoutePoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFirewallV2RoutePoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFirewallV2RoutePoliciesResponse
+        /// </returns>
         public async Task<DeleteFirewallV2RoutePoliciesResponse> DeleteFirewallV2RoutePoliciesAsync(DeleteFirewallV2RoutePoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFirewallV2RoutePoliciesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Removes members from Cloud Firewall.
-         *
-         * @description You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the [DescribeInstanceMembers](https://help.aliyun.com/document_detail/271704.html) operation to obtain the information about the members that are added to Cloud Firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteInstanceMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes members from Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to obtain the information about the members that are added to Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceMembersResponse
+        /// </returns>
         public DeleteInstanceMembersResponse DeleteInstanceMembersWithOptions(DeleteInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3188,17 +3851,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteInstanceMembersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes members from Cloud Firewall.
-         *
-         * @description You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the [DescribeInstanceMembers](https://help.aliyun.com/document_detail/271704.html) operation to obtain the information about the members that are added to Cloud Firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteInstanceMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes members from Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to obtain the information about the members that are added to Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceMembersResponse
+        /// </returns>
         public async Task<DeleteInstanceMembersResponse> DeleteInstanceMembersWithOptionsAsync(DeleteInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3226,47 +3900,76 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteInstanceMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes members from Cloud Firewall.
-         *
-         * @description You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the [DescribeInstanceMembers](https://help.aliyun.com/document_detail/271704.html) operation to obtain the information about the members that are added to Cloud Firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteInstanceMembersRequest
-         * @return DeleteInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes members from Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to obtain the information about the members that are added to Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceMembersResponse
+        /// </returns>
         public DeleteInstanceMembersResponse DeleteInstanceMembers(DeleteInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteInstanceMembersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes members from Cloud Firewall.
-         *
-         * @description You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the [DescribeInstanceMembers](https://help.aliyun.com/document_detail/271704.html) operation to obtain the information about the members that are added to Cloud Firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteInstanceMembersRequest
-         * @return DeleteInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes members from Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to obtain the information about the members that are added to Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceMembersResponse
+        /// </returns>
         public async Task<DeleteInstanceMembersResponse> DeleteInstanceMembersAsync(DeleteInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteInstanceMembersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access control policy that is created for a NAT firewall.
-         *
-         * @description You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
-         *
-         * @param request DeleteNatFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to delete an outbound access control policy that is created for a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNatFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNatFirewallControlPolicyResponse
+        /// </returns>
         public DeleteNatFirewallControlPolicyResponse DeleteNatFirewallControlPolicyWithOptions(DeleteNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3306,15 +4009,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access control policy that is created for a NAT firewall.
-         *
-         * @description You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
-         *
-         * @param request DeleteNatFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to delete an outbound access control policy that is created for a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNatFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNatFirewallControlPolicyResponse
+        /// </returns>
         public async Task<DeleteNatFirewallControlPolicyResponse> DeleteNatFirewallControlPolicyWithOptionsAsync(DeleteNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3354,41 +4068,67 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access control policy that is created for a NAT firewall.
-         *
-         * @description You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
-         *
-         * @param request DeleteNatFirewallControlPolicyRequest
-         * @return DeleteNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to delete an outbound access control policy that is created for a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNatFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNatFirewallControlPolicyResponse
+        /// </returns>
         public DeleteNatFirewallControlPolicyResponse DeleteNatFirewallControlPolicy(DeleteNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNatFirewallControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access control policy that is created for a NAT firewall.
-         *
-         * @description You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
-         *
-         * @param request DeleteNatFirewallControlPolicyRequest
-         * @return DeleteNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to delete an outbound access control policy that is created for a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNatFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNatFirewallControlPolicyResponse
+        /// </returns>
         public async Task<DeleteNatFirewallControlPolicyResponse> DeleteNatFirewallControlPolicyAsync(DeleteNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNatFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes access control policies that are created for a NAT firewall at a time.
-         *
-         * @param request DeleteNatFirewallControlPolicyBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteNatFirewallControlPolicyBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes access control policies that are created for a NAT firewall at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNatFirewallControlPolicyBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNatFirewallControlPolicyBatchResponse
+        /// </returns>
         public DeleteNatFirewallControlPolicyBatchResponse DeleteNatFirewallControlPolicyBatchWithOptions(DeleteNatFirewallControlPolicyBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3428,13 +4168,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteNatFirewallControlPolicyBatchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes access control policies that are created for a NAT firewall at a time.
-         *
-         * @param request DeleteNatFirewallControlPolicyBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteNatFirewallControlPolicyBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes access control policies that are created for a NAT firewall at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNatFirewallControlPolicyBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNatFirewallControlPolicyBatchResponse
+        /// </returns>
         public async Task<DeleteNatFirewallControlPolicyBatchResponse> DeleteNatFirewallControlPolicyBatchWithOptionsAsync(DeleteNatFirewallControlPolicyBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3474,37 +4222,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteNatFirewallControlPolicyBatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes access control policies that are created for a NAT firewall at a time.
-         *
-         * @param request DeleteNatFirewallControlPolicyBatchRequest
-         * @return DeleteNatFirewallControlPolicyBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes access control policies that are created for a NAT firewall at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNatFirewallControlPolicyBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNatFirewallControlPolicyBatchResponse
+        /// </returns>
         public DeleteNatFirewallControlPolicyBatchResponse DeleteNatFirewallControlPolicyBatch(DeleteNatFirewallControlPolicyBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNatFirewallControlPolicyBatchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes access control policies that are created for a NAT firewall at a time.
-         *
-         * @param request DeleteNatFirewallControlPolicyBatchRequest
-         * @return DeleteNatFirewallControlPolicyBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes access control policies that are created for a NAT firewall at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNatFirewallControlPolicyBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNatFirewallControlPolicyBatchResponse
+        /// </returns>
         public async Task<DeleteNatFirewallControlPolicyBatchResponse> DeleteNatFirewallControlPolicyBatchAsync(DeleteNatFirewallControlPolicyBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNatFirewallControlPolicyBatchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a NAT firewall.
-         *
-         * @param request DeleteSecurityProxyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityProxyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityProxyResponse
+        /// </returns>
         public DeleteSecurityProxyResponse DeleteSecurityProxyWithOptions(DeleteSecurityProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3536,13 +4304,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteSecurityProxyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a NAT firewall.
-         *
-         * @param request DeleteSecurityProxyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityProxyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityProxyResponse
+        /// </returns>
         public async Task<DeleteSecurityProxyResponse> DeleteSecurityProxyWithOptionsAsync(DeleteSecurityProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3574,37 +4350,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteSecurityProxyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a NAT firewall.
-         *
-         * @param request DeleteSecurityProxyRequest
-         * @return DeleteSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityProxyResponse
+        /// </returns>
         public DeleteSecurityProxyResponse DeleteSecurityProxy(DeleteSecurityProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSecurityProxyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a NAT firewall.
-         *
-         * @param request DeleteSecurityProxyRequest
-         * @return DeleteSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityProxyResponse
+        /// </returns>
         public async Task<DeleteSecurityProxyResponse> DeleteSecurityProxyAsync(DeleteSecurityProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSecurityProxyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request DeleteTrFirewallV2Request
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTrFirewallV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTrFirewallV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTrFirewallV2Response
+        /// </returns>
         public DeleteTrFirewallV2Response DeleteTrFirewallV2WithOptions(DeleteTrFirewallV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3636,13 +4432,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteTrFirewallV2Response>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request DeleteTrFirewallV2Request
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTrFirewallV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTrFirewallV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTrFirewallV2Response
+        /// </returns>
         public async Task<DeleteTrFirewallV2Response> DeleteTrFirewallV2WithOptionsAsync(DeleteTrFirewallV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3674,41 +4478,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteTrFirewallV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request DeleteTrFirewallV2Request
-         * @return DeleteTrFirewallV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTrFirewallV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTrFirewallV2Response
+        /// </returns>
         public DeleteTrFirewallV2Response DeleteTrFirewallV2(DeleteTrFirewallV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTrFirewallV2WithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request DeleteTrFirewallV2Request
-         * @return DeleteTrFirewallV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTrFirewallV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTrFirewallV2Response
+        /// </returns>
         public async Task<DeleteTrFirewallV2Response> DeleteTrFirewallV2Async(DeleteTrFirewallV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTrFirewallV2WithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallCenConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallCenConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallCenConfigureResponse
+        /// </returns>
         public DeleteVpcFirewallCenConfigureResponse DeleteVpcFirewallCenConfigureWithOptions(DeleteVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3744,17 +4571,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallCenConfigureResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallCenConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallCenConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallCenConfigureResponse
+        /// </returns>
         public async Task<DeleteVpcFirewallCenConfigureResponse> DeleteVpcFirewallCenConfigureWithOptionsAsync(DeleteVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3790,49 +4628,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallCenConfigureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallCenConfigureRequest
-         * @return DeleteVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallCenConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallCenConfigureResponse
+        /// </returns>
         public DeleteVpcFirewallCenConfigureResponse DeleteVpcFirewallCenConfigure(DeleteVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteVpcFirewallCenConfigureWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallCenConfigureRequest
-         * @return DeleteVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallCenConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallCenConfigureResponse
+        /// </returns>
         public async Task<DeleteVpcFirewallCenConfigureResponse> DeleteVpcFirewallCenConfigureAsync(DeleteVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteVpcFirewallCenConfigureWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallConfigureResponse
+        /// </returns>
         public DeleteVpcFirewallConfigureResponse DeleteVpcFirewallConfigureWithOptions(DeleteVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3868,17 +4735,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallConfigureResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallConfigureResponse
+        /// </returns>
         public async Task<DeleteVpcFirewallConfigureResponse> DeleteVpcFirewallConfigureWithOptionsAsync(DeleteVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3914,49 +4792,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallConfigureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallConfigureRequest
-         * @return DeleteVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallConfigureResponse
+        /// </returns>
         public DeleteVpcFirewallConfigureResponse DeleteVpcFirewallConfigure(DeleteVpcFirewallConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteVpcFirewallConfigureWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallConfigureRequest
-         * @return DeleteVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallConfigureResponse
+        /// </returns>
         public async Task<DeleteVpcFirewallConfigureResponse> DeleteVpcFirewallConfigureAsync(DeleteVpcFirewallConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteVpcFirewallConfigureWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. 
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallControlPolicyResponse
+        /// </returns>
         public DeleteVpcFirewallControlPolicyResponse DeleteVpcFirewallControlPolicyWithOptions(DeleteVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3992,17 +4899,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. 
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<DeleteVpcFirewallControlPolicyResponse> DeleteVpcFirewallControlPolicyWithOptionsAsync(DeleteVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4038,45 +4956,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. 
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallControlPolicyRequest
-         * @return DeleteVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallControlPolicyResponse
+        /// </returns>
         public DeleteVpcFirewallControlPolicyResponse DeleteVpcFirewallControlPolicy(DeleteVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteVpcFirewallControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. 
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DeleteVpcFirewallControlPolicyRequest
-         * @return DeleteVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<DeleteVpcFirewallControlPolicyResponse> DeleteVpcFirewallControlPolicyAsync(DeleteVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the statistics on the requests that are blocked by the access control list (ACL) feature.
-         *
-         * @param request DescribeACLProtectTrendRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeACLProtectTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on the requests that are blocked by the access control list (ACL) feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLProtectTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLProtectTrendResponse
+        /// </returns>
         public DescribeACLProtectTrendResponse DescribeACLProtectTrendWithOptions(DescribeACLProtectTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4120,13 +5064,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeACLProtectTrendResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the statistics on the requests that are blocked by the access control list (ACL) feature.
-         *
-         * @param request DescribeACLProtectTrendRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeACLProtectTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on the requests that are blocked by the access control list (ACL) feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLProtectTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLProtectTrendResponse
+        /// </returns>
         public async Task<DescribeACLProtectTrendResponse> DescribeACLProtectTrendWithOptionsAsync(DescribeACLProtectTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4170,41 +5122,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeACLProtectTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the statistics on the requests that are blocked by the access control list (ACL) feature.
-         *
-         * @param request DescribeACLProtectTrendRequest
-         * @return DescribeACLProtectTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on the requests that are blocked by the access control list (ACL) feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLProtectTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLProtectTrendResponse
+        /// </returns>
         public DescribeACLProtectTrendResponse DescribeACLProtectTrend(DescribeACLProtectTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeACLProtectTrendWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the statistics on the requests that are blocked by the access control list (ACL) feature.
-         *
-         * @param request DescribeACLProtectTrendRequest
-         * @return DescribeACLProtectTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on the requests that are blocked by the access control list (ACL) feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLProtectTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLProtectTrendResponse
+        /// </returns>
         public async Task<DescribeACLProtectTrendResponse> DescribeACLProtectTrendAsync(DescribeACLProtectTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeACLProtectTrendWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details about an address book for an access control policy.
-         *
-         * @description You can call this operation to query the details about an address book for an access control policy.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeAddressBookRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about an address book for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the details about an address book for an access control policy.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAddressBookRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAddressBookResponse
+        /// </returns>
         public DescribeAddressBookResponse DescribeAddressBookWithOptions(DescribeAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4252,17 +5227,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeAddressBookResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details about an address book for an access control policy.
-         *
-         * @description You can call this operation to query the details about an address book for an access control policy.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeAddressBookRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about an address book for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the details about an address book for an access control policy.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAddressBookRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAddressBookResponse
+        /// </returns>
         public async Task<DescribeAddressBookResponse> DescribeAddressBookWithOptionsAsync(DescribeAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4310,49 +5296,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeAddressBookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details about an address book for an access control policy.
-         *
-         * @description You can call this operation to query the details about an address book for an access control policy.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeAddressBookRequest
-         * @return DescribeAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about an address book for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the details about an address book for an access control policy.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAddressBookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAddressBookResponse
+        /// </returns>
         public DescribeAddressBookResponse DescribeAddressBook(DescribeAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAddressBookWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details about an address book for an access control policy.
-         *
-         * @description You can call this operation to query the details about an address book for an access control policy.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeAddressBookRequest
-         * @return DescribeAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about an address book for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the details about an address book for an access control policy.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAddressBookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAddressBookResponse
+        /// </returns>
         public async Task<DescribeAddressBookResponse> DescribeAddressBookAsync(DescribeAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAddressBookWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the assets that are protected by Cloud Firewall.
-         *
-         * @description You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeAssetListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAssetListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the assets that are protected by Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetListResponse
+        /// </returns>
         public DescribeAssetListResponse DescribeAssetListWithOptions(DescribeAssetListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4428,17 +5443,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeAssetListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the assets that are protected by Cloud Firewall.
-         *
-         * @description You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeAssetListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAssetListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the assets that are protected by Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetListResponse
+        /// </returns>
         public async Task<DescribeAssetListResponse> DescribeAssetListWithOptionsAsync(DescribeAssetListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4514,45 +5540,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeAssetListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the assets that are protected by Cloud Firewall.
-         *
-         * @description You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeAssetListRequest
-         * @return DescribeAssetListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the assets that are protected by Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetListResponse
+        /// </returns>
         public DescribeAssetListResponse DescribeAssetList(DescribeAssetListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAssetListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the assets that are protected by Cloud Firewall.
-         *
-         * @description You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeAssetListRequest
-         * @return DescribeAssetListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the assets that are protected by Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetListResponse
+        /// </returns>
         public async Task<DescribeAssetListResponse> DescribeAssetListAsync(DescribeAssetListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAssetListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the risk levels of assets.
-         *
-         * @param request DescribeAssetRiskListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAssetRiskListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the risk levels of assets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetRiskListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetRiskListResponse
+        /// </returns>
         public DescribeAssetRiskListResponse DescribeAssetRiskListWithOptions(DescribeAssetRiskListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4592,13 +5644,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeAssetRiskListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the risk levels of assets.
-         *
-         * @param request DescribeAssetRiskListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAssetRiskListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the risk levels of assets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetRiskListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetRiskListResponse
+        /// </returns>
         public async Task<DescribeAssetRiskListResponse> DescribeAssetRiskListWithOptionsAsync(DescribeAssetRiskListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4638,37 +5698,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeAssetRiskListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the risk levels of assets.
-         *
-         * @param request DescribeAssetRiskListRequest
-         * @return DescribeAssetRiskListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the risk levels of assets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetRiskListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetRiskListResponse
+        /// </returns>
         public DescribeAssetRiskListResponse DescribeAssetRiskList(DescribeAssetRiskListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAssetRiskListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the risk levels of assets.
-         *
-         * @param request DescribeAssetRiskListRequest
-         * @return DescribeAssetRiskListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the risk levels of assets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetRiskListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetRiskListResponse
+        /// </returns>
         public async Task<DescribeAssetRiskListResponse> DescribeAssetRiskListAsync(DescribeAssetRiskListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAssetRiskListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the firewall risk level.
-         *
-         * @param request DescribeCfwRiskLevelSummaryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCfwRiskLevelSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the firewall risk level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCfwRiskLevelSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCfwRiskLevelSummaryResponse
+        /// </returns>
         public DescribeCfwRiskLevelSummaryResponse DescribeCfwRiskLevelSummaryWithOptions(DescribeCfwRiskLevelSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4704,13 +5784,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeCfwRiskLevelSummaryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the firewall risk level.
-         *
-         * @param request DescribeCfwRiskLevelSummaryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCfwRiskLevelSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the firewall risk level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCfwRiskLevelSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCfwRiskLevelSummaryResponse
+        /// </returns>
         public async Task<DescribeCfwRiskLevelSummaryResponse> DescribeCfwRiskLevelSummaryWithOptionsAsync(DescribeCfwRiskLevelSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4746,41 +5834,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeCfwRiskLevelSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the firewall risk level.
-         *
-         * @param request DescribeCfwRiskLevelSummaryRequest
-         * @return DescribeCfwRiskLevelSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the firewall risk level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCfwRiskLevelSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCfwRiskLevelSummaryResponse
+        /// </returns>
         public DescribeCfwRiskLevelSummaryResponse DescribeCfwRiskLevelSummary(DescribeCfwRiskLevelSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCfwRiskLevelSummaryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the firewall risk level.
-         *
-         * @param request DescribeCfwRiskLevelSummaryRequest
-         * @return DescribeCfwRiskLevelSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the firewall risk level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCfwRiskLevelSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCfwRiskLevelSummaryResponse
+        /// </returns>
         public async Task<DescribeCfwRiskLevelSummaryResponse> DescribeCfwRiskLevelSummaryAsync(DescribeCfwRiskLevelSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCfwRiskLevelSummaryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details about all access control policies.
-         *
-         * @description You can call the DescribeControlPolicy operation to query the details about access control policies by page.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about all access control policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeControlPolicy operation to query the details about access control policies by page.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeControlPolicyResponse
+        /// </returns>
         public DescribeControlPolicyResponse DescribeControlPolicyWithOptions(DescribeControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4860,17 +5971,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details about all access control policies.
-         *
-         * @description You can call the DescribeControlPolicy operation to query the details about access control policies by page.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about all access control policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeControlPolicy operation to query the details about access control policies by page.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeControlPolicyResponse
+        /// </returns>
         public async Task<DescribeControlPolicyResponse> DescribeControlPolicyWithOptionsAsync(DescribeControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4950,45 +6072,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details about all access control policies.
-         *
-         * @description You can call the DescribeControlPolicy operation to query the details about access control policies by page.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeControlPolicyRequest
-         * @return DescribeControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about all access control policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeControlPolicy operation to query the details about access control policies by page.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeControlPolicyResponse
+        /// </returns>
         public DescribeControlPolicyResponse DescribeControlPolicy(DescribeControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details about all access control policies.
-         *
-         * @description You can call the DescribeControlPolicy operation to query the details about access control policies by page.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeControlPolicyRequest
-         * @return DescribeControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about all access control policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeControlPolicy operation to query the details about access control policies by page.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeControlPolicyResponse
+        /// </returns>
         public async Task<DescribeControlPolicyResponse> DescribeControlPolicyAsync(DescribeControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the default configurations of the intrusion prevention system (IPS).
-         *
-         * @param request DescribeDefaultIPSConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default configurations of the intrusion prevention system (IPS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefaultIPSConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefaultIPSConfigResponse
+        /// </returns>
         public DescribeDefaultIPSConfigResponse DescribeDefaultIPSConfigWithOptions(DescribeDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5016,13 +6164,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeDefaultIPSConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the default configurations of the intrusion prevention system (IPS).
-         *
-         * @param request DescribeDefaultIPSConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default configurations of the intrusion prevention system (IPS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefaultIPSConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefaultIPSConfigResponse
+        /// </returns>
         public async Task<DescribeDefaultIPSConfigResponse> DescribeDefaultIPSConfigWithOptionsAsync(DescribeDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5050,43 +6206,69 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeDefaultIPSConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the default configurations of the intrusion prevention system (IPS).
-         *
-         * @param request DescribeDefaultIPSConfigRequest
-         * @return DescribeDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default configurations of the intrusion prevention system (IPS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefaultIPSConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefaultIPSConfigResponse
+        /// </returns>
         public DescribeDefaultIPSConfigResponse DescribeDefaultIPSConfig(DescribeDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefaultIPSConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the default configurations of the intrusion prevention system (IPS).
-         *
-         * @param request DescribeDefaultIPSConfigRequest
-         * @return DescribeDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default configurations of the intrusion prevention system (IPS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefaultIPSConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefaultIPSConfigResponse
+        /// </returns>
         public async Task<DescribeDefaultIPSConfigResponse> DescribeDefaultIPSConfigAsync(DescribeDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefaultIPSConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI DescribeDomainResolve is deprecated
-         *
-         * @summary Queries Domain Name System (DNS) records.
-         *
-         * @description You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeDomainResolveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDomainResolveResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeDomainResolve is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Domain Name System (DNS) records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainResolveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainResolveResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeDomainResolve is deprecated\n")]
         // Deprecated
         public DescribeDomainResolveResponse DescribeDomainResolveWithOptions(DescribeDomainResolveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5131,19 +6313,33 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeDomainResolveResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI DescribeDomainResolve is deprecated
-         *
-         * @summary Queries Domain Name System (DNS) records.
-         *
-         * @description You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeDomainResolveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDomainResolveResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeDomainResolve is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Domain Name System (DNS) records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainResolveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainResolveResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeDomainResolve is deprecated\n")]
         // Deprecated
         public async Task<DescribeDomainResolveResponse> DescribeDomainResolveWithOptionsAsync(DescribeDomainResolveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5188,18 +6384,30 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeDomainResolveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI DescribeDomainResolve is deprecated
-         *
-         * @summary Queries Domain Name System (DNS) records.
-         *
-         * @description You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeDomainResolveRequest
-         * @return DescribeDomainResolveResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeDomainResolve is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Domain Name System (DNS) records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainResolveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainResolveResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeDomainResolve is deprecated\n")]
         // Deprecated
         public DescribeDomainResolveResponse DescribeDomainResolve(DescribeDomainResolveRequest request)
         {
@@ -5207,18 +6415,30 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return DescribeDomainResolveWithOptions(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI DescribeDomainResolve is deprecated
-         *
-         * @summary Queries Domain Name System (DNS) records.
-         *
-         * @description You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeDomainResolveRequest
-         * @return DescribeDomainResolveResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeDomainResolve is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Domain Name System (DNS) records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainResolveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainResolveResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeDomainResolve is deprecated\n")]
         // Deprecated
         public async Task<DescribeDomainResolveResponse> DescribeDomainResolveAsync(DescribeDomainResolveRequest request)
         {
@@ -5226,13 +6446,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DescribeDomainResolveWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries file download tasks, including the task information and download URLs.
-         *
-         * @param request DescribeDownloadTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries file download tasks, including the task information and download URLs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDownloadTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDownloadTaskResponse
+        /// </returns>
         public DescribeDownloadTaskResponse DescribeDownloadTaskWithOptions(DescribeDownloadTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5272,13 +6500,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeDownloadTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries file download tasks, including the task information and download URLs.
-         *
-         * @param request DescribeDownloadTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries file download tasks, including the task information and download URLs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDownloadTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDownloadTaskResponse
+        /// </returns>
         public async Task<DescribeDownloadTaskResponse> DescribeDownloadTaskWithOptionsAsync(DescribeDownloadTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5318,37 +6554,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeDownloadTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries file download tasks, including the task information and download URLs.
-         *
-         * @param request DescribeDownloadTaskRequest
-         * @return DescribeDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries file download tasks, including the task information and download URLs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDownloadTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDownloadTaskResponse
+        /// </returns>
         public DescribeDownloadTaskResponse DescribeDownloadTask(DescribeDownloadTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDownloadTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries file download tasks, including the task information and download URLs.
-         *
-         * @param request DescribeDownloadTaskRequest
-         * @return DescribeDownloadTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries file download tasks, including the task information and download URLs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDownloadTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDownloadTaskResponse
+        /// </returns>
         public async Task<DescribeDownloadTaskResponse> DescribeDownloadTaskAsync(DescribeDownloadTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDownloadTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.
-         *
-         * @param request DescribeDownloadTaskTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDownloadTaskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDownloadTaskTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDownloadTaskTypeResponse
+        /// </returns>
         public DescribeDownloadTaskTypeResponse DescribeDownloadTaskTypeWithOptions(DescribeDownloadTaskTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5388,13 +6644,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeDownloadTaskTypeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.
-         *
-         * @param request DescribeDownloadTaskTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDownloadTaskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDownloadTaskTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDownloadTaskTypeResponse
+        /// </returns>
         public async Task<DescribeDownloadTaskTypeResponse> DescribeDownloadTaskTypeWithOptionsAsync(DescribeDownloadTaskTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5434,41 +6698,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeDownloadTaskTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.
-         *
-         * @param request DescribeDownloadTaskTypeRequest
-         * @return DescribeDownloadTaskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDownloadTaskTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDownloadTaskTypeResponse
+        /// </returns>
         public DescribeDownloadTaskTypeResponse DescribeDownloadTaskType(DescribeDownloadTaskTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDownloadTaskTypeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.
-         *
-         * @param request DescribeDownloadTaskTypeRequest
-         * @return DescribeDownloadTaskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDownloadTaskTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDownloadTaskTypeResponse
+        /// </returns>
         public async Task<DescribeDownloadTaskTypeResponse> DescribeDownloadTaskTypeAsync(DescribeDownloadTaskTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDownloadTaskTypeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about members in Cloud Firewall.
-         *
-         * @description You can use this operation to query the information about members in Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeInstanceMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about members in Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the information about members in Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceMembersResponse
+        /// </returns>
         public DescribeInstanceMembersResponse DescribeInstanceMembersWithOptions(DescribeInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5512,17 +6799,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInstanceMembersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about members in Cloud Firewall.
-         *
-         * @description You can use this operation to query the information about members in Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeInstanceMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about members in Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the information about members in Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceMembersResponse
+        /// </returns>
         public async Task<DescribeInstanceMembersResponse> DescribeInstanceMembersWithOptionsAsync(DescribeInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5566,45 +6864,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInstanceMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about members in Cloud Firewall.
-         *
-         * @description You can use this operation to query the information about members in Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeInstanceMembersRequest
-         * @return DescribeInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about members in Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the information about members in Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceMembersResponse
+        /// </returns>
         public DescribeInstanceMembersResponse DescribeInstanceMembers(DescribeInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceMembersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about members in Cloud Firewall.
-         *
-         * @description You can use this operation to query the information about members in Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeInstanceMembersRequest
-         * @return DescribeInstanceMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about members in Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the information about members in Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceMembersResponse
+        /// </returns>
         public async Task<DescribeInstanceMembersResponse> DescribeInstanceMembersAsync(DescribeInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceMembersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the risk levels of instances.
-         *
-         * @param request DescribeInstanceRiskLevelsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceRiskLevelsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the risk levels of instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRiskLevelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceRiskLevelsResponse
+        /// </returns>
         public DescribeInstanceRiskLevelsResponse DescribeInstanceRiskLevelsWithOptions(DescribeInstanceRiskLevelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5636,13 +6960,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInstanceRiskLevelsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the risk levels of instances.
-         *
-         * @param request DescribeInstanceRiskLevelsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceRiskLevelsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the risk levels of instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRiskLevelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceRiskLevelsResponse
+        /// </returns>
         public async Task<DescribeInstanceRiskLevelsResponse> DescribeInstanceRiskLevelsWithOptionsAsync(DescribeInstanceRiskLevelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5674,37 +7006,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInstanceRiskLevelsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the risk levels of instances.
-         *
-         * @param request DescribeInstanceRiskLevelsRequest
-         * @return DescribeInstanceRiskLevelsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the risk levels of instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRiskLevelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceRiskLevelsResponse
+        /// </returns>
         public DescribeInstanceRiskLevelsResponse DescribeInstanceRiskLevels(DescribeInstanceRiskLevelsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceRiskLevelsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the risk levels of instances.
-         *
-         * @param request DescribeInstanceRiskLevelsRequest
-         * @return DescribeInstanceRiskLevelsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the risk levels of instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRiskLevelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceRiskLevelsResponse
+        /// </returns>
         public async Task<DescribeInstanceRiskLevelsResponse> DescribeInstanceRiskLevelsAsync(DescribeInstanceRiskLevelsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceRiskLevelsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the IP addresses that are open to the Internet.
-         *
-         * @param request DescribeInternetOpenIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInternetOpenIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP addresses that are open to the Internet.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInternetOpenIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInternetOpenIpResponse
+        /// </returns>
         public DescribeInternetOpenIpResponse DescribeInternetOpenIpWithOptions(DescribeInternetOpenIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5780,13 +7132,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInternetOpenIpResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IP addresses that are open to the Internet.
-         *
-         * @param request DescribeInternetOpenIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInternetOpenIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP addresses that are open to the Internet.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInternetOpenIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInternetOpenIpResponse
+        /// </returns>
         public async Task<DescribeInternetOpenIpResponse> DescribeInternetOpenIpWithOptionsAsync(DescribeInternetOpenIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5862,37 +7222,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInternetOpenIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IP addresses that are open to the Internet.
-         *
-         * @param request DescribeInternetOpenIpRequest
-         * @return DescribeInternetOpenIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP addresses that are open to the Internet.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInternetOpenIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInternetOpenIpResponse
+        /// </returns>
         public DescribeInternetOpenIpResponse DescribeInternetOpenIp(DescribeInternetOpenIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInternetOpenIpWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the IP addresses that are open to the Internet.
-         *
-         * @param request DescribeInternetOpenIpRequest
-         * @return DescribeInternetOpenIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP addresses that are open to the Internet.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInternetOpenIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInternetOpenIpResponse
+        /// </returns>
         public async Task<DescribeInternetOpenIpResponse> DescribeInternetOpenIpAsync(DescribeInternetOpenIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInternetOpenIpWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the trends of Internet traffic.
-         *
-         * @param request DescribeInternetTrafficTrendRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInternetTrafficTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of Internet traffic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInternetTrafficTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInternetTrafficTrendResponse
+        /// </returns>
         public DescribeInternetTrafficTrendResponse DescribeInternetTrafficTrendWithOptions(DescribeInternetTrafficTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5956,13 +7336,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInternetTrafficTrendResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the trends of Internet traffic.
-         *
-         * @param request DescribeInternetTrafficTrendRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInternetTrafficTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of Internet traffic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInternetTrafficTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInternetTrafficTrendResponse
+        /// </returns>
         public async Task<DescribeInternetTrafficTrendResponse> DescribeInternetTrafficTrendWithOptionsAsync(DescribeInternetTrafficTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6026,37 +7414,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInternetTrafficTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the trends of Internet traffic.
-         *
-         * @param request DescribeInternetTrafficTrendRequest
-         * @return DescribeInternetTrafficTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of Internet traffic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInternetTrafficTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInternetTrafficTrendResponse
+        /// </returns>
         public DescribeInternetTrafficTrendResponse DescribeInternetTrafficTrend(DescribeInternetTrafficTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInternetTrafficTrendWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the trends of Internet traffic.
-         *
-         * @param request DescribeInternetTrafficTrendRequest
-         * @return DescribeInternetTrafficTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of Internet traffic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInternetTrafficTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInternetTrafficTrendResponse
+        /// </returns>
         public async Task<DescribeInternetTrafficTrendResponse> DescribeInternetTrafficTrendAsync(DescribeInternetTrafficTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInternetTrafficTrendWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the breach awareness events of a firewall.
-         *
-         * @param request DescribeInvadeEventListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInvadeEventListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the breach awareness events of a firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInvadeEventListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInvadeEventListResponse
+        /// </returns>
         public DescribeInvadeEventListResponse DescribeInvadeEventListWithOptions(DescribeInvadeEventListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6144,13 +7552,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInvadeEventListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the breach awareness events of a firewall.
-         *
-         * @param request DescribeInvadeEventListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInvadeEventListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the breach awareness events of a firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInvadeEventListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInvadeEventListResponse
+        /// </returns>
         public async Task<DescribeInvadeEventListResponse> DescribeInvadeEventListWithOptionsAsync(DescribeInvadeEventListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6238,37 +7654,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInvadeEventListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the breach awareness events of a firewall.
-         *
-         * @param request DescribeInvadeEventListRequest
-         * @return DescribeInvadeEventListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the breach awareness events of a firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInvadeEventListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInvadeEventListResponse
+        /// </returns>
         public DescribeInvadeEventListResponse DescribeInvadeEventList(DescribeInvadeEventListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInvadeEventListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the breach awareness events of a firewall.
-         *
-         * @param request DescribeInvadeEventListRequest
-         * @return DescribeInvadeEventListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the breach awareness events of a firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInvadeEventListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInvadeEventListResponse
+        /// </returns>
         public async Task<DescribeInvadeEventListResponse> DescribeInvadeEventListAsync(DescribeInvadeEventListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInvadeEventListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the pagination status of NAT firewalls.
-         *
-         * @param request DescribeNatAclPageStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeNatAclPageStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pagination status of NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatAclPageStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatAclPageStatusResponse
+        /// </returns>
         public DescribeNatAclPageStatusResponse DescribeNatAclPageStatusWithOptions(DescribeNatAclPageStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6296,13 +7732,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatAclPageStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the pagination status of NAT firewalls.
-         *
-         * @param request DescribeNatAclPageStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeNatAclPageStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pagination status of NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatAclPageStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatAclPageStatusResponse
+        /// </returns>
         public async Task<DescribeNatAclPageStatusResponse> DescribeNatAclPageStatusWithOptionsAsync(DescribeNatAclPageStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6330,39 +7774,62 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatAclPageStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the pagination status of NAT firewalls.
-         *
-         * @param request DescribeNatAclPageStatusRequest
-         * @return DescribeNatAclPageStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pagination status of NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatAclPageStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatAclPageStatusResponse
+        /// </returns>
         public DescribeNatAclPageStatusResponse DescribeNatAclPageStatus(DescribeNatAclPageStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNatAclPageStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the pagination status of NAT firewalls.
-         *
-         * @param request DescribeNatAclPageStatusRequest
-         * @return DescribeNatAclPageStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pagination status of NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatAclPageStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatAclPageStatusResponse
+        /// </returns>
         public async Task<DescribeNatAclPageStatusResponse> DescribeNatAclPageStatusAsync(DescribeNatAclPageStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNatAclPageStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about all access control policies that are created for NAT firewalls.
-         *
-         * @description You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
-         *
-         * @param request DescribeNatFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all access control policies that are created for NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallControlPolicyResponse
+        /// </returns>
         public DescribeNatFirewallControlPolicyResponse DescribeNatFirewallControlPolicyWithOptions(DescribeNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6438,15 +7905,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about all access control policies that are created for NAT firewalls.
-         *
-         * @description You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
-         *
-         * @param request DescribeNatFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all access control policies that are created for NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallControlPolicyResponse
+        /// </returns>
         public async Task<DescribeNatFirewallControlPolicyResponse> DescribeNatFirewallControlPolicyWithOptionsAsync(DescribeNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6522,41 +8000,67 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about all access control policies that are created for NAT firewalls.
-         *
-         * @description You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
-         *
-         * @param request DescribeNatFirewallControlPolicyRequest
-         * @return DescribeNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all access control policies that are created for NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallControlPolicyResponse
+        /// </returns>
         public DescribeNatFirewallControlPolicyResponse DescribeNatFirewallControlPolicy(DescribeNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNatFirewallControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about all access control policies that are created for NAT firewalls.
-         *
-         * @description You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
-         *
-         * @param request DescribeNatFirewallControlPolicyRequest
-         * @return DescribeNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all access control policies that are created for NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallControlPolicyResponse
+        /// </returns>
         public async Task<DescribeNatFirewallControlPolicyResponse> DescribeNatFirewallControlPolicyAsync(DescribeNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNatFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries details of NAT firewalls.
-         *
-         * @param request DescribeNatFirewallListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeNatFirewallListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallListResponse
+        /// </returns>
         public DescribeNatFirewallListResponse DescribeNatFirewallListWithOptions(DescribeNatFirewallListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6624,13 +8128,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatFirewallListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries details of NAT firewalls.
-         *
-         * @param request DescribeNatFirewallListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeNatFirewallListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallListResponse
+        /// </returns>
         public async Task<DescribeNatFirewallListResponse> DescribeNatFirewallListWithOptionsAsync(DescribeNatFirewallListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6698,39 +8210,62 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatFirewallListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries details of NAT firewalls.
-         *
-         * @param request DescribeNatFirewallListRequest
-         * @return DescribeNatFirewallListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallListResponse
+        /// </returns>
         public DescribeNatFirewallListResponse DescribeNatFirewallList(DescribeNatFirewallListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNatFirewallListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries details of NAT firewalls.
-         *
-         * @param request DescribeNatFirewallListRequest
-         * @return DescribeNatFirewallListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of NAT firewalls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallListResponse
+        /// </returns>
         public async Task<DescribeNatFirewallListResponse> DescribeNatFirewallListAsync(DescribeNatFirewallListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNatFirewallListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the priority range of access control policies that are created for a NAT firewall.
-         *
-         * @description You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
-         *
-         * @param request DescribeNatFirewallPolicyPriorUsedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeNatFirewallPolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies that are created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the priority range of access control policies that are created for a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallPolicyPriorUsedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallPolicyPriorUsedResponse
+        /// </returns>
         public DescribeNatFirewallPolicyPriorUsedResponse DescribeNatFirewallPolicyPriorUsedWithOptions(DescribeNatFirewallPolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6770,15 +8305,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatFirewallPolicyPriorUsedResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the priority range of access control policies that are created for a NAT firewall.
-         *
-         * @description You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
-         *
-         * @param request DescribeNatFirewallPolicyPriorUsedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeNatFirewallPolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies that are created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the priority range of access control policies that are created for a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallPolicyPriorUsedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallPolicyPriorUsedResponse
+        /// </returns>
         public async Task<DescribeNatFirewallPolicyPriorUsedResponse> DescribeNatFirewallPolicyPriorUsedWithOptionsAsync(DescribeNatFirewallPolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6818,41 +8364,67 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatFirewallPolicyPriorUsedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the priority range of access control policies that are created for a NAT firewall.
-         *
-         * @description You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
-         *
-         * @param request DescribeNatFirewallPolicyPriorUsedRequest
-         * @return DescribeNatFirewallPolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies that are created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the priority range of access control policies that are created for a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallPolicyPriorUsedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallPolicyPriorUsedResponse
+        /// </returns>
         public DescribeNatFirewallPolicyPriorUsedResponse DescribeNatFirewallPolicyPriorUsed(DescribeNatFirewallPolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNatFirewallPolicyPriorUsedWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the priority range of access control policies that are created for a NAT firewall.
-         *
-         * @description You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
-         *
-         * @param request DescribeNatFirewallPolicyPriorUsedRequest
-         * @return DescribeNatFirewallPolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies that are created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to query the priority range of access control policies that are created for a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallPolicyPriorUsedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallPolicyPriorUsedResponse
+        /// </returns>
         public async Task<DescribeNatFirewallPolicyPriorUsedResponse> DescribeNatFirewallPolicyPriorUsedAsync(DescribeNatFirewallPolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNatFirewallPolicyPriorUsedWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the destination IP addresses in outbound connections.
-         *
-         * @param request DescribeOutgoingDestinationIPRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeOutgoingDestinationIPResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the destination IP addresses in outbound connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOutgoingDestinationIPRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOutgoingDestinationIPResponse
+        /// </returns>
         public DescribeOutgoingDestinationIPResponse DescribeOutgoingDestinationIPWithOptions(DescribeOutgoingDestinationIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6932,13 +8504,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeOutgoingDestinationIPResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the destination IP addresses in outbound connections.
-         *
-         * @param request DescribeOutgoingDestinationIPRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeOutgoingDestinationIPResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the destination IP addresses in outbound connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOutgoingDestinationIPRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOutgoingDestinationIPResponse
+        /// </returns>
         public async Task<DescribeOutgoingDestinationIPResponse> DescribeOutgoingDestinationIPWithOptionsAsync(DescribeOutgoingDestinationIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7018,37 +8598,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeOutgoingDestinationIPResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the destination IP addresses in outbound connections.
-         *
-         * @param request DescribeOutgoingDestinationIPRequest
-         * @return DescribeOutgoingDestinationIPResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the destination IP addresses in outbound connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOutgoingDestinationIPRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOutgoingDestinationIPResponse
+        /// </returns>
         public DescribeOutgoingDestinationIPResponse DescribeOutgoingDestinationIP(DescribeOutgoingDestinationIPRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeOutgoingDestinationIPWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the destination IP addresses in outbound connections.
-         *
-         * @param request DescribeOutgoingDestinationIPRequest
-         * @return DescribeOutgoingDestinationIPResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the destination IP addresses in outbound connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOutgoingDestinationIPRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOutgoingDestinationIPResponse
+        /// </returns>
         public async Task<DescribeOutgoingDestinationIPResponse> DescribeOutgoingDestinationIPAsync(DescribeOutgoingDestinationIPRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeOutgoingDestinationIPWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the domain names in outbound connections.
-         *
-         * @param request DescribeOutgoingDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeOutgoingDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the domain names in outbound connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOutgoingDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOutgoingDomainResponse
+        /// </returns>
         public DescribeOutgoingDomainResponse DescribeOutgoingDomainWithOptions(DescribeOutgoingDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7116,13 +8716,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeOutgoingDomainResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the domain names in outbound connections.
-         *
-         * @param request DescribeOutgoingDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeOutgoingDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the domain names in outbound connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOutgoingDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOutgoingDomainResponse
+        /// </returns>
         public async Task<DescribeOutgoingDomainResponse> DescribeOutgoingDomainWithOptionsAsync(DescribeOutgoingDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7190,41 +8798,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeOutgoingDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the domain names in outbound connections.
-         *
-         * @param request DescribeOutgoingDomainRequest
-         * @return DescribeOutgoingDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the domain names in outbound connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOutgoingDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOutgoingDomainResponse
+        /// </returns>
         public DescribeOutgoingDomainResponse DescribeOutgoingDomain(DescribeOutgoingDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeOutgoingDomainWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the domain names in outbound connections.
-         *
-         * @param request DescribeOutgoingDomainRequest
-         * @return DescribeOutgoingDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the domain names in outbound connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOutgoingDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOutgoingDomainResponse
+        /// </returns>
         public async Task<DescribeOutgoingDomainResponse> DescribeOutgoingDomainAsync(DescribeOutgoingDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeOutgoingDomainWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries whether the strict mode is enabled for an access control policy.
-         *
-         * @description You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribePolicyAdvancedConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePolicyAdvancedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the strict mode is enabled for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolicyAdvancedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolicyAdvancedConfigResponse
+        /// </returns>
         public DescribePolicyAdvancedConfigResponse DescribePolicyAdvancedConfigWithOptions(DescribePolicyAdvancedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7260,17 +8891,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePolicyAdvancedConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether the strict mode is enabled for an access control policy.
-         *
-         * @description You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribePolicyAdvancedConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePolicyAdvancedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the strict mode is enabled for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolicyAdvancedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolicyAdvancedConfigResponse
+        /// </returns>
         public async Task<DescribePolicyAdvancedConfigResponse> DescribePolicyAdvancedConfigWithOptionsAsync(DescribePolicyAdvancedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7306,49 +8948,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePolicyAdvancedConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether the strict mode is enabled for an access control policy.
-         *
-         * @description You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribePolicyAdvancedConfigRequest
-         * @return DescribePolicyAdvancedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the strict mode is enabled for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolicyAdvancedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolicyAdvancedConfigResponse
+        /// </returns>
         public DescribePolicyAdvancedConfigResponse DescribePolicyAdvancedConfig(DescribePolicyAdvancedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePolicyAdvancedConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether the strict mode is enabled for an access control policy.
-         *
-         * @description You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribePolicyAdvancedConfigRequest
-         * @return DescribePolicyAdvancedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the strict mode is enabled for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolicyAdvancedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolicyAdvancedConfigResponse
+        /// </returns>
         public async Task<DescribePolicyAdvancedConfigResponse> DescribePolicyAdvancedConfigAsync(DescribePolicyAdvancedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePolicyAdvancedConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the priority range of access control policies.
-         *
-         * @description You can call this operation to query the priority range of the access control policies that match specific query conditions.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribePolicyPriorUsedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the priority range of the access control policies that match specific query conditions.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolicyPriorUsedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolicyPriorUsedResponse
+        /// </returns>
         public DescribePolicyPriorUsedResponse DescribePolicyPriorUsedWithOptions(DescribePolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7388,17 +9059,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePolicyPriorUsedResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the priority range of access control policies.
-         *
-         * @description You can call this operation to query the priority range of the access control policies that match specific query conditions.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribePolicyPriorUsedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the priority range of the access control policies that match specific query conditions.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolicyPriorUsedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolicyPriorUsedResponse
+        /// </returns>
         public async Task<DescribePolicyPriorUsedResponse> DescribePolicyPriorUsedWithOptionsAsync(DescribePolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7438,47 +9120,76 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePolicyPriorUsedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the priority range of access control policies.
-         *
-         * @description You can call this operation to query the priority range of the access control policies that match specific query conditions.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribePolicyPriorUsedRequest
-         * @return DescribePolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the priority range of the access control policies that match specific query conditions.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolicyPriorUsedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolicyPriorUsedResponse
+        /// </returns>
         public DescribePolicyPriorUsedResponse DescribePolicyPriorUsed(DescribePolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePolicyPriorUsedWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the priority range of access control policies.
-         *
-         * @description You can call this operation to query the priority range of the access control policies that match specific query conditions.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribePolicyPriorUsedRequest
-         * @return DescribePolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the priority range of the access control policies that match specific query conditions.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolicyPriorUsedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolicyPriorUsedResponse
+        /// </returns>
         public async Task<DescribePolicyPriorUsedResponse> DescribePolicyPriorUsedAsync(DescribePolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePolicyPriorUsedWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of traffic billed based on the pay-as-you-go billing method.
-         *
-         * @description If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.
-         *
-         * @param request DescribePostpayTrafficDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePostpayTrafficDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of traffic billed based on the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayTrafficDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayTrafficDetailResponse
+        /// </returns>
         public DescribePostpayTrafficDetailResponse DescribePostpayTrafficDetailWithOptions(DescribePostpayTrafficDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7538,15 +9249,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePostpayTrafficDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of traffic billed based on the pay-as-you-go billing method.
-         *
-         * @description If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.
-         *
-         * @param request DescribePostpayTrafficDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePostpayTrafficDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of traffic billed based on the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayTrafficDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayTrafficDetailResponse
+        /// </returns>
         public async Task<DescribePostpayTrafficDetailResponse> DescribePostpayTrafficDetailWithOptionsAsync(DescribePostpayTrafficDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7606,43 +9328,72 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePostpayTrafficDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of traffic billed based on the pay-as-you-go billing method.
-         *
-         * @description If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.
-         *
-         * @param request DescribePostpayTrafficDetailRequest
-         * @return DescribePostpayTrafficDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of traffic billed based on the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayTrafficDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayTrafficDetailResponse
+        /// </returns>
         public DescribePostpayTrafficDetailResponse DescribePostpayTrafficDetail(DescribePostpayTrafficDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePostpayTrafficDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of traffic billed based on the pay-as-you-go billing method.
-         *
-         * @description If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.
-         *
-         * @param request DescribePostpayTrafficDetailRequest
-         * @return DescribePostpayTrafficDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of traffic billed based on the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayTrafficDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayTrafficDetailResponse
+        /// </returns>
         public async Task<DescribePostpayTrafficDetailResponse> DescribePostpayTrafficDetailAsync(DescribePostpayTrafficDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePostpayTrafficDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.
-         *
-         * @description You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.
-         *
-         * @param request DescribePostpayTrafficTotalRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePostpayTrafficTotalResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayTrafficTotalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayTrafficTotalResponse
+        /// </returns>
         public DescribePostpayTrafficTotalResponse DescribePostpayTrafficTotalWithOptions(DescribePostpayTrafficTotalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7670,15 +9421,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePostpayTrafficTotalResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.
-         *
-         * @description You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.
-         *
-         * @param request DescribePostpayTrafficTotalRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePostpayTrafficTotalResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayTrafficTotalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayTrafficTotalResponse
+        /// </returns>
         public async Task<DescribePostpayTrafficTotalResponse> DescribePostpayTrafficTotalWithOptionsAsync(DescribePostpayTrafficTotalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7706,41 +9468,67 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePostpayTrafficTotalResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.
-         *
-         * @description You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.
-         *
-         * @param request DescribePostpayTrafficTotalRequest
-         * @return DescribePostpayTrafficTotalResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayTrafficTotalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayTrafficTotalResponse
+        /// </returns>
         public DescribePostpayTrafficTotalResponse DescribePostpayTrafficTotal(DescribePostpayTrafficTotalRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePostpayTrafficTotalWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.
-         *
-         * @description You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.
-         *
-         * @param request DescribePostpayTrafficTotalRequest
-         * @return DescribePostpayTrafficTotalResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayTrafficTotalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayTrafficTotalResponse
+        /// </returns>
         public async Task<DescribePostpayTrafficTotalResponse> DescribePostpayTrafficTotalAsync(DescribePostpayTrafficTotalRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePostpayTrafficTotalWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries prefix lists.
-         *
-         * @param request DescribePrefixListsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePrefixListsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries prefix lists.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePrefixListsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrefixListsResponse
+        /// </returns>
         public DescribePrefixListsResponse DescribePrefixListsWithOptions(DescribePrefixListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7764,13 +9552,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePrefixListsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries prefix lists.
-         *
-         * @param request DescribePrefixListsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePrefixListsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries prefix lists.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePrefixListsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrefixListsResponse
+        /// </returns>
         public async Task<DescribePrefixListsResponse> DescribePrefixListsWithOptionsAsync(DescribePrefixListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7794,41 +9590,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePrefixListsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries prefix lists.
-         *
-         * @param request DescribePrefixListsRequest
-         * @return DescribePrefixListsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries prefix lists.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePrefixListsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrefixListsResponse
+        /// </returns>
         public DescribePrefixListsResponse DescribePrefixLists(DescribePrefixListsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePrefixListsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries prefix lists.
-         *
-         * @param request DescribePrefixListsRequest
-         * @return DescribePrefixListsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries prefix lists.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePrefixListsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrefixListsResponse
+        /// </returns>
         public async Task<DescribePrefixListsResponse> DescribePrefixListsAsync(DescribePrefixListsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePrefixListsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of intrusion events.
-         *
-         * @description You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeRiskEventGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRiskEventGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of intrusion events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRiskEventGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRiskEventGroupResponse
+        /// </returns>
         public DescribeRiskEventGroupResponse DescribeRiskEventGroupWithOptions(DescribeRiskEventGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7944,17 +9763,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeRiskEventGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of intrusion events.
-         *
-         * @description You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeRiskEventGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRiskEventGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of intrusion events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRiskEventGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRiskEventGroupResponse
+        /// </returns>
         public async Task<DescribeRiskEventGroupResponse> DescribeRiskEventGroupWithOptionsAsync(DescribeRiskEventGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8070,45 +9900,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeRiskEventGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of intrusion events.
-         *
-         * @description You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeRiskEventGroupRequest
-         * @return DescribeRiskEventGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of intrusion events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRiskEventGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRiskEventGroupResponse
+        /// </returns>
         public DescribeRiskEventGroupResponse DescribeRiskEventGroup(DescribeRiskEventGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRiskEventGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of intrusion events.
-         *
-         * @description You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeRiskEventGroupRequest
-         * @return DescribeRiskEventGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of intrusion events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRiskEventGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRiskEventGroupResponse
+        /// </returns>
         public async Task<DescribeRiskEventGroupResponse> DescribeRiskEventGroupAsync(DescribeRiskEventGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRiskEventGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the attack payloads of intrusion events.
-         *
-         * @param request DescribeRiskEventPayloadRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRiskEventPayloadResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack payloads of intrusion events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRiskEventPayloadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRiskEventPayloadResponse
+        /// </returns>
         public DescribeRiskEventPayloadResponse DescribeRiskEventPayloadWithOptions(DescribeRiskEventPayloadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8168,13 +10024,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeRiskEventPayloadResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the attack payloads of intrusion events.
-         *
-         * @param request DescribeRiskEventPayloadRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRiskEventPayloadResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack payloads of intrusion events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRiskEventPayloadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRiskEventPayloadResponse
+        /// </returns>
         public async Task<DescribeRiskEventPayloadResponse> DescribeRiskEventPayloadWithOptionsAsync(DescribeRiskEventPayloadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8234,37 +10098,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeRiskEventPayloadResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the attack payloads of intrusion events.
-         *
-         * @param request DescribeRiskEventPayloadRequest
-         * @return DescribeRiskEventPayloadResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack payloads of intrusion events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRiskEventPayloadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRiskEventPayloadResponse
+        /// </returns>
         public DescribeRiskEventPayloadResponse DescribeRiskEventPayload(DescribeRiskEventPayloadRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRiskEventPayloadWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the attack payloads of intrusion events.
-         *
-         * @param request DescribeRiskEventPayloadRequest
-         * @return DescribeRiskEventPayloadResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack payloads of intrusion events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRiskEventPayloadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRiskEventPayloadResponse
+        /// </returns>
         public async Task<DescribeRiskEventPayloadResponse> DescribeRiskEventPayloadAsync(DescribeRiskEventPayloadRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRiskEventPayloadWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about signature library versions.
-         *
-         * @param request DescribeSignatureLibVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSignatureLibVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about signature library versions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSignatureLibVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSignatureLibVersionResponse
+        /// </returns>
         public DescribeSignatureLibVersionResponse DescribeSignatureLibVersionWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -8283,13 +10167,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeSignatureLibVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about signature library versions.
-         *
-         * @param request DescribeSignatureLibVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSignatureLibVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about signature library versions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSignatureLibVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSignatureLibVersionResponse
+        /// </returns>
         public async Task<DescribeSignatureLibVersionResponse> DescribeSignatureLibVersionWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -8308,35 +10200,49 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeSignatureLibVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about signature library versions.
-         *
-         * @return DescribeSignatureLibVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about signature library versions.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeSignatureLibVersionResponse
+        /// </returns>
         public DescribeSignatureLibVersionResponse DescribeSignatureLibVersion()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSignatureLibVersionWithOptions(runtime);
         }
 
-        /**
-         * @summary Queries the information about signature library versions.
-         *
-         * @return DescribeSignatureLibVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about signature library versions.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeSignatureLibVersionResponse
+        /// </returns>
         public async Task<DescribeSignatureLibVersionResponse> DescribeSignatureLibVersionAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSignatureLibVersionWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.
-         *
-         * @param tmpReq DescribeTrFirewallPolicyBackUpAssociationListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTrFirewallPolicyBackUpAssociationListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeTrFirewallPolicyBackUpAssociationListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallPolicyBackUpAssociationListResponse
+        /// </returns>
         public DescribeTrFirewallPolicyBackUpAssociationListResponse DescribeTrFirewallPolicyBackUpAssociationListWithOptions(DescribeTrFirewallPolicyBackUpAssociationListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8382,13 +10288,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeTrFirewallPolicyBackUpAssociationListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.
-         *
-         * @param tmpReq DescribeTrFirewallPolicyBackUpAssociationListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTrFirewallPolicyBackUpAssociationListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeTrFirewallPolicyBackUpAssociationListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallPolicyBackUpAssociationListResponse
+        /// </returns>
         public async Task<DescribeTrFirewallPolicyBackUpAssociationListResponse> DescribeTrFirewallPolicyBackUpAssociationListWithOptionsAsync(DescribeTrFirewallPolicyBackUpAssociationListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8434,37 +10348,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeTrFirewallPolicyBackUpAssociationListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.
-         *
-         * @param request DescribeTrFirewallPolicyBackUpAssociationListRequest
-         * @return DescribeTrFirewallPolicyBackUpAssociationListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallPolicyBackUpAssociationListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallPolicyBackUpAssociationListResponse
+        /// </returns>
         public DescribeTrFirewallPolicyBackUpAssociationListResponse DescribeTrFirewallPolicyBackUpAssociationList(DescribeTrFirewallPolicyBackUpAssociationListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTrFirewallPolicyBackUpAssociationListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.
-         *
-         * @param request DescribeTrFirewallPolicyBackUpAssociationListRequest
-         * @return DescribeTrFirewallPolicyBackUpAssociationListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallPolicyBackUpAssociationListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallPolicyBackUpAssociationListResponse
+        /// </returns>
         public async Task<DescribeTrFirewallPolicyBackUpAssociationListResponse> DescribeTrFirewallPolicyBackUpAssociationListAsync(DescribeTrFirewallPolicyBackUpAssociationListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTrFirewallPolicyBackUpAssociationListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request DescribeTrFirewallV2RoutePolicyListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTrFirewallV2RoutePolicyListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallV2RoutePolicyListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallV2RoutePolicyListResponse
+        /// </returns>
         public DescribeTrFirewallV2RoutePolicyListResponse DescribeTrFirewallV2RoutePolicyListWithOptions(DescribeTrFirewallV2RoutePolicyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8508,13 +10442,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeTrFirewallV2RoutePolicyListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request DescribeTrFirewallV2RoutePolicyListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTrFirewallV2RoutePolicyListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallV2RoutePolicyListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallV2RoutePolicyListResponse
+        /// </returns>
         public async Task<DescribeTrFirewallV2RoutePolicyListResponse> DescribeTrFirewallV2RoutePolicyListWithOptionsAsync(DescribeTrFirewallV2RoutePolicyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8558,37 +10500,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeTrFirewallV2RoutePolicyListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request DescribeTrFirewallV2RoutePolicyListRequest
-         * @return DescribeTrFirewallV2RoutePolicyListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallV2RoutePolicyListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallV2RoutePolicyListResponse
+        /// </returns>
         public DescribeTrFirewallV2RoutePolicyListResponse DescribeTrFirewallV2RoutePolicyList(DescribeTrFirewallV2RoutePolicyListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTrFirewallV2RoutePolicyListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request DescribeTrFirewallV2RoutePolicyListRequest
-         * @return DescribeTrFirewallV2RoutePolicyListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallV2RoutePolicyListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallV2RoutePolicyListResponse
+        /// </returns>
         public async Task<DescribeTrFirewallV2RoutePolicyListResponse> DescribeTrFirewallV2RoutePolicyListAsync(DescribeTrFirewallV2RoutePolicyListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTrFirewallV2RoutePolicyListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2DetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTrFirewallsV2DetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2DetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2DetailResponse
+        /// </returns>
         public DescribeTrFirewallsV2DetailResponse DescribeTrFirewallsV2DetailWithOptions(DescribeTrFirewallsV2DetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8620,13 +10582,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeTrFirewallsV2DetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2DetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTrFirewallsV2DetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2DetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2DetailResponse
+        /// </returns>
         public async Task<DescribeTrFirewallsV2DetailResponse> DescribeTrFirewallsV2DetailWithOptionsAsync(DescribeTrFirewallsV2DetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8658,37 +10628,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeTrFirewallsV2DetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2DetailRequest
-         * @return DescribeTrFirewallsV2DetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2DetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2DetailResponse
+        /// </returns>
         public DescribeTrFirewallsV2DetailResponse DescribeTrFirewallsV2Detail(DescribeTrFirewallsV2DetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTrFirewallsV2DetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2DetailRequest
-         * @return DescribeTrFirewallsV2DetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2DetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2DetailResponse
+        /// </returns>
         public async Task<DescribeTrFirewallsV2DetailResponse> DescribeTrFirewallsV2DetailAsync(DescribeTrFirewallsV2DetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTrFirewallsV2DetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the virtual private cloud (VPC) firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2ListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTrFirewallsV2ListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual private cloud (VPC) firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2ListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2ListResponse
+        /// </returns>
         public DescribeTrFirewallsV2ListResponse DescribeTrFirewallsV2ListWithOptions(DescribeTrFirewallsV2ListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8756,13 +10746,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeTrFirewallsV2ListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the virtual private cloud (VPC) firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2ListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTrFirewallsV2ListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual private cloud (VPC) firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2ListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2ListResponse
+        /// </returns>
         public async Task<DescribeTrFirewallsV2ListResponse> DescribeTrFirewallsV2ListWithOptionsAsync(DescribeTrFirewallsV2ListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8830,37 +10828,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeTrFirewallsV2ListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the virtual private cloud (VPC) firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2ListRequest
-         * @return DescribeTrFirewallsV2ListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual private cloud (VPC) firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2ListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2ListResponse
+        /// </returns>
         public DescribeTrFirewallsV2ListResponse DescribeTrFirewallsV2List(DescribeTrFirewallsV2ListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTrFirewallsV2ListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the virtual private cloud (VPC) firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2ListRequest
-         * @return DescribeTrFirewallsV2ListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual private cloud (VPC) firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2ListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2ListResponse
+        /// </returns>
         public async Task<DescribeTrFirewallsV2ListResponse> DescribeTrFirewallsV2ListAsync(DescribeTrFirewallsV2ListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTrFirewallsV2ListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the route tables of the VPC firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2RouteListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTrFirewallsV2RouteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the route tables of the VPC firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2RouteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2RouteListResponse
+        /// </returns>
         public DescribeTrFirewallsV2RouteListResponse DescribeTrFirewallsV2RouteListWithOptions(DescribeTrFirewallsV2RouteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8904,13 +10922,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeTrFirewallsV2RouteListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the route tables of the VPC firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2RouteListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTrFirewallsV2RouteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the route tables of the VPC firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2RouteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2RouteListResponse
+        /// </returns>
         public async Task<DescribeTrFirewallsV2RouteListResponse> DescribeTrFirewallsV2RouteListWithOptionsAsync(DescribeTrFirewallsV2RouteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8954,37 +10980,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeTrFirewallsV2RouteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the route tables of the VPC firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2RouteListRequest
-         * @return DescribeTrFirewallsV2RouteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the route tables of the VPC firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2RouteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2RouteListResponse
+        /// </returns>
         public DescribeTrFirewallsV2RouteListResponse DescribeTrFirewallsV2RouteList(DescribeTrFirewallsV2RouteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTrFirewallsV2RouteListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the route tables of the VPC firewalls that are created for transit routers.
-         *
-         * @param request DescribeTrFirewallsV2RouteListRequest
-         * @return DescribeTrFirewallsV2RouteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the route tables of the VPC firewalls that are created for transit routers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrFirewallsV2RouteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrFirewallsV2RouteListResponse
+        /// </returns>
         public async Task<DescribeTrFirewallsV2RouteListResponse> DescribeTrFirewallsV2RouteListAsync(DescribeTrFirewallsV2RouteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTrFirewallsV2RouteListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.
-         *
-         * @param request DescribeUserAssetIPTrafficInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserAssetIPTrafficInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAssetIPTrafficInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAssetIPTrafficInfoResponse
+        /// </returns>
         public DescribeUserAssetIPTrafficInfoResponse DescribeUserAssetIPTrafficInfoWithOptions(DescribeUserAssetIPTrafficInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9008,13 +11054,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeUserAssetIPTrafficInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.
-         *
-         * @param request DescribeUserAssetIPTrafficInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserAssetIPTrafficInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAssetIPTrafficInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAssetIPTrafficInfoResponse
+        /// </returns>
         public async Task<DescribeUserAssetIPTrafficInfoResponse> DescribeUserAssetIPTrafficInfoWithOptionsAsync(DescribeUserAssetIPTrafficInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9038,37 +11092,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeUserAssetIPTrafficInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.
-         *
-         * @param request DescribeUserAssetIPTrafficInfoRequest
-         * @return DescribeUserAssetIPTrafficInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAssetIPTrafficInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAssetIPTrafficInfoResponse
+        /// </returns>
         public DescribeUserAssetIPTrafficInfoResponse DescribeUserAssetIPTrafficInfo(DescribeUserAssetIPTrafficInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserAssetIPTrafficInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.
-         *
-         * @param request DescribeUserAssetIPTrafficInfoRequest
-         * @return DescribeUserAssetIPTrafficInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAssetIPTrafficInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAssetIPTrafficInfoResponse
+        /// </returns>
         public async Task<DescribeUserAssetIPTrafficInfoResponse> DescribeUserAssetIPTrafficInfoAsync(DescribeUserAssetIPTrafficInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserAssetIPTrafficInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取用户版本信息
-         *
-         * @param request DescribeUserBuyVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserBuyVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserBuyVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserBuyVersionResponse
+        /// </returns>
         public DescribeUserBuyVersionResponse DescribeUserBuyVersionWithOptions(DescribeUserBuyVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9096,13 +11170,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeUserBuyVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取用户版本信息
-         *
-         * @param request DescribeUserBuyVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserBuyVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserBuyVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserBuyVersionResponse
+        /// </returns>
         public async Task<DescribeUserBuyVersionResponse> DescribeUserBuyVersionWithOptionsAsync(DescribeUserBuyVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9130,37 +11212,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeUserBuyVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取用户版本信息
-         *
-         * @param request DescribeUserBuyVersionRequest
-         * @return DescribeUserBuyVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserBuyVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserBuyVersionResponse
+        /// </returns>
         public DescribeUserBuyVersionResponse DescribeUserBuyVersion(DescribeUserBuyVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserBuyVersionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取用户版本信息
-         *
-         * @param request DescribeUserBuyVersionRequest
-         * @return DescribeUserBuyVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserBuyVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserBuyVersionResponse
+        /// </returns>
         public async Task<DescribeUserBuyVersionResponse> DescribeUserBuyVersionAsync(DescribeUserBuyVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserBuyVersionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取用户IPS白名单
-         *
-         * @param request DescribeUserIPSWhitelistRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户IPS白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserIPSWhitelistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserIPSWhitelistResponse
+        /// </returns>
         public DescribeUserIPSWhitelistResponse DescribeUserIPSWhitelistWithOptions(DescribeUserIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9196,13 +11298,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeUserIPSWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取用户IPS白名单
-         *
-         * @param request DescribeUserIPSWhitelistRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户IPS白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserIPSWhitelistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserIPSWhitelistResponse
+        /// </returns>
         public async Task<DescribeUserIPSWhitelistResponse> DescribeUserIPSWhitelistWithOptionsAsync(DescribeUserIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9238,41 +11348,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeUserIPSWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取用户IPS白名单
-         *
-         * @param request DescribeUserIPSWhitelistRequest
-         * @return DescribeUserIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户IPS白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserIPSWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserIPSWhitelistResponse
+        /// </returns>
         public DescribeUserIPSWhitelistResponse DescribeUserIPSWhitelist(DescribeUserIPSWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserIPSWhitelistWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取用户IPS白名单
-         *
-         * @param request DescribeUserIPSWhitelistRequest
-         * @return DescribeUserIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户IPS白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserIPSWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserIPSWhitelistResponse
+        /// </returns>
         public async Task<DescribeUserIPSWhitelistResponse> DescribeUserIPSWhitelistAsync(DescribeUserIPSWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserIPSWhitelistWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.
-         *
-         * @description You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallAclGroupListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallAclGroupListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallAclGroupListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallAclGroupListResponse
+        /// </returns>
         public DescribeVpcFirewallAclGroupListResponse DescribeVpcFirewallAclGroupListWithOptions(DescribeVpcFirewallAclGroupListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9312,17 +11445,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallAclGroupListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.
-         *
-         * @description You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallAclGroupListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallAclGroupListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallAclGroupListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallAclGroupListResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallAclGroupListResponse> DescribeVpcFirewallAclGroupListWithOptionsAsync(DescribeVpcFirewallAclGroupListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9362,49 +11506,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallAclGroupListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.
-         *
-         * @description You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallAclGroupListRequest
-         * @return DescribeVpcFirewallAclGroupListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallAclGroupListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallAclGroupListResponse
+        /// </returns>
         public DescribeVpcFirewallAclGroupListResponse DescribeVpcFirewallAclGroupList(DescribeVpcFirewallAclGroupListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallAclGroupListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.
-         *
-         * @description You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallAclGroupListRequest
-         * @return DescribeVpcFirewallAclGroupListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallAclGroupListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallAclGroupListResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallAclGroupListResponse> DescribeVpcFirewallAclGroupListAsync(DescribeVpcFirewallAclGroupListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallAclGroupListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallCenDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallCenDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallCenDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallCenDetailResponse
+        /// </returns>
         public DescribeVpcFirewallCenDetailResponse DescribeVpcFirewallCenDetailWithOptions(DescribeVpcFirewallCenDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9444,17 +11617,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallCenDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallCenDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallCenDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallCenDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallCenDetailResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallCenDetailResponse> DescribeVpcFirewallCenDetailWithOptionsAsync(DescribeVpcFirewallCenDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9494,49 +11678,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallCenDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallCenDetailRequest
-         * @return DescribeVpcFirewallCenDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallCenDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallCenDetailResponse
+        /// </returns>
         public DescribeVpcFirewallCenDetailResponse DescribeVpcFirewallCenDetail(DescribeVpcFirewallCenDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallCenDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallCenDetailRequest
-         * @return DescribeVpcFirewallCenDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallCenDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallCenDetailResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallCenDetailResponse> DescribeVpcFirewallCenDetailAsync(DescribeVpcFirewallCenDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallCenDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallCenListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallCenListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallCenListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallCenListResponse
+        /// </returns>
         public DescribeVpcFirewallCenListResponse DescribeVpcFirewallCenListWithOptions(DescribeVpcFirewallCenListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9616,17 +11829,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallCenListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallCenListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallCenListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallCenListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallCenListResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallCenListResponse> DescribeVpcFirewallCenListWithOptionsAsync(DescribeVpcFirewallCenListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9706,49 +11930,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallCenListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallCenListRequest
-         * @return DescribeVpcFirewallCenListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallCenListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallCenListResponse
+        /// </returns>
         public DescribeVpcFirewallCenListResponse DescribeVpcFirewallCenList(DescribeVpcFirewallCenListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallCenListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallCenListRequest
-         * @return DescribeVpcFirewallCenListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallCenListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallCenListResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallCenListResponse> DescribeVpcFirewallCenListAsync(DescribeVpcFirewallCenListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallCenListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallControlPolicyResponse
+        /// </returns>
         public DescribeVpcFirewallControlPolicyResponse DescribeVpcFirewallControlPolicyWithOptions(DescribeVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9824,17 +12077,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallControlPolicyResponse> DescribeVpcFirewallControlPolicyWithOptionsAsync(DescribeVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9910,49 +12174,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallControlPolicyRequest
-         * @return DescribeVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallControlPolicyResponse
+        /// </returns>
         public DescribeVpcFirewallControlPolicyResponse DescribeVpcFirewallControlPolicy(DescribeVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallControlPolicyRequest
-         * @return DescribeVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallControlPolicyResponse> DescribeVpcFirewallControlPolicyAsync(DescribeVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallDefaultIPSConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDefaultIPSConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDefaultIPSConfigResponse
+        /// </returns>
         public DescribeVpcFirewallDefaultIPSConfigResponse DescribeVpcFirewallDefaultIPSConfigWithOptions(DescribeVpcFirewallDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9984,17 +12277,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallDefaultIPSConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallDefaultIPSConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDefaultIPSConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDefaultIPSConfigResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallDefaultIPSConfigResponse> DescribeVpcFirewallDefaultIPSConfigWithOptionsAsync(DescribeVpcFirewallDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10026,50 +12330,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallDefaultIPSConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallDefaultIPSConfigRequest
-         * @return DescribeVpcFirewallDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDefaultIPSConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDefaultIPSConfigResponse
+        /// </returns>
         public DescribeVpcFirewallDefaultIPSConfigResponse DescribeVpcFirewallDefaultIPSConfig(DescribeVpcFirewallDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallDefaultIPSConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallDefaultIPSConfigRequest
-         * @return DescribeVpcFirewallDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDefaultIPSConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDefaultIPSConfigResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallDefaultIPSConfigResponse> DescribeVpcFirewallDefaultIPSConfigAsync(DescribeVpcFirewallDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallDefaultIPSConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
-         * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.<br>Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure">CreateVpcFirewallConfigure</a> operation.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDetailResponse
+        /// </returns>
         public DescribeVpcFirewallDetailResponse DescribeVpcFirewallDetailWithOptions(DescribeVpcFirewallDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10113,18 +12445,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
-         * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.<br>Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure">CreateVpcFirewallConfigure</a> operation.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDetailResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallDetailResponse> DescribeVpcFirewallDetailWithOptionsAsync(DescribeVpcFirewallDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10168,47 +12510,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
-         * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallDetailRequest
-         * @return DescribeVpcFirewallDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.<br>Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure">CreateVpcFirewallConfigure</a> operation.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDetailResponse
+        /// </returns>
         public DescribeVpcFirewallDetailResponse DescribeVpcFirewallDetail(DescribeVpcFirewallDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
-         * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallDetailRequest
-         * @return DescribeVpcFirewallDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.<br>Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure">CreateVpcFirewallConfigure</a> operation.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDetailResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallDetailResponse> DescribeVpcFirewallDetailAsync(DescribeVpcFirewallDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the IPS whitelist of a virtual private cloud (VPC) firewall.
-         *
-         * @param request DescribeVpcFirewallIPSWhitelistRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IPS whitelist of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallIPSWhitelistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallIPSWhitelistResponse
+        /// </returns>
         public DescribeVpcFirewallIPSWhitelistResponse DescribeVpcFirewallIPSWhitelistWithOptions(DescribeVpcFirewallIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10244,13 +12610,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallIPSWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IPS whitelist of a virtual private cloud (VPC) firewall.
-         *
-         * @param request DescribeVpcFirewallIPSWhitelistRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IPS whitelist of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallIPSWhitelistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallIPSWhitelistResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallIPSWhitelistResponse> DescribeVpcFirewallIPSWhitelistWithOptionsAsync(DescribeVpcFirewallIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10286,41 +12660,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallIPSWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IPS whitelist of a virtual private cloud (VPC) firewall.
-         *
-         * @param request DescribeVpcFirewallIPSWhitelistRequest
-         * @return DescribeVpcFirewallIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IPS whitelist of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallIPSWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallIPSWhitelistResponse
+        /// </returns>
         public DescribeVpcFirewallIPSWhitelistResponse DescribeVpcFirewallIPSWhitelist(DescribeVpcFirewallIPSWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallIPSWhitelistWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the IPS whitelist of a virtual private cloud (VPC) firewall.
-         *
-         * @param request DescribeVpcFirewallIPSWhitelistRequest
-         * @return DescribeVpcFirewallIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IPS whitelist of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallIPSWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallIPSWhitelistResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallIPSWhitelistResponse> DescribeVpcFirewallIPSWhitelistAsync(DescribeVpcFirewallIPSWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallIPSWhitelistWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         * ### Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallListResponse
+        /// </returns>
         public DescribeVpcFirewallListResponse DescribeVpcFirewallListWithOptions(DescribeVpcFirewallListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10392,17 +12789,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         * ### Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallListResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallListResponse> DescribeVpcFirewallListWithOptionsAsync(DescribeVpcFirewallListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10474,49 +12882,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         * ### Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallListRequest
-         * @return DescribeVpcFirewallListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallListResponse
+        /// </returns>
         public DescribeVpcFirewallListResponse DescribeVpcFirewallList(DescribeVpcFirewallListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         * ### Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallListRequest
-         * @return DescribeVpcFirewallListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallListResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallListResponse> DescribeVpcFirewallListAsync(DescribeVpcFirewallListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallPolicyPriorUsedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallPolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallPolicyPriorUsedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallPolicyPriorUsedResponse
+        /// </returns>
         public DescribeVpcFirewallPolicyPriorUsedResponse DescribeVpcFirewallPolicyPriorUsedWithOptions(DescribeVpcFirewallPolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10548,17 +12985,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallPolicyPriorUsedResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallPolicyPriorUsedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcFirewallPolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallPolicyPriorUsedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallPolicyPriorUsedResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallPolicyPriorUsedResponse> DescribeVpcFirewallPolicyPriorUsedWithOptionsAsync(DescribeVpcFirewallPolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10590,45 +13038,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallPolicyPriorUsedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallPolicyPriorUsedRequest
-         * @return DescribeVpcFirewallPolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallPolicyPriorUsedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallPolicyPriorUsedResponse
+        /// </returns>
         public DescribeVpcFirewallPolicyPriorUsedResponse DescribeVpcFirewallPolicyPriorUsed(DescribeVpcFirewallPolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallPolicyPriorUsedWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request DescribeVpcFirewallPolicyPriorUsedRequest
-         * @return DescribeVpcFirewallPolicyPriorUsedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallPolicyPriorUsedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallPolicyPriorUsedResponse
+        /// </returns>
         public async Task<DescribeVpcFirewallPolicyPriorUsedResponse> DescribeVpcFirewallPolicyPriorUsedAsync(DescribeVpcFirewallPolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallPolicyPriorUsedWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries virtual private clouds (VPCs).
-         *
-         * @param request DescribeVpcListLiteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcListLiteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private clouds (VPCs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcListLiteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcListLiteResponse
+        /// </returns>
         public DescribeVpcListLiteResponse DescribeVpcListLiteWithOptions(DescribeVpcListLiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10672,13 +13146,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcListLiteResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries virtual private clouds (VPCs).
-         *
-         * @param request DescribeVpcListLiteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcListLiteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private clouds (VPCs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcListLiteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcListLiteResponse
+        /// </returns>
         public async Task<DescribeVpcListLiteResponse> DescribeVpcListLiteWithOptionsAsync(DescribeVpcListLiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10722,37 +13204,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcListLiteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries virtual private clouds (VPCs).
-         *
-         * @param request DescribeVpcListLiteRequest
-         * @return DescribeVpcListLiteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private clouds (VPCs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcListLiteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcListLiteResponse
+        /// </returns>
         public DescribeVpcListLiteResponse DescribeVpcListLite(DescribeVpcListLiteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcListLiteWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries virtual private clouds (VPCs).
-         *
-         * @param request DescribeVpcListLiteRequest
-         * @return DescribeVpcListLiteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private clouds (VPCs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcListLiteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcListLiteResponse
+        /// </returns>
         public async Task<DescribeVpcListLiteResponse> DescribeVpcListLiteAsync(DescribeVpcListLiteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcListLiteWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries virtual private cloud (VPC) zones.
-         *
-         * @param request DescribeVpcZoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private cloud (VPC) zones.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcZoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcZoneResponse
+        /// </returns>
         public DescribeVpcZoneResponse DescribeVpcZoneWithOptions(DescribeVpcZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10792,13 +13294,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcZoneResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries virtual private cloud (VPC) zones.
-         *
-         * @param request DescribeVpcZoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVpcZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private cloud (VPC) zones.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcZoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcZoneResponse
+        /// </returns>
         public async Task<DescribeVpcZoneResponse> DescribeVpcZoneWithOptionsAsync(DescribeVpcZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10838,37 +13348,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcZoneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries virtual private cloud (VPC) zones.
-         *
-         * @param request DescribeVpcZoneRequest
-         * @return DescribeVpcZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private cloud (VPC) zones.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcZoneResponse
+        /// </returns>
         public DescribeVpcZoneResponse DescribeVpcZone(DescribeVpcZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcZoneWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries virtual private cloud (VPC) zones.
-         *
-         * @param request DescribeVpcZoneRequest
-         * @return DescribeVpcZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual private cloud (VPC) zones.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcZoneResponse
+        /// </returns>
         public async Task<DescribeVpcZoneResponse> DescribeVpcZoneAsync(DescribeVpcZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcZoneWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the vulnerabilities that are supported by Cloud Firewall.
-         *
-         * @param request DescribeVulnerabilityProtectedListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVulnerabilityProtectedListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the vulnerabilities that are supported by Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVulnerabilityProtectedListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulnerabilityProtectedListResponse
+        /// </returns>
         public DescribeVulnerabilityProtectedListResponse DescribeVulnerabilityProtectedListWithOptions(DescribeVulnerabilityProtectedListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10964,13 +13494,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVulnerabilityProtectedListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the vulnerabilities that are supported by Cloud Firewall.
-         *
-         * @param request DescribeVulnerabilityProtectedListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVulnerabilityProtectedListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the vulnerabilities that are supported by Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVulnerabilityProtectedListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulnerabilityProtectedListResponse
+        /// </returns>
         public async Task<DescribeVulnerabilityProtectedListResponse> DescribeVulnerabilityProtectedListWithOptionsAsync(DescribeVulnerabilityProtectedListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11066,41 +13604,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVulnerabilityProtectedListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the vulnerabilities that are supported by Cloud Firewall.
-         *
-         * @param request DescribeVulnerabilityProtectedListRequest
-         * @return DescribeVulnerabilityProtectedListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the vulnerabilities that are supported by Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVulnerabilityProtectedListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulnerabilityProtectedListResponse
+        /// </returns>
         public DescribeVulnerabilityProtectedListResponse DescribeVulnerabilityProtectedList(DescribeVulnerabilityProtectedListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVulnerabilityProtectedListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the vulnerabilities that are supported by Cloud Firewall.
-         *
-         * @param request DescribeVulnerabilityProtectedListRequest
-         * @return DescribeVulnerabilityProtectedListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the vulnerabilities that are supported by Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVulnerabilityProtectedListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulnerabilityProtectedListResponse
+        /// </returns>
         public async Task<DescribeVulnerabilityProtectedListResponse> DescribeVulnerabilityProtectedListAsync(DescribeVulnerabilityProtectedListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVulnerabilityProtectedListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the address book that is specified in an access control policy.
-         *
-         * @description You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyAddressBookRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the address book that is specified in an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAddressBookRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAddressBookResponse
+        /// </returns>
         public ModifyAddressBookResponse ModifyAddressBookWithOptions(ModifyAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11164,17 +13725,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyAddressBookResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the address book that is specified in an access control policy.
-         *
-         * @description You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyAddressBookRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the address book that is specified in an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAddressBookRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAddressBookResponse
+        /// </returns>
         public async Task<ModifyAddressBookResponse> ModifyAddressBookWithOptionsAsync(ModifyAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11238,49 +13810,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyAddressBookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the address book that is specified in an access control policy.
-         *
-         * @description You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyAddressBookRequest
-         * @return ModifyAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the address book that is specified in an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAddressBookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAddressBookResponse
+        /// </returns>
         public ModifyAddressBookResponse ModifyAddressBook(ModifyAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAddressBookWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the address book that is specified in an access control policy.
-         *
-         * @description You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyAddressBookRequest
-         * @return ModifyAddressBookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the address book that is specified in an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAddressBookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAddressBookResponse
+        /// </returns>
         public async Task<ModifyAddressBookResponse> ModifyAddressBookAsync(ModifyAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAddressBookWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy.
-         *
-         * @description You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.
-         * ## [](#qps)Limit
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.</para>
+        /// <h2><a href="#qps"></a>Limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyControlPolicyResponse
+        /// </returns>
         public ModifyControlPolicyResponse ModifyControlPolicyWithOptions(ModifyControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11396,17 +13997,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy.
-         *
-         * @description You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.
-         * ## [](#qps)Limit
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.</para>
+        /// <h2><a href="#qps"></a>Limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyControlPolicyResponse
+        /// </returns>
         public async Task<ModifyControlPolicyResponse> ModifyControlPolicyWithOptionsAsync(ModifyControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11522,49 +14134,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy.
-         *
-         * @description You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.
-         * ## [](#qps)Limit
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyControlPolicyRequest
-         * @return ModifyControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.</para>
+        /// <h2><a href="#qps"></a>Limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyControlPolicyResponse
+        /// </returns>
         public ModifyControlPolicyResponse ModifyControlPolicy(ModifyControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy.
-         *
-         * @description You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.
-         * ## [](#qps)Limit
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyControlPolicyRequest
-         * @return ModifyControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.</para>
+        /// <h2><a href="#qps"></a>Limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyControlPolicyResponse
+        /// </returns>
         public async Task<ModifyControlPolicyResponse> ModifyControlPolicyAsync(ModifyControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.
-         *
-         * @description You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyControlPolicyPositionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyControlPolicyPositionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyControlPolicyPositionResponse
+        /// </returns>
         public ModifyControlPolicyPositionResponse ModifyControlPolicyPositionWithOptions(ModifyControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11608,17 +14249,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyControlPolicyPositionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.
-         *
-         * @description You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyControlPolicyPositionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyControlPolicyPositionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyControlPolicyPositionResponse
+        /// </returns>
         public async Task<ModifyControlPolicyPositionResponse> ModifyControlPolicyPositionWithOptionsAsync(ModifyControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11662,45 +14314,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyControlPolicyPositionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.
-         *
-         * @description You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyControlPolicyPositionRequest
-         * @return ModifyControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyControlPolicyPositionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyControlPolicyPositionResponse
+        /// </returns>
         public ModifyControlPolicyPositionResponse ModifyControlPolicyPosition(ModifyControlPolicyPositionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyControlPolicyPositionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.
-         *
-         * @description You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.
-         * ## [](#qps)Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyControlPolicyPositionRequest
-         * @return ModifyControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.</para>
+        /// <h2><a href="#qps"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyControlPolicyPositionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyControlPolicyPositionResponse
+        /// </returns>
         public async Task<ModifyControlPolicyPositionResponse> ModifyControlPolicyPositionAsync(ModifyControlPolicyPositionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyControlPolicyPositionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the default configuration of the intrusion prevention system (IPS).
-         *
-         * @param request ModifyDefaultIPSConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the default configuration of the intrusion prevention system (IPS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefaultIPSConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefaultIPSConfigResponse
+        /// </returns>
         public ModifyDefaultIPSConfigResponse ModifyDefaultIPSConfigWithOptions(ModifyDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11748,13 +14426,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyDefaultIPSConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the default configuration of the intrusion prevention system (IPS).
-         *
-         * @param request ModifyDefaultIPSConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the default configuration of the intrusion prevention system (IPS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefaultIPSConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefaultIPSConfigResponse
+        /// </returns>
         public async Task<ModifyDefaultIPSConfigResponse> ModifyDefaultIPSConfigWithOptionsAsync(ModifyDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11802,37 +14488,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyDefaultIPSConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the default configuration of the intrusion prevention system (IPS).
-         *
-         * @param request ModifyDefaultIPSConfigRequest
-         * @return ModifyDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the default configuration of the intrusion prevention system (IPS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefaultIPSConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefaultIPSConfigResponse
+        /// </returns>
         public ModifyDefaultIPSConfigResponse ModifyDefaultIPSConfig(ModifyDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDefaultIPSConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the default configuration of the intrusion prevention system (IPS).
-         *
-         * @param request ModifyDefaultIPSConfigRequest
-         * @return ModifyDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the default configuration of the intrusion prevention system (IPS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefaultIPSConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefaultIPSConfigResponse
+        /// </returns>
         public async Task<ModifyDefaultIPSConfigResponse> ModifyDefaultIPSConfigAsync(ModifyDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDefaultIPSConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the status of a routing policy.
-         *
-         * @param request ModifyFirewallV2RoutePolicySwitchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyFirewallV2RoutePolicySwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a routing policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFirewallV2RoutePolicySwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFirewallV2RoutePolicySwitchResponse
+        /// </returns>
         public ModifyFirewallV2RoutePolicySwitchResponse ModifyFirewallV2RoutePolicySwitchWithOptions(ModifyFirewallV2RoutePolicySwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11876,13 +14582,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyFirewallV2RoutePolicySwitchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the status of a routing policy.
-         *
-         * @param request ModifyFirewallV2RoutePolicySwitchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyFirewallV2RoutePolicySwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a routing policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFirewallV2RoutePolicySwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFirewallV2RoutePolicySwitchResponse
+        /// </returns>
         public async Task<ModifyFirewallV2RoutePolicySwitchResponse> ModifyFirewallV2RoutePolicySwitchWithOptionsAsync(ModifyFirewallV2RoutePolicySwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11926,41 +14640,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyFirewallV2RoutePolicySwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the status of a routing policy.
-         *
-         * @param request ModifyFirewallV2RoutePolicySwitchRequest
-         * @return ModifyFirewallV2RoutePolicySwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a routing policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFirewallV2RoutePolicySwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFirewallV2RoutePolicySwitchResponse
+        /// </returns>
         public ModifyFirewallV2RoutePolicySwitchResponse ModifyFirewallV2RoutePolicySwitch(ModifyFirewallV2RoutePolicySwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyFirewallV2RoutePolicySwitchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the status of a routing policy.
-         *
-         * @param request ModifyFirewallV2RoutePolicySwitchRequest
-         * @return ModifyFirewallV2RoutePolicySwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a routing policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFirewallV2RoutePolicySwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFirewallV2RoutePolicySwitchResponse
+        /// </returns>
         public async Task<ModifyFirewallV2RoutePolicySwitchResponse> ModifyFirewallV2RoutePolicySwitchAsync(ModifyFirewallV2RoutePolicySwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyFirewallV2RoutePolicySwitchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates the information about members in Cloud Firewall.
-         *
-         * @description You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyInstanceMemberAttributesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyInstanceMemberAttributesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about members in Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceMemberAttributesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceMemberAttributesResponse
+        /// </returns>
         public ModifyInstanceMemberAttributesResponse ModifyInstanceMemberAttributesWithOptions(ModifyInstanceMemberAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11988,17 +14725,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyInstanceMemberAttributesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the information about members in Cloud Firewall.
-         *
-         * @description You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyInstanceMemberAttributesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyInstanceMemberAttributesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about members in Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceMemberAttributesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceMemberAttributesResponse
+        /// </returns>
         public async Task<ModifyInstanceMemberAttributesResponse> ModifyInstanceMemberAttributesWithOptionsAsync(ModifyInstanceMemberAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12026,47 +14774,76 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyInstanceMemberAttributesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the information about members in Cloud Firewall.
-         *
-         * @description You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyInstanceMemberAttributesRequest
-         * @return ModifyInstanceMemberAttributesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about members in Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceMemberAttributesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceMemberAttributesResponse
+        /// </returns>
         public ModifyInstanceMemberAttributesResponse ModifyInstanceMemberAttributes(ModifyInstanceMemberAttributesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceMemberAttributesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates the information about members in Cloud Firewall.
-         *
-         * @description You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyInstanceMemberAttributesRequest
-         * @return ModifyInstanceMemberAttributesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about members in Cloud Firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceMemberAttributesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceMemberAttributesResponse
+        /// </returns>
         public async Task<ModifyInstanceMemberAttributesResponse> ModifyInstanceMemberAttributesAsync(ModifyInstanceMemberAttributesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceMemberAttributesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy that is created for a NAT firewall.
-         *
-         * @description You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
-         *
-         * @param request ModifyNatFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNatFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNatFirewallControlPolicyResponse
+        /// </returns>
         public ModifyNatFirewallControlPolicyResponse ModifyNatFirewallControlPolicyWithOptions(ModifyNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12182,15 +14959,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy that is created for a NAT firewall.
-         *
-         * @description You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
-         *
-         * @param request ModifyNatFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNatFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNatFirewallControlPolicyResponse
+        /// </returns>
         public async Task<ModifyNatFirewallControlPolicyResponse> ModifyNatFirewallControlPolicyWithOptionsAsync(ModifyNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12306,41 +15094,67 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy that is created for a NAT firewall.
-         *
-         * @description You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
-         *
-         * @param request ModifyNatFirewallControlPolicyRequest
-         * @return ModifyNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNatFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNatFirewallControlPolicyResponse
+        /// </returns>
         public ModifyNatFirewallControlPolicyResponse ModifyNatFirewallControlPolicy(ModifyNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyNatFirewallControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy that is created for a NAT firewall.
-         *
-         * @description You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
-         *
-         * @param request ModifyNatFirewallControlPolicyRequest
-         * @return ModifyNatFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNatFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNatFirewallControlPolicyResponse
+        /// </returns>
         public async Task<ModifyNatFirewallControlPolicyResponse> ModifyNatFirewallControlPolicyAsync(ModifyNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyNatFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the priority of an access control policy that is created for a NAT firewall.
-         *
-         * @param request ModifyNatFirewallControlPolicyPositionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyNatFirewallControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyNatFirewallControlPolicyPositionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNatFirewallControlPolicyPositionResponse
+        /// </returns>
         public ModifyNatFirewallControlPolicyPositionResponse ModifyNatFirewallControlPolicyPositionWithOptions(ModifyNatFirewallControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12384,13 +15198,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyNatFirewallControlPolicyPositionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the priority of an access control policy that is created for a NAT firewall.
-         *
-         * @param request ModifyNatFirewallControlPolicyPositionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyNatFirewallControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyNatFirewallControlPolicyPositionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNatFirewallControlPolicyPositionResponse
+        /// </returns>
         public async Task<ModifyNatFirewallControlPolicyPositionResponse> ModifyNatFirewallControlPolicyPositionWithOptionsAsync(ModifyNatFirewallControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12434,37 +15256,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyNatFirewallControlPolicyPositionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the priority of an access control policy that is created for a NAT firewall.
-         *
-         * @param request ModifyNatFirewallControlPolicyPositionRequest
-         * @return ModifyNatFirewallControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyNatFirewallControlPolicyPositionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNatFirewallControlPolicyPositionResponse
+        /// </returns>
         public ModifyNatFirewallControlPolicyPositionResponse ModifyNatFirewallControlPolicyPosition(ModifyNatFirewallControlPolicyPositionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyNatFirewallControlPolicyPositionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the priority of an access control policy that is created for a NAT firewall.
-         *
-         * @param request ModifyNatFirewallControlPolicyPositionRequest
-         * @return ModifyNatFirewallControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an access control policy that is created for a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyNatFirewallControlPolicyPositionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNatFirewallControlPolicyPositionResponse
+        /// </returns>
         public async Task<ModifyNatFirewallControlPolicyPositionResponse> ModifyNatFirewallControlPolicyPositionAsync(ModifyNatFirewallControlPolicyPositionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyNatFirewallControlPolicyPositionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies information about an operation on an object group.
-         *
-         * @param request ModifyObjectGroupOperationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyObjectGroupOperationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about an operation on an object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyObjectGroupOperationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyObjectGroupOperationResponse
+        /// </returns>
         public ModifyObjectGroupOperationResponse ModifyObjectGroupOperationWithOptions(ModifyObjectGroupOperationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12516,13 +15358,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyObjectGroupOperationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies information about an operation on an object group.
-         *
-         * @param request ModifyObjectGroupOperationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyObjectGroupOperationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about an operation on an object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyObjectGroupOperationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyObjectGroupOperationResponse
+        /// </returns>
         public async Task<ModifyObjectGroupOperationResponse> ModifyObjectGroupOperationWithOptionsAsync(ModifyObjectGroupOperationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12574,41 +15424,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyObjectGroupOperationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies information about an operation on an object group.
-         *
-         * @param request ModifyObjectGroupOperationRequest
-         * @return ModifyObjectGroupOperationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about an operation on an object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyObjectGroupOperationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyObjectGroupOperationResponse
+        /// </returns>
         public ModifyObjectGroupOperationResponse ModifyObjectGroupOperation(ModifyObjectGroupOperationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyObjectGroupOperationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies information about an operation on an object group.
-         *
-         * @param request ModifyObjectGroupOperationRequest
-         * @return ModifyObjectGroupOperationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about an operation on an object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyObjectGroupOperationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyObjectGroupOperationResponse
+        /// </returns>
         public async Task<ModifyObjectGroupOperationResponse> ModifyObjectGroupOperationAsync(ModifyObjectGroupOperationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyObjectGroupOperationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables the strict mode for an access control policy.
-         *
-         * @description You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyPolicyAdvancedConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPolicyAdvancedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the strict mode for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyAdvancedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyAdvancedConfigResponse
+        /// </returns>
         public ModifyPolicyAdvancedConfigResponse ModifyPolicyAdvancedConfigWithOptions(ModifyPolicyAdvancedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12644,17 +15517,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyPolicyAdvancedConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables the strict mode for an access control policy.
-         *
-         * @description You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyPolicyAdvancedConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPolicyAdvancedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the strict mode for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyAdvancedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyAdvancedConfigResponse
+        /// </returns>
         public async Task<ModifyPolicyAdvancedConfigResponse> ModifyPolicyAdvancedConfigWithOptionsAsync(ModifyPolicyAdvancedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12690,45 +15574,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyPolicyAdvancedConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables the strict mode for an access control policy.
-         *
-         * @description You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyPolicyAdvancedConfigRequest
-         * @return ModifyPolicyAdvancedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the strict mode for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyAdvancedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyAdvancedConfigResponse
+        /// </returns>
         public ModifyPolicyAdvancedConfigResponse ModifyPolicyAdvancedConfig(ModifyPolicyAdvancedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPolicyAdvancedConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables the strict mode for an access control policy.
-         *
-         * @description You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyPolicyAdvancedConfigRequest
-         * @return ModifyPolicyAdvancedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the strict mode for an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyAdvancedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyAdvancedConfigResponse
+        /// </returns>
         public async Task<ModifyPolicyAdvancedConfigResponse> ModifyPolicyAdvancedConfigAsync(ModifyPolicyAdvancedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPolicyAdvancedConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request ModifyTrFirewallV2ConfigurationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTrFirewallV2ConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTrFirewallV2ConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTrFirewallV2ConfigurationResponse
+        /// </returns>
         public ModifyTrFirewallV2ConfigurationResponse ModifyTrFirewallV2ConfigurationWithOptions(ModifyTrFirewallV2ConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12764,13 +15674,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyTrFirewallV2ConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request ModifyTrFirewallV2ConfigurationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTrFirewallV2ConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTrFirewallV2ConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTrFirewallV2ConfigurationResponse
+        /// </returns>
         public async Task<ModifyTrFirewallV2ConfigurationResponse> ModifyTrFirewallV2ConfigurationWithOptionsAsync(ModifyTrFirewallV2ConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12806,37 +15724,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyTrFirewallV2ConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request ModifyTrFirewallV2ConfigurationRequest
-         * @return ModifyTrFirewallV2ConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTrFirewallV2ConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTrFirewallV2ConfigurationResponse
+        /// </returns>
         public ModifyTrFirewallV2ConfigurationResponse ModifyTrFirewallV2Configuration(ModifyTrFirewallV2ConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyTrFirewallV2ConfigurationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.
-         *
-         * @param request ModifyTrFirewallV2ConfigurationRequest
-         * @return ModifyTrFirewallV2ConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTrFirewallV2ConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTrFirewallV2ConfigurationResponse
+        /// </returns>
         public async Task<ModifyTrFirewallV2ConfigurationResponse> ModifyTrFirewallV2ConfigurationAsync(ModifyTrFirewallV2ConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyTrFirewallV2ConfigurationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.
-         *
-         * @param tmpReq ModifyTrFirewallV2RoutePolicyScopeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTrFirewallV2RoutePolicyScopeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyTrFirewallV2RoutePolicyScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTrFirewallV2RoutePolicyScopeResponse
+        /// </returns>
         public ModifyTrFirewallV2RoutePolicyScopeResponse ModifyTrFirewallV2RoutePolicyScopeWithOptions(ModifyTrFirewallV2RoutePolicyScopeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12894,13 +15832,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyTrFirewallV2RoutePolicyScopeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.
-         *
-         * @param tmpReq ModifyTrFirewallV2RoutePolicyScopeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTrFirewallV2RoutePolicyScopeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyTrFirewallV2RoutePolicyScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTrFirewallV2RoutePolicyScopeResponse
+        /// </returns>
         public async Task<ModifyTrFirewallV2RoutePolicyScopeResponse> ModifyTrFirewallV2RoutePolicyScopeWithOptionsAsync(ModifyTrFirewallV2RoutePolicyScopeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12958,37 +15904,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyTrFirewallV2RoutePolicyScopeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.
-         *
-         * @param request ModifyTrFirewallV2RoutePolicyScopeRequest
-         * @return ModifyTrFirewallV2RoutePolicyScopeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTrFirewallV2RoutePolicyScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTrFirewallV2RoutePolicyScopeResponse
+        /// </returns>
         public ModifyTrFirewallV2RoutePolicyScopeResponse ModifyTrFirewallV2RoutePolicyScope(ModifyTrFirewallV2RoutePolicyScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyTrFirewallV2RoutePolicyScopeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.
-         *
-         * @param request ModifyTrFirewallV2RoutePolicyScopeRequest
-         * @return ModifyTrFirewallV2RoutePolicyScopeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTrFirewallV2RoutePolicyScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTrFirewallV2RoutePolicyScopeResponse
+        /// </returns>
         public async Task<ModifyTrFirewallV2RoutePolicyScopeResponse> ModifyTrFirewallV2RoutePolicyScopeAsync(ModifyTrFirewallV2RoutePolicyScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyTrFirewallV2RoutePolicyScopeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改用户IPS白名单
-         *
-         * @param request ModifyUserIPSWhitelistRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyUserIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户IPS白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserIPSWhitelistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserIPSWhitelistResponse
+        /// </returns>
         public ModifyUserIPSWhitelistResponse ModifyUserIPSWhitelistWithOptions(ModifyUserIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13044,13 +16010,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyUserIPSWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改用户IPS白名单
-         *
-         * @param request ModifyUserIPSWhitelistRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyUserIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户IPS白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserIPSWhitelistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserIPSWhitelistResponse
+        /// </returns>
         public async Task<ModifyUserIPSWhitelistResponse> ModifyUserIPSWhitelistWithOptionsAsync(ModifyUserIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13106,41 +16080,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyUserIPSWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改用户IPS白名单
-         *
-         * @param request ModifyUserIPSWhitelistRequest
-         * @return ModifyUserIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户IPS白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserIPSWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserIPSWhitelistResponse
+        /// </returns>
         public ModifyUserIPSWhitelistResponse ModifyUserIPSWhitelist(ModifyUserIPSWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyUserIPSWhitelistWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改用户IPS白名单
-         *
-         * @param request ModifyUserIPSWhitelistRequest
-         * @return ModifyUserIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户IPS白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserIPSWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserIPSWhitelistResponse
+        /// </returns>
         public async Task<ModifyUserIPSWhitelistResponse> ModifyUserIPSWhitelistAsync(ModifyUserIPSWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyUserIPSWhitelistWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallCenConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallCenConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallCenConfigureResponse
+        /// </returns>
         public ModifyVpcFirewallCenConfigureResponse ModifyVpcFirewallCenConfigureWithOptions(ModifyVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13180,17 +16177,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallCenConfigureResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallCenConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallCenConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallCenConfigureResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallCenConfigureResponse> ModifyVpcFirewallCenConfigureWithOptionsAsync(ModifyVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13230,50 +16238,79 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallCenConfigureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallCenConfigureRequest
-         * @return ModifyVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallCenConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallCenConfigureResponse
+        /// </returns>
         public ModifyVpcFirewallCenConfigureResponse ModifyVpcFirewallCenConfigure(ModifyVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallCenConfigureWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallCenConfigureRequest
-         * @return ModifyVpcFirewallCenConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallCenConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallCenConfigureResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallCenConfigureResponse> ModifyVpcFirewallCenConfigureAsync(ModifyVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallCenConfigureWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
-         * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallCenSwitchStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallCenSwitchStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
+        /// Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallCenSwitchStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallCenSwitchStatusResponse
+        /// </returns>
         public ModifyVpcFirewallCenSwitchStatusResponse ModifyVpcFirewallCenSwitchStatusWithOptions(ModifyVpcFirewallCenSwitchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13313,18 +16350,29 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallCenSwitchStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
-         * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallCenSwitchStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallCenSwitchStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
+        /// Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallCenSwitchStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallCenSwitchStatusResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallCenSwitchStatusResponse> ModifyVpcFirewallCenSwitchStatusWithOptionsAsync(ModifyVpcFirewallCenSwitchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13364,51 +16412,80 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallCenSwitchStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
-         * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallCenSwitchStatusRequest
-         * @return ModifyVpcFirewallCenSwitchStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
+        /// Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallCenSwitchStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallCenSwitchStatusResponse
+        /// </returns>
         public ModifyVpcFirewallCenSwitchStatusResponse ModifyVpcFirewallCenSwitchStatus(ModifyVpcFirewallCenSwitchStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallCenSwitchStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-         *
-         * @description You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
-         * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallCenSwitchStatusRequest
-         * @return ModifyVpcFirewallCenSwitchStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
+        /// Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallCenSwitchStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallCenSwitchStatusResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallCenSwitchStatusResponse> ModifyVpcFirewallCenSwitchStatusAsync(ModifyVpcFirewallCenSwitchStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallCenSwitchStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallConfigureResponse
+        /// </returns>
         public ModifyVpcFirewallConfigureResponse ModifyVpcFirewallConfigureWithOptions(ModifyVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13456,17 +16533,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallConfigureResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallConfigureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallConfigureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallConfigureResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallConfigureResponse> ModifyVpcFirewallConfigureWithOptionsAsync(ModifyVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13514,49 +16602,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallConfigureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallConfigureRequest
-         * @return ModifyVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallConfigureResponse
+        /// </returns>
         public ModifyVpcFirewallConfigureResponse ModifyVpcFirewallConfigure(ModifyVpcFirewallConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallConfigureWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallConfigureRequest
-         * @return ModifyVpcFirewallConfigureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallConfigureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallConfigureResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallConfigureResponse> ModifyVpcFirewallConfigureAsync(ModifyVpcFirewallConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallConfigureWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.
-         *
-         * @description You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallControlPolicyResponse
+        /// </returns>
         public ModifyVpcFirewallControlPolicyResponse ModifyVpcFirewallControlPolicyWithOptions(ModifyVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13672,17 +16789,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.
-         *
-         * @description You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallControlPolicyResponse> ModifyVpcFirewallControlPolicyWithOptionsAsync(ModifyVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13798,49 +16926,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.
-         *
-         * @description You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallControlPolicyRequest
-         * @return ModifyVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallControlPolicyResponse
+        /// </returns>
         public ModifyVpcFirewallControlPolicyResponse ModifyVpcFirewallControlPolicy(ModifyVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.
-         *
-         * @description You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallControlPolicyRequest
-         * @return ModifyVpcFirewallControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallControlPolicyResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallControlPolicyResponse> ModifyVpcFirewallControlPolicyAsync(ModifyVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallControlPolicyPositionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallControlPolicyPositionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallControlPolicyPositionResponse
+        /// </returns>
         public ModifyVpcFirewallControlPolicyPositionResponse ModifyVpcFirewallControlPolicyPositionWithOptions(ModifyVpcFirewallControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13884,17 +17041,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallControlPolicyPositionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallControlPolicyPositionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallControlPolicyPositionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallControlPolicyPositionResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallControlPolicyPositionResponse> ModifyVpcFirewallControlPolicyPositionWithOptionsAsync(ModifyVpcFirewallControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13938,49 +17106,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallControlPolicyPositionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallControlPolicyPositionRequest
-         * @return ModifyVpcFirewallControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallControlPolicyPositionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallControlPolicyPositionResponse
+        /// </returns>
         public ModifyVpcFirewallControlPolicyPositionResponse ModifyVpcFirewallControlPolicyPosition(ModifyVpcFirewallControlPolicyPositionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallControlPolicyPositionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallControlPolicyPositionRequest
-         * @return ModifyVpcFirewallControlPolicyPositionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallControlPolicyPositionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallControlPolicyPositionResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallControlPolicyPositionResponse> ModifyVpcFirewallControlPolicyPositionAsync(ModifyVpcFirewallControlPolicyPositionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallControlPolicyPositionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call this operation to modify the intrusion prevention configurations of a VPC firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallDefaultIPSConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to modify the intrusion prevention configurations of a VPC firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallDefaultIPSConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallDefaultIPSConfigResponse
+        /// </returns>
         public ModifyVpcFirewallDefaultIPSConfigResponse ModifyVpcFirewallDefaultIPSConfigWithOptions(ModifyVpcFirewallDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14036,17 +17233,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallDefaultIPSConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call this operation to modify the intrusion prevention configurations of a VPC firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallDefaultIPSConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to modify the intrusion prevention configurations of a VPC firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallDefaultIPSConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallDefaultIPSConfigResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallDefaultIPSConfigResponse> ModifyVpcFirewallDefaultIPSConfigWithOptionsAsync(ModifyVpcFirewallDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14102,45 +17310,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallDefaultIPSConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call this operation to modify the intrusion prevention configurations of a VPC firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallDefaultIPSConfigRequest
-         * @return ModifyVpcFirewallDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to modify the intrusion prevention configurations of a VPC firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallDefaultIPSConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallDefaultIPSConfigResponse
+        /// </returns>
         public ModifyVpcFirewallDefaultIPSConfigResponse ModifyVpcFirewallDefaultIPSConfig(ModifyVpcFirewallDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallDefaultIPSConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-         *
-         * @description You can call this operation to modify the intrusion prevention configurations of a VPC firewall.
-         * ## [](#qps-)Limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallDefaultIPSConfigRequest
-         * @return ModifyVpcFirewallDefaultIPSConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to modify the intrusion prevention configurations of a VPC firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallDefaultIPSConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallDefaultIPSConfigResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallDefaultIPSConfigResponse> ModifyVpcFirewallDefaultIPSConfigAsync(ModifyVpcFirewallDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallDefaultIPSConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.
-         *
-         * @param request ModifyVpcFirewallIPSWhitelistRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallIPSWhitelistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallIPSWhitelistResponse
+        /// </returns>
         public ModifyVpcFirewallIPSWhitelistResponse ModifyVpcFirewallIPSWhitelistWithOptions(ModifyVpcFirewallIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14188,13 +17422,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallIPSWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.
-         *
-         * @param request ModifyVpcFirewallIPSWhitelistRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallIPSWhitelistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallIPSWhitelistResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallIPSWhitelistResponse> ModifyVpcFirewallIPSWhitelistWithOptionsAsync(ModifyVpcFirewallIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14242,42 +17484,65 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallIPSWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.
-         *
-         * @param request ModifyVpcFirewallIPSWhitelistRequest
-         * @return ModifyVpcFirewallIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallIPSWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallIPSWhitelistResponse
+        /// </returns>
         public ModifyVpcFirewallIPSWhitelistResponse ModifyVpcFirewallIPSWhitelist(ModifyVpcFirewallIPSWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallIPSWhitelistWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.
-         *
-         * @param request ModifyVpcFirewallIPSWhitelistRequest
-         * @return ModifyVpcFirewallIPSWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallIPSWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallIPSWhitelistResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallIPSWhitelistResponse> ModifyVpcFirewallIPSWhitelistAsync(ModifyVpcFirewallIPSWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallIPSWhitelistWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
-         * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallSwitchStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallSwitchStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
+        /// Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallSwitchStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallSwitchStatusResponse
+        /// </returns>
         public ModifyVpcFirewallSwitchStatusResponse ModifyVpcFirewallSwitchStatusWithOptions(ModifyVpcFirewallSwitchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14317,18 +17582,29 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallSwitchStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
-         * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallSwitchStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyVpcFirewallSwitchStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
+        /// Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallSwitchStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallSwitchStatusResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallSwitchStatusResponse> ModifyVpcFirewallSwitchStatusWithOptionsAsync(ModifyVpcFirewallSwitchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14368,51 +17644,80 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallSwitchStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
-         * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallSwitchStatusRequest
-         * @return ModifyVpcFirewallSwitchStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
+        /// Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallSwitchStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallSwitchStatusResponse
+        /// </returns>
         public ModifyVpcFirewallSwitchStatusResponse ModifyVpcFirewallSwitchStatus(ModifyVpcFirewallSwitchStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallSwitchStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-         *
-         * @description You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
-         * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ModifyVpcFirewallSwitchStatusRequest
-         * @return ModifyVpcFirewallSwitchStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
+        /// Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcFirewallSwitchStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcFirewallSwitchStatusResponse
+        /// </returns>
         public async Task<ModifyVpcFirewallSwitchStatusResponse> ModifyVpcFirewallSwitchStatusAsync(ModifyVpcFirewallSwitchStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallSwitchStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Turns off all firewall switches.
-         *
-         * @description You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.
-         * ## [](#qps-)QPS limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutDisableAllFwSwitchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PutDisableAllFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Turns off all firewall switches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.</para>
+        /// <h2><a href="#qps-"></a>QPS limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutDisableAllFwSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDisableAllFwSwitchResponse
+        /// </returns>
         public PutDisableAllFwSwitchResponse PutDisableAllFwSwitchWithOptions(PutDisableAllFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14448,17 +17753,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutDisableAllFwSwitchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Turns off all firewall switches.
-         *
-         * @description You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.
-         * ## [](#qps-)QPS limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutDisableAllFwSwitchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PutDisableAllFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Turns off all firewall switches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.</para>
+        /// <h2><a href="#qps-"></a>QPS limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutDisableAllFwSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDisableAllFwSwitchResponse
+        /// </returns>
         public async Task<PutDisableAllFwSwitchResponse> PutDisableAllFwSwitchWithOptionsAsync(PutDisableAllFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14494,49 +17810,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutDisableAllFwSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Turns off all firewall switches.
-         *
-         * @description You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.
-         * ## [](#qps-)QPS limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutDisableAllFwSwitchRequest
-         * @return PutDisableAllFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Turns off all firewall switches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.</para>
+        /// <h2><a href="#qps-"></a>QPS limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutDisableAllFwSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDisableAllFwSwitchResponse
+        /// </returns>
         public PutDisableAllFwSwitchResponse PutDisableAllFwSwitch(PutDisableAllFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PutDisableAllFwSwitchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Turns off all firewall switches.
-         *
-         * @description You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.
-         * ## [](#qps-)QPS limits
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutDisableAllFwSwitchRequest
-         * @return PutDisableAllFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Turns off all firewall switches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.</para>
+        /// <h2><a href="#qps-"></a>QPS limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutDisableAllFwSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDisableAllFwSwitchResponse
+        /// </returns>
         public async Task<PutDisableAllFwSwitchResponse> PutDisableAllFwSwitchAsync(PutDisableAllFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutDisableAllFwSwitchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Disable a firewall for specific assets.
-         *
-         * @description You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutDisableFwSwitchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PutDisableFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disable a firewall for specific assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutDisableFwSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDisableFwSwitchResponse
+        /// </returns>
         public PutDisableFwSwitchResponse PutDisableFwSwitchWithOptions(PutDisableFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14580,17 +17925,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutDisableFwSwitchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Disable a firewall for specific assets.
-         *
-         * @description You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutDisableFwSwitchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PutDisableFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disable a firewall for specific assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutDisableFwSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDisableFwSwitchResponse
+        /// </returns>
         public async Task<PutDisableFwSwitchResponse> PutDisableFwSwitchWithOptionsAsync(PutDisableFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14634,49 +17990,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutDisableFwSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Disable a firewall for specific assets.
-         *
-         * @description You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutDisableFwSwitchRequest
-         * @return PutDisableFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disable a firewall for specific assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutDisableFwSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDisableFwSwitchResponse
+        /// </returns>
         public PutDisableFwSwitchResponse PutDisableFwSwitch(PutDisableFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PutDisableFwSwitchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Disable a firewall for specific assets.
-         *
-         * @description You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutDisableFwSwitchRequest
-         * @return PutDisableFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disable a firewall for specific assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutDisableFwSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDisableFwSwitchResponse
+        /// </returns>
         public async Task<PutDisableFwSwitchResponse> PutDisableFwSwitchAsync(PutDisableFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutDisableFwSwitchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables a firewall for all public IP addresses within your Alibaba Cloud account.
-         *
-         * @description You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutEnableAllFwSwitchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PutEnableAllFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a firewall for all public IP addresses within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutEnableAllFwSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutEnableAllFwSwitchResponse
+        /// </returns>
         public PutEnableAllFwSwitchResponse PutEnableAllFwSwitchWithOptions(PutEnableAllFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14712,17 +18097,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutEnableAllFwSwitchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables a firewall for all public IP addresses within your Alibaba Cloud account.
-         *
-         * @description You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutEnableAllFwSwitchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PutEnableAllFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a firewall for all public IP addresses within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutEnableAllFwSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutEnableAllFwSwitchResponse
+        /// </returns>
         public async Task<PutEnableAllFwSwitchResponse> PutEnableAllFwSwitchWithOptionsAsync(PutEnableAllFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14758,49 +18154,78 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutEnableAllFwSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables a firewall for all public IP addresses within your Alibaba Cloud account.
-         *
-         * @description You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutEnableAllFwSwitchRequest
-         * @return PutEnableAllFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a firewall for all public IP addresses within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutEnableAllFwSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutEnableAllFwSwitchResponse
+        /// </returns>
         public PutEnableAllFwSwitchResponse PutEnableAllFwSwitch(PutEnableAllFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PutEnableAllFwSwitchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables a firewall for all public IP addresses within your Alibaba Cloud account.
-         *
-         * @description You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request PutEnableAllFwSwitchRequest
-         * @return PutEnableAllFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a firewall for all public IP addresses within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutEnableAllFwSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutEnableAllFwSwitchResponse
+        /// </returns>
         public async Task<PutEnableAllFwSwitchResponse> PutEnableAllFwSwitchAsync(PutEnableAllFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutEnableAllFwSwitchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables firewalls for specific assets.
-         *
-         * @description You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-         *
-         * @param request PutEnableFwSwitchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PutEnableFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables firewalls for specific assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutEnableFwSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutEnableFwSwitchResponse
+        /// </returns>
         public PutEnableFwSwitchResponse PutEnableFwSwitchWithOptions(PutEnableFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14844,17 +18269,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutEnableFwSwitchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables firewalls for specific assets.
-         *
-         * @description You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-         *
-         * @param request PutEnableFwSwitchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PutEnableFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables firewalls for specific assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutEnableFwSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutEnableFwSwitchResponse
+        /// </returns>
         public async Task<PutEnableFwSwitchResponse> PutEnableFwSwitchWithOptionsAsync(PutEnableFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14898,45 +18334,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutEnableFwSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables firewalls for specific assets.
-         *
-         * @description You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-         *
-         * @param request PutEnableFwSwitchRequest
-         * @return PutEnableFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables firewalls for specific assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutEnableFwSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutEnableFwSwitchResponse
+        /// </returns>
         public PutEnableFwSwitchResponse PutEnableFwSwitch(PutEnableFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PutEnableFwSwitchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables firewalls for specific assets.
-         *
-         * @description You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.
-         * ## Limits
-         * You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-         *
-         * @param request PutEnableFwSwitchRequest
-         * @return PutEnableFwSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables firewalls for specific assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutEnableFwSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutEnableFwSwitchResponse
+        /// </returns>
         public async Task<PutEnableFwSwitchResponse> PutEnableFwSwitchAsync(PutEnableFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutEnableFwSwitchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Releases Cloud Firewall that uses the pay-as-you-go billing method.
-         *
-         * @param request ReleasePostInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleasePostInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleasePostInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleasePostInstanceResponse
+        /// </returns>
         public ReleasePostInstanceResponse ReleasePostInstanceWithOptions(ReleasePostInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14964,13 +18426,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ReleasePostInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases Cloud Firewall that uses the pay-as-you-go billing method.
-         *
-         * @param request ReleasePostInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleasePostInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleasePostInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleasePostInstanceResponse
+        /// </returns>
         public async Task<ReleasePostInstanceResponse> ReleasePostInstanceWithOptionsAsync(ReleasePostInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14998,37 +18468,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ReleasePostInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases Cloud Firewall that uses the pay-as-you-go billing method.
-         *
-         * @param request ReleasePostInstanceRequest
-         * @return ReleasePostInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleasePostInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleasePostInstanceResponse
+        /// </returns>
         public ReleasePostInstanceResponse ReleasePostInstance(ReleasePostInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleasePostInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Releases Cloud Firewall that uses the pay-as-you-go billing method.
-         *
-         * @param request ReleasePostInstanceRequest
-         * @return ReleasePostInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleasePostInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleasePostInstanceResponse
+        /// </returns>
         public async Task<ReleasePostInstanceResponse> ReleasePostInstanceAsync(ReleasePostInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleasePostInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Resets the number of NAT firewall hits.
-         *
-         * @param request ResetNatFirewallRuleHitCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetNatFirewallRuleHitCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the number of NAT firewall hits.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetNatFirewallRuleHitCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetNatFirewallRuleHitCountResponse
+        /// </returns>
         public ResetNatFirewallRuleHitCountResponse ResetNatFirewallRuleHitCountWithOptions(ResetNatFirewallRuleHitCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15064,13 +18554,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ResetNatFirewallRuleHitCountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Resets the number of NAT firewall hits.
-         *
-         * @param request ResetNatFirewallRuleHitCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetNatFirewallRuleHitCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the number of NAT firewall hits.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetNatFirewallRuleHitCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetNatFirewallRuleHitCountResponse
+        /// </returns>
         public async Task<ResetNatFirewallRuleHitCountResponse> ResetNatFirewallRuleHitCountWithOptionsAsync(ResetNatFirewallRuleHitCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15106,41 +18604,64 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ResetNatFirewallRuleHitCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Resets the number of NAT firewall hits.
-         *
-         * @param request ResetNatFirewallRuleHitCountRequest
-         * @return ResetNatFirewallRuleHitCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the number of NAT firewall hits.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetNatFirewallRuleHitCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetNatFirewallRuleHitCountResponse
+        /// </returns>
         public ResetNatFirewallRuleHitCountResponse ResetNatFirewallRuleHitCount(ResetNatFirewallRuleHitCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetNatFirewallRuleHitCountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Resets the number of NAT firewall hits.
-         *
-         * @param request ResetNatFirewallRuleHitCountRequest
-         * @return ResetNatFirewallRuleHitCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the number of NAT firewall hits.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetNatFirewallRuleHitCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetNatFirewallRuleHitCountResponse
+        /// </returns>
         public async Task<ResetNatFirewallRuleHitCountResponse> ResetNatFirewallRuleHitCountAsync(ResetNatFirewallRuleHitCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetNatFirewallRuleHitCountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ResetVpcFirewallRuleHitCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetVpcFirewallRuleHitCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetVpcFirewallRuleHitCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetVpcFirewallRuleHitCountResponse
+        /// </returns>
         public ResetVpcFirewallRuleHitCountResponse ResetVpcFirewallRuleHitCountWithOptions(ResetVpcFirewallRuleHitCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15172,17 +18693,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ResetVpcFirewallRuleHitCountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ResetVpcFirewallRuleHitCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetVpcFirewallRuleHitCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetVpcFirewallRuleHitCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetVpcFirewallRuleHitCountResponse
+        /// </returns>
         public async Task<ResetVpcFirewallRuleHitCountResponse> ResetVpcFirewallRuleHitCountWithOptionsAsync(ResetVpcFirewallRuleHitCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15214,45 +18746,71 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ResetVpcFirewallRuleHitCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ResetVpcFirewallRuleHitCountRequest
-         * @return ResetVpcFirewallRuleHitCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetVpcFirewallRuleHitCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetVpcFirewallRuleHitCountResponse
+        /// </returns>
         public ResetVpcFirewallRuleHitCountResponse ResetVpcFirewallRuleHitCount(ResetVpcFirewallRuleHitCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetVpcFirewallRuleHitCountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-         *
-         * @description You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request ResetVpcFirewallRuleHitCountRequest
-         * @return ResetVpcFirewallRuleHitCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetVpcFirewallRuleHitCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetVpcFirewallRuleHitCountResponse
+        /// </returns>
         public async Task<ResetVpcFirewallRuleHitCountResponse> ResetVpcFirewallRuleHitCountAsync(ResetVpcFirewallRuleHitCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetVpcFirewallRuleHitCountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables a NAT firewall.
-         *
-         * @param request SwitchSecurityProxyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SwitchSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchSecurityProxyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchSecurityProxyResponse
+        /// </returns>
         public SwitchSecurityProxyResponse SwitchSecurityProxyWithOptions(SwitchSecurityProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15288,13 +18846,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<SwitchSecurityProxyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables a NAT firewall.
-         *
-         * @param request SwitchSecurityProxyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SwitchSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchSecurityProxyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchSecurityProxyResponse
+        /// </returns>
         public async Task<SwitchSecurityProxyResponse> SwitchSecurityProxyWithOptionsAsync(SwitchSecurityProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15330,24 +18896,36 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<SwitchSecurityProxyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables a NAT firewall.
-         *
-         * @param request SwitchSecurityProxyRequest
-         * @return SwitchSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchSecurityProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchSecurityProxyResponse
+        /// </returns>
         public SwitchSecurityProxyResponse SwitchSecurityProxy(SwitchSecurityProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchSecurityProxyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables a NAT firewall.
-         *
-         * @param request SwitchSecurityProxyRequest
-         * @return SwitchSecurityProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables a NAT firewall.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchSecurityProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchSecurityProxyResponse
+        /// </returns>
         public async Task<SwitchSecurityProxyResponse> SwitchSecurityProxyAsync(SwitchSecurityProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

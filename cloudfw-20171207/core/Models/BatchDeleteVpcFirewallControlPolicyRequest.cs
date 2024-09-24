@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class BatchDeleteVpcFirewallControlPolicyRequest : TeaModel {
         /// <summary>
-        /// The UUIDs of access control policies.
-        /// 
-        /// This parameter is required.
+        /// <para>The UUIDs of access control policies.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AclUuidList")]
         [Validation(Required=false)]
         public List<string> AclUuidList { get; set; }
 
         /// <summary>
-        /// The instance ID of the VPC firewall.
+        /// <para>The instance ID of the VPC firewall.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vfw-m5e7dbc4y****</para>
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]

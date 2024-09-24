@@ -10,37 +10,50 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeCfwRiskLevelSummaryResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F1F30435-FA0A-52DA-A5DE-C16FD6C171DA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of risks.
+        /// <para>The list of risks.</para>
         /// </summary>
         [NameInMap("RiskList")]
         [Validation(Required=false)]
         public List<DescribeCfwRiskLevelSummaryResponseBodyRiskList> RiskList { get; set; }
         public class DescribeCfwRiskLevelSummaryResponseBodyRiskList : TeaModel {
             /// <summary>
-            /// The risk levels. Valid values:
+            /// <para>The risk levels. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>medium</b></description></item>
+            /// </list>
             /// 
-            /// *   **medium**
+            /// <b>Example:</b>
+            /// <para>medium</para>
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
             public string Level { get; set; }
 
             /// <summary>
-            /// The number of at-risk Elastic Compute Service (ECS) instances.
+            /// <para>The number of at-risk Elastic Compute Service (ECS) instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("Num")]
             [Validation(Required=false)]
             public string Num { get; set; }
 
             /// <summary>
-            /// The type.
+            /// <para>The type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ResourceNotProtected</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

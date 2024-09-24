@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteDownloadTaskRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the file download task.
+        /// <para>The ID of the file download task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4376</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

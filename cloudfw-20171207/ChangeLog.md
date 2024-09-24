@@ -1,3 +1,15 @@
+2024-09-24 Version: 3.2.0
+- Support API DescribeUserBuyVersion.
+- Update API AddAddressBook: update param AddressList.
+- Update API DeleteControlPolicyTemplate: update response param.
+- Update API DescribeAssetRiskList: update param IpAddrList.
+- Update API DescribeInternetOpenIp: update response param.
+- Update API DescribeOutgoingDestinationIP: update response param.
+- Update API DescribeOutgoingDomain: update response param.
+- Update API DescribePostpayTrafficDetail: add param RegionNo.
+- Update API DescribePostpayTrafficDetail: update response param.
+
+
 2024-09-24 Version: 3.1.0
 - Support API DescribeUserBuyVersion.
 - Update API AddAddressBook: update param AddressList.

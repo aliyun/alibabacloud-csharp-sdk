@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyNatFirewallControlPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3868197C-E6E8-52CD-8358-05E3308430E2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

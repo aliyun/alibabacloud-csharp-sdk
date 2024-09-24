@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ReleasePostInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the Cloud Firewall instance.
+        /// <para>The ID of the Cloud Firewall instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cfw_elasticity_public_cn-xxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
