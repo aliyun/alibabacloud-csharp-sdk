@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteInstanceMembersRequest : TeaModel {
         /// <summary>
-        /// The unique identifiers (UID) of members that you want to remove from Cloud Firewall.
+        /// The UIDs of the members.
         /// 
         /// This parameter is required.
         /// </summary>

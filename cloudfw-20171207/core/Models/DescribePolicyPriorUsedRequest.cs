@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// Valid values:
         /// 
-        /// *   **in**: inbound traffic
-        /// *   **out**: outbound traffic
+        /// *   **in**: inbound.
+        /// *   **out**: outbound.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,20 +28,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// Valid values:
         /// 
-        /// *   **4**: IPv4 (default)
-        /// *   **6**: IPv6
+        /// *   **4** (default): IPv4.
+        /// *   **6**: IPv6.
         /// </summary>
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// The natural language of the request and response.
+        /// The language of the content within the request and response.
         /// 
         /// Valid values:
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// *   **zh** (default)
+        /// *   **en**
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

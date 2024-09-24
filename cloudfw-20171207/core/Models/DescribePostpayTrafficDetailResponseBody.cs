@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public long? ProtectionDuration { get; set; }
 
+            [NameInMap("RegionNo")]
+            [Validation(Required=false)]
+            public string RegionNo { get; set; }
+
             /// <summary>
             /// The resource ID. The resource ID for the Internet firewall is the public IP address that is protected the Internet firewall, and the resource ID for a NAT firewall is the instance ID of the NAT firewall.
             /// </summary>

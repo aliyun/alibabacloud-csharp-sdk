@@ -15,11 +15,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The addresses that you want to add to the address book. Separate multiple addresses with commas (,).
         /// 
-        /// >  If you set GroupType to `ip`, `port`, or `domain`, you must specify the AddressList parameter.
+        /// >  If you set GroupType to `ip`, `port` or `domain`, you must specify AddressList.
         /// 
-        /// *   If you set GroupType to `ip`, you must add IP addresses to the address book. Example: 192.0.XX.XX/32, 192.0.XX.XX/24.
-        /// *   If you set GroupType to `port`, you must add port numbers or port ranges to the address book. Example: 80, 100/200.
-        /// *   If you set GroupType to `domain`, you must add domain names to the address book. Example: example.com, aliyundoc.com.
+        /// *   If you set GroupType to `ip`, you must add IP addresses to the address book. Example: 192.0.XX.XX/32,192.0.XX.XX/24.
+        /// *   If you set GroupType to `port`, you must add port numbers or port ranges to the address book. Example: 80,100/200.
+        /// *   If you set GroupType to `domain`, you must add domain names to the address book. Example: example.com,aliyundoc.com.
         /// </summary>
         [NameInMap("AddressList")]
         [Validation(Required=false)]

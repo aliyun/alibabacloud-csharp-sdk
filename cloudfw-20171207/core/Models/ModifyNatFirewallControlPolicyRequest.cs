@@ -106,9 +106,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DestinationType { get; set; }
 
         /// <summary>
-        /// The direction of the traffic to which the access control policy applies.
+        /// The direction of the traffic to which the access control policy applies. Valid value:
         /// 
-        /// *   Set the value to **out**.
+        /// *   **out**: outbound.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]

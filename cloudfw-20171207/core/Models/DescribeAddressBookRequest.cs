@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **tag**: Elastic Compute Service (ECS) tag-based address book
         /// *   **allCloud**: cloud service address book
         /// *   **threat**: threat intelligence address book
-        /// 
+        /// *   **ipv6**: IPv6 address book
         /// >  If you do not specify a type, the domain address books and ECS tag-based address books are queried.
         /// </summary>
         [NameInMap("GroupType")]

@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class ModifyObjectGroupOperationResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
-        [NameInMap("RequestId")]
+    public class DescribeUserBuyVersionRequest : TeaModel {
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

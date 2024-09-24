@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallControlPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The access control policies.
+        /// The details of the access control policies.
         /// </summary>
         [NameInMap("Policys")]
         [Validation(Required=false)]

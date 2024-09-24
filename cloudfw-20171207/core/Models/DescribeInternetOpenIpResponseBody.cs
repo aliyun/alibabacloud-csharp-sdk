@@ -113,6 +113,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public List<string> ServiceNameList { get; set; }
 
+            [NameInMap("SrcIpCnt")]
+            [Validation(Required=false)]
+            public long? SrcIpCnt { get; set; }
+
+            [NameInMap("TotalReplyBytes")]
+            [Validation(Required=false)]
+            public long? TotalReplyBytes { get; set; }
+
             /// <summary>
             /// The percentage of traffic of a day. Unit: percent (%).
             /// </summary>

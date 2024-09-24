@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("RegionNo")]
+        [Validation(Required=false)]
+        public string RegionNo { get; set; }
+
         /// <summary>
         /// The instance ID or the IP address of the asset.
         /// </summary>
@@ -71,9 +75,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The traffic type. This parameter is required. Valid values:
         /// 
-        /// *   **EIP_TRAFFIC**: traffic for the Internet firewall
-        /// *   **NatGateway_TRAFFIC**: traffic for NAT firewalls
-        /// *   **VPC_TRAFFIC**: traffic for virtual private cloud (VPC) firewalls
+        /// *   **EIP_TRAFFIC**: traffic for the Internet firewall.
+        /// *   **NatGateway_TRAFFIC**: traffic for NAT firewalls.
+        /// *   **VPC_TRAFFIC**: traffic for virtual private cloud (VPC) firewalls.
         /// 
         /// This parameter is required.
         /// </summary>

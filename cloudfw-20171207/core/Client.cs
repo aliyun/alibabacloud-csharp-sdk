@@ -517,8 +517,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Adds members to Cloud Firewall.
          *
-         * @description You can call the AddInstanceMembers operation to add members to Cloud Firewall. 
-         * ## Limits
+         * @description You can call this operation to add members to Cloud Firewall.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request AddInstanceMembersRequest
@@ -555,8 +555,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Adds members to Cloud Firewall.
          *
-         * @description You can call the AddInstanceMembers operation to add members to Cloud Firewall. 
-         * ## Limits
+         * @description You can call this operation to add members to Cloud Firewall.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request AddInstanceMembersRequest
@@ -593,8 +593,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Adds members to Cloud Firewall.
          *
-         * @description You can call the AddInstanceMembers operation to add members to Cloud Firewall. 
-         * ## Limits
+         * @description You can call this operation to add members to Cloud Firewall.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request AddInstanceMembersRequest
@@ -609,8 +609,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Adds members to Cloud Firewall.
          *
-         * @description You can call the AddInstanceMembers operation to add members to Cloud Firewall. 
-         * ## Limits
+         * @description You can call this operation to add members to Cloud Firewall.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request AddInstanceMembersRequest
@@ -1259,7 +1259,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 创建安全正向代理
+         * @summary Creates a NAT firewall.
          *
          * @param request CreateSecurityProxyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1333,7 +1333,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 创建安全正向代理
+         * @summary Creates a NAT firewall.
          *
          * @param request CreateSecurityProxyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1407,7 +1407,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 创建安全正向代理
+         * @summary Creates a NAT firewall.
          *
          * @param request CreateSecurityProxyRequest
          * @return CreateSecurityProxyResponse
@@ -1419,7 +1419,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 创建安全正向代理
+         * @summary Creates a NAT firewall.
          *
          * @param request CreateSecurityProxyRequest
          * @return CreateSecurityProxyResponse
@@ -3153,8 +3153,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Removes members from Cloud Firewall.
          *
-         * @description You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
-         * ## Limits
+         * @description You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the [DescribeInstanceMembers](https://help.aliyun.com/document_detail/271704.html) operation to obtain the information about the members that are added to Cloud Firewall.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteInstanceMembersRequest
@@ -3191,8 +3191,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Removes members from Cloud Firewall.
          *
-         * @description You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
-         * ## Limits
+         * @description You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the [DescribeInstanceMembers](https://help.aliyun.com/document_detail/271704.html) operation to obtain the information about the members that are added to Cloud Firewall.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteInstanceMembersRequest
@@ -3229,8 +3229,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Removes members from Cloud Firewall.
          *
-         * @description You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
-         * ## Limits
+         * @description You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the [DescribeInstanceMembers](https://help.aliyun.com/document_detail/271704.html) operation to obtain the information about the members that are added to Cloud Firewall.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteInstanceMembersRequest
@@ -3245,8 +3245,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Removes members from Cloud Firewall.
          *
-         * @description You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
-         * ## Limits
+         * @description You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the [DescribeInstanceMembers](https://help.aliyun.com/document_detail/271704.html) operation to obtain the information about the members that are added to Cloud Firewall.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteInstanceMembersRequest
@@ -5075,6 +5075,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @deprecated OpenAPI DescribeDomainResolve is deprecated
+         *
          * @summary Queries Domain Name System (DNS) records.
          *
          * @description You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
@@ -5085,6 +5087,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeDomainResolveResponse
          */
+        // Deprecated
         public DescribeDomainResolveResponse DescribeDomainResolveWithOptions(DescribeDomainResolveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5129,6 +5132,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @deprecated OpenAPI DescribeDomainResolve is deprecated
+         *
          * @summary Queries Domain Name System (DNS) records.
          *
          * @description You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
@@ -5139,6 +5144,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeDomainResolveResponse
          */
+        // Deprecated
         public async Task<DescribeDomainResolveResponse> DescribeDomainResolveWithOptionsAsync(DescribeDomainResolveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5183,6 +5189,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @deprecated OpenAPI DescribeDomainResolve is deprecated
+         *
          * @summary Queries Domain Name System (DNS) records.
          *
          * @description You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
@@ -5192,6 +5200,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
          * @param request DescribeDomainResolveRequest
          * @return DescribeDomainResolveResponse
          */
+        // Deprecated
         public DescribeDomainResolveResponse DescribeDomainResolve(DescribeDomainResolveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5199,6 +5208,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @deprecated OpenAPI DescribeDomainResolve is deprecated
+         *
          * @summary Queries Domain Name System (DNS) records.
          *
          * @description You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
@@ -5208,6 +5219,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
          * @param request DescribeDomainResolveRequest
          * @return DescribeDomainResolveResponse
          */
+        // Deprecated
         public async Task<DescribeDomainResolveResponse> DescribeDomainResolveAsync(DescribeDomainResolveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7327,10 +7339,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the priority range of the access control policies that match specific query conditions.
+         * @summary Queries the priority range of access control policies.
          *
-         * @description You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  
-         * ## Limits
+         * @description You can call this operation to query the priority range of the access control policies that match specific query conditions.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribePolicyPriorUsedRequest
@@ -7377,10 +7389,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the priority range of the access control policies that match specific query conditions.
+         * @summary Queries the priority range of access control policies.
          *
-         * @description You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  
-         * ## Limits
+         * @description You can call this operation to query the priority range of the access control policies that match specific query conditions.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribePolicyPriorUsedRequest
@@ -7427,10 +7439,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the priority range of the access control policies that match specific query conditions.
+         * @summary Queries the priority range of access control policies.
          *
-         * @description You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  
-         * ## Limits
+         * @description You can call this operation to query the priority range of the access control policies that match specific query conditions.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribePolicyPriorUsedRequest
@@ -7443,10 +7455,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the priority range of the access control policies that match specific query conditions.
+         * @summary Queries the priority range of access control policies.
          *
-         * @description You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  
-         * ## Limits
+         * @description You can call this operation to query the priority range of the access control policies that match specific query conditions.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribePolicyPriorUsedRequest
@@ -7490,6 +7502,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchItem))
             {
@@ -7554,6 +7570,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchItem))
             {
@@ -9043,6 +9063,100 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 获取用户版本信息
+         *
+         * @param request DescribeUserBuyVersionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserBuyVersionResponse
+         */
+        public DescribeUserBuyVersionResponse DescribeUserBuyVersionWithOptions(DescribeUserBuyVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserBuyVersion",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserBuyVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取用户版本信息
+         *
+         * @param request DescribeUserBuyVersionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserBuyVersionResponse
+         */
+        public async Task<DescribeUserBuyVersionResponse> DescribeUserBuyVersionWithOptionsAsync(DescribeUserBuyVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserBuyVersion",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserBuyVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取用户版本信息
+         *
+         * @param request DescribeUserBuyVersionRequest
+         * @return DescribeUserBuyVersionResponse
+         */
+        public DescribeUserBuyVersionResponse DescribeUserBuyVersion(DescribeUserBuyVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserBuyVersionWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取用户版本信息
+         *
+         * @param request DescribeUserBuyVersionRequest
+         * @return DescribeUserBuyVersionResponse
+         */
+        public async Task<DescribeUserBuyVersionResponse> DescribeUserBuyVersionAsync(DescribeUserBuyVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserBuyVersionWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 获取用户IPS白名单
+         *
          * @param request DescribeUserIPSWhitelistRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeUserIPSWhitelistResponse
@@ -9083,6 +9197,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 获取用户IPS白名单
+         *
          * @param request DescribeUserIPSWhitelistRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeUserIPSWhitelistResponse
@@ -9123,6 +9239,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 获取用户IPS白名单
+         *
          * @param request DescribeUserIPSWhitelistRequest
          * @return DescribeUserIPSWhitelistResponse
          */
@@ -9133,6 +9251,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 获取用户IPS白名单
+         *
          * @param request DescribeUserIPSWhitelistRequest
          * @return DescribeUserIPSWhitelistResponse
          */
@@ -10389,8 +10509,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.
          *
-         * @description You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  
-         * ## Limits
+         * @description You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeVpcFirewallPolicyPriorUsedRequest
@@ -10431,8 +10551,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.
          *
-         * @description You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  
-         * ## Limits
+         * @description You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeVpcFirewallPolicyPriorUsedRequest
@@ -10473,8 +10593,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.
          *
-         * @description You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  
-         * ## Limits
+         * @description You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeVpcFirewallPolicyPriorUsedRequest
@@ -10489,8 +10609,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.
          *
-         * @description You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  
-         * ## Limits
+         * @description You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeVpcFirewallPolicyPriorUsedRequest
@@ -10971,7 +11091,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Modifies the address book that is configured for access control.
+         * @summary Modifies the address book that is specified in an access control policy.
          *
          * @description You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
          * ## Limits
@@ -11045,7 +11165,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Modifies the address book that is configured for access control.
+         * @summary Modifies the address book that is specified in an access control policy.
          *
          * @description You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
          * ## Limits
@@ -11119,7 +11239,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Modifies the address book that is configured for access control.
+         * @summary Modifies the address book that is specified in an access control policy.
          *
          * @description You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
          * ## Limits
@@ -11135,7 +11255,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Modifies the address book that is configured for access control.
+         * @summary Modifies the address book that is specified in an access control policy.
          *
          * @description You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
          * ## Limits
@@ -12339,7 +12459,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 修改对象组操作
+         * @summary Modifies information about an operation on an object group.
          *
          * @param request ModifyObjectGroupOperationRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12397,7 +12517,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 修改对象组操作
+         * @summary Modifies information about an operation on an object group.
          *
          * @param request ModifyObjectGroupOperationRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12455,7 +12575,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 修改对象组操作
+         * @summary Modifies information about an operation on an object group.
          *
          * @param request ModifyObjectGroupOperationRequest
          * @return ModifyObjectGroupOperationResponse
@@ -12467,7 +12587,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 修改对象组操作
+         * @summary Modifies information about an operation on an object group.
          *
          * @param request ModifyObjectGroupOperationRequest
          * @return ModifyObjectGroupOperationResponse
@@ -12863,6 +12983,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 修改用户IPS白名单
+         *
          * @param request ModifyUserIPSWhitelistRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyUserIPSWhitelistResponse
@@ -12923,6 +13045,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 修改用户IPS白名单
+         *
          * @param request ModifyUserIPSWhitelistRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyUserIPSWhitelistResponse
@@ -12983,6 +13107,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 修改用户IPS白名单
+         *
          * @param request ModifyUserIPSWhitelistRequest
          * @return ModifyUserIPSWhitelistResponse
          */
@@ -12993,6 +13119,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 修改用户IPS白名单
+         *
          * @param request ModifyUserIPSWhitelistRequest
          * @return ModifyUserIPSWhitelistResponse
          */
@@ -13845,9 +13973,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
          *
-         * @description You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description You can call this operation to modify the intrusion prevention configurations of a VPC firewall.
+         * ## [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ModifyVpcFirewallDefaultIPSConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13911,9 +14039,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
          *
-         * @description You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description You can call this operation to modify the intrusion prevention configurations of a VPC firewall.
+         * ## [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ModifyVpcFirewallDefaultIPSConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13977,9 +14105,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
          *
-         * @description You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description You can call this operation to modify the intrusion prevention configurations of a VPC firewall.
+         * ## [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ModifyVpcFirewallDefaultIPSConfigRequest
          * @return ModifyVpcFirewallDefaultIPSConfigResponse
@@ -13993,9 +14121,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
          *
-         * @description You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description You can call this operation to modify the intrusion prevention configurations of a VPC firewall.
+         * ## [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ModifyVpcFirewallDefaultIPSConfigRequest
          * @return ModifyVpcFirewallDefaultIPSConfigResponse
@@ -14667,7 +14795,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
          *
          * @description You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.
          * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+         * You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
          *
          * @param request PutEnableFwSwitchRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14721,7 +14849,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
          *
          * @description You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.
          * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+         * You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
          *
          * @param request PutEnableFwSwitchRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14775,7 +14903,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
          *
          * @description You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.
          * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+         * You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
          *
          * @param request PutEnableFwSwitchRequest
          * @return PutEnableFwSwitchResponse
@@ -14791,7 +14919,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
          *
          * @description You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.
          * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+         * You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
          *
          * @param request PutEnableFwSwitchRequest
          * @return PutEnableFwSwitchResponse

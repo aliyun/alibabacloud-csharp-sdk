@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetRiskListResponseBody : TeaModel {
         /// <summary>
-        /// The details of the asset.
+        /// The details of the assets.
         /// </summary>
         [NameInMap("AssetList")]
         [Validation(Required=false)]

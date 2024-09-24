@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// Valid values:
         /// 
-        /// *   **in**: inbound traffic
-        /// *   **out**: outbound traffic
+        /// *   **in**: inbound.
+        /// *   **out**: outbound.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]

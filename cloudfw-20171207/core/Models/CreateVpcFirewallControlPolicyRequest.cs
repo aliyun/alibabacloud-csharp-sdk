@@ -115,6 +115,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string DestinationType { get; set; }
 
+        /// <summary>
+        /// The domain name resolution method of the access control policy. Valid values:
+        /// 
+        /// * **FQDN**: fully qualified domain name (FQDN)-based resolution
+        /// * **DNS**: DNS-based dynamic resolution
+        /// * **FQDN_AND_DNS**: FQDN and DNS-based dynamic resolution
+        /// </summary>
         [NameInMap("DomainResolveType")]
         [Validation(Required=false)]
         public string DomainResolveType { get; set; }

@@ -14,9 +14,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// > 
         /// 
-        /// *   Example of an IPv4 address: 47.97.XX.XX
+        /// *   Example IPv4 address: 47.97.XX.XX.
         /// 
-        /// *   Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff
+        /// *   Example IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff.
         /// </summary>
         [NameInMap("IpAddrList")]
         [Validation(Required=false)]

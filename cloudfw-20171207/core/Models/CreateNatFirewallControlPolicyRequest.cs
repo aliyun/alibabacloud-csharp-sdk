@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DestinationType { get; set; }
 
         /// <summary>
-        /// The direction of the traffic to which the access control policy applies. Valid values:
+        /// The direction of the traffic to which the access control policy applies. Valid value:
         /// 
-        /// *   **out**: outbound traffic
+        /// *   **out**: outbound.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -195,10 +195,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// Valid values:
         /// 
-        /// *   ANY: all types of protocols
+        /// *   ANY: all types of protocols.
         /// *   TCP
         /// *   UDP
         /// *   ICMP
+        /// 
+        /// >  If the destination address is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto only to TCP and set ApplicationNameList to HTTP, HTTPS, SMTP, SMTPS, or SSL.
         /// 
         /// This parameter is required.
         /// </summary>

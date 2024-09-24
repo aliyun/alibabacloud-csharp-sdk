@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// Specifies whether to enable basic protection. Valid values:
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
+        /// *   **1**: yes.
+        /// *   **0**: no.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// Specifies whether to enable virtual patching. Valid values:
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
+        /// *   **1**: yes.
+        /// *   **0**: no.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The language of the content within the request and response. Valid values:
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// *   **zh** (default)
+        /// *   **en**
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -50,6 +50,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string MemberUid { get; set; }
 
+        /// <summary>
+        /// The level of the rule group for the IPS. Valid values:
+        /// 
+        /// *   **1**: loose
+        /// *   **2**: medium
+        /// *   **3**: strict
+        /// </summary>
         [NameInMap("RuleClass")]
         [Validation(Required=false)]
         public string RuleClass { get; set; }
@@ -57,8 +64,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The mode of the intrusion prevention system (IPS). Valid values:
         /// 
-        /// *   **1**: block mode
-        /// *   **0**: monitor mode
+        /// *   **1**: block mode.
+        /// *   **0**: monitor mode.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -75,10 +82,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The instance ID of the VPC firewall. Valid values:
+        /// The instance ID of the VPC firewall.
         /// 
-        /// *   If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the [DescribeVpcFirewallCenList](https://help.aliyun.com/document_detail/345777.html) operation to query the IDs of CEN instances.
-        /// *   If the VPC firewall protects mutual access traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the ID of the VPC firewall. You can call the [DescribeVpcFirewallList](https://help.aliyun.com/document_detail/342932.html) operation to query the instance IDs of VPC firewalls.
+        /// *   If the VPC firewall protects traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the [DescribeVpcFirewallCenList](https://help.aliyun.com/document_detail/345777.html) operation to query the IDs of CEN instances.
+        /// *   If the VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall. You can call the [DescribeVpcFirewallList](https://help.aliyun.com/document_detail/342932.html) operation to query the instance IDs of VPC firewalls.
         /// 
         /// This parameter is required.
         /// </summary>

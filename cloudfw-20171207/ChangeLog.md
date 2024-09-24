@@ -1,3 +1,13 @@
+2024-09-24 Version: 3.1.0
+- Support API DescribeUserBuyVersion.
+- Update API AddAddressBook: update param AddressList.
+- Update API DeleteControlPolicyTemplate: update response param.
+- Update API DescribeAssetRiskList: update param IpAddrList.
+- Update API DescribeInternetOpenIp: update response param.
+- Update API DescribePostpayTrafficDetail: add param RegionNo.
+- Update API DescribePostpayTrafficDetail: update response param.
+
+
 2024-08-19 Version: 3.0.0
 - Support API CreateSlsLogDispatch.
 - Support API ModifyObjectGroupOperation.

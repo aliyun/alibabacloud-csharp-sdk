@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatAclPageStatusResponseBody : TeaModel {
+        /// <summary>
+        /// Extra error information.
+        /// </summary>
         [NameInMap("Detail")]
         [Validation(Required=false)]
         public string Detail { get; set; }
