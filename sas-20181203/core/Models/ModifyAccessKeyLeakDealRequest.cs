@@ -10,36 +10,46 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAccessKeyLeakDealRequest : TeaModel {
         /// <summary>
-        /// The ID of the AccessKey pair leak.
+        /// <para>The ID of the AccessKey pair leak.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to query the ID. You must specify at least one of the Id and <b>IdList</b> parameters.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeAccesskeyLeakList](~~DescribeAccesskeyLeakList~~) operation to query the ID. You must specify at least one of the Id and **IdList** parameters.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The IDs of AccessKey pair leaks.
+        /// <para>The IDs of AccessKey pair leaks.</para>
         /// </summary>
         [NameInMap("IdList")]
         [Validation(Required=false)]
         public List<long?> IdList { get; set; }
 
         /// <summary>
-        /// The remarks that are added.
+        /// <para>The remarks that are added.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>disabled.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// The method to handle the AccessKey pair leak. Valid values:
+        /// <para>The method to handle the AccessKey pair leak. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>manual</b>: manually handle</description></item>
+        /// <item><description><b>disable</b>: disable</description></item>
+        /// <item><description><b>add-whitelist</b>: add to the whitelist</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **manual**: manually handle
-        /// *   **disable**: disable
-        /// *   **add-whitelist**: add to the whitelist
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>disable</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

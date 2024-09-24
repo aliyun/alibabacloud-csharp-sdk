@@ -10,91 +10,125 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateInterceptionRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the container cluster.
+        /// <para>The ID of the container cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c35xxxa416</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the cluster.
+        /// <para>The name of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sas-test-cnnf</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The information about the destination network object. The value of this parameter contains the following fields:
+        /// <para>The information about the destination network object. The value of this parameter contains the following fields:</para>
+        /// <list type="bullet">
+        /// <item><description>targetId: the ID of the destination network object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</description></item>
+        /// <item><description>ports: the destination port ranges.</description></item>
+        /// </list>
         /// 
-        /// *   targetId: the ID of the destination network object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
-        /// *   ports: the destination port ranges.
+        /// <b>Example:</b>
+        /// <para>[
+        ///       {
+        ///             &quot;targetId&quot;: 600036,
+        ///             &quot;ports&quot;: [
+        ///                   &quot;1/65535&quot;
+        ///             ]
+        ///       }
+        /// ]</para>
         /// </summary>
         [NameInMap("DstTargetList")]
         [Validation(Required=false)]
         public string DstTargetListShrink { get; set; }
 
         /// <summary>
-        /// The action on traffic. Valid values:
+        /// <para>The action on traffic. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: blocks traffic.</description></item>
+        /// <item><description><b>2</b>: allows traffic and generates alerts.</description></item>
+        /// <item><description><b>3</b>: allows traffic and does not generate alerts.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1**: blocks traffic.
-        /// *   **2**: allows traffic and generates alerts.
-        /// *   **3**: allows traffic and does not generate alerts.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("InterceptType")]
         [Validation(Required=false)]
         public long? InterceptType { get; set; }
 
         /// <summary>
-        /// The priority of the defense rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.
+        /// <para>The priority of the defense rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("OrderIndex")]
         [Validation(Required=false)]
         public long? OrderIndex { get; set; }
 
         /// <summary>
-        /// The name of the defense rule.
+        /// <para>The name of the defense rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test-rule-1</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// Specifies the status of the defense rule. Valid values:
+        /// <para>Specifies the status of the defense rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: disables the rule.</description></item>
+        /// <item><description><b>1</b>: enables the rule.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **0**: disables the rule.
-        /// *   **1**: enables the rule.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("RuleSwitch")]
         [Validation(Required=false)]
         public int? RuleSwitch { get; set; }
 
         /// <summary>
-        /// The type of the defense rule. Valid values:
+        /// <para>The type of the defense rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>customize: custom rule</description></item>
+        /// </list>
         /// 
-        /// *   customize: custom rule
+        /// <b>Example:</b>
+        /// <para>customize</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public string RuleType { get; set; }
 
         /// <summary>
-        /// The source network object. The value of this parameter contains the following field:
+        /// <para>The source network object. The value of this parameter contains the following field:</para>
+        /// <list type="bullet">
+        /// <item><description>targetId: the ID of the source network object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</description></item>
+        /// </list>
         /// 
-        /// *   targetId: the ID of the source network object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
+        /// <b>Example:</b>
+        /// <para>{&quot;targetId&quot;:301940}</para>
         /// </summary>
         [NameInMap("SrcTarget")]
         [Validation(Required=false)]

@@ -10,40 +10,51 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListContainerDefenseRuleClustersResponseBody : TeaModel {
         /// <summary>
-        /// The clusters.
+        /// <para>The clusters.</para>
         /// </summary>
         [NameInMap("ClusterList")]
         [Validation(Required=false)]
         public List<ListContainerDefenseRuleClustersResponseBodyClusterList> ClusterList { get; set; }
         public class ListContainerDefenseRuleClustersResponseBodyClusterList : TeaModel {
             /// <summary>
-            /// Indicates whether all namespaces are included. Valid values:
+            /// <para>Indicates whether all namespaces are included. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><b>1</b>: yes</description></item>
+            /// </list>
             /// 
-            /// *   **0**: no
-            /// *   **1**: yes
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AllNamespace")]
             [Validation(Required=false)]
             public int? AllNamespace { get; set; }
 
             /// <summary>
-            /// The ID of the cluster.
+            /// <para>The ID of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cfeb7a9f99ce740e98c5595d0fe37****</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The namespaces.
+            /// <para>The namespaces.</para>
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
             public List<string> Namespaces { get; set; }
 
             /// <summary>
-            /// The ID of the rule.
+            /// <para>The ID of the rule.</para>
+            /// <remarks>
+            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListInterceptionRulePage</a> operation to query the IDs of rules.</para>
+            /// </remarks>
             /// 
-            /// >  You can call the [ListInterceptionRulePage](https://help.aliyun.com/document_detail/2590599.html) operation to query the IDs of rules.
+            /// <b>Example:</b>
+            /// <para>403178</para>
             /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
@@ -52,45 +63,64 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+        /// <para>The response code. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1F995515-CAF3-5F84-8D82-C9F706AD5070</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,61 +10,75 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageEventOperationConditionResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeImageEventOperationConditionResponseBodyData Data { get; set; }
         public class DescribeImageEventOperationConditionResponseBodyData : TeaModel {
             /// <summary>
-            /// The alert type.
+            /// <para>The alert type.</para>
+            /// <list type="bullet">
+            /// <item><description>Only <b>sensitiveFile</b> may be returned.</description></item>
+            /// </list>
             /// 
-            /// *   Only **sensitiveFile** may be returned.
+            /// <b>Example:</b>
+            /// <para>sensitiveFile</para>
             /// </summary>
             [NameInMap("EventType")]
             [Validation(Required=false)]
             public string EventType { get; set; }
 
             /// <summary>
-            /// The operations.
+            /// <para>The operations.</para>
             /// </summary>
             [NameInMap("Operations")]
             [Validation(Required=false)]
             public List<DescribeImageEventOperationConditionResponseBodyDataOperations> Operations { get; set; }
             public class DescribeImageEventOperationConditionResponseBodyDataOperations : TeaModel {
                 /// <summary>
-                /// The rule conditions.
+                /// <para>The rule conditions.</para>
                 /// </summary>
                 [NameInMap("Conditions")]
                 [Validation(Required=false)]
                 public List<DescribeImageEventOperationConditionResponseBodyDataOperationsConditions> Conditions { get; set; }
                 public class DescribeImageEventOperationConditionResponseBodyDataOperationsConditions : TeaModel {
                     /// <summary>
-                    /// The keyword of the condition. Valid values:
+                    /// <para>The keyword of the condition. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>MD5</b></description></item>
+                    /// <item><description><b>PATH</b></description></item>
+                    /// </list>
                     /// 
-                    /// *   **MD5**
-                    /// *   **PATH**
+                    /// <b>Example:</b>
+                    /// <para>MD5</para>
                     /// </summary>
                     [NameInMap("ConditionKey")]
                     [Validation(Required=false)]
                     public string ConditionKey { get; set; }
 
                     /// <summary>
-                    /// The name of the condition.
+                    /// <para>The name of the condition.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>MD5</para>
                     /// </summary>
                     [NameInMap("ConditionName")]
                     [Validation(Required=false)]
                     public string ConditionName { get; set; }
 
                     /// <summary>
-                    /// The matching types.
+                    /// <para>The matching types.</para>
                     /// </summary>
                     [NameInMap("SupportedMisType")]
                     [Validation(Required=false)]
@@ -73,16 +87,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// The operation code.
+                /// <para>The operation code.</para>
+                /// <list type="bullet">
+                /// <item><description>Only <b>whitelist</b> may be returned, which indicates that the alert event is added to the whitelist.</description></item>
+                /// </list>
                 /// 
-                /// *   Only **whitelist** may be returned, which indicates that the alert event is added to the whitelist.
+                /// <b>Example:</b>
+                /// <para>whitelist</para>
                 /// </summary>
                 [NameInMap("OperationCode")]
                 [Validation(Required=false)]
                 public string OperationCode { get; set; }
 
                 /// <summary>
-                /// The name of the operation.
+                /// <para>The name of the operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>whitelist</para>
                 /// </summary>
                 [NameInMap("OperationName")]
                 [Validation(Required=false)]
@@ -91,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The application scopes of the rules.
+            /// <para>The application scopes of the rules.</para>
             /// </summary>
             [NameInMap("Scenarios")]
             [Validation(Required=false)]
@@ -100,24 +121,34 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ADE57832-9666-511C-9A80-B87DE2E8****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

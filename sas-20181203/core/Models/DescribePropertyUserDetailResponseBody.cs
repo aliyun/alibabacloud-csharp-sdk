@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyUserDetailResponseBody : TeaModel {
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribePropertyUserDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyUserDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: **10**.
+            /// <para>The number of entries returned per page. Default value: <b>10</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -47,179 +59,248 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The details of asset fingerprints for the account.
+        /// <para>The details of asset fingerprints for the account.</para>
         /// </summary>
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertyUserDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertyUserDetailResponseBodyPropertys : TeaModel {
             /// <summary>
-            /// The date on which the account expires.
+            /// <para>The date on which the account expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>never</para>
             /// </summary>
             [NameInMap("AccountsExpirationDate")]
             [Validation(Required=false)]
             public string AccountsExpirationDate { get; set; }
 
             /// <summary>
-            /// The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.
+            /// <para>The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1649149566000</para>
             /// </summary>
             [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// The details of the user groups to which the account belongs.
+            /// <para>The details of the user groups to which the account belongs.</para>
             /// </summary>
             [NameInMap("GroupNames")]
             [Validation(Required=false)]
             public List<string> GroupNames { get; set; }
 
             /// <summary>
-            /// The ID of the server.
+            /// <para>The ID of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-hp35tftuh52wbp1g****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the server.
+            /// <para>The name of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hc-host-****</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The public IP address of the server.
+            /// <para>The public IP address of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// The private IP address of the server.
+            /// <para>The private IP address of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100.104.XX.XX</para>
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// The IP addresses of the server.
+            /// <para>The IP addresses of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// Indicates whether the account is an interactive logon account. Valid values:
+            /// <para>Indicates whether the account is an interactive logon account. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><b>1</b>: yes</description></item>
+            /// </list>
             /// 
-            /// *   **0**: no
-            /// *   **1**: yes
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("IsCouldLogin")]
             [Validation(Required=false)]
             public int? IsCouldLogin { get; set; }
 
             /// <summary>
-            /// Indicates whether the password expires. Valid values:
+            /// <para>Indicates whether the password expires. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: yes</description></item>
+            /// <item><description><b>1</b>: no</description></item>
+            /// </list>
             /// 
-            /// *   **0**: yes
-            /// *   **1**: no
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("IsPasswdExpired")]
             [Validation(Required=false)]
             public int? IsPasswdExpired { get; set; }
 
             /// <summary>
-            /// Indicates whether the password is locked. Valid values:
+            /// <para>Indicates whether the password is locked. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: yes</description></item>
+            /// <item><description><b>1</b>: no</description></item>
+            /// </list>
             /// 
-            /// *   **0**: yes
-            /// *   **1**: no
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("IsPasswdLocked")]
             [Validation(Required=false)]
             public int? IsPasswdLocked { get; set; }
 
             /// <summary>
-            /// Indicates whether the account has root permissions. Valid values:
+            /// <para>Indicates whether the account has root permissions. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><b>1</b>: yes</description></item>
+            /// </list>
             /// 
-            /// *   **0**: no
-            /// *   **1**: yes
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("IsRoot")]
             [Validation(Required=false)]
             public string IsRoot { get; set; }
 
             /// <summary>
-            /// Indicates whether the account is a sudo account. Valid values:
+            /// <para>Indicates whether the account is a sudo account. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><b>1</b>: yes</description></item>
+            /// </list>
             /// 
-            /// *   **0**: no
-            /// *   **1**: yes
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("IsSudoer")]
             [Validation(Required=false)]
             public int? IsSudoer { get; set; }
 
             /// <summary>
-            /// Indicates whether the account expires. Valid values:
+            /// <para>Indicates whether the account expires. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: yes</description></item>
+            /// <item><description><b>1</b>: no</description></item>
+            /// </list>
             /// 
-            /// *   **0**: yes
-            /// *   **1**: no
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("IsUserExpired")]
             [Validation(Required=false)]
             public int? IsUserExpired { get; set; }
 
             /// <summary>
-            /// The source IP address of the last logon to the account.
+            /// <para>The source IP address of the last logon to the account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("LastLoginIp")]
             [Validation(Required=false)]
             public string LastLoginIp { get; set; }
 
             /// <summary>
-            /// The last logon time of the account.
+            /// <para>The last logon time of the account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-04-04 18:07:06</para>
             /// </summary>
             [NameInMap("LastLoginTime")]
             [Validation(Required=false)]
             public string LastLoginTime { get; set; }
 
             /// <summary>
-            /// The timestamp of the last logon to the account. Unit: milliseconds.
+            /// <para>The timestamp of the last logon to the account. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1649066826000</para>
             /// </summary>
             [NameInMap("LastLoginTimeDt")]
             [Validation(Required=false)]
             public long? LastLoginTimeDt { get; set; }
 
             /// <summary>
-            /// The timestamp of the last logon to the account. Unit: milliseconds.
+            /// <para>The timestamp of the last logon to the account. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1649066826000</para>
             /// </summary>
             [NameInMap("LastLoginTimestamp")]
             [Validation(Required=false)]
             public long? LastLoginTimestamp { get; set; }
 
             /// <summary>
-            /// The date on which the password of the account expires.
+            /// <para>The date on which the password of the account expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>never</para>
             /// </summary>
             [NameInMap("PasswordExpirationDate")]
             [Validation(Required=false)]
             public string PasswordExpirationDate { get; set; }
 
             /// <summary>
-            /// This parameter is deprecated. You can ignore it.
+            /// <para>This parameter is deprecated. You can ignore it.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>**</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The name of the account.
+            /// <para>The name of the account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bin</para>
             /// </summary>
             [NameInMap("User")]
             [Validation(Required=false)]
             public string User { get; set; }
 
             /// <summary>
-            /// The UUID of the server.
+            /// <para>The UUID of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>162eb349-c2d9-4f8b-805c-75b43d4c****</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -228,7 +309,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>33A71BE3-2CC2-14CB-B460-33A1DD82953A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

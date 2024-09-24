@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteClientUserDefineRuleRequest : TeaModel {
         /// <summary>
-        /// The IDs of the custom defense rules.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the custom defense rules.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IdList")]
         [Validation(Required=false)]

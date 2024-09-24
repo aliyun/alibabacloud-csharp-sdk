@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainSecureScoreResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>11C96623-E106-59C9-866D-A6C82911****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("SecurityScore")]
         [Validation(Required=false)]
         public int? SecurityScore { get; set; }

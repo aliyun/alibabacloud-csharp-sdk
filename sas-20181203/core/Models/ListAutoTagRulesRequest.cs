@@ -10,23 +10,33 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAutoTagRulesRequest : TeaModel {
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <remarks>
+        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// >  We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>text-001</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteCustomizeReportResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90593A3B-85CE-5D87-A430-726D0B87****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,19 +10,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeTargetRequest : TeaModel {
         /// <summary>
-        /// The type of the vulnerability. Valid values:
+        /// <para>The type of the vulnerability. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cms</b>: Web CMS vulnerability</description></item>
+        /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
+        /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
+        /// <item><description><b>emg</b>: urgent vulnerability</description></item>
+        /// </list>
         /// 
-        /// *   **cms**: Web CMS vulnerability
-        /// *   **sys**: Windows system vulnerability
-        /// *   **cve**: Linux software vulnerability
-        /// *   **emg**: urgent vulnerability
+        /// <b>Example:</b>
+        /// <para>{&quot;vulType&quot;:&quot;cms&quot;}</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// The type of the query. Set the value to vul.
+        /// <para>The type of the query. Set the value to vul.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vul</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

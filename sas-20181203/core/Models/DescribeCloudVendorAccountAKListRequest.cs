@@ -10,48 +10,68 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCloudVendorAccountAKListRequest : TeaModel {
         /// <summary>
-        /// The unique ID of the AccessKey pair.
+        /// <para>The unique ID of the AccessKey pair.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2624</para>
         /// </summary>
         [NameInMap("AuthIds")]
         [Validation(Required=false)]
         public string AuthIds { get; set; }
 
         /// <summary>
-        /// The page number. Default value: 1.
+        /// <para>The page number. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 20.
+        /// <para>The number of entries per page. Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The status of the AccessKey pair. Valid values:
+        /// <para>The status of the AccessKey pair. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: enabled</description></item>
+        /// <item><description><b>1</b>: disabled</description></item>
+        /// </list>
         /// 
-        /// *   **0**: enabled
-        /// *   **1**: disabled
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
         /// <summary>
-        /// The username of the sub-account of the cloud service provider to which the AccessKey pair belongs.
+        /// <para>The username of the sub-account of the cloud service provider to which the AccessKey pair belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AlibabaCloud_***</para>
         /// </summary>
         [NameInMap("SubAccountName")]
         [Validation(Required=false)]

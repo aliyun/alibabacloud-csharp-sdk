@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulExportInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the task.
+        /// <para>The ID of the task.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>14356</para>
         /// </summary>
         [NameInMap("ExportId")]
         [Validation(Required=false)]

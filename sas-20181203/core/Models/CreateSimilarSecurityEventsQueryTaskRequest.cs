@@ -14,27 +14,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the alert event.
+        /// <para>The ID of the alert event.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>14323</para>
         /// </summary>
         [NameInMap("SecurityEventId")]
         [Validation(Required=false)]
         public long? SecurityEventId { get; set; }
 
         /// <summary>
-        /// The codes of alert events that are triggered by the same rule or of the same alert type.
+        /// <para>The codes of alert events that are triggered by the same rule or of the same alert type.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("SimilarEventScenarioCode")]
         [Validation(Required=false)]
         public string SimilarEventScenarioCode { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.2.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

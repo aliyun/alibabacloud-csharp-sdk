@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteAutoTagRulesRequest : TeaModel {
         /// <summary>
-        /// The ID of the asset auto-tagging rule. Separate multiple IDs with commas (,).
+        /// <para>The ID of the asset auto-tagging rule. Separate multiple IDs with commas (,).</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListAutoTagRules~~">ListAutoTagRules</a> operation to query the ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [ListAutoTagRules](~~ListAutoTagRules~~) operation to query the ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2331,56,5644</para>
         /// </summary>
         [NameInMap("RuleIdList")]
         [Validation(Required=false)]

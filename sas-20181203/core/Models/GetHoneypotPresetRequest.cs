@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetHoneypotPresetRequest : TeaModel {
         /// <summary>
-        /// The ID of the honeypot template.
+        /// <para>The ID of the honeypot template.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to query the IDs of honeypot templates.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>207ca117-44b9-495d-84e7-50289b4cxxxx</para>
         /// </summary>
         [NameInMap("HoneypotPresetId")]
         [Validation(Required=false)]
         public string HoneypotPresetId { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

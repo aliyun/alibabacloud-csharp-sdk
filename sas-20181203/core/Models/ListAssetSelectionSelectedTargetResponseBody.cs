@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAssetSelectionSelectedTargetResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAssetSelectionSelectedTargetResponseBodyData> Data { get; set; }
         public class ListAssetSelectionSelectedTargetResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the asset.
+            /// <para>The ID of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30****</para>
             /// </summary>
             [NameInMap("TargetId")]
             [Validation(Required=false)]
             public string TargetId { get; set; }
 
             /// <summary>
-            /// The name of the asset.
+            /// <para>The name of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>jen****</para>
             /// </summary>
             [NameInMap("TargetName")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1EB12F73-6828-59D2-9FBF-F3713FD55128</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

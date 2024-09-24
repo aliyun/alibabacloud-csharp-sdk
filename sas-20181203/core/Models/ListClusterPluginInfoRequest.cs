@@ -10,26 +10,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClusterPluginInfoRequest : TeaModel {
         /// <summary>
-        /// The IDs of the clusters.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the clusters.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]
         public List<string> ClusterIds { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The name of the plug-in.
+        /// <para>The name of the plug-in.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alihips</para>
         /// </summary>
         [NameInMap("PluginName")]
         [Validation(Required=false)]

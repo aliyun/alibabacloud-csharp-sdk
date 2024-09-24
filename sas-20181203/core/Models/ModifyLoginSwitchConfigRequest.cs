@@ -10,25 +10,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyLoginSwitchConfigRequest : TeaModel {
         /// <summary>
-        /// The type of the logon security settings that you want to enable or disable. Valid values:
+        /// <para>The type of the logon security settings that you want to enable or disable. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>login_common_ip</b>: unapproved logon IP addresses</description></item>
+        /// <item><description><b>login_common_time</b>: unapproved logon time ranges</description></item>
+        /// <item><description><b>login_common_account</b>: unapproved logon accounts</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **login_common_ip**: unapproved logon IP addresses
-        /// *   **login_common_time**: unapproved logon time ranges
-        /// *   **login_common_account**: unapproved logon accounts
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>login_common_account</para>
         /// </summary>
         [NameInMap("Item")]
         [Validation(Required=false)]
         public string Item { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the logon security settings. Valid values:
+        /// <para>Specifies whether to enable the logon security settings. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><b>1</b>: yes</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **0**: no
-        /// *   **1**: yes
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

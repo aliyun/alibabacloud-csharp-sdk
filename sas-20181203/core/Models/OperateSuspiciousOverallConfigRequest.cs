@@ -10,57 +10,75 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateSuspiciousOverallConfigRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the feature. Valid values:
+        /// <para>Specifies whether to enable the feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: yes</description></item>
+        /// <item><description><b>off</b>: no</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **on**: yes
-        /// *   **off**: no
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>off</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// Specifies whether to configure assets for the feature. Default value: **false**. Valid values:
+        /// <para>Specifies whether to configure assets for the feature. Default value: <b>false</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter takes effect only when you set <b>Config</b> to <b>on</b>.</para>
+        /// </remarks>
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
-        /// 
-        /// >  This parameter takes effect only when you set **Config** to **on**.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("NoTargetAsOn")]
         [Validation(Required=false)]
         public bool? NoTargetAsOn { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>222.178.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The type of the feature. Valid values:
+        /// <para>The type of the feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>auto_breaking</b>: Anti-Virus</description></item>
+        /// <item><description><b>ransomware_breaking</b>: Anti-ransomware (Bait Capture)</description></item>
+        /// <item><description><b>webshell_cloud_breaking</b>: Webshell Protection</description></item>
+        /// <item><description><b>alinet</b>: Behavior prevention</description></item>
+        /// <item><description><b>k8s_log_analysis</b>: K8s Threat Detection</description></item>
+        /// <item><description><b>alisecguard</b>: Defense mode for Client Protection</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **auto_breaking**: Anti-Virus
-        /// *   **ransomware_breaking**: Anti-ransomware (Bait Capture)
-        /// *   **webshell_cloud_breaking**: Webshell Protection
-        /// *   **alinet**: Behavior prevention
-        /// *   **k8s_log_analysis**: K8s Threat Detection
-        /// *   **alisecguard**: Defense mode for Client Protection
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>k8s_log_analysis</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

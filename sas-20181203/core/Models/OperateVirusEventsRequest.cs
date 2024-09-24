@@ -10,33 +10,42 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateVirusEventsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to handle all alert events. Valid values:
+        /// <para>Specifies whether to handle all alert events. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: no</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("OperationAll")]
         [Validation(Required=false)]
         public int? OperationAll { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform on the alert events. Valid values:
+        /// <para>The operation that you want to perform on the alert events. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>default</b>: performs in-depth detection and removal</description></item>
+        /// <item><description><b>ignore</b>: ignores the alert event</description></item>
+        /// <item><description><b>advance_mark_mis_info</b>: adds the alert events to the whitelist</description></item>
+        /// <item><description><b>manual_handled</b>: marks the alert events as manually handled</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **default**: performs in-depth detection and removal
-        /// *   **ignore**: ignores the alert event
-        /// *   **advance_mark_mis_info**: adds the alert events to the whitelist
-        /// *   **manual_handled**: marks the alert events as manually handled
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("OperationCode")]
         [Validation(Required=false)]
         public string OperationCode { get; set; }
 
         /// <summary>
-        /// The handling scope.
+        /// <para>The handling scope.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{\&quot;type\&quot;:\&quot;machine\&quot;,\&quot;list\&quot;:[\&quot;xxxxxxxxx-4cbf-4ca6-a1b7-8a09d1f86ab0\&quot;]}]</para>
         /// </summary>
         [NameInMap("OperationRange")]
         [Validation(Required=false)]

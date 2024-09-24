@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCanTrySasResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("CanTry")]
         [Validation(Required=false)]
         public int? CanTry { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>E90DE229-9FC6-58F6-BF4B-03AD6179****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

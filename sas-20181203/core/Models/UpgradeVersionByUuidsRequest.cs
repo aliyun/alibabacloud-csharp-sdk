@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpgradeVersionByUuidsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.0.9</para>
         /// </summary>
         [NameInMap("UpgradeVersion")]
         [Validation(Required=false)]
         public string UpgradeVersion { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

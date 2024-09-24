@@ -10,16 +10,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateBucketScanTaskRequest : TeaModel {
         /// <summary>
-        /// The name of the bucket.
+        /// <para>The name of the bucket.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>iboxpublic****</para>
         /// </summary>
         [NameInMap("BucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform on the bucket. Valid value:
+        /// <para>The operation that you want to perform on the bucket. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: cancels the bucket check.</description></item>
+        /// </list>
         /// 
-        /// *   **1**: cancels the bucket check.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("OperateCode")]
         [Validation(Required=false)]

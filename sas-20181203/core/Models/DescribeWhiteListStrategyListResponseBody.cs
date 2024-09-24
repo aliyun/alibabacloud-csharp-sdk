@@ -10,48 +10,64 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWhiteListStrategyListResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>571B2642-BF51-5BDD-906B-D2340DB9****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the policies.
+        /// <para>The information about the policies.</para>
         /// </summary>
         [NameInMap("Strategies")]
         [Validation(Required=false)]
         public List<DescribeWhiteListStrategyListResponseBodyStrategies> Strategies { get; set; }
         public class DescribeWhiteListStrategyListResponseBodyStrategies : TeaModel {
             /// <summary>
-            /// The status of the policy. Valid values:
+            /// <para>The status of the policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: disabled</description></item>
+            /// <item><description><b>1</b>: learning</description></item>
+            /// <item><description><b>2</b>: paused</description></item>
+            /// <item><description><b>3</b>: learning completed</description></item>
+            /// <item><description><b>4</b>: enabled</description></item>
+            /// </list>
             /// 
-            /// *   **0**: disabled
-            /// *   **1**: learning
-            /// *   **2**: paused
-            /// *   **3**: learning completed
-            /// *   **4**: enabled
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The ID of the policy.
+            /// <para>The ID of the policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8795555</para>
             /// </summary>
             [NameInMap("StrategyId")]
             [Validation(Required=false)]
             public long? StrategyId { get; set; }
 
             /// <summary>
-            /// The name of the policy.
+            /// <para>The name of the policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("StrategyName")]
             [Validation(Required=false)]
             public string StrategyName { get; set; }
 
             /// <summary>
-            /// The intelligent learning duration. Unit: hour.
+            /// <para>The intelligent learning duration. Unit: hour.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("StudyTime")]
             [Validation(Required=false)]

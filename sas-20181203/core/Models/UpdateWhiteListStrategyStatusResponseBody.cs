@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateWhiteListStrategyStatusResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>379a9b8f-107b-4630-9e95-2299a1ea****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

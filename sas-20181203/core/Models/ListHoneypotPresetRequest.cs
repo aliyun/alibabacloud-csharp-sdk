@@ -10,54 +10,77 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListHoneypotPresetRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The name of the honeypot image.
+        /// <para>The name of the honeypot image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ruoyi</para>
         /// </summary>
         [NameInMap("HoneypotImageName")]
         [Validation(Required=false)]
         public string HoneypotImageName { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the management node.
+        /// <para>The ID of the management node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d892b4fe-af0d-4486-ab2a-8a518045****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The name of the management node.
+        /// <para>The name of the management node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Node1</para>
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+        /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <remarks>
+        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// > We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The custom name of the honeypot template.
+        /// <para>The custom name of the honeypot template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mx-rouyi</para>
         /// </summary>
         [NameInMap("PresetName")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetMaliciousFileWhitelistConfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the whitelist rule.
+        /// <para>The ID of the whitelist rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]

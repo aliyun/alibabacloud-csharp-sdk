@@ -10,95 +10,103 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCommonOverallConfigResponseBody : TeaModel {
         /// <summary>
-        /// The information about the feature.
+        /// <para>The information about the feature.</para>
         /// </summary>
         [NameInMap("OverallConfig")]
         [Validation(Required=false)]
         public DescribeCommonOverallConfigResponseBodyOverallConfig OverallConfig { get; set; }
         public class DescribeCommonOverallConfigResponseBodyOverallConfig : TeaModel {
             /// <summary>
-            /// The status of the feature. Valid values:
+            /// <para>The status of the feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>on</b>: enabled</description></item>
+            /// <item><description><b>off</b>: disabled</description></item>
+            /// </list>
             /// 
-            /// *   **on**: enabled
-            /// *   **off**: disabled
+            /// <b>Example:</b>
+            /// <para>on</para>
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
             public string Config { get; set; }
 
             /// <summary>
-            /// The type of the feature. Valid values:
+            /// <para>The type of the feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>kdump_switch</b>: Active defense experience optimization</description></item>
+            /// <item><description><b>threat_detect</b>: Dynamic adaptive threat detection capability</description></item>
+            /// <item><description><b>suspicious_aggregation</b>: Alert Association</description></item>
+            /// <item><description><b>alidetect</b>: File Test</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_3277</b>: Suspicious process startup</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_5507</b>: malicious drivers</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_38857</b>: Entrance service execution high-risk operation</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50858</b>: Web service performs high-risk operations</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50859</b>: Entrance service execution suspicious operation</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50861</b>: Information detection</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50862</b>: Cloud Assistant Advanced Protection</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50867</b>: Create malicious files</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50868</b>: Create suspicious files</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50869</b>: Unauthorized execution of high-risk orders</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50870</b>: Rebound Shell</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50873</b>: WebShell execute command</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50876</b>: Against security software</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50877</b>: Malicious soft communication</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50884</b>: Suspicious worm script behavior</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50885</b>: malicious script behavior</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50983</b>: obfuscated command</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51200</b>: Command line download and run malicious files</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51201</b>: ransomware</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51202</b>: Suspected Extortion</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_53168</b>: process debugging</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_53272</b>: Exploiting Kernel Vulnerabilities to Elevate Privileges</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54034</b>: Intranet scan</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54265</b>: Hijacking the PAM Module</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54395</b>: Unauthorized reading and writing of sensitive files</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54699</b>: Hijack dynamic link library</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54953</b>: Hashdump Attack</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_57897</b>: suspected privilege escalation</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_62981</b>: Bypassing security monitoring</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_64025</b>: Ingress service execute command [enhanced mode]</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_39659</b>: Sensitive Registry Key Protection</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51225</b>: Powershell executes high-risk commands</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51226</b>: Powershell execute suspicious command</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51228</b>: High-risk lateral penetration tools</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51229</b>: Browser service execution a high-risk operation</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51230</b>: Entrance service execution suspicious operation</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51232</b>: System processes execution high-risk operations</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51233</b>: Java service execution high-risk operations</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51234</b>: Office components execution high-risk operations</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51235</b>: Web service performs high-risk operations</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51236</b>: Rebound shells</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52815</b>: Load high-risk drivers</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52816</b>: high-risk account manipulation behavior</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52818</b>: Information detection</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52820</b>: Create malicious files</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52821</b>: Suspicious process startup</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52823</b>: Running high-risk ARK tools</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52825</b>: Unauthorized execution of high-risk orders</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52826</b>: Entrance service execution high-risk operation</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52827</b>: Ransomware</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52828</b>: Suspected Extortion</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52829</b>: delete system backup behavior</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54168</b>: LSA security permission service protection</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54365</b>: Create service autorun item</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54366</b>: Create high-risk autorun item</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54367</b>: Create scheduled task autorun item</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54368</b>: Create registry autorun item</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54369</b>: Create WMI autorun item</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54373</b>: Against security software</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54374</b>: Intrusion trace cleanup</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54384</b>: Hashdump Attack</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_55251</b>: Database services execution high-risk operations</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_57242</b>: Malicious command execution</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_57340</b>: Command line download and run malicious files</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_62357</b>: Cloud Assistant service information detection</description></item>
+            /// <item><description><b>USER-ENABLE-SWITCH-TYPE_63725</b>: Ingress service implants suspicious script/binary file</description></item>
+            /// </list>
             /// 
-            /// *   **kdump_switch**: Active defense experience optimization
-            /// *   **threat_detect**: Dynamic adaptive threat detection capability
-            /// *   **suspicious_aggregation**: Alert Association
-            /// *   **alidetect**: File Test
-            /// *   **USER-ENABLE-SWITCH-TYPE_3277**: Suspicious process startup
-            /// *   **USER-ENABLE-SWITCH-TYPE_5507**: malicious drivers
-            /// *   **USER-ENABLE-SWITCH-TYPE_38857**: Entrance service execution high-risk operation
-            /// *   **USER-ENABLE-SWITCH-TYPE_50858**: Web service performs high-risk operations
-            /// *   **USER-ENABLE-SWITCH-TYPE_50859**: Entrance service execution suspicious operation
-            /// *   **USER-ENABLE-SWITCH-TYPE_50861**: Information detection
-            /// *   **USER-ENABLE-SWITCH-TYPE_50862**: Cloud Assistant Advanced Protection
-            /// *   **USER-ENABLE-SWITCH-TYPE_50867**: Create malicious files
-            /// *   **USER-ENABLE-SWITCH-TYPE_50868**: Create suspicious files
-            /// *   **USER-ENABLE-SWITCH-TYPE_50869**: Unauthorized execution of high-risk orders
-            /// *   **USER-ENABLE-SWITCH-TYPE_50870**: Rebound Shell
-            /// *   **USER-ENABLE-SWITCH-TYPE_50873**: WebShell execute command
-            /// *   **USER-ENABLE-SWITCH-TYPE_50876**: Against security software
-            /// *   **USER-ENABLE-SWITCH-TYPE_50877**: Malicious soft communication
-            /// *   **USER-ENABLE-SWITCH-TYPE_50884**: Suspicious worm script behavior
-            /// *   **USER-ENABLE-SWITCH-TYPE_50885**: malicious script behavior
-            /// *   **USER-ENABLE-SWITCH-TYPE_50983**: obfuscated command
-            /// *   **USER-ENABLE-SWITCH-TYPE_51200**: Command line download and run malicious files
-            /// *   **USER-ENABLE-SWITCH-TYPE_51201**: ransomware
-            /// *   **USER-ENABLE-SWITCH-TYPE_51202**: Suspected Extortion
-            /// *   **USER-ENABLE-SWITCH-TYPE_53168**: process debugging
-            /// *   **USER-ENABLE-SWITCH-TYPE_53272**: Exploiting Kernel Vulnerabilities to Elevate Privileges
-            /// *   **USER-ENABLE-SWITCH-TYPE_54034**: Intranet scan
-            /// *   **USER-ENABLE-SWITCH-TYPE_54265**: Hijacking the PAM Module
-            /// *   **USER-ENABLE-SWITCH-TYPE_54395**: Unauthorized reading and writing of sensitive files
-            /// *   **USER-ENABLE-SWITCH-TYPE_54699**: Hijack dynamic link library
-            /// *   **USER-ENABLE-SWITCH-TYPE_54953**: Hashdump Attack
-            /// *   **USER-ENABLE-SWITCH-TYPE_57897**: suspected privilege escalation
-            /// *   **USER-ENABLE-SWITCH-TYPE_62981**: Bypassing security monitoring
-            /// *   **USER-ENABLE-SWITCH-TYPE_64025**: Ingress service execute command [enhanced mode]
-            /// *   **USER-ENABLE-SWITCH-TYPE_39659**: Sensitive Registry Key Protection
-            /// *   **USER-ENABLE-SWITCH-TYPE_51225**: Powershell executes high-risk commands
-            /// *   **USER-ENABLE-SWITCH-TYPE_51226**: Powershell execute suspicious command
-            /// *   **USER-ENABLE-SWITCH-TYPE_51228**: High-risk lateral penetration tools
-            /// *   **USER-ENABLE-SWITCH-TYPE_51229**: Browser service execution a high-risk operation
-            /// *   **USER-ENABLE-SWITCH-TYPE_51230**: Entrance service execution suspicious operation
-            /// *   **USER-ENABLE-SWITCH-TYPE_51232**: System processes execution high-risk operations
-            /// *   **USER-ENABLE-SWITCH-TYPE_51233**: Java service execution high-risk operations
-            /// *   **USER-ENABLE-SWITCH-TYPE_51234**: Office components execution high-risk operations
-            /// *   **USER-ENABLE-SWITCH-TYPE_51235**: Web service performs high-risk operations
-            /// *   **USER-ENABLE-SWITCH-TYPE_51236**: Rebound shells
-            /// *   **USER-ENABLE-SWITCH-TYPE_52815**: Load high-risk drivers
-            /// *   **USER-ENABLE-SWITCH-TYPE_52816**: high-risk account manipulation behavior
-            /// *   **USER-ENABLE-SWITCH-TYPE_52818**: Information detection
-            /// *   **USER-ENABLE-SWITCH-TYPE_52820**: Create malicious files
-            /// *   **USER-ENABLE-SWITCH-TYPE_52821**: Suspicious process startup
-            /// *   **USER-ENABLE-SWITCH-TYPE_52823**: Running high-risk ARK tools
-            /// *   **USER-ENABLE-SWITCH-TYPE_52825**: Unauthorized execution of high-risk orders
-            /// *   **USER-ENABLE-SWITCH-TYPE_52826**: Entrance service execution high-risk operation
-            /// *   **USER-ENABLE-SWITCH-TYPE_52827**: Ransomware
-            /// *   **USER-ENABLE-SWITCH-TYPE_52828**: Suspected Extortion
-            /// *   **USER-ENABLE-SWITCH-TYPE_52829**: delete system backup behavior
-            /// *   **USER-ENABLE-SWITCH-TYPE_54168**: LSA security permission service protection
-            /// *   **USER-ENABLE-SWITCH-TYPE_54365**: Create service autorun item
-            /// *   **USER-ENABLE-SWITCH-TYPE_54366**: Create high-risk autorun item
-            /// *   **USER-ENABLE-SWITCH-TYPE_54367**: Create scheduled task autorun item
-            /// *   **USER-ENABLE-SWITCH-TYPE_54368**: Create registry autorun item
-            /// *   **USER-ENABLE-SWITCH-TYPE_54369**: Create WMI autorun item
-            /// *   **USER-ENABLE-SWITCH-TYPE_54373**: Against security software
-            /// *   **USER-ENABLE-SWITCH-TYPE_54374**: Intrusion trace cleanup
-            /// *   **USER-ENABLE-SWITCH-TYPE_54384**: Hashdump Attack
-            /// *   **USER-ENABLE-SWITCH-TYPE_55251**: Database services execution high-risk operations
-            /// *   **USER-ENABLE-SWITCH-TYPE_57242**: Malicious command execution
-            /// *   **USER-ENABLE-SWITCH-TYPE_57340**: Command line download and run malicious files
-            /// *   **USER-ENABLE-SWITCH-TYPE_62357**: Cloud Assistant service information detection
-            /// *   **USER-ENABLE-SWITCH-TYPE_63725**: Ingress service implants suspicious script/binary file
+            /// <b>Example:</b>
+            /// <para>kdump_switch</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -107,7 +115,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6D9CDB47-6191-4415-BE63-7E8B12CD4FBE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

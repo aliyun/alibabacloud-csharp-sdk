@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUserSettingRequest : TeaModel {
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>58.248.87.10</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

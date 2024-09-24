@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAttestorsRequest : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The name of the witness.
+        /// <para>The name of the witness.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>attestor-auto-ad5316</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -35,7 +44,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The source IP address.
+        /// <para>The source IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>222.35.XXX.XXX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

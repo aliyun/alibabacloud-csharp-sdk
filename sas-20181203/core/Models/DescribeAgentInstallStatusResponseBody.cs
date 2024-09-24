@@ -10,62 +10,76 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAgentInstallStatusResponseBody : TeaModel {
         /// <summary>
-        /// The status of servers.
+        /// <para>The status of servers.</para>
         /// </summary>
         [NameInMap("AegisClientInvokeStatusResponseList")]
         [Validation(Required=false)]
         public List<DescribeAgentInstallStatusResponseBodyAegisClientInvokeStatusResponseList> AegisClientInvokeStatusResponseList { get; set; }
         public class DescribeAgentInstallStatusResponseBodyAegisClientInvokeStatusResponseList : TeaModel {
             /// <summary>
-            /// The returned message.
+            /// <para>The returned message.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Installed</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The installation status. Valid value:
+            /// <para>The installation status. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description><b>-1</b>: The agent is not installed.</description></item>
+            /// <item><description><b>0</b>: The agent is installed.</description></item>
+            /// <item><description><b>1</b>: Failed to create a directory in the client.</description></item>
+            /// <item><description><b>2</b>: Failed to download the installation package.</description></item>
+            /// <item><description><b>3</b>: The installation file does not exist.</description></item>
+            /// <item><description><b>4</b>: The verification information of the installation file does not exist.</description></item>
+            /// <item><description><b>5</b>: Failed to verify the installation file.</description></item>
+            /// <item><description><b>6</b>: Failed to execute the installation file.</description></item>
+            /// <item><description><b>7</b>: You do not have the required permissions. The installation failed.</description></item>
+            /// <item><description><b>8</b>: No client process is detected.</description></item>
+            /// <item><description><b>100</b>: The installation failed due to an unknown error.</description></item>
+            /// <item><description><b>1001</b>: The installation failed. One-click installation is not supported in this region.</description></item>
+            /// <item><description><b>1002</b>: The installation failed. Servers that are not provided by Alibaba Cloud are not supported. Install the agent by executing a script on the server.</description></item>
+            /// <item><description><b>1003</b>: The installation failed. The operating system is not supported.</description></item>
+            /// <item><description><b>1004</b>: An internal error occurred. Try again later.</description></item>
+            /// <item><description><b>1005</b>: The Elastic Compute Service (ECS) instance is not started. Start the ECS instance and try again.</description></item>
+            /// <item><description><b>1006</b>: One-click installation is not supported for ECS instances of the classic network type.</description></item>
+            /// <item><description><b>1007</b>: The running command is manually stopped.</description></item>
+            /// <item><description><b>1008</b>: Cloud Assistant is not installed. You cannot install the client.</description></item>
+            /// <item><description><b>1009</b>: The command execution timed out. Try again later.</description></item>
+            /// <item><description><b>1010</b>: The machine is already online. You do not need to install a client.</description></item>
+            /// </list>
             /// 
-            /// *   **-1**: The agent is not installed.
-            /// *   **0**: The agent is installed.
-            /// *   **1**: Failed to create a directory in the client.
-            /// *   **2**: Failed to download the installation package.
-            /// *   **3**: The installation file does not exist.
-            /// *   **4**: The verification information of the installation file does not exist.
-            /// *   **5**: Failed to verify the installation file.
-            /// *   **6**: Failed to execute the installation file.
-            /// *   **7**: You do not have the required permissions. The installation failed.
-            /// *   **8**: No client process is detected.
-            /// *   **100**: The installation failed due to an unknown error.
-            /// *   **1001**: The installation failed. One-click installation is not supported in this region.
-            /// *   **1002**: The installation failed. Servers that are not provided by Alibaba Cloud are not supported. Install the agent by executing a script on the server.
-            /// *   **1003**: The installation failed. The operating system is not supported.
-            /// *   **1004**: An internal error occurred. Try again later.
-            /// *   **1005**: The Elastic Compute Service (ECS) instance is not started. Start the ECS instance and try again.
-            /// *   **1006**: One-click installation is not supported for ECS instances of the classic network type.
-            /// *   **1007**: The running command is manually stopped.
-            /// *   **1008**: Cloud Assistant is not installed. You cannot install the client.
-            /// *   **1009**: The command execution timed out. Try again later.
-            /// *   **1010**: The machine is already online. You do not need to install a client.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ResuleCode")]
             [Validation(Required=false)]
             public string ResuleCode { get; set; }
 
             /// <summary>
-            /// The installation result. Valid value:
+            /// <para>The installation result. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description><b>-1</b>: The agent is not installed.</description></item>
+            /// <item><description><b>0</b>: The agent is being installed.</description></item>
+            /// <item><description><b>1</b>: The agent is installed.</description></item>
+            /// <item><description><b>2</b>: The installation failed.</description></item>
+            /// </list>
             /// 
-            /// *   **-1**: The agent is not installed.
-            /// *   **0**: The agent is being installed.
-            /// *   **1**: The agent is installed.
-            /// *   **2**: The installation failed.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public int? Result { get; set; }
 
             /// <summary>
-            /// The UUID of the server.
+            /// <para>The UUID of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>d123f6ae-9749-4338-8c7f-3c2c1ead****</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -74,7 +88,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

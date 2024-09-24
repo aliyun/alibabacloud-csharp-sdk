@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class BindHybridProxyRequest : TeaModel {
         /// <summary>
-        /// The name of the proxy cluster.
+        /// <para>The name of the proxy cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sas-proxy</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The UUIDs of servers that you want to add to Security Center over the proxy server.
-        /// 
-        /// This parameter is required.
+        /// <para>The UUIDs of servers that you want to add to Security Center over the proxy server.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("YundunUuids")]
         [Validation(Required=false)]

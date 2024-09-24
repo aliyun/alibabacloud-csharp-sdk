@@ -10,33 +10,42 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateHoneypotNodeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to allow honeypots to access the Internet. Valid values:
+        /// <para>Specifies whether to allow honeypots to access the Internet. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: allows honeypots to access the Internet.</description></item>
+        /// <item><description><b>false</b>: does not allow honeypots to access the Internet.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: allows honeypots to access the Internet.
-        /// *   **false**: does not allow honeypots to access the Internet.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AllowHoneypotAccessInternet")]
         [Validation(Required=false)]
         public bool? AllowHoneypotAccessInternet { get; set; }
 
         /// <summary>
-        /// The number of available probes.
+        /// <para>The number of available probes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("AvailableProbeNum")]
         [Validation(Required=false)]
         public int? AvailableProbeNum { get; set; }
 
         /// <summary>
-        /// The name of the management node.
+        /// <para>The name of the management node.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>manageNode</para>
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
         /// <summary>
-        /// The CIDR blocks that are allowed to access the management node.
+        /// <para>The CIDR blocks that are allowed to access the management node.</para>
         /// </summary>
         [NameInMap("SecurityGroupProbeIpList")]
         [Validation(Required=false)]

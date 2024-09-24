@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSasPmAgentListRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The UUID of the server. Separate multiple UUIDs with commas (,).
+        /// <para>The UUID of the server. Separate multiple UUIDs with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>inet-cb7ae5ee-b2bc-4581-b616-62495f5d****,inet-37cf0e4f-55cc-4b84-8073-b348b4b4****</para>
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

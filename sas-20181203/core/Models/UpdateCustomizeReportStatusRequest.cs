@@ -10,30 +10,39 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateCustomizeReportStatusRequest : TeaModel {
         /// <summary>
-        /// The time when the report is pinned. Unit: milliseconds.
+        /// <para>The time when the report is pinned. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1717430400000</para>
         /// </summary>
         [NameInMap("PinnedTime")]
         [Validation(Required=false)]
         public long? PinnedTime { get; set; }
 
         /// <summary>
-        /// The ID of the report.
+        /// <para>The ID of the report.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeCustomizeReportList](~~DescribeCustomizeReportList~~) operation to query the ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]
         public long? ReportId { get; set; }
 
         /// <summary>
-        /// The status of the report. Valid values:
+        /// <para>The status of the report. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: disabled.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **0**: disabled.
-        /// *   **1**: enabled.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ReportStatus")]
         [Validation(Required=false)]

@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOssBucketRequest : TeaModel {
         /// <summary>
-        /// The name of the bucket.
+        /// <para>The name of the bucket.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>iboxpublic****</para>
         /// </summary>
         [NameInMap("BucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }
 
         /// <summary>
-        /// The language of the content in the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content in the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese.
-        /// *   **en**: English.
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

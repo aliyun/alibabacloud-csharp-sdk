@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOssBucketScanStatisticRequest : TeaModel {
         /// <summary>
-        /// The names of the buckets.
+        /// <para>The names of the buckets.</para>
         /// </summary>
         [NameInMap("BucketNameList")]
         [Validation(Required=false)]

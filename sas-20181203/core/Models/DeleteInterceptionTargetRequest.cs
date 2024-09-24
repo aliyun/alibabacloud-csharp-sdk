@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteInterceptionTargetRequest : TeaModel {
         /// <summary>
-        /// The IDs of the network objects that you want to remove. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of the network objects.
+        /// <para>The IDs of the network objects that you want to remove. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the IDs of the network objects.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1,11,111</para>
         /// </summary>
         [NameInMap("TargetIds")]
         [Validation(Required=false)]

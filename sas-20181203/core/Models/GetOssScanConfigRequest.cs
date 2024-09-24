@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOssScanConfigRequest : TeaModel {
         /// <summary>
-        /// The name of the bucket.
+        /// <para>The name of the bucket.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>iboxpublic****</para>
         /// </summary>
         [NameInMap("BucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }
 
         /// <summary>
-        /// The ID of the policy.
+        /// <para>The ID of the policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -10,98 +10,136 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClusterCnnfStatusDetailResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the protection status of the container firewall.
+        /// <para>An array that consists of the protection status of the container firewall.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListClusterCnnfStatusDetailResponseBodyData> Data { get; set; }
         public class ListClusterCnnfStatusDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the cluster.
+            /// <para>The ID of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c8ca91e0907d94efaba7fb0827eb9****</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// Indicates whether the container firewall plug-in is installed.
+            /// <para>Indicates whether the container firewall plug-in is installed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Installed")]
             [Validation(Required=false)]
             public bool? Installed { get; set; }
 
             /// <summary>
-            /// The ID of the server.
+            /// <para>The ID of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp180bogui4fc0z4****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The public IP address of the associated instance.
+            /// <para>The public IP address of the associated instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>172.16.XX.XX</para>
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// The private IP address of the associated instance.
+            /// <para>The private IP address of the associated instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.42.XX.XX</para>
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// The cause why the plug-in is invalid. Valid values:
+            /// <para>The cause why the plug-in is invalid. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>PLUGIN_OFFLINE</b>: The plug-in is offline.</description></item>
+            /// <item><description><b>PLUGIN_NOT_INSTALLED</b>: The plug-in is not installed.</description></item>
+            /// <item><description><b>PLUGIN_INVALID_VERSION</b>: The version of the plug-in is invalid.</description></item>
+            /// </list>
             /// 
-            /// *   **PLUGIN_OFFLINE**: The plug-in is offline.
-            /// *   **PLUGIN_NOT_INSTALLED**: The plug-in is not installed.
-            /// *   **PLUGIN_INVALID_VERSION**: The version of the plug-in is invalid.
+            /// <b>Example:</b>
+            /// <para>PLUGIN_OFFLINE</para>
             /// </summary>
             [NameInMap("InvalidType")]
             [Validation(Required=false)]
             public string InvalidType { get; set; }
 
             /// <summary>
-            /// The name of the server.
+            /// <para>The name of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>security</para>
             /// </summary>
             [NameInMap("MachineName")]
             [Validation(Required=false)]
             public string MachineName { get; set; }
 
             /// <summary>
-            /// The machine type of the instance. The value is fixed as **ecs**.
+            /// <para>The machine type of the instance. The value is fixed as <b>ecs</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecs</para>
             /// </summary>
             [NameInMap("MachineType")]
             [Validation(Required=false)]
             public int? MachineType { get; set; }
 
             /// <summary>
-            /// The name of the plug-in. The value is fixed as **alinet**.
+            /// <para>The name of the plug-in. The value is fixed as <b>alinet</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alinet</para>
             /// </summary>
             [NameInMap("PluginName")]
             [Validation(Required=false)]
             public string PluginName { get; set; }
 
             /// <summary>
-            /// The version of the plug-in.
+            /// <para>The version of the plug-in.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3.3</para>
             /// </summary>
             [NameInMap("PluginVersion")]
             [Validation(Required=false)]
             public string PluginVersion { get; set; }
 
             /// <summary>
-            /// The online status of the plug-in. Valid values:
+            /// <para>The online status of the plug-in. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>false</b>: The plug-in is offline.</description></item>
+            /// <item><description><b>true</b>: The plug-in is online.</description></item>
+            /// </list>
             /// 
-            /// *   **false**: The plug-in is offline.
-            /// *   **true**: The plug-in is online.
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The UUID of the asset.
+            /// <para>The UUID of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6690a46c-0edb-4663-a641-3629d1a9****</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -110,7 +148,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>64329F40-5C94-51D3-A400-37AA7BAC****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

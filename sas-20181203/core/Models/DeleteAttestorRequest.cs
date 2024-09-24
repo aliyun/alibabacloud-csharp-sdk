@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteAttestorRequest : TeaModel {
         /// <summary>
-        /// The name of the witness.
+        /// <para>The name of the witness.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>attestor</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The source IP address.
+        /// <para>The source IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>221.214.XXX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

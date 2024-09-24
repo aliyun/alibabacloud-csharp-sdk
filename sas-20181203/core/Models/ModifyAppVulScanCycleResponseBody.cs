@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAppVulScanCycleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AFEDC54D-70A2-5E56-A69B-E3D8AA8A5197</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

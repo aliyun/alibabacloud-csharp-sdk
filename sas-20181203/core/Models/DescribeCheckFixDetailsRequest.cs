@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckFixDetailsRequest : TeaModel {
         /// <summary>
-        /// The ID of the risk item.
+        /// <para>The ID of the risk item.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the IDs of risk items.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the IDs of risk items.
+        /// <b>Example:</b>
+        /// <para>58</para>
         /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
         public string CheckIds { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the baseline.
+        /// <para>The ID of the baseline.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to query the IDs of baselines.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of baselines.
+        /// <b>Example:</b>
+        /// <para>51</para>
         /// </summary>
         [NameInMap("RiskId")]
         [Validation(Required=false)]

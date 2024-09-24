@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeScreenScoreThreadResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeScreenScoreThreadResponseBodyData Data { get; set; }
         public class DescribeScreenScoreThreadResponseBodyData : TeaModel {
             /// <summary>
-            /// The trends of the scores on the security dashboard.
+            /// <para>The trends of the scores on the security dashboard.</para>
             /// </summary>
             [NameInMap("SocreThread")]
             [Validation(Required=false)]
             public List<string> SocreThread { get; set; }
 
             /// <summary>
-            /// The dates of the scores on the security dashboard.
+            /// <para>The dates of the scores on the security dashboard.</para>
             /// </summary>
             [NameInMap("SocreThreadDate")]
             [Validation(Required=false)]
@@ -33,7 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D03DD0FD-6041-5107-AC00-383E28F1****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

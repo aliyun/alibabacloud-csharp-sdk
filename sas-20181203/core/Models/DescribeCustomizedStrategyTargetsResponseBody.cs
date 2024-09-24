@@ -10,46 +10,63 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCustomizedStrategyTargetsResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1EE7B150-D67E-53FD-A52D-3E8E669A****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the servers to which custom policies are applied.
+        /// <para>The information about the servers to which custom policies are applied.</para>
         /// </summary>
         [NameInMap("StartegyTargets")]
         [Validation(Required=false)]
         public List<DescribeCustomizedStrategyTargetsResponseBodyStartegyTargets> StartegyTargets { get; set; }
         public class DescribeCustomizedStrategyTargetsResponseBodyStartegyTargets : TeaModel {
             /// <summary>
-            /// The ID of the server group.
+            /// <para>The ID of the server group.</para>
+            /// <remarks>
+            /// <para> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</para>
+            /// </remarks>
             /// 
-            /// >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+            /// <b>Example:</b>
+            /// <para>14590457</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public long? GroupId { get; set; }
 
             /// <summary>
-            /// The ID of the baseline check policy.
+            /// <para>The ID of the baseline check policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1884</para>
             /// </summary>
             [NameInMap("StrategyId")]
             [Validation(Required=false)]
             public long? StrategyId { get; set; }
 
             /// <summary>
-            /// The name of the baseline check policy.
+            /// <para>The name of the baseline check policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>win</para>
             /// </summary>
             [NameInMap("StrategyName")]
             [Validation(Required=false)]
             public string StrategyName { get; set; }
 
             /// <summary>
-            /// The UUID of the server.
+            /// <para>The UUID of the server.</para>
+            /// <remarks>
+            /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+            /// </remarks>
             /// 
-            /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+            /// <b>Example:</b>
+            /// <para>2701ad2e-0e8f-428c-8812-ebb2686e****</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

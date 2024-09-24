@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryGroupIdByGroupNameRequest : TeaModel {
         /// <summary>
-        /// The name of the asset group.
+        /// <para>The name of the asset group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>TestGroupName</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.12.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

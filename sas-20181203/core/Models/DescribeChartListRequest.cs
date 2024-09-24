@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeChartListRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The code of the report. Valid value:
+        /// <para>The code of the report. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>customize_report</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **customize_report**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>customize_report</para>
         /// </summary>
         [NameInMap("ProjectCode")]
         [Validation(Required=false)]
         public string ProjectCode { get; set; }
 
         /// <summary>
-        /// The ID of the report.
+        /// <para>The ID of the report.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeCustomizeReportList](~~DescribeCustomizeReportList~~) operation to query the ID.
+        /// <b>Example:</b>
+        /// <para>720549</para>
         /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]

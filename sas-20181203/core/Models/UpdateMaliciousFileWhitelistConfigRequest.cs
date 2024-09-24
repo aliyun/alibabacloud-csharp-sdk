@@ -10,68 +10,97 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateMaliciousFileWhitelistConfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.
+        /// <para>The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// The name of the alert.
+        /// <para>The name of the alert.</para>
+        /// <list type="bullet">
+        /// <item><description>Set the value to ALL, which indicates all alert types.</description></item>
+        /// </list>
         /// 
-        /// *   Set the value to ALL, which indicates all alert types.
+        /// <b>Example:</b>
+        /// <para>ALL</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
         public string EventName { get; set; }
 
         /// <summary>
-        /// The field that you want to use in the whitelist rule.
+        /// <para>The field that you want to use in the whitelist rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fileMd5</para>
         /// </summary>
         [NameInMap("Field")]
         [Validation(Required=false)]
         public string Field { get; set; }
 
         /// <summary>
-        /// The value of the field that you want to use in the whitelist rule.
+        /// <para>The value of the field that you want to use in the whitelist rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b2cf9747ee49d8d9b105cf16e078cc16</para>
         /// </summary>
         [NameInMap("FieldValue")]
         [Validation(Required=false)]
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// The logical operator that you want to use in the whitelist rule.
+        /// <para>The logical operator that you want to use in the whitelist rule.</para>
+        /// <list type="bullet">
+        /// <item><description>Set the value to strEqual, which indicates the equality operator (=).</description></item>
+        /// </list>
         /// 
-        /// *   Set the value to strEqual, which indicates the equality operator (=).
+        /// <b>Example:</b>
+        /// <para>strEqual</para>
         /// </summary>
         [NameInMap("Operator")]
         [Validation(Required=false)]
         public string Operator { get; set; }
 
         /// <summary>
-        /// The feature to which this operation belongs.
+        /// <para>The feature to which this operation belongs.</para>
+        /// <list type="bullet">
+        /// <item><description>Set the value to agentless, which indicates the agentless detection feature.</description></item>
+        /// </list>
         /// 
-        /// *   Set the value to agentless, which indicates the agentless detection feature.
+        /// <b>Example:</b>
+        /// <para>agentless</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// The type of the assets on which you want the whitelist rule to take effect. Valid values:
+        /// <para>The type of the assets on which you want the whitelist rule to take effect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ALL: all assets</description></item>
+        /// <item><description>SELECTION_KEY: selected assets</description></item>
+        /// </list>
         /// 
-        /// *   ALL: all assets
-        /// *   SELECTION_KEY: selected assets
+        /// <b>Example:</b>
+        /// <para>ALL</para>
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]
         public string TargetType { get; set; }
 
         /// <summary>
-        /// The assets on which you want the whitelist rule to take effect. Valid values:
+        /// <para>The assets on which you want the whitelist rule to take effect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ALL: all assets</description></item>
+        /// <item><description>Others: selected assets</description></item>
+        /// </list>
         /// 
-        /// *   ALL: all assets
-        /// *   Others: selected assets
+        /// <b>Example:</b>
+        /// <para>ALL</para>
         /// </summary>
         [NameInMap("TargetValue")]
         [Validation(Required=false)]

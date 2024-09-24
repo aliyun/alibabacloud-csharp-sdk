@@ -10,62 +10,82 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerTagsRequest : TeaModel {
         /// <summary>
-        /// The name of the application.
+        /// <para>The name of the application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>node-exporter</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// The ID of the cluster to which the container belongs.
+        /// <para>The ID of the cluster to which the container belongs.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+        /// <b>Example:</b>
+        /// <para>c22143730ab6e40b09ec7c1c51d4d****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The name of the attribute that is used for the query. Valid values:
+        /// <para>The name of the attribute that is used for the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>namespace</b>: the namespace</description></item>
+        /// <item><description><b>appName</b>: the application name</description></item>
+        /// <item><description><b>image</b>: the image</description></item>
+        /// <item><description><b>tag</b>: the tag</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **namespace**: the namespace
-        /// *   **appName**: the application name
-        /// *   **image**: the image
-        /// *   **tag**: the tag
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>namespace</para>
         /// </summary>
         [NameInMap("FieldName")]
         [Validation(Required=false)]
         public string FieldName { get; set; }
 
         /// <summary>
-        /// The value of the attribute that is used for the query.
+        /// <para>The value of the attribute that is used for the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo4</para>
         /// </summary>
         [NameInMap("FieldValue")]
         [Validation(Required=false)]
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// The namespace.
+        /// <para>The namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-name-01</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 200.
+        /// <para>The number of entries to return on each page. Default value: 200.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

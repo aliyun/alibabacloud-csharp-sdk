@@ -10,59 +10,78 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryIncidentVertexExtendInfoResponseBody : TeaModel {
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public string Count { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0BCDBBF1-0048-535A-8529-67EA0CD1A807</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The returned extended information about the node.
+        /// <para>The returned extended information about the node.</para>
         /// </summary>
         [NameInMap("VertexExtendInfo")]
         [Validation(Required=false)]
         public List<QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfo> VertexExtendInfo { get; set; }
         public class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfo : TeaModel {
             /// <summary>
-            /// The ID of the Alibaba Cloud account.
+            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1168908270980461</para>
             /// </summary>
             [NameInMap("Aliuid")]
             [Validation(Required=false)]
             public string Aliuid { get; set; }
 
             /// <summary>
-            /// The display information.
+            /// <para>The display information.</para>
             /// </summary>
             [NameInMap("DisplayInfo")]
             [Validation(Required=false)]
             public List<QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoDisplayInfo> DisplayInfo { get; set; }
             public class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoDisplayInfo : TeaModel {
                 /// <summary>
-                /// The display name of the property.
+                /// <para>The display name of the property.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IDA</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The display value of the property.
+                /// <para>The display value of the property.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>app:nxueo</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -71,61 +90,82 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The node ID.
+            /// <para>The node ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1377</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The language of the content within the response. Valid values:
+            /// <para>The language of the content within the response. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>zh</b>: Chinese</description></item>
+            /// <item><description><b>en</b>: English</description></item>
+            /// </list>
             /// 
-            /// *   **zh**: Chinese
-            /// *   **en**: English
+            /// <b>Example:</b>
+            /// <para>zh</para>
             /// </summary>
             [NameInMap("Lang")]
             [Validation(Required=false)]
             public string Lang { get; set; }
 
             /// <summary>
-            /// The node name.
+            /// <para>The node name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oval:com.redhat.rhsa:def:20193878</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The neighboring nodes.
+            /// <para>The neighboring nodes.</para>
             /// </summary>
             [NameInMap("NeighborList")]
             [Validation(Required=false)]
             public List<QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoNeighborList> NeighborList { get; set; }
             public class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoNeighborList : TeaModel {
                 /// <summary>
-                /// The number of nodes.
+                /// <para>The number of nodes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// Indicates whether more neighboring nodes exist. Valid values:
+                /// <para>Indicates whether more neighboring nodes exist. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>True</para>
                 /// </summary>
                 [NameInMap("HasMore")]
                 [Validation(Required=false)]
                 public bool? HasMore { get; set; }
 
                 /// <summary>
-                /// The node type. Valid values include but are not limited to:
+                /// <para>The node type. Valid values include but are not limited to:</para>
+                /// <list type="bullet">
+                /// <item><description><b>process</b></description></item>
+                /// <item><description><b>file</b></description></item>
+                /// <item><description><b>alert</b></description></item>
+                /// <item><description><b>ip</b></description></item>
+                /// <item><description><b>domain</b></description></item>
+                /// </list>
                 /// 
-                /// *   **process**
-                /// *   **file**
-                /// *   **alert**
-                /// *   **ip**
-                /// *   **domain**
+                /// <b>Example:</b>
+                /// <para>alidetect</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -134,186 +174,264 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The node properties. The value is in the text format.
+            /// <para>The node properties. The value is in the text format.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DIRECTORY</para>
             /// </summary>
             [NameInMap("Properties")]
             [Validation(Required=false)]
             public string Properties { get; set; }
 
             /// <summary>
-            /// The node property.
+            /// <para>The node property.</para>
             /// </summary>
             [NameInMap("Property")]
             [Validation(Required=false)]
             public QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoProperty Property { get; set; }
             public class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoProperty : TeaModel {
                 /// <summary>
-                /// The alert description.
+                /// <para>The alert description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>exploit</para>
                 /// </summary>
                 [NameInMap("AlertDesc")]
                 [Validation(Required=false)]
                 public string AlertDesc { get; set; }
 
                 /// <summary>
-                /// The details of the alert.
+                /// <para>The details of the alert.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{}</para>
                 /// </summary>
                 [NameInMap("AlertDetail")]
                 [Validation(Required=false)]
                 public string AlertDetail { get; set; }
 
                 /// <summary>
-                /// The alert level. Valid values:
+                /// <para>The alert level. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>serious</b></description></item>
+                /// <item><description><b>suspicious</b></description></item>
+                /// <item><description><b>remind</b></description></item>
+                /// </list>
                 /// 
-                /// *   **serious**
-                /// *   **suspicious**
-                /// *   **remind**
+                /// <b>Example:</b>
+                /// <para>serious</para>
                 /// </summary>
                 [NameInMap("AlertLevel")]
                 [Validation(Required=false)]
                 public string AlertLevel { get; set; }
 
                 /// <summary>
-                /// The alert name.
+                /// <para>The alert name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pt_device_in_bps_down_alert</para>
                 /// </summary>
                 [NameInMap("AlertName")]
                 [Validation(Required=false)]
                 public string AlertName { get; set; }
 
                 /// <summary>
-                /// The code of the alert name.
+                /// <para>The code of the alert name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>6367</para>
                 /// </summary>
                 [NameInMap("AlertNameCode")]
                 [Validation(Required=false)]
                 public string AlertNameCode { get; set; }
 
                 /// <summary>
-                /// The alert name. The value is in English.
+                /// <para>The alert name. The value is in English.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>attack_alert</para>
                 /// </summary>
                 [NameInMap("AlertNameEn")]
                 [Validation(Required=false)]
                 public string AlertNameEn { get; set; }
 
                 /// <summary>
-                /// The service that generates the alert.
+                /// <para>The service that generates the alert.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sas</para>
                 /// </summary>
                 [NameInMap("AlertSrcProd")]
                 [Validation(Required=false)]
                 public string AlertSrcProd { get; set; }
 
                 /// <summary>
-                /// The module of the service that generates the alert.
+                /// <para>The module of the service that generates the alert.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aegis</para>
                 /// </summary>
                 [NameInMap("AlertSrcProdModule")]
                 [Validation(Required=false)]
                 public string AlertSrcProdModule { get; set; }
 
                 /// <summary>
-                /// The alert title.
+                /// <para>The alert title.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>login_common_account</para>
                 /// </summary>
                 [NameInMap("AlertTitle")]
                 [Validation(Required=false)]
                 public string AlertTitle { get; set; }
 
                 /// <summary>
-                /// The alert type.
+                /// <para>The alert type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>attack_alert</para>
                 /// </summary>
                 [NameInMap("AlertType")]
                 [Validation(Required=false)]
                 public string AlertType { get; set; }
 
                 /// <summary>
-                /// The code of the alert type.
+                /// <para>The code of the alert type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>112</para>
                 /// </summary>
                 [NameInMap("AlertTypeCode")]
                 [Validation(Required=false)]
                 public string AlertTypeCode { get; set; }
 
                 /// <summary>
-                /// The alert type. The value is in English.
+                /// <para>The alert type. The value is in English.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>attack_alert</para>
                 /// </summary>
                 [NameInMap("AlertTypeEn")]
                 [Validation(Required=false)]
                 public string AlertTypeEn { get; set; }
 
                 /// <summary>
-                /// The alert ID.
+                /// <para>The alert ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>alert-abc4990f2e1948eb960a2bb7ac0****</para>
                 /// </summary>
                 [NameInMap("AlertUuid")]
                 [Validation(Required=false)]
                 public string AlertUuid { get; set; }
 
                 /// <summary>
-                /// The assets.
+                /// <para>The assets.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[]</para>
                 /// </summary>
                 [NameInMap("AssetList")]
                 [Validation(Required=false)]
                 public string AssetList { get; set; }
 
                 /// <summary>
-                /// ATT\\&CK
+                /// <para>ATT\&amp;CK</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Keychain</para>
                 /// </summary>
                 [NameInMap("AttCk")]
                 [Validation(Required=false)]
                 public string AttCk { get; set; }
 
                 /// <summary>
-                /// The code of the cloud service provider.
+                /// <para>The code of the cloud service provider.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>alibaba_cloud</para>
                 /// </summary>
                 [NameInMap("CloudCode")]
                 [Validation(Required=false)]
                 public string CloudCode { get; set; }
 
                 /// <summary>
-                /// The instance.
+                /// <para>The instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[
+                ///       &quot;003d544744249351****&quot;
+                /// ]</para>
                 /// </summary>
                 [NameInMap("EntityList")]
                 [Validation(Required=false)]
                 public string EntityList { get; set; }
 
                 /// <summary>
-                /// The creation time.
+                /// <para>The creation time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-11-24T10:13Z</para>
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// The modification time.
+                /// <para>The modification time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2023-05-08 20:06:07</para>
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The time when the log was generated.
+                /// <para>The time when the log was generated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-11-24T10:13Z</para>
                 /// </summary>
                 [NameInMap("LogTime")]
                 [Validation(Required=false)]
                 public string LogTime { get; set; }
 
                 /// <summary>
-                /// The log ID.
+                /// <para>The log ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>abc4990f2e1948eb960a2bb7ac0f****</para>
                 /// </summary>
                 [NameInMap("LogUuid")]
                 [Validation(Required=false)]
                 public string LogUuid { get; set; }
 
                 /// <summary>
-                /// The ID of the master account.
+                /// <para>The ID of the master account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>168370268****</para>
                 /// </summary>
                 [NameInMap("MainUserId")]
                 [Validation(Required=false)]
                 public string MainUserId { get; set; }
 
                 /// <summary>
-                /// The time when the alert was generated.
+                /// <para>The time when the alert was generated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-11-24T10:13Z</para>
                 /// </summary>
                 [NameInMap("OccurTime")]
                 [Validation(Required=false)]
                 public string OccurTime { get; set; }
 
                 /// <summary>
-                /// The ID of the sub-account.
+                /// <para>The ID of the sub-account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>11689082709****</para>
                 /// </summary>
                 [NameInMap("SubUserId")]
                 [Validation(Required=false)]
@@ -322,41 +440,57 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The ID of the rule for which the node was created.
+            /// <para>The ID of the rule for which the node was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>400035</para>
             /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public string RuleId { get; set; }
 
             /// <summary>
-            /// The time when the node was created.
+            /// <para>The time when the node was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-11-06 11:00:00</para>
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
             public string Time { get; set; }
 
             /// <summary>
-            /// The UNIX timestamp when the node was created. Unit: milliseconds.
+            /// <para>The UNIX timestamp when the node was created. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1645168444</para>
             /// </summary>
             [NameInMap("Timestamp")]
             [Validation(Required=false)]
             public long? Timestamp { get; set; }
 
             /// <summary>
-            /// The node type. Valid values include but are not limited to:
+            /// <para>The node type. Valid values include but are not limited to:</para>
+            /// <list type="bullet">
+            /// <item><description><b>process</b></description></item>
+            /// <item><description><b>file</b></description></item>
+            /// <item><description><b>alert</b></description></item>
+            /// <item><description><b>ip</b></description></item>
+            /// <item><description><b>domain</b></description></item>
+            /// </list>
             /// 
-            /// *   **process**
-            /// *   **file**
-            /// *   **alert**
-            /// *   **ip**
-            /// *   **domain**
+            /// <b>Example:</b>
+            /// <para>cve</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The node UUID.
+            /// <para>The node UUID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>678e29f4-d78f-4a7c-a2bc-38434a138538</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

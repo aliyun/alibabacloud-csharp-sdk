@@ -10,49 +10,65 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateHoneypotProbeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether address resolution protocol (ARP) is enabled for the check type.
+        /// <para>Specifies whether address resolution protocol (ARP) is enabled for the check type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Arp")]
         [Validation(Required=false)]
         public bool? Arp { get; set; }
 
         /// <summary>
-        /// The name of the probe.
+        /// <para>The name of the probe.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>svwsx-vpc-4430</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese.
-        /// *   **en**: English.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// Specifies whether ping is enabled for the check type.
+        /// <para>Specifies whether ping is enabled for the check type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Ping")]
         [Validation(Required=false)]
         public bool? Ping { get; set; }
 
         /// <summary>
-        /// The ID of the probe.
+        /// <para>The ID of the probe.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>bbe7e382-956f-473e-beed-bc73a258****</para>
         /// </summary>
         [NameInMap("ProbeId")]
         [Validation(Required=false)]
         public string ProbeId { get; set; }
 
         /// <summary>
-        /// The IP addresses that are monitored.
+        /// <para>The IP addresses that are monitored.</para>
         /// </summary>
         [NameInMap("ServiceIpList")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CancelOnceTaskResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D03DD0FD-6041-5107-AC00-383E28F1****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

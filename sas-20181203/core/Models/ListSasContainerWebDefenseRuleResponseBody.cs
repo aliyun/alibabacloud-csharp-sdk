@@ -10,125 +10,169 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListSasContainerWebDefenseRuleResponseBody : TeaModel {
         /// <summary>
-        /// The rules for container tamper-proofing.
+        /// <para>The rules for container tamper-proofing.</para>
         /// </summary>
         [NameInMap("ContainerWebDefenseRuleList")]
         [Validation(Required=false)]
         public List<ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleList> ContainerWebDefenseRuleList { get; set; }
         public class ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleList : TeaModel {
             /// <summary>
-            /// The user ID.
+            /// <para>The user ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1766185894104675</para>
             /// </summary>
             [NameInMap("AliUid")]
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// The number of the applications.
+            /// <para>The number of the applications.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("ApptotalCount")]
             [Validation(Required=false)]
             public int? ApptotalCount { get; set; }
 
             /// <summary>
-            /// The creation time. Unit: milliseconds.
+            /// <para>The creation time. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1698978109000</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// The timestamp when the alert event was last modified. Unit: milliseconds.
+            /// <para>The timestamp when the alert event was last modified. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1678852686000</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// The ID of the rule.
+            /// <para>The ID of the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>420336648</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The paths that are protected.
+            /// <para>The paths that are protected.</para>
             /// </summary>
             [NameInMap("PathConfDTOList")]
             [Validation(Required=false)]
             public List<ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleListPathConfDTOList> PathConfDTOList { get; set; }
             public class ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleListPathConfDTOList : TeaModel {
                 /// <summary>
-                /// The backup paths.
+                /// <para>The backup paths.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/tmp/test</para>
                 /// </summary>
                 [NameInMap("BackupPath")]
                 [Validation(Required=false)]
                 public string BackupPath { get; set; }
 
                 /// <summary>
-                /// The prevention mode. Valid values:
+                /// <para>The prevention mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>block</b></description></item>
+                /// <item><description><b>audit</b></description></item>
+                /// </list>
                 /// 
-                /// *   **block**
-                /// *   **audit**
+                /// <b>Example:</b>
+                /// <para>audit</para>
                 /// </summary>
                 [NameInMap("DefenseMode")]
                 [Validation(Required=false)]
                 public string DefenseMode { get; set; }
 
                 /// <summary>
-                /// The protected path.
+                /// <para>The protected path.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/usr/test/</para>
                 /// </summary>
                 [NameInMap("DefensePath")]
                 [Validation(Required=false)]
                 public string DefensePath { get; set; }
 
                 /// <summary>
-                /// The file that is excluded.
+                /// <para>The file that is excluded.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>php</para>
                 /// </summary>
                 [NameInMap("ExcludeFile")]
                 [Validation(Required=false)]
                 public string ExcludeFile { get; set; }
 
                 /// <summary>
-                /// The path to the file that is excluded.
+                /// <para>The path to the file that is excluded.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/usr/tt</para>
                 /// </summary>
                 [NameInMap("ExcludeFilePath")]
                 [Validation(Required=false)]
                 public string ExcludeFilePath { get; set; }
 
                 /// <summary>
-                /// The type of the file that is excluded.
+                /// <para>The type of the file that is excluded.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>jsp</para>
                 /// </summary>
                 [NameInMap("ExcludeFileType")]
                 [Validation(Required=false)]
                 public string ExcludeFileType { get; set; }
 
                 /// <summary>
-                /// The protection mode. Valid values:
+                /// <para>The protection mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: basic mode (whitelist)</description></item>
+                /// <item><description><b>1</b>: complex mode (blacklist)</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: basic mode (whitelist)
-                /// *   **1**: complex mode (blacklist)
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("GuardType")]
                 [Validation(Required=false)]
                 public int? GuardType { get; set; }
 
                 /// <summary>
-                /// The file that is included.
+                /// <para>The file that is included.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/usr/test</para>
                 /// </summary>
                 [NameInMap("IncludeFile")]
                 [Validation(Required=false)]
                 public string IncludeFile { get; set; }
 
                 /// <summary>
-                /// The type of the file that is included.
+                /// <para>The type of the file that is included.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>php</para>
                 /// </summary>
                 [NameInMap("IncludeFileType")]
                 [Validation(Required=false)]
                 public string IncludeFileType { get; set; }
 
                 /// <summary>
-                /// The processes that are added to the whitelist.
+                /// <para>The processes that are added to the whitelist.</para>
                 /// </summary>
                 [NameInMap("ProcessPathList")]
                 [Validation(Required=false)]
@@ -137,17 +181,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The name of the rule.
+            /// <para>The name of the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test2</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// The status of the rule. Valid values:
+            /// <para>The status of the rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: enabled</description></item>
+            /// <item><description><b>0</b>: disabled</description></item>
+            /// </list>
             /// 
-            /// *   **1**: enabled
-            /// *   **0**: disabled
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RuleStatus")]
             [Validation(Required=false)]
@@ -156,35 +207,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListSasContainerWebDefenseRuleResponseBodyPageInfo PageInfo { get; set; }
         public class ListSasContainerWebDefenseRuleResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>42</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -193,7 +256,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID, which is used to query logs and troubleshoot issues.
+        /// <para>The request ID, which is used to query logs and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8C376***AE74FB4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

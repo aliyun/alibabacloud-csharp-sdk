@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOpaStrategyDetailNewRequest : TeaModel {
         /// <summary>
-        /// The rule ID.
+        /// <para>The rule ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the rule ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the rule ID.
+        /// <b>Example:</b>
+        /// <para>1349</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

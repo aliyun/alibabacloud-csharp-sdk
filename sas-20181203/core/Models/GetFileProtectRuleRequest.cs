@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileProtectRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the rule.
+        /// <para>The ID of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>245</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

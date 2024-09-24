@@ -10,61 +10,78 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>24A20733-10A0-4AF6-BE6B-E3322413BB68</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the configurations of vulnerability management.
+        /// <para>An array that consists of the configurations of vulnerability management.</para>
         /// </summary>
         [NameInMap("TargetConfigs")]
         [Validation(Required=false)]
         public List<DescribeVulConfigResponseBodyTargetConfigs> TargetConfigs { get; set; }
         public class DescribeVulConfigResponseBodyTargetConfigs : TeaModel {
             /// <summary>
-            /// The configuration of vulnerability scan.
+            /// <para>The configuration of vulnerability scan.</para>
+            /// <remarks>
+            /// <para>Valid values when you set the Type parameter to <b>cve</b>, <b>sys</b>, <b>cms</b>, <b>app</b>, <b>emg</b>, or <b>yum</b>:</para>
+            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><para><b>on</b>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><b>off</b>: disabled</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Valid values when you set the Type parameter to <b>scanMode</b>:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>real</b>: displays easily exploitable vulnerability.</para>
+            /// </description></item>
+            /// <item><description><para><b>all</b>: displays all vulnerabilities.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>When you set the Type parameter to <b>imageVulClean</b>, the value of this parameter indicates the vulnerability retention period in days.</para>
             /// 
-            /// > Valid values when you set the Type parameter to **cve**, **sys**, **cms**, **app**, **emg**, or **yum**:
-            /// 
-            /// *   **on**: enabled
-            /// 
-            /// *   **off**: disabled
-            /// 
-            /// Valid values when you set the Type parameter to **scanMode**:
-            /// 
-            /// *   **real**: displays easily exploitable vulnerability.
-            /// 
-            /// *   **all**: displays all vulnerabilities.
-            /// 
-            /// When you set the Type parameter to **imageVulClean**, the value of this parameter indicates the vulnerability retention period in days.
+            /// <b>Example:</b>
+            /// <para>90</para>
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
             public string Config { get; set; }
 
             /// <summary>
-            /// Indicates whether the vulnerability management feature is enabled for all servers. Valid values:
+            /// <para>Indicates whether the vulnerability management feature is enabled for all servers. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>off</b>: disabled</description></item>
+            /// <item><description><b>on</b>: enabled</description></item>
+            /// </list>
             /// 
-            /// *   **off**: disabled
-            /// *   **on**: enabled
+            /// <b>Example:</b>
+            /// <para>on</para>
             /// </summary>
             [NameInMap("OverAllConfig")]
             [Validation(Required=false)]
             public string OverAllConfig { get; set; }
 
             /// <summary>
-            /// The type of configuration. Valid values:
+            /// <para>The type of configuration. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
+            /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
+            /// <item><description><b>cms</b>: Web-CMS vulnerability.</description></item>
+            /// <item><description><b>app</b>: application vulnerability that is detected by using web scanner.</description></item>
+            /// <item><description><b>emg</b>: urgent vulnerability.</description></item>
+            /// <item><description><b>scanMode</b>: displays easily exploitable vulnerability.</description></item>
+            /// <item><description><b>imageVulClean</b>: vulnerability retention duration.</description></item>
+            /// <item><description><b>yum</b>: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.</description></item>
+            /// </list>
             /// 
-            /// *   **cve**: Linux software vulnerability.
-            /// *   **sys**: Windows system vulnerability.
-            /// *   **cms**: Web-CMS vulnerability.
-            /// *   **app**: application vulnerability that is detected by using web scanner.
-            /// *   **emg**: urgent vulnerability.
-            /// *   **scanMode**: displays easily exploitable vulnerability.
-            /// *   **imageVulClean**: vulnerability retention duration.
-            /// *   **yum**: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.
+            /// <b>Example:</b>
+            /// <para>cve</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -73,7 +90,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The total number of configurations.
+        /// <para>The total number of configurations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

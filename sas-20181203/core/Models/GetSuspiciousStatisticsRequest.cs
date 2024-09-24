@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSuspiciousStatisticsRequest : TeaModel {
         /// <summary>
-        /// The ID of the asset group. Separate multiple IDs with commas (,).
+        /// <para>The ID of the asset group. Separate multiple IDs with commas (,).</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>9997897</para>
         /// </summary>
         [NameInMap("GroupIdList")]
         [Validation(Required=false)]
         public string GroupIdList { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.12.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

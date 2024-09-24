@@ -10,35 +10,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOpaClusterStrategyNewRequest : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The image names.
+        /// <para>The image names.</para>
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public List<string> ImageName { get; set; }
 
         /// <summary>
-        /// The tags that are added to the container.
+        /// <para>The tags that are added to the container.</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public List<string> Label { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The rule names.
+        /// <para>The rule names.</para>
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

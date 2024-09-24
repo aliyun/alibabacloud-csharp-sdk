@@ -10,86 +10,116 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyContainerDefenseRuleRequest : TeaModel {
         /// <summary>
-        /// The description of the rule.
+        /// <para>The description of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Prevent non-mirror programs from starting in containers</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The action specified in the rule. Valid values:
+        /// <para>The action specified in the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: alert</description></item>
+        /// <item><description><b>2</b>: block</description></item>
+        /// </list>
         /// 
-        /// *   **1**: alert
-        /// *   **2**: block
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleAction")]
         [Validation(Required=false)]
         public int? RuleAction { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// <para>The ID of the rule.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the IDs of rules.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListContainerDefenseRule](https://help.aliyun.com/document_detail/2590599.html) operation to query the IDs of rules.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>text-001</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The status of the rule. Valid values:
+        /// <para>The status of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: enabled</description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// </list>
         /// 
-        /// *   **1**: enabled
-        /// *   **0**: disabled
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleSwitch")]
         [Validation(Required=false)]
         public int? RuleSwitch { get; set; }
 
         /// <summary>
-        /// The type of the rule. Valid values:
+        /// <para>The type of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: system rule</description></item>
+        /// <item><description>2: custom rule</description></item>
+        /// </list>
         /// 
-        /// *   1: system rule
-        /// *   2: custom rule
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public int? RuleType { get; set; }
 
         /// <summary>
-        /// The effective scope of the rule.
+        /// <para>The effective scope of the rule.</para>
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
         public List<ModifyContainerDefenseRuleRequestScope> Scope { get; set; }
         public class ModifyContainerDefenseRuleRequestScope : TeaModel {
             /// <summary>
-            /// Specifies whether to include all namespaces. Valid values:
+            /// <para>Specifies whether to include all namespaces. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><b>1</b>: yes</description></item>
+            /// </list>
             /// 
-            /// *   **0**: no
-            /// *   **1**: yes
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AllNamespace")]
             [Validation(Required=false)]
             public int? AllNamespace { get; set; }
 
             /// <summary>
-            /// The ID of the cluster on which the rule takes effect.
+            /// <para>The ID of the cluster on which the rule takes effect.</para>
+            /// <remarks>
+            /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+            /// </remarks>
             /// 
-            /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+            /// <b>Example:</b>
+            /// <para>c54b***1501</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The namespaces.
+            /// <para>The namespaces.</para>
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
@@ -98,30 +128,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The whitelist.
+        /// <para>The whitelist.</para>
         /// </summary>
         [NameInMap("Whitelist")]
         [Validation(Required=false)]
         public ModifyContainerDefenseRuleRequestWhitelist Whitelist { get; set; }
         public class ModifyContainerDefenseRuleRequestWhitelist : TeaModel {
             /// <summary>
-            /// The hash values of the files that need to be added to the whitelist.
-            /// 
-            /// >  This parameter is not supported.
+            /// <para>The hash values of the files that need to be added to the whitelist.</para>
+            /// <remarks>
+            /// <para> This parameter is not supported.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("Hash")]
             [Validation(Required=false)]
             public List<string> Hash { get; set; }
 
             /// <summary>
-            /// The images that need to be added to the whitelist.
+            /// <para>The images that need to be added to the whitelist.</para>
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public List<string> Image { get; set; }
 
             /// <summary>
-            /// The paths to the files that need to be added to the whitelist.
+            /// <para>The paths to the files that need to be added to the whitelist.</para>
             /// </summary>
             [NameInMap("Path")]
             [Validation(Required=false)]

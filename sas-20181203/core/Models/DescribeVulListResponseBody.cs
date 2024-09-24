@@ -10,195 +10,263 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulListResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The value of NextToken that is returned when the NextToken method is used.
+        /// <para>The value of NextToken that is returned when the NextToken method is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E17B501887A2D3AA5E8360A6EFA3B***</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2F26AB2A-1075-488F-8472-40E5DB486ACC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of vulnerabilities returned.
+        /// <para>The total number of vulnerabilities returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The information about the vulnerability.
+        /// <para>The information about the vulnerability.</para>
         /// </summary>
         [NameInMap("VulRecords")]
         [Validation(Required=false)]
         public List<DescribeVulListResponseBodyVulRecords> VulRecords { get; set; }
         public class DescribeVulListResponseBodyVulRecords : TeaModel {
             /// <summary>
-            /// The name of the vulnerability.
+            /// <para>The name of the vulnerability.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>RHSA-2019:0230-Important: polkit security update</para>
             /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
             /// <summary>
-            /// The edition of Security Center that is authorized to scan the asset. Valid values:
+            /// <para>The edition of Security Center that is authorized to scan the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: Basic.</description></item>
+            /// <item><description><b>6</b>: Anti-virus.</description></item>
+            /// <item><description><b>5</b>: Advanced.</description></item>
+            /// <item><description><b>3</b>: Enterprise.</description></item>
+            /// <item><description><b>7</b>: Ultimate.</description></item>
+            /// <item><description><b>10</b>: Value-added Plan.</description></item>
+            /// </list>
             /// 
-            /// *   **1**: Basic.
-            /// *   **6**: Anti-virus.
-            /// *   **5**: Advanced.
-            /// *   **3**: Enterprise.
-            /// *   **7**: Ultimate.
-            /// *   **10**: Value-added Plan.
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("AuthVersion")]
             [Validation(Required=false)]
             public string AuthVersion { get; set; }
 
             /// <summary>
-            /// Indicates whether Security Center is authorized to scan the asset. Valid values:
+            /// <para>Indicates whether Security Center is authorized to scan the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Bind")]
             [Validation(Required=false)]
             public bool? Bind { get; set; }
 
             /// <summary>
-            /// The extended information about the vulnerability.
+            /// <para>The extended information about the vulnerability.</para>
             /// </summary>
             [NameInMap("ExtendContentJson")]
             [Validation(Required=false)]
             public DescribeVulListResponseBodyVulRecordsExtendContentJson ExtendContentJson { get; set; }
             public class DescribeVulListResponseBodyVulRecordsExtendContentJson : TeaModel {
                 /// <summary>
-                /// The path to the package of the software that has the vulnerability.
+                /// <para>The path to the package of the software that has the vulnerability.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/roo/www/web</para>
                 /// </summary>
                 [NameInMap("AbsolutePath")]
                 [Validation(Required=false)]
                 public string AbsolutePath { get; set; }
 
                 /// <summary>
-                /// The name of the vulnerability.
+                /// <para>The name of the vulnerability.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RHSA-2019:0230-Important: polkit security update</para>
                 /// </summary>
                 [NameInMap("AliasName")]
                 [Validation(Required=false)]
                 public string AliasName { get; set; }
 
                 /// <summary>
-                /// The description of the vulnerability.
+                /// <para>The description of the vulnerability.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>kernel version:5.10.84-10.2.al8.x86_64</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The returned message that indicates the urgent vulnerability.
+                /// <para>The returned message that indicates the urgent vulnerability.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>com.xxl.rpc.util.XxlRpcException: xxl-rpc request data is empty.\n\tat com.xxl.rpc.remoting.net.impl.servlet.serve&quot;</para>
                 /// </summary>
                 [NameInMap("EmgProof")]
                 [Validation(Required=false)]
                 public string EmgProof { get; set; }
 
                 /// <summary>
-                /// The public IP address of the asset that is associated with the vulnerability.
+                /// <para>The public IP address of the asset that is associated with the vulnerability.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.2.XX.XX</para>
                 /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
                 /// <summary>
-                /// The timestamp when the vulnerability was last detected. Unit: milliseconds.
+                /// <para>The timestamp when the vulnerability was last detected. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1620404763000</para>
                 /// </summary>
                 [NameInMap("LastTs")]
                 [Validation(Required=false)]
                 public long? LastTs { get; set; }
 
                 /// <summary>
-                /// Indicates whether the vulnerability needs to be fixed.
+                /// <para>Indicates whether the vulnerability needs to be fixed.</para>
                 /// </summary>
                 [NameInMap("Necessity")]
                 [Validation(Required=false)]
                 public DescribeVulListResponseBodyVulRecordsExtendContentJsonNecessity Necessity { get; set; }
                 public class DescribeVulListResponseBodyVulRecordsExtendContentJsonNecessity : TeaModel {
                     /// <summary>
-                    /// The asset importance score. Valid values:
+                    /// <para>The asset importance score. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>2</b>: important asset.</description></item>
+                    /// <item><description><b>1</b>: common asset.</description></item>
+                    /// <item><description><b>0</b>: test asset.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **2**: important asset.
-                    /// *   **1**: common asset.
-                    /// *   **0**: test asset.
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Assets_factor")]
                     [Validation(Required=false)]
                     public string AssetsFactor { get; set; }
 
                     /// <summary>
-                    /// The Common Vulnerability Scoring System (CVSS) score.
+                    /// <para>The Common Vulnerability Scoring System (CVSS) score.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>7.8</para>
                     /// </summary>
                     [NameInMap("Cvss_factor")]
                     [Validation(Required=false)]
                     public string CvssFactor { get; set; }
 
                     /// <summary>
-                    /// The environment score.
+                    /// <para>The environment score.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1.0</para>
                     /// </summary>
                     [NameInMap("Enviroment_factor")]
                     [Validation(Required=false)]
                     public string EnviromentFactor { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the vulnerability priority score is calculated. Valid values:
+                    /// <para>Indicates whether the vulnerability priority score is calculated. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>0</b>: no.</description></item>
+                    /// <item><description><b>1</b>: yes.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **0**: no.
-                    /// *   **1**: yes.
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Is_calc")]
                     [Validation(Required=false)]
                     public string IsCalc { get; set; }
 
                     /// <summary>
-                    /// The status of the vulnerability priority score. Valid values:
+                    /// <para>The status of the vulnerability priority score. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>none</b>: No score is generated.</description></item>
+                    /// <item><description><b>pending</b>: The score is pending calculation.</description></item>
+                    /// <item><description><b>normal</b>: The calculation is normal.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **none**: No score is generated.
-                    /// *   **pending**: The score is pending calculation.
-                    /// *   **normal**: The calculation is normal.
+                    /// <b>Example:</b>
+                    /// <para>normal</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// The time score.
+                    /// <para>The time score.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1.0</para>
                     /// </summary>
                     [NameInMap("Time_factor")]
                     [Validation(Required=false)]
                     public string TimeFactor { get; set; }
 
                     /// <summary>
-                    /// The vulnerability priority score.
+                    /// <para>The vulnerability priority score.</para>
+                    /// <para>The following list describes scores and related fixing suggestions:</para>
+                    /// <list type="bullet">
+                    /// <item><description>If the score is from <b>13.5 to 15</b>, the vulnerability is a high-risk vulnerability. You must fix the vulnerability at the earliest opportunity.</description></item>
+                    /// <item><description>If the score is <b>greater than or equal to 7 but less than 13.5</b>, the vulnerability is a medium-risk vulnerability. You can fix the vulnerability at your convenience.</description></item>
+                    /// <item><description>If the score is <b>less than 7</b>, the vulnerability is a low-risk vulnerability. You can ignore the vulnerability.</description></item>
+                    /// </list>
                     /// 
-                    /// The following list describes scores and related fixing suggestions:
-                    /// 
-                    /// *   If the score is from **13.5 to 15**, the vulnerability is a high-risk vulnerability. You must fix the vulnerability at the earliest opportunity.
-                    /// *   If the score is **greater than or equal to 7 but less than 13.5**, the vulnerability is a medium-risk vulnerability. You can fix the vulnerability at your convenience.
-                    /// *   If the score is **less than 7**, the vulnerability is a low-risk vulnerability. You can ignore the vulnerability.
+                    /// <b>Example:</b>
+                    /// <para>7.8</para>
                     /// </summary>
                     [NameInMap("Total_score")]
                     [Validation(Required=false)]
@@ -207,105 +275,144 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// The name of the operating system.
+                /// <para>The name of the operating system.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>centos</para>
                 /// </summary>
                 [NameInMap("Os")]
                 [Validation(Required=false)]
                 public string Os { get; set; }
 
                 /// <summary>
-                /// The information about the operating system version.
+                /// <para>The information about the operating system version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>7</para>
                 /// </summary>
                 [NameInMap("OsRelease")]
                 [Validation(Required=false)]
                 public string OsRelease { get; set; }
 
                 /// <summary>
-                /// The ID of the vulnerability.
+                /// <para>The ID of the vulnerability.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>111</para>
                 /// </summary>
                 [NameInMap("PrimaryId")]
                 [Validation(Required=false)]
                 public long? PrimaryId { get; set; }
 
                 /// <summary>
-                /// The information about RPM Package Manager (RPM) packages.
+                /// <para>The information about RPM Package Manager (RPM) packages.</para>
                 /// </summary>
                 [NameInMap("RpmEntityList")]
                 [Validation(Required=false)]
                 public List<DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> RpmEntityList { get; set; }
                 public class DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList : TeaModel {
                     /// <summary>
-                    /// The name of the container.
+                    /// <para>The name of the container.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>k8s_67895c4_xxx</para>
                     /// </summary>
                     [NameInMap("ContainerName")]
                     [Validation(Required=false)]
                     public string ContainerName { get; set; }
 
                     /// <summary>
-                    /// The extended information about the software package that has the vulnerability.
+                    /// <para>The extended information about the software package that has the vulnerability.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{&quot;msg_no_lookups_configured_CVE_2021_44228&quot;: &quot;false&quot;, &quot;jndi_class_not_exist&quot;: &quot;false&quot;}</para>
                     /// </summary>
                     [NameInMap("ExtendField")]
                     [Validation(Required=false)]
                     public string ExtendField { get; set; }
 
                     /// <summary>
-                    /// The complete version number.
+                    /// <para>The complete version number.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3.10.0-693.2.2.el7</para>
                     /// </summary>
                     [NameInMap("FullVersion")]
                     [Validation(Required=false)]
                     public string FullVersion { get; set; }
 
                     /// <summary>
-                    /// The name of the image.
+                    /// <para>The name of the image.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>registry_387ytb_xxx</para>
                     /// </summary>
                     [NameInMap("ImageName")]
                     [Validation(Required=false)]
                     public string ImageName { get; set; }
 
                     /// <summary>
-                    /// The reason why the vulnerability is detected.
+                    /// <para>The reason why the vulnerability is detected.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>python-perf version less than 0:3.10.0-693.21.1.el7</para>
                     /// </summary>
                     [NameInMap("MatchDetail")]
                     [Validation(Required=false)]
                     public string MatchDetail { get; set; }
 
                     /// <summary>
-                    /// The rules that are used to detect the vulnerability.
+                    /// <para>The rules that are used to detect the vulnerability.</para>
                     /// </summary>
                     [NameInMap("MatchList")]
                     [Validation(Required=false)]
                     public List<string> MatchList { get; set; }
 
                     /// <summary>
-                    /// The name of the RPM package.
+                    /// <para>The name of the RPM package.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>python-perf</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The path to the software that has the vulnerability.
+                    /// <para>The path to the software that has the vulnerability.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/usr/lib64/python2.7/site-packages</para>
                     /// </summary>
                     [NameInMap("Path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// The process ID.
+                    /// <para>The process ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>8664</para>
                     /// </summary>
                     [NameInMap("Pid")]
                     [Validation(Required=false)]
                     public string Pid { get; set; }
 
                     /// <summary>
-                    /// The command that is used to fix the vulnerability.
+                    /// <para>The command that is used to fix the vulnerability.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>*** update python-perf</para>
                     /// </summary>
                     [NameInMap("UpdateCmd")]
                     [Validation(Required=false)]
                     public string UpdateCmd { get; set; }
 
                     /// <summary>
-                    /// The version number of the package of the software that has the vulnerability.
+                    /// <para>The version number of the package of the software that has the vulnerability.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3.10.0</para>
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -314,42 +421,52 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// The status of the vulnerability. Valid values:
+                /// <para>The status of the vulnerability. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: unfixed.</description></item>
+                /// <item><description><b>2</b>: fix failed.</description></item>
+                /// <item><description>3: rollback failed.</description></item>
+                /// <item><description><b>4</b>: being fixed.</description></item>
+                /// <item><description><b>5</b>: being rolled back.</description></item>
+                /// <item><description><b>6</b>: being verified.</description></item>
+                /// <item><description><b>7</b>: fixed.</description></item>
+                /// <item><description><b>8</b>: fixed and to be restarted.</description></item>
+                /// <item><description><b>9</b>: rolled back.</description></item>
+                /// <item><description><b>10</b>: ignored.</description></item>
+                /// <item><description><b>11</b>: rolled back and to be restarted.</description></item>
+                /// <item><description><b>12</b>: not found.</description></item>
+                /// <item><description><b>20</b>: expired.</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: unfixed.
-                /// *   **2**: fix failed.
-                /// *   3: rollback failed.
-                /// *   **4**: being fixed.
-                /// *   **5**: being rolled back.
-                /// *   **6**: being verified.
-                /// *   **7**: fixed.
-                /// *   **8**: fixed and to be restarted.
-                /// *   **9**: rolled back.
-                /// *   **10**: ignored.
-                /// *   **11**: rolled back and to be restarted.
-                /// *   **12**: not found.
-                /// *   **20**: expired.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tag that is added to the vulnerability.
+                /// <para>The tag that is added to the vulnerability.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>oval</para>
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// The URL of the vulnerability.
+                /// <para>The URL of the vulnerability.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://39.99.XX.XX:30005/toLogin">http://39.99.XX.XX:30005/toLogin</a></para>
                 /// </summary>
                 [NameInMap("Target")]
                 [Validation(Required=false)]
                 public string Target { get; set; }
 
                 /// <summary>
-                /// The CVE list.
+                /// <para>The CVE list.</para>
                 /// </summary>
                 [NameInMap("cveList")]
                 [Validation(Required=false)]
@@ -358,260 +475,362 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The timestamp when the vulnerability was first detected. Unit: milliseconds.
+            /// <para>The timestamp when the vulnerability was first detected. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1554189334000</para>
             /// </summary>
             [NameInMap("FirstTs")]
             [Validation(Required=false)]
             public long? FirstTs { get; set; }
 
             /// <summary>
-            /// The ID of the asset group.
+            /// <para>The ID of the asset group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>281801</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public int? GroupId { get; set; }
 
             /// <summary>
-            /// The ID of the asset.
+            /// <para>The ID of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp18t***</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the asset.
+            /// <para>The name of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testInstance</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The public IP address of the asset.
+            /// <para>The public IP address of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.2.XX.XX</para>
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// The private IP address of the asset.
+            /// <para>The private IP address of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.2.XX.XX</para>
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// The ID of the cluster.
+            /// <para>The ID of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c863dc93bed3843de9934d4346dc4****</para>
             /// </summary>
             [NameInMap("K8sClusterId")]
             [Validation(Required=false)]
             public string K8sClusterId { get; set; }
 
             /// <summary>
-            /// The namespace.
+            /// <para>The namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("K8sNamespace")]
             [Validation(Required=false)]
             public string K8sNamespace { get; set; }
 
             /// <summary>
-            /// The ID of the node.
+            /// <para>The ID of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp1ifm6suw9mnbsr****</para>
             /// </summary>
             [NameInMap("K8sNodeId")]
             [Validation(Required=false)]
             public string K8sNodeId { get; set; }
 
             /// <summary>
-            /// The name of the node.
+            /// <para>The name of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>deployment-riskai-7b67d68975-m****</para>
             /// </summary>
             [NameInMap("K8sNodeName")]
             [Validation(Required=false)]
             public string K8sNodeName { get; set; }
 
             /// <summary>
-            /// The name of the pod.
+            /// <para>The name of the pod.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>deployment-riskai-7b67d68975-m****</para>
             /// </summary>
             [NameInMap("K8sPodName")]
             [Validation(Required=false)]
             public string K8sPodName { get; set; }
 
             /// <summary>
-            /// The timestamp when the vulnerability was last detected. Unit: milliseconds.
+            /// <para>The timestamp when the vulnerability was last detected. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1620404763000</para>
             /// </summary>
             [NameInMap("LastTs")]
             [Validation(Required=false)]
             public long? LastTs { get; set; }
 
             /// <summary>
-            /// The timestamp when the vulnerability status was modified. Unit: milliseconds.
+            /// <para>The timestamp when the vulnerability status was modified. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1620404763000</para>
             /// </summary>
             [NameInMap("ModifyTs")]
             [Validation(Required=false)]
             public long? ModifyTs { get; set; }
 
             /// <summary>
-            /// The name of the vulnerability.
+            /// <para>The name of the vulnerability.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oval:com.redhat.rhsa:def:20170574</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The priority to fix the vulnerability. Valid values:
+            /// <para>The priority to fix the vulnerability. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>asap</b>: high.</description></item>
+            /// <item><description><b>later</b>: medium.</description></item>
+            /// <item><description><b>nntf</b>: low.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> We recommend that you fix <b>high-risk</b> vulnerabilities at the earliest opportunity.</para>
+            /// </remarks>
             /// 
-            /// *   **asap**: high.
-            /// *   **later**: medium.
-            /// *   **nntf**: low.
-            /// 
-            /// >  We recommend that you fix **high-risk** vulnerabilities at the earliest opportunity.
+            /// <b>Example:</b>
+            /// <para>asap</para>
             /// </summary>
             [NameInMap("Necessity")]
             [Validation(Required=false)]
             public string Necessity { get; set; }
 
             /// <summary>
-            /// Indicates whether the Security Center agent on the asset is online. Valid values:
+            /// <para>Indicates whether the Security Center agent on the asset is online. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Online")]
             [Validation(Required=false)]
             public bool? Online { get; set; }
 
             /// <summary>
-            /// The name of the operating system for your asset.
+            /// <para>The name of the operating system for your asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CentOS 7.2 64-bit</para>
             /// </summary>
             [NameInMap("OsName")]
             [Validation(Required=false)]
             public string OsName { get; set; }
 
             /// <summary>
-            /// The name of the operating system for your asset.
+            /// <para>The name of the operating system for your asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>linux</para>
             /// </summary>
             [NameInMap("OsVersion")]
             [Validation(Required=false)]
             public string OsVersion { get; set; }
 
             /// <summary>
-            /// The ID of the vulnerability.
+            /// <para>The ID of the vulnerability.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>101162078</para>
             /// </summary>
             [NameInMap("PrimaryId")]
             [Validation(Required=false)]
             public long? PrimaryId { get; set; }
 
             /// <summary>
-            /// Indicates whether the application protection feature is supported. Valid values:
+            /// <para>Indicates whether the application protection feature is supported. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: no.</description></item>
+            /// <item><description><b>1</b>: yes.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> If this parameter is not returned, the application protection feature is not supported.</para>
+            /// </remarks>
             /// 
-            /// *   **0**: no.
-            /// *   **1**: yes.
-            /// 
-            /// >  If this parameter is not returned, the application protection feature is not supported.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RaspDefend")]
             [Validation(Required=false)]
             public int? RaspDefend { get; set; }
 
             /// <summary>
-            /// The protection mode of the application protection feature. Valid values:
+            /// <para>The protection mode of the application protection feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: unprotected.</description></item>
+            /// <item><description><b>1</b>: the Monitor mode.</description></item>
+            /// <item><description><b>2</b>: the Block mode.</description></item>
+            /// <item><description><b>3</b>: disabled.</description></item>
+            /// </list>
             /// 
-            /// *   **0**: unprotected.
-            /// *   **1**: the Monitor mode.
-            /// *   **2**: the Block mode.
-            /// *   **3**: disabled.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RaspStatus")]
             [Validation(Required=false)]
             public int? RaspStatus { get; set; }
 
             /// <summary>
-            /// Indicates whether the vulnerability is easily exploited. Valid values:
+            /// <para>Indicates whether the vulnerability is easily exploited. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("RealRisk")]
             [Validation(Required=false)]
             public bool? RealRisk { get; set; }
 
             /// <summary>
-            /// The region ID of the asset.
+            /// <para>The region ID of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The Common Vulnerabilities and Exposures (CVE) IDs related to the vulnerability. Multiple CVE IDs are separated by commas (,).
+            /// <para>The Common Vulnerabilities and Exposures (CVE) IDs related to the vulnerability. Multiple CVE IDs are separated by commas (,).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CVE-2017-7518,CVE-2017-12188</para>
             /// </summary>
             [NameInMap("Related")]
             [Validation(Required=false)]
             public string Related { get; set; }
 
             /// <summary>
-            /// The timestamp when the vulnerability was fixed. Unit: milliseconds. This parameter is returned only if you fix vulnerabilities in the Security Center console.
+            /// <para>The timestamp when the vulnerability was fixed. Unit: milliseconds. This parameter is returned only if you fix vulnerabilities in the Security Center console.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1541207563000</para>
             /// </summary>
             [NameInMap("RepairTs")]
             [Validation(Required=false)]
             public long? RepairTs { get; set; }
 
             /// <summary>
-            /// The code that indicates the vulnerability fixing result.
+            /// <para>The code that indicates the vulnerability fixing result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ResultCode")]
             [Validation(Required=false)]
             public string ResultCode { get; set; }
 
             /// <summary>
-            /// The message that indicates the vulnerability fixing result.
+            /// <para>The message that indicates the vulnerability fixing result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>timeout</para>
             /// </summary>
             [NameInMap("ResultMessage")]
             [Validation(Required=false)]
             public string ResultMessage { get; set; }
 
             /// <summary>
-            /// The status of the vulnerability. Valid values:
+            /// <para>The status of the vulnerability. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: unfixed.</description></item>
+            /// <item><description><b>2</b>: fix failed.</description></item>
+            /// <item><description><b>3</b>: rollback failed.</description></item>
+            /// <item><description><b>4</b>: being fixed.</description></item>
+            /// <item><description><b>5</b>: being rolled back.</description></item>
+            /// <item><description><b>6</b>: being verified.</description></item>
+            /// <item><description><b>7</b>: fixed.</description></item>
+            /// <item><description><b>8</b>: fixed and to be restarted.</description></item>
+            /// <item><description><b>9</b>: rolled back.</description></item>
+            /// <item><description><b>10</b>: ignored.</description></item>
+            /// <item><description><b>11</b>: rolled back and to be restarted.</description></item>
+            /// <item><description><b>12</b>: not found.</description></item>
+            /// <item><description><b>20</b>: expired.</description></item>
+            /// </list>
             /// 
-            /// *   **1**: unfixed.
-            /// *   **2**: fix failed.
-            /// *   **3**: rollback failed.
-            /// *   **4**: being fixed.
-            /// *   **5**: being rolled back.
-            /// *   **6**: being verified.
-            /// *   **7**: fixed.
-            /// *   **8**: fixed and to be restarted.
-            /// *   **9**: rolled back.
-            /// *   **10**: ignored.
-            /// *   **11**: rolled back and to be restarted.
-            /// *   **12**: not found.
-            /// *   **20**: expired.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The tag that is added to the vulnerability.
+            /// <para>The tag that is added to the vulnerability.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oval</para>
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
 
             /// <summary>
-            /// The type of the vulnerability. Valid values:
+            /// <para>The type of the vulnerability. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
+            /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
+            /// <item><description><b>cms</b>: Web-CMS vulnerability.</description></item>
+            /// <item><description><b>emg</b>: urgent vulnerability.</description></item>
+            /// <item><description><b>app</b>: application vulnerability.</description></item>
+            /// <item><description><b>sca</b>: application vulnerability that is detected by using software component analysis.</description></item>
+            /// </list>
             /// 
-            /// *   **cve**: Linux software vulnerability.
-            /// *   **sys**: Windows system vulnerability.
-            /// *   **cms**: Web-CMS vulnerability.
-            /// *   **emg**: urgent vulnerability.
-            /// *   **app**: application vulnerability.
-            /// *   **sca**: application vulnerability that is detected by using software component analysis.
+            /// <b>Example:</b>
+            /// <para>cve</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The UUID of the asset.
+            /// <para>The UUID of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>04c56617-23fc-43a5-ab9b-****</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

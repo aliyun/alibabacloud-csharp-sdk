@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateFileUploadLimitRequest : TeaModel {
         /// <summary>
-        /// The QPS limit on the files uploaded from the client. Valid values: 100 to 10000.
+        /// <para>The QPS limit on the files uploaded from the client. Valid values: 100 to 10000.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]

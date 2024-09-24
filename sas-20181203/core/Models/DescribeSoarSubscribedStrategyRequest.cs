@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSoarSubscribedStrategyRequest : TeaModel {
         /// <summary>
-        /// The page number. Pages start from page 1.
+        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

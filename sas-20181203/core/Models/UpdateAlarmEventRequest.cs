@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateAlarmEventRequest : TeaModel {
         /// <summary>
-        /// The IDs of the alert events.
+        /// <para>The IDs of the alert events.</para>
         /// </summary>
         [NameInMap("AlarmEventIdList")]
         [Validation(Required=false)]
         public List<long?> AlarmEventIdList { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform on the alert events. Valid values:
+        /// <para>The operation that you want to perform on the alert events. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>manual_handled</b>: handle the alert events.</description></item>
+        /// <item><description><b>ignore</b>: igore the alert events.</description></item>
+        /// <item><description><b>cancel_ignore</b>: remove the alert events from the whitelist.</description></item>
+        /// </list>
         /// 
-        /// *   **manual_handled**: handle the alert events.
-        /// *   **ignore**: igore the alert events.
-        /// *   **cancel_ignore**: remove the alert events from the whitelist.
+        /// <b>Example:</b>
+        /// <para>ignore</para>
         /// </summary>
         [NameInMap("OperationCode")]
         [Validation(Required=false)]

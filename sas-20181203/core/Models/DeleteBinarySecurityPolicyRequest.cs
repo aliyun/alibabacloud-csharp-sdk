@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteBinarySecurityPolicyRequest : TeaModel {
         /// <summary>
-        /// The name of the binary security policy.
+        /// <para>The name of the binary security policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>policy-auto-bfu7pm</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>42.120.XXX.XXX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

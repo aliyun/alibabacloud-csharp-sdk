@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListK8sAccessInfoRequest : TeaModel {
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AliyunYundunGatewayApiName")]
         [Validation(Required=false)]
         public string AliyunYundunGatewayApiName { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AliyunYundunGatewayPopName")]
         [Validation(Required=false)]
         public string AliyunYundunGatewayPopName { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AliyunYundunGatewayProjectName")]
         [Validation(Required=false)]
         public string AliyunYundunGatewayProjectName { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateFileProtectRemarkRequest : TeaModel {
         /// <summary>
-        /// The ID of the event.
+        /// <para>The ID of the event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1764</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The remarks.
+        /// <para>The remarks.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

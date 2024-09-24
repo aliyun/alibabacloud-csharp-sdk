@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWarningExportInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the export task.
+        /// <para>The ID of the export task.</para>
+        /// <remarks>
+        /// <para> You can can call the <a href="~~ExportWarning~~">ExportWarning</a> operation to query the IDs of export tasks.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>14356</para>
         /// </summary>
         [NameInMap("ExportId")]
         [Validation(Required=false)]

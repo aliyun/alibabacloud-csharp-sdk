@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public List<GetModuleConfigStatusResponseBodyDataModuleConfigResults> ModuleConfigResults { get; set; }
             public class GetModuleConfigStatusResponseBodyDataModuleConfigResults : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Ransom</para>
+                /// </summary>
                 [NameInMap("ModuleName")]
                 [Validation(Required=false)]
                 public string ModuleName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("Pass")]
                 [Validation(Required=false)]
                 public bool? Pass { get; set; }
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>843E4805-****-7EE12FA8DBFD</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupFilesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the backup files returned.
+        /// <para>An array that consists of the backup files returned.</para>
         /// </summary>
         [NameInMap("BackupFiles")]
         [Validation(Required=false)]
         public List<DescribeBackupFilesResponseBodyBackupFiles> BackupFiles { get; set; }
         public class DescribeBackupFilesResponseBodyBackupFiles : TeaModel {
             /// <summary>
-            /// The name of the anti-ransomware policy.
+            /// <para>The name of the anti-ransomware policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Group 1</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The size of the backup file. Unit: bytes.
+            /// <para>The size of the backup file. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
 
             /// <summary>
-            /// The path to the subdirectory of the backup file.
+            /// <para>The path to the subdirectory of the backup file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Python27\</para>
             /// </summary>
             [NameInMap("Subtree")]
             [Validation(Required=false)]
             public string Subtree { get; set; }
 
             /// <summary>
-            /// The type of the protected file. Valid values:
+            /// <para>The type of the protected file. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>file</b>: files</description></item>
+            /// <item><description><b>dir</b>: folders</description></item>
+            /// </list>
             /// 
-            /// *   **file**: files
-            /// *   **dir**: folders
+            /// <b>Example:</b>
+            /// <para>dir</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -50,35 +63,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeBackupFilesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeBackupFilesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of backup files returned on the current page.
+            /// <para>The number of backup files returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: **10**.
+            /// <para>The number of entries returned per page. Default value: <b>10</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of backup files returned.
+            /// <para>The total number of backup files returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>69</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -87,7 +112,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00A60A6D-33E0-5D5A-9B7C-E5D4DCA88148</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

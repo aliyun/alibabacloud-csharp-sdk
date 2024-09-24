@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateSuspiciousOverallConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C286491D-4A2F-589A-B63B-D2AD3DA9BD71</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

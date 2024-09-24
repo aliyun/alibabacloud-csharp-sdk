@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListRdDefaultSyncListResponseBody : TeaModel {
         /// <summary>
-        /// The data returned if the call is successful.
+        /// <para>The data returned if the call is successful.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListRdDefaultSyncListResponseBodyData Data { get; set; }
         public class ListRdDefaultSyncListResponseBodyData : TeaModel {
             /// <summary>
-            /// The IDs of the folders in the resource directory.
+            /// <para>The IDs of the folders in the resource directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fd-BwoXuf****,fd-CFamY7****</para>
             /// </summary>
             [NameInMap("FolderIds")]
             [Validation(Required=false)]
@@ -26,7 +29,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

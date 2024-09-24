@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListPluginForUuidShrinkRequest : TeaModel {
         /// <summary>
-        /// The plug-in types.
+        /// <para>The plug-in types.</para>
         /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]
         public string TypesShrink { get; set; }
 
         /// <summary>
-        /// The UUID of the server.
+        /// <para>The UUID of the server.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>bdb7071f-129d-4ceb-af80-4cf70c4571c6</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

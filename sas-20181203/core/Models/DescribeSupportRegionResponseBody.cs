@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSupportRegionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2C0699D3-4107-5A46-A4C4-E129A5967788</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

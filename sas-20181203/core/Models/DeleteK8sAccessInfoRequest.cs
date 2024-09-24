@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteK8sAccessInfoRequest : TeaModel {
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AliyunYundunGatewayApiName")]
         [Validation(Required=false)]
         public string AliyunYundunGatewayApiName { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AliyunYundunGatewayPopName")]
         [Validation(Required=false)]
         public string AliyunYundunGatewayPopName { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AliyunYundunGatewayProjectName")]
         [Validation(Required=false)]
         public string AliyunYundunGatewayProjectName { get; set; }
 
         /// <summary>
-        /// The ID generated when Kubernetes is connected. You can call the GenerateK8sAccessInfo operation to query the ID.
+        /// <para>The ID generated when Kubernetes is connected. You can call the GenerateK8sAccessInfo operation to query the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -10,27 +10,39 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAppNetworkRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster to which the container belongs.
+        /// <para>The ID of the cluster to which the container belongs.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+        /// <b>Example:</b>
+        /// <para>cf77xxx</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The end timestamp of the query. Unit: milliseconds.
+        /// <para>The end timestamp of the query. Unit: milliseconds.</para>
+        /// <remarks>
+        /// <para>The days between the start timestamp and the end timestamp cannot exceed <b>seven</b> days.</para>
+        /// </remarks>
         /// 
-        /// > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
+        /// <b>Example:</b>
+        /// <para>1650470399999</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The start timestamp of the query. Unit: milliseconds.
+        /// <para>The start timestamp of the query. Unit: milliseconds.</para>
+        /// <remarks>
+        /// <para>The days between the start timestamp and the end timestamp cannot exceed <b>seven</b> days.</para>
+        /// </remarks>
         /// 
-        /// > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
+        /// <b>Example:</b>
+        /// <para>1649260800000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

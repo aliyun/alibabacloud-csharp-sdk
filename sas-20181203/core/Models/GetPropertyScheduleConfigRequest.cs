@@ -10,26 +10,34 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetPropertyScheduleConfigRequest : TeaModel {
         /// <summary>
-        /// The type of the asset fingerprints. Valid values:
+        /// <para>The type of the asset fingerprints. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>scheduler_port_period</b>: listening port</description></item>
+        /// <item><description><b>scheduler_process_period</b>: running process</description></item>
+        /// <item><description><b>scheduler_account_period</b>: account</description></item>
+        /// <item><description><b>scheduler_software_period</b>: software</description></item>
+        /// <item><description><b>scheduler_cron_period</b>: scheduled task</description></item>
+        /// <item><description><b>scheduler_sca_period</b>: middleware</description></item>
+        /// <item><description><b>scheduler_autorun_period</b>: startup item</description></item>
+        /// <item><description><b>scheduler_lkm_period</b>: kernel module</description></item>
+        /// <item><description><b>scheduler_sca_proxy_period</b>: website</description></item>
+        /// </list>
         /// 
-        /// *   **scheduler_port_period**: listening port
-        /// *   **scheduler_process_period**: running process
-        /// *   **scheduler_account_period**: account
-        /// *   **scheduler_software_period**: software
-        /// *   **scheduler_cron_period**: scheduled task
-        /// *   **scheduler_sca_period**: middleware
-        /// *   **scheduler_autorun_period**: startup item
-        /// *   **scheduler_lkm_period**: kernel module
-        /// *   **scheduler_sca_proxy_period**: website
+        /// <b>Example:</b>
+        /// <para>scheduler_sca_period</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The UUID of the server.
+        /// <para>The UUID of the server.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// <b>Example:</b>
+        /// <para>50d213b4-3a35-427a-b8a5-04b0c7e1****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

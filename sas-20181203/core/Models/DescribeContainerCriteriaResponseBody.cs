@@ -10,53 +10,65 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerCriteriaResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of information about the filter condition.
+        /// <para>An array that consists of information about the filter condition.</para>
         /// </summary>
         [NameInMap("CriteriaList")]
         [Validation(Required=false)]
         public List<DescribeContainerCriteriaResponseBodyCriteriaList> CriteriaList { get; set; }
         public class DescribeContainerCriteriaResponseBodyCriteriaList : TeaModel {
             /// <summary>
-            /// The name of the search condition. Valid values:
+            /// <para>The name of the search condition. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>instanceId</b>: the ID of the container instance.</description></item>
+            /// <item><description><b>clusterId</b>: the cluster ID.</description></item>
+            /// <item><description><b>regionId</b>: the ID of the region in which the container resides.</description></item>
+            /// <item><description><b>clusterName</b>: the name of the cluster.</description></item>
+            /// <item><description><b>image</b>: the name of the image.</description></item>
+            /// <item><description><b>imageRepoName</b>: the name of the image repository.</description></item>
+            /// <item><description><b>imageRepoNamespace</b>: the namespace of the image repository.</description></item>
+            /// <item><description><b>imageRepoTag</b>: the tag of the image repository.</description></item>
+            /// <item><description><b>imageDigest</b>: the image digest.</description></item>
+            /// <item><description><b>ClusterType</b>: the type of the cluster.</description></item>
+            /// <item><description><b>hostIp</b>: the public IP address.</description></item>
+            /// <item><description><b>pod</b>: the pod.</description></item>
+            /// <item><description><b>podIp</b>: the IP address of the pod.</description></item>
+            /// <item><description><b>containerId</b>: the container ID.</description></item>
+            /// <item><description><b>vulStatus</b>: indicates whether vulnerabilities exist in the container.</description></item>
+            /// <item><description><b>alarmStatus</b>: indicates whether alerts are generated for the container.</description></item>
+            /// <item><description><b>riskStatus</b>: indicates whether risks exist in the container.</description></item>
+            /// <item><description><b>riskLevel</b>: the risk level of the container.</description></item>
+            /// <item><description><b>containerScope</b>: the type of the container.</description></item>
+            /// </list>
             /// 
-            /// *   **instanceId**: the ID of the container instance.
-            /// *   **clusterId**: the cluster ID.
-            /// *   **regionId**: the ID of the region in which the container resides.
-            /// *   **clusterName**: the name of the cluster.
-            /// *   **image**: the name of the image.
-            /// *   **imageRepoName**: the name of the image repository.
-            /// *   **imageRepoNamespace**: the namespace of the image repository.
-            /// *   **imageRepoTag**: the tag of the image repository.
-            /// *   **imageDigest**: the image digest.
-            /// *   **ClusterType**: the type of the cluster.
-            /// *   **hostIp**: the public IP address.
-            /// *   **pod**: the pod.
-            /// *   **podIp**: the IP address of the pod.
-            /// *   **containerId**: the container ID.
-            /// *   **vulStatus**: indicates whether vulnerabilities exist in the container.
-            /// *   **alarmStatus**: indicates whether alerts are generated for the container.
-            /// *   **riskStatus**: indicates whether risks exist in the container.
-            /// *   **riskLevel**: the risk level of the container.
-            /// *   **containerScope**: the type of the container.
+            /// <b>Example:</b>
+            /// <para>clusterId</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The type of the search condition. Valid values:
+            /// <para>The type of the search condition. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>input</b>: The search condition needs to be specified.</description></item>
+            /// <item><description><b>select</b>: The search condition is an option that can be selected from the drop-down list.</description></item>
+            /// </list>
             /// 
-            /// *   **input**: The search condition needs to be specified.
-            /// *   **select**: The search condition is an option that can be selected from the drop-down list.
+            /// <b>Example:</b>
+            /// <para>input</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The values of the search condition. This parameter is returned only if the value of **Type** is set to **select**.
+            /// <para>The values of the search condition. This parameter is returned only if the value of <b>Type</b> is set to <b>select</b>.</para>
+            /// <remarks>
+            /// <para>If the value of <b>Type</b> is set to <b>input</b>, the return value of this parameter is empty.</para>
+            /// </remarks>
             /// 
-            /// > If the value of **Type** is set to **input**, the return value of this parameter is empty.
+            /// <b>Example:</b>
+            /// <para>ManagedKubernetes,NotManagedKubernetes,PrivateKubernetes</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -65,7 +77,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

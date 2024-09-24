@@ -10,119 +10,168 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessTaskRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The end timestamp of the task.
+        /// <para>The end timestamp of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1635575219000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The public IP address of the asset that you want to query.
+        /// <para>The public IP address of the asset that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.1.XX.XX</para>
         /// </summary>
         [NameInMap("InternetIp")]
         [Validation(Required=false)]
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// The private IP address of the asset that you want to query.
+        /// <para>The private IP address of the asset that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.26.XX.XX</para>
         /// </summary>
         [NameInMap("IntranetIp")]
         [Validation(Required=false)]
         public string IntranetIp { get; set; }
 
         /// <summary>
-        /// The language type. Valid values:
+        /// <para>The language type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The name of the instance.
+        /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oracle-win-001****</para>
         /// </summary>
         [NameInMap("MachineName")]
         [Validation(Required=false)]
         public string MachineName { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Specifies whether to query main tasks. Valid values:
+        /// <para>Specifies whether to query main tasks. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: queries main tasks.</description></item>
+        /// <item><description><b>false</b>: queries subtasks.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: queries main tasks.
-        /// *   **false**: queries subtasks.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("RootTask")]
         [Validation(Required=false)]
         public bool? RootTask { get; set; }
 
         /// <summary>
-        /// The ID of the main task.
+        /// <para>The ID of the main task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12c27343861610c5db3f7a2573b4****</para>
         /// </summary>
         [NameInMap("RootTaskId")]
         [Validation(Required=false)]
         public string RootTaskId { get; set; }
 
         /// <summary>
-        /// The start timestamp of the task.
+        /// <para>The start timestamp of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1651290987000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// The status of the detection task.
+        /// <para>The status of the detection task.</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: The detection task is in progress.</description></item>
+        /// <item><description><b>2</b>: The detection task is complete.</description></item>
+        /// <item><description><b>3</b>: The detection task fails.</description></item>
+        /// <item><description><b>4</b>: The detection task times out.</description></item>
+        /// </list>
         /// 
-        /// *   **1**: The detection task is in progress.
-        /// *   **2**: The detection task is complete.
-        /// *   **3**: The detection task fails.
-        /// *   **4**: The detection task times out.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
         /// <summary>
-        /// The name of the asset that you want to detect.
+        /// <para>The name of the asset that you want to detect.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>source-test-obj-0****</para>
         /// </summary>
         [NameInMap("TargetName")]
         [Validation(Required=false)]
         public string TargetName { get; set; }
 
         /// <summary>
-        /// The type of the asset that you want to detect. Valid values:
+        /// <para>The type of the asset that you want to detect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: snapshot</description></item>
+        /// <item><description><b>2</b>: image</description></item>
+        /// </list>
         /// 
-        /// *   **1**: snapshot
-        /// *   **2**: image
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]
         public int? TargetType { get; set; }
 
         /// <summary>
-        /// The ID of the main task. If you want to query subtasks of a main task, you must specify this parameter.
+        /// <para>The ID of the main task. If you want to query subtasks of a main task, you must specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d7b2acf8d362742123e4a84e1bf8****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The UUID of the server.
+        /// <para>The UUID of the server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e4af3620-6895-4e2f-a641-a9d8fb53****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

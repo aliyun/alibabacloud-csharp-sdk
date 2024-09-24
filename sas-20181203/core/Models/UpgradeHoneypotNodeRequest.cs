@@ -10,29 +10,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpgradeHoneypotNodeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to allow the honeypot to access the Internet. Valid values:
+        /// <para>Specifies whether to allow the honeypot to access the Internet. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AllowHoneypotAccessInternet")]
         [Validation(Required=false)]
         public bool? AllowHoneypotAccessInternet { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response.
+        /// <para>The language of the content within the request and response.</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the management node that you want to upgrade.
+        /// <para>The ID of the management node that you want to upgrade.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the ID.
+        /// <b>Example:</b>
+        /// <para>a882e590-b87b-45a6-87b9-d0a3e5a0****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

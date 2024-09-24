@@ -10,29 +10,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListHoneypotProbeUuidRequest : TeaModel {
         /// <summary>
-        /// The ID of the management node.
+        /// <para>The ID of the management node.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the ID.
+        /// <b>Example:</b>
+        /// <para>a882e590-b87b-45a6-87b9-d0a3e5a0****</para>
         /// </summary>
         [NameInMap("ControlNodeId")]
         [Validation(Required=false)]
         public string ControlNodeId { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and the response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and the response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The type of the probe. Valid values:
+        /// <para>The type of the probe. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>host_probe</b>: host probe</description></item>
+        /// <item><description><b>vpc_black_hole_probe</b>: virtual private cloud (VPC) probe</description></item>
+        /// </list>
         /// 
-        /// *   **host_probe**: host probe
-        /// *   **vpc_black_hole_probe**: virtual private cloud (VPC) probe
+        /// <b>Example:</b>
+        /// <para>host_probe</para>
         /// </summary>
         [NameInMap("ProbeType")]
         [Validation(Required=false)]

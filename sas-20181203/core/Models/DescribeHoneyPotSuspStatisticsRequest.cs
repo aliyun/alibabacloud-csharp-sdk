@@ -10,40 +10,51 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeHoneyPotSuspStatisticsRequest : TeaModel {
         /// <summary>
-        /// The source of the request. Set the value to **honeypot**.
+        /// <para>The source of the request. Set the value to <b>honeypot</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>honeypot</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese.
-        /// *   **en**: English.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The time range of the data to query. Unit: days.
+        /// <para>The time range of the data to query. Unit: days.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("StatisticsDays")]
         [Validation(Required=false)]
         public int? StatisticsDays { get; set; }
 
         /// <summary>
-        /// The type of the asset to query. Valid values:
+        /// <para>The type of the asset to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>vpcInstanceId</b>: VPC</description></item>
+        /// <item><description><b>uuid</b>: server</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **vpcInstanceId**: VPC
-        /// *   **uuid**: server
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpcInstanceId</para>
         /// </summary>
         [NameInMap("StatisticsKeyType")]
         [Validation(Required=false)]

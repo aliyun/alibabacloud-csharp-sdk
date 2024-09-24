@@ -10,134 +10,184 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClusterPluginInfoResponseBody : TeaModel {
         /// <summary>
-        /// The information about the plug-in.
+        /// <para>The information about the plug-in.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListClusterPluginInfoResponseBodyData> Data { get; set; }
         public class ListClusterPluginInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the cluster.
+            /// <para>The ID of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c8ca91e0907d94efaba7fb0827eb9****</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// <para>The name of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>lmftest</para>
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// The status of the cluster. Valid values:
+            /// <para>The status of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: normal</description></item>
+            /// <item><description>2: abnormal</description></item>
+            /// <item><description>3: offline</description></item>
+            /// </list>
             /// 
-            /// *   1: normal
-            /// *   2: abnormal
-            /// *   3: offline
+            /// <b>Example:</b>
+            /// <para>ABNORMAL</para>
             /// </summary>
             [NameInMap("ClusterStatus")]
             [Validation(Required=false)]
             public string ClusterStatus { get; set; }
 
             /// <summary>
-            /// The plug-ins.
+            /// <para>The plug-ins.</para>
             /// </summary>
             [NameInMap("NodePluginInfoList")]
             [Validation(Required=false)]
             public List<ListClusterPluginInfoResponseBodyDataNodePluginInfoList> NodePluginInfoList { get; set; }
             public class ListClusterPluginInfoResponseBodyDataNodePluginInfoList : TeaModel {
                 /// <summary>
-                /// The error code returned.
+                /// <para>The error code returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>kenerl not support</para>
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// The error message returned.
+                /// <para>The error message returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>kenerl not support</para>
                 /// </summary>
                 [NameInMap("ErrorMsg")]
                 [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
 
                 /// <summary>
-                /// Indicates whether the plug-in is installed. Valid values:
+                /// <para>Indicates whether the plug-in is installed. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Installed")]
                 [Validation(Required=false)]
                 public bool? Installed { get; set; }
 
                 /// <summary>
-                /// The public IP address of the server.
+                /// <para>The public IP address of the server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100.100.XXX.XX</para>
                 /// </summary>
                 [NameInMap("MachineInternetIp")]
                 [Validation(Required=false)]
                 public string MachineInternetIp { get; set; }
 
                 /// <summary>
-                /// The private IP address of the server.
+                /// <para>The private IP address of the server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10.XXX.XXX.XX</para>
                 /// </summary>
                 [NameInMap("MachineIntranetIp")]
                 [Validation(Required=false)]
                 public string MachineIntranetIp { get; set; }
 
                 /// <summary>
-                /// The name of the server.
+                /// <para>The name of the server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>npznas05</para>
                 /// </summary>
                 [NameInMap("MachineName")]
                 [Validation(Required=false)]
                 public string MachineName { get; set; }
 
                 /// <summary>
-                /// The type of the instance. Valid values include:
+                /// <para>The type of the instance. Valid values include:</para>
+                /// <list type="bullet">
+                /// <item><description><b>ecs</b>: Elastic Compute Service (ECS) instance</description></item>
+                /// <item><description><b>slb</b>: Server Load Balancer (SLB) instance</description></item>
+                /// </list>
                 /// 
-                /// *   **ecs**: Elastic Compute Service (ECS) instance
-                /// *   **slb**: Server Load Balancer (SLB) instance
+                /// <b>Example:</b>
+                /// <para>ECS</para>
                 /// </summary>
                 [NameInMap("MachineType")]
                 [Validation(Required=false)]
                 public long? MachineType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the Security Center agent is online. Valid values:
+                /// <para>Indicates whether the Security Center agent is online. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> If the Security Center agent of the server is offline, Security Center does not protect the server.</para>
+                /// </remarks>
                 /// 
-                /// *   **true**
-                /// *   **false**
-                /// 
-                /// >  If the Security Center agent of the server is offline, Security Center does not protect the server.
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Online")]
                 [Validation(Required=false)]
                 public bool? Online { get; set; }
 
                 /// <summary>
-                /// The name of the plug-in.
+                /// <para>The name of the plug-in.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>alihips</para>
                 /// </summary>
                 [NameInMap("PluginName")]
                 [Validation(Required=false)]
                 public string PluginName { get; set; }
 
                 /// <summary>
-                /// The version of the plug-in.
+                /// <para>The version of the plug-in.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.3.1</para>
                 /// </summary>
                 [NameInMap("PluginVersion")]
                 [Validation(Required=false)]
                 public string PluginVersion { get; set; }
 
                 /// <summary>
-                /// The UUID of the server.
+                /// <para>The UUID of the server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>bc563d2b-2a3d-411b-8bbe-d75b8d3c****</para>
                 /// </summary>
                 [NameInMap("Uuid")]
                 [Validation(Required=false)]
                 public string Uuid { get; set; }
 
                 /// <summary>
-                /// The instance ID of the server.
+                /// <para>The instance ID of the server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tpp-cn-2r42njq4y001</para>
                 /// </summary>
                 [NameInMap("instanceId")]
                 [Validation(Required=false)]
@@ -148,7 +198,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0B48AB3C-84FC-424D-A01D-B9270EF46038</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

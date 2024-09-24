@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateImageVulResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>486F2228-438A-544A-A533-433F943C15CD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class RetryAgentlessTaskResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F5CF78A7-30AA-59DB-847F-13EE3AE7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

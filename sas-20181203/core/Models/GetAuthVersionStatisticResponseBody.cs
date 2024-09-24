@@ -10,35 +10,45 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAuthVersionStatisticResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2CA2BDF6-F3BD-51A4-BAAC-30B02F7A3FBB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The statistics about the numbers of assets protected by each edition of Security Center.
+        /// <para>The statistics about the numbers of assets protected by each edition of Security Center.</para>
         /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
         public List<GetAuthVersionStatisticResponseBodyStatistics> Statistics { get; set; }
         public class GetAuthVersionStatisticResponseBodyStatistics : TeaModel {
             /// <summary>
-            /// The edition of Security Center. Valid values:
+            /// <para>The edition of Security Center. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: Basic edition (Unauthorized)</description></item>
+            /// <item><description><b>6</b>: Anti-virus edition</description></item>
+            /// <item><description><b>5</b>: Advanced edition</description></item>
+            /// <item><description><b>3</b>: Enterprise edition</description></item>
+            /// <item><description><b>7</b>: Ultimate edition</description></item>
+            /// <item><description><b>10</b>: Value-added Plan edition</description></item>
+            /// </list>
             /// 
-            /// *   **1**: Basic edition (Unauthorized)
-            /// *   **6**: Anti-virus edition
-            /// *   **5**: Advanced edition
-            /// *   **3**: Enterprise edition
-            /// *   **7**: Ultimate edition
-            /// *   **10**: Value-added Plan edition
+            /// <b>Example:</b>
+            /// <para>6</para>
             /// </summary>
             [NameInMap("AuthVersion")]
             [Validation(Required=false)]
             public int? AuthVersion { get; set; }
 
             /// <summary>
-            /// The number of authorized servers.
+            /// <para>The number of authorized servers.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]

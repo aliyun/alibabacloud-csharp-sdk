@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateOrUpdateAssetGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the server group.
+        /// <para>The ID of the server group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9935302</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E70074C8-DFB4-44C5-96C7-909DD231D68A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

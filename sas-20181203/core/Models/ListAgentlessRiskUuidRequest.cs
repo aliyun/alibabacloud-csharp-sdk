@@ -10,78 +10,110 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessRiskUuidRequest : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The instance ID of the asset.
+        /// <para>The instance ID of the asset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s-bp1g6wxdwps7s9dz****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The instance name of the asset.
+        /// <para>The instance name of the asset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ca_cpm_****</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The public IP address of the asset that you want to query.
+        /// <para>The public IP address of the asset that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.1.XX.XX</para>
         /// </summary>
         [NameInMap("InternetIp")]
         [Validation(Required=false)]
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// The private IP address of the asset that you want to query.
+        /// <para>The private IP address of the asset that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.26.XX.XX</para>
         /// </summary>
         [NameInMap("IntranetIp")]
         [Validation(Required=false)]
         public string IntranetIp { get; set; }
 
         /// <summary>
-        /// The name of the instance.
+        /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oracle-win-001****</para>
         /// </summary>
         [NameInMap("MachineName")]
         [Validation(Required=false)]
         public string MachineName { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Specifies whether risks exist. Valid values:
+        /// <para>Specifies whether risks exist. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Risks exist.</description></item>
+        /// <item><description><b>false</b>: Risks do not exist.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: Risks exist.
-        /// *   **false**: Risks do not exist.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Risk")]
         [Validation(Required=false)]
         public bool? Risk { get; set; }
 
         /// <summary>
-        /// The name of the detection object.
+        /// <para>The name of the detection object.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>source-test-obj-0****</para>
         /// </summary>
         [NameInMap("TargetName")]
         [Validation(Required=false)]
         public string TargetName { get; set; }
 
         /// <summary>
-        /// Specifies the type of the object being inspected. Valid values:
+        /// <para>Specifies the type of the object being inspected. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Host Snapshot.</description></item>
+        /// <item><description><b>2</b>: Host Image.</description></item>
+        /// <item><description><b>3</b>: User Snapshot.</description></item>
+        /// <item><description><b>4</b>: User Image.</description></item>
+        /// </list>
         /// 
-        /// *   **1**: Host Snapshot.
-        /// *   **2**: Host Image.
-        /// *   **3**: User Snapshot.
-        /// *   **4**: User Image.
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]

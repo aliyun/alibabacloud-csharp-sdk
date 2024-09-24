@@ -14,12 +14,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12321</para>
         /// </summary>
         [NameInMap("SecurityEventId")]
         [Validation(Required=false)]
         public long? SecurityEventId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.2.XX.XX</para>
+        /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }

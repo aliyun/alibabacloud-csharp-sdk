@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAccountLabelRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LabelList")]
         [Validation(Required=false)]
         public List<string> LabelList { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

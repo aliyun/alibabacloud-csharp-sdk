@@ -10,32 +10,39 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClientUserDefineRulesRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Rule\<em>\</em>\<em>\</em></para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The types of rules.
+        /// <para>The types of rules.</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

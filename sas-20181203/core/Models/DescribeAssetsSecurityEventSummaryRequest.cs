@@ -10,43 +10,54 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAssetsSecurityEventSummaryRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster to which the container belongs.
+        /// <para>The ID of the cluster to which the container belongs.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+        /// <b>Example:</b>
+        /// <para>cc58f827d893f4d7fb3e34b5d4395****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The key of the condition that is used to query on containers. Valid values:
+        /// <para>The key of the condition that is used to query on containers. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>instanceId</b>: the ID of the container instance</description></item>
+        /// <item><description><b>clusterId</b>: the ID of the cluster</description></item>
+        /// <item><description><b>regionId</b>: the region ID of the container</description></item>
+        /// <item><description><b>clusterName</b>: the name of the cluster</description></item>
+        /// <item><description><b>image</b>: the name of the image</description></item>
+        /// <item><description><b>imageRepoName</b>: the name of the image repository</description></item>
+        /// <item><description><b>imageRepoNamespace</b>: the namespace to which the image repository belongs</description></item>
+        /// <item><description><b>imageRepoTag</b>: the tag that is added to the image repository</description></item>
+        /// <item><description><b>imageDigest</b>: the digest of the image</description></item>
+        /// <item><description><b>ClusterType</b>: the type of the cluster</description></item>
+        /// <item><description><b>hostIp</b>: the public IP address</description></item>
+        /// <item><description><b>pod</b>: the pod</description></item>
+        /// <item><description><b>podIp</b>: the IP address of the pod</description></item>
+        /// <item><description><b>containerId</b>: the ID of the container</description></item>
+        /// <item><description><b>vulStatus</b>: whether vulnerabilities are detected on the container</description></item>
+        /// <item><description><b>alarmStatus</b>: whether alerts are generated for the container</description></item>
+        /// <item><description><b>riskStatus</b>: whether risks are detected on the container</description></item>
+        /// <item><description><b>riskLevel</b>: the risk level of the container</description></item>
+        /// <item><description><b>containerScope</b>: the type of the container</description></item>
+        /// </list>
         /// 
-        /// *   **instanceId**: the ID of the container instance
-        /// *   **clusterId**: the ID of the cluster
-        /// *   **regionId**: the region ID of the container
-        /// *   **clusterName**: the name of the cluster
-        /// *   **image**: the name of the image
-        /// *   **imageRepoName**: the name of the image repository
-        /// *   **imageRepoNamespace**: the namespace to which the image repository belongs
-        /// *   **imageRepoTag**: the tag that is added to the image repository
-        /// *   **imageDigest**: the digest of the image
-        /// *   **ClusterType**: the type of the cluster
-        /// *   **hostIp**: the public IP address
-        /// *   **pod**: the pod
-        /// *   **podIp**: the IP address of the pod
-        /// *   **containerId**: the ID of the container
-        /// *   **vulStatus**: whether vulnerabilities are detected on the container
-        /// *   **alarmStatus**: whether alerts are generated for the container
-        /// *   **riskStatus**: whether risks are detected on the container
-        /// *   **riskLevel**: the risk level of the container
-        /// *   **containerScope**: the type of the container
+        /// <b>Example:</b>
+        /// <para>clusterName</para>
         /// </summary>
         [NameInMap("ContainerFieldName")]
         [Validation(Required=false)]
         public string ContainerFieldName { get; set; }
 
         /// <summary>
-        /// The value of the condition that is used to query on containers.
+        /// <para>The value of the condition that is used to query on containers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>arms-prom-operator</para>
         /// </summary>
         [NameInMap("ContainerFieldValue")]
         [Validation(Required=false)]
@@ -57,7 +68,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>113.108.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

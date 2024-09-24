@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAgentlessTaskCountRequest : TeaModel {
         /// <summary>
-        /// The instance ID of the asset.
+        /// <para>The instance ID of the asset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s-m5edddcwq7d57d******</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
         public string Target { get; set; }
 
         /// <summary>
-        /// Specifies the type of the object being inspected. Valid values:
+        /// <para>Specifies the type of the object being inspected. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>3</b>: User Snapshot.</description></item>
+        /// <item><description><b>4</b>: User Image.</description></item>
+        /// </list>
         /// 
-        /// *   **3**: User Snapshot.
-        /// *   **4**: User Image.
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]

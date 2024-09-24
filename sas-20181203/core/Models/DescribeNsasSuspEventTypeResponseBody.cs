@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeNsasSuspEventTypeResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about the alert type.
+        /// <para>An array that consists of the information about the alert type.</para>
         /// </summary>
         [NameInMap("EventTypes")]
         [Validation(Required=false)]
         public List<DescribeNsasSuspEventTypeResponseBodyEventTypes> EventTypes { get; set; }
         public class DescribeNsasSuspEventTypeResponseBodyEventTypes : TeaModel {
             /// <summary>
-            /// The name of the alert type.
+            /// <para>The name of the alert type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Unusual Logon</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The number of assets for which an alert of the type is generated.
+            /// <para>The number of assets for which an alert of the type is generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>22</para>
             /// </summary>
             [NameInMap("SuspEventCount")]
             [Validation(Required=false)]
             public int? SuspEventCount { get; set; }
 
             /// <summary>
-            /// The alert type.
+            /// <para>The alert type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Unusual Logon</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -40,7 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9FBC6E47-7508-58C9-9E76-528E118CB1CC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

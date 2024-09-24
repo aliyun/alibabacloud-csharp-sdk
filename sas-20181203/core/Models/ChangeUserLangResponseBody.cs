@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ChangeUserLangResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2F5AA940-9EBF-5948-ACE7-3EF0FE54****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

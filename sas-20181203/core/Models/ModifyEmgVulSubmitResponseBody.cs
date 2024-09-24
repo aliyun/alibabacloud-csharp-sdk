@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyEmgVulSubmitResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>52A3AEE6-114A-499D-8990-4BA9B27FE0AA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

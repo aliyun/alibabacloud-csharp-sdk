@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetModuleConfigRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **10**.
+        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

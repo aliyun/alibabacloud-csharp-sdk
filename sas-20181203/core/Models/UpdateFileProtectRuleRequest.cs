@@ -10,75 +10,89 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateFileProtectRuleRequest : TeaModel {
         /// <summary>
-        /// The severity of alerts. Valid values:
+        /// <para>The severity of alerts. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: does not generate alerts</description></item>
+        /// <item><description>1: sends notifications</description></item>
+        /// <item><description>2: suspicious</description></item>
+        /// <item><description>3: high-risk</description></item>
+        /// </list>
         /// 
-        /// *   0: does not generate alerts
-        /// *   1: sends notifications
-        /// *   2: suspicious
-        /// *   3: high-risk
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("AlertLevel")]
         [Validation(Required=false)]
         public int? AlertLevel { get; set; }
 
         /// <summary>
-        /// The operations that you want to perform on the files.
-        /// 
-        /// This parameter is required.
+        /// <para>The operations that you want to perform on the files.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FileOps")]
         [Validation(Required=false)]
         public List<string> FileOps { get; set; }
 
         /// <summary>
-        /// The paths to the monitored files. Wildcard characters are supported.
-        /// 
-        /// This parameter is required.
+        /// <para>The paths to the monitored files. Wildcard characters are supported.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FilePaths")]
         [Validation(Required=false)]
         public List<string> FilePaths { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// <para>The ID of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1062</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The paths to the monitored processes.
-        /// 
-        /// This parameter is required.
+        /// <para>The paths to the monitored processes.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ProcPaths")]
         [Validation(Required=false)]
         public List<string> ProcPaths { get; set; }
 
         /// <summary>
-        /// The handling method of the rule. Valid values:
+        /// <para>The handling method of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>pass: allow</description></item>
+        /// <item><description>alert</description></item>
+        /// </list>
         /// 
-        /// *   pass: allow
-        /// *   alert
+        /// <b>Example:</b>
+        /// <para>pass</para>
         /// </summary>
         [NameInMap("RuleAction")]
         [Validation(Required=false)]
         public string RuleAction { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test-rule-1</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The status of the rule. Valid values:
+        /// <para>The status of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: enabled</description></item>
+        /// </list>
         /// 
-        /// *   **0**: disabled
-        /// *   **1**: enabled
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

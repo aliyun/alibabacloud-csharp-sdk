@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateDynamicDictRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to overwrite existing data. Valid values:
+        /// <para>Specifies whether to overwrite existing data. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Override")]
         [Validation(Required=false)]
         public bool? Override { get; set; }
 
         /// <summary>
-        /// The source IP address.
+        /// <para>The source IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123.103.9.***</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

@@ -10,30 +10,43 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOpaClusterNamespaceListRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster that you want to query.
+        /// <para>The ID of the cluster that you want to query.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+        /// <b>Example:</b>
+        /// <para>ca0faf43e33904ecbb6c695df7906****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sit</para>
         /// </summary>
         [NameInMap("NameSpaceName")]
         [Validation(Required=false)]
         public string NameSpaceName { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: **20**.
+        /// <para>The number of entries per page. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulMetaCountStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// The number of application vulnerabilities.
+        /// <para>The number of application vulnerabilities.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("AppCount")]
         [Validation(Required=false)]
         public int? AppCount { get; set; }
 
         /// <summary>
-        /// The number of Linux software vulnerabilities.
+        /// <para>The number of Linux software vulnerabilities.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("CveCount")]
         [Validation(Required=false)]
         public int? CveCount { get; set; }
 
         /// <summary>
-        /// The number of vulnerabilities that can be defended by the application protection feature.
+        /// <para>The number of vulnerabilities that can be defended by the application protection feature.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("RaspDefendCount")]
         [Validation(Required=false)]
         public int? RaspDefendCount { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>571B2642-BF51-5BDD-906B-D2340DB9****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of Windows system vulnerabilities.
+        /// <para>The number of Windows system vulnerabilities.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("SysCount")]
         [Validation(Required=false)]

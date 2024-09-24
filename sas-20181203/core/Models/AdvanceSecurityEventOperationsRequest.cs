@@ -10,40 +10,46 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AdvanceSecurityEventOperationsRequest : TeaModel {
         /// <summary>
-        /// The alert name.
+        /// <para>The alert name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Execution of malicious script code</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
         public string EventName { get; set; }
 
         /// <summary>
-        /// The alert event type. Valid values:
+        /// <para>The alert event type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Suspicious process</description></item>
+        /// <item><description>Webshell</description></item>
+        /// <item><description>Unusual logon</description></item>
+        /// <item><description>Exception</description></item>
+        /// <item><description>Sensitive file tampering</description></item>
+        /// <item><description>Malicious process (cloud threat detection)</description></item>
+        /// <item><description>Unusual network connection</description></item>
+        /// <item><description>Abnormal account</description></item>
+        /// <item><description>Application intrusion event</description></item>
+        /// <item><description>Cloud threat detection</description></item>
+        /// <item><description>Precision defense</description></item>
+        /// <item><description>Application whitelist</description></item>
+        /// <item><description>Persistent webshell</description></item>
+        /// <item><description>Web application threat detection</description></item>
+        /// <item><description>Malicious script</description></item>
+        /// <item><description>Threat intelligence</description></item>
+        /// <item><description>Malicious network activity</description></item>
+        /// <item><description>Cluster exception</description></item>
+        /// <item><description>Webshell (on-premises threat detection)</description></item>
+        /// <item><description>Vulnerability exploitation</description></item>
+        /// <item><description>Malicious process (on-premises threat detection)</description></item>
+        /// <item><description>Trusted exception</description></item>
+        /// <item><description>Others</description></item>
+        /// </list>
+        /// <para>For more information about alert types, see <a href="https://help.aliyun.com/document_detail/68388.html">Alerts</a>.</para>
         /// 
-        /// *   Suspicious process
-        /// *   Webshell
-        /// *   Unusual logon
-        /// *   Exception
-        /// *   Sensitive file tampering
-        /// *   Malicious process (cloud threat detection)
-        /// *   Unusual network connection
-        /// *   Abnormal account
-        /// *   Application intrusion event
-        /// *   Cloud threat detection
-        /// *   Precision defense
-        /// *   Application whitelist
-        /// *   Persistent webshell
-        /// *   Web application threat detection
-        /// *   Malicious script
-        /// *   Threat intelligence
-        /// *   Malicious network activity
-        /// *   Cluster exception
-        /// *   Webshell (on-premises threat detection)
-        /// *   Vulnerability exploitation
-        /// *   Malicious process (on-premises threat detection)
-        /// *   Trusted exception
-        /// *   Others
-        /// 
-        /// For more information about alert types, see [Alerts](https://help.aliyun.com/document_detail/68388.html).
+        /// <b>Example:</b>
+        /// <para>Malicious script</para>
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
@@ -54,7 +60,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The rule ID.
+        /// <para>The rule ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

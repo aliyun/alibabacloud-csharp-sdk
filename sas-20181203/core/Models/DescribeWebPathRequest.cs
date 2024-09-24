@@ -10,23 +10,33 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWebPathRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The type of the alert configuration. Valid values:
+        /// <para>The type of the alert configuration. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>web_path</b></description></item>
+        /// </list>
         /// 
-        /// *   **web_path**
+        /// <b>Example:</b>
+        /// <para>web_path</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

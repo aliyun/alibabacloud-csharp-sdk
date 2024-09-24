@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListSystemAggregationRulesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details about the aggregation types.
+        /// <para>An array that consists of the details about the aggregation types.</para>
         /// </summary>
         [NameInMap("AggregationList")]
         [Validation(Required=false)]
         public List<ListSystemAggregationRulesResponseBodyAggregationList> AggregationList { get; set; }
         public class ListSystemAggregationRulesResponseBodyAggregationList : TeaModel {
             /// <summary>
-            /// The ID of the aggregation type.
+            /// <para>The ID of the aggregation type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public int? Id { get; set; }
 
             /// <summary>
-            /// The name of the aggregation type.
+            /// <para>The name of the aggregation type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Remote control\<em>\</em>\<em>\</em></para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The number of rules that are of the aggregation type.
+            /// <para>The number of rules that are of the aggregation type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RuleCount")]
             [Validation(Required=false)]
@@ -40,28 +49,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListSystemAggregationRulesResponseBodyPageInfo PageInfo { get; set; }
         public class ListSystemAggregationRulesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -70,7 +88,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6800B790-B10A-5C2F-BEB3-F1D5CE61****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

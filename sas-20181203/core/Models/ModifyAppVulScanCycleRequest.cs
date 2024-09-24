@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAppVulScanCycleRequest : TeaModel {
         /// <summary>
-        /// The scan cycle for application vulnerabilities.
+        /// <para>The scan cycle for application vulnerabilities.</para>
+        /// <list type="bullet">
+        /// <item><description>1week</description></item>
+        /// <item><description>2weeks</description></item>
+        /// <item><description>3days</description></item>
+        /// </list>
         /// 
-        /// *   1week
-        /// *   2weeks
-        /// *   3days
+        /// <b>Example:</b>
+        /// <para>1week</para>
         /// </summary>
         [NameInMap("Cycle")]
         [Validation(Required=false)]

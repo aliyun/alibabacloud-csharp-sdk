@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSoarStrategyParamRequest : TeaModel {
         /// <summary>
-        /// The ID of the policy.
+        /// <para>The ID of the policy.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeSoarStrategies~~">DescribeSoarStrategies</a> operation to obtain the ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeSoarStrategies](~~DescribeSoarStrategies~~) operation to obtain the ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>15553</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

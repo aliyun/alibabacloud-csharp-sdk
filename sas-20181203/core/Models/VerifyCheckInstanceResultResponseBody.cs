@@ -10,24 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class VerifyCheckInstanceResultResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public VerifyCheckInstanceResultResponseBodyData Data { get; set; }
         public class VerifyCheckInstanceResultResponseBodyData : TeaModel {
             /// <summary>
-            /// An array consisting of instances that failed the check.
+            /// <para>An array consisting of instances that failed the check.</para>
             /// </summary>
             [NameInMap("FailInstances")]
             [Validation(Required=false)]
             public List<string> FailInstances { get; set; }
 
             /// <summary>
-            /// The operation code of the task that checks the configurations of cloud services. Valid values:
+            /// <para>The operation code of the task that checks the configurations of cloud services. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Throttling</b></description></item>
+            /// <item><description><b>ActionTrialUnauthorized</b></description></item>
+            /// </list>
             /// 
-            /// *   **Throttling**
-            /// *   **ActionTrialUnauthorized**
+            /// <b>Example:</b>
+            /// <para>ActionTrialUnauthorized</para>
             /// </summary>
             [NameInMap("OperateCode")]
             [Validation(Required=false)]
@@ -36,7 +40,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B869E3A0-1147-539D-9920-47580700****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

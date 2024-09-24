@@ -10,129 +10,160 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAttackAnalysisDataRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to encode the value of the **client_url** field in the query results by using the Base64 algorithm. Valid values:
+        /// <para>Specifies whether to encode the value of the <b>client_url</b> field in the query results by using the Base64 algorithm. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Base64")]
         [Validation(Required=false)]
         public string Base64 { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page **1**.
+        /// <para>The number of the page to return. Pages start from page <b>1</b>.</para>
+        /// <remarks>
+        /// <para> If the Type parameter is set to <b>DETAILS</b>, you must specify the CurrentPage parameter.</para>
+        /// </remarks>
         /// 
-        /// >  If the Type parameter is set to **DETAILS**, you must specify the CurrentPage parameter.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The condition that is used to filter attack events.
+        /// <para>The condition that is used to filter attack events.</para>
+        /// <remarks>
+        /// <para> The following list describes the valid values of crack_type:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>3: brute-force attack on MySQL</para>
+        /// </description></item>
+        /// <item><description><para>4: FTP brute-force attack</para>
+        /// </description></item>
+        /// <item><description><para>5: SSH brute-force attack</para>
+        /// </description></item>
+        /// <item><description><para>6: RDP brute-force attack</para>
+        /// </description></item>
+        /// <item><description><para>9: brute-force attack on Microsoft SQL Server</para>
+        /// </description></item>
+        /// <item><description><para>101: intercepted attack on Java Struts 2</para>
+        /// </description></item>
+        /// <item><description><para>102: intercepted attack on Redis</para>
+        /// </description></item>
+        /// <item><description><para>103: communication with AntSword Webshell</para>
+        /// </description></item>
+        /// <item><description><para>104: communication with China Chopper Webshell</para>
+        /// </description></item>
+        /// <item><description><para>133: communication with XISE Webshell</para>
+        /// </description></item>
+        /// <item><description><para>sqli: SQL injection</para>
+        /// </description></item>
+        /// <item><description><para>codei: code execution</para>
+        /// </description></item>
+        /// <item><description><para>xss: cross-site scripting (XSS)</para>
+        /// </description></item>
+        /// <item><description><para>lfi: local file inclusion</para>
+        /// </description></item>
+        /// <item><description><para>rfi: remote file inclusion</para>
+        /// </description></item>
+        /// <item><description><para>webshell: trojan script</para>
+        /// </description></item>
+        /// <item><description><para>upload: vulnerability upload</para>
+        /// </description></item>
+        /// <item><description><para>path: directory traversal</para>
+        /// </description></item>
+        /// <item><description><para>bypass: unauthorized access</para>
+        /// </description></item>
+        /// <item><description><para>csrf: cross-site request forgery (CSRF)</para>
+        /// </description></item>
+        /// <item><description><para>crlf: carriage return line feed (CRLF)</para>
+        /// </description></item>
+        /// <item><description><para>other: others</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// >  The following list describes the valid values of crack_type:
-        /// 
-        /// *   3: brute-force attack on MySQL
-        /// 
-        /// *   4: FTP brute-force attack
-        /// 
-        /// *   5: SSH brute-force attack
-        /// 
-        /// *   6: RDP brute-force attack
-        /// 
-        /// *   9: brute-force attack on Microsoft SQL Server
-        /// 
-        /// *   101: intercepted attack on Java Struts 2
-        /// 
-        /// *   102: intercepted attack on Redis
-        /// 
-        /// *   103: communication with AntSword Webshell
-        /// 
-        /// *   104: communication with China Chopper Webshell
-        /// 
-        /// *   133: communication with XISE Webshell
-        /// 
-        /// *   sqli: SQL injection
-        /// 
-        /// *   codei: code execution
-        /// 
-        /// *   xss: cross-site scripting (XSS)
-        /// 
-        /// *   lfi: local file inclusion
-        /// 
-        /// *   rfi: remote file inclusion
-        /// 
-        /// *   webshell: trojan script
-        /// 
-        /// *   upload: vulnerability upload
-        /// 
-        /// *   path: directory traversal
-        /// 
-        /// *   bypass: unauthorized access
-        /// 
-        /// *   csrf: cross-site request forgery (CSRF)
-        /// 
-        /// *   crlf: carriage return line feed (CRLF)
-        /// 
-        /// *   other: others
+        /// <b>Example:</b>
+        /// <para>{&quot;crack_type&quot;:&quot;9&quot;}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The timestamp when the attack stops. Unit: seconds.
+        /// <para>The timestamp when the attack stops. Unit: seconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1649040221</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <remarks>
+        /// <para> If the Type parameter is set to <b>DETAILS</b>, you must specify the PageSize parameter.</para>
+        /// </remarks>
         /// 
-        /// >  If the Type parameter is set to **DETAILS**, you must specify the PageSize parameter.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The timestamp at which the attack starts. By default, the statistics of the previous seven days are queried. Unit: seconds.
+        /// <para>The timestamp at which the attack starts. By default, the statistics of the previous seven days are queried. Unit: seconds.</para>
+        /// <remarks>
+        /// <para> The start time that you specify must be within the previous 40 days.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  The start time that you specify must be within the previous 40 days.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1644027670</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// The details of attack analysis. Valid values:
+        /// <para>The details of attack analysis. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>TOTAL</b>: number of attacks</description></item>
+        /// <item><description><b>TREND</b>: attack trend</description></item>
+        /// <item><description><b>PIE_CHART</b>: distribution of attacks by type</description></item>
+        /// <item><description><b>SOURCE_TOP</b>: top 5 attack sources</description></item>
+        /// <item><description><b>CLIENT_TOP</b>: top 5 attacked assets</description></item>
+        /// <item><description><b>DETAILS</b>: attack details</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If the Type parameter is set to <b>DETAILS</b>, you must specify the CurrentPage and PageSize parameters.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **TOTAL**: number of attacks
-        /// *   **TREND**: attack trend
-        /// *   **PIE_CHART**: distribution of attacks by type
-        /// *   **SOURCE_TOP**: top 5 attack sources
-        /// *   **CLIENT_TOP**: top 5 attacked assets
-        /// *   **DETAILS**: attack details
-        /// 
-        /// >  If the Type parameter is set to **DETAILS**, you must specify the CurrentPage and PageSize parameters.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DETAILS</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

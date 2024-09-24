@@ -10,49 +10,53 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetDataTrendResponseBody : TeaModel {
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDataTrendResponseBodyData Data { get; set; }
         public class GetDataTrendResponseBodyData : TeaModel {
             /// <summary>
-            /// The statistical timestamps of the trend data.
+            /// <para>The statistical timestamps of the trend data.</para>
             /// </summary>
             [NameInMap("DateList")]
             [Validation(Required=false)]
             public List<int?> DateList { get; set; }
 
             /// <summary>
-            /// The statistical dates and time for the trend data.
+            /// <para>The statistical dates and time for the trend data.</para>
             /// </summary>
             [NameInMap("DateStrList")]
             [Validation(Required=false)]
             public List<string> DateStrList { get; set; }
 
             /// <summary>
-            /// The returned data.
+            /// <para>The returned data.</para>
             /// </summary>
             [NameInMap("ItemList")]
             [Validation(Required=false)]
             public List<GetDataTrendResponseBodyDataItemList> ItemList { get; set; }
             public class GetDataTrendResponseBodyDataItemList : TeaModel {
                 /// <summary>
-                /// The statistical values of the trend data.
+                /// <para>The statistical values of the trend data.</para>
                 /// </summary>
                 [NameInMap("CountList")]
                 [Validation(Required=false)]
                 public List<long?> CountList { get; set; }
 
                 /// <summary>
-                /// The type of the security data. Valid values:
+                /// <para>The type of the security data. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>HC_NEW</b>: the number of new baseline risks.</description></item>
+                /// <item><description><b>HC_OPERATE</b>: the number of handled baseline risks.</description></item>
+                /// <item><description><b>VUL_NEW</b>: the number of new vulnerabilities.</description></item>
+                /// <item><description><b>VUL_OPERATE</b>: the number of handled vulnerabilities.</description></item>
+                /// <item><description><b>SUSP_NEW</b>: the number of new alerts.</description></item>
+                /// <item><description><b>SUSP_OPERATE</b>: the number of handled alerts.</description></item>
+                /// </list>
                 /// 
-                /// *   **HC_NEW**: the number of new baseline risks.
-                /// *   **HC_OPERATE**: the number of handled baseline risks.
-                /// *   **VUL_NEW**: the number of new vulnerabilities.
-                /// *   **VUL_OPERATE**: the number of handled vulnerabilities.
-                /// *   **SUSP_NEW**: the number of new alerts.
-                /// *   **SUSP_OPERATE**: the number of handled alerts.
+                /// <b>Example:</b>
+                /// <para>HC_NEW</para>
                 /// </summary>
                 [NameInMap("KeyName")]
                 [Validation(Required=false)]
@@ -63,7 +67,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1383B0DB-D5D6-4B0C-9E6B-75939C8E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

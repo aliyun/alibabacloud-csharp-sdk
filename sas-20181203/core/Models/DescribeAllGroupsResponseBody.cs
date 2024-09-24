@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAllGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The total number of server groups.
+        /// <para>The total number of server groups.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// The grouping information about the servers.
+        /// <para>The grouping information about the servers.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public List<DescribeAllGroupsResponseBodyGroups> Groups { get; set; }
         public class DescribeAllGroupsResponseBodyGroups : TeaModel {
             /// <summary>
-            /// The type of the server group. Valid values:
+            /// <para>The type of the server group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: default group</description></item>
+            /// <item><description><b>1</b>: other groups</description></item>
+            /// </list>
             /// 
-            /// *   **0**: default group
-            /// *   **1**: other groups
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("GroupFlag")]
             [Validation(Required=false)]
             public int? GroupFlag { get; set; }
 
             /// <summary>
-            /// The ID of the server group.
+            /// <para>The ID of the server group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8834224</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public int? GroupId { get; set; }
 
             /// <summary>
-            /// The name of the server group.
+            /// <para>The name of the server group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abc</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -50,7 +63,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7E0618A9-D5EF-4220-9471-C42B5E92719F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

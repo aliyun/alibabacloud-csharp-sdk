@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetLogMetaResponseBody : TeaModel {
         /// <summary>
-        /// The data of a data shipping task.
+        /// <para>The data of a data shipping task.</para>
         /// </summary>
         [NameInMap("LogMeta")]
         [Validation(Required=false)]
         public GetLogMetaResponseBodyLogMeta LogMeta { get; set; }
         public class GetLogMetaResponseBodyLogMeta : TeaModel {
             /// <summary>
-            /// The name of the dedicated Logstore in which logs are stored.
+            /// <para>The name of the dedicated Logstore in which logs are stored.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aegis-log-login</para>
             /// </summary>
             [NameInMap("LogStore")]
             [Validation(Required=false)]
             public string LogStore { get; set; }
 
             /// <summary>
-            /// The Simple Log Service project.
+            /// <para>The Simple Log Service project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sas-log</para>
             /// </summary>
             [NameInMap("Project")]
             [Validation(Required=false)]
             public string Project { get; set; }
 
             /// <summary>
-            /// The status of a data shipping task of a log. Valid values:
+            /// <para>The status of a data shipping task of a log. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>enabled</b></description></item>
+            /// <item><description><b>disabled</b></description></item>
+            /// </list>
             /// 
-            /// *   **enabled**
-            /// *   **disabled**
+            /// <b>Example:</b>
+            /// <para>enabled</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -43,7 +53,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3956048F-9D73-5EDB-834B-4827BB48****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

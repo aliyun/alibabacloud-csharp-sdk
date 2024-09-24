@@ -10,35 +10,48 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackUpExportInfoRequest : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The type of archived information. Valid values:
+        /// <para>The type of archived information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>suspiciousExport</b>: alert event</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **suspiciousExport**: alert event
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>suspiciousExport</para>
         /// </summary>
         [NameInMap("ExportType")]
         [Validation(Required=false)]
         public string ExportType { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 20.
+        /// <para>The number of entries per page. Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

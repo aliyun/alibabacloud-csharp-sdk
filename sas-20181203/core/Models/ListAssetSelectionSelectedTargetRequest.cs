@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAssetSelectionSelectedTargetRequest : TeaModel {
         /// <summary>
-        /// The unique ID of the asset.
+        /// <para>The unique ID of the asset.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2e6ab33d-4e00-4581-ac16-0dd1f9ad****</para>
         /// </summary>
         [NameInMap("SelectionKey")]
         [Validation(Required=false)]
         public string SelectionKey { get; set; }
 
         /// <summary>
-        /// The details of queries.
+        /// <para>The details of queries.</para>
         /// </summary>
         [NameInMap("TargetList")]
         [Validation(Required=false)]

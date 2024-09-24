@@ -10,143 +10,186 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyWebLockCreateConfigRequest : TeaModel {
         /// <summary>
-        /// The prevention mode. Valid values:
+        /// <para>The prevention mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>block</b>: Interception Mode</description></item>
+        /// <item><description><b>audit</b>: Alert Mode</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **block**: Interception Mode
-        /// *   **audit**: Alert Mode
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>block</para>
         /// </summary>
         [NameInMap("DefenceMode")]
         [Validation(Required=false)]
         public string DefenceMode { get; set; }
 
         /// <summary>
-        /// The directory that you want to protect.
+        /// <para>The directory that you want to protect.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/home/admin/tomcat</para>
         /// </summary>
         [NameInMap("Dir")]
         [Validation(Required=false)]
         public string Dir { get; set; }
 
         /// <summary>
-        /// The directory for which you want to disable web tamper proofing.
+        /// <para>The directory for which you want to disable web tamper proofing.</para>
+        /// <remarks>
+        /// <para>If you set <b>Mode</b> to <b>blacklist</b>, you must specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// > If you set **Mode** to **blacklist**, you must specify this parameter.
+        /// <b>Example:</b>
+        /// <para>/home/admin/test</para>
         /// </summary>
         [NameInMap("ExclusiveDir")]
         [Validation(Required=false)]
         public string ExclusiveDir { get; set; }
 
         /// <summary>
-        /// The file for which you want to disable web tamper proofing.
+        /// <para>The file for which you want to disable web tamper proofing.</para>
+        /// <remarks>
+        /// <para>If you set <b>Mode</b> to <b>blacklist</b>, you must specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// > If you set **Mode** to **blacklist**, you must specify this parameter.
+        /// <b>Example:</b>
+        /// <para>/home/admin/apache.log</para>
         /// </summary>
         [NameInMap("ExclusiveFile")]
         [Validation(Required=false)]
         public string ExclusiveFile { get; set; }
 
         /// <summary>
-        /// The type of file for which you want to disable web tamper proofing. Separate multiple types with semicolons (;). Valid values:
+        /// <para>The type of file for which you want to disable web tamper proofing. Separate multiple types with semicolons (;). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>php</description></item>
+        /// <item><description>jsp</description></item>
+        /// <item><description>asp</description></item>
+        /// <item><description>aspx</description></item>
+        /// <item><description>js</description></item>
+        /// <item><description>cgi</description></item>
+        /// <item><description>html</description></item>
+        /// <item><description>htm</description></item>
+        /// <item><description>xml</description></item>
+        /// <item><description>shtml</description></item>
+        /// <item><description>shtm</description></item>
+        /// <item><description>jpg</description></item>
+        /// <item><description>gif</description></item>
+        /// <item><description>png</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you set <b>Mode</b> to <b>blacklist</b>, you must specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// *   php
-        /// *   jsp
-        /// *   asp
-        /// *   aspx
-        /// *   js
-        /// *   cgi
-        /// *   html
-        /// *   htm
-        /// *   xml
-        /// *   shtml
-        /// *   shtm
-        /// *   jpg
-        /// *   gif
-        /// *   png
-        /// 
-        /// > If you set **Mode** to **blacklist**, you must specify this parameter.
+        /// <b>Example:</b>
+        /// <para>jpg</para>
         /// </summary>
         [NameInMap("ExclusiveFileType")]
         [Validation(Required=false)]
         public string ExclusiveFileType { get; set; }
 
         /// <summary>
-        /// The file for which you want to enable web tamper proofing.
+        /// <para>The file for which you want to enable web tamper proofing.</para>
+        /// <remarks>
+        /// <para>If you set <b>Mode</b> to <b>whitelist</b>, you must specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// > If you set **Mode** to **whitelist**, you must specify this parameter.
+        /// <b>Example:</b>
+        /// <para>/home/admin/test.log</para>
         /// </summary>
         [NameInMap("InclusiveFile")]
         [Validation(Required=false)]
         public string InclusiveFile { get; set; }
 
         /// <summary>
-        /// The type of file for which you want to enable web tamper proofing. Separate multiple types with semicolons (;). Valid values:
+        /// <para>The type of file for which you want to enable web tamper proofing. Separate multiple types with semicolons (;). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>php</description></item>
+        /// <item><description>jsp</description></item>
+        /// <item><description>asp</description></item>
+        /// <item><description>aspx</description></item>
+        /// <item><description>js</description></item>
+        /// <item><description>cgi</description></item>
+        /// <item><description>html</description></item>
+        /// <item><description>htm</description></item>
+        /// <item><description>xml</description></item>
+        /// <item><description>shtml</description></item>
+        /// <item><description>shtm</description></item>
+        /// <item><description>jpg</description></item>
+        /// <item><description>gif</description></item>
+        /// <item><description>png</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you set <b>Mode</b> to <b>whitelist</b>, you must specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// *   php
-        /// *   jsp
-        /// *   asp
-        /// *   aspx
-        /// *   js
-        /// *   cgi
-        /// *   html
-        /// *   htm
-        /// *   xml
-        /// *   shtml
-        /// *   shtm
-        /// *   jpg
-        /// *   gif
-        /// *   png
-        /// 
-        /// > If you set **Mode** to **whitelist**, you must specify this parameter.
+        /// <b>Example:</b>
+        /// <para>jpg</para>
         /// </summary>
         [NameInMap("InclusiveFileType")]
         [Validation(Required=false)]
         public string InclusiveFileType { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The local path to the backup files of the protected directory.
+        /// <para>The local path to the backup files of the protected directory.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/usr/local/backup</para>
         /// </summary>
         [NameInMap("LocalBackupDir")]
         [Validation(Required=false)]
         public string LocalBackupDir { get; set; }
 
         /// <summary>
-        /// The protection mode of web tamper proofing. Valid values:
+        /// <para>The protection mode of web tamper proofing. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>whitelist</b>: In this mode, web tamper proofing is enabled for the specified directories and file types.</description></item>
+        /// <item><description><b>blacklist</b>: In this mode, web tamper proofing is enabled for the unspecified sub-directories, file types, and files in the protected directories.</description></item>
+        /// </list>
         /// 
-        /// *   **whitelist**: In this mode, web tamper proofing is enabled for the specified directories and file types.
-        /// *   **blacklist**: In this mode, web tamper proofing is enabled for the unspecified sub-directories, file types, and files in the protected directories.
+        /// <b>Example:</b>
+        /// <para>whitelist</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>39.170.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The UUID of the server for which you want to add a directory to protect.
+        /// <para>The UUID of the server for which you want to add a directory to protect.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>inet-12345****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

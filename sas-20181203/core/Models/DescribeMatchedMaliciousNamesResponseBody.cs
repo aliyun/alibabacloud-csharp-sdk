@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeMatchedMaliciousNamesResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries on the current page.
+        /// <para>The number of entries on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeMatchedMaliciousNamesResponseBodyData> Data { get; set; }
         public class DescribeMatchedMaliciousNamesResponseBodyData : TeaModel {
             /// <summary>
-            /// The display name of the malicious image sample type.
+            /// <para>The display name of the malicious image sample type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>displayname</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// The key of the malicious image sample type.
+            /// <para>The key of the malicious image sample type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -40,7 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C7CD1BE6-97A2-5524-A529-B55C63E55D59</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

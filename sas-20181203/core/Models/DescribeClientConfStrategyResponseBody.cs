@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClientConfStrategyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5BD95679-D63A-4151-97D0-188432F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the configurations.
+        /// <para>An array that consists of the configurations.</para>
         /// </summary>
         [NameInMap("TargetList")]
         [Validation(Required=false)]
         public List<DescribeClientConfStrategyResponseBodyTargetList> TargetList { get; set; }
         public class DescribeClientConfStrategyResponseBodyTargetList : TeaModel {
             /// <summary>
-            /// The UUID of the Security Center agent.
+            /// <para>The UUID of the Security Center agent.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2b1753a6-04d9-448e-ad17-7abdf19f****</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

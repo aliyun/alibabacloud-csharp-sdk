@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class RebootMachineResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>151F6EB6-D5F3-417A-AF7B-4D84975DB586</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

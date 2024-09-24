@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUserBaselineAuthorizationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0AF20EB0-EBBC-4B94-9B84-F3BAFAC53EDE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about whether Security Center is authorized to run configuration checks on cloud services.
+        /// <para>The information about whether Security Center is authorized to run configuration checks on cloud services.</para>
         /// </summary>
         [NameInMap("UserBaselineAuthorization")]
         [Validation(Required=false)]
         public DescribeUserBaselineAuthorizationResponseBodyUserBaselineAuthorization UserBaselineAuthorization { get; set; }
         public class DescribeUserBaselineAuthorizationResponseBodyUserBaselineAuthorization : TeaModel {
             /// <summary>
-            /// Indicates whether Security Center is authorized to run configuration checks on cloud services.
+            /// <para>Indicates whether Security Center is authorized to run configuration checks on cloud services.</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: no. Security Center is not authorized to run configuration checks on cloud services.</description></item>
+            /// <item><description><b>1</b>: yes. Security Center is authorized to run configuration checks on cloud services.</description></item>
+            /// </list>
             /// 
-            /// *   **0**: no. Security Center is not authorized to run configuration checks on cloud services.
-            /// *   **1**: yes. Security Center is authorized to run configuration checks on cloud services.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

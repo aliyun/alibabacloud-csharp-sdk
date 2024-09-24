@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainCountResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C286491D-4A2F-589A-B63B-D2AD3DA9BD71</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of root domains.
+        /// <para>The number of root domains.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("RootDomainsCount")]
         [Validation(Required=false)]
         public int? RootDomainsCount { get; set; }
 
         /// <summary>
-        /// The number of subdomains.
+        /// <para>The number of subdomains.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("SubDomainsCount")]
         [Validation(Required=false)]
         public int? SubDomainsCount { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalDomainsCount")]
         [Validation(Required=false)]

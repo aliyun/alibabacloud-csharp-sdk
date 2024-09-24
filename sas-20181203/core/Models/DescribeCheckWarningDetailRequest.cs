@@ -10,53 +10,76 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the check item.
+        /// <para>The ID of the check item.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of the check items.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListCheckItemWarningSummary](~~ListCheckItemWarningSummary~~) operation to query the IDs of the check items.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CheckId")]
         [Validation(Required=false)]
         public string CheckId { get; set; }
 
         /// <summary>
-        /// The ID of the alert that is triggered by the check item.
+        /// <para>The ID of the alert that is triggered by the check item.</para>
+        /// <remarks>
+        /// <para> To query the details of a check item, you must provide the ID of the alert that is triggered by the check item. You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to query the IDs of alerts.</para>
+        /// </remarks>
         /// 
-        /// >  To query the details of a check item, you must provide the ID of the alert that is triggered by the check item. You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of alerts.
+        /// <b>Example:</b>
+        /// <para>98675301</para>
         /// </summary>
         [NameInMap("CheckWarningId")]
         [Validation(Required=false)]
         public long? CheckWarningId { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud account ID of the member in the resource directory.
+        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of Alibaba Cloud accounts.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the IDs of Alibaba Cloud accounts.
+        /// <b>Example:</b>
+        /// <para>1232428423234****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>103.25.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The UUID of the server.
+        /// <para>The UUID of the server.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// <b>Example:</b>
+        /// <para>01aec2da-5b57-4f38-b221-da5a0b2f****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

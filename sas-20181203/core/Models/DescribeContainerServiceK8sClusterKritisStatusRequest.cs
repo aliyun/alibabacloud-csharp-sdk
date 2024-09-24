@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerServiceK8sClusterKritisStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c0e9efc6dea5f41db93b7e977123c****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The source IP address.
+        /// <para>The source IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>119.145.XXX.XXX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

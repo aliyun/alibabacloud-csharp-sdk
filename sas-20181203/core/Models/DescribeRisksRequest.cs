@@ -10,42 +10,60 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeRisksRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return. Default value: 20.
+        /// <para>The maximum number of entries to return. Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud account ID of the member in the resource directory.
+        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// The baseline ID.
+        /// <para>The baseline ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the baseline IDs.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the baseline IDs.
+        /// <b>Example:</b>
+        /// <para>75</para>
         /// </summary>
         [NameInMap("RiskId")]
         [Validation(Required=false)]
         public long? RiskId { get; set; }
 
         /// <summary>
-        /// The name of the baseline.
+        /// <para>The name of the baseline.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>docker</para>
         /// </summary>
         [NameInMap("RiskName")]
         [Validation(Required=false)]

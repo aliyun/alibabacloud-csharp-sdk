@@ -10,26 +10,34 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateVirusScanOnceTaskRequest : TeaModel {
         /// <summary>
-        /// The information about the scan path that is required for a custom scan.
+        /// <para>The information about the scan path that is required for a custom scan.</para>
         /// </summary>
         [NameInMap("ScanPath")]
         [Validation(Required=false)]
         public List<string> ScanPath { get; set; }
 
         /// <summary>
-        /// The type of the virus scan. Valid values:
+        /// <para>The type of the virus scan. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>system</b>: system scan.</description></item>
+        /// <item><description><b>user</b>: custom scan.</description></item>
+        /// </list>
         /// 
-        /// *   **system**: system scan.
-        /// *   **user**: custom scan.
+        /// <b>Example:</b>
+        /// <para>system</para>
         /// </summary>
         [NameInMap("ScanType")]
         [Validation(Required=false)]
         public string ScanType { get; set; }
 
         /// <summary>
-        /// The key that stores the asset information.
+        /// <para>The key that stores the asset information.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain the key value.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [GetAssetSelectionConfig](~~GetAssetSelectionConfig~~) operation to obtain the key value.
+        /// <b>Example:</b>
+        /// <para>845de1ec-4b08-42e1-b564-31321e48xxxx</para>
         /// </summary>
         [NameInMap("SelectionKey")]
         [Validation(Required=false)]

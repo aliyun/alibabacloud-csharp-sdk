@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerServiceK8sClusterNamespacesResponseBody : TeaModel {
         /// <summary>
-        /// The namespaces.
+        /// <para>The namespaces.</para>
         /// </summary>
         [NameInMap("K8sClusterNamespaces")]
         [Validation(Required=false)]
         public List<DescribeContainerServiceK8sClusterNamespacesResponseBodyK8sClusterNamespaces> K8sClusterNamespaces { get; set; }
         public class DescribeContainerServiceK8sClusterNamespacesResponseBodyK8sClusterNamespaces : TeaModel {
             /// <summary>
-            /// The namespace.
+            /// <para>The namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
@@ -26,7 +29,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0C8487EF-50C2-54BB-8634-10F8C35D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

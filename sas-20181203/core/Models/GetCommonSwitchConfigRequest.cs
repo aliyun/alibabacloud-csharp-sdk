@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCommonSwitchConfigRequest : TeaModel {
         /// <summary>
-        /// The type of the common switch.
+        /// <para>The type of the common switch.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> or <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operation to obtain the switch type from the response parameter SwitchId.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) or [ListSystemClientRules](~~ListSystemClientRules~~) operation to obtain the switch type from the response parameter SwitchId.
+        /// <b>Example:</b>
+        /// <para>USER-DEFINE-RULE-SWITCH-TYPE_180****</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

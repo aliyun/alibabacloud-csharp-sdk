@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileProtectEventCountRequest : TeaModel {
         /// <summary>
-        /// The status of the event. Valid values:
+        /// <para>The status of the event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: unhandled</description></item>
+        /// <item><description>1: handled</description></item>
+        /// </list>
         /// 
-        /// *   0: unhandled
-        /// *   1: handled
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

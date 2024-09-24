@@ -10,63 +10,78 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetHoneypotProbeResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+        /// <para>The status code returned. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The information about the probe.
+        /// <para>The information about the probe.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetHoneypotProbeResponseBodyData Data { get; set; }
         public class GetHoneypotProbeResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether address resolution protocol (ARP) is enabled for the check type.
+            /// <para>Indicates whether address resolution protocol (ARP) is enabled for the check type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Arp")]
             [Validation(Required=false)]
             public bool? Arp { get; set; }
 
             /// <summary>
-            /// An array consisting of the IP addresses that can be monitored.
+            /// <para>An array consisting of the IP addresses that can be monitored.</para>
             /// </summary>
             [NameInMap("CanListenIpList")]
             [Validation(Required=false)]
             public List<string> CanListenIpList { get; set; }
 
             /// <summary>
-            /// The CIDR blocks of the probe deployed in a virtual private cloud (VPC).
+            /// <para>The CIDR blocks of the probe deployed in a virtual private cloud (VPC).</para>
             /// </summary>
             [NameInMap("CidrList")]
             [Validation(Required=false)]
             public List<string> CidrList { get; set; }
 
             /// <summary>
-            /// The information about the management node.
+            /// <para>The information about the management node.</para>
             /// </summary>
             [NameInMap("ControlNode")]
             [Validation(Required=false)]
             public GetHoneypotProbeResponseBodyDataControlNode ControlNode { get; set; }
             public class GetHoneypotProbeResponseBodyDataControlNode : TeaModel {
                 /// <summary>
-                /// The instance ID of the management node.
+                /// <para>The instance ID of the management node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-bp19ijepxytwtzrk****</para>
                 /// </summary>
                 [NameInMap("EcsInstanceId")]
                 [Validation(Required=false)]
                 public string EcsInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the management node.
+                /// <para>The ID of the management node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>37a15ff1-3475-4897-aa6c-f7fd9122****</para>
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// The name of the management node.
+                /// <para>The name of the management node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>online-honeypot</para>
                 /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
@@ -75,66 +90,91 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The CPU utilization.
+            /// <para>The CPU utilization.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.51</para>
             /// </summary>
             [NameInMap("CpuLoad")]
             [Validation(Required=false)]
             public double? CpuLoad { get; set; }
 
             /// <summary>
-            /// The time when the probe was deployed.
+            /// <para>The time when the probe was deployed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1669363825000</para>
             /// </summary>
             [NameInMap("DeployTime")]
             [Validation(Required=false)]
             public long? DeployTime { get; set; }
 
             /// <summary>
-            /// The name of the probe.
+            /// <para>The name of the probe.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-probe</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// The ports that the honeypot monitors.
+            /// <para>The ports that the honeypot monitors.</para>
             /// </summary>
             [NameInMap("HoneyPotProbeScanPort")]
             [Validation(Required=false)]
             public GetHoneypotProbeResponseBodyDataHoneyPotProbeScanPort HoneyPotProbeScanPort { get; set; }
             public class GetHoneypotProbeResponseBodyDataHoneyPotProbeScanPort : TeaModel {
                 /// <summary>
-                /// The unique ID of the service that is monitored.
+                /// <para>The unique ID of the service that is monitored.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>15389</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The ports that are monitored.
+                /// <para>The ports that are monitored.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{
+                ///     &quot;tcp&quot;: &quot;1-65535&quot;,
+                ///     &quot;udp&quot;: &quot;1-65535&quot;
+                /// }</para>
                 /// </summary>
                 [NameInMap("Ports")]
                 [Validation(Required=false)]
                 public string Ports { get; set; }
 
                 /// <summary>
-                /// The ID of the probe.
+                /// <para>The ID of the probe.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>a46f5162-c70d-4e26-8ddf-7435feca****</para>
                 /// </summary>
                 [NameInMap("ProbeId")]
                 [Validation(Required=false)]
                 public string ProbeId { get; set; }
 
                 /// <summary>
-                /// The IP addresses that are monitored.
+                /// <para>The IP addresses that are monitored.</para>
                 /// </summary>
                 [NameInMap("ServiceIpList")]
                 [Validation(Required=false)]
                 public List<string> ServiceIpList { get; set; }
 
                 /// <summary>
-                /// The monitoring status. Valid values:
+                /// <para>The monitoring status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: abnormal</description></item>
+                /// <item><description><b>3</b>: normal</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: abnormal
-                /// *   **3**: normal
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -143,94 +183,128 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The honeypots that are bound to the probe.
+            /// <para>The honeypots that are bound to the probe.</para>
             /// </summary>
             [NameInMap("HoneypotProbeBindList")]
             [Validation(Required=false)]
             public List<GetHoneypotProbeResponseBodyDataHoneypotProbeBindList> HoneypotProbeBindList { get; set; }
             public class GetHoneypotProbeResponseBodyDataHoneypotProbeBindList : TeaModel {
                 /// <summary>
-                /// The unique ID of the honeypot that is bound to the probe.
+                /// <para>The unique ID of the honeypot that is bound to the probe.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>45378f64-d7b4-4a53-9c48-4303eb4b****</para>
                 /// </summary>
                 [NameInMap("BindId")]
                 [Validation(Required=false)]
                 public string BindId { get; set; }
 
                 /// <summary>
-                /// The ports that are bound to the probe.
+                /// <para>The ports that are bound to the probe.</para>
                 /// </summary>
                 [NameInMap("BindPortList")]
                 [Validation(Required=false)]
                 public List<GetHoneypotProbeResponseBodyDataHoneypotProbeBindListBindPortList> BindPortList { get; set; }
                 public class GetHoneypotProbeResponseBodyDataHoneypotProbeBindListBindPortList : TeaModel {
                     /// <summary>
-                    /// Indicates whether the port is bound.
+                    /// <para>Indicates whether the port is bound.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
                     /// </summary>
                     [NameInMap("BindPort")]
                     [Validation(Required=false)]
                     public bool? BindPort { get; set; }
 
                     /// <summary>
-                    /// The end port on which the probe monitors.
+                    /// <para>The end port on which the probe monitors.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>80</para>
                     /// </summary>
                     [NameInMap("EndPort")]
                     [Validation(Required=false)]
                     public int? EndPort { get; set; }
 
                     /// <summary>
-                    /// The error that is returned if an error occurred in the port of the honeypot that is bound to the probe.
+                    /// <para>The error that is returned if an error occurred in the port of the honeypot that is bound to the probe.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>portmap failed</para>
                     /// </summary>
                     [NameInMap("Err")]
                     [Validation(Required=false)]
                     public string Err { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the port is a fixed port.
+                    /// <para>Indicates whether the port is a fixed port.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
                     /// </summary>
                     [NameInMap("Fixed")]
                     [Validation(Required=false)]
                     public bool? Fixed { get; set; }
 
                     /// <summary>
-                    /// The unique ID of the port binding record.
+                    /// <para>The unique ID of the port binding record.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2512</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// The error message that is returned if an error occurred in the port of the honeypot that is bound to the probe.
+                    /// <para>The error message that is returned if an error occurred in the port of the honeypot that is bound to the probe.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>listen 22 tcp4 failed</para>
                     /// </summary>
                     [NameInMap("Msg")]
                     [Validation(Required=false)]
                     public string Msg { get; set; }
 
                     /// <summary>
-                    /// The type of the protocol.
+                    /// <para>The type of the protocol.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>tcp</para>
                     /// </summary>
                     [NameInMap("Proto")]
                     [Validation(Required=false)]
                     public string Proto { get; set; }
 
                     /// <summary>
-                    /// The start port on which the probe monitors.
+                    /// <para>The start port on which the probe monitors.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>22</para>
                     /// </summary>
                     [NameInMap("StartPort")]
                     [Validation(Required=false)]
                     public int? StartPort { get; set; }
 
                     /// <summary>
-                    /// The status of the port of the honeypot that is bound to the probe. Valid values:
+                    /// <para>The status of the port of the honeypot that is bound to the probe. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>1</b>: abnormal</description></item>
+                    /// <item><description><b>3</b>: normal</description></item>
+                    /// </list>
                     /// 
-                    /// *   **1**: abnormal
-                    /// *   **3**: normal
+                    /// <b>Example:</b>
+                    /// <para>3</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public int? Status { get; set; }
 
                     /// <summary>
-                    /// The destination port.
+                    /// <para>The destination port.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>80</para>
                     /// </summary>
                     [NameInMap("TargetPort")]
                     [Validation(Required=false)]
@@ -239,24 +313,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// The honeypot ID.
+                /// <para>The honeypot ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>913347774a3b3c378c6a50f66de23dfa097765214ec3f0526b01c67bf59c****</para>
                 /// </summary>
                 [NameInMap("HoneypotId")]
                 [Validation(Required=false)]
                 public string HoneypotId { get; set; }
 
                 /// <summary>
-                /// The IP addresses that are monitored.
+                /// <para>The IP addresses that are monitored.</para>
                 /// </summary>
                 [NameInMap("ServiceIpList")]
                 [Validation(Required=false)]
                 public List<string> ServiceIpList { get; set; }
 
                 /// <summary>
-                /// The status of the honeypot that is bound to the probe. Valid values:
+                /// <para>The status of the honeypot that is bound to the probe. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: abnormal</description></item>
+                /// <item><description><b>3</b>: normal</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: abnormal
-                /// *   **3**: normal
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -265,101 +346,137 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The IP address of the server on which the probe is deployed.
+            /// <para>The IP address of the server on which the probe is deployed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>33.53.XX.XX</para>
             /// </summary>
             [NameInMap("HostIp")]
             [Validation(Required=false)]
             public string HostIp { get; set; }
 
             /// <summary>
-            /// An array consisting of the IP addresses that can be monitored.
+            /// <para>An array consisting of the IP addresses that can be monitored.</para>
             /// </summary>
             [NameInMap("ListenIpList")]
             [Validation(Required=false)]
             public List<string> ListenIpList { get; set; }
 
             /// <summary>
-            /// The memory usage.
+            /// <para>The memory usage.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.94</para>
             /// </summary>
             [NameInMap("MemoryLoad")]
             [Validation(Required=false)]
             public double? MemoryLoad { get; set; }
 
             /// <summary>
-            /// The operating system of the server on which the probe is deployed. Valid values:
+            /// <para>The operating system of the server on which the probe is deployed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>windows</description></item>
+            /// <item><description>linux</description></item>
+            /// </list>
             /// 
-            /// *   windows
-            /// *   linux
+            /// <b>Example:</b>
+            /// <para>windows</para>
             /// </summary>
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
 
             /// <summary>
-            /// Indicates whether ping is enabled for the check type.
+            /// <para>Indicates whether ping is enabled for the check type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Ping")]
             [Validation(Required=false)]
             public bool? Ping { get; set; }
 
             /// <summary>
-            /// The ID of the probe.
+            /// <para>The ID of the probe.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40f6501d-45ec-4bf0-b813-0072ceb4****</para>
             /// </summary>
             [NameInMap("ProbeId")]
             [Validation(Required=false)]
             public string ProbeId { get; set; }
 
             /// <summary>
-            /// The type of the probe. Valid values:
+            /// <para>The type of the probe. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>host_probe</b>: host probe</description></item>
+            /// <item><description><b>vpc_black_hole_probe</b>: virtual private cloud (VPC) probe</description></item>
+            /// </list>
             /// 
-            /// *   **host_probe**: host probe
-            /// *   **vpc_black_hole_probe**: virtual private cloud (VPC) probe
+            /// <b>Example:</b>
+            /// <para>host_probe</para>
             /// </summary>
             [NameInMap("ProbeType")]
             [Validation(Required=false)]
             public string ProbeType { get; set; }
 
             /// <summary>
-            /// The version of the probe.
+            /// <para>The version of the probe.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>18060096</para>
             /// </summary>
             [NameInMap("ProbeVersion")]
             [Validation(Required=false)]
             public string ProbeVersion { get; set; }
 
             /// <summary>
-            /// The IP address of the proxy server.
+            /// <para>The IP address of the proxy server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>47.108.XX.XX</para>
             /// </summary>
             [NameInMap("ProxyIp")]
             [Validation(Required=false)]
             public string ProxyIp { get; set; }
 
             /// <summary>
-            /// The status of the probe. Valid values:
+            /// <para>The status of the probe. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>installed</b>: installed</description></item>
+            /// <item><description><b>install_failed</b>: installation failed</description></item>
+            /// <item><description><b>online</b>: online</description></item>
+            /// <item><description><b>offline</b>: offline</description></item>
+            /// <item><description><b>unnormal</b>: abnormal</description></item>
+            /// <item><description><b>unprobe</b>: unauthorized</description></item>
+            /// <item><description><b>uninstalling</b>: being uninstalled</description></item>
+            /// <item><description><b>uninstalled</b>: uninstalled</description></item>
+            /// <item><description><b>uninstall_failed</b>: uninstallation failed</description></item>
+            /// <item><description><b>not_exist</b>: not installed</description></item>
+            /// </list>
             /// 
-            /// *   **installed**: installed
-            /// *   **install_failed**: installation failed
-            /// *   **online**: online
-            /// *   **offline**: offline
-            /// *   **unnormal**: abnormal
-            /// *   **unprobe**: unauthorized
-            /// *   **uninstalling**: being uninstalled
-            /// *   **uninstalled**: uninstalled
-            /// *   **uninstall_failed**: uninstallation failed
-            /// *   **not_exist**: not installed
+            /// <b>Example:</b>
+            /// <para>online</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The UUID of the asset on which the host probe is deployed.
+            /// <para>The UUID of the asset on which the host probe is deployed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6690a46c-0edb-4663-a641-3629d1a9****</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
             public string Uuid { get; set; }
 
             /// <summary>
-            /// The ID of the VPC in which the probe is deployed.
+            /// <para>The ID of the VPC in which the probe is deployed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-2vchkxmf2j9yjt3x2****</para>
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -368,31 +485,44 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6550E0E6-FD6C-5F39-AB5E-35B30DCA97B5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

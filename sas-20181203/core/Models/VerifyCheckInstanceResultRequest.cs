@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class VerifyCheckInstanceResultRequest : TeaModel {
         /// <summary>
-        /// The ID of the check item.
+        /// <para>The ID of the check item.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [ListCheckResult](~~ListCheckResult~~) operation to query the IDs of check items.
+        /// <b>Example:</b>
+        /// <para>16</para>
         /// </summary>
         [NameInMap("CheckId")]
         [Validation(Required=false)]
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// The instance IDs of the assets on which risks are detected based on the check item.
+        /// <para>The instance IDs of the assets on which risks are detected based on the check item.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

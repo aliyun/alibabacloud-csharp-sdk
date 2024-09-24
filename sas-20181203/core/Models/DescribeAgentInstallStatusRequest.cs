@@ -10,28 +10,38 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAgentInstallStatusRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid value:
+        /// <para>The language of the content within the request and response. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>59.46.XXX.XXX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The UUIDs of servers. Separate multiple UUIDs with commas (,).
+        /// <para>The UUIDs of servers. Separate multiple UUIDs with commas (,).</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>inet-eae014a7-16c4-4d4e-9f03-5208f4dc****,inet-eae047da-1e5a-41ce-828d-47606e9b****</para>
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

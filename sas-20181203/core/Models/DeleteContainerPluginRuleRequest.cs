@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteContainerPluginRuleRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and the response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and the response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the rule. You can call the addContainerWebDefenseRule operation to query the ID.
+        /// <para>The ID of the rule. You can call the addContainerWebDefenseRule operation to query the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>200022</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

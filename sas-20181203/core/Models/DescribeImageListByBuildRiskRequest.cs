@@ -10,55 +10,77 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageListByBuildRiskRequest : TeaModel {
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <remarks>
+        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// >  We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The key of the risk. You can call the [DescribeImageBuildRiskList](~~~~) operation to obtain the value of RiskKey.
+        /// <para>The key of the risk. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the value of RiskKey.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>no_user</para>
         /// </summary>
         [NameInMap("RiskKey")]
         [Validation(Required=false)]
         public string RiskKey { get; set; }
 
         /// <summary>
-        /// The risk level. Valid values:
+        /// <para>The risk level. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>high</b></description></item>
+        /// <item><description><b>medium</b></description></item>
+        /// <item><description><b>low</b></description></item>
+        /// </list>
         /// 
-        /// *   **high**
-        /// *   **medium**
-        /// *   **low**
+        /// <b>Example:</b>
+        /// <para>medium</para>
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// The status of the alert event. Valid values:
+        /// <para>The status of the alert event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: unhandled.</description></item>
+        /// <item><description><b>1</b>: ignored.</description></item>
+        /// <item><description><b>2</b>: false positive.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: unhandled.
-        /// *   **1**: ignored.
-        /// *   **2**: false positive.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

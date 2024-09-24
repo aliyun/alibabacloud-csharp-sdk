@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UnMarkMonitorAccountsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the members.
+        /// <para>The IDs of the members.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>125267953644XXXX,125807832682XXXX</para>
         /// </summary>
         [NameInMap("AccountIds")]
         [Validation(Required=false)]

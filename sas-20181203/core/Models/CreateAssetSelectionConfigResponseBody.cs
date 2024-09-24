@@ -10,35 +10,46 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateAssetSelectionConfigResponseBody : TeaModel {
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateAssetSelectionConfigResponseBodyData Data { get; set; }
         public class CreateAssetSelectionConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// The business type that is selected for the asset. Valid values:
+            /// <para>The business type that is selected for the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>VIRUS_SCAN_CYCLE_CONFIG</b>: virus detection configuration</description></item>
+            /// <item><description><b>VIRUS_SCAN_ONCE_TASK</b>: one-time scan for virus detection</description></item>
+            /// </list>
             /// 
-            /// *   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection configuration
-            /// *   **VIRUS_SCAN_ONCE_TASK**: one-time scan for virus detection
+            /// <b>Example:</b>
+            /// <para>VIRUS_SCAN_CYCLE_CONFIG</para>
             /// </summary>
             [NameInMap("BusinessType")]
             [Validation(Required=false)]
             public string BusinessType { get; set; }
 
             /// <summary>
-            /// The ID of the current asset selection. It can be used to query and modify the asset that is selected.
+            /// <para>The ID of the current asset selection. It can be used to query and modify the asset that is selected.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>53e93435-d694-4c03-9ce7-da12bee1****</para>
             /// </summary>
             [NameInMap("SelectionKey")]
             [Validation(Required=false)]
             public long? SelectionKey { get; set; }
 
             /// <summary>
-            /// The dimension based on which the asset is selected. Valid values:
+            /// <para>The dimension based on which the asset is selected. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>group</b>: The asset is selected by server.</description></item>
+            /// <item><description><b>group</b>: The asset is selected by group.</description></item>
+            /// <item><description><b>vpc</b>: The asset is selected by VPC.</description></item>
+            /// </list>
             /// 
-            /// *   **group**: The asset is selected by server.
-            /// *   **group**: The asset is selected by group.
-            /// *   **vpc**: The asset is selected by VPC.
+            /// <b>Example:</b>
+            /// <para>group</para>
             /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]
@@ -47,7 +58,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A3D7C47D-3F11-57BB-90E8-E5C20C619F37</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

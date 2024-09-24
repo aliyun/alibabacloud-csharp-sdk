@@ -10,57 +10,76 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAlarmEventStackInfoRequest : TeaModel {
         /// <summary>
-        /// The name of the event.
+        /// <para>The name of the event.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the names of events.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the names of events.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Mining program</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
         public string EventName { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese.
-        /// *   **en**: English.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud account ID of the member in the resource directory.
+        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The ID of the alert event.
+        /// <para>The ID of the alert event.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1fbe8d16727f61d1478a674d6fa0****</para>
         /// </summary>
         [NameInMap("UniqueInfo")]
         [Validation(Required=false)]
         public string UniqueInfo { get; set; }
 
         /// <summary>
-        /// The UUID of the server to query.
+        /// <para>The UUID of the server to query.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the UUIDs of servers.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the UUIDs of servers.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>18b7336e-d469-473b-af83-8e5420f9****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

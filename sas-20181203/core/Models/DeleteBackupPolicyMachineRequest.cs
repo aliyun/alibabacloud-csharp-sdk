@@ -10,43 +10,55 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteBackupPolicyMachineRequest : TeaModel {
         /// <summary>
-        /// The ID of the anti-ransomware policy.
+        /// <para>The ID of the anti-ransomware policy.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>11</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public long? PolicyId { get; set; }
 
         /// <summary>
-        /// The version of the anti-ransomware policy. Valid values:
+        /// <para>The version of the anti-ransomware policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1.0.0</b></description></item>
+        /// <item><description><b>2.0.0</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1.0.0**
-        /// *   **2.0.0**
-        /// 
-        /// >  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2.0.0</para>
         /// </summary>
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]
         public string PolicyVersion { get; set; }
 
         /// <summary>
-        /// The UUID of the server to which the anti-ransomware policy is applied.
+        /// <para>The UUID of the server to which the anti-ransomware policy is applied.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of the <c>UuidList</c> and <c>Uuid</c> parameters.</para>
+        /// </remarks>
         /// 
-        /// > You must specify at least one of the `UuidList` and `Uuid` parameters.
+        /// <b>Example:</b>
+        /// <para>083036e9-8411-4a9d-83af-9acbd****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }
 
         /// <summary>
-        /// The UUIDs of the servers to which the anti-ransomware policy is applied.
-        /// 
-        /// > You must specify at least one of the `UuidList` and `Uuid` parameters.
+        /// <para>The UUIDs of the servers to which the anti-ransomware policy is applied.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of the <c>UuidList</c> and <c>Uuid</c> parameters.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

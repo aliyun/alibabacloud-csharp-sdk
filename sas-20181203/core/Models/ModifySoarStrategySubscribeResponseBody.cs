@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifySoarStrategySubscribeResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8BF56229-7FF5-51ED-B958-00B8573E77CD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

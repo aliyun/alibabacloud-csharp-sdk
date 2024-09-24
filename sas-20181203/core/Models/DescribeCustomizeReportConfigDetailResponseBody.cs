@@ -10,180 +10,253 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCustomizeReportConfigDetailResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the chart that is included in the report. Multiple IDs are separated by commas (,).
+        /// <para>The ID of the chart that is included in the report. Multiple IDs are separated by commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BIZ_STAT_QUERY_KEY_ATTACK,CUSTOM_VUL_CVE_LIST,CUSTOM_VUL_SYS_LIST,CUSTOM_VUL_WEBCMS_LIST,CUSTOM_AUTO_BREAKING_PIE,CUSTOM_AK_LEAK_LIST,KEY_HP_TAMPERPROOF,KEY_HP_DEFENCE</para>
         /// </summary>
         [NameInMap("ChartIds")]
         [Validation(Required=false)]
         public string ChartIds { get; set; }
 
         /// <summary>
-        /// The grouping type. Valid values:
+        /// <para>The grouping type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ALIYUN_RG</b></description></item>
+        /// <item><description><b>SAS_GROUP</b></description></item>
+        /// </list>
         /// 
-        /// *   **ALIYUN_RG**
-        /// *   **SAS_GROUP**
+        /// <b>Example:</b>
+        /// <para>SAS_GROUP</para>
         /// </summary>
         [NameInMap("GroupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
         /// <summary>
-        /// Indicates whether the report is the default report. Valid values:
+        /// <para>Indicates whether the report is the default report. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: no.</description></item>
+        /// <item><description><b>1</b>: yes.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: no.
-        /// *   **1**: yes.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
         public int? IsDefault { get; set; }
 
         /// <summary>
-        /// The time when the report is pinned.
+        /// <para>The time when the report is pinned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1717430400000</para>
         /// </summary>
         [NameInMap("PinnedTime")]
         [Validation(Required=false)]
         public long? PinnedTime { get; set; }
 
         /// <summary>
-        /// The email address of the recipient. Multiple email addresses are separated by commas (,).
+        /// <para>The email address of the recipient. Multiple email addresses are separated by commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:PengZheng@eaton.com">PengZheng@eaton.com</a>,<a href="mailto:ZhongJi@Eaton.com">ZhongJi@Eaton.com</a></para>
         /// </summary>
         [NameInMap("Recipients")]
         [Validation(Required=false)]
         public string Recipients { get; set; }
 
         /// <summary>
-        /// The most recent days for report statistics.
+        /// <para>The most recent days for report statistics.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("ReportDays")]
         [Validation(Required=false)]
         public int? ReportDays { get; set; }
 
         /// <summary>
-        /// The end date on which the report is sent.
+        /// <para>The end date on which the report is sent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1720022399999</para>
         /// </summary>
         [NameInMap("ReportEndDate")]
         [Validation(Required=false)]
         public string ReportEndDate { get; set; }
 
         /// <summary>
-        /// The ID of the report.
+        /// <para>The ID of the report.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>663434</para>
         /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]
         public long? ReportId { get; set; }
 
         /// <summary>
-        /// The language of the report. Default value: **zh**. Valid values:
+        /// <para>The language of the report. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("ReportLang")]
         [Validation(Required=false)]
         public string ReportLang { get; set; }
 
         /// <summary>
-        /// The time range in which the report is sent. Valid values:
+        /// <para>The time range in which the report is sent. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: 00:00 to 06:00.</description></item>
+        /// <item><description><b>2</b>: 06:00 to 12:00.</description></item>
+        /// <item><description><b>3</b>: 12:00 to 18:00.</description></item>
+        /// <item><description><b>4</b>: 18:00 to 24:00.</description></item>
+        /// </list>
         /// 
-        /// *   **1**: 00:00 to 06:00.
-        /// *   **2**: 06:00 to 12:00.
-        /// *   **3**: 12:00 to 18:00.
-        /// *   **4**: 18:00 to 24:00.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("ReportSendType")]
         [Validation(Required=false)]
         public string ReportSendType { get; set; }
 
         /// <summary>
-        /// The start date on which the report is sent.
+        /// <para>The start date on which the report is sent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1717430400000</para>
         /// </summary>
         [NameInMap("ReportStartDate")]
         [Validation(Required=false)]
         public string ReportStartDate { get; set; }
 
         /// <summary>
-        /// The status of the report. Valid values:
+        /// <para>The status of the report. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: disabled.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: disabled.
-        /// *   **1**: enabled.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ReportStatus")]
         [Validation(Required=false)]
         public string ReportStatus { get; set; }
 
         /// <summary>
-        /// The type of the report. Valid values:
+        /// <para>The type of the report. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: daily report.</description></item>
+        /// <item><description><b>1</b>: weekly report.</description></item>
+        /// <item><description><b>2</b>: monthly report.</description></item>
+        /// <item><description><b>3</b>: report whose statistics are collected in a custom time range.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: daily report.
-        /// *   **1**: weekly report.
-        /// *   **2**: monthly report.
-        /// *   **3**: report whose statistics are collected in a custom time range.
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ReportType")]
         [Validation(Required=false)]
         public string ReportType { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>379a9b8f-107b-4630-9e95-2299a1ea****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The end time at which the report is sent. The value is in the HH:mm:ss format.
+        /// <para>The end time at which the report is sent. The value is in the HH:mm:ss format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10:00:00</para>
         /// </summary>
         [NameInMap("SendEndTime")]
         [Validation(Required=false)]
         public string SendEndTime { get; set; }
 
         /// <summary>
-        /// The exact day within the sending period.
+        /// <para>The exact day within the sending period.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("SendPeriodDays")]
         [Validation(Required=false)]
         public int? SendPeriodDays { get; set; }
 
         /// <summary>
-        /// The interval at which the report is sent. Valid values:
+        /// <para>The interval at which the report is sent. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DAY</b></description></item>
+        /// <item><description><b>WEEK</b></description></item>
+        /// <item><description><b>MONTH</b></description></item>
+        /// </list>
         /// 
-        /// *   **DAY**
-        /// *   **WEEK**
-        /// *   **MONTH**
+        /// <b>Example:</b>
+        /// <para>MONTH</para>
         /// </summary>
         [NameInMap("SendPeriodType")]
         [Validation(Required=false)]
         public string SendPeriodType { get; set; }
 
         /// <summary>
-        /// The start time at which the report is sent. The value is in the HH:mm:ss format.
+        /// <para>The start time at which the report is sent. The value is in the HH:mm:ss format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>09:00:00</para>
         /// </summary>
         [NameInMap("SendStartTime")]
         [Validation(Required=false)]
         public string SendStartTime { get; set; }
 
         /// <summary>
-        /// The time at which the report is sent. The value is in the HH:mm:ss format.
+        /// <para>The time at which the report is sent. The value is in the HH:mm:ss format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>09:00:00</para>
         /// </summary>
         [NameInMap("SendTime")]
         [Validation(Required=false)]
         public string SendTime { get; set; }
 
         /// <summary>
-        /// The groups.
+        /// <para>The groups.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12125884,12140191</para>
         /// </summary>
         [NameInMap("TargetGroups")]
         [Validation(Required=false)]
         public string TargetGroups { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account. Multiple IDs are separated by commas (,).
+        /// <para>The ID of the Alibaba Cloud account. Multiple IDs are separated by commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1457515594445744,1600011353839072,1766185894104675,1674080148055995,1627510829033157</para>
         /// </summary>
         [NameInMap("TargetUids")]
         [Validation(Required=false)]
         public string TargetUids { get; set; }
 
         /// <summary>
-        /// The title of the report.
+        /// <para>The title of the report.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>marketing report</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

@@ -10,69 +10,91 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeTraceInfoNodeRequest : TeaModel {
         /// <summary>
-        /// The name of the alert event.
+        /// <para>The name of the alert event.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the names of alerts events.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the names of alerts events.
+        /// <b>Example:</b>
+        /// <para>WEBSHELL</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
         public string EventName { get; set; }
 
         /// <summary>
-        /// The ID of the request source. Set the value to sas.
+        /// <para>The ID of the request source. Set the value to sas.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sas</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
 
         /// <summary>
-        /// The time when the alert event was first detected.
+        /// <para>The time when the alert event was first detected.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1635978934000</para>
         /// </summary>
         [NameInMap("IncidentTime")]
         [Validation(Required=false)]
         public long? IncidentTime { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The source IP address of the request. The value of this parameter is specified by the system.
+        /// <para>The source IP address of the request. The value of this parameter is specified by the system.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The type of the vertex. You can call the [DescribeTraceInfoDetail](~~DescribeTraceInfoDetail~~) operation to query the types of vertexes.
+        /// <para>The type of the vertex. You can call the <a href="~~DescribeTraceInfoDetail~~">DescribeTraceInfoDetail</a> operation to query the types of vertexes.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SAS_ASSET</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The UUID of the server. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the UUIDs of servers.
+        /// <para>The UUID of the server. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the UUIDs of servers.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>6f346617-eef9-45e6-b6d1-946xxxxxxxx</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }
 
         /// <summary>
-        /// The ID of the vertex.
+        /// <para>The ID of the vertex.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>03da4e2350a3eb50cd25a18cexxxxxxx</para>
         /// </summary>
         [NameInMap("VertexId")]
         [Validation(Required=false)]

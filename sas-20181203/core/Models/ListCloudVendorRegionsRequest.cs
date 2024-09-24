@@ -10,19 +10,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCloudVendorRegionsRequest : TeaModel {
         /// <summary>
-        /// The language of the content in the request and response messages. Default value: **zh**. Valid values:
+        /// <para>The language of the content in the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The service provider of cloud assets. Valid values:
+        /// <para>The service provider of cloud assets. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Tencent</b>, <b>HUAWEICLOUD</b>, <b>Azure</b>, and <b>AWS</b>: other service providers of cloud assets.</description></item>
+        /// </list>
         /// 
-        /// *   **Tencent**, **HUAWEICLOUD**, **Azure**, and **AWS**: other service providers of cloud assets.
+        /// <b>Example:</b>
+        /// <para>Tencent</para>
         /// </summary>
         [NameInMap("Vendor")]
         [Validation(Required=false)]

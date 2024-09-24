@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAttachRecordsRequest : TeaModel {
         /// <summary>
-        /// The application group ID.
+        /// <para>The application group ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>64b8b994563c306b4fed****</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// The UUIDs of ECS instances to be queried.
+        /// <para>The UUIDs of ECS instances to be queried.</para>
         /// </summary>
         [NameInMap("EcsUUIDList")]
         [Validation(Required=false)]

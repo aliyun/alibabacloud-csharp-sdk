@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UninstallBackupClientRequest : TeaModel {
         /// <summary>
-        /// The version of the anti-ransomware policy. You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies. Valid values:
+        /// <para>The version of the anti-ransomware policy. You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1.0.0</b></description></item>
+        /// <item><description><b>2.0.0</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1.0.0**
-        /// *   **2.0.0**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2.0.0</para>
         /// </summary>
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]
         public string PolicyVersion { get; set; }
 
         /// <summary>
-        /// The UUID of the server from which you want to uninstall the anti-ransomware agent.
+        /// <para>The UUID of the server from which you want to uninstall the anti-ransomware agent.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of the UuidList and Uuid parameters.</para>
+        /// </remarks>
         /// 
-        /// > You must specify at least one of the UuidList and Uuid parameters.
+        /// <b>Example:</b>
+        /// <para>D0D6E6E4-CB8C-4897-B852-46AEFDA0****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }
 
         /// <summary>
-        /// The UUIDs of the servers from which you want to uninstall the anti-ransomware agent.
+        /// <para>The UUIDs of the servers from which you want to uninstall the anti-ransomware agent.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of the UuidList and Uuid parameters.</para>
+        /// </remarks>
         /// 
-        /// > You must specify at least one of the UuidList and Uuid parameters.
+        /// <b>Example:</b>
+        /// <para>[&quot;D0D6E6E4-CB8C-4897-B852-46AEFDA0****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</para>
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

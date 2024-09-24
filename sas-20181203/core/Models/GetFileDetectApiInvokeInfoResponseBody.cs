@@ -10,55 +10,75 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileDetectApiInvokeInfoResponseBody : TeaModel {
         /// <summary>
-        /// Returns the response body.
+        /// <para>Returns the response body.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetFileDetectApiInvokeInfoResponseBodyData Data { get; set; }
         public class GetFileDetectApiInvokeInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// The total number of authorizations.
+            /// <para>The total number of authorizations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000</para>
             /// </summary>
             [NameInMap("AuthCount")]
             [Validation(Required=false)]
             public long? AuthCount { get; set; }
 
             /// <summary>
-            /// The timestamp of the expiration date of the authorization number.
+            /// <para>The timestamp of the expiration date of the authorization number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1815753600000</para>
             /// </summary>
             [NameInMap("Expire")]
             [Validation(Required=false)]
             public long? Expire { get; set; }
 
             /// <summary>
-            /// The frequency of calls.
+            /// <para>The frequency of calls.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("FlowRate")]
             [Validation(Required=false)]
             public int? FlowRate { get; set; }
 
             /// <summary>
-            /// The number of remaining authorizations.
+            /// <para>The number of remaining authorizations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>900</para>
             /// </summary>
             [NameInMap("RemainAuthCount")]
             [Validation(Required=false)]
             public long? RemainAuthCount { get; set; }
 
             /// <summary>
-            /// The Authorized Version. Valid values include:
+            /// <para>The Authorized Version. Valid values include:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1:</b> trial version</description></item>
+            /// <item><description><b>2:</b> Enterprise Edition</description></item>
+            /// </list>
             /// 
-            /// * **1:** trial version
-            /// * **2:** Enterprise Edition
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("SaleVersion")]
             [Validation(Required=false)]
             public int? SaleVersion { get; set; }
 
             /// <summary>
-            /// The time unit of the frequency limit. Value:
+            /// <para>The time unit of the frequency limit. Value:</para>
+            /// <list type="bullet">
+            /// <item><description><b>SECONDS</b></description></item>
+            /// <item><description><b>MINUTES</b></description></item>
+            /// </list>
             /// 
-            /// * **SECONDS**
-            /// * **MINUTES**
+            /// <b>Example:</b>
+            /// <para>SECONDS</para>
             /// </summary>
             [NameInMap("TimeUnit")]
             [Validation(Required=false)]
@@ -67,7 +87,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9f368b6e-d60a-43c5-bd6f-c7087f2d****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

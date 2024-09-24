@@ -10,48 +10,57 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteLoginBaseConfigRequest : TeaModel {
         /// <summary>
-        /// The content of the logon security settings to delete. The content varies based on the type of the logon security settings. Valid values:
+        /// <para>The content of the logon security settings to delete. The content varies based on the type of the logon security settings. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>login_common_ip</b>: approved logon IP addresses</description></item>
+        /// </list>
+        /// <para>Example: {&quot;ip&quot;:&quot;10.23.23.23&quot;}.</para>
+        /// <list type="bullet">
+        /// <item><description><b>login_common_time</b>: approved logon time ranges</description></item>
+        /// </list>
+        /// <para>Example: {&quot;startTime&quot;:&quot;06:00:00&quot;,&quot;endTime&quot;:&quot;16:00:00&quot;}.</para>
+        /// <list type="bullet">
+        /// <item><description><b>login_common_account</b>: approved logon accounts</description></item>
+        /// </list>
+        /// <para>Example: {&quot;account&quot;:&quot;test_account_001&quot;}.</para>
+        /// <list type="bullet">
+        /// <item><description><b>login_common_location</b>: approved logon locations</description></item>
+        /// </list>
+        /// <para>Example: {&quot;location&quot;:&quot;Shanghai&quot;}.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **login_common_ip**: approved logon IP addresses
-        /// 
-        /// Example: {"ip":"10.23.23.23"}.
-        /// 
-        /// *   **login_common_time**: approved logon time ranges
-        /// 
-        /// Example: {"startTime":"06:00:00","endTime":"16:00:00"}.
-        /// 
-        /// *   **login_common_account**: approved logon accounts
-        /// 
-        /// Example: {"account":"test_account_001"}.
-        /// 
-        /// *   **login_common_location**: approved logon locations
-        /// 
-        /// Example: {"location":"Shanghai"}.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{&quot;startTime&quot;:&quot;06:00:00&quot;,&quot;endTime&quot;:&quot;16:00:00&quot;}</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// The UUID of the server whose logon security settings you want to delete.
+        /// <para>The UUID of the server whose logon security settings you want to delete.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// <b>Example:</b>
+        /// <para>4fe8e1cd-3c37-4851-b9de-124da32c****</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
         public string Target { get; set; }
 
         /// <summary>
-        /// The type of the logon security settings to delete. Valid values:
+        /// <para>The type of the logon security settings to delete. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>login_common_ip</b>: approved logon IP addresses</description></item>
+        /// <item><description><b>login_common_time</b>: approved logon time ranges</description></item>
+        /// <item><description><b>login_common_account</b>: approved logon accounts</description></item>
+        /// <item><description><b>login_common_location</b>: approved logon locations</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **login_common_ip**: approved logon IP addresses
-        /// *   **login_common_time**: approved logon time ranges
-        /// *   **login_common_account**: approved logon accounts
-        /// *   **login_common_location**: approved logon locations
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>login_common_time</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

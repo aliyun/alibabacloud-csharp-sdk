@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWhiteListAuthorizeResponseBody : TeaModel {
         /// <summary>
-        /// The available quota.
+        /// <para>The available quota.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("AvailableAuthorizeNum")]
         [Validation(Required=false)]
         public int? AvailableAuthorizeNum { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7BC55C8F-226E-5AF5-9A2C-2EC43864****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

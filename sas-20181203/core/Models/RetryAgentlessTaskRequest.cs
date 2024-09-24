@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class RetryAgentlessTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the task. You can call the [ListAgentlessTask](~~ListAgentlessTask~~) operation to obtain the IDs of tasks.
+        /// <para>The ID of the task. You can call the <a href="~~ListAgentlessTask~~">ListAgentlessTask</a> operation to obtain the IDs of tasks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5347c7b6-c85c-4070-846a-3029e08e****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

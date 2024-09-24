@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAutoDelConfigRequest : TeaModel {
         /// <summary>
-        /// The number of days after which a detected vulnerability is automatically deleted. Unit: days. Valid values:
+        /// <para>The number of days after which a detected vulnerability is automatically deleted. Unit: days. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>7</description></item>
+        /// <item><description>30</description></item>
+        /// <item><description>90</description></item>
+        /// </list>
         /// 
-        /// *   7
-        /// *   30
-        /// *   90
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("Days")]
         [Validation(Required=false)]

@@ -10,62 +10,82 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddSasModuleTrialResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddSasModuleTrialResponseBodyData Data { get; set; }
         public class AddSasModuleTrialResponseBodyData : TeaModel {
             /// <summary>
-            /// The information about the trial use.
+            /// <para>The information about the trial use.</para>
             /// </summary>
             [NameInMap("TrialRecordList")]
             [Validation(Required=false)]
             public List<AddSasModuleTrialResponseBodyDataTrialRecordList> TrialRecordList { get; set; }
             public class AddSasModuleTrialResponseBodyDataTrialRecordList : TeaModel {
                 /// <summary>
-                /// The quota.
+                /// <para>The quota.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("AuthLimit")]
                 [Validation(Required=false)]
                 public long? AuthLimit { get; set; }
 
                 /// <summary>
-                /// The list of quotas. This parameter is available if the value of the ModuleCode parameter is cloudSiem. The value of this parameter consists of the log storage capacity for the threat analysis and response feature and the log data to add. Units: GB and GB-day.
+                /// <para>The list of quotas. This parameter is available if the value of the ModuleCode parameter is cloudSiem. The value of this parameter consists of the log storage capacity for the threat analysis and response feature and the log data to add. Units: GB and GB-day.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[1,100]</para>
                 /// </summary>
                 [NameInMap("AuthLimitList")]
                 [Validation(Required=false)]
                 public string AuthLimitList { get; set; }
 
                 /// <summary>
-                /// The end time of the trial use.
+                /// <para>The end time of the trial use.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1638201599999</para>
                 /// </summary>
                 [NameInMap("GmtEnd")]
                 [Validation(Required=false)]
                 public long? GmtEnd { get; set; }
 
                 /// <summary>
-                /// The start time of the trial use.
+                /// <para>The start time of the trial use.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1667232000000</para>
                 /// </summary>
                 [NameInMap("GmtStart")]
                 [Validation(Required=false)]
                 public long? GmtStart { get; set; }
 
                 /// <summary>
-                /// The code of the feature. Valid values:
+                /// <para>The code of the feature. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>vulFix</b>: vulnerability fixing.</description></item>
+                /// <item><description><b>cloudSiem</b>: threat analysis and response.</description></item>
+                /// </list>
                 /// 
-                /// *   **vulFix**: vulnerability fixing.
-                /// *   **cloudSiem**: threat analysis and response.
+                /// <b>Example:</b>
+                /// <para>vulFix</para>
                 /// </summary>
                 [NameInMap("ModuleCode")]
                 [Validation(Required=false)]
                 public string ModuleCode { get; set; }
 
                 /// <summary>
-                /// The status of the trial use. Valid values:
+                /// <para>The status of the trial use. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: The feature is in trial use.</description></item>
+                /// <item><description><b>0</b>: The trial use ends.</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: The feature is in trial use.
-                /// *   **0**: The trial use ends.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -76,7 +96,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>09969D2C-4FAD-429E-BFBF-9A60DEF8****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

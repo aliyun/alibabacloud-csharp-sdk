@@ -10,72 +10,100 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyInterceptionRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the container cluster.
+        /// <para>The ID of the container cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeGroupedContainerInstances](https://help.aliyun.com/document_detail/182997.html) operation to query the IDs of container clusters.
+        /// <b>Example:</b>
+        /// <para>c17ef568f81884cdab402decd5fcd****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The destination objects of the rule. The following parameters are included:
+        /// <para>The destination objects of the rule. The following parameters are included:</para>
+        /// <list type="bullet">
+        /// <item><description>targetId: the ID of the destination object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</description></item>
+        /// <item><description>ports: the destination port ranges.</description></item>
+        /// </list>
         /// 
-        /// *   targetId: the ID of the destination object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
-        /// *   ports: the destination port ranges.
+        /// <b>Example:</b>
+        /// <para>{&quot;targetId&quot;:600069,&quot;ports&quot;:[&quot;80/8088&quot;]}</para>
         /// </summary>
         [NameInMap("DstTarget")]
         [Validation(Required=false)]
         public Dictionary<string, object> DstTarget { get; set; }
 
         /// <summary>
-        /// The interception mode. Valid values:
+        /// <para>The interception mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: block</description></item>
+        /// <item><description><b>2</b>: alert</description></item>
+        /// <item><description><b>3</b>: allow</description></item>
+        /// </list>
         /// 
-        /// *   **1**: block
-        /// *   **2**: alert
-        /// *   **3**: allow
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("InterceptType")]
         [Validation(Required=false)]
         public int? InterceptType { get; set; }
 
         /// <summary>
-        /// The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.
+        /// <para>The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("OrderIndex")]
         [Validation(Required=false)]
         public long? OrderIndex { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// <para>The ID of the rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>500018</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tetsRule</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// Specifies whether the rule is enabled. Valid values:
+        /// <para>Specifies whether the rule is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: enabled</description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// </list>
         /// 
-        /// *   **1**: enabled
-        /// *   **0**: disabled
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleSwitch")]
         [Validation(Required=false)]
         public int? RuleSwitch { get; set; }
 
         /// <summary>
-        /// The source object of the rule. The following parameters are included:
+        /// <para>The source object of the rule. The following parameters are included:</para>
+        /// <list type="bullet">
+        /// <item><description>targetId: the ID of the source object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</description></item>
+        /// </list>
         /// 
-        /// *   targetId: the ID of the source object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
+        /// <b>Example:</b>
+        /// <para>{&quot;targetId&quot;:400989}</para>
         /// </summary>
         [NameInMap("SrcTarget")]
         [Validation(Required=false)]

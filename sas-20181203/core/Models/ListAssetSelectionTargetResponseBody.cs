@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAssetSelectionTargetResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAssetSelectionTargetResponseBodyData> Data { get; set; }
         public class ListAssetSelectionTargetResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the asset.
+            /// <para>The ID of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30****</para>
             /// </summary>
             [NameInMap("TargetId")]
             [Validation(Required=false)]
             public string TargetId { get; set; }
 
             /// <summary>
-            /// The name of the asset.
+            /// <para>The name of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test****</para>
             /// </summary>
             [NameInMap("TargetName")]
             [Validation(Required=false)]
@@ -33,28 +39,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListAssetSelectionTargetResponseBodyPageInfo PageInfo { get; set; }
         public class ListAssetSelectionTargetResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>639</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -63,7 +78,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50A75355-F58F-5D65-8377-98C88DED9C51</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

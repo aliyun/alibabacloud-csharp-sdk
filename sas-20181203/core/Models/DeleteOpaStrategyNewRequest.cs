@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteOpaStrategyNewRequest : TeaModel {
         /// <summary>
-        /// The IDs of rules.
+        /// <para>The IDs of rules.</para>
         /// </summary>
         [NameInMap("StrategyIds")]
         [Validation(Required=false)]

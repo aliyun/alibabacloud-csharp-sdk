@@ -10,23 +10,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCommonTargetResultListRequest : TeaModel {
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>113.57.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The type of the configuration item. Valid values:
+        /// <para>The type of the configuration item. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>webshell_timescan</b>: webshell detection and removal</description></item>
+        /// <item><description><b>aliscriptengine</b>: in-depth detection engine</description></item>
+        /// <item><description><b>alidetect</b>: installation scope of local file detection</description></item>
+        /// <item><description><b>alidetect-scan-enable</b>: detection scope of local file detection</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operations to obtain more types of custom and system configuration items.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **webshell_timescan**: webshell detection and removal
-        /// *   **aliscriptengine**: in-depth detection engine
-        /// *   **alidetect**: installation scope of local file detection
-        /// *   **alidetect-scan-enable**: detection scope of local file detection
-        /// 
-        /// >  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) and [ListSystemClientRules](~~ListSystemClientRules~~) operations to obtain more types of custom and system configuration items.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>webshell_timescan</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

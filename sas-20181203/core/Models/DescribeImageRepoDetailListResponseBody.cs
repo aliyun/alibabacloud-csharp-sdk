@@ -10,129 +10,198 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageRepoDetailListResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about image repositories.
+        /// <para>An array that consists of the information about image repositories.</para>
         /// </summary>
         [NameInMap("ImageRepoResponses")]
         [Validation(Required=false)]
         public List<DescribeImageRepoDetailListResponseBodyImageRepoResponses> ImageRepoResponses { get; set; }
         public class DescribeImageRepoDetailListResponseBodyImageRepoResponses : TeaModel {
             /// <summary>
-            /// The number of alerts that are generated for the image repository.
+            /// <para>The number of alerts that are generated for the image repository.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("AlarmCount")]
             [Validation(Required=false)]
             public int? AlarmCount { get; set; }
 
             /// <summary>
-            /// Indicates whether alerts are generated for the image repository. Valid values:
+            /// <para>Indicates whether alerts are generated for the image repository. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>YES</b></description></item>
+            /// <item><description><b>NO</b></description></item>
+            /// </list>
             /// 
-            /// *   **YES**
-            /// *   **NO**
+            /// <b>Example:</b>
+            /// <para>NO</para>
             /// </summary>
             [NameInMap("AlarmStatus")]
             [Validation(Required=false)]
             public string AlarmStatus { get; set; }
 
             /// <summary>
-            /// The address of the image repository.
+            /// <para>The address of the image repository.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[
+            ///       {
+            ///             &quot;domains&quot;: [
+            ///                   &quot;<b><b>.cn-shenzhen.cr.aliyuncs.com&quot;
+            ///             ],
+            ///             &quot;type&quot;: &quot;internet&quot;
+            ///       },
+            ///       {
+            ///             &quot;domains&quot;: [
+            ///                   &quot;</b></b>.cn-shenzhen.cr.aliyuncs.com&quot;
+            ///             ],
+            ///             &quot;type&quot;: &quot;intranet&quot;
+            ///       },
+            ///       {
+            ///             &quot;domains&quot;: [
+            ///                   &quot;****.cn-shenzhen.cr.aliyuncs.com&quot;
+            ///             ],
+            ///             &quot;type&quot;: &quot;vpc&quot;
+            ///       }
+            /// ]</para>
             /// </summary>
             [NameInMap("Endpoints")]
             [Validation(Required=false)]
             public string Endpoints { get; set; }
 
             /// <summary>
-            /// The number of baseline risk items on the image repository.
+            /// <para>The number of baseline risk items on the image repository.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("HcCount")]
             [Validation(Required=false)]
             public int? HcCount { get; set; }
 
             /// <summary>
-            /// Indicates whether baseline risk items are detected on the image repository. Valid values:
+            /// <para>Indicates whether baseline risk items are detected on the image repository. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>NO</b></description></item>
+            /// <item><description><b>YES</b></description></item>
+            /// </list>
             /// 
-            /// *   **NO**
-            /// *   **YES**
+            /// <b>Example:</b>
+            /// <para>NO</para>
             /// </summary>
             [NameInMap("HcStatus")]
             [Validation(Required=false)]
             public string HcStatus { get; set; }
 
             /// <summary>
-            /// The number of images.
+            /// <para>The number of images.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("ImageCount")]
             [Validation(Required=false)]
             public int? ImageCount { get; set; }
 
             /// <summary>
-            /// The ID of the image.
+            /// <para>The ID of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-uf6fsg6xlmorug5****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The region ID of the image.
+            /// <para>The region ID of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-shanghai</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The type of the image repository. Valid values:
+            /// <para>The type of the image repository. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>acr</b></description></item>
+            /// <item><description><b>harbor</b></description></item>
+            /// <item><description><b>quay</b></description></item>
+            /// <item><description><b>CI/CD</b></description></item>
+            /// </list>
             /// 
-            /// *   **acr**
-            /// *   **harbor**
-            /// *   **quay**
-            /// *   **CI/CD**
+            /// <b>Example:</b>
+            /// <para>acr</para>
             /// </summary>
             [NameInMap("RegistryType")]
             [Validation(Required=false)]
             public string RegistryType { get; set; }
 
             /// <summary>
-            /// The ID of the image repository.
+            /// <para>The ID of the image repository.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>crr-2chlzf47w2rk****</para>
             /// </summary>
             [NameInMap("RepoId")]
             [Validation(Required=false)]
             public string RepoId { get; set; }
 
             /// <summary>
-            /// The name of the image repository.
+            /// <para>The name of the image repository.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zeus</para>
             /// </summary>
             [NameInMap("RepoName")]
             [Validation(Required=false)]
             public string RepoName { get; set; }
 
             /// <summary>
-            /// The namespace to which the image repository belongs.
+            /// <para>The namespace to which the image repository belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-dev</para>
             /// </summary>
             [NameInMap("RepoNamespace")]
             [Validation(Required=false)]
             public string RepoNamespace { get; set; }
 
             /// <summary>
-            /// Indicates whether the image repository is at risk. Valid values:
+            /// <para>Indicates whether the image repository is at risk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>YES</b></description></item>
+            /// <item><description><b>NO</b></description></item>
+            /// </list>
             /// 
-            /// *   **YES**
-            /// *   **NO**
+            /// <b>Example:</b>
+            /// <para>NO</para>
             /// </summary>
             [NameInMap("RiskStatus")]
             [Validation(Required=false)]
             public string RiskStatus { get; set; }
 
             /// <summary>
-            /// The number of vulnerabilities detected on the image repository.
+            /// <para>The number of vulnerabilities detected on the image repository.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("VulCount")]
             [Validation(Required=false)]
             public int? VulCount { get; set; }
 
             /// <summary>
-            /// Indicates whether vulnerabilities are detected on the image repository. Valid values:
+            /// <para>Indicates whether vulnerabilities are detected on the image repository. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>YES</b></description></item>
+            /// <item><description><b>NO</b></description></item>
+            /// </list>
             /// 
-            /// *   **YES**
-            /// *   **NO**
+            /// <b>Example:</b>
+            /// <para>NO</para>
             /// </summary>
             [NameInMap("VulStatus")]
             [Validation(Required=false)]
@@ -141,35 +210,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeImageRepoDetailListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageRepoDetailListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of image repositories.
+            /// <para>The total number of image repositories.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>19</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -178,7 +259,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0B48AB3C-84FC-424D-A01D-B9270EF46038</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

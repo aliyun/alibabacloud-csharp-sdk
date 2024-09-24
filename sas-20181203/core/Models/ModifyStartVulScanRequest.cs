@@ -10,24 +10,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyStartVulScanRequest : TeaModel {
         /// <summary>
-        /// The types of vulnerabilities that can be detected. Valid values:
+        /// <para>The types of vulnerabilities that can be detected. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cve</b>: Linux software vulnerabilities</description></item>
+        /// <item><description><b>sys</b>: Windows system vulnerabilities</description></item>
+        /// <item><description><b>cms</b>: Web-CMS vulnerabilities</description></item>
+        /// <item><description><b>app</b>: application vulnerabilities</description></item>
+        /// <item><description><b>emg</b>: urgent vulnerabilities</description></item>
+        /// <item><description><b>image</b>: container image vulnerabilities</description></item>
+        /// <item><description><b>sca</b>: vulnerabilities that are detected based on software component analysis</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you leave this parameter empty, all types of vulnerabilities can be detected.</para>
+        /// </remarks>
         /// 
-        /// *   **cve**: Linux software vulnerabilities
-        /// *   **sys**: Windows system vulnerabilities
-        /// *   **cms**: Web-CMS vulnerabilities
-        /// *   **app**: application vulnerabilities
-        /// *   **emg**: urgent vulnerabilities
-        /// *   **image**: container image vulnerabilities
-        /// *   **sca**: vulnerabilities that are detected based on software component analysis
-        /// 
-        /// > If you leave this parameter empty, all types of vulnerabilities can be detected.
+        /// <b>Example:</b>
+        /// <para>&quot;cve,sys,cms,app,emg&quot;</para>
         /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]
         public string Types { get; set; }
 
         /// <summary>
-        /// The UUIDs of servers.
+        /// <para>The UUIDs of servers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;i-sdada-xxxxx&quot;,&quot;i-ifaedada-sfsasdxxx&quot;}</para>
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

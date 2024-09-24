@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyCustomBlockRecordResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A4EE4B1F-CEF8-5A75-86D3-D012CB3D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

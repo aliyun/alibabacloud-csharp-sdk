@@ -10,63 +10,84 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClusterInfoListResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about clusters.
+        /// <para>An array that consists of the information about clusters.</para>
         /// </summary>
         [NameInMap("ClusterList")]
         [Validation(Required=false)]
         public List<DescribeClusterInfoListResponseBodyClusterList> ClusterList { get; set; }
         public class DescribeClusterInfoListResponseBodyClusterList : TeaModel {
             /// <summary>
-            /// The ID of the container cluster.
+            /// <para>The ID of the container cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cfeb7a9f99ce740e98c5595d0fe37****</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the container cluster.
+            /// <para>The name of the container cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test111</para>
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// The type of the cluster. Valid values:
+            /// <para>The type of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ManagedKubernetes</b>: managed Kubernetes cluster.</description></item>
+            /// <item><description><b>NotManagedKubernetes</b>: non-managed Kubernetes cluster.</description></item>
+            /// <item><description><b>PrivateKubernetes</b>: private cluster.</description></item>
+            /// <item><description><b>kubernetes</b>: dedicated Kubernetes cluster.</description></item>
+            /// <item><description><b>ask</b>: dedicated serverless Kubernetes (ASK) cluster.</description></item>
+            /// </list>
             /// 
-            /// *   **ManagedKubernetes**: managed Kubernetes cluster.
-            /// *   **NotManagedKubernetes**: non-managed Kubernetes cluster.
-            /// *   **PrivateKubernetes**: private cluster.
-            /// *   **kubernetes**: dedicated Kubernetes cluster.
-            /// *   **ask**: dedicated serverless Kubernetes (ASK) cluster.
+            /// <b>Example:</b>
+            /// <para>ManagedKubernetes</para>
             /// </summary>
             [NameInMap("ClusterType")]
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// The region in which the cluster resides.
+            /// <para>The region in which the cluster resides.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The status of the cluster. Valid values:
+            /// <para>The status of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>unavailable</b>: The cluster is unavailable.</description></item>
+            /// <item><description><b>Available</b>: The cluster is available.</description></item>
+            /// <item><description><b>Creating</b>: The cluster is being created.</description></item>
+            /// <item><description><b>CreateFailed</b>: The cluster failed to be created.</description></item>
+            /// </list>
             /// 
-            /// *   **unavailable**: The cluster is unavailable.
-            /// *   **Available**: The cluster is available.
-            /// *   **Creating**: The cluster is being created.
-            /// *   **CreateFailed**: The cluster failed to be created.
+            /// <b>Example:</b>
+            /// <para>Available</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// Indicates whether container network topology was enabled. Valid values:
+            /// <para>Indicates whether container network topology was enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("TargetResult")]
             [Validation(Required=false)]
@@ -75,7 +96,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7E0618A9-D5EF-4220-9471-C42B5E92719F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

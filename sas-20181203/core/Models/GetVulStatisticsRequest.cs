@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetVulStatisticsRequest : TeaModel {
         /// <summary>
-        /// The ID of the asset group. Separate multiple IDs with commas (,).
+        /// <para>The ID of the asset group. Separate multiple IDs with commas (,).</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>9997897</para>
         /// </summary>
         [NameInMap("GroupIdList")]
         [Validation(Required=false)]
         public string GroupIdList { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.12.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The type of the vulnerability whose statistics you want to query. Separate multiple types with commas (,). Valid values:
+        /// <para>The type of the vulnerability whose statistics you want to query. Separate multiple types with commas (,). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
+        /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
+        /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
+        /// <item><description><b>emg</b>: urgent vulnerability</description></item>
+        /// <item><description><b>app</b>: vulnerability detected by using a web scanner</description></item>
+        /// <item><description><b>sca</b>: vulnerability detected based on software component analysis</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **cve**: Linux software vulnerability
-        /// *   **sys**: Windows system vulnerability
-        /// *   **cms**: Web-CMS vulnerability
-        /// *   **emg**: urgent vulnerability
-        /// *   **app**: vulnerability detected by using a web scanner
-        /// *   **sca**: vulnerability detected based on software component analysis
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cve</para>
         /// </summary>
         [NameInMap("TypeList")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessRegionResponseBody : TeaModel {
         /// <summary>
-        /// The information about the regions.
+        /// <para>The information about the regions.</para>
         /// </summary>
         [NameInMap("RegionList")]
         [Validation(Required=false)]
         public List<string> RegionList { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7E0618A9-D5EF-4220-9471-C42B5E92****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

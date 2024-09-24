@@ -10,63 +10,87 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageSensitiveFileByKeyResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. If the 200 status code is returned, the request was successful.
+        /// <para>The status code returned. If the 200 status code is returned, the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeImageSensitiveFileByKeyResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageSensitiveFileByKeyResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The key of the last data entry.
+            /// <para>The key of the last data entry.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAGYXFWIAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM1Mzc3Njc4MzA2ODY5NmI2YTY1Nzg2NTcxNjE2NDc4NjE=</para>
             /// </summary>
             [NameInMap("LastRowKey")]
             [Validation(Required=false)]
             public string LastRowKey { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -75,208 +99,246 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CE500770-42D3-442E-9DDD-156E0F9F3B45</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the sensitive files.
+        /// <para>The information about the sensitive files.</para>
         /// </summary>
         [NameInMap("SensitiveFileList")]
         [Validation(Required=false)]
         public List<DescribeImageSensitiveFileByKeyResponseBodySensitiveFileList> SensitiveFileList { get; set; }
         public class DescribeImageSensitiveFileByKeyResponseBodySensitiveFileList : TeaModel {
             /// <summary>
-            /// The suggestion.
+            /// <para>The suggestion.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Assess risks based on business conditions, remove risky content, and rebuild image</para>
             /// </summary>
             [NameInMap("Advice")]
             [Validation(Required=false)]
             public string Advice { get; set; }
 
             /// <summary>
-            /// The description of the sensitive file.
+            /// <para>The description of the sensitive file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Verify the validity of the leaked AK.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The file path.
+            /// <para>The file path.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/usr/lib/abc.txt</para>
             /// </summary>
             [NameInMap("FilePath")]
             [Validation(Required=false)]
             public string FilePath { get; set; }
 
             /// <summary>
-            /// The timestamp generated when the first scan was performed. Unit: milliseconds.
+            /// <para>The timestamp generated when the first scan was performed. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1663321552000</para>
             /// </summary>
             [NameInMap("FirstScanTime")]
             [Validation(Required=false)]
             public long? FirstScanTime { get; set; }
 
             /// <summary>
-            /// The timestamp when the last scan was performed. Unit: milliseconds.
+            /// <para>The timestamp when the last scan was performed. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1663691592000</para>
             /// </summary>
             [NameInMap("LastScanTime")]
             [Validation(Required=false)]
             public long? LastScanTime { get; set; }
 
             /// <summary>
-            /// The digest of the image.
+            /// <para>The digest of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0083a31cc0083a31ccf7c10367a6e783e8601e290f7c10367a6e783e860****</para>
             /// </summary>
             [NameInMap("LayerDigest")]
             [Validation(Required=false)]
             public string LayerDigest { get; set; }
 
             /// <summary>
-            /// The MD5 value of the sensitive file.
+            /// <para>The MD5 value of the sensitive file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>b484b0dff093f358897486b58266****</para>
             /// </summary>
             [NameInMap("Md5")]
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
             /// <summary>
-            /// The sensitive content.
+            /// <para>The sensitive content.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AKPIDteow289f9s************</para>
             /// </summary>
             [NameInMap("Promt")]
             [Validation(Required=false)]
             public string Promt { get; set; }
 
             /// <summary>
-            /// The risk level. Valid values:
+            /// <para>The risk level. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>high</b></description></item>
+            /// <item><description><b>medium</b></description></item>
+            /// <item><description><b>low</b></description></item>
+            /// </list>
             /// 
-            /// *   **high**
-            /// *   **medium**
-            /// *   **low**
+            /// <b>Example:</b>
+            /// <para>low</para>
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// The type of the alert for the sensitive file. Valid values:
+            /// <para>The type of the alert for the sensitive file. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>npm_token</b>: NPM access token</description></item>
+            /// <item><description><b>ftp_cfg</b>: FTP configuration</description></item>
+            /// <item><description><b>google_oauth_key</b>: Google OAuth key</description></item>
+            /// <item><description><b>planetscale_passwd</b>: PlanetScale password</description></item>
+            /// <item><description><b>github_ssh_key</b>: Github SSH key</description></item>
+            /// <item><description><b>msbuild_publish_profile</b>: MSBuild publish profile</description></item>
+            /// <item><description><b>fastly_cdn_token</b>: Fastly CDN token</description></item>
+            /// <item><description><b>ssh_private_key</b>: SSH private key</description></item>
+            /// <item><description><b>aws_cli</b>: Amazon Web Services (AWS) CLI credential</description></item>
+            /// <item><description><b>cpanel_proftpd</b>: cPanel ProFTPD credential</description></item>
+            /// <item><description><b>postgresql_passwd</b>: PostgreSQL password file</description></item>
+            /// <item><description><b>discord_client_cred</b>: Discord client credential</description></item>
+            /// <item><description><b>rails_database</b>: Rails database configuration</description></item>
+            /// <item><description><b>aws_access_key</b>: AWS Access Key</description></item>
+            /// <item><description><b>esmtp_cfg</b>: Extended Simple Mail Transfer Protocol (ESMTP) configuration</description></item>
+            /// <item><description><b>docker_registry_cfg</b>: configuration of a Docker image repository</description></item>
+            /// <item><description><b>pem</b>: Privacy-Enhanced Mail (PEM)</description></item>
+            /// <item><description><b>common_cred</b>: common credential</description></item>
+            /// <item><description><b>sftp_cfg</b>: configuration of connection over Secure File Transfer Protocol (SFTP)</description></item>
+            /// <item><description><b>grafana_token</b>: Grafana token</description></item>
+            /// <item><description><b>slack_token</b>: Slack token</description></item>
+            /// <item><description><b>ec_private_key</b>: Elliptic Curve (EC) private key</description></item>
+            /// <item><description><b>pypi_token</b>: Python Package Index (PyPI) token</description></item>
+            /// <item><description><b>finicity_token</b>: Finicity token</description></item>
+            /// <item><description><b>k8s_client_key</b>: private key for the Kubernetes client</description></item>
+            /// <item><description><b>git_cfg</b>: Git configuration</description></item>
+            /// <item><description><b>django_key</b>: Django key</description></item>
+            /// <item><description><b>jenkins_ssh</b>: SSH configuration file for Jenkins</description></item>
+            /// <item><description><b>openssh_private_key</b>: OpenSSH private key</description></item>
+            /// <item><description><b>square_oauth</b>: Square OAuth credential</description></item>
+            /// <item><description><b>typeform_token</b>: Typeform token</description></item>
+            /// <item><description><b>common_database_cfg</b>: configuration of general database connection</description></item>
+            /// <item><description><b>wordpress_database_cfg</b>: WordPress database configuration</description></item>
+            /// <item><description><b>googlecloud_api_key</b>: API key for Google Cloud</description></item>
+            /// <item><description><b>vscode_sftp</b>: VSCode SFTP configuration</description></item>
+            /// <item><description><b>apache_htpasswd</b>: Apache htpasswd</description></item>
+            /// <item><description><b>planetscale_token</b>: PlanetScale token</description></item>
+            /// <item><description><b>contentful_preview_token</b>: preview token for Contentful</description></item>
+            /// <item><description><b>php_database_cfg</b>: database password for a PHP application</description></item>
+            /// <item><description><b>atom_remote_sync</b>: Atom remote synchronization configuration</description></item>
+            /// <item><description><b>aws_session_token</b>: AWS session token</description></item>
+            /// <item><description><b>atom_sftp_cfg</b>: Atom SFTP configuration</description></item>
+            /// <item><description><b>asana_client_private_key</b>: Asana client key</description></item>
+            /// <item><description><b>tencentcloud_ak</b>: secret ID of a third-party cloud</description></item>
+            /// <item><description><b>rsa_private_key</b>: Rivest-Shamir-Adleman (RSA) private key</description></item>
+            /// <item><description><b>github_personal_token</b>: personal access token for GitHub</description></item>
+            /// <item><description><b>pgp</b>: Pretty Good Privacy (PGP) encrypted file</description></item>
+            /// <item><description><b>stripe_skpk</b>: Stripe secret key</description></item>
+            /// <item><description><b>square_token</b>: Square access token</description></item>
+            /// <item><description><b>rails_carrierwave</b>: Rails Carrierwave credential</description></item>
+            /// <item><description><b>dbeaver_database_cfg</b>: DBeaver database configuration</description></item>
+            /// <item><description><b>robomongo_cred</b>: RoboMongo credential</description></item>
+            /// <item><description><b>github_oauth_token</b>: OAuth access token for GitHub</description></item>
+            /// <item><description><b>pulumi_token</b>: Pulumi token</description></item>
+            /// <item><description><b>ventrilo_voip</b>: configuration of a Ventrilo VoIP server</description></item>
+            /// <item><description><b>macos_keychain</b>: macOS Keychain</description></item>
+            /// <item><description><b>amazon_mws_token</b>: Amazon MWS token</description></item>
+            /// <item><description><b>dynatrace_token</b>: Dynatrace token</description></item>
+            /// <item><description><b>java_keystore</b>: Java KeyStore (JKS)</description></item>
+            /// <item><description><b>microsoft_sdf</b>: Microsoft SQL Server Compact Edition (CE) database</description></item>
+            /// <item><description><b>kubernetes_dashboard_cred</b>: user credential for Kubernetes Dashboard</description></item>
+            /// <item><description><b>atlassian_token</b>: Atlassian token</description></item>
+            /// <item><description><b>rdp</b>: remote desktop protocol (RDP)</description></item>
+            /// <item><description><b>mailgun_key</b>: Mailgun webhook signing key</description></item>
+            /// <item><description><b>mailchimp_api_key</b>: API key for Mailchimp</description></item>
+            /// <item><description><b>netrc_cfg</b>: netrc configuration file</description></item>
+            /// <item><description><b>openvpn_cfg</b>: configuration of the OpenVPN client</description></item>
+            /// <item><description><b>github_refresh_token</b>: GitHub refresh token</description></item>
+            /// <item><description><b>salesforce</b>: Salesforce credential</description></item>
+            /// <item><description><b>salesforce</b>: Sendinblue token</description></item>
+            /// <item><description><b>pkcs_private_key</b>: PKCS#12 private key</description></item>
+            /// <item><description><b>rubyonrails_passwd</b>: Ruby on Rails password file</description></item>
+            /// <item><description><b>filezilla_ftp</b>: FileZilla FTP configuration</description></item>
+            /// <item><description><b>databricks_token</b>: Databricks token</description></item>
+            /// <item><description><b>gitLab_personal_toke</b>: personal access token for GitLab</description></item>
+            /// <item><description><b>rails_master_key</b>: Rails master key</description></item>
+            /// <item><description><b>sqlite</b>: SQLite3 or SQLite database</description></item>
+            /// <item><description><b>firefox_logins</b>: Firefox logon configuration</description></item>
+            /// <item><description><b>mailgun_private_token</b>: Mailgun private token</description></item>
+            /// <item><description><b>joomla_cfg</b>: Joomla configuration</description></item>
+            /// <item><description><b>hashicorp_terraform_token</b>: HashiCorp Terraform token</description></item>
+            /// <item><description><b>jetbrains_ides</b>: JetBrains IDEs configuration</description></item>
+            /// <item><description><b>heroku_api_key</b>: API key for Heroku</description></item>
+            /// <item><description><b>messagebird_token</b>: MessageBird token</description></item>
+            /// <item><description><b>github_app_token</b>: Github app token</description></item>
+            /// <item><description><b>hashicorp_vault_token</b>: HashiCorp Vault token</description></item>
+            /// <item><description><b>pgp_private_key</b>: PGP private key</description></item>
+            /// <item><description><b>sshpasswd</b>: SSH password</description></item>
+            /// <item><description><b>huaweicloud_ak</b>: secret access key of a third-party cloud</description></item>
+            /// <item><description><b>aws_s3cmd</b>: AWS S3cmd configuration</description></item>
+            /// <item><description><b>php_config</b>: PHP configuration</description></item>
+            /// <item><description><b>common_private_key</b>: common private key</description></item>
+            /// <item><description><b>microsoft_mdf</b>: Microsoft SQL Server database</description></item>
+            /// <item><description><b>mediawiki_cfg</b>: MediaWiki configuration</description></item>
+            /// <item><description><b>jenkins_cred</b>: Jenkins credential</description></item>
+            /// <item><description><b>rubygems_cred</b>: RubyGems credential</description></item>
+            /// <item><description><b>clojars_token</b>: Clojars token</description></item>
+            /// <item><description><b>phoenix_web_passwd</b>: Phoenix web credential</description></item>
+            /// <item><description><b>puttygen_private_key</b>: PuTTYgen private key</description></item>
+            /// <item><description><b>google_oauth_token</b>: Google OAuth access token</description></item>
+            /// <item><description><b>rubyonrails_cfg</b>: Ruby On Rails database configuration</description></item>
+            /// <item><description><b>lob_api_key</b>: Lob API key for Lob</description></item>
+            /// <item><description><b>pkcs_cred</b>: PKCS#12 certificate</description></item>
+            /// <item><description><b>otr_private_key</b>: Off-the-Record Messaging (OTR) private key</description></item>
+            /// <item><description><b>contentful_delivery_token</b>: Contentful delivery token</description></item>
+            /// <item><description><b>digital_ocean_tugboat</b>: DigitalOcean Tugboat configuration</description></item>
+            /// <item><description><b>dsa_private_key</b>: Digital Signature Algorithm (DSA) private key</description></item>
+            /// <item><description><b>rails_app_token</b>: app token for Rails</description></item>
+            /// <item><description><b>git_cred</b>: Git user credential</description></item>
+            /// <item><description><b>newrelic_api_key</b>: User API key for New Relic</description></item>
+            /// <item><description><b>github_hub</b>: hub configuration for storing GitHub tokens</description></item>
+            /// <item><description><b>rubygem</b>: Rubygem Token</description></item>
+            /// </list>
             /// 
-            /// *   **npm_token**: NPM access token
-            /// *   **ftp_cfg**: FTP configuration
-            /// *   **google_oauth_key**: Google OAuth key
-            /// *   **planetscale_passwd**: PlanetScale password
-            /// *   **github_ssh_key**: Github SSH key
-            /// *   **msbuild_publish_profile**: MSBuild publish profile
-            /// *   **fastly_cdn_token**: Fastly CDN token
-            /// *   **ssh_private_key**: SSH private key
-            /// *   **aws_cli**: Amazon Web Services (AWS) CLI credential
-            /// *   **cpanel_proftpd**: cPanel ProFTPD credential
-            /// *   **postgresql_passwd**: PostgreSQL password file
-            /// *   **discord_client_cred**: Discord client credential
-            /// *   **rails_database**: Rails database configuration
-            /// *   **aws_access_key**: AWS Access Key
-            /// *   **esmtp_cfg**: Extended Simple Mail Transfer Protocol (ESMTP) configuration
-            /// *   **docker_registry_cfg**: configuration of a Docker image repository
-            /// *   **pem**: Privacy-Enhanced Mail (PEM)
-            /// *   **common_cred**: common credential
-            /// *   **sftp_cfg**: configuration of connection over Secure File Transfer Protocol (SFTP)
-            /// *   **grafana_token**: Grafana token
-            /// *   **slack_token**: Slack token
-            /// *   **ec_private_key**: Elliptic Curve (EC) private key
-            /// *   **pypi_token**: Python Package Index (PyPI) token
-            /// *   **finicity_token**: Finicity token
-            /// *   **k8s_client_key**: private key for the Kubernetes client
-            /// *   **git_cfg**: Git configuration
-            /// *   **django_key**: Django key
-            /// *   **jenkins_ssh**: SSH configuration file for Jenkins
-            /// *   **openssh_private_key**: OpenSSH private key
-            /// *   **square_oauth**: Square OAuth credential
-            /// *   **typeform_token**: Typeform token
-            /// *   **common_database_cfg**: configuration of general database connection
-            /// *   **wordpress_database_cfg**: WordPress database configuration
-            /// *   **googlecloud_api_key**: API key for Google Cloud
-            /// *   **vscode_sftp**: VSCode SFTP configuration
-            /// *   **apache_htpasswd**: Apache htpasswd
-            /// *   **planetscale_token**: PlanetScale token
-            /// *   **contentful_preview_token**: preview token for Contentful
-            /// *   **php_database_cfg**: database password for a PHP application
-            /// *   **atom_remote_sync**: Atom remote synchronization configuration
-            /// *   **aws_session_token**: AWS session token
-            /// *   **atom_sftp_cfg**: Atom SFTP configuration
-            /// *   **asana_client_private_key**: Asana client key
-            /// *   **tencentcloud_ak**: secret ID of a third-party cloud
-            /// *   **rsa_private_key**: Rivest-Shamir-Adleman (RSA) private key
-            /// *   **github_personal_token**: personal access token for GitHub
-            /// *   **pgp**: Pretty Good Privacy (PGP) encrypted file
-            /// *   **stripe_skpk**: Stripe secret key
-            /// *   **square_token**: Square access token
-            /// *   **rails_carrierwave**: Rails Carrierwave credential
-            /// *   **dbeaver_database_cfg**: DBeaver database configuration
-            /// *   **robomongo_cred**: RoboMongo credential
-            /// *   **github_oauth_token**: OAuth access token for GitHub
-            /// *   **pulumi_token**: Pulumi token
-            /// *   **ventrilo_voip**: configuration of a Ventrilo VoIP server
-            /// *   **macos_keychain**: macOS Keychain
-            /// *   **amazon_mws_token**: Amazon MWS token
-            /// *   **dynatrace_token**: Dynatrace token
-            /// *   **java_keystore**: Java KeyStore (JKS)
-            /// *   **microsoft_sdf**: Microsoft SQL Server Compact Edition (CE) database
-            /// *   **kubernetes_dashboard_cred**: user credential for Kubernetes Dashboard
-            /// *   **atlassian_token**: Atlassian token
-            /// *   **rdp**: remote desktop protocol (RDP)
-            /// *   **mailgun_key**: Mailgun webhook signing key
-            /// *   **mailchimp_api_key**: API key for Mailchimp
-            /// *   **netrc_cfg**: netrc configuration file
-            /// *   **openvpn_cfg**: configuration of the OpenVPN client
-            /// *   **github_refresh_token**: GitHub refresh token
-            /// *   **salesforce**: Salesforce credential
-            /// *   **salesforce**: Sendinblue token
-            /// *   **pkcs_private_key**: PKCS#12 private key
-            /// *   **rubyonrails_passwd**: Ruby on Rails password file
-            /// *   **filezilla_ftp**: FileZilla FTP configuration
-            /// *   **databricks_token**: Databricks token
-            /// *   **gitLab_personal_toke**: personal access token for GitLab
-            /// *   **rails_master_key**: Rails master key
-            /// *   **sqlite**: SQLite3 or SQLite database
-            /// *   **firefox_logins**: Firefox logon configuration
-            /// *   **mailgun_private_token**: Mailgun private token
-            /// *   **joomla_cfg**: Joomla configuration
-            /// *   **hashicorp_terraform_token**: HashiCorp Terraform token
-            /// *   **jetbrains_ides**: JetBrains IDEs configuration
-            /// *   **heroku_api_key**: API key for Heroku
-            /// *   **messagebird_token**: MessageBird token
-            /// *   **github_app_token**: Github app token
-            /// *   **hashicorp_vault_token**: HashiCorp Vault token
-            /// *   **pgp_private_key**: PGP private key
-            /// *   **sshpasswd**: SSH password
-            /// *   **huaweicloud_ak**: secret access key of a third-party cloud
-            /// *   **aws_s3cmd**: AWS S3cmd configuration
-            /// *   **php_config**: PHP configuration
-            /// *   **common_private_key**: common private key
-            /// *   **microsoft_mdf**: Microsoft SQL Server database
-            /// *   **mediawiki_cfg**: MediaWiki configuration
-            /// *   **jenkins_cred**: Jenkins credential
-            /// *   **rubygems_cred**: RubyGems credential
-            /// *   **clojars_token**: Clojars token
-            /// *   **phoenix_web_passwd**: Phoenix web credential
-            /// *   **puttygen_private_key**: PuTTYgen private key
-            /// *   **google_oauth_token**: Google OAuth access token
-            /// *   **rubyonrails_cfg**: Ruby On Rails database configuration
-            /// *   **lob_api_key**: Lob API key for Lob
-            /// *   **pkcs_cred**: PKCS#12 certificate
-            /// *   **otr_private_key**: Off-the-Record Messaging (OTR) private key
-            /// *   **contentful_delivery_token**: Contentful delivery token
-            /// *   **digital_ocean_tugboat**: DigitalOcean Tugboat configuration
-            /// *   **dsa_private_key**: Digital Signature Algorithm (DSA) private key
-            /// *   **rails_app_token**: app token for Rails
-            /// *   **git_cred**: Git user credential
-            /// *   **newrelic_api_key**: User API key for New Relic
-            /// *   **github_hub**: hub configuration for storing GitHub tokens
-            /// *   **rubygem**: Rubygem Token
+            /// <b>Example:</b>
+            /// <para>google_oauth_key</para>
             /// </summary>
             [NameInMap("SensitiveFileKey")]
             [Validation(Required=false)]
             public string SensitiveFileKey { get; set; }
 
             /// <summary>
-            /// The name of the alert type for the sensitive file.
+            /// <para>The name of the alert type for the sensitive file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Google OAuth Key</para>
             /// </summary>
             [NameInMap("SensitiveFileName")]
             [Validation(Required=false)]
@@ -285,10 +347,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

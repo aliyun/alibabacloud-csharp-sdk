@@ -10,69 +10,91 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClusterImageSecuritySummaryRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c3aaf6c8085f84791882eef200cd2****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The key of the condition that is used to query containers. Valid values:
+        /// <para>The key of the condition that is used to query containers. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>instanceId</b>: the instance ID of the container</description></item>
+        /// <item><description><b>clusterId</b>: the ID of the cluster</description></item>
+        /// <item><description><b>regionId</b>: the region ID of the container</description></item>
+        /// <item><description><b>clusterName</b>: the name of the cluster</description></item>
+        /// <item><description><b>image</b>: the name of the image</description></item>
+        /// <item><description><b>imageRepoName</b>: the name of the image repository</description></item>
+        /// <item><description><b>imageRepoNamespace</b>: the namespace to which the image repository belongs</description></item>
+        /// <item><description><b>imageRepoTag</b>: the tag that is added to the image repository</description></item>
+        /// <item><description><b>imageDigest</b>: the digest of the image</description></item>
+        /// <item><description><b>clusterType</b>: the type of the cluster</description></item>
+        /// <item><description><b>hostIp</b>: the public IP address</description></item>
+        /// <item><description><b>pod</b>: the pod</description></item>
+        /// <item><description><b>podIp</b>: the IP address of the pod</description></item>
+        /// <item><description><b>containerId</b>: the ID of the container</description></item>
+        /// <item><description><b>vulStatus</b>: whether vulnerabilities are detected on the container</description></item>
+        /// <item><description><b>alarmStatus</b>: whether alerts are generated for the container</description></item>
+        /// <item><description><b>riskStatus</b>: whether risks are detected on the container</description></item>
+        /// <item><description><b>riskLevel</b>: the risk level of the container</description></item>
+        /// <item><description><b>containerScope</b>: the type of the container</description></item>
+        /// </list>
         /// 
-        /// *   **instanceId**: the instance ID of the container
-        /// *   **clusterId**: the ID of the cluster
-        /// *   **regionId**: the region ID of the container
-        /// *   **clusterName**: the name of the cluster
-        /// *   **image**: the name of the image
-        /// *   **imageRepoName**: the name of the image repository
-        /// *   **imageRepoNamespace**: the namespace to which the image repository belongs
-        /// *   **imageRepoTag**: the tag that is added to the image repository
-        /// *   **imageDigest**: the digest of the image
-        /// *   **clusterType**: the type of the cluster
-        /// *   **hostIp**: the public IP address
-        /// *   **pod**: the pod
-        /// *   **podIp**: the IP address of the pod
-        /// *   **containerId**: the ID of the container
-        /// *   **vulStatus**: whether vulnerabilities are detected on the container
-        /// *   **alarmStatus**: whether alerts are generated for the container
-        /// *   **riskStatus**: whether risks are detected on the container
-        /// *   **riskLevel**: the risk level of the container
-        /// *   **containerScope**: the type of the container
+        /// <b>Example:</b>
+        /// <para>clusterId</para>
         /// </summary>
         [NameInMap("ContainerFieldName")]
         [Validation(Required=false)]
         public string ContainerFieldName { get; set; }
 
         /// <summary>
-        /// The value of the condition that is used to query containers.
+        /// <para>The value of the condition that is used to query containers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c2ac28b2d0c734df29a21d29f18ac****</para>
         /// </summary>
         [NameInMap("ContainerFieldValue")]
         [Validation(Required=false)]
         public string ContainerFieldValue { get; set; }
 
         /// <summary>
-        /// The digest of the image.
+        /// <para>The digest of the image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>402902de6480a020b9f29e7105e77b8a218bc1cccbc3935d3b38c8ea9ba2****</para>
         /// </summary>
         [NameInMap("ImageDigest")]
         [Validation(Required=false)]
         public string ImageDigest { get; set; }
 
         /// <summary>
-        /// The name of the image repository.
+        /// <para>The name of the image repository.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>repo</para>
         /// </summary>
         [NameInMap("ImageRepoName")]
         [Validation(Required=false)]
         public string ImageRepoName { get; set; }
 
         /// <summary>
-        /// The namespace of the image repository.
+        /// <para>The namespace of the image repository.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>namespace</para>
         /// </summary>
         [NameInMap("ImageRepoNamespace")]
         [Validation(Required=false)]
         public string ImageRepoNamespace { get; set; }
 
         /// <summary>
-        /// The tag of the image.
+        /// <para>The tag of the image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3.54.0.1</para>
         /// </summary>
         [NameInMap("ImageTag")]
         [Validation(Required=false)]
@@ -83,7 +105,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The source IP address.
+        /// <para>The source IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60.190.XXX.XXX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

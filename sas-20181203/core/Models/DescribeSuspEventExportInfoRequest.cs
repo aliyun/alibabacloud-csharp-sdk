@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventExportInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the export task.
+        /// <para>The ID of the export task.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~ExportSuspEvents~~">ExportSuspEvents</a> operation to query the ID.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [ExportSuspEvents](~~ExportSuspEvents~~) operation to query the ID.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("ExportId")]
         [Validation(Required=false)]

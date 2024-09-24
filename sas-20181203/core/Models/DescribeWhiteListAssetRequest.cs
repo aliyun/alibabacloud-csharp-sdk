@@ -10,54 +10,73 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWhiteListAssetRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The maximum asset ID of the most recent query.
+        /// <para>The maximum asset ID of the most recent query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1001</para>
         /// </summary>
         [NameInMap("LastMaxId")]
         [Validation(Required=false)]
         public long? LastMaxId { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: **500**. Default value: **500**. This value indicates that 500 entries are displayed on each page.
+        /// <para>The number of entries per page. Maximum value: <b>500</b>. Default value: <b>500</b>. This value indicates that 500 entries are displayed on each page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+        /// <para>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>180.119.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The ID of the policy.
+        /// <para>The ID of the policy.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain the ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeWhiteListStrategyList](~~DescribeWhiteListStrategyList~~) operation to obtain the ID.
+        /// <b>Example:</b>
+        /// <para>2730</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// The policy type of the asset that you want to query. Valid values:
+        /// <para>The policy type of the asset that you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: learning policy</description></item>
+        /// <item><description><b>2</b>: application policy</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1**: learning policy
-        /// *   **2**: application policy
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

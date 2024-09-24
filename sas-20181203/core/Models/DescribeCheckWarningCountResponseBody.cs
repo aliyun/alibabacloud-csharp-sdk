@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningCountResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4</para>
+        /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>9693CBA1-1EC4-5B5A-8D96-34010D9DXXXX</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class RefreshAssetsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>340D7FC4-D575-1661-8ACD-CFA7BE57B795</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

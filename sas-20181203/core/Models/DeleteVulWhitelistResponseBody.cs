@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteVulWhitelistResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9FBC6E47-7508-58C9-9E76-528E118CB1CC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,20 +10,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CheckSecurityEventIdRequest : TeaModel {
         /// <summary>
-        /// The IDs of alert events. You can specify up to 100 IDs. If you do not specify this parameter, the value of the response parameter **Data** is **false**. The value false indicates that no alert events are generated on the server.
+        /// <para>The IDs of alert events. You can specify up to 100 IDs. If you do not specify this parameter, the value of the response parameter <b>Data</b> is <b>false</b>. The value false indicates that no alert events are generated on the server.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the IDs of alert events.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the IDs of alert events.
+        /// <b>Example:</b>
+        /// <para>[&quot;1234567&quot;,&quot;98765432&quot;]</para>
         /// </summary>
         [NameInMap("SecurityEventIds")]
         [Validation(Required=false)]
         public List<string> SecurityEventIds { get; set; }
 
         /// <summary>
-        /// The UUID of the server.
+        /// <para>The UUID of the server.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>96ad2473-bc60-45ba-ad1c-932e2866****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

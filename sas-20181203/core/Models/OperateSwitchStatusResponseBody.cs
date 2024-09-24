@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateSwitchStatusResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8AE9D3DA-406B-51FA-AA1C-89440C1459BF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

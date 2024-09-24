@@ -10,132 +10,186 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningSummaryRequest : TeaModel {
         /// <summary>
-        /// The ID of the container cluster.
+        /// <para>The ID of the container cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+        /// <b>Example:</b>
+        /// <para>c80dae73bd1be442699766b14ffd0****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the container field. Valid values:
+        /// <para>The name of the container field. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>clusterId</b>: the ID of the cluster</description></item>
+        /// <item><description><b>image</b>: the name of the image</description></item>
+        /// <item><description><b>imageId</b>: the ID of the image</description></item>
+        /// <item><description><b>namespace</b>: the namespace</description></item>
+        /// </list>
         /// 
-        /// *   **clusterId**: the ID of the cluster
-        /// *   **image**: the name of the image
-        /// *   **imageId**: the ID of the image
-        /// *   **namespace**: the namespace
+        /// <b>Example:</b>
+        /// <para>namespace</para>
         /// </summary>
         [NameInMap("ContainerFieldName")]
         [Validation(Required=false)]
         public string ContainerFieldName { get; set; }
 
         /// <summary>
-        /// The value of the container field.
+        /// <para>The value of the container field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c819391d2d520485fa3e81e2dc2ea****</para>
         /// </summary>
         [NameInMap("ContainerFieldValue")]
         [Validation(Required=false)]
         public string ContainerFieldValue { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The ID of the asset group.
+        /// <para>The ID of the asset group.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and the response. Valid values:
+        /// <para>The language of the content within the request and the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The name of the risk item.
+        /// <para>The name of the risk item.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Redis</para>
         /// </summary>
         [NameInMap("RiskName")]
         [Validation(Required=false)]
         public string RiskName { get; set; }
 
         /// <summary>
-        /// The status of the baseline check. Valid values:
+        /// <para>The status of the baseline check. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: failed</description></item>
+        /// <item><description><b>3</b>: passed</description></item>
+        /// </list>
         /// 
-        /// *   **1**: failed
-        /// *   **3**: passed
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RiskStatus")]
         [Validation(Required=false)]
         public int? RiskStatus { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>219.133.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The status of the check item. Valid values:
+        /// <para>The status of the check item. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: failed</description></item>
+        /// <item><description><b>2</b>: verifying</description></item>
+        /// <item><description><b>3</b>: passed</description></item>
+        /// <item><description><b>5</b>: expired</description></item>
+        /// <item><description><b>6</b>: ignored</description></item>
+        /// </list>
         /// 
-        /// *   **1**: failed
-        /// *   **2**: verifying
-        /// *   **3**: passed
-        /// *   **5**: expired
-        /// *   **6**: ignored
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The ID of the baseline check policy.
+        /// <para>The ID of the baseline check policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// The type of the query condition. Valid values:
+        /// <para>The type of the query condition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>uuid</b>: the ID of an asset</description></item>
+        /// </list>
         /// 
-        /// *   **uuid**: the ID of an asset
+        /// <b>Example:</b>
+        /// <para>uuid</para>
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]
         public string TargetType { get; set; }
 
         /// <summary>
-        /// The level-1 type of check items.
+        /// <para>The level-1 type of check items.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the level-1 types of check items.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the level-1 types of check items.
+        /// <b>Example:</b>
+        /// <para>database</para>
         /// </summary>
         [NameInMap("TypeName")]
         [Validation(Required=false)]
         public string TypeName { get; set; }
 
         /// <summary>
-        /// The UUID of the asset.
+        /// <para>The UUID of the asset.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of assets.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.
+        /// <b>Example:</b>
+        /// <para>f03259d8-1e81-4fae-bcbb-275fb5****</para>
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

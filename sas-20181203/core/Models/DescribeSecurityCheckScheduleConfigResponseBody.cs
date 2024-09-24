@@ -10,53 +10,68 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSecurityCheckScheduleConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>48D2E9A9-A1B0-4295-B727-0995757C47E9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The configurations of custom check tasks.
+        /// <para>The configurations of custom check tasks.</para>
         /// </summary>
         [NameInMap("RiskCheckJobConfig")]
         [Validation(Required=false)]
         public DescribeSecurityCheckScheduleConfigResponseBodyRiskCheckJobConfig RiskCheckJobConfig { get; set; }
         public class DescribeSecurityCheckScheduleConfigResponseBodyRiskCheckJobConfig : TeaModel {
             /// <summary>
-            /// The day of the week when the check tasks are performed. Multiple days can be specified. Multiple days are separated by commas (,).
+            /// <para>The day of the week when the check tasks are performed. Multiple days can be specified. Multiple days are separated by commas (,).</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: Monday</description></item>
+            /// <item><description><b>2</b>: Tuesday</description></item>
+            /// <item><description><b>3</b>: Wednesday</description></item>
+            /// <item><description><b>4</b>: Thursday</description></item>
+            /// <item><description><b>5</b>: Friday</description></item>
+            /// <item><description><b>6</b>: Saturday</description></item>
+            /// <item><description><b>7</b>: Sunday</description></item>
+            /// </list>
             /// 
-            /// *   **1**: Monday
-            /// *   **2**: Tuesday
-            /// *   **3**: Wednesday
-            /// *   **4**: Thursday
-            /// *   **5**: Friday
-            /// *   **6**: Saturday
-            /// *   **7**: Sunday
+            /// <b>Example:</b>
+            /// <para>1,2,3</para>
             /// </summary>
             [NameInMap("DaysOfWeek")]
             [Validation(Required=false)]
             public string DaysOfWeek { get; set; }
 
             /// <summary>
-            /// The time range during which check tasks end. Valid values:
+            /// <para>The time range during which check tasks end. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>6</b>: 00:00 to 06:00</description></item>
+            /// <item><description><b>12</b>: 06:00 to 12:00</description></item>
+            /// <item><description><b>18</b>: 12:00 to 18:00</description></item>
+            /// <item><description><b>24</b>: 18:00 to 24:00</description></item>
+            /// </list>
             /// 
-            /// *   **6**: 00:00 to 06:00
-            /// *   **12**: 06:00 to 12:00
-            /// *   **18**: 12:00 to 18:00
-            /// *   **24**: 18:00 to 24:00
+            /// <b>Example:</b>
+            /// <para>12</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public int? EndTime { get; set; }
 
             /// <summary>
-            /// The time range during which check tasks start. Valid values:
+            /// <para>The time range during which check tasks start. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: 00:00 to 06:00</description></item>
+            /// <item><description><b>6</b>: 06:00 to 12:00</description></item>
+            /// <item><description><b>12</b>: 12:00 to 18:00</description></item>
+            /// <item><description><b>18</b>: 18:00 to 24:00</description></item>
+            /// </list>
             /// 
-            /// *   **0**: 00:00 to 06:00
-            /// *   **6**: 06:00 to 12:00
-            /// *   **12**: 12:00 to 18:00
-            /// *   **18**: 18:00 to 24:00
+            /// <b>Example:</b>
+            /// <para>6</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]

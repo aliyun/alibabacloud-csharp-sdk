@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDefaultProxyInstallVersionResponseBody : TeaModel {
         /// <summary>
-        /// The default installation version.
+        /// <para>The default installation version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>proxy_01_03</para>
         /// </summary>
         [NameInMap("InstallVersion")]
         [Validation(Required=false)]
         public string InstallVersion { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F9FCB51A-5078-5D31-9C4D-3B25BEF068C7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

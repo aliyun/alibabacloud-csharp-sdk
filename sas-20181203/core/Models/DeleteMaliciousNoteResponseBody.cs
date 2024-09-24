@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteMaliciousNoteResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D65AADFC-1D20-5A6A-8F6A-9FA53CXXXXX</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

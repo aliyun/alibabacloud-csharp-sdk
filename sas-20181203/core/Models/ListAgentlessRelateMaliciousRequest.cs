@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessRelateMaliciousRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The ID of the event.
+        /// <para>The ID of the event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80****</para>
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public long? EventId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

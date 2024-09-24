@@ -10,84 +10,114 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClusterBasicInfoResponseBody : TeaModel {
         /// <summary>
-        /// The detailed information about the cluster.
+        /// <para>The detailed information about the cluster.</para>
         /// </summary>
         [NameInMap("ClusterInfo")]
         [Validation(Required=false)]
         public DescribeClusterBasicInfoResponseBodyClusterInfo ClusterInfo { get; set; }
         public class DescribeClusterBasicInfoResponseBodyClusterInfo : TeaModel {
             /// <summary>
-            /// The ID of cluster.
+            /// <para>The ID of cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c870ec78ecbcb41d2a35c679823ef****</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// <para>The name of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testackpro</para>
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// The type of the cluster. Valid values:
+            /// <para>The type of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ManagedKubernetes</b>: managed Kubernetes cluster</description></item>
+            /// <item><description><b>NotManagedKubernetes</b>: non-managed Kubernetes cluster</description></item>
+            /// <item><description><b>PrivateKubernetes</b>: private cluster</description></item>
+            /// <item><description><b>kubernetes</b>: dedicated Kubernetes cluster</description></item>
+            /// <item><description><b>ask</b>: dedicated ASK cluster</description></item>
+            /// </list>
             /// 
-            /// *   **ManagedKubernetes**: managed Kubernetes cluster
-            /// *   **NotManagedKubernetes**: non-managed Kubernetes cluster
-            /// *   **PrivateKubernetes**: private cluster
-            /// *   **kubernetes**: dedicated Kubernetes cluster
-            /// *   **ask**: dedicated ASK cluster
+            /// <b>Example:</b>
+            /// <para>kubernetes</para>
             /// </summary>
             [NameInMap("ClusterType")]
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// The timestamp when the cluster was created. Unit: milliseconds.
+            /// <para>The timestamp when the cluster was created. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1662038134000</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The version of the cluster.
+            /// <para>The version of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.22.10-aliyun.1</para>
             /// </summary>
             [NameInMap("CurrentVersion")]
             [Validation(Required=false)]
             public string CurrentVersion { get; set; }
 
             /// <summary>
-            /// The number of instances in the cluster.
+            /// <para>The number of instances in the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the cluster is deployed.
+            /// <para>The ID of the region in which the cluster is deployed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The status of the cluster. Valid values:
+            /// <para>The status of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>unavailable</b></description></item>
+            /// <item><description><b>Available</b></description></item>
+            /// <item><description><b>Creating</b></description></item>
+            /// <item><description><b>CreateFailed</b></description></item>
+            /// </list>
             /// 
-            /// *   **unavailable**
-            /// *   **Available**
-            /// *   **Creating**
-            /// *   **CreateFailed**
+            /// <b>Example:</b>
+            /// <para>Available</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// Indicates whether the cluster is enabled. Valid values:
+            /// <para>Indicates whether the cluster is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: The cluster is enabled.</description></item>
+            /// <item><description><b>false</b>: The cluster is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   **true**: The cluster is enabled.
-            /// *   **false**: The cluster is disabled.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("TargetResult")]
             [Validation(Required=false)]
@@ -96,7 +126,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>24A20733-10A0-4AF6-BE6B-E3322413BB68</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

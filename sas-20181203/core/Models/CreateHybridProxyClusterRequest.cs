@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateHybridProxyClusterRequest : TeaModel {
         /// <summary>
-        /// The name of the cluster.
+        /// <para>The name of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Chester-Test</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The endpoint of the cluster.
-        /// >  You can specify an IP address or a domain name
+        /// <para>The endpoint of the cluster.</para>
+        /// <remarks>
+        /// <para> You can specify an IP address or a domain name</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.xx.xx</para>
         /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]
         public string Ip { get; set; }
 
         /// <summary>
-        /// The description of the cluster.
+        /// <para>The description of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>remark test</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

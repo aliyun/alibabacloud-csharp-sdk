@@ -10,53 +10,73 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ResetLogShipperRequest : TeaModel {
         /// <summary>
-        /// The global retention period of hot data.
+        /// <para>The global retention period of hot data.</para>
+        /// <remarks>
+        /// <para> The value of this parameter must be at least 7 and smaller than the log retention period. Unit: days.</para>
+        /// </remarks>
         /// 
-        /// >  The value of this parameter must be at least 7 and smaller than the log retention period. Unit: days.
+        /// <b>Example:</b>
+        /// <para>7</para>
         /// </summary>
         [NameInMap("HotTtl")]
         [Validation(Required=false)]
         public int? HotTtl { get; set; }
 
         /// <summary>
-        /// The settings of the log analysis feature.
+        /// <para>The settings of the log analysis feature.</para>
         /// </summary>
         [NameInMap("LogMetaList")]
         [Validation(Required=false)]
         public List<ResetLogShipperRequestLogMetaList> LogMetaList { get; set; }
         public class ResetLogShipperRequestLogMetaList : TeaModel {
             /// <summary>
-            /// The Logstore that you want to configure.
+            /// <para>The Logstore that you want to configure.</para>
+            /// <remarks>
+            /// <para> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the Logstore.</para>
+            /// </remarks>
             /// 
-            /// >  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the Logstore.
+            /// <b>Example:</b>
+            /// <para>sas-security-log</para>
             /// </summary>
             [NameInMap("ConfigLogStore")]
             [Validation(Required=false)]
             public string ConfigLogStore { get; set; }
 
             /// <summary>
-            /// The retention period of hot data in the Logstore.
+            /// <para>The retention period of hot data in the Logstore.</para>
+            /// <remarks>
+            /// <para> The value of this parameter must be at least 7 and smaller than the log retention period. Unit: days. If you specify this parameter for the Logstore, the global retention period of hot data specified by the HotTtl parameter is overwritten.</para>
+            /// </remarks>
             /// 
-            /// >  The value of this parameter must be at least 7 and smaller than the log retention period. Unit: days. If you specify this parameter for the Logstore, the global retention period of hot data specified by the HotTtl parameter is overwritten.
+            /// <b>Example:</b>
+            /// <para>7</para>
             /// </summary>
             [NameInMap("HotTtl")]
             [Validation(Required=false)]
             public int? HotTtl { get; set; }
 
             /// <summary>
-            /// The status of the log analysis feature. Valid values:
+            /// <para>The status of the log analysis feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>disabled</b></description></item>
+            /// <item><description><b>enabled</b></description></item>
+            /// </list>
             /// 
-            /// *   **disabled**
-            /// *   **enabled**
+            /// <b>Example:</b>
+            /// <para>enabled</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The log retention period of the Logstore.
+            /// <para>The log retention period of the Logstore.</para>
+            /// <remarks>
+            /// <para> If you specify this parameter for the Logstore, the global log retention period specified by the Ttl parameter is overwritten.</para>
+            /// </remarks>
             /// 
-            /// >  If you specify this parameter for the Logstore, the global log retention period specified by the Ttl parameter is overwritten.
+            /// <b>Example:</b>
+            /// <para>60</para>
             /// </summary>
             [NameInMap("Ttl")]
             [Validation(Required=false)]
@@ -65,9 +85,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The global log retention period.
+        /// <para>The global log retention period.</para>
+        /// <remarks>
+        /// <para> This parameter is supported only when the log analysis feature uses the pay-as-you-go billing method.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is supported only when the log analysis feature uses the pay-as-you-go billing method.
+        /// <b>Example:</b>
+        /// <para>180</para>
         /// </summary>
         [NameInMap("Ttl")]
         [Validation(Required=false)]

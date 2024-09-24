@@ -10,91 +10,124 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetVirusScanConfigResponseBody : TeaModel {
         /// <summary>
-        /// The data returned if the request was successful.
+        /// <para>The data returned if the request was successful.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetVirusScanConfigResponseBodyData Data { get; set; }
         public class GetVirusScanConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the task configuration.
+            /// <para>The ID of the task configuration.</para>
+            /// <remarks>
+            /// <para>You can call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to query the IDs of task configurations.</para>
+            /// </remarks>
             /// 
-            /// > You can call the [DescribeCycleTaskList](~~DescribeCycleTaskList~~) operation to query the IDs of task configurations.
+            /// <b>Example:</b>
+            /// <para>97a1fed216908e417407344e1505xxxx</para>
             /// </summary>
             [NameInMap("ConfigId")]
             [Validation(Required=false)]
             public string ConfigId { get; set; }
 
             /// <summary>
-            /// Indicates whether the periodic scan feature is enabled. Valid value:
+            /// <para>Indicates whether the periodic scan feature is enabled. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: The feature is enabled</description></item>
+            /// <item><description><b>0</b>: The feature is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   **1**: The feature is enabled
-            /// *   **0**: The feature is disabled.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public int? Enable { get; set; }
 
             /// <summary>
-            /// The interval at which virus scan tasks are run.
+            /// <para>The interval at which virus scan tasks are run.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>7</para>
             /// </summary>
             [NameInMap("IntervalPeriod")]
             [Validation(Required=false)]
             public int? IntervalPeriod { get; set; }
 
             /// <summary>
-            /// The unit of the interval at which virus scan tasks are run.
+            /// <para>The unit of the interval at which virus scan tasks are run.</para>
+            /// <list type="bullet">
+            /// <item><description>The value is fixed as <b>day</b>.</description></item>
+            /// </list>
             /// 
-            /// *   The value is fixed as **day**.
+            /// <b>Example:</b>
+            /// <para>day</para>
             /// </summary>
             [NameInMap("PeriodUnit")]
             [Validation(Required=false)]
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// The file paths.
+            /// <para>The file paths.</para>
             /// </summary>
             [NameInMap("ScanPath")]
             [Validation(Required=false)]
             public List<string> ScanPath { get; set; }
 
             /// <summary>
-            /// The type of the virus scan task. Valid values:
+            /// <para>The type of the virus scan task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>system</b>: automatic scan.</description></item>
+            /// <item><description><b>user</b>: custom scan.</description></item>
+            /// </list>
             /// 
-            /// *   **system**: automatic scan.
-            /// *   **user**: custom scan.
+            /// <b>Example:</b>
+            /// <para>user</para>
             /// </summary>
             [NameInMap("ScanType")]
             [Validation(Required=false)]
             public string ScanType { get; set; }
 
             /// <summary>
-            /// The key that stores the asset information.
+            /// <para>The key that stores the asset information.</para>
+            /// <remarks>
+            /// <para>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain the key value.</para>
+            /// </remarks>
             /// 
-            /// > You can call the [GetAssetSelectionConfig](~~GetAssetSelectionConfig~~) operation to obtain the key value.
+            /// <b>Example:</b>
+            /// <para>345ddbea-a57f-437e-832f-fb7a1202xxxx</para>
             /// </summary>
             [NameInMap("SelectionKey")]
             [Validation(Required=false)]
             public string SelectionKey { get; set; }
 
             /// <summary>
-            /// The end time of the virus scan task. The time is a time frame.
+            /// <para>The end time of the virus scan task. The time is a time frame.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6</para>
             /// </summary>
             [NameInMap("TargetEndTime")]
             [Validation(Required=false)]
             public int? TargetEndTime { get; set; }
 
             /// <summary>
-            /// The start time of the virus scan task. The time is a time frame.
+            /// <para>The start time of the virus scan task. The time is a time frame.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("TargetStartTime")]
             [Validation(Required=false)]
             public int? TargetStartTime { get; set; }
 
             /// <summary>
-            /// The type of the task. Valid value:
+            /// <para>The type of the task. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: a virus scan task.</description></item>
+            /// </list>
             /// 
-            /// *   **VIRUS_VUL_SCHEDULE_SCAN**: a virus scan task.
+            /// <b>Example:</b>
+            /// <para>VIRUS_VUL_SCHEDULE_SCAN</para>
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]
@@ -103,7 +136,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>028CF634-5268-5660-9575-48C9ED6BDEFC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

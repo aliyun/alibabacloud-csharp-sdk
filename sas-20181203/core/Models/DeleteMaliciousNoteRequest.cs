@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteMaliciousNoteRequest : TeaModel {
         /// <summary>
-        /// The ID of the remarks.
+        /// <para>The ID of the remarks.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> operation to obtain the ID from the NoteId parameter.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListAgentlessMaliciousFiles](~~ListAgentlessMaliciousFiles~~) operation to obtain the ID from the NoteId parameter.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("NoteId")]
         [Validation(Required=false)]

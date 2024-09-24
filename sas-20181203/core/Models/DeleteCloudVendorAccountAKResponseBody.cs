@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteCloudVendorAccountAKResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4539D402-F7A4-5915-9580-EC227BF*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

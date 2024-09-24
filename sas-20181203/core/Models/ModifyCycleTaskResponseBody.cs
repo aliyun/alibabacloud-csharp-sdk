@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyCycleTaskResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AA33E30-7192-5648-93CD-D0E476A2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

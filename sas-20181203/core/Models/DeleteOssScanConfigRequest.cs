@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteOssScanConfigRequest : TeaModel {
         /// <summary>
-        /// The configuration ID.
+        /// <para>The configuration ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListOssScanConfig~~">ListOssScanConfig</a> operation to query configuration IDs.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListOssScanConfig](~~ListOssScanConfig~~) operation to query configuration IDs.
+        /// <b>Example:</b>
+        /// <para>1589</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteCustomizedDictRequest : TeaModel {
         /// <summary>
-        /// The source IP address.
+        /// <para>The source IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123.103.9.***</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

@@ -10,194 +10,270 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyScaDetailRequest : TeaModel {
         /// <summary>
-        /// The type of the asset fingerprint that you want to query. Default value: **sca**. Valid values:
+        /// <para>The type of the asset fingerprint that you want to query. Default value: <b>sca</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>sca</b>: middleware</description></item>
+        /// <item><description><b>sca_database</b>: database</description></item>
+        /// <item><description><b>sca_web</b>: web service</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the default value <b>sca</b> is used, which indicates that middleware fingerprints are queried.</para>
+        /// </remarks>
         /// 
-        /// *   **sca**: middleware
-        /// *   **sca_database**: database
-        /// *   **sca_web**: web service
-        /// 
-        /// >  If you do not specify this parameter, the default value **sca** is used, which indicates that middleware fingerprints are queried.
+        /// <b>Example:</b>
+        /// <para>sca</para>
         /// </summary>
         [NameInMap("Biz")]
         [Validation(Required=false)]
         public string Biz { get; set; }
 
         /// <summary>
-        /// The type of the middleware, database, or web service that you want to query. Valid values:
+        /// <para>The type of the middleware, database, or web service that you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>system_service</b>: system service</description></item>
+        /// <item><description><b>software_library</b>: software library</description></item>
+        /// <item><description><b>docker_component</b>: container component</description></item>
+        /// <item><description><b>database</b>: database</description></item>
+        /// <item><description><b>web_container</b>: web container</description></item>
+        /// <item><description><b>jar</b>: JAR package</description></item>
+        /// <item><description><b>web_framework</b>: web framework</description></item>
+        /// </list>
         /// 
-        /// *   **system_service**: system service
-        /// *   **software_library**: software library
-        /// *   **docker_component**: container component
-        /// *   **database**: database
-        /// *   **web_container**: web container
-        /// *   **jar**: JAR package
-        /// *   **web_framework**: web framework
+        /// <b>Example:</b>
+        /// <para>system_service</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The name of the middleware, database, or web service.
+        /// <para>The name of the middleware, database, or web service.</para>
+        /// <remarks>
+        /// <para> This parameter is deprecated. You can ignore it.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is deprecated. You can ignore it.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public long? Name { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **10**.
+        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <remarks>
+        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// >  We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The PID.
+        /// <para>The PID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>756</para>
         /// </summary>
         [NameInMap("Pid")]
         [Validation(Required=false)]
         public string Pid { get; set; }
 
         /// <summary>
-        /// The port that the process monitors.
+        /// <para>The port that the process monitors.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>68</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }
 
         /// <summary>
-        /// The timestamp when the process ends. Unit: milliseconds.
+        /// <para>The timestamp when the process ends. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1641110965</para>
         /// </summary>
         [NameInMap("ProcessStartedEnd")]
         [Validation(Required=false)]
         public long? ProcessStartedEnd { get; set; }
 
         /// <summary>
-        /// The timestamp when the process starts. Unit: milliseconds.
+        /// <para>The timestamp when the process starts. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1641024565</para>
         /// </summary>
         [NameInMap("ProcessStartedStart")]
         [Validation(Required=false)]
         public long? ProcessStartedStart { get; set; }
 
         /// <summary>
-        /// The search condition, such as a server name or a server IP address.
+        /// <para>The search condition, such as a server name or a server IP address.</para>
+        /// <remarks>
+        /// <para> Fuzzy match is supported.</para>
+        /// </remarks>
         /// 
-        /// >  Fuzzy match is supported.
+        /// <b>Example:</b>
+        /// <para>192.168</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// The name of the asset fingerprint that you want to query.
+        /// <para>The name of the asset fingerprint that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>openssl</para>
         /// </summary>
         [NameInMap("ScaName")]
         [Validation(Required=false)]
         public string ScaName { get; set; }
 
         /// <summary>
-        /// The name of the process.
+        /// <para>The name of the process.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>open</para>
         /// </summary>
         [NameInMap("ScaNamePattern")]
         [Validation(Required=false)]
         public string ScaNamePattern { get; set; }
 
         /// <summary>
-        /// The version of the middleware, database, or web service.
+        /// <para>The version of the middleware, database, or web service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.0.2k</para>
         /// </summary>
         [NameInMap("ScaVersion")]
         [Validation(Required=false)]
         public string ScaVersion { get; set; }
 
         /// <summary>
-        /// The search keyword. You must specify this parameter based on the value of the **SearchItem** parameter.
+        /// <para>The search keyword. You must specify this parameter based on the value of the <b>SearchItem</b> parameter.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If the <b>SearchItem</b> parameter is set to <b>name</b>, you must enter the name of an asset fingerprint.</para>
+        /// </description></item>
+        /// <item><description><para>If the <b>SearchItem</b> parameter is set to <b>type</b>, you must enter the type of an asset fingerprint. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>system_service</b>: system service</description></item>
+        /// <item><description><b>software_library</b>: software library</description></item>
+        /// <item><description><b>docker_component</b>: container component</description></item>
+        /// <item><description><b>database</b>: database</description></item>
+        /// <item><description><b>web_container</b>: web container</description></item>
+        /// <item><description><b>jar</b>: JAR package</description></item>
+        /// <item><description><b>web_framework</b>: web framework</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You must specify both the <b>SearchItem</b> and <b>SearchInfo</b> parameters before you can query the asset fingerprints based on the specified name or type.</para>
+        /// </remarks>
         /// 
-        /// *   If the **SearchItem** parameter is set to **name**, you must enter the name of an asset fingerprint.
-        /// 
-        /// *   If the **SearchItem** parameter is set to **type**, you must enter the type of an asset fingerprint. Valid values:
-        /// 
-        ///     *   **system_service**: system service
-        ///     *   **software_library**: software library
-        ///     *   **docker_component**: container component
-        ///     *   **database**: database
-        ///     *   **web_container**: web container
-        ///     *   **jar**: JAR package
-        ///     *   **web_framework**: web framework
-        /// 
-        /// >  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.
+        /// <b>Example:</b>
+        /// <para>openssl</para>
         /// </summary>
         [NameInMap("SearchInfo")]
         [Validation(Required=false)]
         public string SearchInfo { get; set; }
 
         /// <summary>
-        /// The keyword of the subquery. You must specify this parameter based on the value of the **SearchItemSub** parameter.
+        /// <para>The keyword of the subquery. You must specify this parameter based on the value of the <b>SearchItemSub</b> parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>If the <b>SearchItemSub</b> parameter is set to <b>port</b>, you must enter a port number.</description></item>
+        /// <item><description>If the <b>SearchItemSub</b> parameter is set to <b>pid</b>, you must enter a process ID (PID).</description></item>
+        /// <item><description>If the <b>SearchItemSub</b> parameter is set to <b>version</b>, you must enter the version of a database, middleware, or web service.</description></item>
+        /// <item><description>If the <b>SearchItemSub</b> parameter is set to <b>user</b>, you must enter a username.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The subquery is used to search for data of a specified database, middleware, or web service.</para>
+        /// </remarks>
         /// 
-        /// *   If the **SearchItemSub** parameter is set to **port**, you must enter a port number.
-        /// *   If the **SearchItemSub** parameter is set to **pid**, you must enter a process ID (PID).
-        /// *   If the **SearchItemSub** parameter is set to **version**, you must enter the version of a database, middleware, or web service.
-        /// *   If the **SearchItemSub** parameter is set to **user**, you must enter a username.
-        /// 
-        /// >  The subquery is used to search for data of a specified database, middleware, or web service.
+        /// <b>Example:</b>
+        /// <para>1.0.2k</para>
         /// </summary>
         [NameInMap("SearchInfoSub")]
         [Validation(Required=false)]
         public string SearchInfoSub { get; set; }
 
         /// <summary>
-        /// The type of the search condition. Valid values:
+        /// <para>The type of the search condition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>name</b>: the name of a database, middleware, or web service</description></item>
+        /// <item><description><b>type</b>: the type of a database, middleware, or web service</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You must specify both the <b>SearchItem</b> and <b>SearchInfo</b> parameters before you can query the asset fingerprints based on the specified name or type.</para>
+        /// </remarks>
         /// 
-        /// *   **name**: the name of a database, middleware, or web service
-        /// *   **type**: the type of a database, middleware, or web service
-        /// 
-        /// >  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.
+        /// <b>Example:</b>
+        /// <para>name</para>
         /// </summary>
         [NameInMap("SearchItem")]
         [Validation(Required=false)]
         public string SearchItem { get; set; }
 
         /// <summary>
-        /// The type of the subquery. Valid values:
+        /// <para>The type of the subquery. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>port</b></description></item>
+        /// <item><description><b>pid</b></description></item>
+        /// <item><description><b>version</b></description></item>
+        /// <item><description><b>user</b></description></item>
+        /// </list>
         /// 
-        /// *   **port**
-        /// *   **pid**
-        /// *   **version**
-        /// *   **user**
+        /// <b>Example:</b>
+        /// <para>version</para>
         /// </summary>
         [NameInMap("SearchItemSub")]
         [Validation(Required=false)]
         public string SearchItemSub { get; set; }
 
         /// <summary>
-        /// The user who runs the process.
+        /// <para>The user who runs the process.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>root</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public string User { get; set; }
 
         /// <summary>
-        /// The UUID of the server on which the middleware, database, or web service is run.
+        /// <para>The UUID of the server on which the middleware, database, or web service is run.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>uuid-02ebabe7-1c19-ab****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

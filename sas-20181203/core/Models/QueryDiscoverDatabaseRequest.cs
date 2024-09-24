@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryDiscoverDatabaseRequest : TeaModel {
         /// <summary>
-        /// The ID of the scan task.
+        /// <para>The ID of the scan task.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~StartDiscoverDatabaseTask~~">StartDiscoverDatabaseTask</a> operation to query the ID of the task.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [StartDiscoverDatabaseTask](~~StartDiscoverDatabaseTask~~) operation to query the ID of the task.
+        /// <b>Example:</b>
+        /// <para>7f7b051f-7d1c-46da-b253-a03f3a27****</para>
         /// </summary>
         [NameInMap("CreateMark")]
         [Validation(Required=false)]

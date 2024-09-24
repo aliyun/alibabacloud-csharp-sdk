@@ -10,17 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetBackupAutoConfigStatusResponseBody : TeaModel {
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBackupAutoConfigStatusResponseBodyData Data { get; set; }
         public class GetBackupAutoConfigStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether the anti-ransomware policy for servers can be automatically configured by the managed anti-ransomware feature. Valid values:
+            /// <para>Indicates whether the anti-ransomware policy for servers can be automatically configured by the managed anti-ransomware feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b></description></item>
+            /// </list>
             /// 
-            /// *   **false**
-            /// *   **true**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("CanConfigAuto")]
             [Validation(Required=false)]
@@ -29,7 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>898F7AA7-CECD-5EC7-AF4D-664C601B****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

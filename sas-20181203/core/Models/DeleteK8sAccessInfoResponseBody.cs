@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteK8sAccessInfoResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the request was successful. Valid value:
+        /// <para>Indicates whether the request was successful. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C5338DE5-5D80-51A1-B330-98300AFB80E9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

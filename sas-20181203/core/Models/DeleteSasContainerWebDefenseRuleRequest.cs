@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteSasContainerWebDefenseRuleRequest : TeaModel {
         /// <summary>
-        /// The rule ID.
+        /// <para>The rule ID.</para>
+        /// <remarks>
+        /// <para> You can call the ListContainerWebDefenseRule operation to query the rule ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the ListContainerWebDefenseRule operation to query the rule ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>400597</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

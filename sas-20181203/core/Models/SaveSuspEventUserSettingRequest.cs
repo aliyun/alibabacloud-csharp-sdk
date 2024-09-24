@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SaveSuspEventUserSettingRequest : TeaModel {
         /// <summary>
-        /// The data source of the exception. Set the value to sas.
+        /// <para>The data source of the exception. Set the value to sas.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sas</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
 
         /// <summary>
-        /// The severities of alert notifications. Valid values:
+        /// <para>The severities of alert notifications. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>remind</b></description></item>
+        /// <item><description><b>suspicious</b></description></item>
+        /// <item><description><b>serious</b></description></item>
+        /// </list>
         /// 
-        /// *   **remind**
-        /// *   **suspicious**
-        /// *   **serious**
+        /// <b>Example:</b>
+        /// <para>suspicious,serious,remind</para>
         /// </summary>
         [NameInMap("LevelsOn")]
         [Validation(Required=false)]

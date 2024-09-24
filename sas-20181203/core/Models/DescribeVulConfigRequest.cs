@@ -10,23 +10,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulConfigRequest : TeaModel {
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>113.110.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The type of configuration. By default, all types of configurations are queried. Valid values:
+        /// <para>The type of configuration. By default, all types of configurations are queried. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
+        /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
+        /// <item><description><b>cms</b>: Web-CMS vulnerability.</description></item>
+        /// <item><description><b>app</b>: application vulnerability that is detected by using web scanner.</description></item>
+        /// <item><description><b>emg</b>: urgent vulnerability.</description></item>
+        /// <item><description><b>scanMode</b>: displays easily exploitable vulnerability.</description></item>
+        /// <item><description><b>imageVulClean</b>: vulnerability retention duration.</description></item>
+        /// <item><description><b>yum</b>: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.</description></item>
+        /// </list>
         /// 
-        /// *   **cve**: Linux software vulnerability.
-        /// *   **sys**: Windows system vulnerability.
-        /// *   **cms**: Web-CMS vulnerability.
-        /// *   **app**: application vulnerability that is detected by using web scanner.
-        /// *   **emg**: urgent vulnerability.
-        /// *   **scanMode**: displays easily exploitable vulnerability.
-        /// *   **imageVulClean**: vulnerability retention duration.
-        /// *   **yum**: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.
+        /// <b>Example:</b>
+        /// <para>cve</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

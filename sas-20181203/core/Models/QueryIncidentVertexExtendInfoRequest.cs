@@ -10,53 +10,68 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryIncidentVertexExtendInfoRequest : TeaModel {
         /// <summary>
-        /// The page number. Valid values start from 1.
+        /// <para>The page number. Valid values start from 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Offset")]
         [Validation(Required=false)]
         public long? Offset { get; set; }
 
         /// <summary>
-        /// The type of the edge that you want to query. Valid values include but are not limited to:
+        /// <para>The type of the edge that you want to query. Valid values include but are not limited to:</para>
+        /// <list type="bullet">
+        /// <item><description><b>process_exec_file:</b> A process executes a file.</description></item>
+        /// <item><description><b>process_connect_ip:</b> A process connects to an IP address.</description></item>
+        /// <item><description><b>domain_trgger_alert:</b> A domain name triggers an alert.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **process_exec_file:** A process executes a file.
-        /// *   **process_connect_ip:** A process connects to an IP address.
-        /// *   **domain_trgger_alert:** A domain name triggers an alert.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>process_connect_ip</para>
         /// </summary>
         [NameInMap("RelationType")]
         [Validation(Required=false)]
         public string RelationType { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values start from 1.
+        /// <para>The number of entries per page. Valid values start from 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
         /// <summary>
-        /// The ID of the node that you want to query.
+        /// <para>The ID of the node that you want to query.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~QueryIncidentTracingDetail~~">QueryIncidentTracingDetail</a> operation to query the node ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [QueryIncidentTracingDetail](~~QueryIncidentTracingDetail~~) operation to query the node ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>29872354f741b1b044b8a9b4e2ab0535</para>
         /// </summary>
         [NameInMap("VertexId")]
         [Validation(Required=false)]
         public string VertexId { get; set; }
 
         /// <summary>
-        /// The node label. Valid values include but are not limited to:
+        /// <para>The node label. Valid values include but are not limited to:</para>
+        /// <list type="bullet">
+        /// <item><description><b>process</b></description></item>
+        /// <item><description><b>file</b></description></item>
+        /// <item><description><b>alert</b></description></item>
+        /// <item><description><b>ip</b></description></item>
+        /// <item><description><b>domain</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **process**
-        /// *   **file**
-        /// *   **alert**
-        /// *   **ip**
-        /// *   **domain**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>process</para>
         /// </summary>
         [NameInMap("VertexLabel")]
         [Validation(Required=false)]

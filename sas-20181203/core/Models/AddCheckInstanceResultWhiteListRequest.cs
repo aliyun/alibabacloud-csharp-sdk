@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddCheckInstanceResultWhiteListRequest : TeaModel {
         /// <summary>
-        /// The ID of the group to which the check item belongs.
+        /// <para>The ID of the group to which the check item belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cQFq20UzZ49K6gRSJD1301****</para>
         /// </summary>
         [NameInMap("CheckGroupId")]
         [Validation(Required=false)]
         public string CheckGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the check item.
+        /// <para>The ID of the check item.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>132</para>
         /// </summary>
         [NameInMap("CheckId")]
         [Validation(Required=false)]
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// The instance IDs of assets.
+        /// <para>The instance IDs of assets.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

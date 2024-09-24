@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SubmitCheckRequest : TeaModel {
         /// <summary>
-        /// The check items that are scanned. Valid values:
+        /// <para>The check items that are scanned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>FULL</b>: All check items are scanned.</description></item>
+        /// <item><description><b>FULL</b>: Only the check items that are configured are scanned.</description></item>
+        /// </list>
         /// 
-        /// *   **FULL**: All check items are scanned.
-        /// *   **FULL**: Only the check items that are configured are scanned.
+        /// <b>Example:</b>
+        /// <para>POLICY</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]

@@ -10,63 +10,84 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateHoneypotResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+        /// <para>The status code returned. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The information about the honeypot.
+        /// <para>The information about the honeypot.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateHoneypotResponseBodyData Data { get; set; }
         public class UpdateHoneypotResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the honeypot.
+            /// <para>The ID of the honeypot.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9bf8cd373112263d4bc102fc5dba9d9f812ee05d4d35c487d330d52e937f****</para>
             /// </summary>
             [NameInMap("HoneypotId")]
             [Validation(Required=false)]
             public string HoneypotId { get; set; }
 
             /// <summary>
-            /// The display name of the honeypot image.
+            /// <para>The display name of the honeypot image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Webmin</para>
             /// </summary>
             [NameInMap("HoneypotImageDisplayName")]
             [Validation(Required=false)]
             public string HoneypotImageDisplayName { get; set; }
 
             /// <summary>
-            /// The name of the honeypot image.
+            /// <para>The name of the honeypot image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>webpage</para>
             /// </summary>
             [NameInMap("HoneypotImageName")]
             [Validation(Required=false)]
             public string HoneypotImageName { get; set; }
 
             /// <summary>
-            /// The custom name of the honeypot.
+            /// <para>The custom name of the honeypot.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hyl-phpmyadmin</para>
             /// </summary>
             [NameInMap("HoneypotName")]
             [Validation(Required=false)]
             public string HoneypotName { get; set; }
 
             /// <summary>
-            /// The ID of the management node.
+            /// <para>The ID of the management node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>a882e590-b87b-45a6-87b9-d0a3e5a0****</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
             /// <summary>
-            /// The ID of the custom configuration for the honeypot.
+            /// <para>The ID of the custom configuration for the honeypot.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>868a7579-00b5-4a74-999d-8bd3f411e8a3</para>
             /// </summary>
             [NameInMap("PresetId")]
             [Validation(Required=false)]
             public string PresetId { get; set; }
 
             /// <summary>
-            /// An array that consists of the status information about the honeypot.
+            /// <para>An array that consists of the status information about the honeypot.</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -75,31 +96,44 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3B323ADD-6CF8-51F6-9047-2F0A4E3F5EFD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

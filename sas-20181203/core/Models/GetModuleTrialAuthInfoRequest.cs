@@ -10,20 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetModuleTrialAuthInfoRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The code of the feature. Valid values:
+        /// <para>The code of the feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>vulFix</b>: vulnerability fixing.</description></item>
+        /// <item><description><b>cloudSiem</b>: threat analysis and response.</description></item>
+        /// </list>
         /// 
-        /// *   **vulFix**: vulnerability fixing.
-        /// *   **cloudSiem**: threat analysis and response.
+        /// <b>Example:</b>
+        /// <para>vulFix</para>
         /// </summary>
         [NameInMap("ModuleCode")]
         [Validation(Required=false)]

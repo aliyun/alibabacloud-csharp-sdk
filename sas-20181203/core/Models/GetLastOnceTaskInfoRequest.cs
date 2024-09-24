@@ -10,33 +10,42 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetLastOnceTaskInfoRequest : TeaModel {
         /// <summary>
-        /// The source of the task.
+        /// <para>The source of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>console_batch</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// The name of the task. Valid values:
+        /// <para>The name of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: client diagnosis task</description></item>
+        /// <item><description><b>CLIENT_DEV_OPS</b>: O\&amp;M task of Cloud Assistant</description></item>
+        /// <item><description><b>ASSETS_COLLECTION</b>: asset collection task</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **CLIENT_PROBLEM_CHECK**: client diagnosis task
-        /// *   **CLIENT_DEV_OPS**: O\\&M task of Cloud Assistant
-        /// *   **ASSETS_COLLECTION**: asset collection task
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ASSETS_COLLECTION</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// The type of the task. Valid values:
+        /// <para>The type of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: client diagnosis task</description></item>
+        /// <item><description><b>CLIENT_DEV_OPS</b>: O\&amp;M task of Cloud Assistant</description></item>
+        /// <item><description><b>ASSETS_COLLECTION</b>: asset collection task</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **CLIENT_PROBLEM_CHECK**: client diagnosis task
-        /// *   **CLIENT_DEV_OPS**: O\\&M task of Cloud Assistant
-        /// *   **ASSETS_COLLECTION**: asset collection task
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ASSETS_COLLECTION</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

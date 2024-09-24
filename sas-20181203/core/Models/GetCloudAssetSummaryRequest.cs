@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCloudAssetSummaryRequest : TeaModel {
         /// <summary>
-        /// The asset type by service provider.
+        /// <para>The asset type by service provider.</para>
         /// </summary>
         [NameInMap("Vendors")]
         [Validation(Required=false)]

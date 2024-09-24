@@ -10,81 +10,100 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListInterceptionRulePageResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of information about the defense rules.
+        /// <para>An array that consists of information about the defense rules.</para>
         /// </summary>
         [NameInMap("InterceptionRuleList")]
         [Validation(Required=false)]
         public List<ListInterceptionRulePageResponseBodyInterceptionRuleList> InterceptionRuleList { get; set; }
         public class ListInterceptionRulePageResponseBodyInterceptionRuleList : TeaModel {
             /// <summary>
-            /// The destination network object.
+            /// <para>The destination network object.</para>
             /// </summary>
             [NameInMap("DstTarget")]
             [Validation(Required=false)]
             public ListInterceptionRulePageResponseBodyInterceptionRuleListDstTarget DstTarget { get; set; }
             public class ListInterceptionRulePageResponseBodyInterceptionRuleListDstTarget : TeaModel {
                 /// <summary>
-                /// The name of the application.
+                /// <para>The name of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>console</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// An array that consists of the affected images.
+                /// <para>An array that consists of the affected images.</para>
                 /// </summary>
                 [NameInMap("ImageList")]
                 [Validation(Required=false)]
                 public List<string> ImageList { get; set; }
 
                 /// <summary>
-                /// The namespace.
+                /// <para>The namespace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// An array that consists of information about the ports used by the destination server.
+                /// <para>An array that consists of information about the ports used by the destination server.</para>
                 /// </summary>
                 [NameInMap("Ports")]
                 [Validation(Required=false)]
                 public List<string> Ports { get; set; }
 
                 /// <summary>
-                /// The type of the defense rule. Valid values:
+                /// <para>The type of the defense rule. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>suggest</b>: intelligently recommended rule</description></item>
+                /// <item><description><b>customize</b>: custom rule</description></item>
+                /// <item><description><b>system</b>: system rule</description></item>
+                /// </list>
                 /// 
-                /// *   **suggest**: intelligently recommended rule
-                /// *   **customize**: custom rule
-                /// *   **system**: system rule
+                /// <b>Example:</b>
+                /// <para>customize</para>
                 /// </summary>
                 [NameInMap("RuleType")]
                 [Validation(Required=false)]
                 public string RuleType { get; set; }
 
                 /// <summary>
-                /// An array that consists of tags added to the destination network object.
+                /// <para>An array that consists of tags added to the destination network object.</para>
                 /// </summary>
                 [NameInMap("TagList")]
                 [Validation(Required=false)]
                 public List<string> TagList { get; set; }
 
                 /// <summary>
-                /// The ID of the network object.
+                /// <para>The ID of the network object.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>302001</para>
                 /// </summary>
                 [NameInMap("TargetId")]
                 [Validation(Required=false)]
                 public int? TargetId { get; set; }
 
                 /// <summary>
-                /// The name of the network object.
+                /// <para>The name of the network object.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>demo4****</para>
                 /// </summary>
                 [NameInMap("TargetName")]
                 [Validation(Required=false)]
                 public string TargetName { get; set; }
 
                 /// <summary>
-                /// The type of the network object.
+                /// <para>The type of the network object.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IMAGE</para>
                 /// </summary>
                 [NameInMap("TargetType")]
                 [Validation(Required=false)]
@@ -93,117 +112,156 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The interception mode. Valid values:
+            /// <para>The interception mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: monitor</description></item>
+            /// <item><description><b>1</b>: block</description></item>
+            /// <item><description><b>2</b>: alert</description></item>
+            /// <item><description><b>3</b>: allow</description></item>
+            /// </list>
             /// 
-            /// *   **0**: monitor
-            /// *   **1**: block
-            /// *   **2**: alert
-            /// *   **3**: allow
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("InterceptType")]
             [Validation(Required=false)]
             public long? InterceptType { get; set; }
 
             /// <summary>
-            /// The order in which the entries are sorted.
+            /// <para>The order in which the entries are sorted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("OrderIndex")]
             [Validation(Required=false)]
             public long? OrderIndex { get; set; }
 
             /// <summary>
-            /// The ID of the defense rule.
+            /// <para>The ID of the defense rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30****</para>
             /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// The name of the defense rule.
+            /// <para>The name of the defense rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// The status of the defense rule. Valid values:
+            /// <para>The status of the defense rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: enabled</description></item>
+            /// <item><description><b>0</b>: disabled</description></item>
+            /// </list>
             /// 
-            /// *   **1**: enabled
-            /// *   **0**: disabled
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RuleSwitch")]
             [Validation(Required=false)]
             public int? RuleSwitch { get; set; }
 
             /// <summary>
-            /// The type of the defense rule.
+            /// <para>The type of the defense rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>customize</para>
             /// </summary>
             [NameInMap("RuleType")]
             [Validation(Required=false)]
             public string RuleType { get; set; }
 
             /// <summary>
-            /// The source network object.
+            /// <para>The source network object.</para>
             /// </summary>
             [NameInMap("SrcTarget")]
             [Validation(Required=false)]
             public ListInterceptionRulePageResponseBodyInterceptionRuleListSrcTarget SrcTarget { get; set; }
             public class ListInterceptionRulePageResponseBodyInterceptionRuleListSrcTarget : TeaModel {
                 /// <summary>
-                /// The name of the application.
+                /// <para>The name of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ack-jenkins-lawr****</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// An array that consists of the images of the network object.
+                /// <para>An array that consists of the images of the network object.</para>
                 /// </summary>
                 [NameInMap("ImageList")]
                 [Validation(Required=false)]
                 public List<string> ImageList { get; set; }
 
                 /// <summary>
-                /// The namespace.
+                /// <para>The namespace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>jenkins</para>
                 /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// The type of the defense rule. Valid values:
+                /// <para>The type of the defense rule. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>suggest</b>: intelligently recommended rule</description></item>
+                /// <item><description><b>customize</b>: custom rule</description></item>
+                /// <item><description><b>system</b>: system rule</description></item>
+                /// </list>
                 /// 
-                /// *   **suggest**: intelligently recommended rule
-                /// *   **customize**: custom rule
-                /// *   **system**: system rule
+                /// <b>Example:</b>
+                /// <para>customize</para>
                 /// </summary>
                 [NameInMap("RuleType")]
                 [Validation(Required=false)]
                 public string RuleType { get; set; }
 
                 /// <summary>
-                /// An array that consists of tags added to the source network object.
+                /// <para>An array that consists of tags added to the source network object.</para>
                 /// </summary>
                 [NameInMap("TagList")]
                 [Validation(Required=false)]
                 public List<string> TagList { get; set; }
 
                 /// <summary>
-                /// The ID of the network object.
+                /// <para>The ID of the network object.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>40****</para>
                 /// </summary>
                 [NameInMap("TargetId")]
                 [Validation(Required=false)]
                 public int? TargetId { get; set; }
 
                 /// <summary>
-                /// The name of the network object.
+                /// <para>The name of the network object.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mhh-te****</para>
                 /// </summary>
                 [NameInMap("TargetName")]
                 [Validation(Required=false)]
                 public string TargetName { get; set; }
 
                 /// <summary>
-                /// The type of the affected assets.
+                /// <para>The type of the affected assets.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>containerId</para>
                 /// </summary>
                 [NameInMap("TargetType")]
                 [Validation(Required=false)]
@@ -214,35 +272,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListInterceptionRulePageResponseBodyPageInfo PageInfo { get; set; }
         public class ListInterceptionRulePageResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>19</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -251,7 +321,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ACF97412-FD09-4D1F-994F-34DF12BR****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,23 +10,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DisableCustomBlockRecordRequest : TeaModel {
         /// <summary>
-        /// The IP address that is specified in the policy.
+        /// <para>The IP address that is specified in the policy.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> operation to query the IP address.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the IP address.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>62.233.XX.XX</para>
         /// </summary>
         [NameInMap("BlockIp")]
         [Validation(Required=false)]
         public string BlockIp { get; set; }
 
         /// <summary>
-        /// The traffic direction that is specified in the policy. Valid values:
+        /// <para>The traffic direction that is specified in the policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>in</b>: inbound</description></item>
+        /// <item><description><b>out</b>: outbound</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **in**: inbound
-        /// *   **out**: outbound
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>in</para>
         /// </summary>
         [NameInMap("Bound")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteSecurityEventMarkMissListRequest : TeaModel {
         /// <summary>
-        /// The IDs of custom defense rule.
+        /// <para>The IDs of custom defense rule.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]

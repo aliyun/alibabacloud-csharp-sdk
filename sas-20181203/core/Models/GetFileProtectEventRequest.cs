@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileProtectEventRequest : TeaModel {
         /// <summary>
-        /// The ID of the event.
+        /// <para>The ID of the event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

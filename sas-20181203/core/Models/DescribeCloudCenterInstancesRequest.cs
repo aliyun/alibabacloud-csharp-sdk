@@ -10,16 +10,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCloudCenterInstancesRequest : TeaModel {
         /// <summary>
-        /// The search conditions. The value of this parameter is in the JSON format and is case-sensitive.
+        /// <para>The search conditions. The value of this parameter is in the JSON format and is case-sensitive.</para>
+        /// <remarks>
+        /// <para> You can search for an asset by using the search conditions, such as the instance ID, instance name, VPC ID, region, or public IP address. You can call the <a href="https://help.aliyun.com/document_detail/149773.html">DescribeCriteria</a> operation to query the supported search conditions.</para>
+        /// </remarks>
         /// 
-        /// >  You can search for an asset by using the search conditions, such as the instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](https://help.aliyun.com/document_detail/149773.html) operation to query the supported search conditions.
+        /// <b>Example:</b>
+        /// <para>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;internetIp&quot;,&quot;value&quot;:&quot;1.2.XX.XX&quot;}]</para>
         /// </summary>
         [NameInMap("Criteria")]
         [Validation(Required=false)]
         public string Criteria { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -30,72 +37,103 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Flags { get; set; }
 
         /// <summary>
-        /// The importance of the asset. Valid values:
+        /// <para>The importance of the asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2</b>: an important asset</description></item>
+        /// <item><description><b>1</b>: a common asset</description></item>
+        /// <item><description><b>0</b>: a test asset</description></item>
+        /// </list>
         /// 
-        /// *   **2**: an important asset
-        /// *   **1**: a common asset
-        /// *   **0**: a test asset
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Importance")]
         [Validation(Required=false)]
         public int? Importance { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The logical relationship among multiple search conditions. Valid values:
+        /// <para>The logical relationship among multiple search conditions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>OR</b>: The logical relationship among search conditions is <b>OR</b>.</description></item>
+        /// <item><description><b>AND</b>: The logical relationship among search conditions is <b>AND</b>.</description></item>
+        /// </list>
         /// 
-        /// *   **OR**: The logical relationship among search conditions is **OR**.
-        /// *   **AND**: The logical relationship among search conditions is **AND**.
+        /// <b>Example:</b>
+        /// <para>OR</para>
         /// </summary>
         [NameInMap("LogicalExp")]
         [Validation(Required=false)]
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// The type of the assets that you want to query. Valid values:
+        /// <para>The type of the assets that you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ecs</b>: servers</description></item>
+        /// <item><description><b>cloud_product</b>: Alibaba Cloud service</description></item>
+        /// </list>
         /// 
-        /// *   **ecs**: servers
-        /// *   **cloud_product**: Alibaba Cloud service
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("MachineTypes")]
         [Validation(Required=false)]
         public string MachineTypes { get; set; }
 
         /// <summary>
-        /// The value of NextToken that is returned when the NextToken method is used. You do not need to specify this parameter for the first request.
+        /// <para>The value of NextToken that is returned when the NextToken method is used. You do not need to specify this parameter for the first request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E17B501887A2D3AA5E8360A6EFA3B***</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to internationalize the name of the default group. Valid values:
+        /// <para>Specifies whether to internationalize the name of the default group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The system returns the Chinese name of the default group for the GroupTrace response parameter.</description></item>
+        /// <item><description><b>false</b>: The system returns default for the GroupTrace response parameter.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The system returns the Chinese name of the default group for the GroupTrace response parameter.
-        /// *   **false**: The system returns default for the GroupTrace response parameter.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("NoGroupTrace")]
         [Validation(Required=false)]
         public bool? NoGroupTrace { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **20**.
+        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// The ID of the region in which the asset resides.
+        /// <para>The ID of the region in which the asset resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -103,19 +141,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud account ID of the member in the resource directory.
+        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+        /// <b>Example:</b>
+        /// <para>1232428423234****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// Specifies whether to use the NextToken method to retrieve a new page of results. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:
+        /// <para>Specifies whether to use the NextToken method to retrieve a new page of results. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The NextToken method is used.</description></item>
+        /// <item><description><b>false</b>: The NextToken method is not used.</description></item>
+        /// </list>
         /// 
-        /// - **true**: The NextToken method is used.
-        /// - **false**: The NextToken method is not used.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("UseNextToken")]
         [Validation(Required=false)]

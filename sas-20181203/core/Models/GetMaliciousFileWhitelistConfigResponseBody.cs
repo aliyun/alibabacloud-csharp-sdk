@@ -10,105 +10,147 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetMaliciousFileWhitelistConfigResponseBody : TeaModel {
         /// <summary>
-        /// The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+        /// <para>The response code. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMaliciousFileWhitelistConfigResponseBodyData Data { get; set; }
         public class GetMaliciousFileWhitelistConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of assets on which the whitelist rule takes effect.
+            /// <para>The number of assets on which the whitelist rule takes effect.</para>
+            /// <remarks>
+            /// <para> The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.</para>
+            /// </remarks>
             /// 
-            /// >  The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public string Count { get; set; }
 
             /// <summary>
-            /// The name of the alert.
+            /// <para>The name of the alert.</para>
+            /// <list type="bullet">
+            /// <item><description>The value is fixed as ALL, which indicates all alert types.</description></item>
+            /// </list>
             /// 
-            /// *   The value is fixed as ALL, which indicates all alert types.
+            /// <b>Example:</b>
+            /// <para>ALL</para>
             /// </summary>
             [NameInMap("EventName")]
             [Validation(Required=false)]
             public string EventName { get; set; }
 
             /// <summary>
-            /// The field that is used in the whitelist rule.
+            /// <para>The field that is used in the whitelist rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fileMd5</para>
             /// </summary>
             [NameInMap("Field")]
             [Validation(Required=false)]
             public string Field { get; set; }
 
             /// <summary>
-            /// The value of the field that is used in the whitelist rule.
+            /// <para>The value of the field that is used in the whitelist rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>b2cf9747ee49d8d9b105cf16e078cc16</para>
             /// </summary>
             [NameInMap("FieldValue")]
             [Validation(Required=false)]
             public string FieldValue { get; set; }
 
             /// <summary>
-            /// The creation time.
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1671607025000</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The modification time.
+            /// <para>The modification time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1674095396000</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The ID of the whitelist rule.
+            /// <para>The ID of the whitelist rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The logical operator that is used in the whitelist rule.
+            /// <para>The logical operator that is used in the whitelist rule.</para>
+            /// <list type="bullet">
+            /// <item><description>The value is fixed as strEqual, which indicates the equality operator (=).</description></item>
+            /// </list>
             /// 
-            /// *   The value is fixed as strEqual, which indicates the equality operator (=).
+            /// <b>Example:</b>
+            /// <para>strEqual</para>
             /// </summary>
             [NameInMap("Operator")]
             [Validation(Required=false)]
             public string Operator { get; set; }
 
             /// <summary>
-            /// The feature to which this operation belongs.
+            /// <para>The feature to which this operation belongs.</para>
+            /// <list type="bullet">
+            /// <item><description>The value is fixed as agentless, which indicates the agentless detection feature.</description></item>
+            /// </list>
             /// 
-            /// *   The value is fixed as agentless, which indicates the agentless detection feature.
+            /// <b>Example:</b>
+            /// <para>agentless</para>
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// The type of the assets on which the whitelist rule takes effect. Valid values:
+            /// <para>The type of the assets on which the whitelist rule takes effect. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ALL: all assets</description></item>
+            /// <item><description>SELECTION_KEY: selected assets</description></item>
+            /// </list>
             /// 
-            /// *   ALL: all assets
-            /// *   SELECTION_KEY: selected assets
+            /// <b>Example:</b>
+            /// <para>ALL</para>
             /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]
             public string TargetType { get; set; }
 
             /// <summary>
-            /// The assets on which the whitelist rule takes effect. Valid values:
+            /// <para>The assets on which the whitelist rule takes effect. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ALL: all assets</description></item>
+            /// <item><description>Others: selected assets</description></item>
+            /// </list>
             /// 
-            /// *   ALL: all assets
-            /// *   Others: selected assets
+            /// <b>Example:</b>
+            /// <para>ALL</para>
             /// </summary>
             [NameInMap("TargetValue")]
             [Validation(Required=false)]
@@ -117,31 +159,44 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The HTTP status code. The value 200 indicates that the request was successful.
+        /// <para>The HTTP status code. The value 200 indicates that the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F8B6F758-BCD4-597A-8A2C-DA5A552C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

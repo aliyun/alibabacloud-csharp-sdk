@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteHoneypotNodeRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the management node.
+        /// <para>The ID of the management node.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>670baeee-86c4-46b9-8200-a2c38141a453</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

@@ -10,100 +10,138 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryGroupedSecurityEventMarkMissListResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. The status code **200** indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.
+        /// <para>The status code returned. The status code <b>200</b> indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// An array that consists of the whitelist rules.
+        /// <para>An array that consists of the whitelist rules.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<QueryGroupedSecurityEventMarkMissListResponseBodyList> List { get; set; }
         public class QueryGroupedSecurityEventMarkMissListResponseBodyList : TeaModel {
             /// <summary>
-            /// The ID of the user.
+            /// <para>The ID of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>31412647</para>
             /// </summary>
             [NameInMap("AliUid")]
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// The handling method. Valid values:
+            /// <para>The handling method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>auto_add_white</b>: Automatically Added to Whitelist</description></item>
+            /// <item><description><b>defense_not_notification</b>: Defense Without Notification</description></item>
+            /// </list>
             /// 
-            /// *   **auto_add_white**: Automatically Added to Whitelist
-            /// *   **defense_not_notification**: Defense Without Notification
+            /// <b>Example:</b>
+            /// <para>auto_add_white</para>
             /// </summary>
             [NameInMap("DisposalWay")]
             [Validation(Required=false)]
             public string DisposalWay { get; set; }
 
             /// <summary>
-            /// The name of the alert event. The value indicates a subtype.
+            /// <para>The name of the alert event. The value indicates a subtype.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Login with unusual location</para>
             /// </summary>
             [NameInMap("EventName")]
             [Validation(Required=false)]
             public string EventName { get; set; }
 
             /// <summary>
-            /// The name of the alert event. The value indicates a type.
+            /// <para>The name of the alert event. The value indicates a type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>login_common_location</para>
             /// </summary>
             [NameInMap("EventNameOriginal")]
             [Validation(Required=false)]
             public string EventNameOriginal { get; set; }
 
             /// <summary>
-            /// The subtype of the alert event.
+            /// <para>The subtype of the alert event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Unusual Logon</para>
             /// </summary>
             [NameInMap("EventType")]
             [Validation(Required=false)]
             public string EventType { get; set; }
 
             /// <summary>
-            /// The type of the alert event.
+            /// <para>The type of the alert event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Unusual logon</para>
             /// </summary>
             [NameInMap("EventTypeOriginal")]
             [Validation(Required=false)]
             public string EventTypeOriginal { get; set; }
 
             /// <summary>
-            /// The field that is used in the whitelist rule.
+            /// <para>The field that is used in the whitelist rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>type</para>
             /// </summary>
             [NameInMap("Field")]
             [Validation(Required=false)]
             public string Field { get; set; }
 
             /// <summary>
-            /// The value of the field.
+            /// <para>The value of the field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>root</para>
             /// </summary>
             [NameInMap("FieldValue")]
             [Validation(Required=false)]
             public string FieldValue { get; set; }
 
             /// <summary>
-            /// The alias of the field.
+            /// <para>The alias of the field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Logon Time</para>
             /// </summary>
             [NameInMap("FiledAliasName")]
             [Validation(Required=false)]
             public string FiledAliasName { get; set; }
 
             /// <summary>
-            /// The operator. Valid values:
+            /// <para>The operator. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>contains</b>: contains</description></item>
+            /// <item><description><b>notContains</b>: does not contain</description></item>
+            /// <item><description><b>strEqual</b>: equals</description></item>
+            /// <item><description><b>strNotEqual</b>: does not equal</description></item>
+            /// <item><description><b>regex</b>: regular expression</description></item>
+            /// </list>
             /// 
-            /// *   **contains**: contains
-            /// *   **notContains**: does not contain
-            /// *   **strEqual**: equals
-            /// *   **strNotEqual**: does not equal
-            /// *   **regex**: regular expression
+            /// <b>Example:</b>
+            /// <para>contains</para>
             /// </summary>
             [NameInMap("Operate")]
             [Validation(Required=false)]
             public string Operate { get; set; }
 
             /// <summary>
-            /// The UUIDs of assets. Multiple UUIDs are separated by commas (,).
+            /// <para>The UUIDs of assets. Multiple UUIDs are separated by commas (,).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6985b88c-eb19-4d27-98ad-e4a42312****,5721d503-9b04-4243-89ca-1fb8ca5e****,db2678c3-10e3-4a20-92f1-265f6****</para>
             /// </summary>
             [NameInMap("Uuids")]
             [Validation(Required=false)]
@@ -112,42 +150,57 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>There was an error with your request.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public QueryGroupedSecurityEventMarkMissListResponseBodyPageInfo PageInfo { get; set; }
         public class QueryGroupedSecurityEventMarkMissListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: **20**.
+            /// <para>The number of entries returned per page. Default value: <b>20</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>69</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -156,17 +209,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>965F9282-D403-4FA2-B1B9-10F62DC719BF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

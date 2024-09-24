@@ -10,20 +10,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetLogMetaRequest : TeaModel {
         /// <summary>
-        /// The name of the dedicated Logstore in which logs are stored.
+        /// <para>The name of the dedicated Logstore in which logs are stored.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the name of the Logstore.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the name of the Logstore.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>aegis-log-login</para>
         /// </summary>
         [NameInMap("LogStore")]
         [Validation(Required=false)]
         public string LogStore { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud account ID of the member in the resource directory.
+        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]

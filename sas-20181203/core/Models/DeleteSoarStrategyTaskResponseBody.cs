@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteSoarStrategyTaskResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C699E4E4-F2F4-58FC-A949-457FFE59****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

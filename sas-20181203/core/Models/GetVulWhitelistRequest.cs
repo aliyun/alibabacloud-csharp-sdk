@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetVulWhitelistRequest : TeaModel {
         /// <summary>
-        /// The ID of the whitelist.
+        /// <para>The ID of the whitelist.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1275</para>
         /// </summary>
         [NameInMap("VulWhitelistId")]
         [Validation(Required=false)]

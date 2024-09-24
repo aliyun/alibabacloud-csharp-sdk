@@ -10,23 +10,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspiciousOverallConfigRequest : TeaModel {
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>39.161.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The type of the feature. Valid values:
+        /// <para>The type of the feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>auto_breaking</b>: Anti-Virus</description></item>
+        /// <item><description><b>ransomware_breaking</b>: Anti-ransomware (Bait Capture)</description></item>
+        /// <item><description><b>webshell_cloud_breaking</b>: Webshell Protection</description></item>
+        /// <item><description><b>alinet</b>: Behavior prevention</description></item>
+        /// <item><description><b>k8s_log_analysis</b>: K8s Threat Detection</description></item>
+        /// <item><description><b>alisecguard</b>: Defense mode for Client Protection</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **auto_breaking**: Anti-Virus
-        /// *   **ransomware_breaking**: Anti-ransomware (Bait Capture)
-        /// *   **webshell_cloud_breaking**: Webshell Protection
-        /// *   **alinet**: Behavior prevention
-        /// *   **k8s_log_analysis**: K8s Threat Detection
-        /// *   **alisecguard**: Defense mode for Client Protection
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>auto_breaking</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

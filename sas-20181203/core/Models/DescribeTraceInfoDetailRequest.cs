@@ -10,60 +10,78 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeTraceInfoDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the request source. Set the value to **sas**.
+        /// <para>The ID of the request source. Set the value to <b>sas</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sas</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
 
         /// <summary>
-        /// The timestamp of the detection. Unit: milliseconds.
+        /// <para>The timestamp of the detection. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1670555392000</para>
         /// </summary>
         [NameInMap("IncidentTime")]
         [Validation(Required=false)]
         public long? IncidentTime { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The source IP address of the request. The value of this parameter is specified by the system.
+        /// <para>The source IP address of the request. The value of this parameter is specified by the system.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The type of the vertex. Set the value to **SAS_INCIDENT**.
+        /// <para>The type of the vertex. Set the value to <b>SAS_INCIDENT</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SAS_INCIDENT</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The UUID of the server.
+        /// <para>The UUID of the server.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1627f2d7-aaa2-4ed1-b07a-xxxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }
 
         /// <summary>
-        /// The ID of the vertex. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the ID.
+        /// <para>The ID of the vertex. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cce1d28dxxxxxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("VertexId")]
         [Validation(Required=false)]

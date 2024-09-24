@@ -10,100 +10,135 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedInstancesRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The name of the group to which the assets belong. Fuzzy search is supported.
+        /// <para>The name of the group to which the assets belong. Fuzzy search is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-01</para>
         /// </summary>
         [NameInMap("FieldValue")]
         [Validation(Required=false)]
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// The filter condition that you want to use to query the assets. Valid values:
+        /// <para>The filter condition that you want to use to query the assets. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>groupId</b>: the group to which the assets belong</description></item>
+        /// <item><description><b>regionId</b>: the region in which the assets reside</description></item>
+        /// <item><description><b>vpcInstanceId</b>: the virtual private cloud (VPC) in which the assets reside</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **groupId**: the group to which the assets belong
-        /// *   **regionId**: the region in which the assets reside
-        /// *   **vpcInstanceId**: the virtual private cloud (VPC) in which the assets reside
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>groupId</para>
         /// </summary>
         [NameInMap("GroupField")]
         [Validation(Required=false)]
         public string GroupField { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The type of the assets that you want to query. Set the value to **ecs**, which indicates Elastic Compute Service (ECS) instances.
+        /// <para>The type of the assets that you want to query. Set the value to <b>ecs</b>, which indicates Elastic Compute Service (ECS) instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("MachineTypes")]
         [Validation(Required=false)]
         public string MachineTypes { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable paged query. Default value: **true**. Valid values:
+        /// <para>Specifies whether to enable paged query. Default value: <b>true</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("NoPage")]
         [Validation(Required=false)]
         public bool? NoPage { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **20**.
+        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The edition of Security Center that protects the asset. Valid values:
+        /// <para>The edition of Security Center that protects the asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>sas_gte_advanced</b>: the Advanced edition or higher</description></item>
+        /// <item><description><b>sas_gte_enterprise</b>: the Enterprise edition or higher</description></item>
+        /// <item><description><b>sas_gt_basic:</b> a paid edition</description></item>
+        /// <item><description><b>sas_eq_advanced:</b> the Advanced edition</description></item>
+        /// <item><description><b>sas_gt_anti_virus:</b> an edition higher than the Anti-virus edition</description></item>
+        /// </list>
         /// 
-        /// * **sas_gte_advanced**: the Advanced edition or higher
-        /// * **sas_gte_enterprise**: the Enterprise edition or higher
-        /// * **sas_gt_basic:** a paid edition
-        /// * **sas_eq_advanced:** the Advanced edition
-        /// * **sas_gt_anti_virus:** an edition higher than the Anti-virus edition
+        /// <b>Example:</b>
+        /// <para>sas_gt_basic</para>
         /// </summary>
         [NameInMap("SaleVersionCheckCode")]
         [Validation(Required=false)]
         public string SaleVersionCheckCode { get; set; }
 
         /// <summary>
-        /// The source of the server. Valid values:
+        /// <para>The source of the server. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: an asset provided by Alibaba Cloud.</description></item>
+        /// <item><description><b>1</b>: a third-party cloud server</description></item>
+        /// <item><description><b>2</b>: a server in a data center</description></item>
+        /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: other cloud asset</description></item>
+        /// <item><description><b>8</b>: a lightweight asset</description></item>
+        /// </list>
         /// 
-        /// *   **0**: an asset provided by Alibaba Cloud.
-        /// *   **1**: a third-party cloud server
-        /// *   **2**: a server in a data center
-        /// *   **3**, **4**, **5**, and **7**: other cloud asset
-        /// *   **8**: a lightweight asset
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Vendor")]
         [Validation(Required=false)]
         public int? Vendor { get; set; }
 
         /// <summary>
-        /// The source of the server. Separate multiple sources with commas (,).Valid values:
+        /// <para>The source of the server. Separate multiple sources with commas (,).Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: an asset provided by Alibaba Cloud.</description></item>
+        /// <item><description><b>1</b>: a third-party cloud server</description></item>
+        /// <item><description><b>2</b>: a server in a data center</description></item>
+        /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: other cloud asset</description></item>
+        /// <item><description><b>8</b>: a lightweight asset</description></item>
+        /// </list>
         /// 
-        /// *   **0**: an asset provided by Alibaba Cloud.
-        /// *   **1**: a third-party cloud server
-        /// *   **2**: a server in a data center
-        /// *   **3**, **4**, **5**, and **7**: other cloud asset
-        /// *   **8**: a lightweight asset
+        /// <b>Example:</b>
+        /// <para>0,8</para>
         /// </summary>
         [NameInMap("Vendors")]
         [Validation(Required=false)]

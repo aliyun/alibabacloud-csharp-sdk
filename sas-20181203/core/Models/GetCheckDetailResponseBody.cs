@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckDetailResponseBody : TeaModel {
         /// <summary>
-        /// The help information about the check item.
+        /// <para>The help information about the check item.</para>
         /// </summary>
         [NameInMap("AssistInfo")]
         [Validation(Required=false)]
         public GetCheckDetailResponseBodyAssistInfo AssistInfo { get; set; }
         public class GetCheckDetailResponseBodyAssistInfo : TeaModel {
             /// <summary>
-            /// The link to the help information about the risk item when the Type parameter is set to link.
+            /// <para>The link to the help information about the risk item when the Type parameter is set to link.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://www.alibabacloud.com/help/en/resource-access-management/latest/faq-about-ram-users">https://www.alibabacloud.com/help/en/resource-access-management/latest/faq-about-ram-users</a></para>
             /// </summary>
             [NameInMap("Link")]
             [Validation(Required=false)]
             public string Link { get; set; }
 
             /// <summary>
-            /// The type of the help information about the risk item. Valid values:
+            /// <para>The type of the help information about the risk item. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>text</b></description></item>
+            /// <item><description><b>link</b></description></item>
+            /// </list>
             /// 
-            /// *   **text**
-            /// *   **link**
+            /// <b>Example:</b>
+            /// <para>text</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The content in the help information about the risk item when the Type parameter is set to text.
+            /// <para>The content in the help information about the risk item when the Type parameter is set to text.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Configure an IP address whitelist</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -43,42 +53,57 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The custom configuration items of the check item.
+        /// <para>The custom configuration items of the check item.</para>
         /// </summary>
         [NameInMap("CustomConfigs")]
         [Validation(Required=false)]
         public List<GetCheckDetailResponseBodyCustomConfigs> CustomConfigs { get; set; }
         public class GetCheckDetailResponseBodyCustomConfigs : TeaModel {
             /// <summary>
-            /// The default value of the custom configuration item. The value is a string.
+            /// <para>The default value of the custom configuration item. The value is a string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12</para>
             /// </summary>
             [NameInMap("DefaultValue")]
             [Validation(Required=false)]
             public string DefaultValue { get; set; }
 
             /// <summary>
-            /// The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
+            /// <para>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SessionTimeMax</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The keyword that identifies the custom configuration item for internationalization.
+            /// <para>The keyword that identifies the custom configuration item for internationalization.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Maximum session time</para>
             /// </summary>
             [NameInMap("ShowName")]
             [Validation(Required=false)]
             public string ShowName { get; set; }
 
             /// <summary>
-            /// The type of the custom configuration item. The value is a JSON string.
+            /// <para>The type of the custom configuration item. The value is a JSON string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;type\&quot;:\&quot;NUMBER\&quot;,\&quot;range\&quot;:[1,24]}</para>
             /// </summary>
             [NameInMap("TypeDefine")]
             [Validation(Required=false)]
             public string TypeDefine { get; set; }
 
             /// <summary>
-            /// The value of the custom configuration item. The value is a string.
+            /// <para>The value of the custom configuration item. The value is a string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>11</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -87,28 +112,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The description of the check item.
+        /// <para>The description of the check item.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public GetCheckDetailResponseBodyDescription Description { get; set; }
         public class GetCheckDetailResponseBodyDescription : TeaModel {
             /// <summary>
-            /// The link to the description of the check item.
+            /// <para>The link to the description of the check item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies">https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies</a></para>
             /// </summary>
             [NameInMap("Link")]
             [Validation(Required=false)]
             public string Link { get; set; }
 
             /// <summary>
-            /// The type of the description of the check item. The value is fixed as text.
+            /// <para>The type of the description of the check item. The value is fixed as text.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>text</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The content in the description of the check item.
+            /// <para>The content in the description of the check item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The MSE instance does not enable authentication by default. If public network access is enabled at the same time, the data in the configuration center may be dragged and there is a security risk.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -116,6 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("RepairReset")]
         [Validation(Required=false)]
         [Obsolete]
@@ -207,44 +242,58 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("RepairSupportType")]
         [Validation(Required=false)]
         [Obsolete]
         public int? RepairSupportType { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15A6ED6A-DBFE-5255-A248-289907809BEC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The solution to handle the risk item.
+        /// <para>The solution to handle the risk item.</para>
         /// </summary>
         [NameInMap("Solution")]
         [Validation(Required=false)]
         public GetCheckDetailResponseBodySolution Solution { get; set; }
         public class GetCheckDetailResponseBodySolution : TeaModel {
             /// <summary>
-            /// The link to the solution to handle the risk item when the Type parameter is set to link.
+            /// <para>The link to the solution to handle the risk item when the Type parameter is set to link.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies">https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies</a></para>
             /// </summary>
             [NameInMap("Link")]
             [Validation(Required=false)]
             public string Link { get; set; }
 
             /// <summary>
-            /// The type of the solution to handle the risk item. Valid values:
+            /// <para>The type of the solution to handle the risk item. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>text</b></description></item>
+            /// <item><description><b>link</b></description></item>
+            /// </list>
             /// 
-            /// *   **text**
-            /// *   **link**
+            /// <b>Example:</b>
+            /// <para>text</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The content of the solution to handle the risk item when the Type parameter is set to text.
+            /// <para>The content of the solution to handle the risk item when the Type parameter is set to text.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Enter the MSE product console - registration and configuration center - instance list, click the corresponding instance name to enter the instance details, find the public network whitelist setting option in the basic information, and configure the whitelist according to business needs. It is forbidden to configure 0.0.0.0 or the whitelist as null.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

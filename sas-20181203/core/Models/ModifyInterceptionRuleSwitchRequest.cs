@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyInterceptionRuleSwitchRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+        /// <b>Example:</b>
+        /// <para>ce5c29aba99694ade9ba85dc620b4****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The IDs of the rules whose status you want to change. Separate multiple IDs with commas (,).
+        /// <para>The IDs of the rules whose status you want to change. Separate multiple IDs with commas (,).</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">ListInterceptionRulePage</a> operation to query the IDs of rules.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [ListInterceptionRulePage](https://help.aliyun.com/document_detail/182997.html) operation to query the IDs of rules.
+        /// <b>Example:</b>
+        /// <para>403287</para>
         /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]
         public string RuleIds { get; set; }
 
         /// <summary>
-        /// Specifies whether the rule is enabled. Valid values:
+        /// <para>Specifies whether the rule is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: enabled</description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// </list>
         /// 
-        /// *   **1**: enabled
-        /// *   **0**: disabled
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleSwitch")]
         [Validation(Required=false)]

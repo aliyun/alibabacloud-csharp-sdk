@@ -10,48 +10,65 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListBackupRecordRequest : TeaModel {
         /// <summary>
-        /// The timestamp when the backup task ended. Unit: milliseconds.
+        /// <para>The timestamp when the backup task ended. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1699600611000</para>
         /// </summary>
         [NameInMap("BackupEndTime")]
         [Validation(Required=false)]
         public long? BackupEndTime { get; set; }
 
         /// <summary>
-        /// The timestamp when the backup task started. Unit: milliseconds.
+        /// <para>The timestamp when the backup task started. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1699514211000</para>
         /// </summary>
         [NameInMap("BackupStartTime")]
         [Validation(Required=false)]
         public long? BackupStartTime { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**. Pages start from page 1.
+        /// <para>The page number. Default value: <b>1</b>. Pages start from page 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.
+        /// <para>The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.XX.XX</para>
         /// </summary>
         [NameInMap("MachineRemark")]
         [Validation(Required=false)]
         public string MachineRemark { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <remarks>
+        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// >  We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The backup task status. Valid values:
-        /// 
-        /// *   **BACKUP_COMPLETE**: The backup task is successful.
-        /// *   **BACKUP_FAILED**: The backup task failed.
-        /// *   **PARTIAL_COMPLETE**: The backup task is partially successful.
+        /// <para>The backup task status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>BACKUP_COMPLETE</b>: The backup task is successful.</description></item>
+        /// <item><description><b>BACKUP_FAILED</b>: The backup task failed.</description></item>
+        /// <item><description><b>PARTIAL_COMPLETE</b>: The backup task is partially successful.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyOpenLogShipperResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25EC270F-5783-4416-AD7C-1EDF063A039C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

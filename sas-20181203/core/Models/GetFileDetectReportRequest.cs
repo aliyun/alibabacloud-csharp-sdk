@@ -10,49 +10,66 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileDetectReportRequest : TeaModel {
         /// <summary>
-        /// The event ID that corresponds to the file to be detected.
+        /// <para>The event ID that corresponds to the file to be detected.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>81****</para>
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public long? EventId { get; set; }
 
         /// <summary>
-        /// The field that you want to query. You can enter multiple fields and separate them with commas (,).
+        /// <para>The field that you want to query. You can enter multiple fields and separate them with commas (,).</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ThreatTypes</b>: the type of the threat intelligence event</description></item>
+        /// <item><description><b>Intelligences</b>: the threat intelligence event</description></item>
+        /// <item><description><b>ThreatLevel</b>: the level of the threat intelligence event</description></item>
+        /// <item><description><b>Basic</b>: the basic information about the report (the scan result)</description></item>
+        /// <item><description><b>Sandbox</b>: the cloud sandbox check report</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   **ThreatTypes**: the type of the threat intelligence event
-        /// *   **Intelligences**: the threat intelligence event
-        /// *   **ThreatLevel**: the level of the threat intelligence event
-        /// *   **Basic**: the basic information about the report (the scan result)
-        /// *   **Sandbox**: the cloud sandbox check report
+        /// <b>Example:</b>
+        /// <para>Basic,,ThreatTypes,Intelligences,Sandbox</para>
         /// </summary>
         [NameInMap("Field")]
         [Validation(Required=false)]
         public string Field { get; set; }
 
         /// <summary>
-        /// The hash value of the file to be detected.
+        /// <para>The hash value of the file to be detected.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b63917332950e5d219d0737ffe31****</para>
         /// </summary>
         [NameInMap("FileHash")]
         [Validation(Required=false)]
         public string FileHash { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The data source type. Valid values:
+        /// <para>The data source type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>machine</b>: host alerts</description></item>
+        /// <item><description><b>object_scan</b>: file detection alerts</description></item>
+        /// </list>
         /// 
-        /// *   **machine**: host alerts
-        /// *   **object_scan**: file detection alerts
+        /// <b>Example:</b>
+        /// <para>object_scan</para>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

@@ -10,29 +10,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SetSyncRefreshRegionRequest : TeaModel {
         /// <summary>
-        /// The access type of the multi-cloud site. Valid values:
+        /// <para>The access type of the multi-cloud site. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: The current site is not the default site of multi-cloud site. You can specify the current site as the default site of the multi-cloud site.</description></item>
+        /// <item><description><b>1</b>: The current site is the default site of multi-cloud site.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: The current site is not the default site of multi-cloud site. You can specify the current site as the default site of the multi-cloud site.
-        /// *   **1**: The current site is the default site of multi-cloud site.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("DefaultRegion")]
         [Validation(Required=false)]
         public int? DefaultRegion { get; set; }
 
         /// <summary>
-        /// The regions from which you want to synchronize assets at the current site.
+        /// <para>The regions from which you want to synchronize assets at the current site.</para>
         /// </summary>
         [NameInMap("RegionIds")]
         [Validation(Required=false)]
         public List<string> RegionIds { get; set; }
 
         /// <summary>
-        /// The cloud service provider. Valid values:
+        /// <para>The cloud service provider. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Tencent</b>: Tencent Cloud</description></item>
+        /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud</description></item>
+        /// <item><description><b>Azure</b>: Microsoft Azure</description></item>
+        /// <item><description><b>AWS</b>: Amazon Web Services (AWS)</description></item>
+        /// </list>
         /// 
-        /// *   **Tencent**: Tencent Cloud
-        /// *   **HUAWEICLOUD**: Huawei Cloud
-        /// *   **Azure**: Microsoft Azure
-        /// *   **AWS**: Amazon Web Services (AWS)
+        /// <b>Example:</b>
+        /// <para>Tencent</para>
         /// </summary>
         [NameInMap("Vendor")]
         [Validation(Required=false)]

@@ -10,88 +10,120 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAccountsInResourceDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// The members in the resource directory.
+        /// <para>The members in the resource directory.</para>
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public List<ListAccountsInResourceDirectoryResponseBodyAccounts> Accounts { get; set; }
         public class ListAccountsInResourceDirectoryResponseBodyAccounts : TeaModel {
             /// <summary>
-            /// The Alibaba Cloud account ID of the member.
+            /// <para>The Alibaba Cloud account ID of the member.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>180803538814****</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
             /// <summary>
-            /// The name of the member.
+            /// <para>The name of the member.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abc**</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// The ID of the folder in the resource directory.
+            /// <para>The ID of the folder in the resource directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fd-cE2SQP****</para>
             /// </summary>
             [NameInMap("FolderId")]
             [Validation(Required=false)]
             public string FolderId { get; set; }
 
             /// <summary>
-            /// Indicates whether the member is an administrator account of the resource directory. Valid values:
+            /// <para>Indicates whether the member is an administrator account of the resource directory. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>yes</b></description></item>
+            /// <item><description><b>no</b></description></item>
+            /// </list>
             /// 
-            /// *   **yes**
-            /// *   **no**
+            /// <b>Example:</b>
+            /// <para>no</para>
             /// </summary>
             [NameInMap("IsMaAccount")]
             [Validation(Required=false)]
             public string IsMaAccount { get; set; }
 
             /// <summary>
-            /// Indicates whether the member is marked as followed.
+            /// <para>Indicates whether the member is marked as followed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>no</para>
             /// </summary>
             [NameInMap("IsMarked")]
             [Validation(Required=false)]
             public string IsMarked { get; set; }
 
             /// <summary>
-            /// Indicates whether the member is a delegated administrator account of Security Center. Valid values:
+            /// <para>Indicates whether the member is a delegated administrator account of Security Center. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>yes</b></description></item>
+            /// <item><description><b>no</b></description></item>
+            /// </list>
             /// 
-            /// *   **yes**
-            /// *   **no**
+            /// <b>Example:</b>
+            /// <para>no</para>
             /// </summary>
             [NameInMap("IsSasDaAccount")]
             [Validation(Required=false)]
             public string IsSasDaAccount { get; set; }
 
             /// <summary>
-            /// Indicates whether the member is an account of the threat analysis and response feature. Valid values:
+            /// <para>Indicates whether the member is an account of the threat analysis and response feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>yes</b></description></item>
+            /// <item><description><b>no</b></description></item>
+            /// </list>
             /// 
-            /// *   **yes**
-            /// *   **no**
+            /// <b>Example:</b>
+            /// <para>no</para>
             /// </summary>
             [NameInMap("IsSiemControlAccount")]
             [Validation(Required=false)]
             public string IsSiemControlAccount { get; set; }
 
             /// <summary>
-            /// Indicates whether the member is a delegated administrator account of the threat analysis and response feature. Valid values:
+            /// <para>Indicates whether the member is a delegated administrator account of the threat analysis and response feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>yes</b></description></item>
+            /// <item><description><b>no</b></description></item>
+            /// </list>
             /// 
-            /// *   **yes**
-            /// *   **no**
+            /// <b>Example:</b>
+            /// <para>no</para>
             /// </summary>
             [NameInMap("IsSiemDaAccount")]
             [Validation(Required=false)]
             public string IsSiemDaAccount { get; set; }
 
             /// <summary>
-            /// The edition of Security Center that you use. Valid value:
+            /// <para>The edition of Security Center that you use. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b> or <b>1</b>: Basic</description></item>
+            /// <item><description><b>2</b> or <b>3</b>: Enterprise</description></item>
+            /// <item><description><b>5</b>: Advanced</description></item>
+            /// <item><description><b>6</b>: Anti-virus</description></item>
+            /// <item><description><b>7</b>: Ultimate</description></item>
+            /// </list>
             /// 
-            /// *   **0** or **1**: Basic
-            /// *   **2** or **3**: Enterprise
-            /// *   **5**: Advanced
-            /// *   **6**: Anti-virus
-            /// *   **7**: Ultimate
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("SasVersion")]
             [Validation(Required=false)]
@@ -100,7 +132,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B7A839E8-70AE-591D-8D9E-C5419A2240DB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

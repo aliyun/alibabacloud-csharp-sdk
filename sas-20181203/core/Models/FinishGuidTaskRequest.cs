@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class FinishGuidTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>guide_sub_task_config_add_collection</para>
         /// </summary>
         [NameInMap("TaskTypeName")]
         [Validation(Required=false)]

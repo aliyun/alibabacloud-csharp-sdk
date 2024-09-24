@@ -10,57 +10,77 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListQueryRaspAppInfoResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+        /// <para>The status code returned. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The installation information of the RASP-enabled application.
+        /// <para>The installation information of the RASP-enabled application.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListQueryRaspAppInfoResponseBodyData> Data { get; set; }
         public class ListQueryRaspAppInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the RASP-enabled application.
+            /// <para>The name of the RASP-enabled application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rasp-app</para>
             /// </summary>
             [NameInMap("RaspAppName")]
             [Validation(Required=false)]
             public string RaspAppName { get; set; }
 
             /// <summary>
-            /// The online status of the RASP-enabled applications. Valid values:
+            /// <para>The online status of the RASP-enabled applications. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: All RASP-enabled applications are online.</description></item>
+            /// <item><description><b>1</b>: Part of the RASP-enabled applications are online.</description></item>
+            /// <item><description><b>2</b>: All RASP-enabled applications are offline.</description></item>
+            /// </list>
             /// 
-            /// *   **0**: All RASP-enabled applications are online.
-            /// *   **1**: Part of the RASP-enabled applications are online.
-            /// *   **2**: All RASP-enabled applications are offline.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RaspOnlineStatus")]
             [Validation(Required=false)]
             public int? RaspOnlineStatus { get; set; }
 
             /// <summary>
-            /// The installation status of the RASP-enabled application. Valid values:
+            /// <para>The installation status of the RASP-enabled application. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>SUCCESS</b>: The RASP-enabled application is installed.</description></item>
+            /// <item><description><b>FAIL</b>: The RASP-enabled application fails to be installed.</description></item>
+            /// <item><description><b>INSTALL</b>: The RASP-enabled application is being installed.</description></item>
+            /// </list>
             /// 
-            /// *   **SUCCESS**: The RASP-enabled application is installed.
-            /// *   **FAIL**: The RASP-enabled application fails to be installed.
-            /// *   **INSTALL**: The RASP-enabled application is being installed.
+            /// <b>Example:</b>
+            /// <para>SUCCESS</para>
             /// </summary>
             [NameInMap("RaspStatus")]
             [Validation(Required=false)]
             public string RaspStatus { get; set; }
 
             /// <summary>
-            /// The result returned if the push fails.
+            /// <para>The result returned if the push fails.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AGENT_OFFLINE</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public string Result { get; set; }
 
             /// <summary>
-            /// The UUID of the asset.
+            /// <para>The UUID of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6690a46c-0edb-4663-a641-3629d1a9****</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -69,31 +89,44 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The additional information that is returned.
+        /// <para>The additional information that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The unique ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The unique ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1A975D03-5F49-5354-B2CB-3918D5DA431A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

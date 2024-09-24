@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventUserSettingRequest : TeaModel {
         /// <summary>
-        /// The ID of the request source. Set the value to **sas**.
+        /// <para>The ID of the request source. Set the value to <b>sas</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sas</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
 
         /// <summary>
-        /// The ID. You do not need to specify this parameter.
+        /// <para>The ID. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// The IP address of the request. You do not need to specify this parameter.
+        /// <para>The IP address of the request. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

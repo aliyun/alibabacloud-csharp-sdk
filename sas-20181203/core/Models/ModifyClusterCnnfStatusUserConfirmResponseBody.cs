@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyClusterCnnfStatusUserConfirmResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4FFBEDBD-FA63-5213-9103-306519EE4857</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

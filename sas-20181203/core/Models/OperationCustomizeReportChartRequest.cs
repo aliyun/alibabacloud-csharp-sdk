@@ -10,22 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperationCustomizeReportChartRequest : TeaModel {
         /// <summary>
-        /// The ID of the chart that is included in the report. Separate multiple IDs with commas (,).
+        /// <para>The ID of the chart that is included in the report. Separate multiple IDs with commas (,).</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to query the ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeChartList](~~DescribeChartList~~) operation to query the ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>CID_VUL_SUMMARY,CID_VUL_TREND,CID_VUL_OPERATION_TREND,CID_BASELINE_CHECK_SUMMARY,CID_BASELINE_CHECK_TREND,CID_BASELINE_CHECK_OPERATION_TREND</para>
         /// </summary>
         [NameInMap("ChartIds")]
         [Validation(Required=false)]
         public string ChartIds { get; set; }
 
         /// <summary>
-        /// The ID of the report.
+        /// <para>The ID of the report.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeCustomizeReportList](~~DescribeCustomizeReportList~~) operation to query the ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]

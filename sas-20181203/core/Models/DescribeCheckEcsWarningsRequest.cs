@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckEcsWarningsRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.2.3.4</para>
+        /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }

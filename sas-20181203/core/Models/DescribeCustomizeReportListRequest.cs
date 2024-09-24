@@ -10,59 +10,82 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCustomizeReportListRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// Specifies whether to pin the report. Valid values:
+        /// <para>Specifies whether to pin the report. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b></description></item>
+        /// </list>
         /// 
-        /// *   **false**
-        /// *   **true**
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Pinned")]
         [Validation(Required=false)]
         public bool? Pinned { get; set; }
 
         /// <summary>
-        /// The state of the report. Valid values:
+        /// <para>The state of the report. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: enabled</description></item>
+        /// </list>
         /// 
-        /// *   **0**: disabled
-        /// *   **1**: enabled
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ReportStatus")]
         [Validation(Required=false)]
         public int? ReportStatus { get; set; }
 
         /// <summary>
-        /// The type of the report. Valid values:
+        /// <para>The type of the report. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: daily report</description></item>
+        /// <item><description><b>1</b>: weekly report</description></item>
+        /// <item><description><b>2</b>: monthly report</description></item>
+        /// <item><description><b>3</b>: report whose statistics are collected in a custom time range</description></item>
+        /// </list>
         /// 
-        /// *   **0**: daily report
-        /// *   **1**: weekly report
-        /// *   **2**: monthly report
-        /// *   **3**: report whose statistics are collected in a custom time range
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ReportType")]
         [Validation(Required=false)]
         public int? ReportType { get; set; }
 
         /// <summary>
-        /// The report version. Valid values:
+        /// <para>The report version. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1.0.0</b></description></item>
+        /// <item><description><b>2.0.0</b></description></item>
+        /// </list>
         /// 
-        /// *   **1.0.0**
-        /// *   **2.0.0**
+        /// <b>Example:</b>
+        /// <para>2.0.0</para>
         /// </summary>
         [NameInMap("ReportVersion")]
         [Validation(Required=false)]
         public string ReportVersion { get; set; }
 
         /// <summary>
-        /// The name of the report.
+        /// <para>The name of the report.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

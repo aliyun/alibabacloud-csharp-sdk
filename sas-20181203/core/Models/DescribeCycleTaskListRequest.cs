@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCycleTaskListRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The name of the task. Valid values:
+        /// <para>The name of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus scan task</description></item>
+        /// <item><description><b>IMAGE_SCAN</b>: image scan task</description></item>
+        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: urgent vulnerability scan task</description></item>
+        /// </list>
         /// 
-        /// *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
-        /// *   **IMAGE_SCAN**: image scan task
-        /// *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+        /// <b>Example:</b>
+        /// <para>IMAGE_SCAN</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// The type of the task. Valid values:
+        /// <para>The type of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus scan task</description></item>
+        /// <item><description><b>IMAGE_SCAN</b>: image scan task</description></item>
+        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: urgent vulnerability scan task</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
-        /// *   **IMAGE_SCAN**: image scan task
-        /// *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>IMAGE_SCAN</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

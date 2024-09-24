@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetStrategyTemplateDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the template.
+        /// <para>The ID of the template.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~GetOpaStrategyTemplateSummary~~">GetOpaStrategyTemplateSummary</a> operation to query the IDs of templates.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [GetOpaStrategyTemplateSummary](~~GetOpaStrategyTemplateSummary~~) operation to query the IDs of templates.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

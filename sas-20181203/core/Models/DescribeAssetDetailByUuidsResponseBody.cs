@@ -10,127 +10,175 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAssetDetailByUuidsResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details of the ECS instances.
+        /// <para>An array that consists of the details of the ECS instances.</para>
         /// </summary>
         [NameInMap("AssetList")]
         [Validation(Required=false)]
         public List<DescribeAssetDetailByUuidsResponseBodyAssetList> AssetList { get; set; }
         public class DescribeAssetDetailByUuidsResponseBodyAssetList : TeaModel {
             /// <summary>
-            /// The type of the asset.
+            /// <para>The type of the asset.</para>
+            /// <para>The value is fixed as <b>0</b>, which indicates ECS instances.</para>
             /// 
-            /// The value is fixed as **0**, which indicates ECS instances.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("AssetType")]
             [Validation(Required=false)]
             public string AssetType { get; set; }
 
             /// <summary>
-            /// The status of the Security Center agent. Valid values:
+            /// <para>The status of the Security Center agent. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>online</b></description></item>
+            /// <item><description><b>offline</b></description></item>
+            /// </list>
             /// 
-            /// *   **online**
-            /// *   **offline**
+            /// <b>Example:</b>
+            /// <para>online</para>
             /// </summary>
             [NameInMap("ClientStatus")]
             [Validation(Required=false)]
             public string ClientStatus { get; set; }
 
             /// <summary>
-            /// The type of the asset by source. Valid values:
+            /// <para>The type of the asset by source. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: The asset is provided by Alibaba Cloud.</description></item>
+            /// <item><description><b>1</b>: The asset is not provided by Alibaba Cloud.</description></item>
+            /// <item><description><b>2</b>: The asset resides in a data center.</description></item>
+            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: other cloud asset.</description></item>
+            /// <item><description><b>8</b>: light-weight assets.</description></item>
+            /// </list>
             /// 
-            /// *   **0**: The asset is provided by Alibaba Cloud.
-            /// *   **1**: The asset is not provided by Alibaba Cloud.
-            /// *   **2**: The asset resides in a data center.
-            /// *   **3**, **4**, **5**, and **7**: other cloud asset.
-            /// *   **8**: light-weight assets.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Flag")]
             [Validation(Required=false)]
             public int? Flag { get; set; }
 
             /// <summary>
-            /// The ID of the ECS instance.
+            /// <para>The ID of the ECS instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-rj9gda4wolo0zixi****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the ECS instance.
+            /// <para>The name of the ECS instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestInstanceName</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The public IP address of the ECS instance.
+            /// <para>The public IP address of the ECS instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.10.XX.XX</para>
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// The private IP address of the ECS instance.
+            /// <para>The private IP address of the ECS instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// The IP address of the ECS instance.
+            /// <para>The IP address of the ECS instance.</para>
+            /// <remarks>
+            /// <para> If the ECS instance has a public IP address, the value of this parameter is the public IP address of the ECS instance. If the ECS instance does not have a public IP address, the value of this parameter is the private IP address of the ECS instance.</para>
+            /// </remarks>
             /// 
-            /// >  If the ECS instance has a public IP address, the value of this parameter is the public IP address of the ECS instance. If the ECS instance does not have a public IP address, the value of this parameter is the private IP address of the ECS instance.
+            /// <b>Example:</b>
+            /// <para>10.10.XX.XX</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The operating system of the ECS instance.
+            /// <para>The operating system of the ECS instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Linux</para>
             /// </summary>
             [NameInMap("Os")]
             [Validation(Required=false)]
             public string Os { get; set; }
 
             /// <summary>
-            /// The name of the operating system run by the ECS instance.
+            /// <para>The name of the operating system run by the ECS instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CentOS 7.6 64-bit</para>
             /// </summary>
             [NameInMap("OsName")]
             [Validation(Required=false)]
             public string OsName { get; set; }
 
             /// <summary>
-            /// The region in which the ECS instance resides.
+            /// <para>The region in which the ECS instance resides.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-guangzhou</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The region in which the ECS instance resides.
+            /// <para>The region in which the ECS instance resides.</para>
+            /// <remarks>
+            /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+            /// </remarks>
             /// 
-            /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).
+            /// <b>Example:</b>
+            /// <para>cn-shanghai</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The name of the region in which the ECS instance resides.
+            /// <para>The name of the region in which the ECS instance resides.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-shenzhen</para>
             /// </summary>
             [NameInMap("RegionName")]
             [Validation(Required=false)]
             public string RegionName { get; set; }
 
             /// <summary>
-            /// The UUID of the ECS instance.
+            /// <para>The UUID of the ECS instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2a98f149-0256-414c-a29a-a69f8a75****</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
             public string Uuid { get; set; }
 
             /// <summary>
-            /// The ID of the virtual private cloud (VPC).
+            /// <para>The ID of the virtual private cloud (VPC).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>13231-331331</para>
             /// </summary>
             [NameInMap("VpcInstanceId")]
             [Validation(Required=false)]
@@ -139,7 +187,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>92016EC8-D52D-49D8-9FF7-9EA340A950B9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

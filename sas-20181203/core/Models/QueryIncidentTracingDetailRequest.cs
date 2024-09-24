@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryIncidentTracingDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the event.
+        /// <para>The ID of the event.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2621307.html">DescribeCloudSiemEvents</a> operation to query the IDs of events.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeCloudSiemEvents](https://help.aliyun.com/document_detail/2621307.html) operation to query the IDs of events.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>184892fc5245b3ce8c3316434c94261f</para>
         /// </summary>
         [NameInMap("IncidentId")]
         [Validation(Required=false)]

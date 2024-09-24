@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddCheckResultWhiteListRequest : TeaModel {
         /// <summary>
-        /// The IDs of the check items.
+        /// <para>The IDs of the check items.</para>
         /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]

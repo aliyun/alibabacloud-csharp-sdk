@@ -10,26 +10,34 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteVulAutoRepairConfigRequest : TeaModel {
         /// <summary>
-        /// The alias of the vulnerability.
+        /// <para>The alias of the vulnerability.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RHSA-2017:0184-Important: mysql security update</para>
         /// </summary>
         [NameInMap("AliasName")]
         [Validation(Required=false)]
         public string AliasName { get; set; }
 
         /// <summary>
-        /// The IDs of the configurations.
-        /// 
-        /// >  You can call the [ListVulAutoRepairConfig](~~ListVulAutoRepairConfig~~) operation to query the IDs.
+        /// <para>The IDs of the configurations.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListVulAutoRepairConfig~~">ListVulAutoRepairConfig</a> operation to query the IDs.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("ConfigIdList")]
         [Validation(Required=false)]
         public List<long?> ConfigIdList { get; set; }
 
         /// <summary>
-        /// The type of the vulnerability. Valid values:
+        /// <para>The type of the vulnerability. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cve: Linux software vulnerability</description></item>
+        /// <item><description>sys: Windows system vulnerability</description></item>
+        /// </list>
         /// 
-        /// *   cve: Linux software vulnerability
-        /// *   sys: Windows system vulnerability
+        /// <b>Example:</b>
+        /// <para>cve</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

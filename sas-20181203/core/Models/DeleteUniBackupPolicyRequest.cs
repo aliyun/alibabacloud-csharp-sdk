@@ -10,18 +10,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteUniBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the anti-ransomware policy.
+        /// <para>The ID of the anti-ransomware policy.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies. You must specify at least one of the PolicyId parameter and the <b>PolicyIds</b> parameter.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies. You must specify at least one of the PolicyId parameter and the **PolicyIds** parameter.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public long? PolicyId { get; set; }
 
         /// <summary>
-        /// The IDs of anti-ransomware policies.
+        /// <para>The IDs of anti-ransomware policies.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies. You must specify at least one of the <b>PolicyId</b> parameter and the PolicyIds parameter.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies. You must specify at least one of the **PolicyId** parameter and the PolicyIds parameter.
+        /// <b>Example:</b>
+        /// <para>123,124</para>
         /// </summary>
         [NameInMap("PolicyIds")]
         [Validation(Required=false)]

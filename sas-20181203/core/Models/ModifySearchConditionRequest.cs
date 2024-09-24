@@ -10,53 +10,82 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifySearchConditionRequest : TeaModel {
         /// <summary>
-        /// The filter condition. The value of this parameter is in the JSON format and is case-sensitive. The value contains the following fields:
+        /// <para>The filter condition. The value of this parameter is in the JSON format and is case-sensitive. The value contains the following fields:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>filterParams</b>: the filter-related parameters. The value is in the JSON format. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>label</b>: the display name of the filter condition in the console.</para>
+        /// </description></item>
+        /// <item><description><para><b>value</b>: the settings of the filter condition. The value is in the JSON format. The value contains the following fields:</para>
+        /// <list type="bullet">
+        /// <item><description><b>name</b>: the name of the field for filtering. For more information, see the value description of name.</description></item>
+        /// <item><description><b>value</b>: the value of the field for filtering.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>LogicalExp</b>: the logical relationship among multiple filter conditions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>OR</b></description></item>
+        /// <item><description><b>AND</b></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> Value description of <b>name</b>:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If <b>Type</b> is set to <b>ecs</b>, you can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported filter conditions.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>Type</b> is set to <b>cloud_product</b>, you can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the supported filter conditions.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **filterParams**: the filter-related parameters. The value is in the JSON format. Valid values:
-        /// 
-        ///     *   **label**: the display name of the filter condition in the console.
-        /// 
-        ///     *   **value**: the settings of the filter condition. The value is in the JSON format. The value contains the following fields:
-        /// 
-        ///         *   **name**: the name of the field for filtering. For more information, see the value description of name.
-        ///         *   **value**: the value of the field for filtering.
-        /// 
-        /// *   **LogicalExp**: the logical relationship among multiple filter conditions. Valid values:
-        /// 
-        ///     *   **OR**
-        ///     *   **AND**
-        /// 
-        /// >  Value description of **name**:
-        /// 
-        /// *   If **Type** is set to **ecs**, you can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported filter conditions.
-        /// 
-        /// *   If **Type** is set to **cloud_product**, you can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the supported filter conditions.
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;filterParams&quot;: [
+        ///         {
+        ///             &quot;label&quot;: &quot;UUID：xxx&quot;,
+        ///             &quot;value&quot;: &quot;{\&quot;name\&quot;:\&quot;uuidList\&quot;,\&quot;value\&quot;:\&quot;xxx\&quot;}&quot;
+        ///         }
+        ///     ],
+        ///     &quot;LogicalExp&quot;: &quot;OR&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("FilterConditions")]
         [Validation(Required=false)]
         public string FilterConditions { get; set; }
 
         /// <summary>
-        /// The name of the common filter condition.
+        /// <para>The name of the common filter condition.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+        /// <para>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>27.223.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The type of the asset. Default value: **ecs**. Valid values:
+        /// <para>The type of the asset. Default value: <b>ecs</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ecs</b>: host</description></item>
+        /// <item><description><b>cloud_product</b>: Alibaba Cloud service</description></item>
+        /// </list>
         /// 
-        /// *   **ecs**: host
-        /// *   **cloud_product**: Alibaba Cloud service
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

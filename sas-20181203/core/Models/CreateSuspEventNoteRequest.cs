@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateSuspEventNoteRequest : TeaModel {
         /// <summary>
-        /// The ID of the alert event to which you want to add remarks. You can call the [DescribeSuspEvents](https://help.aliyun.com/document_detail/251497.html) operation to query the IDs of alert events.
+        /// <para>The ID of the alert event to which you want to add remarks. You can call the <a href="https://help.aliyun.com/document_detail/251497.html">DescribeSuspEvents</a> operation to query the IDs of alert events.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>668931</para>
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public long? EventId { get; set; }
 
         /// <summary>
-        /// The remarks that you want to add.
+        /// <para>The remarks that you want to add.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Ignore</para>
         /// </summary>
         [NameInMap("Note")]
         [Validation(Required=false)]

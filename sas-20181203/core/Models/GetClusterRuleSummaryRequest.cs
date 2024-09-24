@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetClusterRuleSummaryRequest : TeaModel {
         /// <summary>
-        /// The ID of the container cluster.
+        /// <para>The ID of the container cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc49d88d1exxx</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

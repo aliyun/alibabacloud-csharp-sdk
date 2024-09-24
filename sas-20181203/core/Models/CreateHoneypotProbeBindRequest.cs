@@ -10,58 +10,79 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateHoneypotProbeBindRequest : TeaModel {
         /// <summary>
-        /// The ports that are bound to the probe.
+        /// <para>The ports that are bound to the probe.</para>
         /// </summary>
         [NameInMap("BindPortList")]
         [Validation(Required=false)]
         public List<CreateHoneypotProbeBindRequestBindPortList> BindPortList { get; set; }
         public class CreateHoneypotProbeBindRequestBindPortList : TeaModel {
             /// <summary>
-            /// Specifies whether to bind the port. Valid values:
+            /// <para>Specifies whether to bind the port. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("BindPort")]
             [Validation(Required=false)]
             public bool? BindPort { get; set; }
 
             /// <summary>
-            /// The end port on which the probe monitors.
+            /// <para>The end port on which the probe monitors.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("EndPort")]
             [Validation(Required=false)]
             public int? EndPort { get; set; }
 
             /// <summary>
-            /// Specifies whether the port is a fixed port. Valid values:
+            /// <para>Specifies whether the port is a fixed port. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Fixed")]
             [Validation(Required=false)]
             public bool? Fixed { get; set; }
 
             /// <summary>
-            /// The type of the protocol. Valid values:
+            /// <para>The type of the protocol. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>tcp</b></description></item>
+            /// <item><description><b>udp</b></description></item>
+            /// </list>
             /// 
-            /// *   **tcp**
-            /// *   **udp**
+            /// <b>Example:</b>
+            /// <para>tcp</para>
             /// </summary>
             [NameInMap("Proto")]
             [Validation(Required=false)]
             public string Proto { get; set; }
 
             /// <summary>
-            /// The start port on which the probe monitors.
+            /// <para>The start port on which the probe monitors.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("StartPort")]
             [Validation(Required=false)]
             public int? StartPort { get; set; }
 
             /// <summary>
-            /// The destination port.
+            /// <para>The destination port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8080</para>
             /// </summary>
             [NameInMap("TargetPort")]
             [Validation(Required=false)]
@@ -70,35 +91,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The honeypot ID.
+        /// <para>The honeypot ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to query the IDs of honeypots.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
+        /// <b>Example:</b>
+        /// <para>dba7d44775be8e0e5888ee3b1a62554a93d2512247cabc38ddeac17a3b3f****</para>
         /// </summary>
         [NameInMap("HoneypotId")]
         [Validation(Required=false)]
         public string HoneypotId { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The probe ID.
+        /// <para>The probe ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+        /// <b>Example:</b>
+        /// <para>36bad711-d1ac-4419-ac68-c1aa280f****</para>
         /// </summary>
         [NameInMap("ProbeId")]
         [Validation(Required=false)]
         public string ProbeId { get; set; }
 
         /// <summary>
-        /// The IP addresses that are monitored.
+        /// <para>The IP addresses that are monitored.</para>
         /// </summary>
         [NameInMap("ServiceIpList")]
         [Validation(Required=false)]

@@ -10,83 +10,110 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyCloudVendorAccountAKResponseBody : TeaModel {
         /// <summary>
-        /// The information about the AccessKey pair that is added.
+        /// <para>The information about the AccessKey pair that is added.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyCloudVendorAccountAKResponseBodyData Data { get; set; }
         public class ModifyCloudVendorAccountAKResponseBodyData : TeaModel {
             /// <summary>
-            /// The type of the account to which the AccessKey pair belongs. Valid values:
+            /// <para>The type of the account to which the AccessKey pair belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>primary</b></description></item>
+            /// <item><description><b>sub</b></description></item>
+            /// </list>
             /// 
-            /// *   **primary**
-            /// *   **sub**
+            /// <b>Example:</b>
+            /// <para>sub</para>
             /// </summary>
             [NameInMap("AkType")]
             [Validation(Required=false)]
             public string AkType { get; set; }
 
             /// <summary>
-            /// The unique ID of the AccessKey pair.
+            /// <para>The unique ID of the AccessKey pair.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2158</para>
             /// </summary>
             [NameInMap("AuthId")]
             [Validation(Required=false)]
             public long? AuthId { get; set; }
 
             /// <summary>
-            /// The modules that are associated with the AccessKey pair.
+            /// <para>The modules that are associated with the AccessKey pair.</para>
             /// </summary>
             [NameInMap("AuthModules")]
             [Validation(Required=false)]
             public List<ModifyCloudVendorAccountAKResponseBodyDataAuthModules> AuthModules { get; set; }
             public class ModifyCloudVendorAccountAKResponseBodyDataAuthModules : TeaModel {
                 /// <summary>
-                /// The error message of the module.
+                /// <para>The error message of the module.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ak_domain_error</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// The code of the module. Valid values:
+                /// <para>The code of the module. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>HOST</b>: host.</description></item>
+                /// <item><description><b>CSPM</b>: configuration assessment.</description></item>
+                /// <item><description><b>SIEM</b>: threat analysis and response.</description></item>
+                /// <item><description><b>TRIAL</b>: log audit.</description></item>
+                /// </list>
                 /// 
-                /// *   **HOST**: host.
-                /// *   **CSPM**: configuration assessment.
-                /// *   **SIEM**: threat analysis and response.
-                /// *   **TRIAL**: log audit.
+                /// <b>Example:</b>
+                /// <para>HOST</para>
                 /// </summary>
                 [NameInMap("Module")]
                 [Validation(Required=false)]
                 public string Module { get; set; }
 
                 /// <summary>
-                /// The type of the cloud asset that is associated with the module.
+                /// <para>The type of the cloud asset that is associated with the module.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Module.</para>
                 /// </summary>
                 [NameInMap("ModuleAssetType")]
                 [Validation(Required=false)]
                 public string ModuleAssetType { get; set; }
 
                 /// <summary>
-                /// The display name of the module.
+                /// <para>The display name of the module.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Host</para>
                 /// </summary>
                 [NameInMap("ModuleDisp")]
                 [Validation(Required=false)]
                 public string ModuleDisp { get; set; }
 
                 /// <summary>
-                /// The service status of the module. Valid values:
+                /// <para>The service status of the module. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: being used.</description></item>
+                /// <item><description><b>1</b>: exception occurred.</description></item>
+                /// <item><description><b>2</b>: being validated.</description></item>
+                /// <item><description><b>3</b>: validation timed out.</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: being used.
-                /// *   **1**: exception occurred.
-                /// *   **2**: being validated.
-                /// *   **3**: validation timed out.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ModuleServiceStatus")]
                 [Validation(Required=false)]
                 public int? ModuleServiceStatus { get; set; }
 
                 /// <summary>
-                /// The permission description of the module.
+                /// <para>The permission description of the module.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Host</para>
                 /// </summary>
                 [NameInMap("ModuleStatement")]
                 [Validation(Required=false)]
@@ -95,48 +122,66 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The error message of the AccessKey pair.
+            /// <para>The error message of the AccessKey pair.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The IAM user is forbidden in the currently selected region</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The AccessKey ID.
+            /// <para>The AccessKey ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AE6SLd****</para>
             /// </summary>
             [NameInMap("SecretId")]
             [Validation(Required=false)]
             public string SecretId { get; set; }
 
             /// <summary>
-            /// The service status of the AccessKey pair. Valid values:
+            /// <para>The service status of the AccessKey pair. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: being used.</description></item>
+            /// <item><description><b>1</b>: exception occurred.</description></item>
+            /// <item><description><b>2</b>: being validated.</description></item>
+            /// <item><description><b>3</b>: validation timed out.</description></item>
+            /// </list>
             /// 
-            /// *   **0**: being used.
-            /// *   **1**: exception occurred.
-            /// *   **2**: being validated.
-            /// *   **3**: validation timed out.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ServiceStatus")]
             [Validation(Required=false)]
             public int? ServiceStatus { get; set; }
 
             /// <summary>
-            /// The status of the AccessKey pair. Valid values:
+            /// <para>The status of the AccessKey pair. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: enabled.</description></item>
+            /// <item><description><b>1</b>: disabled.</description></item>
+            /// </list>
             /// 
-            /// *   **0**: enabled.
-            /// *   **1**: disabled.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The cloud service provider. Valid values:
+            /// <para>The cloud service provider. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Tencent</b></description></item>
+            /// <item><description><b>HUAWEICLOUD</b></description></item>
+            /// <item><description><b>Azure</b></description></item>
+            /// <item><description><b>AWS</b></description></item>
+            /// </list>
             /// 
-            /// *   **Tencent**
-            /// *   **HUAWEICLOUD**
-            /// *   **Azure**
-            /// *   **AWS**
+            /// <b>Example:</b>
+            /// <para>Tencent</para>
             /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]
@@ -145,7 +190,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6635CED5-4B20-5D2D-94EC-A1C8F9C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

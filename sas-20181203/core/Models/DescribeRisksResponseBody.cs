@@ -10,63 +10,87 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeRisksResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EA54FE21-B006-5DFF-8D64-C4FFECDA****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The baselines.
+        /// <para>The baselines.</para>
         /// </summary>
         [NameInMap("Risks")]
         [Validation(Required=false)]
         public List<DescribeRisksResponseBodyRisks> Risks { get; set; }
         public class DescribeRisksResponseBodyRisks : TeaModel {
             /// <summary>
-            /// The description of the baseline.
+            /// <para>The description of the baseline.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Ubuntu 14,Ubuntu 16 ,Ubuntu 18,Ubuntu 20 baseline based on Alibaba Cloud best security practices</para>
             /// </summary>
             [NameInMap("RiskDetail")]
             [Validation(Required=false)]
             public string RiskDetail { get; set; }
 
             /// <summary>
-            /// The baseline ID.
+            /// <para>The baseline ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>54</para>
             /// </summary>
             [NameInMap("RiskId")]
             [Validation(Required=false)]
             public long? RiskId { get; set; }
 
             /// <summary>
-            /// The name of the baseline.
+            /// <para>The name of the baseline.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alibaba Cloud Standard - Ubuntu Security Baseline</para>
             /// </summary>
             [NameInMap("RiskName")]
             [Validation(Required=false)]
             public string RiskName { get; set; }
 
             /// <summary>
-            /// The name of the baseline type.
+            /// <para>The name of the baseline type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cis</para>
             /// </summary>
             [NameInMap("RiskType")]
             [Validation(Required=false)]
             public string RiskType { get; set; }
 
             /// <summary>
-            /// The name of the baseline subtype.
+            /// <para>The name of the baseline subtype.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hc_ubuntu</para>
             /// </summary>
             [NameInMap("SubRiskType")]
             [Validation(Required=false)]
             public string SubRiskType { get; set; }
 
             /// <summary>
-            /// The display name of the baseline subtype.
+            /// <para>The display name of the baseline subtype.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alibaba Cloud Standard - Ubuntu Security Baseline</para>
             /// </summary>
             [NameInMap("SubTypeAlias")]
             [Validation(Required=false)]
             public string SubTypeAlias { get; set; }
 
             /// <summary>
-            /// The display name of the baseline type.
+            /// <para>The display name of the baseline type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Best security practices</para>
             /// </summary>
             [NameInMap("TypeAlias")]
             [Validation(Required=false)]
@@ -75,7 +99,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

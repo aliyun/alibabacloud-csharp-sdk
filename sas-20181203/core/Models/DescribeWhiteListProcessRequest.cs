@@ -10,82 +10,114 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWhiteListProcessRequest : TeaModel {
         /// <summary>
-        /// The page number. Default value: **1**. Pages start from page 1.
+        /// <para>The page number. Default value: <b>1</b>. Pages start from page 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The sort order. Default value: descending order. Valid values:
+        /// <para>The sort order. Default value: descending order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: ascending order</description></item>
+        /// <item><description><b>2</b>: descending order</description></item>
+        /// </list>
         /// 
-        /// *   **1**: ascending order
-        /// *   **2**: descending order
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Desc")]
         [Validation(Required=false)]
         public int? Desc { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The item based on which you want to sort the returned results. Default value: **process type**. Valid values:
+        /// <para>The item based on which you want to sort the returned results. Default value: <b>process type</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: process type</description></item>
+        /// <item><description><b>2</b>: degree of trustability</description></item>
+        /// </list>
         /// 
-        /// *   **1**: process type
-        /// *   **2**: degree of trustability
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public int? OrderBy { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: 1000. Default value: 20. If you leave this parameter empty, 20 data entries are returned per page.
+        /// <para>The number of entries per page. Maximum value: 1000. Default value: 20. If you leave this parameter empty, 20 data entries are returned per page.</para>
+        /// <remarks>
+        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// >  We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The name of the process.
+        /// <para>The name of the process.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sys_creat</para>
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]
         public string ProcessName { get; set; }
 
         /// <summary>
-        /// The type of the process. Valid values:
+        /// <para>The type of the process. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: trusted</description></item>
+        /// <item><description><b>2</b>: suspicious</description></item>
+        /// <item><description><b>3</b>: malicious</description></item>
+        /// </list>
         /// 
-        /// *   **1**: trusted
-        /// *   **2**: suspicious
-        /// *   **3**: malicious
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ProcessType")]
         [Validation(Required=false)]
         public int? ProcessType { get; set; }
 
         /// <summary>
-        /// The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+        /// <para>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>27.223.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The ID of the policy.
+        /// <para>The ID of the policy.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain the ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeWhiteListStrategyList](~~DescribeWhiteListStrategyList~~) operation to obtain the ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>8562</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

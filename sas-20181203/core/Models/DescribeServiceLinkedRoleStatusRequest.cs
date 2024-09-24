@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeServiceLinkedRoleStatusRequest : TeaModel {
         /// <summary>
-        /// The service-linked role. Default value: **AliyunServiceRoleForSas**. Valid values:
+        /// <para>The service-linked role. Default value: <b>AliyunServiceRoleForSas</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>AliyunServiceRoleForSas</b>: the service-linked role of Security Center. Security Center assumes this role to access the resources of other cloud services within your account.</description></item>
+        /// <item><description><b>AliyunServiceRoleForSasCspm</b>: the service-linked role of Security Center-CSPM. Security Center-CSPM assumes this role to access the resources of other cloud services within your account.</description></item>
+        /// </list>
         /// 
-        /// *   **AliyunServiceRoleForSas**: the service-linked role of Security Center. Security Center assumes this role to access the resources of other cloud services within your account.
-        /// *   **AliyunServiceRoleForSasCspm**: the service-linked role of Security Center-CSPM. Security Center-CSPM assumes this role to access the resources of other cloud services within your account.
+        /// <b>Example:</b>
+        /// <para>AliyunServiceRoleForSas</para>
         /// </summary>
         [NameInMap("ServiceLinkedRole")]
         [Validation(Required=false)]

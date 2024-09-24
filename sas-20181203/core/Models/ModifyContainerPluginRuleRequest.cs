@@ -10,60 +10,77 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyContainerPluginRuleRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The action mode of the rule. Valid values:
+        /// <para>The action mode of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: alerts</description></item>
+        /// <item><description><b>2</b>: block</description></item>
+        /// </list>
         /// 
-        /// *   **1**: alerts
-        /// *   **2**: block
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public int? Mode { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// <para>The ID of the rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>100012</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public int? RuleId { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The type of the rule. Valid values:
+        /// <para>The type of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: user-defined rule</description></item>
+        /// <item><description><b>1</b>: built-in rule</description></item>
+        /// </list>
         /// 
-        /// *   **0**: user-defined rule
-        /// *   **1**: built-in rule
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public int? RuleType { get; set; }
 
         /// <summary>
-        /// The rule items.
+        /// <para>The rule items.</para>
         /// </summary>
         [NameInMap("SelectedPolicy")]
         [Validation(Required=false)]
         public List<string> SelectedPolicy { get; set; }
 
         /// <summary>
-        /// The images that are added to the whitelist.
+        /// <para>The images that are added to the whitelist.</para>
         /// </summary>
         [NameInMap("WhiteImages")]
         [Validation(Required=false)]

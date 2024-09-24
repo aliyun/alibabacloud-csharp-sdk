@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the anti-ransomware policy that you want to delete.
+        /// <para>The ID of the anti-ransomware policy that you want to delete.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The version of the anti-ransomware policy that you want to delete. You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies. Valid values:
+        /// <para>The version of the anti-ransomware policy that you want to delete. You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1.0.0</b></description></item>
+        /// <item><description><b>2.0.0</b></description></item>
+        /// </list>
         /// 
-        /// *   **1.0.0**
-        /// *   **2.0.0**
+        /// <b>Example:</b>
+        /// <para>2.0.0</para>
         /// </summary>
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]

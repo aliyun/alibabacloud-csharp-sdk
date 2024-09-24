@@ -10,32 +10,43 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyClientConfSetupRequest : TeaModel {
         /// <summary>
-        /// The configurations of the Security Center agent.
+        /// <para>The configurations of the Security Center agent.</para>
+        /// <list type="bullet">
+        /// <item><description>cpu: the maximum CPU utilization that can be occupied by the Security Center agent on the server</description></item>
+        /// <item><description>mem: the maximum memory usage that can be occupied by the Security Center agent on the server</description></item>
+        /// </list>
         /// 
-        /// *   cpu: the maximum CPU utilization that can be occupied by the Security Center agent on the server
-        /// *   mem: the maximum memory usage that can be occupied by the Security Center agent on the server
+        /// <b>Example:</b>
+        /// <para>{
+        ///       &quot;cpu&quot;: &quot;20&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("StrategyConfig")]
         [Validation(Required=false)]
         public string StrategyConfig { get; set; }
 
         /// <summary>
-        /// The type of the tag.
+        /// <para>The type of the tag.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>machineResource</para>
         /// </summary>
         [NameInMap("StrategyTag")]
         [Validation(Required=false)]
         public string StrategyTag { get; set; }
 
         /// <summary>
-        /// The value of the tag. Valid values:
+        /// <para>The value of the tag. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>major</description></item>
+        /// <item><description>advanced</description></item>
+        /// <item><description>basic</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   major
-        /// *   advanced
-        /// *   basic
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>major</para>
         /// </summary>
         [NameInMap("StrategyTagValue")]
         [Validation(Required=false)]

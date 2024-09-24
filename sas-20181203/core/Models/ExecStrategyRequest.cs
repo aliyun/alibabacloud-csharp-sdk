@@ -10,19 +10,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExecStrategyRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the baseline check policy.
+        /// <para>The ID of the baseline check policy.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeStrategy~~">DescribeStrategy</a> operation to query the IDs of baseline check policies.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeStrategy](~~DescribeStrategy~~) operation to query the IDs of baseline check policies.
+        /// <b>Example:</b>
+        /// <para>215421</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

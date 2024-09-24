@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyClientConfStrategyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9089D0AB-835F-5663-AB5E-4FF646BB****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

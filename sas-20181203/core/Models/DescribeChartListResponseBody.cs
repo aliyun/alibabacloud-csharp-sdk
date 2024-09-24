@@ -10,67 +10,85 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeChartListResponseBody : TeaModel {
         /// <summary>
-        /// The charts.
+        /// <para>The charts.</para>
         /// </summary>
         [NameInMap("ChartList")]
         [Validation(Required=false)]
         public List<DescribeChartListResponseBodyChartList> ChartList { get; set; }
         public class DescribeChartListResponseBodyChartList : TeaModel {
             /// <summary>
-            /// The name of the business type. Valid values:
+            /// <para>The name of the business type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Overall Operations Metrics</description></item>
+            /// <item><description>Asset Operations Metrics</description></item>
+            /// <item><description>Security Alert Operations Metrics</description></item>
+            /// <item><description>Vulnerability Operations Metrics</description></item>
+            /// <item><description>Baseline Operations Metrics</description></item>
+            /// <item><description>Cloud Product Operations Metrics</description></item>
+            /// <item><description>Honeypot Operations Metrics</description></item>
+            /// </list>
             /// 
-            /// *   Overall Operations Metrics
-            /// *   Asset Operations Metrics
-            /// *   Security Alert Operations Metrics
-            /// *   Vulnerability Operations Metrics
-            /// *   Baseline Operations Metrics
-            /// *   Cloud Product Operations Metrics
-            /// *   Honeypot Operations Metrics
+            /// <b>Example:</b>
+            /// <para>Overall Operation Metrics</para>
             /// </summary>
             [NameInMap("BusinessName")]
             [Validation(Required=false)]
             public string BusinessName { get; set; }
 
             /// <summary>
-            /// The business type. Valid values:
+            /// <para>The business type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>INDEX_SECURITY_OVERALL_OPERATION</description></item>
+            /// <item><description>INDEX_ASSET_OPERATION</description></item>
+            /// <item><description>INDEX_SUSPICIOUS_OPERATION</description></item>
+            /// <item><description>INDEX_VUL_OPERATION</description></item>
+            /// <item><description>INDEX_BASELINE_CHECK_OPERATION</description></item>
+            /// <item><description>INDEX_CLOUD_ASSET_OPERATION</description></item>
+            /// <item><description>INDEX_HONEYPOT_RISK_OPERATION</description></item>
+            /// </list>
             /// 
-            /// *   INDEX_SECURITY_OVERALL_OPERATION
-            /// *   INDEX_ASSET_OPERATION
-            /// *   INDEX_SUSPICIOUS_OPERATION
-            /// *   INDEX_VUL_OPERATION
-            /// *   INDEX_BASELINE_CHECK_OPERATION
-            /// *   INDEX_CLOUD_ASSET_OPERATION
-            /// *   INDEX_HONEYPOT_RISK_OPERATION
+            /// <b>Example:</b>
+            /// <para>INDEX_SECURITY_OVERALL_OPERATION</para>
             /// </summary>
             [NameInMap("BusinessType")]
             [Validation(Required=false)]
             public string BusinessType { get; set; }
 
             /// <summary>
-            /// The ID of the chart.
+            /// <para>The ID of the chart.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CID_CLOUD_ASSET_SUMMARY</para>
             /// </summary>
             [NameInMap("ChartId")]
             [Validation(Required=false)]
             public string ChartId { get; set; }
 
             /// <summary>
-            /// The name of the chart.
+            /// <para>The name of the chart.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Security Score</para>
             /// </summary>
             [NameInMap("ChartName")]
             [Validation(Required=false)]
             public string ChartName { get; set; }
 
             /// <summary>
-            /// The type of the chart. Valid values:
+            /// <para>The type of the chart. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>text</b></description></item>
+            /// <item><description><b>table</b></description></item>
+            /// <item><description><b>gauge</b></description></item>
+            /// <item><description><b>pie</b></description></item>
+            /// <item><description><b>line</b></description></item>
+            /// <item><description><b>bar</b></description></item>
+            /// <item><description><b>timeBar</b></description></item>
+            /// <item><description><b>timeLine</b></description></item>
+            /// </list>
             /// 
-            /// *   **text**
-            /// *   **table**
-            /// *   **gauge**
-            /// *   **pie**
-            /// *   **line**
-            /// *   **bar**
-            /// *   **timeBar**
-            /// *   **timeLine**
+            /// <b>Example:</b>
+            /// <para>text</para>
             /// </summary>
             [NameInMap("ChartType")]
             [Validation(Required=false)]
@@ -79,7 +97,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>35B434CC-1615-5937-A04E-A9BC2868DB45</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

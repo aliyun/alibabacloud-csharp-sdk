@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteMonitorAccountRequest : TeaModel {
         /// <summary>
-        /// The ID of the member that you want to delete.
+        /// <para>The ID of the member that you want to delete.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of the members in the Security Center console.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the IDs of the members in the Security Center console.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1840517068******</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]

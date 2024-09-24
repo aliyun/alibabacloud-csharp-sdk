@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetContainerDefenseRuleDetailRequest : TeaModel {
         /// <summary>
-        /// The rule ID.
+        /// <para>The rule ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the rule ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListContainerDefenseRule](https://help.aliyun.com/document_detail/2590599.html) operation to query the rule ID.
+        /// <b>Example:</b>
+        /// <para>156</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

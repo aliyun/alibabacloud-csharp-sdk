@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeServiceLinkedRoleStatusResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>39CE98F4-88C0-4539-B906-6B542E5C07B9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status information about the service-linked role.
+        /// <para>The status information about the service-linked role.</para>
         /// </summary>
         [NameInMap("RoleStatus")]
         [Validation(Required=false)]
         public DescribeServiceLinkedRoleStatusResponseBodyRoleStatus RoleStatus { get; set; }
         public class DescribeServiceLinkedRoleStatusResponseBodyRoleStatus : TeaModel {
             /// <summary>
-            /// Indicates whether the service-linked role is created. Valid values:
+            /// <para>Indicates whether the service-linked role is created. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
+            /// </list>
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

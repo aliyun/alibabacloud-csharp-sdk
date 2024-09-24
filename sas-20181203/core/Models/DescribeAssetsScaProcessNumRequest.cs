@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAssetsScaProcessNumRequest : TeaModel {
         /// <summary>
-        /// The UUIDs of the servers.
-        /// 
-        /// This parameter is required.
+        /// <para>The UUIDs of the servers.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulCheckTaskStatusDetailRequest : TeaModel {
         /// <summary>
-        /// The task IDs.
+        /// <para>The task IDs.</para>
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]
         public List<string> TaskIds { get; set; }
 
         /// <summary>
-        /// The types of the vulnerabilities that are detected by the tasks.
+        /// <para>The types of the vulnerabilities that are detected by the tasks.</para>
         /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]
         public List<string> Types { get; set; }
 
         /// <summary>
-        /// The UUID of the server.
+        /// <para>The UUID of the server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5d55af3c-35f3-4d4d-8ccc-8c5443b0****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeTargetResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>79CFF74D-E967-5407-8A78-EE03B925FDAA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the server.
+        /// <para>The information about the server.</para>
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<DescribeTargetResponseBodyTargets> Targets { get; set; }
         public class DescribeTargetResponseBodyTargets : TeaModel {
             /// <summary>
-            /// The flag that is added to the server. This parameter can be empty.
+            /// <para>The flag that is added to the server. This parameter can be empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>del</para>
             /// </summary>
             [NameInMap("Flag")]
             [Validation(Required=false)]
             public string Flag { get; set; }
 
             /// <summary>
-            /// The UUID of the server or the ID of the server group.
+            /// <para>The UUID of the server or the ID of the server group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5c5f0169-3527-40a2-b5ff-0bc1db8f****</para>
             /// </summary>
             [NameInMap("Target")]
             [Validation(Required=false)]
             public string Target { get; set; }
 
             /// <summary>
-            /// The type of the object. Valid values:
+            /// <para>The type of the object. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>uuid</b>: a server</description></item>
+            /// <item><description><b>groupId</b>: a server group</description></item>
+            /// </list>
             /// 
-            /// *   **uuid**: a server
-            /// *   **groupId**: a server group
+            /// <b>Example:</b>
+            /// <para>uuid</para>
             /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]
@@ -50,7 +63,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

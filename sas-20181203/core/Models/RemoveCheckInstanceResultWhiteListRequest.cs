@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class RemoveCheckInstanceResultWhiteListRequest : TeaModel {
         /// <summary>
-        /// The ID of the check item.
+        /// <para>The ID of the check item.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11</para>
         /// </summary>
         [NameInMap("CheckId")]
         [Validation(Required=false)]
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// The IDs of instances. Separate multiple IDs with commas (,).
+        /// <para>The IDs of instances. Separate multiple IDs with commas (,).</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

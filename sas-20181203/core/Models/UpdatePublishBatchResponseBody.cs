@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdatePublishBatchResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3956048F-9D73-5EDB-834B-4827BB******</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

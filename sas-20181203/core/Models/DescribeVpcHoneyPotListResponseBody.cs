@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVpcHoneyPotListResponseBody : TeaModel {
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeVpcHoneyPotListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeVpcHoneyPotListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -47,139 +59,189 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4FEC7F58-FCDA-415F-AE25-CD8BC0931DF2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the honeypots.
+        /// <para>An array that consists of the honeypots.</para>
         /// </summary>
         [NameInMap("VpcHoneyPotDTOList")]
         [Validation(Required=false)]
         public List<DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOList> VpcHoneyPotDTOList { get; set; }
         public class DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOList : TeaModel {
             /// <summary>
-            /// The CIDR block of the VPC.
+            /// <para>The CIDR block of the VPC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX/16</para>
             /// </summary>
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// The time at which the VPC was created. Unit: milliseconds.
+            /// <para>The time at which the VPC was created. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1607365213000</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The status of the server on which the honeypot is deployed. Valid values:
+            /// <para>The status of the server on which the honeypot is deployed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Pending</b>: The server is being created.</description></item>
+            /// <item><description><b>Running</b>: The server is running.</description></item>
+            /// <item><description><b>Starting</b>: The server is being started.</description></item>
+            /// <item><description><b>Stopping</b>: The server is being stopped.</description></item>
+            /// <item><description><b>Stopped</b>: The server is stopped.</description></item>
+            /// </list>
             /// 
-            /// *   **Pending**: The server is being created.
-            /// *   **Running**: The server is running.
-            /// *   **Starting**: The server is being started.
-            /// *   **Stopping**: The server is being stopped.
-            /// *   **Stopped**: The server is stopped.
+            /// <b>Example:</b>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("HoneyPotEcsInstanceStatus")]
             [Validation(Required=false)]
             public string HoneyPotEcsInstanceStatus { get; set; }
 
             /// <summary>
-            /// The ID of the elastic network interface (ENI) used by the honeypot in the VPC.
+            /// <para>The ID of the elastic network interface (ENI) used by the honeypot in the VPC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eni-p0whwgg7bing8b80****</para>
             /// </summary>
             [NameInMap("HoneyPotEniInstanceId")]
             [Validation(Required=false)]
             public string HoneyPotEniInstanceId { get; set; }
 
             /// <summary>
-            /// Indicates whether the cloud honeypot feature is enabled for the VPC. Valid values:
+            /// <para>Indicates whether the cloud honeypot feature is enabled for the VPC. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
+            /// </list>
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("HoneyPotExistence")]
             [Validation(Required=false)]
             public bool? HoneyPotExistence { get; set; }
 
             /// <summary>
-            /// The status of the honeypot. Valid values:
+            /// <para>The status of the honeypot. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>pending</b>: The honeypot is being created.</description></item>
+            /// <item><description><b>deleting</b>: The honeypot is being deleted.</description></item>
+            /// <item><description><b>off</b>: The honeypot is disabled.</description></item>
+            /// <item><description><b>suspending</b>: The honeypot is suspended.</description></item>
+            /// <item><description><b>on</b>: The honeypot is enabled.</description></item>
+            /// </list>
             /// 
-            /// *   **pending**: The honeypot is being created.
-            /// *   **deleting**: The honeypot is being deleted.
-            /// *   **off**: The honeypot is disabled.
-            /// *   **suspending**: The honeypot is suspended.
-            /// *   **on**: The honeypot is enabled.
+            /// <b>Example:</b>
+            /// <para>on</para>
             /// </summary>
             [NameInMap("HoneyPotInstanceStatus")]
             [Validation(Required=false)]
             public string HoneyPotInstanceStatus { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch to which the ENI used by the honeypot is connected.
+            /// <para>The ID of the vSwitch to which the ENI used by the honeypot is connected.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-p0w7gdcfvn20tvdul****</para>
             /// </summary>
             [NameInMap("HoneyPotVpcSwitchId")]
             [Validation(Required=false)]
             public string HoneyPotVpcSwitchId { get; set; }
 
             /// <summary>
-            /// The ID of the VPC.
+            /// <para>The ID of the VPC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-p0w223apdl49sr5zv****</para>
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
             /// <summary>
-            /// The name of the VPC.
+            /// <para>The name of the VPC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abc-vpcname</para>
             /// </summary>
             [NameInMap("VpcName")]
             [Validation(Required=false)]
             public string VpcName { get; set; }
 
             /// <summary>
-            /// The region ID of the VPC.
+            /// <para>The region ID of the VPC.</para>
+            /// <remarks>
+            /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+            /// </remarks>
             /// 
-            /// > For more information about the mapping between region IDs and region names, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).
+            /// <b>Example:</b>
+            /// <para>ap-southeast-2</para>
             /// </summary>
             [NameInMap("VpcRegionId")]
             [Validation(Required=false)]
             public string VpcRegionId { get; set; }
 
             /// <summary>
-            /// The status of the VPC. Valid values:
+            /// <para>The status of the VPC. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Available</b>: The VPC is normal and available.</description></item>
+            /// <item><description><b>Pending</b>: The VPC is being configured.</description></item>
+            /// </list>
             /// 
-            /// *   **Available**: The VPC is normal and available.
-            /// *   **Pending**: The VPC is being configured.
+            /// <b>Example:</b>
+            /// <para>Available</para>
             /// </summary>
             [NameInMap("VpcStatus")]
             [Validation(Required=false)]
             public string VpcStatus { get; set; }
 
             /// <summary>
-            /// An array that consists of the vSwitches in the VPC.
+            /// <para>An array that consists of the vSwitches in the VPC.</para>
             /// </summary>
             [NameInMap("VpcSwitchIdList")]
             [Validation(Required=false)]
             public List<DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOListVpcSwitchIdList> VpcSwitchIdList { get; set; }
             public class DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOListVpcSwitchIdList : TeaModel {
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// <para>The ID of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-p0wdnyv4wzp6jkuu4****</para>
                 /// </summary>
                 [NameInMap("VpcSwitchId")]
                 [Validation(Required=false)]
                 public string VpcSwitchId { get; set; }
 
                 /// <summary>
-                /// The name of the vSwitch.
+                /// <para>The name of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>abc01</para>
                 /// </summary>
                 [NameInMap("VpcSwitchName")]
                 [Validation(Required=false)]
                 public string VpcSwitchName { get; set; }
 
                 /// <summary>
-                /// The zone ID of the vSwitch.
+                /// <para>The zone ID of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ap-southeast-2b</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

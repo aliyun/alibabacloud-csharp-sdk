@@ -10,91 +10,127 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListK8sAccessInfoResponseBody : TeaModel {
         /// <summary>
-        /// The information about the Kubernetes clusters.
+        /// <para>The information about the Kubernetes clusters.</para>
         /// </summary>
         [NameInMap("K8sAccessInfos")]
         [Validation(Required=false)]
         public List<ListK8sAccessInfoResponseBodyK8sAccessInfos> K8sAccessInfos { get; set; }
         public class ListK8sAccessInfoResponseBodyK8sAccessInfos : TeaModel {
             /// <summary>
-            /// The ID of the Alibaba Cloud account.
+            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1960721413485****</para>
             /// </summary>
             [NameInMap("AliUid")]
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// The Simple Log Service Logstore that is used to store the audit logs.
+            /// <para>The Simple Log Service Logstore that is used to store the audit logs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>audit-cf6baf6afa106eca665296fdf68b****</para>
             /// </summary>
             [NameInMap("AuditLogStore")]
             [Validation(Required=false)]
             public string AuditLogStore { get; set; }
 
             /// <summary>
-            /// The Simple Log Service project that is used to store the audit logs.
+            /// <para>The Simple Log Service project that is used to store the audit logs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>k8s-log-custom-your-project-sd89eh****</para>
             /// </summary>
             [NameInMap("AuditProject")]
             [Validation(Required=false)]
             public string AuditProject { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the server is deployed.
+            /// <para>The ID of the region in which the server is deployed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("AuditRegionId")]
             [Validation(Required=false)]
             public string AuditRegionId { get; set; }
 
             /// <summary>
-            /// The ID of the cluster.
+            /// <para>The ID of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c0da5e4cb82a848c4a57c4dc9f49a****</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// <para>The name of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// The expiration time.
+            /// <para>The expiration time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1690596321613</para>
             /// </summary>
             [NameInMap("ExpireDate")]
             [Validation(Required=false)]
             public long? ExpireDate { get; set; }
 
             /// <summary>
-            /// The ID of the server group.
+            /// <para>The ID of the server group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>11088522</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
             /// <summary>
-            /// The name of the server group.
+            /// <para>The name of the server group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
             /// <summary>
-            /// The UUID of the access information.
+            /// <para>The UUID of the access information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>67070</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The installation key of the Kubernetes cluster.
+            /// <para>The installation key of the Kubernetes cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx</para>
             /// </summary>
             [NameInMap("InstallKey")]
             [Validation(Required=false)]
             public string InstallKey { get; set; }
 
             /// <summary>
-            /// The service provider.
+            /// <para>The service provider.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALIYUN</para>
             /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]
@@ -103,7 +139,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0B48AB3C-84FC-424D-A01D-B9270EF46038</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

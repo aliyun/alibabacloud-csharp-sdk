@@ -10,64 +10,91 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckTypesRequest : TeaModel {
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.
+        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
+        /// <remarks>
+        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// >  We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the baseline.
+        /// <para>The ID of the baseline.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to query the IDs of baselines.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of baselines.
+        /// <b>Example:</b>
+        /// <para>34</para>
         /// </summary>
         [NameInMap("RiskId")]
         [Validation(Required=false)]
         public long? RiskId { get; set; }
 
         /// <summary>
-        /// Whether to query the check item list. The default value is false. Valid values:
+        /// <para>Whether to query the check item list. The default value is false. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: Not Query</description></item>
+        /// <item><description><b>true</b>: Query</description></item>
+        /// </list>
         /// 
-        /// - **false**: Not Query
-        /// - **true**: Query
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ShowChecks")]
         [Validation(Required=false)]
         public bool? ShowChecks { get; set; }
 
         /// <summary>
-        /// The data source. Default value: **default**. Valid values:
+        /// <para>The data source. Default value: <b>default</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>agentless</b>: The check items of baselines for agentless detection.</description></item>
+        /// <item><description><b>default</b>: The check items of baselines for hosts.</description></item>
+        /// </list>
         /// 
-        /// *   **agentless**: The check items of baselines for agentless detection.
-        /// *   **default**: The check items of baselines for hosts.
+        /// <b>Example:</b>
+        /// <para>agentless</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// The UUID of the server.
+        /// <para>The UUID of the server.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// <b>Example:</b>
+        /// <para>293b07cb-db2d-4f39-941f-b2e4abb8****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

@@ -10,26 +10,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteHoneypotProbeBindRequest : TeaModel {
         /// <summary>
-        /// The unique ID of the bound service.
+        /// <para>The unique ID of the bound service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aa20815f-f0f3-4e3b-8e13-55771742****</para>
         /// </summary>
         [NameInMap("BindId")]
         [Validation(Required=false)]
         public string BindId { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The probe ID.
+        /// <para>The probe ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+        /// <b>Example:</b>
+        /// <para>aa234650-cfcf-4e25-b61f-c58f603f****</para>
         /// </summary>
         [NameInMap("ProbeId")]
         [Validation(Required=false)]

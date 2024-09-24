@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAegisContainerPluginRuleResponseBody : TeaModel {
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListAegisContainerPluginRuleResponseBodyPageInfo PageInfo { get; set; }
         public class ListAegisContainerPluginRuleResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>69</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -40,59 +49,78 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CE500770-42D3-442E-9DDD-156E0F9F3B45</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The rules.
+        /// <para>The rules.</para>
         /// </summary>
         [NameInMap("RuleList")]
         [Validation(Required=false)]
         public List<ListAegisContainerPluginRuleResponseBodyRuleList> RuleList { get; set; }
         public class ListAegisContainerPluginRuleResponseBodyRuleList : TeaModel {
             /// <summary>
-            /// The time when the rule was created. Unit: milliseconds.
+            /// <para>The time when the rule was created. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1676355025000</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// The time when the rule was modified. Unit: milliseconds.
+            /// <para>The time when the rule was modified. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1681985833000</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// The action of the rule. Valid values:
+            /// <para>The action of the rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: Alert</description></item>
+            /// <item><description><b>2</b>: Block</description></item>
+            /// </list>
             /// 
-            /// *   **1**: Alert
-            /// *   **2**: Block
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public int? Mode { get; set; }
 
             /// <summary>
-            /// An array that consists of policies.
+            /// <para>An array that consists of policies.</para>
             /// </summary>
             [NameInMap("Policies")]
             [Validation(Required=false)]
             public List<ListAegisContainerPluginRuleResponseBodyRuleListPolicies> Policies { get; set; }
             public class ListAegisContainerPluginRuleResponseBodyRuleListPolicies : TeaModel {
                 /// <summary>
-                /// The policy key.
+                /// <para>The policy key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>system_auto_****</para>
                 /// </summary>
                 [NameInMap("PolicyKey")]
                 [Validation(Required=false)]
                 public string PolicyKey { get; set; }
 
                 /// <summary>
-                /// The name of the policy.
+                /// <para>The name of the policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>System self-starting task\<em>\</em>\<em>\</em></para>
                 /// </summary>
                 [NameInMap("PolicyName")]
                 [Validation(Required=false)]
@@ -101,56 +129,74 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The description of the rule.
+            /// <para>The description of the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>system_call</para>
             /// </summary>
             [NameInMap("RuleDescription")]
             [Validation(Required=false)]
             public string RuleDescription { get; set; }
 
             /// <summary>
-            /// The ID of the rule.
+            /// <para>The ID of the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30****</para>
             /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// The name of the rule.
+            /// <para>The name of the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-18****</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// The ID of the rule template. The ListSystemClientRules operation returns the ID of a rule template.
+            /// <para>The ID of the rule template. The ListSystemClientRules operation returns the ID of a rule template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>868**</para>
             /// </summary>
             [NameInMap("RuleTemplateId")]
             [Validation(Required=false)]
             public string RuleTemplateId { get; set; }
 
             /// <summary>
-            /// The name of the rule template.
+            /// <para>The name of the rule template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>system_call</para>
             /// </summary>
             [NameInMap("RuleTemplateName")]
             [Validation(Required=false)]
             public string RuleTemplateName { get; set; }
 
             /// <summary>
-            /// The fields in the value of the rule subtype.
+            /// <para>The fields in the value of the rule subtype.</para>
             /// </summary>
             [NameInMap("SelectedPolicy")]
             [Validation(Required=false)]
             public List<string> SelectedPolicy { get; set; }
 
             /// <summary>
-            /// The switch ID of the rule.
+            /// <para>The switch ID of the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>USER-ENABLE-SWITCH-TYPE_****</para>
             /// </summary>
             [NameInMap("SwitchId")]
             [Validation(Required=false)]
             public string SwitchId { get; set; }
 
             /// <summary>
-            /// The images that are added to the whitelist of the rule.
+            /// <para>The images that are added to the whitelist of the rule.</para>
             /// </summary>
             [NameInMap("WhiteImages")]
             [Validation(Required=false)]

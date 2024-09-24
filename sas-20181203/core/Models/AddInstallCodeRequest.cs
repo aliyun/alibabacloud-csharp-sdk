@@ -10,55 +10,78 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddInstallCodeRequest : TeaModel {
         /// <summary>
-        /// The validity period of the installation command. The value is a 13-digit timestamp.
+        /// <para>The validity period of the installation command. The value is a 13-digit timestamp.</para>
+        /// <remarks>
+        /// <para> The installation command is valid only within the validity period. An expired installation command cannot be used to install the Security Center agent.</para>
+        /// </remarks>
         /// 
-        /// >  The installation command is valid only within the validity period. An expired installation command cannot be used to install the Security Center agent.
+        /// <b>Example:</b>
+        /// <para>1680257463853</para>
         /// </summary>
         [NameInMap("ExpiredDate")]
         [Validation(Required=false)]
         public long? ExpiredDate { get; set; }
 
         /// <summary>
-        /// The ID of the asset group to which you want to add the asset.
+        /// <para>The ID of the asset group to which you want to add the asset.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
+        /// <b>Example:</b>
+        /// <para>8076980</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// Specifies whether to create an image. Default value: **false**. Valid values:
+        /// <para>Specifies whether to create an image. Default value: <b>false</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: does not create an image.</description></item>
+        /// <item><description><b>true</b>: creates an image.</description></item>
+        /// </list>
         /// 
-        /// *   **false**: does not create an image.
-        /// *   **true**: creates an image.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("OnlyImage")]
         [Validation(Required=false)]
         public bool? OnlyImage { get; set; }
 
         /// <summary>
-        /// The operating system of the instance. Default value: **linux**. Valid values:
+        /// <para>The operating system of the instance. Default value: <b>linux</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>linux</b></description></item>
+        /// <item><description><b>windows</b></description></item>
+        /// <item><description><b>windows-2003</b></description></item>
+        /// </list>
         /// 
-        /// *   **linux**
-        /// *   **windows**
-        /// *   **windows-2003**
+        /// <b>Example:</b>
+        /// <para>linux</para>
         /// </summary>
         [NameInMap("Os")]
         [Validation(Required=false)]
         public string Os { get; set; }
 
         /// <summary>
-        /// The name of the proxy cluster.
+        /// <para>The name of the proxy cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>proxy_test</para>
         /// </summary>
         [NameInMap("ProxyCluster")]
         [Validation(Required=false)]
         public string ProxyCluster { get; set; }
 
         /// <summary>
-        /// The name of the service provider for the asset. Default value: **ALIYUN**.
+        /// <para>The name of the service provider for the asset. Default value: <b>ALIYUN</b>.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeVendorList~~">DescribeVendorList</a> operation to query the names of service providers.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeVendorList](~~DescribeVendorList~~) operation to query the names of service providers.
+        /// <b>Example:</b>
+        /// <para>ALIYUN</para>
         /// </summary>
         [NameInMap("VendorName")]
         [Validation(Required=false)]

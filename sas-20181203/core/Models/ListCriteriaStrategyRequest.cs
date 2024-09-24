@@ -10,43 +10,62 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCriteriaStrategyRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+        /// <b>Example:</b>
+        /// <para>c4af4fdf38a98496a9b63c2be5dae****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the image.
+        /// <para>The name of the image.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~GetOpaClusterImageList~~">GetOpaClusterImageList</a> operation to query the names of images.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [GetOpaClusterImageList](~~GetOpaClusterImageList~~) operation to query the names of images.
+        /// <b>Example:</b>
+        /// <para>testImage</para>
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
         /// <summary>
-        /// The tag that is added to the container.
+        /// <para>The tag that is added to the container.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~GetOpaClusterLabelList~~">GetOpaClusterLabelList</a> operation to query the tags that are added to containers.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [GetOpaClusterLabelList](~~GetOpaClusterLabelList~~) operation to query the tags that are added to containers.
+        /// <b>Example:</b>
+        /// <para>testlabel</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string Label { get; set; }
 
         /// <summary>
-        /// The namespace of the cluster.
+        /// <para>The namespace of the cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~GetOpaClusterNamespaceList~~">GetOpaClusterNamespaceList</a> operation to query the namespaces of clusters.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [GetOpaClusterNamespaceList](~~GetOpaClusterNamespaceList~~) operation to query the namespaces of clusters.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

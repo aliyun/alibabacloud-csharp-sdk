@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class JoinWebLockProcessWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A47D621A-193E-5BDA-ADFA-A0D3133E199C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

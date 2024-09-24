@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class RemoveCheckResultWhiteListRequest : TeaModel {
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Deprecated</para>
         /// </summary>
         [NameInMap("CheckGroupId")]
         [Validation(Required=false)]
         public string CheckGroupId { get; set; }
 
         /// <summary>
-        /// The IDs of check items.
+        /// <para>The IDs of check items.</para>
         /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
@@ -28,7 +31,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Deprecated</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

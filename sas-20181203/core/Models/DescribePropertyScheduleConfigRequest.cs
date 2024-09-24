@@ -10,19 +10,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyScheduleConfigRequest : TeaModel {
         /// <summary>
-        /// The type of the asset fingerprints. Valid values:
+        /// <para>The type of the asset fingerprints. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>scheduler_port_period</b>: listening port</description></item>
+        /// <item><description><b>scheduler_process_period</b>: running process</description></item>
+        /// <item><description><b>scheduler_account_period</b>: account</description></item>
+        /// <item><description><b>scheduler_software_period</b>: software</description></item>
+        /// <item><description><b>scheduler_cron_period</b>: scheduled task</description></item>
+        /// <item><description><b>scheduler_sca_period</b>: middleware</description></item>
+        /// <item><description><b>scheduler_autorun_period</b>: startup item</description></item>
+        /// <item><description><b>scheduler_lkm_period</b>: kernel module</description></item>
+        /// <item><description><b>scheduler_sca_proxy_period</b>: website</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **scheduler_port_period**: listening port
-        /// *   **scheduler_process_period**: running process
-        /// *   **scheduler_account_period**: account
-        /// *   **scheduler_software_period**: software
-        /// *   **scheduler_cron_period**: scheduled task
-        /// *   **scheduler_sca_period**: middleware
-        /// *   **scheduler_autorun_period**: startup item
-        /// *   **scheduler_lkm_period**: kernel module
-        /// *   **scheduler_sca_proxy_period**: website
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>scheduler_autorun_period</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

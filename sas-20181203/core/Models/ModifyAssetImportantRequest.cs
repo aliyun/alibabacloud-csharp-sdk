@@ -10,20 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAssetImportantRequest : TeaModel {
         /// <summary>
-        /// The importance of the asset. Valid values:
+        /// <para>The importance of the asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: test</description></item>
+        /// <item><description><b>1</b>: normal</description></item>
+        /// <item><description><b>2</b>: important</description></item>
+        /// </list>
         /// 
-        /// *   **0**: test
-        /// *   **1**: normal
-        /// *   **2**: important
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ImportantCode")]
         [Validation(Required=false)]
         public int? ImportantCode { get; set; }
 
         /// <summary>
-        /// The UUIDs of servers. Separate multiple UUIDs with commas (,).
+        /// <para>The UUIDs of servers. Separate multiple UUIDs with commas (,).</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// <b>Example:</b>
+        /// <para>076a446d-df7d-424c-bdc5-bb5dc7f1****</para>
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

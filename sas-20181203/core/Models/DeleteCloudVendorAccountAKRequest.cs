@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteCloudVendorAccountAKRequest : TeaModel {
         /// <summary>
-        /// The unique ID of the AccessKey pair.
+        /// <para>The unique ID of the AccessKey pair.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2363</para>
         /// </summary>
         [NameInMap("AuthId")]
         [Validation(Required=false)]
         public long? AuthId { get; set; }
 
         /// <summary>
-        /// The modules that are associated with the AccessKey pair.
+        /// <para>The modules that are associated with the AccessKey pair.</para>
         /// </summary>
         [NameInMap("AuthModules")]
         [Validation(Required=false)]

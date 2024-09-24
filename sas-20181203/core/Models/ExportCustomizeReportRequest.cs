@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExportCustomizeReportRequest : TeaModel {
         /// <summary>
-        /// The type of the security report that you want to export. Valid values:
+        /// <para>The type of the security report that you want to export. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>HTML</b></description></item>
+        /// <item><description><b>PDF</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The default value is HTML. PDF is supported only for security reports in version 2.0.0.</para>
+        /// </remarks>
         /// 
-        /// *   **HTML**
-        /// *   **PDF**
-        /// 
-        /// >  The default value is HTML. PDF is supported only for security reports in version 2.0.0.
+        /// <b>Example:</b>
+        /// <para>HTML</para>
         /// </summary>
         [NameInMap("ExportType")]
         [Validation(Required=false)]
         public string ExportType { get; set; }
 
         /// <summary>
-        /// The ID of the security report.
+        /// <para>The ID of the security report.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeCustomizeReportList](~~DescribeCustomizeReportList~~) operation to query the ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]

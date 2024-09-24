@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SetRegistryScanDayNumResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>48483161-F328-5A12-AB78-3EB81F37****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

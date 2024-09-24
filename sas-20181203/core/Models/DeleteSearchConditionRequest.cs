@@ -10,28 +10,38 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteSearchConditionRequest : TeaModel {
         /// <summary>
-        /// The name of the frequently used search condition.
+        /// <para>The name of the frequently used search condition.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeSearchCondition~~">DescribeSearchCondition</a> operation to query frequently used search conditions.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeSearchCondition](~~DescribeSearchCondition~~) operation to query frequently used search conditions.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>19.12.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The type of the asset. Default value: ecs. Valid values:
+        /// <para>The type of the asset. Default value: ecs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ecs</b>: an Elastic Compute Service (ECS) instance.</description></item>
+        /// <item><description><b>cloud_product</b>: an Alibaba Cloud service.</description></item>
+        /// </list>
         /// 
-        /// *   **ecs**: an Elastic Compute Service (ECS) instance.
-        /// *   **cloud_product**: an Alibaba Cloud service.
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

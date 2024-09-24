@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateFileProtectEventStatusRequest : TeaModel {
         /// <summary>
-        /// The IDs of the events.
+        /// <para>The IDs of the events.</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public List<long?> Id { get; set; }
 
         /// <summary>
-        /// The handling status of the event. Valid values:
+        /// <para>The handling status of the event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: unhandled</description></item>
+        /// <item><description><b>1</b>: handled</description></item>
+        /// <item><description><b>2</b>: added to the whitelist</description></item>
+        /// </list>
         /// 
-        /// *   **0**: unhandled
-        /// *   **1**: handled
-        /// *   **2**: added to the whitelist
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

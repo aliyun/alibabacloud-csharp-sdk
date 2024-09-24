@@ -10,29 +10,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAegisContainerPluginRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the defense rule against container escapes.
+        /// <para>The ID of the defense rule against container escapes.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListAegisContainerPluginRule~~">ListAegisContainerPluginRule</a> operation to obtain the ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListAegisContainerPluginRule](~~ListAegisContainerPluginRule~~) operation to obtain the ID.
+        /// <b>Example:</b>
+        /// <para>1141****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The type of the rule. Valid values:
+        /// <para>The type of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: custom rule</description></item>
+        /// <item><description><b>1</b>: system rule</description></item>
+        /// </list>
         /// 
-        /// *   **0**: custom rule
-        /// *   **1**: system rule
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]

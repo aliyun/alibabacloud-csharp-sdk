@@ -10,35 +10,43 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCanTrySasResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCanTrySasResponseBodyData Data { get; set; }
         public class GetCanTrySasResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether the user is qualified for the trial use. Valid values:
+            /// <para>Indicates whether the user is qualified for the trial use. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("CanTry")]
             [Validation(Required=false)]
             public int? CanTry { get; set; }
 
             /// <summary>
-            /// The editions that are allowed for the trial use.
+            /// <para>The editions that are allowed for the trial use.</para>
             /// </summary>
             [NameInMap("CanTryVersions")]
             [Validation(Required=false)]
             public List<int?> CanTryVersions { get; set; }
 
             /// <summary>
-            /// The trial type. Valid values:
+            /// <para>The trial type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: trial prohibited</description></item>
+            /// <item><description><b>1</b>: first trial</description></item>
+            /// <item><description><b>2</b>: second trial</description></item>
+            /// </list>
             /// 
-            /// *   **0**: trial prohibited
-            /// *   **1**: first trial
-            /// *   **2**: second trial
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TryType")]
             [Validation(Required=false)]
@@ -47,7 +55,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8BAA57***B7073A5C1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

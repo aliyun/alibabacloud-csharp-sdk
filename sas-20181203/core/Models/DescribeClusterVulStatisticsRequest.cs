@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClusterVulStatisticsRequest : TeaModel {
         /// <summary>
-        /// The ID of the container cluster.
+        /// <para>The ID of the container cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c471f0f61b9c04f8380556e922cf1****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The type of the vulnerabilities. Valid values:
+        /// <para>The type of the vulnerabilities. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cve</b>: Linux software vulnerabilities</description></item>
+        /// <item><description><b>app</b>: application vulnerabilities</description></item>
+        /// <item><description><b>sca</b>: vulnerabilities that are detected based on software component analysis</description></item>
+        /// </list>
         /// 
-        /// *   **cve**: Linux software vulnerabilities
-        /// *   **app**: application vulnerabilities
-        /// *   **sca**: vulnerabilities that are detected based on software component analysis
+        /// <b>Example:</b>
+        /// <para>cve,app,sca</para>
         /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]

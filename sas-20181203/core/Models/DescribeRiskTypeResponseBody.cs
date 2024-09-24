@@ -10,159 +10,211 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeRiskTypeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F22037B5-FCE4-5178-A9E7-71798E1F9270</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the information about baseline types.
+        /// <para>An array that consists of the information about baseline types.</para>
         /// </summary>
         [NameInMap("RiskTypes")]
         [Validation(Required=false)]
         public List<DescribeRiskTypeResponseBodyRiskTypes> RiskTypes { get; set; }
         public class DescribeRiskTypeResponseBodyRiskTypes : TeaModel {
             /// <summary>
-            /// The alias of the baseline type.
+            /// <para>The alias of the baseline type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Redis unauthorized access high exploit vulnerability risk</para>
             /// </summary>
             [NameInMap("Alias")]
             [Validation(Required=false)]
             public string Alias { get; set; }
 
             /// <summary>
-            /// The baseline type flag of the current user version. Valid values:
+            /// <para>The baseline type flag of the current user version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: Have access</description></item>
+            /// <item><description><b>false</b>: No permissions</description></item>
+            /// </list>
             /// 
-            /// - **true**: Have access
-            /// - **false**: No permissions
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("AuthFlag")]
             [Validation(Required=false)]
             public bool? AuthFlag { get; set; }
 
             /// <summary>
-            /// An array that consists of the information about baseline subtypes.
+            /// <para>An array that consists of the information about baseline subtypes.</para>
             /// </summary>
             [NameInMap("SubTypes")]
             [Validation(Required=false)]
             public List<DescribeRiskTypeResponseBodyRiskTypesSubTypes> SubTypes { get; set; }
             public class DescribeRiskTypeResponseBodyRiskTypesSubTypes : TeaModel {
                 /// <summary>
-                /// The alias of the baseline subtype.
+                /// <para>The alias of the baseline subtype.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Redis unauthorized access high exploit vulnerability risk</para>
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// The baseline subtype permission flag of the current user version. Valid values:
+                /// <para>The baseline subtype permission flag of the current user version. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: Have access</description></item>
+                /// <item><description><b>false</b>: No permissions</description></item>
+                /// </list>
                 /// 
-                /// - **true**: Have access
-                /// - **false**: No permissions
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("AuthFlag")]
                 [Validation(Required=false)]
                 public bool? AuthFlag { get; set; }
 
                 /// <summary>
-                /// An array that consists of the check details about the baseline subtype.
+                /// <para>An array that consists of the check details about the baseline subtype.</para>
                 /// </summary>
                 [NameInMap("CheckDetails")]
                 [Validation(Required=false)]
                 public List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetails> CheckDetails { get; set; }
                 public class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetails : TeaModel {
                     /// <summary>
-                    /// The description of the baseline.
+                    /// <para>The description of the baseline.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Set password expiration time, force regular modification of password, reduce password leakage and guess risk.Use non-password login (e.g. key pair) please ignore this item.</para>
                     /// </summary>
                     [NameInMap("CheckDesc")]
                     [Validation(Required=false)]
                     public string CheckDesc { get; set; }
 
                     /// <summary>
-                    /// The ID of the baseline.
+                    /// <para>The ID of the baseline.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1299</para>
                     /// </summary>
                     [NameInMap("CheckId")]
                     [Validation(Required=false)]
                     public long? CheckId { get; set; }
 
                     /// <summary>
-                    /// The baseline.
+                    /// <para>The baseline.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Ensure password expiration period is set.</para>
                     /// </summary>
                     [NameInMap("CheckItem")]
                     [Validation(Required=false)]
                     public string CheckItem { get; set; }
 
                     /// <summary>
-                    /// An array that consists of the rule details about the baseline.
+                    /// <para>An array that consists of the rule details about the baseline.</para>
                     /// </summary>
                     [NameInMap("Rules")]
                     [Validation(Required=false)]
                     public List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules> Rules { get; set; }
                     public class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules : TeaModel {
                         /// <summary>
-                        /// Indicates whether the baseline can be edited. Valid values:
+                        /// <para>Indicates whether the baseline can be edited. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>0</b>: no</description></item>
+                        /// <item><description><b>1</b>: yes</description></item>
+                        /// </list>
                         /// 
-                        /// *   **0**: no
-                        /// *   **1**: yes
+                        /// <b>Example:</b>
+                        /// <para>1</para>
                         /// </summary>
                         [NameInMap("Optional")]
                         [Validation(Required=false)]
                         public int? Optional { get; set; }
 
                         /// <summary>
-                        /// An array that consists of the parameters in the rule for the baseline.
+                        /// <para>An array that consists of the parameters in the rule for the baseline.</para>
                         /// </summary>
                         [NameInMap("ParamList")]
                         [Validation(Required=false)]
                         public List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRulesParamList> ParamList { get; set; }
                         public class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRulesParamList : TeaModel {
                             /// <summary>
-                            /// If the value of paramType is 1, this parameter is empty. If the value of paramType is 2, this parameter provides the options that can be selected for paramType.
+                            /// <para>If the value of paramType is 1, this parameter is empty. If the value of paramType is 2, this parameter provides the options that can be selected for paramType.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0,1,2,3</para>
                             /// </summary>
                             [NameInMap("EnumValue")]
                             [Validation(Required=false)]
                             public string EnumValue { get; set; }
 
                             /// <summary>
-                            /// The maximum value of the parameter.
+                            /// <para>The maximum value of the parameter.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>999</para>
                             /// </summary>
                             [NameInMap("MaxValue")]
                             [Validation(Required=false)]
                             public int? MaxValue { get; set; }
 
                             /// <summary>
-                            /// The minimum value of the parameter.
+                            /// <para>The minimum value of the parameter.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>1</para>
                             /// </summary>
                             [NameInMap("MinValue")]
                             [Validation(Required=false)]
                             public int? MinValue { get; set; }
 
                             /// <summary>
-                            /// The default value of the parameter.
+                            /// <para>The default value of the parameter.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>7</para>
                             /// </summary>
                             [NameInMap("ParamDefaultValue")]
                             [Validation(Required=false)]
                             public string ParamDefaultValue { get; set; }
 
                             /// <summary>
-                            /// The description of the parameter.
+                            /// <para>The description of the parameter.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>The setting value is 0 means no definition, 1 means success, 2 means failure, 3 means success and failure</para>
                             /// </summary>
                             [NameInMap("ParamDesc")]
                             [Validation(Required=false)]
                             public string ParamDesc { get; set; }
 
                             /// <summary>
-                            /// The name of the parameter.
+                            /// <para>The name of the parameter.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>range_val</para>
                             /// </summary>
                             [NameInMap("ParamName")]
                             [Validation(Required=false)]
                             public string ParamName { get; set; }
 
                             /// <summary>
-                            /// The configuration type of the parameter. Valid values:
+                            /// <para>The configuration type of the parameter. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>1</b>: input</description></item>
+                            /// <item><description><b>2</b>: selection</description></item>
+                            /// </list>
                             /// 
-                            /// *   **1**: input
-                            /// *   **2**: selection
+                            /// <b>Example:</b>
+                            /// <para>1</para>
                             /// </summary>
                             [NameInMap("ParamType")]
                             [Validation(Required=false)]
@@ -171,14 +223,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         }
 
                         /// <summary>
-                        /// The description of the rule for the baseline.
+                        /// <para>The description of the rule for the baseline.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Please customize the password expiration time detection standard as</para>
                         /// </summary>
                         [NameInMap("RuleDesc")]
                         [Validation(Required=false)]
                         public string RuleDesc { get; set; }
 
                         /// <summary>
-                        /// The ID of the rule for the baseline.
+                        /// <para>The ID of the rule for the baseline.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>audit.audit_policy.auditpolicychange.cus</para>
                         /// </summary>
                         [NameInMap("RuleId")]
                         [Validation(Required=false)]
@@ -189,17 +247,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// The operating system type of the server. Valid values:
+                /// <para>The operating system type of the server. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>windows</b></description></item>
+                /// <item><description><b>linux</b></description></item>
+                /// </list>
                 /// 
-                /// - **windows**
-                /// - **linux**
+                /// <b>Example:</b>
+                /// <para>linux</para>
                 /// </summary>
                 [NameInMap("SupportedOs")]
                 [Validation(Required=false)]
                 public string SupportedOs { get; set; }
 
                 /// <summary>
-                /// The name of the baseline subtype.
+                /// <para>The name of the baseline subtype.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hc_exploit_redis</para>
                 /// </summary>
                 [NameInMap("TypeName")]
                 [Validation(Required=false)]
@@ -208,7 +273,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The name of the baseline type.
+            /// <para>The name of the baseline type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hc_exploit</para>
             /// </summary>
             [NameInMap("TypeName")]
             [Validation(Required=false)]

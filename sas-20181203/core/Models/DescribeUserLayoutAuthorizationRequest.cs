@@ -10,9 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUserLayoutAuthorizationRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
-        /// - **zh**: Chinese
-        /// - **en**: English
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -23,7 +28,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// <para>The source IP address of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.2.3.4</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

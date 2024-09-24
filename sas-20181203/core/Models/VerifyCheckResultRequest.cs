@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class VerifyCheckResultRequest : TeaModel {
         /// <summary>
-        /// An array that consists of the IDs of risk items.
+        /// <para>An array that consists of the IDs of risk items.</para>
         /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]

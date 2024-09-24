@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBinarySecurityPoliciesRequest : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The name of the policy.
+        /// <para>The name of the policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>policy-auto-5patxz</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -35,17 +44,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The source IP address.
+        /// <para>The source IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>59.82.XXX.XXX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The status of the policy. Valid values:
+        /// <para>The status of the policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>enabled</b></description></item>
+        /// <item><description><b>disabled</b></description></item>
+        /// </list>
         /// 
-        /// *   **enabled**
-        /// *   **disabled**
+        /// <b>Example:</b>
+        /// <para>enabled</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExcludeSystemPathResponseBody : TeaModel {
         /// <summary>
-        /// An array consisting of the directories that are excluded.
+        /// <para>An array consisting of the directories that are excluded.</para>
         /// </summary>
         [NameInMap("ExcludePaths")]
         [Validation(Required=false)]
         public List<DescribeExcludeSystemPathResponseBodyExcludePaths> ExcludePaths { get; set; }
         public class DescribeExcludeSystemPathResponseBodyExcludePaths : TeaModel {
             /// <summary>
-            /// The operating system of the server. Valid values:
+            /// <para>The operating system of the server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>linux</b>: Linux</description></item>
+            /// <item><description><b>windows</b>: Windows</description></item>
+            /// </list>
             /// 
-            /// *   **linux**: Linux
-            /// *   **windows**: Windows
+            /// <b>Example:</b>
+            /// <para>linux</para>
             /// </summary>
             [NameInMap("Os")]
             [Validation(Required=false)]
             public string Os { get; set; }
 
             /// <summary>
-            /// The absolute path to the directory.
+            /// <para>The absolute path to the directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/bin/</para>
             /// </summary>
             [NameInMap("Path")]
             [Validation(Required=false)]
@@ -36,35 +43,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeExcludeSystemPathResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeExcludeSystemPathResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>55</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -73,7 +92,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FBBEB173-1F43-505F-A876-C03ECDF6****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

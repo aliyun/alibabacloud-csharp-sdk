@@ -10,74 +10,102 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListHoneypotPresetResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+        /// <para>The status code returned. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// An array that consists of the honeypot templates.
+        /// <para>An array that consists of the honeypot templates.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListHoneypotPresetResponseBodyList> List { get; set; }
         public class ListHoneypotPresetResponseBodyList : TeaModel {
             /// <summary>
-            /// The name of the management node.
+            /// <para>The name of the management node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>node1</para>
             /// </summary>
             [NameInMap("ControlNodeName")]
             [Validation(Required=false)]
             public string ControlNodeName { get; set; }
 
             /// <summary>
-            /// The display name of the honeypot image.
+            /// <para>The display name of the honeypot image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Metabase</para>
             /// </summary>
             [NameInMap("HoneypotImageDisplayName")]
             [Validation(Required=false)]
             public string HoneypotImageDisplayName { get; set; }
 
             /// <summary>
-            /// The name of the honeypot image.
+            /// <para>The name of the honeypot image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>metabase</para>
             /// </summary>
             [NameInMap("HoneypotImageName")]
             [Validation(Required=false)]
             public string HoneypotImageName { get; set; }
 
             /// <summary>
-            /// The ID of the honeypot template.
+            /// <para>The ID of the honeypot template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3cc04a47-7229-418c-8101-f10a2887****</para>
             /// </summary>
             [NameInMap("HoneypotPresetId")]
             [Validation(Required=false)]
             public string HoneypotPresetId { get; set; }
 
             /// <summary>
-            /// The ID of the management node.
+            /// <para>The ID of the management node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c94eff5b-ea48-4805-8b7f-e04d3509****</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
             /// <summary>
-            /// The custom name of the honeypot template.
+            /// <para>The custom name of the honeypot template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>WebMin-online</para>
             /// </summary>
             [NameInMap("PresetName")]
             [Validation(Required=false)]
             public string PresetName { get; set; }
 
             /// <summary>
-            /// The type of the honeypot template. Valid values:
+            /// <para>The type of the honeypot template. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>TEMP</b>: automatically generated template</description></item>
+            /// <item><description><b>CUSTOM</b>: custom template</description></item>
+            /// <item><description><b>DEFAULT</b>: default template</description></item>
+            /// </list>
             /// 
-            /// *   **TEMP**: automatically generated template
-            /// *   **CUSTOM**: custom template
-            /// *   **DEFAULT**: default template
+            /// <b>Example:</b>
+            /// <para>CUSTOM</para>
             /// </summary>
             [NameInMap("PresetType")]
             [Validation(Required=false)]
@@ -86,42 +114,57 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListHoneypotPresetResponseBodyPageInfo PageInfo { get; set; }
         public class ListHoneypotPresetResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: 20.
+            /// <para>The number of entries returned per page. Default value: 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>55</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -130,17 +173,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0C656B33-0D6B-5953-A26A-D766BD75B44A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

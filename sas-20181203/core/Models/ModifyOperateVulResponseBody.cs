@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyOperateVulResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DFE4F166-1AC9-4FAC-A4E4-F0608AD705A6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

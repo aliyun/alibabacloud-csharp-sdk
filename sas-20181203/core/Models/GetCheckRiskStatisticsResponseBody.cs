@@ -10,105 +10,144 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckRiskStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// The number of risk scenarios.
+        /// <para>The number of risk scenarios.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// An array consisting of the statistics on check items that are used in risk scenarios.
+        /// <para>An array consisting of the statistics on check items that are used in risk scenarios.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetCheckRiskStatisticsResponseBodyData> Data { get; set; }
         public class GetCheckRiskStatisticsResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of high-risk items.
+            /// <para>The number of high-risk items.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>43</para>
             /// </summary>
             [NameInMap("HighWarningCount")]
             [Validation(Required=false)]
             public int? HighWarningCount { get; set; }
 
             /// <summary>
-            /// The number of low-risk items.
+            /// <para>The number of low-risk items.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("LowWarningCount")]
             [Validation(Required=false)]
             public int? LowWarningCount { get; set; }
 
             /// <summary>
-            /// The number of medium-risk items.
+            /// <para>The number of medium-risk items.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>29</para>
             /// </summary>
             [NameInMap("MediumWarningCount")]
             [Validation(Required=false)]
             public int? MediumWarningCount { get; set; }
 
             /// <summary>
-            /// The number of passed check items.
+            /// <para>The number of passed check items.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>143</para>
             /// </summary>
             [NameInMap("PassCount")]
             [Validation(Required=false)]
             public int? PassCount { get; set; }
 
             /// <summary>
-            /// The name of the risk scenario.
+            /// <para>The name of the risk scenario.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SECURITY</para>
             /// </summary>
             [NameInMap("SceneName")]
             [Validation(Required=false)]
             public string SceneName { get; set; }
 
             /// <summary>
-            /// The statistics on check items that are used in the risk scenario by baseline type.
+            /// <para>The statistics on check items that are used in the risk scenario by baseline type.</para>
             /// </summary>
             [NameInMap("SubStatistics")]
             [Validation(Required=false)]
             public List<GetCheckRiskStatisticsResponseBodyDataSubStatistics> SubStatistics { get; set; }
             public class GetCheckRiskStatisticsResponseBodyDataSubStatistics : TeaModel {
                 /// <summary>
-                /// The name of the baseline type.
+                /// <para>The name of the baseline type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>weak_password</para>
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// The number of high-risk items.
+                /// <para>The number of high-risk items.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("HighWarningCount")]
                 [Validation(Required=false)]
                 public int? HighWarningCount { get; set; }
 
                 /// <summary>
-                /// The number of low-risk items.
+                /// <para>The number of low-risk items.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("LowWarningCount")]
                 [Validation(Required=false)]
                 public int? LowWarningCount { get; set; }
 
                 /// <summary>
-                /// The number of medium-risk items.
+                /// <para>The number of medium-risk items.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("MediumWarningCount")]
                 [Validation(Required=false)]
                 public int? MediumWarningCount { get; set; }
 
                 /// <summary>
-                /// The number of passed check items.
+                /// <para>The number of passed check items.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("PassCount")]
                 [Validation(Required=false)]
                 public int? PassCount { get; set; }
 
                 /// <summary>
-                /// The total number of check items.
+                /// <para>The total number of check items.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
                 /// </summary>
                 [NameInMap("TotalCount")]
                 [Validation(Required=false)]
                 public int? TotalCount { get; set; }
 
                 /// <summary>
-                /// The baseline type.
+                /// <para>The baseline type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>weak_password</para>
                 /// </summary>
                 [NameInMap("TypeName")]
                 [Validation(Required=false)]
@@ -117,7 +156,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The total number of check items.
+            /// <para>The total number of check items.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>219</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -126,7 +168,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2C455672-2490-5211-84EC-420C7818****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

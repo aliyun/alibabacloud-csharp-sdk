@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDingTalkRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.Default value: 1.
+        /// <para>The number of the page to return.Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.Default value: 20.
+        /// <para>The number of entries to return on each page.Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The name of the notification.
+        /// <para>The name of the notification.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Vulnerability notification</para>
         /// </summary>
         [NameInMap("RuleActionName")]
         [Validation(Required=false)]

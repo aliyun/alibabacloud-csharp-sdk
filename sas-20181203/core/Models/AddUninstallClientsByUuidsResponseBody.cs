@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddUninstallClientsByUuidsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3956048F-9D73-5EDB-834B-4827BB483977</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

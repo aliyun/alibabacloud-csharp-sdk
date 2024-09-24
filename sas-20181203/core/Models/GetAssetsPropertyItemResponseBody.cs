@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAssetsPropertyItemResponseBody : TeaModel {
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public GetAssetsPropertyItemResponseBodyPageInfo PageInfo { get; set; }
         public class GetAssetsPropertyItemResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>45</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -47,41 +59,56 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// An array that consists of the aggregation information about asset fingerprints.
+        /// <para>An array that consists of the aggregation information about asset fingerprints.</para>
         /// </summary>
         [NameInMap("PropertyItems")]
         [Validation(Required=false)]
         public List<GetAssetsPropertyItemResponseBodyPropertyItems> PropertyItems { get; set; }
         public class GetAssetsPropertyItemResponseBodyPropertyItems : TeaModel {
             /// <summary>
-            /// The number of servers related to the asset fingerprints.
+            /// <para>The number of servers related to the asset fingerprints.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>23</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The endpoint.
+            /// <para>The endpoint.</para>
+            /// <remarks>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>web_server</b>.</para>
+            /// </remarks>
             /// 
-            /// > This parameter is returned only when **Biz** is set to **web_server**.
+            /// <b>Example:</b>
+            /// <para>localhost</para>
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// The name of the module.
+            /// <para>The name of the module.</para>
+            /// <remarks>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>lkm</b>.</para>
+            /// </remarks>
             /// 
-            /// > This parameter is returned only when **Biz** is set to **lkm**.
+            /// <b>Example:</b>
+            /// <para>alihids</para>
             /// </summary>
             [NameInMap("ModuleName")]
             [Validation(Required=false)]
             public string ModuleName { get; set; }
 
             /// <summary>
-            /// The path to the startup item.
+            /// <para>The path to the startup item.</para>
+            /// <remarks>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>autorun</b>.</para>
+            /// </remarks>
             /// 
-            /// > This parameter is returned only when **Biz** is set to **autorun**.
+            /// <b>Example:</b>
+            /// <para>C:/Program Files/****</para>
             /// </summary>
             [NameInMap("Path")]
             [Validation(Required=false)]
@@ -90,7 +117,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>340D7FC4-D575-1661-8ACD-CFA7BE57****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

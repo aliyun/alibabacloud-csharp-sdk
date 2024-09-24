@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateOssBucketScanTaskResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BBD75EC2-2F4F-5A7B-AA53-18724DC8****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

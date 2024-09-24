@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckResultResponseBody : TeaModel {
         /// <summary>
-        /// The information about the check items.
+        /// <para>The information about the check items.</para>
         /// </summary>
         [NameInMap("Checks")]
         [Validation(Required=false)]
@@ -29,56 +29,77 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetVendor { get; set; }
 
             /// <summary>
-            /// The ID of the check item.
+            /// <para>The ID of the check item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("CheckId")]
             [Validation(Required=false)]
             public long? CheckId { get; set; }
 
             /// <summary>
-            /// The check policies.
+            /// <para>The check policies.</para>
             /// </summary>
             [NameInMap("CheckPolicies")]
             [Validation(Required=false)]
             public List<ListCheckResultResponseBodyChecksCheckPolicies> CheckPolicies { get; set; }
             public class ListCheckResultResponseBodyChecksCheckPolicies : TeaModel {
                 /// <summary>
-                /// The ID of the requirement item for the check item.
+                /// <para>The ID of the requirement item for the check item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("RequirementId")]
                 [Validation(Required=false)]
                 public long? RequirementId { get; set; }
 
                 /// <summary>
-                /// The display name of the requirement item for the check item.
+                /// <para>The display name of the requirement item for the check item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Alibaba cloud OSS best security practices</para>
                 /// </summary>
                 [NameInMap("RequirementShowName")]
                 [Validation(Required=false)]
                 public string RequirementShowName { get; set; }
 
                 /// <summary>
-                /// The ID of the section for the check item.
+                /// <para>The ID of the section for the check item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("SectionId")]
                 [Validation(Required=false)]
                 public long? SectionId { get; set; }
 
                 /// <summary>
-                /// The display name of the section for the check item.
+                /// <para>The display name of the section for the check item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Log Audit</para>
                 /// </summary>
                 [NameInMap("SectionShowName")]
                 [Validation(Required=false)]
                 public string SectionShowName { get; set; }
 
                 /// <summary>
-                /// The standard ID of the check item.
+                /// <para>The standard ID of the check item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("StandardId")]
                 [Validation(Required=false)]
                 public long? StandardId { get; set; }
 
                 /// <summary>
-                /// The standard display name of the check item.
+                /// <para>The standard display name of the check item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Best security practices</para>
                 /// </summary>
                 [NameInMap("StandardShowName")]
                 [Validation(Required=false)]
@@ -87,146 +108,193 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The type of the check item. Valid values:
+            /// <para>The type of the check item. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: paid</description></item>
+            /// <item><description><b>1</b>: free</description></item>
+            /// </list>
             /// 
-            /// *   **0**: paid
-            /// *   **1**: free
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CheckSaleType")]
             [Validation(Required=false)]
             public int? CheckSaleType { get; set; }
 
             /// <summary>
-            /// The name of the check item.
+            /// <para>The name of the check item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OSS-PublicReadOpenManifestFileWithoutEncryption</para>
             /// </summary>
             [NameInMap("CheckShowName")]
             [Validation(Required=false)]
             public string CheckShowName { get; set; }
 
             /// <summary>
-            /// The asset subtype of the cloud service. Valid values:
+            /// <para>The asset subtype of the cloud service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>If the <b>InstanceType</b> parameter is set to <b>ECS</b>, this parameter supports the following valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>INSTANCE</b></description></item>
+            /// <item><description><b>DISK</b></description></item>
+            /// <item><description><b>SECURITY_GROUP</b></description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description><para>If the <b>InstanceType</b> parameter is set to <b>ACR</b>, this parameter supports the following valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>REPOSITORY_ENTERPRISE</b></description></item>
+            /// <item><description><b>REPOSITORY_PERSON</b></description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description><para>If the <b>InstanceType</b> parameter is set to <b>RAM</b>, this parameter supports the following valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ALIAS</b></description></item>
+            /// <item><description><b>USER</b></description></item>
+            /// <item><description><b>POLICY</b></description></item>
+            /// <item><description><b>GROUP</b></description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description><para>If the <b>InstanceType</b> parameter is set to <b>WAF</b>, this parameter supports the following valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>DOMAIN</b></description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description><para>If the <b>InstanceType</b> parameter is set to other values, this parameter supports the following valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>INSTANCE</b></description></item>
+            /// </list>
+            /// </description></item>
+            /// </list>
             /// 
-            /// *   If the **InstanceType** parameter is set to **ECS**, this parameter supports the following valid values:
-            /// 
-            ///     *   **INSTANCE**
-            ///     *   **DISK**
-            ///     *   **SECURITY_GROUP**
-            /// 
-            /// *   If the **InstanceType** parameter is set to **ACR**, this parameter supports the following valid values:
-            /// 
-            ///     *   **REPOSITORY_ENTERPRISE**
-            ///     *   **REPOSITORY_PERSON**
-            /// 
-            /// *   If the **InstanceType** parameter is set to **RAM**, this parameter supports the following valid values:
-            /// 
-            ///     *   **ALIAS**
-            ///     *   **USER**
-            ///     *   **POLICY**
-            ///     *   **GROUP**
-            /// 
-            /// *   If the **InstanceType** parameter is set to **WAF**, this parameter supports the following valid values:
-            /// 
-            ///     *   **DOMAIN**
-            /// 
-            /// *   If the **InstanceType** parameter is set to other values, this parameter supports the following valid values:
-            /// 
-            ///     *   **INSTANCE**
+            /// <b>Example:</b>
+            /// <para>DISK</para>
             /// </summary>
             [NameInMap("InstanceSubType")]
             [Validation(Required=false)]
             public string InstanceSubType { get; set; }
 
             /// <summary>
-            /// The asset type of the cloud service. Valid values:
+            /// <para>The asset type of the cloud service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ECS</b>: ECS</description></item>
+            /// <item><description><b>SLB</b>: SLB</description></item>
+            /// <item><description><b>RDS</b>: ApsaraDB RDS</description></item>
+            /// <item><description><b>MONGODB</b>: MongoDB</description></item>
+            /// <item><description><b>KVSTORE</b>: Redis</description></item>
+            /// <item><description><b>ACR</b>: Container Registry</description></item>
+            /// <item><description><b>CSK</b>: ACK</description></item>
+            /// <item><description><b>VPC</b>: VPC</description></item>
+            /// <item><description><b>ACTIONTRAIL</b>: ActionTrail</description></item>
+            /// <item><description><b>CDN</b>: CDN</description></item>
+            /// <item><description><b>CAS</b>: Certificate Management Service (formerly SSL Certificates Service)</description></item>
+            /// <item><description><b>RDC</b>: Apsara Devops</description></item>
+            /// <item><description><b>RAM</b>: RAM</description></item>
+            /// <item><description><b>DDOS</b>: Anti-DDoS</description></item>
+            /// <item><description><b>WAF</b>: WAF</description></item>
+            /// <item><description><b>OSS</b>: OSS</description></item>
+            /// <item><description><b>POLARDB</b>: PolarDB</description></item>
+            /// <item><description><b>POSTGRESQL</b>: ApsaraDB RDS for PostgreSQL</description></item>
+            /// <item><description><b>MSE</b>: MSE</description></item>
+            /// <item><description><b>NAS</b>: NAS</description></item>
+            /// <item><description><b>SDDP</b>: SDDP</description></item>
+            /// <item><description><b>EIP</b>: EIP</description></item>
+            /// </list>
             /// 
-            /// *   **ECS**: ECS
-            /// *   **SLB**: SLB
-            /// *   **RDS**: ApsaraDB RDS
-            /// *   **MONGODB**: MongoDB
-            /// *   **KVSTORE**: Redis
-            /// *   **ACR**: Container Registry
-            /// *   **CSK**: ACK
-            /// *   **VPC**: VPC
-            /// *   **ACTIONTRAIL**: ActionTrail
-            /// *   **CDN**: CDN
-            /// *   **CAS**: Certificate Management Service (formerly SSL Certificates Service)
-            /// *   **RDC**: Apsara Devops
-            /// *   **RAM**: RAM
-            /// *   **DDOS**: Anti-DDoS
-            /// *   **WAF**: WAF
-            /// *   **OSS**: OSS
-            /// *   **POLARDB**: PolarDB
-            /// *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL
-            /// *   **MSE**: MSE
-            /// *   **NAS**: NAS
-            /// *   **SDDP**: SDDP
-            /// *   **EIP**: EIP
+            /// <b>Example:</b>
+            /// <para>ECS</para>
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// The timestamp when the last check was performed. Unit: milliseconds.
+            /// <para>The timestamp when the last check was performed. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1657793398000</para>
             /// </summary>
             [NameInMap("LastCheckTime")]
             [Validation(Required=false)]
             public long? LastCheckTime { get; set; }
 
             /// <summary>
-            /// The risk level of the check item. Valid values:
+            /// <para>The risk level of the check item. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>HIGH</b></description></item>
+            /// <item><description><b>MEDIUM</b></description></item>
+            /// <item><description><b>LOW</b></description></item>
+            /// </list>
             /// 
-            /// *   **HIGH**
-            /// *   **MEDIUM**
-            /// *   **LOW**
+            /// <b>Example:</b>
+            /// <para>HIGH</para>
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// The status of the check item. Valid values:
+            /// <para>The status of the check item. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>PASS</b>: passed</description></item>
+            /// <item><description><b>NOT_PASS</b>: failed</description></item>
+            /// <item><description><b>CHECKING</b>: being checked</description></item>
+            /// <item><description><b>NOT_CHECK</b>: not checked</description></item>
+            /// <item><description><b>WHITELIST</b>: added to the whitelist</description></item>
+            /// </list>
             /// 
-            /// *   **PASS**: passed
-            /// *   **NOT_PASS**: failed
-            /// *   **CHECKING**: being checked
-            /// *   **NOT_CHECK**: not checked
-            /// *   **WHITELIST**: added to the whitelist
+            /// <b>Example:</b>
+            /// <para>PASS</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The message returned if the status of the check item is abnormal.
+            /// <para>The message returned if the status of the check item is abnormal.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TIMEOUT</para>
             /// </summary>
             [NameInMap("StatusMessage")]
             [Validation(Required=false)]
             public string StatusMessage { get; set; }
 
             /// <summary>
-            /// The ID of the check task.
+            /// <para>The ID of the check task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>64</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
             /// <summary>
-            /// Indicates whether the TRIAL permission is required.
+            /// <para>Indicates whether the TRIAL permission is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("TrialPermission")]
             [Validation(Required=false)]
             public bool? TrialPermission { get; set; }
 
             /// <summary>
-            /// The cloud service provider.
+            /// <para>The cloud service provider.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALIYUN</para>
             /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]
             public string Vendor { get; set; }
 
             /// <summary>
-            /// The name of the cloud service provider.
+            /// <para>The name of the cloud service provider.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Aliyun</para>
             /// </summary>
             [NameInMap("VendorShowName")]
             [Validation(Required=false)]
@@ -235,35 +303,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListCheckResultResponseBodyPageInfo PageInfo { get; set; }
         public class ListCheckResultResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -272,7 +352,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F9B6DD67-B289-5406-B35C-B0F4A217S23</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

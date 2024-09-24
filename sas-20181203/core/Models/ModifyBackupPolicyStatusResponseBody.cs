@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyBackupPolicyStatusResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E342452B-4401-5F74-9A1B-D24479851173</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

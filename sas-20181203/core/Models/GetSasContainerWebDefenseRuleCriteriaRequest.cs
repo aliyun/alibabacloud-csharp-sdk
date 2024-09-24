@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSasContainerWebDefenseRuleCriteriaRequest : TeaModel {
         /// <summary>
-        /// The value of the search condition. Fuzzy match is supported.
+        /// <para>The value of the search condition. Fuzzy match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>525</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

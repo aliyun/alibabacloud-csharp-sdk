@@ -10,85 +10,115 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddContainerDefenseRuleRequest : TeaModel {
         /// <summary>
-        /// The description of the rule.
+        /// <para>The description of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-proc-defense</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The action that is performed when the rule is hit. Valid values:
+        /// <para>The action that is performed when the rule is hit. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: alert</description></item>
+        /// <item><description><b>2</b>: block</description></item>
+        /// </list>
         /// 
-        /// *   **1**: alert
-        /// *   **2**: block
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleAction")]
         [Validation(Required=false)]
         public int? RuleAction { get; set; }
 
         /// <summary>
-        /// The ID of the rule. You do not need to manually specify the ID.
+        /// <para>The ID of the rule. You do not need to manually specify the ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>500018</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>auto-test-rule-lt9umq</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The switch of the rule. Valid values:
+        /// <para>The switch of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: off</description></item>
+        /// <item><description><b>1</b>: on</description></item>
+        /// </list>
         /// 
-        /// *   **0**: off
-        /// *   **1**: on
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleSwitch")]
         [Validation(Required=false)]
         public int? RuleSwitch { get; set; }
 
         /// <summary>
-        /// The rule type. Valid values:
+        /// <para>The rule type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>2: user-defined rules</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Only the value 2 is supported.</para>
+        /// </remarks>
         /// 
-        /// *   2: user-defined rules
-        /// 
-        /// > Only the value 2 is supported.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public int? RuleType { get; set; }
 
         /// <summary>
-        /// The scope.
+        /// <para>The scope.</para>
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
         public List<AddContainerDefenseRuleRequestScope> Scope { get; set; }
         public class AddContainerDefenseRuleRequestScope : TeaModel {
             /// <summary>
-            /// Specifies whether to include all namespaces. Valid values:
+            /// <para>Specifies whether to include all namespaces. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: You can use the Namespaces parameter to specify the namespaces to include.</description></item>
+            /// <item><description><b>1</b>: All namespaces are included.</description></item>
+            /// </list>
             /// 
-            /// *   **0**: You can use the Namespaces parameter to specify the namespaces to include.
-            /// *   **1**: All namespaces are included.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("AllNamespace")]
             [Validation(Required=false)]
             public int? AllNamespace { get; set; }
 
             /// <summary>
-            /// The ID of the cluster.
+            /// <para>The ID of the cluster.</para>
+            /// <remarks>
+            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+            /// </remarks>
             /// 
-            /// >  You can call the [DescribeGroupedContainerInstances](https://help.aliyun.com/document_detail/182997.html) operation to query the IDs of clusters.
+            /// <b>Example:</b>
+            /// <para>8e2***75b</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The namespaces to include.
+            /// <para>The namespaces to include.</para>
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
@@ -97,30 +127,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The whitelist.
+        /// <para>The whitelist.</para>
         /// </summary>
         [NameInMap("Whitelist")]
         [Validation(Required=false)]
         public AddContainerDefenseRuleRequestWhitelist Whitelist { get; set; }
         public class AddContainerDefenseRuleRequestWhitelist : TeaModel {
             /// <summary>
-            /// The hash values of the files that need to be added to the whitelist.
-            /// 
-            /// > This parameter is not supported.
+            /// <para>The hash values of the files that need to be added to the whitelist.</para>
+            /// <remarks>
+            /// <para>This parameter is not supported.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("Hash")]
             [Validation(Required=false)]
             public List<string> Hash { get; set; }
 
             /// <summary>
-            /// The images that need to be added to the whitelist.
+            /// <para>The images that need to be added to the whitelist.</para>
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public List<string> Image { get; set; }
 
             /// <summary>
-            /// The paths to the files that need to be added to the whitelist.
+            /// <para>The paths to the files that need to be added to the whitelist.</para>
             /// </summary>
             [NameInMap("Path")]
             [Validation(Required=false)]

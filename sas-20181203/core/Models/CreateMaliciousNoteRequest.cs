@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateMaliciousNoteRequest : TeaModel {
         /// <summary>
-        /// The ID of the alert event to which you want to add remarks.
+        /// <para>The ID of the alert event to which you want to add remarks.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> operation to obtain the ID of the alert event from the NoteId parameter.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [ListAgentlessMaliciousFiles](~~ListAgentlessMaliciousFiles~~) operation to obtain the ID of the alert event from the NoteId parameter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>80****</para>
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public long? EventId { get; set; }
 
         /// <summary>
-        /// The remarks that you want to add.
+        /// <para>The remarks that you want to add.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Ignore</para>
         /// </summary>
         [NameInMap("Note")]
         [Validation(Required=false)]

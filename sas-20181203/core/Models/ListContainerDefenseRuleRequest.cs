@@ -10,23 +10,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListContainerDefenseRuleRequest : TeaModel {
         /// <summary>
-        /// The details of the condition.
+        /// <para>The details of the condition.</para>
         /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public List<ListContainerDefenseRuleRequestConditions> Conditions { get; set; }
         public class ListContainerDefenseRuleRequestConditions : TeaModel {
             /// <summary>
-            /// The condition type. Valid values:
+            /// <para>The condition type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ruleName</b>: the rule name</description></item>
+            /// </list>
             /// 
-            /// *   **ruleName**: the rule name
+            /// <b>Example:</b>
+            /// <para>ruleName</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The rule content.
+            /// <para>The rule content.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>auto-test-rule-**</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -35,45 +42,64 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// Specifies whether to query system rules.
+        /// <para>Specifies whether to query system rules.</para>
+        /// <remarks>
+        /// <para> This parameter is deprecated.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is deprecated.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("IsDefaultRule")]
         [Validation(Required=false)]
         public int? IsDefaultRule { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese.
-        /// *   **en**: English.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <remarks>
+        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// >  We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The rule type. Valid values:
+        /// <para>The rule type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: system rule</description></item>
+        /// <item><description>2: user-defined rule</description></item>
+        /// </list>
         /// 
-        /// *   1: system rule
-        /// *   2: user-defined rule
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]

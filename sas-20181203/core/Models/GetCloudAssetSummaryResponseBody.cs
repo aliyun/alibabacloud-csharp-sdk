@@ -10,81 +10,98 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCloudAssetSummaryResponseBody : TeaModel {
         /// <summary>
-        /// The summary of cloud services.
+        /// <para>The summary of cloud services.</para>
         /// </summary>
         [NameInMap("GroupedFields")]
         [Validation(Required=false)]
         public GetCloudAssetSummaryResponseBodyGroupedFields GroupedFields { get; set; }
         public class GetCloudAssetSummaryResponseBodyGroupedFields : TeaModel {
             /// <summary>
-            /// The statistics of cloud services.
+            /// <para>The statistics of cloud services.</para>
             /// </summary>
             [NameInMap("CloudAssetSummaryMetas")]
             [Validation(Required=false)]
             public List<GetCloudAssetSummaryResponseBodyGroupedFieldsCloudAssetSummaryMetas> CloudAssetSummaryMetas { get; set; }
             public class GetCloudAssetSummaryResponseBodyGroupedFieldsCloudAssetSummaryMetas : TeaModel {
                 /// <summary>
-                /// The subtype of the cloud service.
+                /// <para>The subtype of the cloud service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("AssetSubType")]
                 [Validation(Required=false)]
                 public int? AssetSubType { get; set; }
 
                 /// <summary>
-                /// The type of the cloud service. Valid values:
+                /// <para>The type of the cloud service. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: Elastic Compute Service (ECS)</description></item>
+                /// <item><description><b>1</b>: Server Load Balancer (SLB)</description></item>
+                /// <item><description><b>3</b>: ApsaraDB RDS</description></item>
+                /// <item><description><b>4</b>: ApsaraDB for MongoDB (MongoDB)</description></item>
+                /// <item><description><b>5</b>: ApsaraDB for Redis (Redis)</description></item>
+                /// <item><description><b>6</b>: Container Registry</description></item>
+                /// <item><description><b>8</b>: Container Service for Kubernetes (ACK)</description></item>
+                /// <item><description><b>9</b>: Virtual Private Cloud (VPC)</description></item>
+                /// <item><description><b>11</b>: ActionTrail</description></item>
+                /// <item><description><b>12</b>: Alibaba Cloud CDN (CDN)</description></item>
+                /// <item><description><b>13</b>: Certificate Management Service (formerly SSL Certificates Service)</description></item>
+                /// <item><description><b>14</b>: Apsara Devops</description></item>
+                /// <item><description><b>15</b>: Resource Access Management (RAM)</description></item>
+                /// <item><description><b>16</b>: Anti-DDoS</description></item>
+                /// <item><description><b>17</b>: Web Application Firewall (WAF)</description></item>
+                /// <item><description><b>18</b>: Object Storage Service (OSS)</description></item>
+                /// <item><description><b>19</b>: PolarDB</description></item>
+                /// <item><description><b>20</b>: ApsaraDB RDS for PostgreSQL</description></item>
+                /// <item><description><b>21</b>: Microservices Engine (MSE)</description></item>
+                /// <item><description><b>22</b>: Apsara File Storage NAS (NAS)</description></item>
+                /// <item><description><b>23</b>: Data Security Center (DSC)</description></item>
+                /// <item><description><b>24</b>: Elastic IP Address (EIP)</description></item>
+                /// <item><description><b>25</b>: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)</description></item>
+                /// <item><description><b>26</b>: PolarDB for Xscale (PolarDB-X)</description></item>
+                /// <item><description><b>27</b>: Elasticsearch</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: Elastic Compute Service (ECS)
-                /// *   **1**: Server Load Balancer (SLB)
-                /// *   **3**: ApsaraDB RDS
-                /// *   **4**: ApsaraDB for MongoDB (MongoDB)
-                /// *   **5**: ApsaraDB for Redis (Redis)
-                /// *   **6**: Container Registry
-                /// *   **8**: Container Service for Kubernetes (ACK)
-                /// *   **9**: Virtual Private Cloud (VPC)
-                /// *   **11**: ActionTrail
-                /// *   **12**: Alibaba Cloud CDN (CDN)
-                /// *   **13**: Certificate Management Service (formerly SSL Certificates Service)
-                /// *   **14**: Apsara Devops
-                /// *   **15**: Resource Access Management (RAM)
-                /// *   **16**: Anti-DDoS
-                /// *   **17**: Web Application Firewall (WAF)
-                /// *   **18**: Object Storage Service (OSS)
-                /// *   **19**: PolarDB
-                /// *   **20**: ApsaraDB RDS for PostgreSQL
-                /// *   **21**: Microservices Engine (MSE)
-                /// *   **22**: Apsara File Storage NAS (NAS)
-                /// *   **23**: Data Security Center (DSC)
-                /// *   **24**: Elastic IP Address (EIP)
-                /// *   **25**: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)
-                /// *   **26**: PolarDB for Xscale (PolarDB-X)
-                /// *   **27**: Elasticsearch
+                /// <b>Example:</b>
+                /// <para>16</para>
                 /// </summary>
                 [NameInMap("AssetType")]
                 [Validation(Required=false)]
                 public int? AssetType { get; set; }
 
                 /// <summary>
-                /// The total number of cloud service instances of this type.
+                /// <para>The total number of cloud service instances of this type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>16</para>
                 /// </summary>
                 [NameInMap("InstanceCount")]
                 [Validation(Required=false)]
                 public int? InstanceCount { get; set; }
 
                 /// <summary>
-                /// The total number of cloud service instances that are at risk of this type.
+                /// <para>The total number of cloud service instances that are at risk of this type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
                 /// </summary>
                 [NameInMap("InstanceRiskCount")]
                 [Validation(Required=false)]
                 public int? InstanceRiskCount { get; set; }
 
                 /// <summary>
-                /// The server type. Valid values:
+                /// <para>The server type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: an asset provided by Alibaba Cloud</description></item>
+                /// <item><description><b>1</b>: an asset outside Alibaba Cloud</description></item>
+                /// <item><description><b>2</b>: an asset in a data center</description></item>
+                /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: an asset provided by a third-party service provider</description></item>
+                /// <item><description><b>8</b>: a lightweight asset</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: an asset provided by Alibaba Cloud
-                /// *   **1**: an asset outside Alibaba Cloud
-                /// *   **2**: an asset in a data center
-                /// *   **3**, **4**, **5**, and **7**: an asset provided by a third-party service provider
-                /// *   **8**: a lightweight asset
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Vendor")]
                 [Validation(Required=false)]
@@ -93,14 +110,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The total number of cloud service instances.
+            /// <para>The total number of cloud service instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>919</para>
             /// </summary>
             [NameInMap("InstanceCountTotal")]
             [Validation(Required=false)]
             public int? InstanceCountTotal { get; set; }
 
             /// <summary>
-            /// The total number of cloud service instances that are at risk.
+            /// <para>The total number of cloud service instances that are at risk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>544</para>
             /// </summary>
             [NameInMap("InstanceRiskCountTotal")]
             [Validation(Required=false)]
@@ -109,7 +132,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F5CF78A7-30AA-59DB-847F-13EE3AE7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

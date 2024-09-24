@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyScaItemResponseBody : TeaModel {
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribePropertyScaItemResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyScaItemResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>27</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -47,43 +59,56 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// An array that consists of the information about middleware fingerprints.
+        /// <para>An array that consists of the information about middleware fingerprints.</para>
         /// </summary>
         [NameInMap("PropertyItems")]
         [Validation(Required=false)]
         public List<DescribePropertyScaItemResponseBodyPropertyItems> PropertyItems { get; set; }
         public class DescribePropertyScaItemResponseBodyPropertyItems : TeaModel {
             /// <summary>
-            /// The type of the middleware, database, or web service. Valid values:
+            /// <para>The type of the middleware, database, or web service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>system_service</b>: system service</description></item>
+            /// <item><description><b>software_library</b>: software library</description></item>
+            /// <item><description><b>docker_component</b>: container component</description></item>
+            /// <item><description><b>database</b>: database</description></item>
+            /// <item><description><b>web_container</b>: web container</description></item>
+            /// <item><description><b>jar</b>: JAR package</description></item>
+            /// <item><description><b>web_framework</b>: web framework</description></item>
+            /// </list>
             /// 
-            /// *   **system_service**: system service
-            /// *   **software_library**: software library
-            /// *   **docker_component**: container component
-            /// *   **database**: database
-            /// *   **web_container**: web container
-            /// *   **jar**: JAR package
-            /// *   **web_framework**: web framework
+            /// <b>Example:</b>
+            /// <para>docker_component</para>
             /// </summary>
             [NameInMap("BizType")]
             [Validation(Required=false)]
             public string BizType { get; set; }
 
             /// <summary>
-            /// The number of servers on which the middleware is run.
+            /// <para>The number of servers on which the middleware is run.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>23</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The name of the middleware.
+            /// <para>The name of the middleware.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>kubelet</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The display name of the middleware type.
+            /// <para>The display name of the middleware type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Docker Component</para>
             /// </summary>
             [NameInMap("TypeDisplay")]
             [Validation(Required=false)]
@@ -92,7 +117,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3F4236AB-7070-538D-85EB-98EBFE6C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

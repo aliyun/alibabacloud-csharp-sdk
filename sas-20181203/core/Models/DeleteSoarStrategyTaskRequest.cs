@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteSoarStrategyTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the policy task that is in the waiting state.
+        /// <para>The ID of the policy task that is in the waiting state.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> operation to obtain the ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeSoarStrategyTasks](~~DescribeSoarStrategyTasks~~) operation to obtain the ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>11082</para>
         /// </summary>
         [NameInMap("StrategyTaskId")]
         [Validation(Required=false)]

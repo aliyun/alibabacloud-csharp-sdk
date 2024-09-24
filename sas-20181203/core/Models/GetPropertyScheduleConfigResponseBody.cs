@@ -10,45 +10,56 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetPropertyScheduleConfigResponseBody : TeaModel {
         /// <summary>
-        /// The configurations for the collection frequency of asset fingerprints.
+        /// <para>The configurations for the collection frequency of asset fingerprints.</para>
         /// </summary>
         [NameInMap("PropertyScheduleConfig")]
         [Validation(Required=false)]
         public GetPropertyScheduleConfigResponseBodyPropertyScheduleConfig PropertyScheduleConfig { get; set; }
         public class GetPropertyScheduleConfigResponseBodyPropertyScheduleConfig : TeaModel {
             /// <summary>
-            /// The timestamp when the next collection of asset fingerprints starts. Unit: milliseconds.
+            /// <para>The timestamp when the next collection of asset fingerprints starts. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1671630647018</para>
             /// </summary>
             [NameInMap("NextScheduleTime")]
             [Validation(Required=false)]
             public long? NextScheduleTime { get; set; }
 
             /// <summary>
-            /// The collection frequency of asset fingerprints. Valid values:
+            /// <para>The collection frequency of asset fingerprints. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: disabled, which indicates that the asset fingerprints are not automatically or periodically collected.</description></item>
+            /// <item><description><b>1</b>: collects asset fingerprints once an hour.</description></item>
+            /// <item><description><b>3</b>: collects asset fingerprints once every 3 hours.</description></item>
+            /// <item><description><b>12</b>: collects asset fingerprints once every 12 hours.</description></item>
+            /// <item><description><b>24</b>: collects asset fingerprints once a day.</description></item>
+            /// <item><description><b>168</b>: collects asset fingerprints once every 7 days.</description></item>
+            /// </list>
             /// 
-            /// *   **0**: disabled, which indicates that the asset fingerprints are not automatically or periodically collected.
-            /// *   **1**: collects asset fingerprints once an hour.
-            /// *   **3**: collects asset fingerprints once every 3 hours.
-            /// *   **12**: collects asset fingerprints once every 12 hours.
-            /// *   **24**: collects asset fingerprints once a day.
-            /// *   **168**: collects asset fingerprints once every 7 days.
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("ScheduleTime")]
             [Validation(Required=false)]
             public string ScheduleTime { get; set; }
 
             /// <summary>
-            /// The type of the asset fingerprints. Valid values:
+            /// <para>The type of the asset fingerprints. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>scheduler_port_period</b>: listening port</description></item>
+            /// <item><description><b>scheduler_process_period</b>: running process</description></item>
+            /// <item><description><b>scheduler_account_period</b>: account</description></item>
+            /// <item><description><b>scheduler_software_period</b>: software</description></item>
+            /// <item><description><b>scheduler_cron_period</b>: scheduled task</description></item>
+            /// <item><description><b>scheduler_sca_period</b>: middleware</description></item>
+            /// <item><description><b>scheduler_autorun_period</b>: startup item</description></item>
+            /// <item><description><b>scheduler_lkm_period</b>: kernel module</description></item>
+            /// <item><description><b>scheduler_sca_proxy_period</b>: website</description></item>
+            /// </list>
             /// 
-            /// *   **scheduler_port_period**: listening port
-            /// *   **scheduler_process_period**: running process
-            /// *   **scheduler_account_period**: account
-            /// *   **scheduler_software_period**: software
-            /// *   **scheduler_cron_period**: scheduled task
-            /// *   **scheduler_sca_period**: middleware
-            /// *   **scheduler_autorun_period**: startup item
-            /// *   **scheduler_lkm_period**: kernel module
-            /// *   **scheduler_sca_proxy_period**: website
+            /// <b>Example:</b>
+            /// <para>scheduler_account_period</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -57,7 +68,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B37C9052-A73E-4707-A024-92477028****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeScreenScoreThreadRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.
+        /// <para>The end of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1668064495000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.
+        /// <para>The beginning of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1651290987000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

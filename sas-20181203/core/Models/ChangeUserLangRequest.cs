@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ChangeUserLangRequest : TeaModel {
         /// <summary>
-        /// The new language. Valid values:
+        /// <para>The new language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("UserLang")]
         [Validation(Required=false)]

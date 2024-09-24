@@ -10,35 +10,48 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class EnableBruteForceRecordRequest : TeaModel {
         /// <summary>
-        /// The IP address that is specified in the policy.
+        /// <para>The IP address that is specified in the policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>61.155.XX.XX</para>
         /// </summary>
         [NameInMap("BlockIp")]
         [Validation(Required=false)]
         public string BlockIp { get; set; }
 
         /// <summary>
-        /// The traffic direction that is specified in the policy. Valid values:
+        /// <para>The traffic direction that is specified in the policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>in</b>: inbound</description></item>
+        /// <item><description><b>out</b>: outbound</description></item>
+        /// </list>
         /// 
-        /// *   **in**: inbound
-        /// *   **out**: outbound
+        /// <b>Example:</b>
+        /// <para>in</para>
         /// </summary>
         [NameInMap("Bound")]
         [Validation(Required=false)]
         public string Bound { get; set; }
 
         /// <summary>
-        /// The ID of the policy that you want to enable.
+        /// <para>The ID of the policy that you want to enable.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeBruteForceRecords~~">DescribeBruteForceRecords</a> operation to query the IDs of policies.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeBruteForceRecords](~~DescribeBruteForceRecords~~) operation to query the IDs of policies.
+        /// <b>Example:</b>
+        /// <para>116602XX</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The port number.
+        /// <para>The port number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>22/22</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
@@ -49,9 +62,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The UUID of the server.
+        /// <para>The UUID of the server.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>71046acb-8bff-4c3b-9163-24deb007****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

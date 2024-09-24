@@ -10,77 +10,95 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddIdcProbeRequest : TeaModel {
         /// <summary>
-        /// The name of the data center.
+        /// <para>The name of the data center.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("IdcName")]
         [Validation(Required=false)]
         public string IdcName { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Hangzhou</para>
         /// </summary>
         [NameInMap("IdcRegion")]
         [Validation(Required=false)]
         public string IdcRegion { get; set; }
 
         /// <summary>
-        /// The scan interval.
+        /// <para>The scan interval.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("IntervalPeriod")]
         [Validation(Required=false)]
         public int? IntervalPeriod { get; set; }
 
         /// <summary>
-        /// The settings of the CIDR block.
+        /// <para>The settings of the CIDR block.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>192.168.XX.XX/24</para>
         /// </summary>
         [NameInMap("IpSegments")]
         [Validation(Required=false)]
         public string IpSegments { get; set; }
 
         /// <summary>
-        /// The Linux port.
+        /// <para>The Linux port.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>40</para>
         /// </summary>
         [NameInMap("LinuxPort")]
         [Validation(Required=false)]
         public string LinuxPort { get; set; }
 
         /// <summary>
-        /// The unit of the scan interval. Valid values:
+        /// <para>The unit of the scan interval. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>day</b></description></item>
+        /// <item><description><b>hour</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **day**
-        /// *   **hour**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>day</para>
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The UUID of the server. Separate multiple UUIDs with commas (,).
+        /// <para>The UUID of the server. Separate multiple UUIDs with commas (,).</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>076a446d-df7d-424c-bdc5-bb5dc7f1****</para>
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]
         public string Uuids { get; set; }
 
         /// <summary>
-        /// The Windows port.
+        /// <para>The Windows port.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>40</para>
         /// </summary>
         [NameInMap("WinPort")]
         [Validation(Required=false)]

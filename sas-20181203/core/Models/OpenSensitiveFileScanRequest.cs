@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OpenSensitiveFileScanRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable or disable sensitive file scan. Valid values:
+        /// <para>Specifies whether to enable or disable sensitive file scan. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: enables sensitive file scan</description></item>
+        /// <item><description><b>off</b>: disables sensitive file scan</description></item>
+        /// </list>
         /// 
-        /// *   **on**: enables sensitive file scan
-        /// *   **off**: disables sensitive file scan
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("SwitchOn")]
         [Validation(Required=false)]

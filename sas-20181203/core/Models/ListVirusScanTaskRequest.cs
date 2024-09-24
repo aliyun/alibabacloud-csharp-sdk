@@ -10,113 +10,157 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListVirusScanTaskRequest : TeaModel {
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The timestamp when the virus scan task ended. Unit: milliseconds.
+        /// <para>The timestamp when the virus scan task ended. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1680919232999</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The public IP address of the server.
+        /// <para>The public IP address of the server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>120.27.XX.XX</para>
         /// </summary>
         [NameInMap("InternetIp")]
         [Validation(Required=false)]
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// The private IP address of the server.
+        /// <para>The private IP address of the server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.26.XX.XX</para>
         /// </summary>
         [NameInMap("IntranetIp")]
         [Validation(Required=false)]
         public string IntranetIp { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The name of the server.
+        /// <para>The name of the server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oracle-win-001****</para>
         /// </summary>
         [NameInMap("MachineName")]
         [Validation(Required=false)]
         public string MachineName { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: **20**.
+        /// <para>The number of entries per page. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Specifies whether the virus scan task is the root task.
+        /// <para>Specifies whether the virus scan task is the root task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("RootTask")]
         [Validation(Required=false)]
         public bool? RootTask { get; set; }
 
         /// <summary>
-        /// The ID of the root task.
+        /// <para>The ID of the root task.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~GetVirusScanLatestTaskStatistic~~">GetVirusScanLatestTaskStatistic</a> operation to query the ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [GetVirusScanLatestTaskStatistic](~~GetVirusScanLatestTaskStatistic~~) operation to query the ID.
+        /// <b>Example:</b>
+        /// <para>89f5d7813bd59dd237580a8664b3xxxx</para>
         /// </summary>
         [NameInMap("RootTaskId")]
         [Validation(Required=false)]
         public string RootTaskId { get; set; }
 
         /// <summary>
-        /// The type of the virus scan task. Valid values:
+        /// <para>The type of the virus scan task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>system</b>: automatic scan task</description></item>
+        /// <item><description><b>user</b>: custom scan task</description></item>
+        /// </list>
         /// 
-        /// *   **system**: automatic scan task
-        /// *   **user**: custom scan task
+        /// <b>Example:</b>
+        /// <para>user</para>
         /// </summary>
         [NameInMap("ScanType")]
         [Validation(Required=false)]
         public string ScanType { get; set; }
 
         /// <summary>
-        /// The timestamp when the virus scan task started. Unit: milliseconds.
+        /// <para>The timestamp when the virus scan task started. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1680919232000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// The status of the virus scan task. Valid values:
+        /// <para>The status of the virus scan task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: running</description></item>
+        /// <item><description><b>2</b>: complete</description></item>
+        /// <item><description><b>3</b>: failed</description></item>
+        /// <item><description><b>4</b>: timed out</description></item>
+        /// </list>
         /// 
-        /// *   **1**: running
-        /// *   **2**: complete
-        /// *   **3**: failed
-        /// *   **4**: timed out
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
         /// <summary>
-        /// The statuses of virus scan tasks.
+        /// <para>The statuses of virus scan tasks.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public List<int?> StatusList { get; set; }
 
         /// <summary>
-        /// The ID of the virus scan task.
+        /// <para>The ID of the virus scan task.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListVirusScanTask~~">ListVirusScanTask</a> operation to query the ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListVirusScanTask](~~ListVirusScanTask~~) operation to query the ID.
+        /// <b>Example:</b>
+        /// <para>1471d8ebb96795b41ede090b9758****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

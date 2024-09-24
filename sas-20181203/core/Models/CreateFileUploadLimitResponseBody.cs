@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateFileUploadLimitResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CE500770-42D3-442E-9DDD-156E0F9F3B45</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

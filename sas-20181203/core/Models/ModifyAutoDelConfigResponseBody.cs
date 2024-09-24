@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAutoDelConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3BFA659D-F44F-5703-8FD1-33AB596BEACA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

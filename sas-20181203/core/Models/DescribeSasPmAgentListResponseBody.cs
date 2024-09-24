@@ -10,80 +10,108 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSasPmAgentListResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8EF3ACC2-9400-5B64-B72D-4A1D35113750</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the information about servers.
+        /// <para>An array that consists of the information about servers.</para>
         /// </summary>
         [NameInMap("SasPmAgentList")]
         [Validation(Required=false)]
         public List<DescribeSasPmAgentListResponseBodySasPmAgentList> SasPmAgentList { get; set; }
         public class DescribeSasPmAgentListResponseBodySasPmAgentList : TeaModel {
             /// <summary>
-            /// The ID of Cloud Assistant.
+            /// <para>The ID of Cloud Assistant.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mi-hz034jn***yxhc0</para>
             /// </summary>
             [NameInMap("AliyunAssistId")]
             [Validation(Required=false)]
             public string AliyunAssistId { get; set; }
 
             /// <summary>
-            /// The ID of the CloudMonitor agent.
+            /// <para>The ID of the CloudMonitor agent.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5d5ef6be-54ff-11ed-82cf-8f01475e****</para>
             /// </summary>
             [NameInMap("AliyunMonitorId")]
             [Validation(Required=false)]
             public string AliyunMonitorId { get; set; }
 
             /// <summary>
-            /// The installation result of Cloud Assistant. Valid values:
+            /// <para>The installation result of Cloud Assistant. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: SUCCESS</description></item>
+            /// <item><description><b>1</b>: MISSING_PARAM</description></item>
+            /// <item><description><b>2</b>: UNKNOWN_SYSTEM</description></item>
+            /// <item><description><b>3</b>: DOWNLOAD_FAILED</description></item>
+            /// <item><description><b>4</b>: INSTALL_FAILED</description></item>
+            /// </list>
             /// 
-            /// *   **0**: SUCCESS
-            /// *   **1**: MISSING_PARAM
-            /// *   **2**: UNKNOWN_SYSTEM
-            /// *   **3**: DOWNLOAD_FAILED
-            /// *   **4**: INSTALL_FAILED
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("AssistInstallResult")]
             [Validation(Required=false)]
             public int? AssistInstallResult { get; set; }
 
             /// <summary>
-            /// The status of Cloud Assistant. Valid values:
+            /// <para>The status of Cloud Assistant. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: installing</description></item>
+            /// <item><description><b>1</b>: installed</description></item>
+            /// <item><description><b>2</b>: installation failed</description></item>
+            /// <item><description><b>3</b>: installation timed out</description></item>
+            /// </list>
             /// 
-            /// *   **0**: installing
-            /// *   **1**: installed
-            /// *   **2**: installation failed
-            /// *   **3**: installation timed out
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AssistInstallStatus")]
             [Validation(Required=false)]
             public int? AssistInstallStatus { get; set; }
 
             /// <summary>
-            /// The installation result of the CloudMonitor agent. Valid values:
+            /// <para>The installation result of the CloudMonitor agent. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: failed</description></item>
+            /// <item><description><b>1</b>: successful</description></item>
+            /// </list>
             /// 
-            /// *   **0**: failed
-            /// *   **1**: successful
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("MonitorInstallResult")]
             [Validation(Required=false)]
             public int? MonitorInstallResult { get; set; }
 
             /// <summary>
-            /// The status of the CloudMonitor agent. Valid values:
+            /// <para>The status of the CloudMonitor agent. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: installation failed</description></item>
+            /// <item><description><b>1</b>: installed</description></item>
+            /// </list>
             /// 
-            /// *   **0**: installation failed
-            /// *   **1**: installed
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("MonitorInstallStatus")]
             [Validation(Required=false)]
             public int? MonitorInstallStatus { get; set; }
 
             /// <summary>
-            /// The UUID of the server.
+            /// <para>The UUID of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>87f1724d-075e-48d3-95fd-78c2dd36****</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

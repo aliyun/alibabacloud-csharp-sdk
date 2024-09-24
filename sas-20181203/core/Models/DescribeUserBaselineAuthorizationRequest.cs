@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUserBaselineAuthorizationRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// 资产所有者ID。
+        /// <para>资产所有者ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1519712934213764</para>
         /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the asset owner.
+        /// <para>The ID of the asset owner.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.2.3.4</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

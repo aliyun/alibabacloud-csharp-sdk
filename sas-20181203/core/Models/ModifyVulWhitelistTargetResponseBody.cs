@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyVulWhitelistTargetResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>896AC4F0-C881-502B-BFC7-4751C5E3DEAA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

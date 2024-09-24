@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateSwitchStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the rule.
+        /// <para>The ID of the rule.</para>
+        /// <remarks>
+        /// <para> You can call the ListContainerWebDefenseRule operation to query the IDs of rules.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the ListContainerWebDefenseRule operation to query the IDs of rules.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>900001</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// The status of the rule. Valid values: on and off.
+        /// <para>The status of the rule. Valid values: on and off.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

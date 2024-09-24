@@ -10,43 +10,54 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupFilesRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **10**.
+        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The path to the backup file.
+        /// <para>The path to the backup file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>“”</para>
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]
         public string Path { get; set; }
 
         /// <summary>
-        /// The hash value of the backup file.
+        /// <para>The hash value of the backup file.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>a7f26223ef3974c6fac324cd37713ab65ab618859d20b4039192a5da44d77b63</para>
         /// </summary>
         [NameInMap("SnapshotHash")]
         [Validation(Required=false)]
         public string SnapshotHash { get; set; }
 
         /// <summary>
-        /// The UUID of the server to which an anti-ransomware policy is applied.
+        /// <para>The UUID of the server to which an anti-ransomware policy is applied.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>6d5b361f-958d-48a8-a9d2-d6e82c1a****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

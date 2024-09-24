@@ -10,63 +10,77 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCloudAssetDetailRequest : TeaModel {
         /// <summary>
-        /// The subtype of the cloud service.
+        /// <para>The subtype of the cloud service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("AssetSubType")]
         [Validation(Required=false)]
         public int? AssetSubType { get; set; }
 
         /// <summary>
-        /// The type of the cloud asset. Valid values:
+        /// <para>The type of the cloud asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Elastic Compute Service (ECS).</description></item>
+        /// <item><description><b>1</b>: Server Load Balancer (SLB).</description></item>
+        /// <item><description><b>3</b>: ApsaraDB RDS.</description></item>
+        /// <item><description><b>4</b>: ApsaraDB for MongoDB.</description></item>
+        /// <item><description><b>5</b>: ApsaraDB for Redis.</description></item>
+        /// <item><description><b>6</b>: Container Registry.</description></item>
+        /// <item><description><b>8</b>: Container Service for Kubernetes.</description></item>
+        /// <item><description><b>9</b>: Virtual Private Cloud (VPC).</description></item>
+        /// <item><description><b>11</b>: ActionTrail.</description></item>
+        /// <item><description><b>12</b>: Alibaba Cloud CDN (CDN).</description></item>
+        /// <item><description><b>13</b>: Certificate Management Service.</description></item>
+        /// <item><description><b>14</b>: Apsara Devops.</description></item>
+        /// <item><description><b>15</b>: Resource Access Management (RAM).</description></item>
+        /// <item><description><b>16</b>: Anti-DDoS.</description></item>
+        /// <item><description><b>17</b>: Web Application Firewall (WAF).</description></item>
+        /// <item><description><b>18</b>: Object Storage Service (OSS).</description></item>
+        /// <item><description><b>19</b>: PolarDB.</description></item>
+        /// <item><description><b>20</b>: ApsaraDB RDS for PostgreSQL.</description></item>
+        /// <item><description><b>21</b>: Microservices Engine (MSE).</description></item>
+        /// <item><description><b>22</b>: Apsara File Storage NAS (NAS).</description></item>
+        /// <item><description><b>23</b>: Data Security Center (DSC).</description></item>
+        /// <item><description><b>24</b>: Elastic IP Address (EIP).</description></item>
+        /// <item><description><b>25</b>: Identity as a Service (IDaaS)-Employee Identity and Access Management (EIAM).</description></item>
+        /// <item><description><b>26</b>: PolarDB-X.</description></item>
+        /// <item><description><b>27</b>: Elasticsearch.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: Elastic Compute Service (ECS).
-        /// *   **1**: Server Load Balancer (SLB).
-        /// *   **3**: ApsaraDB RDS.
-        /// *   **4**: ApsaraDB for MongoDB.
-        /// *   **5**: ApsaraDB for Redis.
-        /// *   **6**: Container Registry.
-        /// *   **8**: Container Service for Kubernetes.
-        /// *   **9**: Virtual Private Cloud (VPC).
-        /// *   **11**: ActionTrail.
-        /// *   **12**: Alibaba Cloud CDN (CDN).
-        /// *   **13**: Certificate Management Service.
-        /// *   **14**: Apsara Devops.
-        /// *   **15**: Resource Access Management (RAM).
-        /// *   **16**: Anti-DDoS.
-        /// *   **17**: Web Application Firewall (WAF).
-        /// *   **18**: Object Storage Service (OSS).
-        /// *   **19**: PolarDB.
-        /// *   **20**: ApsaraDB RDS for PostgreSQL.
-        /// *   **21**: Microservices Engine (MSE).
-        /// *   **22**: Apsara File Storage NAS (NAS).
-        /// *   **23**: Data Security Center (DSC).
-        /// *   **24**: Elastic IP Address (EIP).
-        /// *   **25**: Identity as a Service (IDaaS)-Employee Identity and Access Management (EIAM).
-        /// *   **26**: PolarDB-X.
-        /// *   **27**: Elasticsearch.
+        /// <b>Example:</b>
+        /// <para>14</para>
         /// </summary>
         [NameInMap("AssetType")]
         [Validation(Required=false)]
         public int? AssetType { get; set; }
 
         /// <summary>
-        /// The details of the assets.
+        /// <para>The details of the assets.</para>
         /// </summary>
         [NameInMap("CloudAssetInstances")]
         [Validation(Required=false)]
         public List<GetCloudAssetDetailRequestCloudAssetInstances> CloudAssetInstances { get; set; }
         public class GetCloudAssetDetailRequestCloudAssetInstances : TeaModel {
             /// <summary>
-            /// The instance ID of the cloud asset.
+            /// <para>The instance ID of the cloud asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sg-wz9hf86vbzbrrde7****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The region in which the cloud asset resides.
+            /// <para>The region in which the cloud asset resides.</para>
+            /// <remarks>
+            /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+            /// </remarks>
             /// 
-            /// > For more information about the mapping between region IDs and region names, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -75,13 +89,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The service provider of the cloud asset. Valid values:
+        /// <para>The service provider of the cloud asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Alibaba Cloud.</description></item>
+        /// <item><description><b>1</b>: service provider that is unrecognized.</description></item>
+        /// <item><description><b>2</b>: data center.</description></item>
+        /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: third-party service provider.</description></item>
+        /// <item><description><b>8</b>: simple application server.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: Alibaba Cloud.
-        /// *   **1**: service provider that is unrecognized.
-        /// *   **2**: data center.
-        /// *   **3**, **4**, **5**, and **7**: third-party service provider.
-        /// *   **8**: simple application server.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Vendor")]
         [Validation(Required=false)]

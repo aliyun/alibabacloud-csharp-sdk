@@ -10,40 +10,45 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckStandardRequest : TeaModel {
         /// <summary>
-        /// The instance IDs of the cloud services to which the check items belong.
+        /// <para>The instance IDs of the cloud services to which the check items belong.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// The subtypes of cloud services.
+        /// <para>The subtypes of cloud services.</para>
         /// </summary>
         [NameInMap("InstanceSubTypes")]
         [Validation(Required=false)]
         public List<string> InstanceSubTypes { get; set; }
 
         /// <summary>
-        /// The asset types of cloud services.
+        /// <para>The asset types of cloud services.</para>
         /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public List<string> InstanceTypes { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The cloud service providers. Valid values:
-        /// 
-        /// *   **ALIYUN**: Alibaba Cloud
+        /// <para>The cloud service providers. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ALIYUN</b>: Alibaba Cloud</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Vendors")]
         [Validation(Required=false)]

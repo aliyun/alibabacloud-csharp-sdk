@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetHoneypotAttackStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+        /// <para>The status code that is returned. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The statistics.
+        /// <para>The statistics.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetHoneypotAttackStatisticsResponseBodyData Data { get; set; }
         public class GetHoneypotAttackStatisticsResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of entries on the current page.
+            /// <para>The number of entries on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The statistics details.
+            /// <para>The statistics details.</para>
             /// </summary>
             [NameInMap("HoneypotAttackStatistics")]
             [Validation(Required=false)]
             public List<GetHoneypotAttackStatisticsResponseBodyDataHoneypotAttackStatistics> HoneypotAttackStatistics { get; set; }
             public class GetHoneypotAttackStatisticsResponseBodyDataHoneypotAttackStatistics : TeaModel {
                 /// <summary>
-                /// The number of times the value is counted.
+                /// <para>The number of times the value is counted.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("StatisticsCount")]
                 [Validation(Required=false)]
                 public int? StatisticsCount { get; set; }
 
                 /// <summary>
-                /// The statistical value.
+                /// <para>The statistical value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>112.168.1.**</para>
                 /// </summary>
                 [NameInMap("StatisticsValue")]
                 [Validation(Required=false)]
@@ -54,12 +66,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The type of the attack source statistics. Valid values:
+            /// <para>The type of the attack source statistics. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>TOP_ATTACKED_AGENT</b>: the top five probes that are attacked the most frequently.</description></item>
+            /// <item><description><b>TOP_ATTACKED_IP</b>: the top five IP addresses that are attacked the most frequently.</description></item>
+            /// <item><description><b>ATTACK_EVENT_TYPE</b>: the type of the intrusion event.</description></item>
+            /// <item><description><b>ATTACK_HONEYPOT_TYPE</b>: the type of the attacked honeypot.</description></item>
+            /// </list>
             /// 
-            /// *   **TOP_ATTACKED_AGENT**: the top five probes that are attacked the most frequently.
-            /// *   **TOP_ATTACKED_IP**: the top five IP addresses that are attacked the most frequently.
-            /// *   **ATTACK_EVENT_TYPE**: the type of the intrusion event.
-            /// *   **ATTACK_HONEYPOT_TYPE**: the type of the attacked honeypot.
+            /// <b>Example:</b>
+            /// <para>TOP_ATTACKED_IP</para>
             /// </summary>
             [NameInMap("StatisticsType")]
             [Validation(Required=false)]
@@ -68,31 +84,44 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3FACC60A-3FE4-5F49-9184-50730C8B****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

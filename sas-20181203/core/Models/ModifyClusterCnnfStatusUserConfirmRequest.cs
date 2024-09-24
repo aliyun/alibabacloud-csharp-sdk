@@ -10,17 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyClusterCnnfStatusUserConfirmRequest : TeaModel {
         /// <summary>
-        /// The cluster IDs.
+        /// <para>The cluster IDs.</para>
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]
         public List<string> ClusterIds { get; set; }
 
         /// <summary>
-        /// Specifies whether to fix the blocking status of the cluster. Valid values:
+        /// <para>Specifies whether to fix the blocking status of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: yes</description></item>
+        /// <item><description>false: no</description></item>
+        /// </list>
         /// 
-        /// *   true: yes
-        /// *   false: no
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("UserConfirm")]
         [Validation(Required=false)]

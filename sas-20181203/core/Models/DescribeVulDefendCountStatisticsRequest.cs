@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulDefendCountStatisticsRequest : TeaModel {
         /// <summary>
-        /// The type of the vulnerabilities. Valid values:
+        /// <para>The type of the vulnerabilities. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>app: application vulnerabilities</description></item>
+        /// <item><description>emg: urgent vulnerabilities</description></item>
+        /// </list>
         /// 
-        /// *   app: application vulnerabilities
-        /// *   emg: urgent vulnerabilities
+        /// <b>Example:</b>
+        /// <para>emg</para>
         /// </summary>
         [NameInMap("VulType")]
         [Validation(Required=false)]

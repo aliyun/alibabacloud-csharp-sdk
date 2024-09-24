@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdatePublishAutoUpgradeRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("AutoUpgrade")]
         [Validation(Required=false)]
         public int? AutoUpgrade { get; set; }

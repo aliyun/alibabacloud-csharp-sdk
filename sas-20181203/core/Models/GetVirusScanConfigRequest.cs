@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetVirusScanConfigRequest : TeaModel {
         /// <summary>
-        /// The type of the task. Valid values:
+        /// <para>The type of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: a virus scan task.</description></item>
+        /// </list>
         /// 
-        /// *   **VIRUS_VUL_SCHEDULE_SCAN**: a virus scan task.
+        /// <b>Example:</b>
+        /// <para>VIRUS_VUL_SCHEDULE_SCAN</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

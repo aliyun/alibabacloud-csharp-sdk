@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class BatchDeleteMaliciousFileWhitelistConfigRequest : TeaModel {
         /// <summary>
-        /// The IDs of the whitelist rules. You can call the [ListMaliciousFileWhitelistConfigs](~~ListMaliciousFileWhitelistConfigs~~) operation to query the IDs of whitelist rules.
+        /// <para>The IDs of the whitelist rules. You can call the <a href="~~ListMaliciousFileWhitelistConfigs~~">ListMaliciousFileWhitelistConfigs</a> operation to query the IDs of whitelist rules.</para>
         /// </summary>
         [NameInMap("ConfigIdList")]
         [Validation(Required=false)]

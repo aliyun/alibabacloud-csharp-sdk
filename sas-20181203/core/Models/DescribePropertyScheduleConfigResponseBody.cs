@@ -10,16 +10,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyScheduleConfigResponseBody : TeaModel {
         /// <summary>
-        /// The configuration time. Unit: hours.
+        /// <para>The configuration time. Unit: hours.</para>
+        /// <remarks>
+        /// <para> A value <b>0</b> indicates that asset fingerprint collection is disabled for this type of asset.</para>
+        /// </remarks>
         /// 
-        /// >  A value **0** indicates that asset fingerprint collection is disabled for this type of asset.
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7E0618A9-D5EF-4220-9471-C42B5E92719F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

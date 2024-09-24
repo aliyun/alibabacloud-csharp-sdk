@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClientUserDefineRuleTypesResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>340D7FC4-D575-1661-8ACD-CFA7BE57****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

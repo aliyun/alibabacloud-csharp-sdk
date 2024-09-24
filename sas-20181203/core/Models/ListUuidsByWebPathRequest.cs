@@ -10,35 +10,46 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUuidsByWebPathRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The path type of the web directory. Valid values:
+        /// <para>The path type of the web directory. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>def</b>: automatically identified</description></item>
+        /// <item><description><b>customize</b>: manually added</description></item>
+        /// </list>
         /// 
-        /// *   **def**: automatically identified
-        /// *   **customize**: manually added
+        /// <b>Example:</b>
+        /// <para>def</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The path to the web directory.
+        /// <para>The path to the web directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/root/www****</para>
         /// </summary>
         [NameInMap("WebPath")]
         [Validation(Required=false)]

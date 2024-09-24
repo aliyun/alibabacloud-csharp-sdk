@@ -10,36 +10,43 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateHoneypotNodeRequest : TeaModel {
         /// <summary>
-        /// The number of available probes.
+        /// <para>The number of available probes.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("AvailableProbeNum")]
         [Validation(Required=false)]
         public int? AvailableProbeNum { get; set; }
 
         /// <summary>
-        /// The ID of the management node.
+        /// <para>The ID of the management node.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>67ab3f4c-3db5-4fc3-b51f-00f8bfabfa08</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The name of the management node.
+        /// <para>The name of the management node.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>HoneypotNodeTest</para>
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
         /// <summary>
-        /// The CIDR blocks that are allowed to access the management node.
+        /// <para>The CIDR blocks that are allowed to access the management node.</para>
         /// </summary>
         [NameInMap("SecurityGroupProbeIpList")]
         [Validation(Required=false)]

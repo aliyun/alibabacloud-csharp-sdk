@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyInterceptionRuleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6961B151-B43C-533B-8B2E-1D3151D7F5B2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteImageEventOperationRequest : TeaModel {
         /// <summary>
-        /// The primary key of the alert handling rule.
+        /// <para>The primary key of the alert handling rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1404656</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

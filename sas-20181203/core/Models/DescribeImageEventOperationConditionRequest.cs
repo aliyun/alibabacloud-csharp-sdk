@@ -10,19 +10,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageEventOperationConditionRequest : TeaModel {
         /// <summary>
-        /// The alert type.
+        /// <para>The alert type.</para>
+        /// <list type="bullet">
+        /// <item><description>Set the value to <b>sensitiveFile</b>.</description></item>
+        /// </list>
         /// 
-        /// *   Set the value to **sensitiveFile**.
+        /// <b>Example:</b>
+        /// <para>sensitiveFile</para>
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese.
-        /// *   **en**: English.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
