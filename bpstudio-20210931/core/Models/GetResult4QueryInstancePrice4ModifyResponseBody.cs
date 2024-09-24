@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
                 [Validation(Required=false)]
                 public double? DiscountAmount { get; set; }
 
-                [NameInMap("ERROR")]
+                [NameInMap("Error")]
                 [Validation(Required=false)]
-                public string ERROR { get; set; }
+                public string Error { get; set; }
 
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]

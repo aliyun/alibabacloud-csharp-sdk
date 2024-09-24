@@ -19,7 +19,35 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public QueryInstanceSpec4ModifyResponseBodyData Data { get; set; }
+        public class QueryInstanceSpec4ModifyResponseBodyData : TeaModel {
+            [NameInMap("OptionalValues")]
+            [Validation(Required=false)]
+            public List<QueryInstanceSpec4ModifyResponseBodyDataOptionalValues> OptionalValues { get; set; }
+            public class QueryInstanceSpec4ModifyResponseBodyDataOptionalValues : TeaModel {
+                [NameInMap("Label")]
+                [Validation(Required=false)]
+                public string Label { get; set; }
+
+                [NameInMap("Max")]
+                [Validation(Required=false)]
+                public double? Max { get; set; }
+
+                [NameInMap("Min")]
+                [Validation(Required=false)]
+                public double? Min { get; set; }
+
+                [NameInMap("Step")]
+                [Validation(Required=false)]
+                public double? Step { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
