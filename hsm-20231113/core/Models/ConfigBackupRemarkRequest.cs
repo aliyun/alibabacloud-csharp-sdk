@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ConfigBackupRemarkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>backup-fdb897sdfg****</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>backup-test</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

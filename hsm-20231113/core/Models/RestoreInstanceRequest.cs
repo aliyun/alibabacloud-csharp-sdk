@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class RestoreInstanceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The ID of the image that you want to use to restore the HSM.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>image-eaOGHkRDQgh4****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The HSM ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hsm-cn-mp90fxef****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

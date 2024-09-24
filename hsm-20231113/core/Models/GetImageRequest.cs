@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class GetImageRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>image-wz9c5ths5dfuwx47****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]

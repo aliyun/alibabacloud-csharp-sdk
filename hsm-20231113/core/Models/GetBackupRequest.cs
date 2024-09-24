@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class GetBackupRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>backup-fdb897sdf****</para>
+        /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }

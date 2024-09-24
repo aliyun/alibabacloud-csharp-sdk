@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ConfigClusterWhitelistRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cluster-729dm40FG****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The IP address whitelist of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>18.68.XX.XX</para>
         /// </summary>
         [NameInMap("Whitelist")]
         [Validation(Required=false)]

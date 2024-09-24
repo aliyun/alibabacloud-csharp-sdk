@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class SyncClusterRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cluster-BqxX63Bsgytet****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

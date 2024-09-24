@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class QuickInitInstanceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The HSM ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hsm-cn-mp90fxef****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

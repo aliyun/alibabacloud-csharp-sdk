@@ -10,21 +10,33 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The cluster name.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cluster_on****</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The HSM ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hsm_intl-sg-uz63ixak****</para>
         /// </summary>
         [NameInMap("MasterInstanceId")]
         [Validation(Required=false)]
         public string MasterInstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class DeleteClusterRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cluster-NZB9Oj5Yfd8Y****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ConfigBackupTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("BackupHourInDay")]
         [Validation(Required=false)]
         public long? BackupHourInDay { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>backup-173620705****</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("BackupPeriod")]
         [Validation(Required=false)]
