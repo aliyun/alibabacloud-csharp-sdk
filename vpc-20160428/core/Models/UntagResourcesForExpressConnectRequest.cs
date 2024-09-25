@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UntagResourcesForExpressConnectRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags from the specified resource. Valid values:
+        /// <para>Specifies whether to remove all tags from the specified resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false** (default)
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -28,20 +32,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the resource is deployed.
+        /// <para>The ID of the region in which the resource is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the resources from which you want to remove tags.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the resources from which you want to remove tags.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -56,20 +60,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// <para>The type of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PHYSICALCONNECTION</b>: Express Connect circuit.</description></item>
+        /// <item><description><b>VIRTUALBORDERROUTER</b>: virtual border router (VBR).</description></item>
+        /// <item><description><b>ROUTERINTERFACE</b>: router interface.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **PHYSICALCONNECTION**: Express Connect circuit.
-        /// *   **VIRTUALBORDERROUTER**: virtual border router (VBR).
-        /// *   **ROUTERINTERFACE**: router interface.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PHYSICALCONNECTION</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags to remove from the specified resource.
+        /// <para>The tags to remove from the specified resource.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

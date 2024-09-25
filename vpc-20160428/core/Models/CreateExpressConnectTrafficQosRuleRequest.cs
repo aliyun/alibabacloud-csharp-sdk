@@ -10,60 +10,78 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateExpressConnectTrafficQosRuleRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The destination IPv4 CIDR block that matches the QoS rule traffic.
+        /// <para>The destination IPv4 CIDR block that matches the QoS rule traffic.</para>
+        /// <remarks>
+        /// <para>When this parameter is unavailable, specify <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
+        /// </remarks>
         /// 
-        /// > When this parameter is unavailable, specify **SrcIPv6Cidr** or **DstIPv6Cidr**.
+        /// <b>Example:</b>
+        /// <para>1.1.1.0/24</para>
         /// </summary>
         [NameInMap("DstCidr")]
         [Validation(Required=false)]
         public string DstCidr { get; set; }
 
         /// <summary>
-        /// The destination IPv6 CIDR block that matches the QoS rule traffic.
+        /// <para>The destination IPv6 CIDR block that matches the QoS rule traffic.</para>
+        /// <remarks>
+        /// <para>When this parameter is unavailable, specify <b>SrcCidr</b> or <b>DstCidr</b>.</para>
+        /// </remarks>
         /// 
-        /// > When this parameter is unavailable, specify **SrcCidr** or **DstCidr**.
+        /// <b>Example:</b>
+        /// <para>2001:0db8:1234:5678::/64</para>
         /// </summary>
         [NameInMap("DstIPv6Cidr")]
         [Validation(Required=false)]
         public string DstIPv6Cidr { get; set; }
 
         /// <summary>
-        /// The range of destination ports that match the QoS rule traffic. Valid values: **0** to **65535**. If the traffic does not match, the value is -1. You can specify only one port. The start port number must be the same as the end port number. Different protocols correspond to different ports. Valid values:
+        /// <para>The range of destination ports that match the QoS rule traffic. Valid values: <b>0</b> to <b>65535</b>. If the traffic does not match, the value is -1. You can specify only one port. The start port number must be the same as the end port number. Different protocols correspond to different ports. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ALL</b> (uneditable): -1/-1.</description></item>
+        /// <item><description><b>ICMP(IPv4)</b> (uneditable): -1/-1.</description></item>
+        /// <item><description><b>ICMPv6(IPv6)</b> (uneditable): -1/-1.</description></item>
+        /// <item><description><b>TCP</b> (editable): -1/-1.</description></item>
+        /// <item><description><b>UDP</b> (editable): -1/-1.</description></item>
+        /// <item><description><b>GRE</b> (uneditable): -1/-1.</description></item>
+        /// <item><description><b>SSH</b> (uneditable): 22/22.</description></item>
+        /// <item><description><b>Telnet</b> (uneditable): 23/23.</description></item>
+        /// <item><description><b>HTTP</b> (uneditable): 80/80.</description></item>
+        /// <item><description><b>HTTPS</b> (uneditable): 443/443.</description></item>
+        /// <item><description><b>MS SQL</b> (uneditable): 1443/1443.</description></item>
+        /// <item><description><b>Oracle</b> (uneditable): 1521/1521.</description></item>
+        /// <item><description><b>MySql</b> (uneditable): 3306/3306.</description></item>
+        /// <item><description><b>RDP</b> (uneditable): 3389/3389.</description></item>
+        /// <item><description><b>PostgreSQL</b> (uneditable): 5432/5432.</description></item>
+        /// <item><description><b>Redis</b> (uneditable): 6379/6379.</description></item>
+        /// </list>
         /// 
-        /// *   **ALL** (uneditable): -1/-1.
-        /// *   **ICMP(IPv4)** (uneditable): -1/-1.
-        /// *   **ICMPv6(IPv6)** (uneditable): -1/-1.
-        /// *   **TCP** (editable): -1/-1.
-        /// *   **UDP** (editable): -1/-1.
-        /// *   **GRE** (uneditable): -1/-1.
-        /// *   **SSH** (uneditable): 22/22.
-        /// *   **Telnet** (uneditable): 23/23.
-        /// *   **HTTP** (uneditable): 80/80.
-        /// *   **HTTPS** (uneditable): 443/443.
-        /// *   **MS SQL** (uneditable): 1443/1443.
-        /// *   **Oracle** (uneditable): 1521/1521.
-        /// *   **MySql** (uneditable): 3306/3306.
-        /// *   **RDP** (uneditable): 3389/3389.
-        /// *   **PostgreSQL** (uneditable): 5432/5432.
-        /// *   **Redis** (uneditable): 6379/6379.
+        /// <b>Example:</b>
+        /// <para>-1/-1</para>
         /// </summary>
         [NameInMap("DstPortRange")]
         [Validation(Required=false)]
         public string DstPortRange { get; set; }
 
         /// <summary>
-        /// The DSCP value that matches the QoS rule traffic. Valid values: **0** to **63**. If no value is matched, the value is -1.
+        /// <para>The DSCP value that matches the QoS rule traffic. Valid values: <b>0</b> to <b>63</b>. If no value is matched, the value is -1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MatchDscp")]
         [Validation(Required=false)]
@@ -78,71 +96,84 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The priority of the QoS rule. Valid values: **1** to **9000**. A larger value indicates a higher priority. The priority of each QoS rule must be unique in the same QoS policy.
+        /// <para>The priority of the QoS rule. Valid values: <b>1</b> to <b>9000</b>. A larger value indicates a higher priority. The priority of each QoS rule must be unique in the same QoS policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
 
         /// <summary>
-        /// The protocol of the QoS rule. Valid values:
+        /// <para>The protocol of the QoS rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ALL</b></description></item>
+        /// <item><description><b>ICMP(IPv4)</b></description></item>
+        /// <item><description><b>ICMPv6(IPv6)</b></description></item>
+        /// <item><description><b>TCP</b></description></item>
+        /// <item><description><b>UDP</b></description></item>
+        /// <item><description><b>GRE</b></description></item>
+        /// <item><description><b>SSH</b></description></item>
+        /// <item><description><b>Telnet</b></description></item>
+        /// <item><description><b>HTTP</b></description></item>
+        /// <item><description><b>HTTPS</b></description></item>
+        /// <item><description><b>MS SQL</b></description></item>
+        /// <item><description><b>Oracle</b></description></item>
+        /// <item><description><b>MySql</b></description></item>
+        /// <item><description><b>RDP</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>Redis</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **ALL**
-        /// *   **ICMP(IPv4)**
-        /// *   **ICMPv6(IPv6)**
-        /// *   **TCP**
-        /// *   **UDP**
-        /// *   **GRE**
-        /// *   **SSH**
-        /// *   **Telnet**
-        /// *   **HTTP**
-        /// *   **HTTPS**
-        /// *   **MS SQL**
-        /// *   **Oracle**
-        /// *   **MySql**
-        /// *   **RDP**
-        /// *   **PostgreSQL**
-        /// *   **Redis**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ALL</para>
         /// </summary>
         [NameInMap("Protocol")]
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
         /// <summary>
-        /// The ID of the QoS policy.
+        /// <para>The ID of the QoS policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>qos-2giu0a6vd5x0mv4700</para>
         /// </summary>
         [NameInMap("QosId")]
         [Validation(Required=false)]
         public string QosId { get; set; }
 
         /// <summary>
-        /// The ID of the QoS queue.
+        /// <para>The ID of the QoS queue.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>qos-queue-9nyx2u7n71s2rcy4n5</para>
         /// </summary>
         [NameInMap("QueueId")]
         [Validation(Required=false)]
         public string QueueId { get; set; }
 
         /// <summary>
-        /// The region ID of the QoS policy.
+        /// <para>The region ID of the QoS policy.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The new DSCP value. Valid values: **0** to **63**. If you do not change the value, set the value to -1.
+        /// <para>The new DSCP value. Valid values: <b>0</b> to <b>63</b>. If you do not change the value, set the value to -1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RemarkingDscp")]
         [Validation(Required=false)]
@@ -153,43 +184,58 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The description of the QoS rule.
+        /// <para>The description of the QoS rule.</para>
+        /// <para>The description must be 0 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>qos-rule-test</para>
         /// </summary>
         [NameInMap("RuleDescription")]
         [Validation(Required=false)]
         public string RuleDescription { get; set; }
 
         /// <summary>
-        /// The name of the QoS rule.
+        /// <para>The name of the QoS rule.</para>
+        /// <para>The name must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The name must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>qos-rule-test</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The source IPv4 CIDR block that matches the QoS rule traffic.
+        /// <para>The source IPv4 CIDR block that matches the QoS rule traffic.</para>
+        /// <remarks>
+        /// <para>When this parameter is unavailable, specify <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
+        /// </remarks>
         /// 
-        /// > When this parameter is unavailable, specify **SrcIPv6Cidr** or **DstIPv6Cidr**.
+        /// <b>Example:</b>
+        /// <para>1.1.1.0/24</para>
         /// </summary>
         [NameInMap("SrcCidr")]
         [Validation(Required=false)]
         public string SrcCidr { get; set; }
 
         /// <summary>
-        /// The source IPv6 CIDR block that matches the QoS rule traffic.
+        /// <para>The source IPv6 CIDR block that matches the QoS rule traffic.</para>
+        /// <remarks>
+        /// <para>When this parameter is unavailable, specify <b>SrcCidr</b> or <b>DstCidr</b>.</para>
+        /// </remarks>
         /// 
-        /// > When this parameter is unavailable, specify **SrcCidr** or **DstCidr**.
+        /// <b>Example:</b>
+        /// <para>2001:0db8:1234:5678::/64</para>
         /// </summary>
         [NameInMap("SrcIPv6Cidr")]
         [Validation(Required=false)]
         public string SrcIPv6Cidr { get; set; }
 
         /// <summary>
-        /// The range of source ports that match the QoS rule traffic. Valid values: **0** to **65535**. If the traffic does not match, the value is -1. You can specify only one port. The start port number must be the same as the end port number.
+        /// <para>The range of source ports that match the QoS rule traffic. Valid values: <b>0</b> to <b>65535</b>. If the traffic does not match, the value is -1. You can specify only one port. The start port number must be the same as the end port number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-1/-1</para>
         /// </summary>
         [NameInMap("SrcPortRange")]
         [Validation(Required=false)]

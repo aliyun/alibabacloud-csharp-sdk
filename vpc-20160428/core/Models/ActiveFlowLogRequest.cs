@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ActiveFlowLogRequest : TeaModel {
         /// <summary>
-        /// The ID of the flow log.
+        /// <para>The ID of the flow log.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>fl-m5e8vhz2t21sel1nq****</para>
         /// </summary>
         [NameInMap("FlowLogId")]
         [Validation(Required=false)]
@@ -27,9 +29,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where you want to create the flow log. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <para>The ID of the region where you want to create the flow log. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-qingdao</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

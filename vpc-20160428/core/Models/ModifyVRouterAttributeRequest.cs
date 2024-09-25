@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyVRouterAttributeRequest : TeaModel {
         /// <summary>
-        /// The description of the vRouter.
+        /// <para>The description of the vRouter.</para>
+        /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>My VRouter</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -27,9 +29,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the vRouter.
+        /// <para>The region ID of the vRouter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -44,18 +48,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The vRouter ID.
+        /// <para>The vRouter ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vrt-gw0p7zigake75znix****</para>
         /// </summary>
         [NameInMap("VRouterId")]
         [Validation(Required=false)]
         public string VRouterId { get; set; }
 
         /// <summary>
-        /// The name of the vRouter.
+        /// <para>The name of the vRouter.</para>
+        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>VRouter-1</para>
         /// </summary>
         [NameInMap("VRouterName")]
         [Validation(Required=false)]

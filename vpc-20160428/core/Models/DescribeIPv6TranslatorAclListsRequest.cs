@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIPv6TranslatorAclListsRequest : TeaModel {
         /// <summary>
-        /// The ID of the ACL.
+        /// <para>The ID of the ACL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipv6transacl-bp1de2****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
         /// <summary>
-        /// The name of the ACL.
+        /// <para>The name of the ACL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acl1</para>
         /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]
@@ -32,23 +38,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region of the ACL.
+        /// <para>The region of the ACL.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

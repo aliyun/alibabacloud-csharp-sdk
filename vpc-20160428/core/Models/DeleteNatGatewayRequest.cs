@@ -10,30 +10,39 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteNatGatewayRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to forcefully delete the NAT gateway. Valid values:
+        /// <para>Specifies whether to forcefully delete the NAT gateway. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b> If you set the value to <b>true</b>:</para>
+        /// <list type="bullet">
+        /// <item><description>If the NAT gateway has SNAT entries, the system automatically deletes them.</description></item>
+        /// <item><description>If the NAT gateway has DNAT entries, the system automatically deletes them.</description></item>
+        /// <item><description>If the NAT gateway is associated with an elastic IP address (EIP), the system automatically disassociates the EIP from the NAT gateway.</description></item>
+        /// <item><description>If the NAT gateway is associated with a NAT bandwidth plan, the system automatically disassociates the NAT bandwidth plan.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>false</b>(default): no If you set the value to <b>false</b>:</para>
+        /// <list type="bullet">
+        /// <item><description>If the NAT gateway is associated with a NAT bandwidth plan, disassociate the NAT bandwidth plan first.</description></item>
+        /// <item><description>If the NAT gateway has SNAT entries, delete them first.</description></item>
+        /// <item><description>If the NAT gateway has DNAT entries, delete them first.</description></item>
+        /// <item><description>If the NAT gateway is associated with an EIP, disassociate the EIP from the NAT gateway first.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **true** If you set the value to **true**:
-        /// 
-        ///     *   If the NAT gateway has SNAT entries, the system automatically deletes them.
-        ///     *   If the NAT gateway has DNAT entries, the system automatically deletes them.
-        ///     *   If the NAT gateway is associated with an elastic IP address (EIP), the system automatically disassociates the EIP from the NAT gateway.
-        ///     *   If the NAT gateway is associated with a NAT bandwidth plan, the system automatically disassociates the NAT bandwidth plan.
-        /// 
-        /// *   **false**(default): no If you set the value to **false**:
-        /// 
-        ///     *   If the NAT gateway is associated with a NAT bandwidth plan, disassociate the NAT bandwidth plan first.
-        ///     *   If the NAT gateway has SNAT entries, delete them first.
-        ///     *   If the NAT gateway has DNAT entries, delete them first.
-        ///     *   If the NAT gateway is associated with an EIP, disassociate the EIP from the NAT gateway first.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }
 
         /// <summary>
-        /// The ID of the NAT gateway that you want to delete.
+        /// <para>The ID of the NAT gateway that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ngw-bp1uewa15k4iy5770****</para>
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
@@ -48,11 +57,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the NAT gateway.
+        /// <para>The region ID of the NAT gateway.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

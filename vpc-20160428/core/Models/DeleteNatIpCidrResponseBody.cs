@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteNatIpCidrResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7021BEB1-210F-48A9-AB82-BE9A9110BB89</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,75 +10,100 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListBusinessAccessPointsResponseBody : TeaModel {
         /// <summary>
-        /// The list of access points.
+        /// <para>The list of access points.</para>
         /// </summary>
         [NameInMap("BusinessAccessPoints")]
         [Validation(Required=false)]
         public List<ListBusinessAccessPointsResponseBodyBusinessAccessPoints> BusinessAccessPoints { get; set; }
         public class ListBusinessAccessPointsResponseBodyBusinessAccessPoints : TeaModel {
             /// <summary>
-            /// The ID of the access point.
+            /// <para>The ID of the access point.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ap-cn-hangzhou-xs-B</para>
             /// </summary>
             [NameInMap("AccessPointId")]
             [Validation(Required=false)]
             public string AccessPointId { get; set; }
 
             /// <summary>
-            /// The name of the access point.
+            /// <para>The name of the access point.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hangzhou-xs-B</para>
             /// </summary>
             [NameInMap("AccessPointName")]
             [Validation(Required=false)]
             public string AccessPointName { get; set; }
 
             /// <summary>
-            /// The ID of the cloud box.
+            /// <para>The ID of the cloud box.</para>
+            /// <remarks>
+            /// <para> You can query this parameter if the Express Connect circuits and access points are of the cloud box type.</para>
+            /// </remarks>
             /// 
-            /// >  You can query this parameter if the Express Connect circuits and access points are of the cloud box type.
+            /// <b>Example:</b>
+            /// <para>cb-****</para>
             /// </summary>
             [NameInMap("CloudBoxInstanceIds")]
             [Validation(Required=false)]
             public string CloudBoxInstanceIds { get; set; }
 
             /// <summary>
-            /// The latitude of the access point.
+            /// <para>The latitude of the access point.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30.198416</para>
             /// </summary>
             [NameInMap("Latitude")]
             [Validation(Required=false)]
             public double? Latitude { get; set; }
 
             /// <summary>
-            /// The longitude of the access point.
+            /// <para>The longitude of the access point.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>120.247514</para>
             /// </summary>
             [NameInMap("Longitude")]
             [Validation(Required=false)]
             public double? Longitude { get; set; }
 
             /// <summary>
-            /// The connectivity provider of the Express Connect circuit. Valid values:
+            /// <para>The connectivity provider of the Express Connect circuit. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>CT</b>: China Telecom.</description></item>
+            /// <item><description><b>CU</b>: China Unicom.</description></item>
+            /// <item><description><b>CM</b>: China Mobile.</description></item>
+            /// <item><description><b>CO</b>: other connectivity providers in the Chinese mainland.</description></item>
+            /// <item><description><b>Equinix</b>: Equinix.</description></item>
+            /// <item><description><b>Other</b>: other connectivity providers outside the Chinese mainland.</description></item>
+            /// </list>
             /// 
-            /// *   **CT**: China Telecom.
-            /// *   **CU**: China Unicom.
-            /// *   **CM**: China Mobile.
-            /// *   **CO**: other connectivity providers in the Chinese mainland.
-            /// *   **Equinix**: Equinix.
-            /// *   **Other**: other connectivity providers outside the Chinese mainland.
+            /// <b>Example:</b>
+            /// <para>CT</para>
             /// </summary>
             [NameInMap("SupportLineOperator")]
             [Validation(Required=false)]
             public string SupportLineOperator { get; set; }
 
             /// <summary>
-            /// The port type supported by the access point. Valid values:
+            /// <para>The port type supported by the access point. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>100Base-T</b>: 100 Mbit/s copper Ethernet port</description></item>
+            /// <item><description><b>1000Base-T</b>: 1,000 Mbit/s copper Ethernet port</description></item>
+            /// <item><description><b>1000Base-LX</b>: 1,000 Mbit/s single-mode optical port (10 km)</description></item>
+            /// <item><description><b>10GBase-T</b>: 10,000 Mbit/s copper Ethernet port</description></item>
+            /// <item><description><b>10GBase-LR</b>: 10,000 Mbit/s single-mode optical port (10 km)</description></item>
+            /// <item><description><b>40GBase-LR</b>: 40,000 Mbit/s single-mode optical port</description></item>
+            /// <item><description><b>100GBase-LR</b>: 100,000 Mbit/s single-mode optical port</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</para>
+            /// </remarks>
             /// 
-            /// *   **100Base-T**: 100 Mbit/s copper Ethernet port
-            /// *   **1000Base-T**: 1,000 Mbit/s copper Ethernet port
-            /// *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)
-            /// *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
-            /// *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)
-            /// *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
-            /// *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
-            /// 
-            /// >  To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.
+            /// <b>Example:</b>
+            /// <para>1000Base-T</para>
             /// </summary>
             [NameInMap("SupportPortTypes")]
             [Validation(Required=false)]
@@ -87,7 +112,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

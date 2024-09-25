@@ -10,34 +10,48 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListPublicIpAddressPoolCidrBlocksRequest : TeaModel {
         /// <summary>
-        /// The CIDR blocks.
+        /// <para>The CIDR blocks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>47.0.XX.XX/24</para>
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return. Valid values: **10** to **100**. Default value: **10**.
+        /// <para>The maximum number of entries to return. Valid values: <b>10</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If this is your first query and no next queries are to be sent, ignore this parameter.</description></item>
+        /// <item><description>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</description></item>
+        /// </list>
         /// 
-        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
-        /// *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -52,18 +66,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the IP address pool.
+        /// <para>The ID of the IP address pool.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pippool-6wetvn6fumkgycssx****</para>
         /// </summary>
         [NameInMap("PublicIpAddressPoolId")]
         [Validation(Required=false)]
         public string PublicIpAddressPoolId { get; set; }
 
         /// <summary>
-        /// The region ID of the CIDR blocks.
+        /// <para>The region ID of the CIDR blocks.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-chengdu</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

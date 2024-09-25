@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeNatGatewaysResponseBody : TeaModel {
         /// <summary>
-        /// The details about the NAT gateway.
+        /// <para>The details about the NAT gateway.</para>
         /// </summary>
         [NameInMap("NatGateways")]
         [Validation(Required=false)]
@@ -21,66 +21,93 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeNatGatewaysResponseBodyNatGatewaysNatGateway> NatGateway { get; set; }
             public class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway : TeaModel {
                 /// <summary>
-                /// Indicates whether automatic payment is enabled. Valid values:
+                /// <para>Indicates whether automatic payment is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>false</b>: no</description></item>
+                /// <item><description><b>true</b>: yes</description></item>
+                /// </list>
                 /// 
-                /// *   **false**: no
-                /// *   **true**: yes
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("AutoPay")]
                 [Validation(Required=false)]
                 public bool? AutoPay { get; set; }
 
                 /// <summary>
-                /// The status of the NAT gateway. Valid values:
+                /// <para>The status of the NAT gateway. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Normal</b>: normal</description></item>
+                /// <item><description><b>FinancialLocked</b>: locked due to overdue payments</description></item>
+                /// </list>
                 /// 
-                /// *   **Normal**: normal
-                /// *   **FinancialLocked**: locked due to overdue payments
+                /// <b>Example:</b>
+                /// <para>Normal</para>
                 /// </summary>
                 [NameInMap("BusinessStatus")]
                 [Validation(Required=false)]
                 public string BusinessStatus { get; set; }
 
                 /// <summary>
-                /// The time when the NAT gateway was created.
+                /// <para>The time when the NAT gateway was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-06-08T12:20:20Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether the deletion protection feature is enabled. Valid values:
+                /// <para>Indicates whether the deletion protection feature is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: yes</description></item>
+                /// <item><description><b>false</b>: no</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: yes
-                /// *   **false**: no
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("DeletionProtection")]
                 [Validation(Required=false)]
                 public bool? DeletionProtection { get; set; }
 
                 /// <summary>
-                /// The description of the NAT gateway.
+                /// <para>The description of the NAT gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NAT</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Indicates whether the traffic monitoring feature is enabled. Valid values:
+                /// <para>Indicates whether the traffic monitoring feature is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: yes</description></item>
+                /// <item><description><b>false</b>: no</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: yes
-                /// *   **false**: no
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("EcsMetricEnabled")]
                 [Validation(Required=false)]
                 public bool? EcsMetricEnabled { get; set; }
 
                 /// <summary>
-                /// The mode in which the NAT gateway is associated with an elastic IP address (EIP). Valid values:
+                /// <para>The mode in which the NAT gateway is associated with an elastic IP address (EIP). Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>MULTI_BINDED</b>: multi-EIP-to-ENI mode</description></item>
+                /// <item><description><b>NAT</b>: NAT mode, which is compatible with IPv4 addresses.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> Note: If you use the NAT mode, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, you can associate a NAT gateway with up to 50 EIPs.</para>
+                /// </remarks>
                 /// 
-                /// *   **MULTI_BINDED**: multi-EIP-to-ENI mode
-                /// *   **NAT**: NAT mode, which is compatible with IPv4 addresses.
-                /// 
-                /// >  Note: If you use the NAT mode, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, you can associate a NAT gateway with up to 50 EIPs.
+                /// <b>Example:</b>
+                /// <para>MULTI_BINDED</para>
                 /// </summary>
                 [NameInMap("EipBindMode")]
                 [Validation(Required=false)]
@@ -91,14 +118,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string EnableSessionLog { get; set; }
 
                 /// <summary>
-                /// The time when the NAT gateway expires.
+                /// <para>The time when the NAT gateway expires.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-08-26T16:00Z</para>
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The ID of the DNAT table.
+                /// <para>The ID of the DNAT table.</para>
                 /// </summary>
                 [NameInMap("ForwardTableIds")]
                 [Validation(Required=false)]
@@ -111,7 +141,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the FULLNAT table.
+                /// <para>The ID of the FULLNAT table.</para>
                 /// </summary>
                 [NameInMap("FullNatTableIds")]
                 [Validation(Required=false)]
@@ -124,34 +154,45 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the ICMP non-retrieval feature is enabled. Valid values:
+                /// <para>Indicates whether the ICMP non-retrieval feature is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: yes</description></item>
+                /// <item><description><b>false</b>: no</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: yes
-                /// *   **false**: no
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IcmpReplyEnabled")]
                 [Validation(Required=false)]
                 public bool? IcmpReplyEnabled { get; set; }
 
                 /// <summary>
-                /// The billing method of the NAT gateway. The value is set to **PostPaid**, which indicates the pay-as-you-go billing method.
+                /// <para>The billing method of the NAT gateway. The value is set to <b>PostPaid</b>, which indicates the pay-as-you-go billing method.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PostPaid</para>
                 /// </summary>
                 [NameInMap("InstanceChargeType")]
                 [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }
 
                 /// <summary>
-                /// The metering method of the NAT gateway. Valid values:
+                /// <para>The metering method of the NAT gateway. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>PayBySpec</b>: pay-by-specification</description></item>
+                /// <item><description><b>PayByLcu</b>: pay-by-CU</description></item>
+                /// </list>
                 /// 
-                /// *   **PayBySpec**: pay-by-specification
-                /// *   **PayByLcu**: pay-by-CU
+                /// <b>Example:</b>
+                /// <para>PayByLcu</para>
                 /// </summary>
                 [NameInMap("InternetChargeType")]
                 [Validation(Required=false)]
                 public string InternetChargeType { get; set; }
 
                 /// <summary>
-                /// The list of elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.
+                /// <para>The list of elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.</para>
                 /// </summary>
                 [NameInMap("IpLists")]
                 [Validation(Required=false)]
@@ -162,43 +203,60 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList> IpList { get; set; }
                     public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList : TeaModel {
                         /// <summary>
-                        /// The ID of the EIP associated with the NAT gateway.
+                        /// <para>The ID of the EIP associated with the NAT gateway.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>eip-m5egzuvp3dgixen6****</para>
                         /// </summary>
                         [NameInMap("AllocationId")]
                         [Validation(Required=false)]
                         public string AllocationId { get; set; }
 
                         /// <summary>
-                        /// The IP address of the EIP associated with the NAT gateway.
+                        /// <para>The IP address of the EIP associated with the NAT gateway.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>116.62.XX.XX</para>
                         /// </summary>
                         [NameInMap("IpAddress")]
                         [Validation(Required=false)]
                         public string IpAddress { get; set; }
 
                         /// <summary>
-                        /// The private IP address of the NAT gateway.
+                        /// <para>The private IP address of the NAT gateway.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>192.168.XX.XX</para>
                         /// </summary>
                         [NameInMap("PrivateIpAddress")]
                         [Validation(Required=false)]
                         public string PrivateIpAddress { get; set; }
 
                         /// <summary>
-                        /// Indicates whether IP addresses that are used in DNAT entries can be specified in SNAT entries. Valid values:
+                        /// <para>Indicates whether IP addresses that are used in DNAT entries can be specified in SNAT entries. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b>: yes</description></item>
+                        /// <item><description><b>false</b>: no</description></item>
+                        /// </list>
                         /// 
-                        /// *   **true**: yes
-                        /// *   **false**: no
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("SnatEntryEnabled")]
                         [Validation(Required=false)]
                         public bool? SnatEntryEnabled { get; set; }
 
                         /// <summary>
-                        /// The association between the EIP and the Internet NAT gateway. Valid values:
+                        /// <para>The association between the EIP and the Internet NAT gateway. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>UsedByForwardTable</b>: The EIP is specified in a DNAT entry.</description></item>
+                        /// <item><description><b>UsedBySnatTable</b>: The EIP is specified in an SNAT entry.</description></item>
+                        /// <item><description><b>UsedByForwardSnatTable</b>: The EIP is specified in both an SNAT entry and a DNAT entry.</description></item>
+                        /// <item><description><b>Idle</b>: The EIP is not specified in a DNAT or SNAT entry.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **UsedByForwardTable**: The EIP is specified in a DNAT entry.
-                        /// *   **UsedBySnatTable**: The EIP is specified in an SNAT entry.
-                        /// *   **UsedByForwardSnatTable**: The EIP is specified in both an SNAT entry and a DNAT entry.
-                        /// *   **Idle**: The EIP is not specified in a DNAT or SNAT entry.
+                        /// <b>Example:</b>
+                        /// <para>UsedByForwardTable</para>
                         /// </summary>
                         [NameInMap("UsingStatus")]
                         [Validation(Required=false)]
@@ -209,82 +267,114 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The name of the NAT gateway.
+                /// <para>The name of the NAT gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>abc</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the NAT gateway.
+                /// <para>The ID of the NAT gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ngw-bp1047e2d4z7kf2ki****</para>
                 /// </summary>
                 [NameInMap("NatGatewayId")]
                 [Validation(Required=false)]
                 public string NatGatewayId { get; set; }
 
                 /// <summary>
-                /// The private network information about the enhanced Internet NAT gateway.
-                /// 
-                /// >  If **NatType** is set to **Normal**, all parameters returned in this list are empty.
+                /// <para>The private network information about the enhanced Internet NAT gateway.</para>
+                /// <remarks>
+                /// <para> If <b>NatType</b> is set to <b>Normal</b>, all parameters returned in this list are empty.</para>
+                /// </remarks>
                 /// </summary>
                 [NameInMap("NatGatewayPrivateInfo")]
                 [Validation(Required=false)]
                 public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo NatGatewayPrivateInfo { get; set; }
                 public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo : TeaModel {
                     /// <summary>
-                    /// The ID of the elastic network interface (ENI).
+                    /// <para>The ID of the elastic network interface (ENI).</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>eni-m5eg4ozy5st8q3q4****</para>
                     /// </summary>
                     [NameInMap("EniInstanceId")]
                     [Validation(Required=false)]
                     public string EniInstanceId { get; set; }
 
                     /// <summary>
-                    /// The mode in which the ENI is associated with the NAT gateway.
+                    /// <para>The mode in which the ENI is associated with the NAT gateway.</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>indirect</b>: non-cut-through mode</description></item>
+                    /// <item><description>If an empty value is returned, it indicates that the cut-through mode is used.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **indirect**: non-cut-through mode
-                    /// *   If an empty value is returned, it indicates that the cut-through mode is used.
+                    /// <b>Example:</b>
+                    /// <para>indirect</para>
                     /// </summary>
                     [NameInMap("EniType")]
                     [Validation(Required=false)]
                     public string EniType { get; set; }
 
                     /// <summary>
-                    /// The zone to which the NAT gateway belongs.
+                    /// <para>The zone to which the NAT gateway belongs.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou-b</para>
                     /// </summary>
                     [NameInMap("IzNo")]
                     [Validation(Required=false)]
                     public string IzNo { get; set; }
 
                     /// <summary>
-                    /// The maximum bandwidth. Unit: Mbit/s.
+                    /// <para>The maximum bandwidth. Unit: Mbit/s.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5120</para>
                     /// </summary>
                     [NameInMap("MaxBandwidth")]
                     [Validation(Required=false)]
                     public int? MaxBandwidth { get; set; }
 
                     /// <summary>
-                    /// The number of new connections to the NAT gateway. Unit: connections per second.
+                    /// <para>The number of new connections to the NAT gateway. Unit: connections per second.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100000</para>
                     /// </summary>
                     [NameInMap("MaxSessionEstablishRate")]
                     [Validation(Required=false)]
                     public int? MaxSessionEstablishRate { get; set; }
 
                     /// <summary>
-                    /// The number of concurrent connections to the NAT gateway. Unit: connections.
+                    /// <para>The number of concurrent connections to the NAT gateway. Unit: connections.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2000000</para>
                     /// </summary>
                     [NameInMap("MaxSessionQuota")]
                     [Validation(Required=false)]
                     public int? MaxSessionQuota { get; set; }
 
                     /// <summary>
-                    /// The private IP address.
+                    /// <para>The private IP address.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>192.168.XX.XX</para>
                     /// </summary>
                     [NameInMap("PrivateIpAddress")]
                     [Validation(Required=false)]
                     public string PrivateIpAddress { get; set; }
 
                     /// <summary>
-                    /// The ID of the vSwitch to which the NAT gateway belongs.
+                    /// <para>The ID of the vSwitch to which the NAT gateway belongs.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>vsw-bp1s2laxhdf9ayjbo****</para>
                     /// </summary>
                     [NameInMap("VswitchId")]
                     [Validation(Required=false)]
@@ -293,68 +383,93 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The type of the NAT gateway. The value is set to **Enhanced** (enhanced NAT gateway).
+                /// <para>The type of the NAT gateway. The value is set to <b>Enhanced</b> (enhanced NAT gateway).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Enhanced</para>
                 /// </summary>
                 [NameInMap("NatType")]
                 [Validation(Required=false)]
                 public string NatType { get; set; }
 
                 /// <summary>
-                /// The type of NAT gateway. Valid values:
+                /// <para>The type of NAT gateway. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>internet</b>: an Internet NAT gateway</description></item>
+                /// <item><description><b>intranet</b>: a VPC NAT gateway</description></item>
+                /// </list>
                 /// 
-                /// *   **internet**: an Internet NAT gateway
-                /// *   **intranet**: a VPC NAT gateway
+                /// <b>Example:</b>
+                /// <para>internet</para>
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the NAT gateway supports PrivateLink. Valid values:
+                /// <para>Indicates whether the NAT gateway supports PrivateLink. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: yes</description></item>
+                /// <item><description><b>false</b>: no</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: yes
-                /// *   **false**: no
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("PrivateLinkEnabled")]
                 [Validation(Required=false)]
                 public bool? PrivateLinkEnabled { get; set; }
 
                 /// <summary>
-                /// The mode that is used by PrivateLink. Valid values:
+                /// <para>The mode that is used by PrivateLink. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>FullNat</b>: the FULLNAT mode</description></item>
+                /// <item><description><b>Geneve</b>: the GENEVE mode</description></item>
+                /// </list>
                 /// 
-                /// *   **FullNat**: the FULLNAT mode
-                /// *   **Geneve**: the GENEVE mode
+                /// <b>Example:</b>
+                /// <para>FullNat</para>
                 /// </summary>
                 [NameInMap("PrivateLinkMode")]
                 [Validation(Required=false)]
                 public string PrivateLinkMode { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the NAT gateway is deployed.
+                /// <para>The ID of the region where the NAT gateway is deployed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the contiguous EIP group belongs.
+                /// <para>The ID of the resource group to which the contiguous EIP group belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-bp67acfmxazb4ph****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the firewall feature is enabled. Valid values:
+                /// <para>Indicates whether the firewall feature is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>false</b>: no</description></item>
+                /// <item><description><b>true</b>: yes</description></item>
+                /// </list>
                 /// 
-                /// *   **false**: no
-                /// *   **true**: yes
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("SecurityProtectionEnabled")]
                 [Validation(Required=false)]
                 public bool? SecurityProtectionEnabled { get; set; }
 
                 /// <summary>
-                /// The ID of the SNAT table of the NAT gateway.
+                /// <para>The ID of the SNAT table of the NAT gateway.</para>
                 /// </summary>
                 [NameInMap("SnatTableIds")]
                 [Validation(Required=false)]
@@ -367,29 +482,35 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The size of the NAT gateway. An empty value is returned for the parameter.
+                /// <para>The size of the NAT gateway. An empty value is returned for the parameter.</para>
+                /// <para>If <b>InternetChargeType</b> is set to <b>PayByLcu</b>, an empty value is returned.</para>
                 /// 
-                /// If **InternetChargeType** is set to **PayByLcu**, an empty value is returned.
+                /// <b>Example:</b>
+                /// <para>Small</para>
                 /// </summary>
                 [NameInMap("Spec")]
                 [Validation(Required=false)]
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// The status of the NAT gateway. Valid values:
+                /// <para>The status of the NAT gateway. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Creating</b>: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the Creating state until the operation is completed.</description></item>
+                /// <item><description><b>Available</b>: The NAT gateway remains in a stable state after the NAT gateway is created.</description></item>
+                /// <item><description><b>Modifying</b>: After you send a request to modify a NAT gateway, the system modifies the NAT gateway in the background. The NAT gateway remains in the Modifying state until the operation is completed.</description></item>
+                /// <item><description><b>Deleting</b>: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the Deleting state until the operation is completed.</description></item>
+                /// <item><description><b>Converting</b>: After you send a request to upgrade a standard NAT gateway to an enhanced NAT gateway, the system upgrades the NAT gateway in the background. The NAT gateway remains in the Converting state until the operation is completed.</description></item>
+                /// </list>
                 /// 
-                /// *   **Creating**: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the Creating state until the operation is completed.
-                /// *   **Available**: The NAT gateway remains in a stable state after the NAT gateway is created.
-                /// *   **Modifying**: After you send a request to modify a NAT gateway, the system modifies the NAT gateway in the background. The NAT gateway remains in the Modifying state until the operation is completed.
-                /// *   **Deleting**: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the Deleting state until the operation is completed.
-                /// *   **Converting**: After you send a request to upgrade a standard NAT gateway to an enhanced NAT gateway, the system upgrades the NAT gateway in the background. The NAT gateway remains in the Converting state until the operation is completed.
+                /// <b>Example:</b>
+                /// <para>Creating</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tags that are added to the resource group.
+                /// <para>The tags that are added to the resource group.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -400,14 +521,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag> Tag { get; set; }
                     public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the instance.
+                        /// <para>The tag key of the instance.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>KeyTest</para>
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the instance.
+                        /// <para>The tag value of the instance.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>valueTest</para>
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -418,7 +545,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the VPC where the NAT gateway is deployed.
+                /// <para>The ID of the VPC where the NAT gateway is deployed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp15zckdt37pq72z****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -429,28 +559,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of NAT gateway entries that are returned.
+        /// <para>The number of NAT gateway entries that are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

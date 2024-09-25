@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeHighDefinitionMonitorLogAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance whose fine-grained monitoring configurations you want to query.
+        /// <para>The ID of the instance whose fine-grained monitoring configurations you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>eip-wz9fi6qboho9fwgx7****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The type of the instance. Set the value to **EIP**.
+        /// <para>The type of the instance. Set the value to <b>EIP</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EIP</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -34,11 +39,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

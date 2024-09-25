@@ -10,20 +10,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnGatewaysRequest : TeaModel {
         /// <summary>
-        /// The payment status of the VPN gateway. Valid values:
+        /// <para>The payment status of the VPN gateway. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Normal</b></description></item>
+        /// <item><description><b>FinancialLocked</b></description></item>
+        /// </list>
         /// 
-        /// *   **Normal**
-        /// *   **FinancialLocked**
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("BusinessStatus")]
         [Validation(Required=false)]
         public string BusinessStatus { get; set; }
 
         /// <summary>
-        /// Specifies whether to return information about pending orders. Valid values:
+        /// <para>Specifies whether to return information about pending orders. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// </list>
         /// 
-        /// *   **false** (default)
-        /// *   **true**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IncludeReservationData")]
         [Validation(Required=false)]
@@ -38,34 +46,43 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: **1** to **50**. Default value: **10**.
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the VPN gateway.
+        /// <para>The region ID of the VPN gateway.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-zhangjiakou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the VPN gateway belongs.
+        /// <para>The ID of the resource group to which the VPN gateway belongs.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group list.</para>
         /// 
-        ///  You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group list.
+        /// <b>Example:</b>
+        /// <para>rg-acfmzs372yg****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -80,46 +97,50 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the VPN gateway. Valid values:
+        /// <para>The status of the VPN gateway. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>init</b></description></item>
+        /// <item><description><b>provisioning</b></description></item>
+        /// <item><description><b>active</b></description></item>
+        /// <item><description><b>updating</b></description></item>
+        /// <item><description><b>deleting</b></description></item>
+        /// </list>
         /// 
-        /// *   **init**
-        /// *   **provisioning**
-        /// *   **active**
-        /// *   **updating**
-        /// *   **deleting**
+        /// <b>Example:</b>
+        /// <para>active</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The value of tag N to add to the resource.
-        /// 
-        /// The value of this parameter can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
-        /// 
-        /// Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
+        /// <para>The value of tag N to add to the resource.</para>
+        /// <para>The value of this parameter can be an empty string and cannot exceed 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+        /// <para>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeVpnGatewaysRequestTag> Tag { get; set; }
         public class DescribeVpnGatewaysRequestTag : TeaModel {
             /// <summary>
-            /// The tag key. The tag key cannot be an empty string.
+            /// <para>The tag key. The tag key cannot be an empty string.</para>
+            /// <para>It can be at most 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>You can specify at most 20 tag keys in each call.</para>
             /// 
-            /// It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-            /// 
-            /// You can specify at most 20 tag keys in each call.
+            /// <b>Example:</b>
+            /// <para>FinanceDept</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// <para>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</para>
             /// 
-            /// The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
-            /// 
-            /// Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
+            /// <b>Example:</b>
+            /// <para>FinanceJoshua</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -128,14 +149,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) to which the VPN gateway belongs.
+        /// <para>The ID of the virtual private cloud (VPC) to which the VPN gateway belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1m3i0kn1nd4wiw9****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The ID of the VPN gateway.
+        /// <para>The ID of the VPN gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpn-bp17lofy9fd0dnvzv****</para>
         /// </summary>
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]

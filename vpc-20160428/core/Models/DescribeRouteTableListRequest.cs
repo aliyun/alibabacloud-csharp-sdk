@@ -18,35 +18,46 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+        /// <para>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+        /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The type of the route table.
+        /// <para>The type of the route table.</para>
+        /// <list type="bullet">
+        /// <item><description><b>System</b></description></item>
+        /// <item><description><b>Custom</b></description></item>
+        /// </list>
         /// 
-        /// *   **System**
-        /// *   **Custom**
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ap-southeast-6</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The details of the route table.
+        /// <para>The details of the route table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxazb4ph****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -61,60 +72,79 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vtb-bp145q7glnuzdvzu2****</para>
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+        /// <para>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+        /// <para>The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>doctest</para>
         /// </summary>
         [NameInMap("RouteTableName")]
         [Validation(Required=false)]
         public string RouteTableName { get; set; }
 
         /// <summary>
-        /// The time when the route table was created.
+        /// <para>The time when the route table was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>System</para>
         /// </summary>
         [NameInMap("RouteTableType")]
         [Validation(Required=false)]
         public string RouteTableType { get; set; }
 
         /// <summary>
-        /// The region ID of the VPC to which the route table belongs.
+        /// <para>The region ID of the VPC to which the route table belongs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>vrt-bp1lhl0taikrteen8****</para>
         /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]
         public string RouterId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the route table to be queried belongs.
+        /// <para>The ID of the resource group to which the route table to be queried belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VRouter</para>
         /// </summary>
         [NameInMap("RouterType")]
         [Validation(Required=false)]
         public string RouterType { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeRouteTableListRequestTag> Tag { get; set; }
         public class DescribeRouteTableListRequestTag : TeaModel {
             /// <summary>
-            /// The detailed information about the route tables.
+            /// <para>The detailed information about the route tables.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>FinanceDept</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The ID of the VPC to which the route table belongs.
+            /// <para>The ID of the VPC to which the route table belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>FinanceJoshua</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -123,7 +153,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The tags of the resource.
+        /// <para>The tags of the resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp15zckdt37pq72****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

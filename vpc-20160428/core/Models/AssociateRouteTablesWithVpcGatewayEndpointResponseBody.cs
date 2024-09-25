@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateRouteTablesWithVpcGatewayEndpointResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>59BDDA2D-FB52-59F9-9DC5-5EA7D6808B8E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

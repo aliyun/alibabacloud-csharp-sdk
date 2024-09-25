@@ -10,20 +10,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyCommonBandwidthPackageSpecRequest : TeaModel {
         /// <summary>
-        /// The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.
+        /// <para>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</para>
+        /// <para>Valid values: <b>1</b> to <b>1000</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid values: **1** to **1000**.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public string Bandwidth { get; set; }
 
         /// <summary>
-        /// The ID of the Internet Shared Bandwidth instance.
+        /// <para>The ID of the Internet Shared Bandwidth instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cbwp-2ze2ic1xd2qeqk145****</para>
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
@@ -38,11 +41,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the Internet Shared Bandwidth instance.
+        /// <para>The region ID of the Internet Shared Bandwidth instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

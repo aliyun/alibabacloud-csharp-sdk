@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateVpcCidrBlockRequest : TeaModel {
         /// <summary>
-        /// The secondary IPv6 CIDR block to be deleted.
+        /// <para>The secondary IPv6 CIDR block to be deleted.</para>
+        /// <remarks>
+        /// <para> You must set one of the <b>Ipv6CidrBlock</b> and <b>SecondaryCidrBlock</b> parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must set one of the **Ipv6CidrBlock** and **SecondaryCidrBlock** parameters.
+        /// <b>Example:</b>
+        /// <para>2408:XXXX:0:6a::/56</para>
         /// </summary>
         [NameInMap("IPv6CidrBlock")]
         [Validation(Required=false)]
@@ -27,11 +31,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the VPC to which the secondary CIDR block to be deleted belongs.
+        /// <para>The region ID of the VPC to which the secondary CIDR block to be deleted belongs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ch-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -46,18 +51,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The secondary IPv4 CIDR block to be deleted.
+        /// <para>The secondary IPv4 CIDR block to be deleted.</para>
+        /// <remarks>
+        /// <para> You must set one of the <b>SecondaryCidrBlock</b> and <b>Ipv6CidrBlock</b> parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must set one of the **SecondaryCidrBlock** and **Ipv6CidrBlock** parameters.
+        /// <b>Example:</b>
+        /// <para>192.168.0.0/16</para>
         /// </summary>
         [NameInMap("SecondaryCidrBlock")]
         [Validation(Required=false)]
         public string SecondaryCidrBlock { get; set; }
 
         /// <summary>
-        /// The ID of the VPC from which you want to delete a secondary CIDR block.
+        /// <para>The ID of the VPC from which you want to delete a secondary CIDR block.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-o6wrloqsdqc9io3mg****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

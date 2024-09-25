@@ -10,57 +10,72 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateFailoverTestJobRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-        /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the failover test.
+        /// <para>The description of the failover test.</para>
+        /// <para>The description must be 0 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// If you set the value to true, the system performs only a dry run without actually performing the actual request. If you set the value to false, the system performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// <para>If you set the value to true, the system performs only a dry run without actually performing the actual request. If you set the value to false, the system performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The duration of the failover test. Unit: minutes. Valid values: **1 to 4320**.
+        /// <para>The duration of the failover test. Unit: minutes. Valid values: <b>1 to 4320</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("JobDuration")]
         [Validation(Required=false)]
         public int? JobDuration { get; set; }
 
         /// <summary>
-        /// The type of the failover test. Valid values:
+        /// <para>The type of the failover test. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>StartNow</b></description></item>
+        /// <item><description><b>StartLater</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **StartNow**
-        /// *   **StartLater**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>StartNow</para>
         /// </summary>
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }
 
         /// <summary>
-        /// The name of the failover test.
+        /// <para>The name of the failover test.</para>
+        /// <para>The name must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The name must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -75,18 +90,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the failover test.
+        /// <para>The region ID of the failover test.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of failover test resources. You can add at most 16 resources.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of failover test resources. You can add at most 16 resources.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -97,9 +113,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The resource type of the failover test. Set the value to **PHYSICALCONNECTION**.
+        /// <para>The resource type of the failover test. Set the value to <b>PHYSICALCONNECTION</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PHYSICALCONNECTION</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

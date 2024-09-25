@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteRouteEntryRequest : TeaModel {
         /// <summary>
-        /// The destination CIDR block of the route. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.
+        /// <para>The destination CIDR block of the route. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>47.100.XX.XX/16</para>
         /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// The ID of the next hop.
+        /// <para>The ID of the next hop.</para>
+        /// <list type="bullet">
+        /// <item><description>To delete a route other than an equal-cost multi-path (ECMP) route, set the <b>NextHopId</b> parameter and ignore the <b>NextHopList</b> parameter.</description></item>
+        /// <item><description>To delete an ECMP route, set the <b>NextHopList</b> parameter and ignore the <b>NextHopId</b> parameter.</description></item>
+        /// </list>
         /// 
-        /// *   To delete a route other than an equal-cost multi-path (ECMP) route, set the **NextHopId** parameter and ignore the **NextHopList** parameter.
-        /// *   To delete an ECMP route, set the **NextHopList** parameter and ignore the **NextHopId** parameter.
+        /// <b>Example:</b>
+        /// <para>ri-2zeo3xzyf38r4urzd****</para>
         /// </summary>
         [NameInMap("NextHopId")]
         [Validation(Required=false)]
         public string NextHopId { get; set; }
 
         /// <summary>
-        /// The list of the next hop of the ECMP route.
+        /// <para>The list of the next hop of the ECMP route.</para>
         /// </summary>
         [NameInMap("NextHopList")]
         [Validation(Required=false)]
         public List<DeleteRouteEntryRequestNextHopList> NextHopList { get; set; }
         public class DeleteRouteEntryRequestNextHopList : TeaModel {
             /// <summary>
-            /// The ID of the next hop that is configured for ECMP routing. You can specify information about at most 16 next hops.
+            /// <para>The ID of the next hop that is configured for ECMP routing. You can specify information about at most 16 next hops.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ri-2zeo3xzyf38r43cd****</para>
             /// </summary>
             [NameInMap("NextHopId")]
             [Validation(Required=false)]
             public string NextHopId { get; set; }
 
             /// <summary>
-            /// The type of the next hop that is configured for ECMP routing. Set the value to **RouterInterface**. You can specify information about at most 16 next hops.
+            /// <para>The type of the next hop that is configured for ECMP routing. Set the value to <b>RouterInterface</b>. You can specify information about at most 16 next hops.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>RouterInterface</para>
             /// </summary>
             [NameInMap("NextHopType")]
             [Validation(Required=false)]
@@ -58,9 +71,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the route table.
+        /// <para>The region ID of the route table.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -75,14 +90,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the route that you want to delete.
+        /// <para>The ID of the route that you want to delete.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rte-bp1mnnr2al0naomnpv****</para>
         /// </summary>
         [NameInMap("RouteEntryId")]
         [Validation(Required=false)]
         public string RouteEntryId { get; set; }
 
         /// <summary>
-        /// The ID of the route table to which the route belongs.
+        /// <para>The ID of the route table to which the route belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vtb-2ze3jgygk9bmsj23s****</para>
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]

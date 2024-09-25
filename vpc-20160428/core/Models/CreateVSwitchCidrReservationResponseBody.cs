@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVSwitchCidrReservationResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54B48E3D-DF70-471B-AA93-08E683A1B45</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the reserved CIDR block.
+        /// <para>The ID of the reserved CIDR block.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vcr-bp1m12saqteraw3rp****</para>
         /// </summary>
         [NameInMap("VSwitchCidrReservationId")]
         [Validation(Required=false)]

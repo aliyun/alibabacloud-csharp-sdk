@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifySslVpnClientCertResponseBody : TeaModel {
         /// <summary>
-        /// The name of the SSL client certificate.
+        /// <para>The name of the SSL client certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cert2</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>606998F0-B94D-48FE-8316-ACA81BB230DA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the SSL client certificate.
+        /// <para>The ID of the SSL client certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsc-bp1n8wcf134yl0osr****</para>
         /// </summary>
         [NameInMap("SslVpnClientCertId")]
         [Validation(Required=false)]

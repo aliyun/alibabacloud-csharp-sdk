@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnServersRequest : TeaModel {
         /// <summary>
-        /// The SSL server name.
+        /// <para>The SSL server name.</para>
+        /// <para>The name must be 1 to 100 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -27,36 +29,44 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
+        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the SSL server.
+        /// <para>The region ID of the SSL server.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the SSL server belongs.
+        /// <para>The ID of the resource group to which the SSL server belongs.</para>
+        /// <para>The SSL server has the same resource group as its associated VPN gateway instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the ID of the resource group to which the VPN gateway instance belongs.</para>
         /// 
-        /// The SSL server has the same resource group as its associated VPN gateway instance.
-        /// 
-        /// You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/2526915.html) operation to query the ID of the resource group to which the VPN gateway instance belongs.
+        /// <b>Example:</b>
+        /// <para>rg-acfmzs372yg****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -71,14 +81,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the SSL server.
+        /// <para>The ID of the SSL server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vss-bp15j3du13gq1dgey****</para>
         /// </summary>
         [NameInMap("SslVpnServerId")]
         [Validation(Required=false)]
         public string SslVpnServerId { get; set; }
 
         /// <summary>
-        /// The ID of the VPN gateway.
+        /// <para>The ID of the VPN gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpn-bp1on0xae9d771ggi****</para>
         /// </summary>
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]

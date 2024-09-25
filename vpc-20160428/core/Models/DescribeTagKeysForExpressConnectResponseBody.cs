@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeTagKeysForExpressConnectResponseBody : TeaModel {
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
+        /// <item><description>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</description></item>
+        /// </list>
         /// 
-        /// *   If **NextToken** is empty, no next page exists.
-        /// *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54B48E3D-DF70-471B-AA93-08E683A1B45</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tag keys.
+        /// <para>The tag keys.</para>
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
@@ -38,14 +45,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeTagKeysForExpressConnectResponseBodyTagKeysTagKey> TagKey { get; set; }
             public class DescribeTagKeysForExpressConnectResponseBodyTagKeysTagKey : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// <para>The key of the tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FinanceDept</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The type of the resource. The value is set to **PHYSICALCONNECTION**, which indicates an Express Connect circuit.
+                /// <para>The type of the resource. The value is set to <b>PHYSICALCONNECTION</b>, which indicates an Express Connect circuit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PHYSICALCONNECTION</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateFullNatEntryResponseBody : TeaModel {
         /// <summary>
-        /// The FULLNAT entry ID.
+        /// <para>The FULLNAT entry ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fullnat-gw8fz23jezpbblf1j****</para>
         /// </summary>
         [NameInMap("FullNatEntryId")]
         [Validation(Required=false)]
         public string FullNatEntryId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2315DEB7-5E92-423A-91F7-4C1EC9AD97C3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetIpv4GatewayAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the IPv4 gateway.
+        /// <para>The ID of the IPv4 gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ipv4gw-5tsnc6s4ogsedtp3k****</para>
         /// </summary>
         [NameInMap("Ipv4GatewayId")]
         [Validation(Required=false)]
@@ -27,11 +29,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the IPv4 gateway.
+        /// <para>The region ID of the IPv4 gateway.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ap-southeast-6</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

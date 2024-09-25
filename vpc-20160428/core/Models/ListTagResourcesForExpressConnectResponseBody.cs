@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListTagResourcesForExpressConnectResponseBody : TeaModel {
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
+        /// <item><description>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</description></item>
+        /// </list>
         /// 
-        /// *   If **NextToken** is empty, no next page exists.
-        /// *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54B48E3D-DF70-471B-AA93-08E683A1B45</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tags that are added to the resource.
+        /// <para>The tags that are added to the resource.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -38,32 +45,45 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<ListTagResourcesForExpressConnectResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesForExpressConnectResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
-                /// The resource ID.
+                /// <para>The resource ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pc-bp16qjewdsunr41m1****</para>
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource. Valid values:
+                /// <para>The type of the resource. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>PHYSICALCONNECTION</b>: Express Connect circuit.</description></item>
+                /// <item><description><b>VIRTUALBORDERROUTER</b>: VBR.</description></item>
+                /// <item><description><b>ROUTERINTERFACE</b>: router interface.</description></item>
+                /// </list>
                 /// 
-                /// *   **PHYSICALCONNECTION**: Express Connect circuit.
-                /// *   **VIRTUALBORDERROUTER**: VBR.
-                /// *   **ROUTERINTERFACE**: router interface.
+                /// <b>Example:</b>
+                /// <para>PHYSICALCONNECTION</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The key of the tag that is added to the resource.
+                /// <para>The key of the tag that is added to the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FinanceDept</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The value of the tag that is added to the resource.
+                /// <para>The value of the tag that is added to the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FinanceJoshua</para>
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

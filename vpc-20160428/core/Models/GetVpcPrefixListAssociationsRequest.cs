@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVpcPrefixListAssociationsRequest : TeaModel {
         /// <summary>
-        /// The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
+        /// <item><description>If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</description></item>
+        /// </list>
         /// 
-        /// *   You do not need to specify this parameter for the first request.
-        /// *   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -35,20 +42,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the prefix list that you want to query.
+        /// <para>The ID of the prefix list that you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pl-0b7hwu67****</para>
         /// </summary>
         [NameInMap("PrefixListId")]
         [Validation(Required=false)]
         public string PrefixListId { get; set; }
 
         /// <summary>
-        /// The region ID of the prefix list.
+        /// <para>The region ID of the prefix list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

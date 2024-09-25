@@ -10,63 +10,85 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CompletePhysicalConnectionLOARequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests.</para>
+        /// <remarks>
+        /// <para> If you do not set this parameter, the system automatically uses <b>RequestId</b> as <b>ClientToken</b>. <b>RequestId</b> of each API request may be different.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among different requests.
-        /// 
-        /// >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
+        /// <b>Example:</b>
+        /// <para>02fb3da4-230e-11e9-8e44-0016e04115b</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether the construction is completed. Valid values:
+        /// <para>Specifies whether the construction is completed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("FinishWork")]
         [Validation(Required=false)]
         public bool? FinishWork { get; set; }
 
         /// <summary>
-        /// The ID of the Express Connect circuit.
+        /// <para>The ID of the Express Connect circuit.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-bp10tvlhnwkw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The circuit code provided by the connectivity provider.
+        /// <para>The circuit code provided by the connectivity provider.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aaa111****</para>
         /// </summary>
         [NameInMap("LineCode")]
         [Validation(Required=false)]
         public string LineCode { get; set; }
 
         /// <summary>
-        /// The label of the cable in the data center.
+        /// <para>The label of the cable in the data center.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bbb222****</para>
         /// </summary>
         [NameInMap("LineLabel")]
         [Validation(Required=false)]
         public string LineLabel { get; set; }
 
         /// <summary>
-        /// The contact information about line O\\&M.
+        /// <para>The contact information about line O\&amp;M.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1388888****</para>
         /// </summary>
         [NameInMap("LineSPContactInfo")]
         [Validation(Required=false)]
         public string LineSPContactInfo { get; set; }
 
         /// <summary>
-        /// The ISP. Valid values:
+        /// <para>The ISP. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>China Telecom</b></description></item>
+        /// <item><description><b>China Unicom</b></description></item>
+        /// <item><description><b>China Mobile</b></description></item>
+        /// <item><description><b>Other ISPs in China</b></description></item>
+        /// </list>
         /// 
-        /// *   **China Telecom**
-        /// *   **China Unicom**
-        /// *   **China Mobile**
-        /// *   **Other ISPs in China**
+        /// <b>Example:</b>
+        /// <para>Other ISPs in China</para>
         /// </summary>
         [NameInMap("LineServiceProvider")]
         [Validation(Required=false)]
@@ -81,11 +103,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the Express Connect circuit.
+        /// <para>The region ID of the Express Connect circuit.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

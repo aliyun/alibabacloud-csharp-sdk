@@ -10,23 +10,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyIpv6InternetBandwidthRequest : TeaModel {
         /// <summary>
-        /// The Internet bandwidth value of the IPv6 address. Unit: Mbit/s.
+        /// <para>The Internet bandwidth value of the IPv6 address. Unit: Mbit/s.</para>
+        /// <list type="bullet">
+        /// <item><description>If the billing method is pay-by-data-transfer, valid values are <b>1</b> to <b>1000</b>.</description></item>
+        /// <item><description>If the billing method is pay-by-bandwidth, valid values are <b>1</b> to <b>2000</b>.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If the billing method is pay-by-data-transfer, valid values are **1** to **1000**.
-        /// *   If the billing method is pay-by-bandwidth, valid values are **1** to **2000**.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public long? Bandwidth { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -37,16 +43,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of the IPv6 address.
+        /// <para>The ID of the IPv6 address.</para>
+        /// <remarks>
+        /// <para> You must specify one of <b>Ipv6AddressId</b> and <b>Ipv6InternetBandwidthId</b>.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.
+        /// <b>Example:</b>
+        /// <para>ipv6-2zen5j4axcp5l5qyy****</para>
         /// </summary>
         [NameInMap("Ipv6AddressId")]
         [Validation(Required=false)]
         public string Ipv6AddressId { get; set; }
 
         /// <summary>
-        /// The instance ID of the Internet bandwidth of the IPv6 address.
+        /// <para>The instance ID of the Internet bandwidth of the IPv6 address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipv6bw-uf6hcyzu65v98v3du****</para>
         /// </summary>
         [NameInMap("Ipv6InternetBandwidthId")]
         [Validation(Required=false)]
@@ -61,9 +74,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <para>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-huhehaote</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

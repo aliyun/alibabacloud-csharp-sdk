@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteCommonBandwidthPackageRequest : TeaModel {
         /// <summary>
-        /// The ID of the Internet Shared Bandwidth instance.
+        /// <para>The ID of the Internet Shared Bandwidth instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cbwp-2ze2ic1xd2qeqk145pn4u</para>
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// Specifies whether to forcefully delete the Internet Shared Bandwidth instance. Valid values:
+        /// <para>Specifies whether to forcefully delete the Internet Shared Bandwidth instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default): deletes the Internet Shared Bandwidth instance only when no EIPs are associated with the Internet Shared Bandwidth instance.</description></item>
+        /// <item><description><b>true</b>: disassociates all EIPs from the Internet Shared Bandwidth instance and deletes the Internet Shared Bandwidth instance.</description></item>
+        /// </list>
         /// 
-        /// *   **false** (default): deletes the Internet Shared Bandwidth instance only when no EIPs are associated with the Internet Shared Bandwidth instance.
-        /// *   **true**: disassociates all EIPs from the Internet Shared Bandwidth instance and deletes the Internet Shared Bandwidth instance.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
@@ -37,11 +43,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Internet Shared Bandwidth instance is created.
+        /// <para>The ID of the region where the Internet Shared Bandwidth instance is created.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

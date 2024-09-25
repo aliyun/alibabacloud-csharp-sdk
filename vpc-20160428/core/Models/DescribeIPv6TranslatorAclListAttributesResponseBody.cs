@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIPv6TranslatorAclListAttributesResponseBody : TeaModel {
         /// <summary>
-        /// The ACLs.
+        /// <para>The ACLs.</para>
         /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntriesAclEntry> AclEntry { get; set; }
             public class DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntriesAclEntry : TeaModel {
                 /// <summary>
-                /// The remarks of the ACL entry.
+                /// <para>The remarks of the ACL entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>client IP</para>
                 /// </summary>
                 [NameInMap("AclEntryComment")]
                 [Validation(Required=false)]
                 public string AclEntryComment { get; set; }
 
                 /// <summary>
-                /// The ID of the ACL entry.
+                /// <para>The ID of the ACL entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ipv6transaclentry-bp105jrs****</para>
                 /// </summary>
                 [NameInMap("AclEntryId")]
                 [Validation(Required=false)]
                 public string AclEntryId { get; set; }
 
                 /// <summary>
-                /// The IP address specified in the ACL entry.
+                /// <para>The IP address specified in the ACL entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12ab:0:0:XXXX::0102/128</para>
                 /// </summary>
                 [NameInMap("AclEntryIp")]
                 [Validation(Required=false)]
@@ -46,42 +55,60 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ACL ID.
+        /// <para>The ACL ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipv6transacl-bp1de2****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
         /// <summary>
-        /// The name of the ACL.
+        /// <para>The name of the ACL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acl1</para>
         /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]
         public string AclName { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54B48E3D-DF70-471B-AA93-08E683A1B45</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

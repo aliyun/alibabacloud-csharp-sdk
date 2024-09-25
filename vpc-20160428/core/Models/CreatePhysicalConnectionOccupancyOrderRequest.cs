@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePhysicalConnectionOccupancyOrderRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payments. Valid values:
+        /// <para>Specifies whether to enable automatic payments. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is automatically canceled.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment. This is the default value.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is automatically canceled.
-        /// *   **false**: disables automatic payment. This is the default value.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+        /// <b>Example:</b>
+        /// <para>CBCE910E-D396-4944</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The billing method. Set the value to
+        /// <para>The billing method. Set the value to</para>
+        /// <para><b>PrePaid</b>, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</para>
         /// 
-        /// **PrePaid**, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.
+        /// <b>Example:</b>
+        /// <para>PrePaid</para>
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -46,40 +54,51 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The subscription duration.
+        /// <para>The subscription duration.</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>PricingCycle</b> is set to <b>Month</b>, set <b>Period</b> to a value from <b>1 to 9</b>.</description></item>
+        /// <item><description>If <b>PricingCycle</b> is set to <b>Year</b>, set <b>Period</b> to a value from <b>1 to 5</b>.</description></item>
+        /// </list>
         /// 
-        /// *   If **PricingCycle** is set to **Month**, set **Period** to a value from **1 to 9**.
-        /// *   If **PricingCycle** is set to **Year**, set **Period** to a value from **1 to 5**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The ID of the Express Connect circuit.
+        /// <para>The ID of the Express Connect circuit.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-bp1hp0wr072f6****</para>
         /// </summary>
         [NameInMap("PhysicalConnectionId")]
         [Validation(Required=false)]
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// The billing cycle of the subscription. Valid values:
+        /// <para>The billing cycle of the subscription. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Month</b> (default)</description></item>
+        /// <item><description><b>Year</b></description></item>
+        /// </list>
         /// 
-        /// *   **Month** (default)
-        /// *   **Year**
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// The region ID of the Express Connect circuit.
+        /// <para>The region ID of the Express Connect circuit.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

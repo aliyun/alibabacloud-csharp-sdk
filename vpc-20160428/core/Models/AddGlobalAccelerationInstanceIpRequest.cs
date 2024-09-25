@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AddGlobalAccelerationInstanceIpRequest : TeaModel {
         /// <summary>
-        /// The ID of the shared-bandwidth GA instance.
+        /// <para>The ID of the shared-bandwidth GA instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ga-Ldefrgbttnyyf****</para>
         /// </summary>
         [NameInMap("GlobalAccelerationInstanceId")]
         [Validation(Required=false)]
         public string GlobalAccelerationInstanceId { get; set; }
 
         /// <summary>
-        /// The EIP ID. You can call the [DescribeEipAddresses](https://help.aliyun.com/document_detail/36018.html) operation to query EIP IDs.
+        /// <para>The EIP ID. You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> operation to query EIP IDs.</para>
+        /// <remarks>
+        /// <para> Make sure that the billing method of the EIP is pay-as-you-go, and the EIP and the shared-bandwidth GA instance belong to the same region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  Make sure that the billing method of the EIP is pay-as-you-go, and the EIP and the shared-bandwidth GA instance belong to the same region.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>eip-rw434rwfdeaf****</para>
         /// </summary>
         [NameInMap("IpInstanceId")]
         [Validation(Required=false)]
@@ -38,11 +43,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region of the shared-bandwidth GA instance.
+        /// <para>The region of the shared-bandwidth GA instance.</para>
+        /// <para>You can call the <b>DescribeRegions</b> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the **DescribeRegions** operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

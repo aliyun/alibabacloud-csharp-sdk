@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the value of <b>NextToken</b> is not returned, it indicates that no next query is to be sent.</description></item>
+        /// <item><description>If a value of <b>NextToken</b> is returned, the value is the token that is used for the subsequent query.</description></item>
+        /// </list>
         /// 
-        /// *   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.
-        /// *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DE65F6B7-7566-4802-9007-96F2494AC512</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of tag keys.
+        /// <para>The list of tag keys.</para>
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
@@ -38,17 +45,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeTagKeysResponseBodyTagKeysTagKey> TagKey { get; set; }
             public class DescribeTagKeysResponseBodyTagKeysTagKey : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FinanceDept</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The type of the tag key. Valid values:
+                /// <para>The type of the tag key. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Custom</b>: custom</description></item>
+                /// <item><description><b>System</b>: system</description></item>
+                /// </list>
                 /// 
-                /// *   **Custom**: custom
-                /// *   **System**: system
+                /// <b>Example:</b>
+                /// <para>Custom</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

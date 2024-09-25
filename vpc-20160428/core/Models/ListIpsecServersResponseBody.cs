@@ -10,105 +10,140 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListIpsecServersResponseBody : TeaModel {
         /// <summary>
-        /// The list of IPsec servers.
+        /// <para>The list of IPsec servers.</para>
         /// </summary>
         [NameInMap("IpsecServers")]
         [Validation(Required=false)]
         public List<ListIpsecServersResponseBodyIpsecServers> IpsecServers { get; set; }
         public class ListIpsecServersResponseBodyIpsecServers : TeaModel {
             /// <summary>
-            /// The client CIDR block. It refers to the CIDR block that is allocated to the virtual interface of the client.
+            /// <para>The client CIDR block. It refers to the CIDR block that is allocated to the virtual interface of the client.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.0.0.0/24</para>
             /// </summary>
             [NameInMap("ClientIpPool")]
             [Validation(Required=false)]
             public string ClientIpPool { get; set; }
 
             /// <summary>
-            /// The time when the IPsec server was created.
+            /// <para>The time when the IPsec server was created.</para>
+            /// <para>T is used as a delimiter. Z indicates that the time is in UTC.</para>
             /// 
-            /// T is used as a delimiter. Z indicates that the time is in UTC.
+            /// <b>Example:</b>
+            /// <para>2018-12-03T10:11:55Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// Indicates whether the current IPsec tunnel is deleted and negotiations are reinitiated. Valid values:
+            /// <para>Indicates whether the current IPsec tunnel is deleted and negotiations are reinitiated. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: immediately initiates negotiations after the configuration is completed.</description></item>
+            /// <item><description><b>false</b>: initiates negotiations when inbound traffic is detected.</description></item>
+            /// </list>
             /// 
-            /// *   **true**: immediately initiates negotiations after the configuration is completed.
-            /// *   **false**: initiates negotiations when inbound traffic is detected.
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("EffectImmediately")]
             [Validation(Required=false)]
             public bool? EffectImmediately { get; set; }
 
             /// <summary>
-            /// The ID of the IDaaS instance.
+            /// <para>The ID of the IDaaS instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>idaas-cn-hangzhou-****</para>
             /// </summary>
             [NameInMap("IDaaSInstanceId")]
             [Validation(Required=false)]
             public string IDaaSInstanceId { get; set; }
 
             /// <summary>
-            /// The configurations of Phase 1 negotiations.
+            /// <para>The configurations of Phase 1 negotiations.</para>
             /// </summary>
             [NameInMap("IkeConfig")]
             [Validation(Required=false)]
             public ListIpsecServersResponseBodyIpsecServersIkeConfig IkeConfig { get; set; }
             public class ListIpsecServersResponseBodyIpsecServersIkeConfig : TeaModel {
                 /// <summary>
-                /// The IKE authentication algorithm.
+                /// <para>The IKE authentication algorithm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sha1</para>
                 /// </summary>
                 [NameInMap("IkeAuthAlg")]
                 [Validation(Required=false)]
                 public string IkeAuthAlg { get; set; }
 
                 /// <summary>
-                /// The IKE encryption algorithm.
+                /// <para>The IKE encryption algorithm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aes</para>
                 /// </summary>
                 [NameInMap("IkeEncAlg")]
                 [Validation(Required=false)]
                 public string IkeEncAlg { get; set; }
 
                 /// <summary>
-                /// The IKE lifetime. Unit: seconds.
+                /// <para>The IKE lifetime. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>86400</para>
                 /// </summary>
                 [NameInMap("IkeLifetime")]
                 [Validation(Required=false)]
                 public long? IkeLifetime { get; set; }
 
                 /// <summary>
-                /// The IKE negotiation mode. Valid values:
+                /// <para>The IKE negotiation mode. Valid values:</para>
+                /// <para><b>main</b>: This mode offers higher security during negotiations.</para>
                 /// 
-                /// **main**: This mode offers higher security during negotiations.
+                /// <b>Example:</b>
+                /// <para>main</para>
                 /// </summary>
                 [NameInMap("IkeMode")]
                 [Validation(Required=false)]
                 public string IkeMode { get; set; }
 
                 /// <summary>
-                /// The Diffie-Hellman key exchange algorithm.
+                /// <para>The Diffie-Hellman key exchange algorithm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>group2</para>
                 /// </summary>
                 [NameInMap("IkePfs")]
                 [Validation(Required=false)]
                 public string IkePfs { get; set; }
 
                 /// <summary>
-                /// The IKE version.
+                /// <para>The IKE version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ikev2</para>
                 /// </summary>
                 [NameInMap("IkeVersion")]
                 [Validation(Required=false)]
                 public string IkeVersion { get; set; }
 
                 /// <summary>
-                /// The ID of the IPsec server. The default value is the public IP address of the VPN gateway. Both FQDNs and IP addresses are supported.
+                /// <para>The ID of the IPsec server. The default value is the public IP address of the VPN gateway. Both FQDNs and IP addresses are supported.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>116.64.XX.XX</para>
                 /// </summary>
                 [NameInMap("LocalId")]
                 [Validation(Required=false)]
                 public string LocalId { get; set; }
 
                 /// <summary>
-                /// The identifier of the customer gateway. Both fully qualified domain names (FQDNs) and IP addresses are supported. By default, this parameter is empty.
+                /// <para>The identifier of the customer gateway. Both fully qualified domain names (FQDNs) and IP addresses are supported. By default, this parameter is empty.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>139.67.XX.XX</para>
                 /// </summary>
                 [NameInMap("RemoteId")]
                 [Validation(Required=false)]
@@ -117,42 +152,57 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The public IP address of the VPN gateway.
+            /// <para>The public IP address of the VPN gateway.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>47.22.XX.XX</para>
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// The configurations of Phase 2 negotiations.
+            /// <para>The configurations of Phase 2 negotiations.</para>
             /// </summary>
             [NameInMap("IpsecConfig")]
             [Validation(Required=false)]
             public ListIpsecServersResponseBodyIpsecServersIpsecConfig IpsecConfig { get; set; }
             public class ListIpsecServersResponseBodyIpsecServersIpsecConfig : TeaModel {
                 /// <summary>
-                /// The IPsec authentication algorithm.
+                /// <para>The IPsec authentication algorithm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sha1</para>
                 /// </summary>
                 [NameInMap("IpsecAuthAlg")]
                 [Validation(Required=false)]
                 public string IpsecAuthAlg { get; set; }
 
                 /// <summary>
-                /// The IPsec encryption algorithm.
+                /// <para>The IPsec encryption algorithm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aes</para>
                 /// </summary>
                 [NameInMap("IpsecEncAlg")]
                 [Validation(Required=false)]
                 public string IpsecEncAlg { get; set; }
 
                 /// <summary>
-                /// The IPsec lifetime. Unit: seconds.
+                /// <para>The IPsec lifetime. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>86400</para>
                 /// </summary>
                 [NameInMap("IpsecLifetime")]
                 [Validation(Required=false)]
                 public long? IpsecLifetime { get; set; }
 
                 /// <summary>
-                /// The Diffie-Hellman key exchange algorithm.
+                /// <para>The Diffie-Hellman key exchange algorithm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>group2</para>
                 /// </summary>
                 [NameInMap("IpsecPfs")]
                 [Validation(Required=false)]
@@ -161,84 +211,118 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The IPsec server ID.
+            /// <para>The IPsec server ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>iss-bp1bo3xuvcxo7ixll****</para>
             /// </summary>
             [NameInMap("IpsecServerId")]
             [Validation(Required=false)]
             public string IpsecServerId { get; set; }
 
             /// <summary>
-            /// The name of the IPsec server.
+            /// <para>The name of the IPsec server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("IpsecServerName")]
             [Validation(Required=false)]
             public string IpsecServerName { get; set; }
 
             /// <summary>
-            /// The local CIDR blocks, which refer to the CIDR blocks on the virtual private cloud (VPC) side.
+            /// <para>The local CIDR blocks, which refer to the CIDR blocks on the virtual private cloud (VPC) side.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.0.0/16,172.17.0.0/16</para>
             /// </summary>
             [NameInMap("LocalSubnet")]
             [Validation(Required=false)]
             public string LocalSubnet { get; set; }
 
             /// <summary>
-            /// The number of SSL-VPN connections supported by the VPN gateway.
+            /// <para>The number of SSL-VPN connections supported by the VPN gateway.</para>
+            /// <remarks>
+            /// <para> The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, you have five SSL-VPN connections and three SSL clients occupy three SSL-VPN connections. In this case, two clients can connect to the IPsec server.</para>
+            /// </remarks>
             /// 
-            /// >  The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, you have five SSL-VPN connections and three SSL clients occupy three SSL-VPN connections. In this case, two clients can connect to the IPsec server.
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("MaxConnections")]
             [Validation(Required=false)]
             public int? MaxConnections { get; set; }
 
             /// <summary>
-            /// Indicates whether two-factor authentication is enabled. Valid values:
+            /// <para>Indicates whether two-factor authentication is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b>: The feature is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**: The feature is disabled.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("MultiFactorAuthEnabled")]
             [Validation(Required=false)]
             public bool? MultiFactorAuthEnabled { get; set; }
 
             /// <summary>
-            /// The number of clients that are connected to the IPsec server.
+            /// <para>The number of clients that are connected to the IPsec server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("OnlineClientCount")]
             [Validation(Required=false)]
             public int? OnlineClientCount { get; set; }
 
             /// <summary>
-            /// The pre-shared key.
+            /// <para>The pre-shared key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pgw6dy7d****</para>
             /// </summary>
             [NameInMap("Psk")]
             [Validation(Required=false)]
             public string Psk { get; set; }
 
             /// <summary>
-            /// Indicates whether pre-shared key authentication is enabled. Only **true** may be returned, which indicates that pre-shared key authentication is enabled.
+            /// <para>Indicates whether pre-shared key authentication is enabled. Only <b>true</b> may be returned, which indicates that pre-shared key authentication is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("PskEnabled")]
             [Validation(Required=false)]
             public bool? PskEnabled { get; set; }
 
             /// <summary>
-            /// The ID of the region where the IPsec server is created.
+            /// <para>The ID of the region where the IPsec server is created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The ID of the resource group to which the IPsec server belongs.
+            /// <para>The ID of the resource group to which the IPsec server belongs.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group information.</para>
             /// 
-            /// You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.
+            /// <b>Example:</b>
+            /// <para>rg-acfmzs372yg****</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The ID of the VPN gateway.
+            /// <para>The ID of the VPN gateway.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpn-bp1q8bgx4xnkm2ogj****</para>
             /// </summary>
             [NameInMap("VpnGatewayId")]
             [Validation(Required=false)]
@@ -247,31 +331,44 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If no value is returned for <b>NextToken</b>, no next queries are sent.</description></item>
+        /// <item><description>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</description></item>
+        /// </list>
         /// 
-        /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54B48E3D-DF70-471B-AA93-08E683A1B457</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

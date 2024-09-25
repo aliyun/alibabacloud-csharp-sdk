@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeCustomerGatewayRequest : TeaModel {
         /// <summary>
-        /// The ID of the customer gateway.
+        /// <para>The ID of the customer gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cgw-bp1pvpl9r9adju6l5****</para>
         /// </summary>
         [NameInMap("CustomerGatewayId")]
         [Validation(Required=false)]
@@ -27,11 +29,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the customer gateway is deployed.
+        /// <para>The ID of the region where the customer gateway is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

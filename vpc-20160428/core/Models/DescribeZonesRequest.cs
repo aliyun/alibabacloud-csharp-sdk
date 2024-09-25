@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// The language used in the **LocalName** parameter. Valid values:
+        /// <para>The language used in the <b>LocalName</b> parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh-cn</b>: Chinese</description></item>
+        /// <item><description><b>en-us</b>: English</description></item>
+        /// <item><description><b>ja</b>: Japanese</description></item>
+        /// </list>
         /// 
-        /// *   **zh-cn**: Chinese
-        /// *   **en-us**: English
-        /// *   **ja**: Japanese
+        /// <b>Example:</b>
+        /// <para>zh-cn</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -29,9 +33,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the zone. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <para>The region ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -46,7 +52,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The zone type. Default value: **AvailabilityZone**.
+        /// <para>The zone type. Default value: <b>AvailabilityZone</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AvailabilityZone</para>
         /// </summary>
         [NameInMap("ZoneType")]
         [Validation(Required=false)]

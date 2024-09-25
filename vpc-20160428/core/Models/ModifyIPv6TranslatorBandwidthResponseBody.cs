@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyIPv6TranslatorBandwidthResponseBody : TeaModel {
         /// <summary>
-        /// The order ID.
+        /// <para>The order ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>202304500950739</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EF8198EE-8FC9-49C2-A22E-xxxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

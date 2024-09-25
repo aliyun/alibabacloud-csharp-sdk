@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVSwitchResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// <para>The ID of the vSwitch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-25navfgbue4g****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

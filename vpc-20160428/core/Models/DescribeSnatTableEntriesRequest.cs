@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSnatTableEntriesRequest : TeaModel {
         /// <summary>
-        /// The ID of the NAT gateway.
+        /// <para>The ID of the NAT gateway.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of <b>SnatTableId</b> and <b>NatGatewayId</b>.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify at least one of **SnatTableId** and **NatGatewayId**.
+        /// <b>Example:</b>
+        /// <para>ngw-bp1uewa15k4iy5770****</para>
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
@@ -31,25 +35,32 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
+        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where you want to create the NAT gateway.
+        /// <para>The ID of the region where you want to create the NAT gateway.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -64,50 +75,71 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the SNAT entry.
+        /// <para>The ID of the SNAT entry.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>snat-8vbae8uqh7rjpk7d2****</para>
         /// </summary>
         [NameInMap("SnatEntryId")]
         [Validation(Required=false)]
         public string SnatEntryId { get; set; }
 
         /// <summary>
-        /// The name of the SNAT entry.
+        /// <para>The name of the SNAT entry.</para>
+        /// <para>The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter.
+        /// <b>Example:</b>
+        /// <para>SnatEntry-1</para>
         /// </summary>
         [NameInMap("SnatEntryName")]
         [Validation(Required=false)]
         public string SnatEntryName { get; set; }
 
         /// <summary>
-        /// *   When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.
-        /// *   When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.
+        /// <list type="bullet">
+        /// <item><description>When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.</description></item>
+        /// <item><description>When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>116.22.XX.XX</para>
         /// </summary>
         [NameInMap("SnatIp")]
         [Validation(Required=false)]
         public string SnatIp { get; set; }
 
         /// <summary>
-        /// The ID of the SNAT table.
+        /// <para>The ID of the SNAT table.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of <b>SnatTableId</b> and <b>NatGatewayId</b>.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify at least one of **SnatTableId** and **NatGatewayId**.
+        /// <b>Example:</b>
+        /// <para>stb-8vbczigrhop8x5u3t****</para>
         /// </summary>
         [NameInMap("SnatTableId")]
         [Validation(Required=false)]
         public string SnatTableId { get; set; }
 
         /// <summary>
-        /// The source CIDR block specified in the SNAT entry.
+        /// <para>The source CIDR block specified in the SNAT entry.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>116.22.XX.XX/24</para>
         /// </summary>
         [NameInMap("SourceCIDR")]
         [Validation(Required=false)]
         public string SourceCIDR { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// <para>The ID of the vSwitch.</para>
+        /// <list type="bullet">
+        /// <item><description>When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.</description></item>
+        /// <item><description>When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.</description></item>
+        /// </list>
         /// 
-        /// *   When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.
-        /// *   When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.
+        /// <b>Example:</b>
+        /// <para>vsw-3xbjkhjshjdf****</para>
         /// </summary>
         [NameInMap("SourceVSwitchId")]
         [Validation(Required=false)]

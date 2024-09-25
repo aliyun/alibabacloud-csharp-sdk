@@ -10,30 +10,39 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ReplaceVpcDhcpOptionsSetRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not set this parameter, the system uses <b>RequestId</b> as <b>ClientToken</b>. <b>RequestId</b> may be different for each API request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
-        /// 
-        /// >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+        /// <b>Example:</b>
+        /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the new DHCP options set.
+        /// <para>The ID of the new DHCP options set.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dopt-o6w0df4epg9zo8isy****</para>
         /// </summary>
         [NameInMap("DhcpOptionsSetId")]
         [Validation(Required=false)]
         public string DhcpOptionsSetId { get; set; }
 
         /// <summary>
-        /// Specifies whether to check the request without performing the operation. Valid values:
+        /// <para>Specifies whether to check the request without performing the operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: checks the request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the DryRunOperation error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the check, a 2XX HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: checks the request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the DryRunOperation error code is returned.
-        /// *   **false** (default): sends the request. If the request passes the check, a 2XX HTTP status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -48,9 +57,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region to which the DHCP options set belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <para>The region to which the DHCP options set belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -65,9 +76,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the associated VPC.
+        /// <para>The ID of the associated VPC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-dsferghthth****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

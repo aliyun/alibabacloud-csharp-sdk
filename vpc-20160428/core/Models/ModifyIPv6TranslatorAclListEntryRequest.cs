@@ -10,29 +10,34 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyIPv6TranslatorAclListEntryRequest : TeaModel {
         /// <summary>
-        /// The remarks of the ACL rule.
+        /// <para>The remarks of the ACL rule.</para>
+        /// <para>It must be 2 to 100 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// It must be 2 to 100 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>client IP</para>
         /// </summary>
         [NameInMap("AclEntryComment")]
         [Validation(Required=false)]
         public string AclEntryComment { get; set; }
 
         /// <summary>
-        /// The ID of the ACL rule to which the IP entry belongs.
+        /// <para>The ID of the ACL rule to which the IP entry belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ipv6transaclentry-bp1jzyn7ra8pyxehd****</para>
         /// </summary>
         [NameInMap("AclEntryId")]
         [Validation(Required=false)]
         public string AclEntryId { get; set; }
 
         /// <summary>
-        /// The ID of the ACL to which the IP entry belongs.
+        /// <para>The ID of the ACL to which the IP entry belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ipv6transacl-bp1b4z3tleyhq1s50****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -47,9 +52,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region of the ACL.
+        /// <para>The region of the ACL.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

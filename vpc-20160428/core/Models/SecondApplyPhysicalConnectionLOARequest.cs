@@ -10,61 +10,75 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class SecondApplyPhysicalConnectionLOARequest : TeaModel {
         /// <summary>
-        /// The bandwidth of the Express Connect circuit. Unit: Mbit/s.
+        /// <para>The bandwidth of the Express Connect circuit. Unit: Mbit/s.</para>
+        /// <para>Valid values: <b>2</b> to <b>10240</b>.</para>
         /// 
-        /// Valid values: **2** to **10240**.
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The name of the customer company that requires the Express Connect circuit.
+        /// <para>The name of the customer company that requires the Express Connect circuit.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>company</para>
         /// </summary>
         [NameInMap("CompanyName")]
         [Validation(Required=false)]
         public string CompanyName { get; set; }
 
         /// <summary>
-        /// The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+        /// <para>The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2022-02-28T16:00:00Z</para>
         /// </summary>
         [NameInMap("ConstructionTime")]
         [Validation(Required=false)]
         public string ConstructionTime { get; set; }
 
         /// <summary>
-        /// The ID of the Express Connect circuit.
+        /// <para>The ID of the Express Connect circuit.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-bp1qrb3044eqi****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The type of Express Connect circuit. Valid values:
+        /// <para>The type of Express Connect circuit. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MSTP</b></description></item>
+        /// <item><description><b>MPLSVPN</b></description></item>
+        /// <item><description><b>FIBRE</b></description></item>
+        /// <item><description><b>Other</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **MSTP**
-        /// *   **MPLSVPN**
-        /// *   **FIBRE**
-        /// *   **Other**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>FIBRE</para>
         /// </summary>
         [NameInMap("LineType")]
         [Validation(Required=false)]
@@ -79,47 +93,62 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The information about the construction engineer.
+        /// <para>The information about the construction engineer.</para>
         /// </summary>
         [NameInMap("PMInfo")]
         [Validation(Required=false)]
         public List<SecondApplyPhysicalConnectionLOARequestPMInfo> PMInfo { get; set; }
         public class SecondApplyPhysicalConnectionLOARequestPMInfo : TeaModel {
             /// <summary>
-            /// The ID number of the construction engineer. You can specify the ID number of an ID card or an international passport.
+            /// <para>The ID number of the construction engineer. You can specify the ID number of an ID card or an international passport.</para>
+            /// <para>You can configure information for up to 16 construction engineers.</para>
             /// 
-            /// You can configure information for up to 16 construction engineers.
+            /// <b>Example:</b>
+            /// <para>5****************9</para>
             /// </summary>
             [NameInMap("PMCertificateNo")]
             [Validation(Required=false)]
             public string PMCertificateNo { get; set; }
 
             /// <summary>
-            /// The type of the identity document of the construction engineer. Valid values:
+            /// <para>The type of the identity document of the construction engineer. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>IDCard</b></description></item>
+            /// <item><description><b>Passport</b></description></item>
+            /// </list>
             /// 
-            /// *   **IDCard**
-            /// *   **Passport**
+            /// <b>Example:</b>
+            /// <para>IDCard</para>
             /// </summary>
             [NameInMap("PMCertificateType")]
             [Validation(Required=false)]
             public string PMCertificateType { get; set; }
 
             /// <summary>
-            /// The contact information about the construction engineer.
+            /// <para>The contact information about the construction engineer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1390000****</para>
             /// </summary>
             [NameInMap("PMContactInfo")]
             [Validation(Required=false)]
             public string PMContactInfo { get; set; }
 
             /// <summary>
-            /// The gender of the construction engineer.
+            /// <para>The gender of the construction engineer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Male</para>
             /// </summary>
             [NameInMap("PMGender")]
             [Validation(Required=false)]
             public string PMGender { get; set; }
 
             /// <summary>
-            /// The name of the construction engineer.
+            /// <para>The name of the construction engineer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Zhangsan</para>
             /// </summary>
             [NameInMap("PMName")]
             [Validation(Required=false)]
@@ -128,16 +157,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The geographic location where the Express Connect circuit is deployed.
+        /// <para>The geographic location where the Express Connect circuit is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>XX Number, XX Road, XX Town, XX District, Hangzhou City, Zhejiang Province.</para>
         /// </summary>
         [NameInMap("PeerLocation")]
         [Validation(Required=false)]
         public string PeerLocation { get; set; }
 
         /// <summary>
-        /// The region where the Express Connect circuit is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <para>The region where the Express Connect circuit is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -152,9 +186,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The construction company.
+        /// <para>The construction company.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>company</para>
         /// </summary>
         [NameInMap("Si")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeNetworkAclsResponseBody : TeaModel {
         /// <summary>
-        /// The details of the network ACLs.
+        /// <para>The details of the network ACLs.</para>
         /// </summary>
         [NameInMap("NetworkAcls")]
         [Validation(Required=false)]
@@ -21,21 +21,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAcl> NetworkAcl { get; set; }
             public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAcl : TeaModel {
                 /// <summary>
-                /// The time when the network ACL was created.
+                /// <para>The time when the network ACL was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-12-25 11:44:17</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the network ACL.
+                /// <para>The description of the network ACL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>This is my NetworkAcl.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The outbound rules.
+                /// <para>The outbound rules.</para>
                 /// </summary>
                 [NameInMap("EgressAclEntries")]
                 [Validation(Required=false)]
@@ -46,82 +52,115 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclEgressAclEntriesEgressAclEntry> EgressAclEntry { get; set; }
                     public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclEgressAclEntriesEgressAclEntry : TeaModel {
                         /// <summary>
-                        /// The description of the outbound rule.
+                        /// <para>The description of the outbound rule.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>This is EgressAclEntries.</para>
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// The destination CIDR block.
+                        /// <para>The destination CIDR block.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>10.0.0.0/24</para>
                         /// </summary>
                         [NameInMap("DestinationCidrIp")]
                         [Validation(Required=false)]
                         public string DestinationCidrIp { get; set; }
 
                         /// <summary>
-                        /// The type of the inbound rule.
+                        /// <para>The type of the inbound rule.</para>
+                        /// <list type="bullet">
+                        /// <item><description><para><b>custom</b></para>
+                        /// </description></item>
+                        /// <item><description><para><b>system</b></para>
+                        /// </description></item>
+                        /// </list>
                         /// 
-                        /// - **custom**
-                        /// 
-                        /// - **system**
+                        /// <b>Example:</b>
+                        /// <para>custom</para>
                         /// </summary>
                         [NameInMap("EntryType")]
                         [Validation(Required=false)]
                         public string EntryType { get; set; }
 
                         /// <summary>
-                        /// The IP version. 
+                        /// <para>The IP version. </para>
+                        /// <list type="bullet">
+                        /// <item><description><b>IPv4</b></description></item>
+                        /// <item><description><b>IPv6</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **IPv4**
-                        /// *   **IPv6**
+                        /// <b>Example:</b>
+                        /// <para>IPV4</para>
                         /// </summary>
                         [NameInMap("IpVersion")]
                         [Validation(Required=false)]
                         public string IpVersion { get; set; }
 
                         /// <summary>
-                        /// The ID of the outbound rule.
+                        /// <para>The ID of the outbound rule.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>nae-a2d447uw4tillfvgb****</para>
                         /// </summary>
                         [NameInMap("NetworkAclEntryId")]
                         [Validation(Required=false)]
                         public string NetworkAclEntryId { get; set; }
 
                         /// <summary>
-                        /// The name of the outbound rule.
+                        /// <para>The name of the outbound rule.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>acl-2</para>
                         /// </summary>
                         [NameInMap("NetworkAclEntryName")]
                         [Validation(Required=false)]
                         public string NetworkAclEntryName { get; set; }
 
                         /// <summary>
-                        /// The action to be performed on network traffic that matches the rule. Valid values:
+                        /// <para>The action to be performed on network traffic that matches the rule. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>accept</b></description></item>
+                        /// <item><description><b>drop</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **accept**
-                        /// *   **drop**
+                        /// <b>Example:</b>
+                        /// <para>accept</para>
                         /// </summary>
                         [NameInMap("Policy")]
                         [Validation(Required=false)]
                         public string Policy { get; set; }
 
                         /// <summary>
-                        /// The destination port range of the outbound traffic.
+                        /// <para>The destination port range of the outbound traffic.</para>
+                        /// <list type="bullet">
+                        /// <item><description>If the <b>protocol</b> of the outbound rule is set to <b>all</b>, <b>icmp</b>, or <b>gre</b>, the port range is -1/-1, which specified all ports.</description></item>
+                        /// <item><description>If the <b>protocol</b> of the outbound rule is set to <b>tcp</b> or <b>udp</b>, set the port range in the following format: <b>1/200</b> or <b>80/80</b>, which specifies port 1 to port 200 or port 80. Valid values for a port: <b>1</b> to <b>65535</b>.</description></item>
+                        /// </list>
                         /// 
-                        /// *   If the **protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specified all ports.
-                        /// *   If the **protocol** of the outbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.
+                        /// <b>Example:</b>
+                        /// <para>-1/-1</para>
                         /// </summary>
                         [NameInMap("Port")]
                         [Validation(Required=false)]
                         public string Port { get; set; }
 
                         /// <summary>
-                        /// The protocol. Valid values:
+                        /// <para>The protocol. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>icmp</b></description></item>
+                        /// <item><description><b>gre</b></description></item>
+                        /// <item><description><b>tcp</b></description></item>
+                        /// <item><description><b>udp</b></description></item>
+                        /// <item><description><b>all</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **icmp**
-                        /// *   **gre**
-                        /// *   **tcp**
-                        /// *   **udp**
-                        /// *   **all**
+                        /// <b>Example:</b>
+                        /// <para>all</para>
                         /// </summary>
                         [NameInMap("Protocol")]
                         [Validation(Required=false)]
@@ -132,7 +171,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The configurations of the inbound rules.
+                /// <para>The configurations of the inbound rules.</para>
                 /// </summary>
                 [NameInMap("IngressAclEntries")]
                 [Validation(Required=false)]
@@ -143,82 +182,115 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclIngressAclEntriesIngressAclEntry> IngressAclEntry { get; set; }
                     public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclIngressAclEntriesIngressAclEntry : TeaModel {
                         /// <summary>
-                        /// The description of the inbound rule.
+                        /// <para>The description of the inbound rule.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>This is IngressAclEntries.</para>
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// The type of the inbound rule.
+                        /// <para>The type of the inbound rule.</para>
+                        /// <list type="bullet">
+                        /// <item><description><para><b>custom</b></para>
+                        /// </description></item>
+                        /// <item><description><para><b>system</b></para>
+                        /// </description></item>
+                        /// </list>
                         /// 
-                        /// - **custom**
-                        /// 
-                        /// - **system**
+                        /// <b>Example:</b>
+                        /// <para>custom</para>
                         /// </summary>
                         [NameInMap("EntryType")]
                         [Validation(Required=false)]
                         public string EntryType { get; set; }
 
                         /// <summary>
-                        /// The IP version. 
+                        /// <para>The IP version. </para>
+                        /// <list type="bullet">
+                        /// <item><description><b>IPv4</b></description></item>
+                        /// <item><description><b>IPv6</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **IPv4**
-                        /// *   **IPv6**
+                        /// <b>Example:</b>
+                        /// <para>IPv4</para>
                         /// </summary>
                         [NameInMap("IpVersion")]
                         [Validation(Required=false)]
                         public string IpVersion { get; set; }
 
                         /// <summary>
-                        /// The ID of the inbound rule.
+                        /// <para>The ID of the inbound rule.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>nae-a2dk86arlydmezasw****</para>
                         /// </summary>
                         [NameInMap("NetworkAclEntryId")]
                         [Validation(Required=false)]
                         public string NetworkAclEntryId { get; set; }
 
                         /// <summary>
-                        /// The name of the inbound rule.
+                        /// <para>The name of the inbound rule.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>acl-3</para>
                         /// </summary>
                         [NameInMap("NetworkAclEntryName")]
                         [Validation(Required=false)]
                         public string NetworkAclEntryName { get; set; }
 
                         /// <summary>
-                        /// The action to be performed on network traffic that matches the rule. Valid values:
+                        /// <para>The action to be performed on network traffic that matches the rule. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>accept</b></description></item>
+                        /// <item><description><b>drop</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **accept**
-                        /// *   **drop**
+                        /// <b>Example:</b>
+                        /// <para>accept</para>
                         /// </summary>
                         [NameInMap("Policy")]
                         [Validation(Required=false)]
                         public string Policy { get; set; }
 
                         /// <summary>
-                        /// The destination port range of the inbound traffic.
+                        /// <para>The destination port range of the inbound traffic.</para>
+                        /// <list type="bullet">
+                        /// <item><description>If the <b>protocol</b> of the inbound rule is set to <b>all</b>, <b>icmp</b>, or <b>gre</b>, the port range is -1/-1, which specifies all ports.</description></item>
+                        /// <item><description>If the <b>protocol</b> of the inbound rule is set to <b>tcp</b> or <b>udp</b>, set the port range in the following format: <b>1/200</b> or <b>80/80</b>, which specifies port 1 to port 200 or port 80. Valid ports: <b>1</b> to <b>65535</b>.</description></item>
+                        /// </list>
                         /// 
-                        /// *   If the **protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specifies all ports.
-                        /// *   If the **protocol** of the inbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid ports: **1** to **65535**.
+                        /// <b>Example:</b>
+                        /// <para>-1/-1</para>
                         /// </summary>
                         [NameInMap("Port")]
                         [Validation(Required=false)]
                         public string Port { get; set; }
 
                         /// <summary>
-                        /// The protocol. Valid values:
+                        /// <para>The protocol. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>icmp</b></description></item>
+                        /// <item><description><b>gre</b></description></item>
+                        /// <item><description><b>tcp</b></description></item>
+                        /// <item><description><b>udp</b></description></item>
+                        /// <item><description><b>all</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **icmp**
-                        /// *   **gre**
-                        /// *   **tcp**
-                        /// *   **udp**
-                        /// *   **all**
+                        /// <b>Example:</b>
+                        /// <para>all</para>
                         /// </summary>
                         [NameInMap("Protocol")]
                         [Validation(Required=false)]
                         public string Protocol { get; set; }
 
                         /// <summary>
-                        /// The source CIDR block.
+                        /// <para>The source CIDR block.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>10.0.0.0/24</para>
                         /// </summary>
                         [NameInMap("SourceCidrIp")]
                         [Validation(Required=false)]
@@ -229,35 +301,47 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the network ACL.
+                /// <para>The ID of the network ACL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>nacl-a2do9e413e0spxscd****</para>
                 /// </summary>
                 [NameInMap("NetworkAclId")]
                 [Validation(Required=false)]
                 public string NetworkAclId { get; set; }
 
                 /// <summary>
-                /// The name of the network ACL.
+                /// <para>The name of the network ACL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>acl-1</para>
                 /// </summary>
                 [NameInMap("NetworkAclName")]
                 [Validation(Required=false)]
                 public string NetworkAclName { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the network ACL belongs.
+                /// <para>The ID of the Alibaba Cloud account to which the network ACL belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>253460731706911258</para>
                 /// </summary>
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public long? OwnerId { get; set; }
 
                 /// <summary>
-                /// The region ID of the network ACL.
+                /// <para>The region ID of the network ACL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The resources that are associated with the network ACL.
+                /// <para>The resources that are associated with the network ACL.</para>
                 /// </summary>
                 [NameInMap("Resources")]
                 [Validation(Required=false)]
@@ -268,25 +352,35 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclResourcesResource> Resource { get; set; }
                     public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclResourcesResource : TeaModel {
                         /// <summary>
-                        /// The ID of the associated resource.
+                        /// <para>The ID of the associated resource.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>vsw-bp1de348lntdwcdf****</para>
                         /// </summary>
                         [NameInMap("ResourceId")]
                         [Validation(Required=false)]
                         public string ResourceId { get; set; }
 
                         /// <summary>
-                        /// The type of resource with which you want to associate the network ACL.
+                        /// <para>The type of resource with which you want to associate the network ACL.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>VSwitch</para>
                         /// </summary>
                         [NameInMap("ResourceType")]
                         [Validation(Required=false)]
                         public string ResourceType { get; set; }
 
                         /// <summary>
-                        /// The association status of the resource. Valid values:
+                        /// <para>The association status of the resource. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>BINDED</b></description></item>
+                        /// <item><description><b>BINDING</b></description></item>
+                        /// <item><description><b>UNBINDING</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **BINDED**
-                        /// *   **BINDING**
-                        /// *   **UNBINDING**
+                        /// <b>Example:</b>
+                        /// <para>BINDED</para>
                         /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
@@ -297,17 +391,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The status of the network ACL. Valid values:
+                /// <para>The status of the network ACL. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Available</b></description></item>
+                /// <item><description><b>Modifying</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Available**
-                /// *   **Modifying**
+                /// <b>Example:</b>
+                /// <para>Available</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The information about the tags.
+                /// <para>The information about the tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -318,14 +416,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag> Tag { get; set; }
                     public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of tag N added to the resource.
+                        /// <para>The key of tag N added to the resource.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>FinanceDept</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of tag N added to the resource.
+                        /// <para>The value of tag N added to the resource.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>FinanceJoshua</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -336,7 +440,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the associated VPC.
+                /// <para>The ID of the associated VPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-m5ebpc2xh64mqm27e****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -347,28 +454,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// <para>The number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

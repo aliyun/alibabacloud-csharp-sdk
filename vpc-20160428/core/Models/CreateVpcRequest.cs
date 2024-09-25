@@ -10,40 +10,53 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpcRequest : TeaModel {
         /// <summary>
-        /// The CIDR block of the VPC.
+        /// <para>The CIDR block of the VPC.</para>
+        /// <list type="bullet">
+        /// <item><description>You can specify one of the following CIDR blocks or their subsets as the primary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8. These CIDR blocks are standard private CIDR blocks as defined by Request for Comments (RFC) documents. The subnet mask must be 8 to 28 bits in length.</description></item>
+        /// <item><description>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, and their subnets as the primary IPv4 CIDR block of the VPC.</description></item>
+        /// </list>
         /// 
-        /// *   You can specify one of the following CIDR blocks or their subsets as the primary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8. These CIDR blocks are standard private CIDR blocks as defined by Request for Comments (RFC) documents. The subnet mask must be 8 to 28 bits in length.
-        /// *   You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, and their subnets as the primary IPv4 CIDR block of the VPC.
+        /// <b>Example:</b>
+        /// <para>172.16.0.0/12</para>
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the VPC.
+        /// <para>The description of the VPC.</para>
+        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>This is my first Vpc</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run, without performing the actual request. Valid values:
+        /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -54,10 +67,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableDnsHostname { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable IPv6. Valid values:
+        /// <para>Specifies whether to enable IPv6. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// </list>
         /// 
-        /// *   **false** (default)
-        /// *   **true**
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("EnableIpv6")]
         [Validation(Required=false)]
@@ -68,28 +85,39 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Ipv4CidrMask { get; set; }
 
         /// <summary>
-        /// The ID of the IP Address Manager (IPAM) pool of the IPv4 type.
+        /// <para>The ID of the IP Address Manager (IPAM) pool of the IPv4 type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipam-pool-sycmt3p2a9v63i****</para>
         /// </summary>
         [NameInMap("Ipv4IpamPoolId")]
         [Validation(Required=false)]
         public string Ipv4IpamPoolId { get; set; }
 
         /// <summary>
-        /// The IPv6 CIDR block of the VPC.
+        /// <para>The IPv6 CIDR block of the VPC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2408:XXXX:0:6a::/56</para>
         /// </summary>
         [NameInMap("Ipv6CidrBlock")]
         [Validation(Required=false)]
         public string Ipv6CidrBlock { get; set; }
 
         /// <summary>
-        /// The type of the IPv6 CIDR block of the VPC. Valid values:
+        /// <para>The type of the IPv6 CIDR block of the VPC. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>BGP</b> (default)</description></item>
+        /// <item><description><b>ChinaMobile</b></description></item>
+        /// <item><description><b>ChinaUnicom</b></description></item>
+        /// <item><description><b>ChinaTelecom</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you are allowed to use single-ISP bandwidth, you can set the value to <b>ChinaTelecom</b>, <b>ChinaUnicom</b>, or <b>ChinaMobile</b>.</para>
+        /// </remarks>
         /// 
-        /// *   **BGP** (default)
-        /// *   **ChinaMobile**
-        /// *   **ChinaUnicom**
-        /// *   **ChinaTelecom**
-        /// 
-        /// >  If you are allowed to use single-ISP bandwidth, you can set the value to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
+        /// <b>Example:</b>
+        /// <para>BGP</para>
         /// </summary>
         [NameInMap("Ipv6Isp")]
         [Validation(Required=false)]
@@ -104,20 +132,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the VPC belongs.
+        /// <para>The ID of the region to which the VPC belongs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></para>
         /// 
-        /// For more information about resource groups, see [What is a resource group?](https://help.aliyun.com/document_detail/94475.html)
+        /// <b>Example:</b>
+        /// <para>rg-acfmxazb4ph6aiy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -132,25 +163,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tag of the resource.
+        /// <para>The tag of the resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateVpcRequestTag> Tag { get; set; }
         public class CreateVpcRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+            /// <para>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be at most 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
-            /// The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>FinanceDept</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+            /// <para>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length, but cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
             /// 
-            /// The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+            /// <b>Example:</b>
+            /// <para>FinanceJoshua</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -159,18 +194,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The user CIDR block. Separate user CIDR blocks with commas (,). You can specify up to three user CIDR blocks.
+        /// <para>The user CIDR block. Separate user CIDR blocks with commas (,). You can specify up to three user CIDR blocks.</para>
+        /// <para>For more information about user CIDR blocks, see the <c>What is a user CIDR block?</c> section in <a href="https://help.aliyun.com/document_detail/185311.html">VPC FAQ</a>.</para>
         /// 
-        /// For more information about user CIDR blocks, see the `What is a user CIDR block?` section in [VPC FAQ](https://help.aliyun.com/document_detail/185311.html).
+        /// <b>Example:</b>
+        /// <para>192.168.0.0/12</para>
         /// </summary>
         [NameInMap("UserCidr")]
         [Validation(Required=false)]
         public string UserCidr { get; set; }
 
         /// <summary>
-        /// The name of the VPC.
+        /// <para>The name of the VPC.</para>
+        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>abc</para>
         /// </summary>
         [NameInMap("VpcName")]
         [Validation(Required=false)]

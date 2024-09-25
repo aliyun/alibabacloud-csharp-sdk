@@ -10,83 +10,116 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyIPv6TranslatorEntryRequest : TeaModel {
         /// <summary>
-        /// The ID of the associated ACL.
+        /// <para>The ID of the associated ACL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipv6transacl-bp1de27sou71g0lf****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable access control lists (ACLs). Valid values:
+        /// <para>Specifies whether to enable access control lists (ACLs). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
+        /// </list>
         /// 
-        /// *   **on**
-        /// *   **off**
+        /// <b>Example:</b>
+        /// <para>off</para>
         /// </summary>
         [NameInMap("AclStatus")]
         [Validation(Required=false)]
         public string AclStatus { get; set; }
 
         /// <summary>
-        /// The ACL type. Valid values:
+        /// <para>The ACL type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>white</b>: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</description></item>
+        /// <item><description><b>black</b>: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</description></item>
+        /// </list>
         /// 
-        /// *   **white**: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.
-        /// *   **black**: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.
+        /// <b>Example:</b>
+        /// <para>white</para>
         /// </summary>
         [NameInMap("AclType")]
         [Validation(Required=false)]
         public string AclType { get; set; }
 
         /// <summary>
-        /// The port that is used by the IPv6 address allocated to the IPv6 Translation Service instance.
+        /// <para>The port that is used by the IPv6 address allocated to the IPv6 Translation Service instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("AllocateIpv6Port")]
         [Validation(Required=false)]
         public int? AllocateIpv6Port { get; set; }
 
         /// <summary>
-        /// The public IPv4 address that needs to provide IPv6 services.
+        /// <para>The public IPv4 address that needs to provide IPv6 services.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>47.11.XX.XX</para>
         /// </summary>
         [NameInMap("BackendIpv4Addr")]
         [Validation(Required=false)]
         public string BackendIpv4Addr { get; set; }
 
         /// <summary>
-        /// The port of the public IPv4 address that needs to provide IPv6 services.
+        /// <para>The port of the public IPv4 address that needs to provide IPv6 services.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("BackendIpv4Port")]
         [Validation(Required=false)]
         public int? BackendIpv4Port { get; set; }
 
         /// <summary>
-        /// The maximum bandwidth specified in the IPv6 mapping entry. Unit: Mbit/s. Valid values:
+        /// <para>The maximum bandwidth specified in the IPv6 mapping entry. Unit: Mbit/s. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>-1</b> (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.</description></item>
+        /// <item><description><b>1</b> to <b>200</b>: changes the maximum bandwidth specified in the IPv6 mapping entry.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>The sum of maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.</para>
+        /// </remarks>
         /// 
-        /// *   **-1** (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.
-        /// *   **1** to **200**: changes the maximum bandwidth specified in the IPv6 mapping entry.
-        /// 
-        /// > The sum of maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("EntryBandwidth")]
         [Validation(Required=false)]
         public int? EntryBandwidth { get; set; }
 
         /// <summary>
-        /// The description of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).
+        /// <para>The description of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>entrydescription</para>
         /// </summary>
         [NameInMap("EntryDescription")]
         [Validation(Required=false)]
         public string EntryDescription { get; set; }
 
         /// <summary>
-        /// The name of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).
+        /// <para>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>entry1</para>
         /// </summary>
         [NameInMap("EntryName")]
         [Validation(Required=false)]
         public string EntryName { get; set; }
 
         /// <summary>
-        /// The ID of the IPv6 mapping entry.
+        /// <para>The ID of the IPv6 mapping entry.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ipv6trans-bp1858ys****</para>
         /// </summary>
         [NameInMap("Ipv6TranslatorEntryId")]
         [Validation(Required=false)]
@@ -101,9 +134,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -118,10 +153,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The protocol. Valid values:
+        /// <para>The protocol. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>tcp</b></description></item>
+        /// <item><description><b>udp</b></description></item>
+        /// </list>
         /// 
-        /// *   **tcp**
-        /// *   **udp**
+        /// <b>Example:</b>
+        /// <para>tcp</para>
         /// </summary>
         [NameInMap("TransProtocol")]
         [Validation(Required=false)]

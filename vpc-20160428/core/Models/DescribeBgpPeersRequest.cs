@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeBgpPeersRequest : TeaModel {
         /// <summary>
-        /// The ID of the BGP group to which the BGP peer that you want to query belongs.
+        /// <para>The ID of the BGP group to which the BGP peer that you want to query belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bgpg-2zev8h2wo414sfh****</para>
         /// </summary>
         [NameInMap("BgpGroupId")]
         [Validation(Required=false)]
         public string BgpGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the BGP peer that you want to query.
+        /// <para>The ID of the BGP peer that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bgp-2ze3un0ft1jd1xd****</para>
         /// </summary>
         [NameInMap("BgpPeerId")]
         [Validation(Required=false)]
         public string BgpPeerId { get; set; }
 
         /// <summary>
-        /// Specifies whether the BGP group is the default group. Valid values:
+        /// <para>Specifies whether the BGP group is the default group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
@@ -42,25 +52,32 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
+        /// <para>The number of entries per page. Valid values: <b>1 to 50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the BGP group to which the BGP peer that you want to query belongs.
+        /// <para>The region ID of the BGP group to which the BGP peer that you want to query belongs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -75,7 +92,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual border router (VBR) that is associated with the BGP peer that you want to query.
+        /// <para>The ID of the virtual border router (VBR) that is associated with the BGP peer that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vbr-2zecmmvg5gvu8i4te****</para>
         /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]

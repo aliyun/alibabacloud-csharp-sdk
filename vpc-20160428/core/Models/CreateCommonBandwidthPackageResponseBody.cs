@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateCommonBandwidthPackageResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the Internet Shared Bandwidth instance.
+        /// <para>The ID of the Internet Shared Bandwidth instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cbwp-bp1vevu8h3ieh****</para>
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FF39F653-033E-4CD9-9EDF-3CCA5A71FBC3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxazdjdhd****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

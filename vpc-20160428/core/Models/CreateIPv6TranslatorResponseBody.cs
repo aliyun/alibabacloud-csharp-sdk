@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIPv6TranslatorResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the IPv6 Translation Service instance.
+        /// <para>The ID of the IPv6 Translation Service instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipv6trans-bp1i8ahxut1xxxx</para>
         /// </summary>
         [NameInMap("Ipv6TranslatorId")]
         [Validation(Required=false)]
         public string Ipv6TranslatorId { get; set; }
 
         /// <summary>
-        /// The name of the IPv6 Translation Service instance.
+        /// <para>The name of the IPv6 Translation Service instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_nat64gw</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The order ID.
+        /// <para>The order ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>202303300940739</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AE05898-06E5-4782-xxxxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The specification of the IPv6 Translation Service instance.
+        /// <para>The specification of the IPv6 Translation Service instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>small</para>
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

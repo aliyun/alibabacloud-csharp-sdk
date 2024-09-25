@@ -10,44 +10,61 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateCustomerGatewayResponseBody : TeaModel {
         /// <summary>
-        /// The timestamp generated when the customer gateway was created. Unit: milliseconds.
+        /// <para>The timestamp generated when the customer gateway was created. Unit: milliseconds.</para>
+        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
         /// 
-        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// <b>Example:</b>
+        /// <para>1493363486000</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// The ID of the customer gateway.
+        /// <para>The ID of the customer gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cgw-bp1jrawp82av6bws9****</para>
         /// </summary>
         [NameInMap("CustomerGatewayId")]
         [Validation(Required=false)]
         public string CustomerGatewayId { get; set; }
 
         /// <summary>
-        /// The description of the customer gateway.
+        /// <para>The description of the customer gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>desctest</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The public IP address of the gateway device in the data center.
+        /// <para>The public IP address of the gateway device in the data center.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>101.12.XX.XX</para>
         /// </summary>
         [NameInMap("IpAddress")]
         [Validation(Required=false)]
         public string IpAddress { get; set; }
 
         /// <summary>
-        /// The name of the customer gateway.
+        /// <para>The name of the customer gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nametest</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D32B3C26-6C6C-4988-93E9-D2A6444CE6AE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

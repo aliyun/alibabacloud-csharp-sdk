@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DissociateRouteTableFromGatewayResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C5644C9A-7480-13B6-AECB-30FF142E3724</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

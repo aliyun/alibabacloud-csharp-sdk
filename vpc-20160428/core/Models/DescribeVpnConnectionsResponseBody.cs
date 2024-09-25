@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>238752DC-0693-49BE-9C85-711D5691D3E5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The information about the IPsec-VPN connection.
+        /// <para>The information about the IPsec-VPN connection.</para>
         /// </summary>
         [NameInMap("VpnConnections")]
         [Validation(Required=false)]
@@ -49,168 +61,228 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection> VpnConnection { get; set; }
             public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection : TeaModel {
                 /// <summary>
-                /// The ID of the CEN instance to which the transit router belongs.
+                /// <para>The ID of the CEN instance to which the transit router belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cen-lxxpbpalc776qz****</para>
                 /// </summary>
                 [NameInMap("AttachInstanceId")]
                 [Validation(Required=false)]
                 public string AttachInstanceId { get; set; }
 
                 /// <summary>
-                /// The type of resource that is associated with the IPsec-VPN connection. Valid values:
+                /// <para>The type of resource that is associated with the IPsec-VPN connection. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>CEN</b>: indicates that the IPsec-VPN connection is associated with a transit router of a Cloud Enterprise Network (CEN) instance.</description></item>
+                /// <item><description><b>NO_ASSOCIATED</b>: indicates that the IPsec-VPN connection is not associated with any resource.</description></item>
+                /// <item><description><b>VPNGW</b>: indicates that the IPsec-VPN connection is associated with a VPN gateway.</description></item>
+                /// </list>
                 /// 
-                /// *   **CEN**: indicates that the IPsec-VPN connection is associated with a transit router of a Cloud Enterprise Network (CEN) instance.
-                /// *   **NO_ASSOCIATED**: indicates that the IPsec-VPN connection is not associated with any resource.
-                /// *   **VPNGW**: indicates that the IPsec-VPN connection is associated with a VPN gateway.
+                /// <b>Example:</b>
+                /// <para>CEN</para>
                 /// </summary>
                 [NameInMap("AttachType")]
                 [Validation(Required=false)]
                 public string AttachType { get; set; }
 
                 /// <summary>
-                /// The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.
+                /// <para>The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.</para>
+                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
                 /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                /// <b>Example:</b>
+                /// <para>1492753817000</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether the IPsec-VPN connection is associated with a transit router that belongs to another Alibaba Cloud account. Valid values:
+                /// <para>Indicates whether the IPsec-VPN connection is associated with a transit router that belongs to another Alibaba Cloud account. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("CrossAccountAuthorized")]
                 [Validation(Required=false)]
                 public bool? CrossAccountAuthorized { get; set; }
 
                 /// <summary>
-                /// The ID of the customer gateway associated with the IPsec-VPN connection.
+                /// <para>The ID of the customer gateway associated with the IPsec-VPN connection.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cgw-bp1mvj4g9kogw****</para>
                 /// </summary>
                 [NameInMap("CustomerGatewayId")]
                 [Validation(Required=false)]
                 public string CustomerGatewayId { get; set; }
 
                 /// <summary>
-                /// Indicates whether IPsec negotiations immediately start.
+                /// <para>Indicates whether IPsec negotiations immediately start.</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: Negotiations are reinitiated after the configuration is changed.</description></item>
+                /// <item><description><b>false</b>: Negotiations are reinitiated after traffic is detected.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: Negotiations are reinitiated after the configuration is changed.
-                /// *   **false**: Negotiations are reinitiated after traffic is detected.
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("EffectImmediately")]
                 [Validation(Required=false)]
                 public bool? EffectImmediately { get; set; }
 
                 /// <summary>
-                /// Indicates whether dead peer detection (DPD) is enabled for the IPsec-VPN connection. Valid values:
+                /// <para>Indicates whether dead peer detection (DPD) is enabled for the IPsec-VPN connection. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>true</b></para>
+                /// <para>The initiator of the IPsec-VPN connection sends DPD packets to check the existence and availability of the peer. If no feedback is received from the peer within a specific period of time, the connection fails. Then, the ISAKMP security association (SA), IPsec SA, and IPsec tunnel are deleted.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// 
-                ///     The initiator of the IPsec-VPN connection sends DPD packets to check the existence and availability of the peer. If no feedback is received from the peer within a specific period of time, the connection fails. Then, the ISAKMP security association (SA), IPsec SA, and IPsec tunnel are deleted.
-                /// 
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("EnableDpd")]
                 [Validation(Required=false)]
                 public bool? EnableDpd { get; set; }
 
                 /// <summary>
-                /// Indicates whether NAT traversal is enabled for the IPsec-VPN connection.
+                /// <para>Indicates whether NAT traversal is enabled for the IPsec-VPN connection.</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>true</b></para>
+                /// <para>After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec tunnel.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// 
-                ///     After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec tunnel.
-                /// 
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("EnableNatTraversal")]
                 [Validation(Required=false)]
                 public bool? EnableNatTraversal { get; set; }
 
                 /// <summary>
-                /// Indicates whether BGP is enabled for the tunnel. Valid values:
+                /// <para>Indicates whether BGP is enabled for the tunnel. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("EnableTunnelsBgp")]
                 [Validation(Required=false)]
                 public bool? EnableTunnelsBgp { get; set; }
 
                 /// <summary>
-                /// The configurations of Phase 1 negotiations.
+                /// <para>The configurations of Phase 1 negotiations.</para>
                 /// </summary>
                 [NameInMap("IkeConfig")]
                 [Validation(Required=false)]
                 public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIkeConfig IkeConfig { get; set; }
                 public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIkeConfig : TeaModel {
                     /// <summary>
-                    /// The authentication algorithm in the IKE phase.
+                    /// <para>The authentication algorithm in the IKE phase.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sha1</para>
                     /// </summary>
                     [NameInMap("IkeAuthAlg")]
                     [Validation(Required=false)]
                     public string IkeAuthAlg { get; set; }
 
                     /// <summary>
-                    /// The encryption algorithm in the IKE phase.
+                    /// <para>The encryption algorithm in the IKE phase.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>aes</para>
                     /// </summary>
                     [NameInMap("IkeEncAlg")]
                     [Validation(Required=false)]
                     public string IkeEncAlg { get; set; }
 
                     /// <summary>
-                    /// The lifetime in the IKE phase. Unit: seconds.
+                    /// <para>The lifetime in the IKE phase. Unit: seconds.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>86400</para>
                     /// </summary>
                     [NameInMap("IkeLifetime")]
                     [Validation(Required=false)]
                     public long? IkeLifetime { get; set; }
 
                     /// <summary>
-                    /// The IKE negotiation mode.
+                    /// <para>The IKE negotiation mode.</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>main</b>: This mode offers higher security during negotiations.</description></item>
+                    /// <item><description><b>aggressive</b>: This mode is faster and has a higher success rate.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **main**: This mode offers higher security during negotiations.
-                    /// *   **aggressive**: This mode is faster and has a higher success rate.
+                    /// <b>Example:</b>
+                    /// <para>main</para>
                     /// </summary>
                     [NameInMap("IkeMode")]
                     [Validation(Required=false)]
                     public string IkeMode { get; set; }
 
                     /// <summary>
-                    /// The DH group in the IKE phase.
+                    /// <para>The DH group in the IKE phase.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>group2</para>
                     /// </summary>
                     [NameInMap("IkePfs")]
                     [Validation(Required=false)]
                     public string IkePfs { get; set; }
 
                     /// <summary>
-                    /// The version of the IKE protocol.
+                    /// <para>The version of the IKE protocol.</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>ikev1</b></description></item>
+                    /// <item><description><b>ikev2</b></description></item>
+                    /// </list>
+                    /// <para>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.</para>
                     /// 
-                    /// *   **ikev1**
-                    /// *   **ikev2**
-                    /// 
-                    /// Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
+                    /// <b>Example:</b>
+                    /// <para>ikev1</para>
                     /// </summary>
                     [NameInMap("IkeVersion")]
                     [Validation(Required=false)]
                     public string IkeVersion { get; set; }
 
                     /// <summary>
-                    /// The identifier of the IPsec-VPN connection on the data center side.
+                    /// <para>The identifier of the IPsec-VPN connection on the data center side.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>116.64.XX.XX</para>
                     /// </summary>
                     [NameInMap("LocalId")]
                     [Validation(Required=false)]
                     public string LocalId { get; set; }
 
                     /// <summary>
-                    /// The pre-shared key.
+                    /// <para>The pre-shared key.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>pgw6dy7****</para>
                     /// </summary>
                     [NameInMap("Psk")]
                     [Validation(Required=false)]
                     public string Psk { get; set; }
 
                     /// <summary>
-                    /// The identifier of the IPsec-VPN connection on the Alibaba Cloud side.
+                    /// <para>The identifier of the IPsec-VPN connection on the Alibaba Cloud side.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>139.17.XX.XX</para>
                     /// </summary>
                     [NameInMap("RemoteId")]
                     [Validation(Required=false)]
@@ -219,44 +291,60 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The gateway IP address of the IPsec-VPN connection.
+                /// <para>The gateway IP address of the IPsec-VPN connection.</para>
+                /// <remarks>
+                /// <para> This parameter is returned only if the IPsec-VPN connection is associated with a transit router.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only if the IPsec-VPN connection is associated with a transit router.
+                /// <b>Example:</b>
+                /// <para>10.XX.XX.10</para>
                 /// </summary>
                 [NameInMap("InternetIp")]
                 [Validation(Required=false)]
                 public string InternetIp { get; set; }
 
                 /// <summary>
-                /// The configurations of Phase 2 negotiations.
+                /// <para>The configurations of Phase 2 negotiations.</para>
                 /// </summary>
                 [NameInMap("IpsecConfig")]
                 [Validation(Required=false)]
                 public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIpsecConfig IpsecConfig { get; set; }
                 public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIpsecConfig : TeaModel {
                     /// <summary>
-                    /// The authentication algorithm in the IPsec phase.
+                    /// <para>The authentication algorithm in the IPsec phase.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sha1</para>
                     /// </summary>
                     [NameInMap("IpsecAuthAlg")]
                     [Validation(Required=false)]
                     public string IpsecAuthAlg { get; set; }
 
                     /// <summary>
-                    /// The encryption algorithm in the IPsec phase.
+                    /// <para>The encryption algorithm in the IPsec phase.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>aes</para>
                     /// </summary>
                     [NameInMap("IpsecEncAlg")]
                     [Validation(Required=false)]
                     public string IpsecEncAlg { get; set; }
 
                     /// <summary>
-                    /// The lifetime in the IPsec phase. Unit: seconds.
+                    /// <para>The lifetime in the IPsec phase. Unit: seconds.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>86400</para>
                     /// </summary>
                     [NameInMap("IpsecLifetime")]
                     [Validation(Required=false)]
                     public long? IpsecLifetime { get; set; }
 
                     /// <summary>
-                    /// The DH group in the IPsec phase.
+                    /// <para>The DH group in the IPsec phase.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>group2</para>
                     /// </summary>
                     [NameInMap("IpsecPfs")]
                     [Validation(Required=false)]
@@ -265,95 +353,122 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The CIDR block on the Alibaba Cloud side.
+                /// <para>The CIDR block on the Alibaba Cloud side.</para>
+                /// <para>Multiple CIDR blocks are separated by commas (,).</para>
                 /// 
-                /// Multiple CIDR blocks are separated by commas (,).
+                /// <b>Example:</b>
+                /// <para>192.168.0.0/16,172.17.0.0/16</para>
                 /// </summary>
                 [NameInMap("LocalSubnet")]
                 [Validation(Required=false)]
                 public string LocalSubnet { get; set; }
 
                 /// <summary>
-                /// The name of the IPsec-VPN connection.
+                /// <para>The name of the IPsec-VPN connection.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>nametest</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The network type of the IPsec-VPN connection. Valid values:
+                /// <para>The network type of the IPsec-VPN connection. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>public</b></description></item>
+                /// <item><description><b>private</b></description></item>
+                /// </list>
                 /// 
-                /// *   **public**
-                /// *   **private**
+                /// <b>Example:</b>
+                /// <para>public</para>
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The certificate authority (CA) certificate of the peer.
+                /// <para>The certificate authority (CA) certificate of the peer.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</para>
                 /// </summary>
                 [NameInMap("RemoteCaCertificate")]
                 [Validation(Required=false)]
                 public string RemoteCaCertificate { get; set; }
 
                 /// <summary>
-                /// The CIDR block of the data center.
+                /// <para>The CIDR block of the data center.</para>
+                /// <para>Multiple CIDR blocks are separated by commas (,).</para>
                 /// 
-                /// Multiple CIDR blocks are separated by commas (,).
+                /// <b>Example:</b>
+                /// <para>10.0.0.0/8,172.16.0.0/16</para>
                 /// </summary>
                 [NameInMap("RemoteSubnet")]
                 [Validation(Required=false)]
                 public string RemoteSubnet { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the IPsec-VPN connection belongs.
+                /// <para>The ID of the resource group to which the IPsec-VPN connection belongs.</para>
+                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group information.</para>
                 /// 
-                /// You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.
+                /// <b>Example:</b>
+                /// <para>rg-acfmzs372yg****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The bandwidth specification of the IPsec-VPN connection. Unit: **Mbit/s**.
+                /// <para>The bandwidth specification of the IPsec-VPN connection. Unit: <b>Mbit/s</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1000M</para>
                 /// </summary>
                 [NameInMap("Spec")]
                 [Validation(Required=false)]
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// The association state of the IPsec-VPN connection. Valid values:
+                /// <para>The association state of the IPsec-VPN connection. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>active</b>: The IPsec-VPN connection is associated with a VPN gateway.</description></item>
+                /// <item><description><b>init</b>: The IPsec-VPN connection is not associated with any resource and is being initialized.</description></item>
+                /// <item><description><b>attaching</b>: The IPsec-VPN connection is being associated with a transit router.</description></item>
+                /// <item><description><b>attached</b>: The IPsec-VPN connection is associated with a transit router.</description></item>
+                /// <item><description><b>detaching</b>: The IPsec-VPN connection is being disassociated from a transit router.</description></item>
+                /// <item><description><b>financialLocked</b>: The IPsec-VPN connection is locked due to overdue payments.</description></item>
+                /// <item><description><b>provisioning</b>: The IPsec-VPN connection is being prepared.</description></item>
+                /// <item><description><b>updating</b>: The IPsec-VPN connection is being updated.</description></item>
+                /// <item><description><b>Upgrading</b>: The IPsec-VPN connection is being upgraded.</description></item>
+                /// <item><description><b>deleted</b>: The IPsec-VPN connection is deleted.</description></item>
+                /// </list>
                 /// 
-                /// *   **active**: The IPsec-VPN connection is associated with a VPN gateway.
-                /// *   **init**: The IPsec-VPN connection is not associated with any resource and is being initialized.
-                /// *   **attaching**: The IPsec-VPN connection is being associated with a transit router.
-                /// *   **attached**: The IPsec-VPN connection is associated with a transit router.
-                /// *   **detaching**: The IPsec-VPN connection is being disassociated from a transit router.
-                /// *   **financialLocked**: The IPsec-VPN connection is locked due to overdue payments.
-                /// *   **provisioning**: The IPsec-VPN connection is being prepared.
-                /// *   **updating**: The IPsec-VPN connection is being updated.
-                /// *   **Upgrading**: The IPsec-VPN connection is being upgraded.
-                /// *   **deleted**: The IPsec-VPN connection is deleted.
+                /// <b>Example:</b>
+                /// <para>attached</para>
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public string State { get; set; }
 
                 /// <summary>
-                /// The status of the IPsec-VPN connection. Valid values:
+                /// <para>The status of the IPsec-VPN connection. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>ike_sa_not_established</b>: Phase 1 negotiations failed.</description></item>
+                /// <item><description><b>ike_sa_established</b>: Phase 1 negotiations succeeded.</description></item>
+                /// <item><description><b>ipsec_sa_not_established</b>: Phase 2 negotiations failed.</description></item>
+                /// <item><description><b>ipsec_sa_established</b>: Phase 2 negotiations succeeded.</description></item>
+                /// </list>
                 /// 
-                /// *   **ike_sa_not_established**: Phase 1 negotiations failed.
-                /// *   **ike_sa_established**: Phase 1 negotiations succeeded.
-                /// *   **ipsec_sa_not_established**: Phase 2 negotiations failed.
-                /// *   **ipsec_sa_established**: Phase 2 negotiations succeeded.
+                /// <b>Example:</b>
+                /// <para>ipsec_sa_established</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The list of tags to be added to the IPsec-VPN connection.
+                /// <para>The list of tags to be added to the IPsec-VPN connection.</para>
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
@@ -364,14 +479,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag> Tag { get; set; }
                     public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the IPsec-VPN connection.
+                        /// <para>The tag key of the IPsec-VPN connection.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TagKey</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value of the IPsec-VPN connection.
+                        /// <para>The tag value of the IPsec-VPN connection.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TagValue</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -382,23 +503,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the transit router with which the IPsec-VPN connection is associated.
+                /// <para>The ID of the transit router with which the IPsec-VPN connection is associated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tr-p0we2edef9qr44a85****</para>
                 /// </summary>
                 [NameInMap("TransitRouterId")]
                 [Validation(Required=false)]
                 public string TransitRouterId { get; set; }
 
                 /// <summary>
-                /// The name of the transit router.
+                /// <para>The name of the transit router.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>nametest</para>
                 /// </summary>
                 [NameInMap("TransitRouterName")]
                 [Validation(Required=false)]
                 public string TransitRouterName { get; set; }
 
                 /// <summary>
-                /// The tunnel configuration of the IPsec-VPN connection.
-                /// 
-                /// Parameters in **TunnelOptionsSpecification** are returned only if you query IPsec-VPN connections in dual-tunnel mode.
+                /// <para>The tunnel configuration of the IPsec-VPN connection.</para>
+                /// <para>Parameters in <b>TunnelOptionsSpecification</b> are returned only if you query IPsec-VPN connections in dual-tunnel mode.</para>
                 /// </summary>
                 [NameInMap("TunnelOptionsSpecification")]
                 [Validation(Required=false)]
@@ -409,128 +535,175 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptions> TunnelOptions { get; set; }
                     public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptions : TeaModel {
                         /// <summary>
-                        /// The ID of the customer gateway associated with the tunnel.
+                        /// <para>The ID of the customer gateway associated with the tunnel.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cgw-p0wy363lucf1uyae8****</para>
                         /// </summary>
                         [NameInMap("CustomerGatewayId")]
                         [Validation(Required=false)]
                         public string CustomerGatewayId { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the DPD feature is enabled for the tunnel. Valid values:
+                        /// <para>Indicates whether the DPD feature is enabled for the tunnel. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>false</b></description></item>
+                        /// <item><description><b>true</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **false**
-                        /// *   **true**
+                        /// <b>Example:</b>
+                        /// <para>true</para>
                         /// </summary>
                         [NameInMap("EnableDpd")]
                         [Validation(Required=false)]
                         public string EnableDpd { get; set; }
 
                         /// <summary>
-                        /// Indicates whether NAT traversal is enabled for the tunnel. Valid values:
+                        /// <para>Indicates whether NAT traversal is enabled for the tunnel. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>false</b></description></item>
+                        /// <item><description><b>true</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **false**
-                        /// *   **true**
+                        /// <b>Example:</b>
+                        /// <para>true</para>
                         /// </summary>
                         [NameInMap("EnableNatTraversal")]
                         [Validation(Required=false)]
                         public string EnableNatTraversal { get; set; }
 
                         /// <summary>
-                        /// The tunnel IP address.
+                        /// <para>The tunnel IP address.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>47.21.XX.XX</para>
                         /// </summary>
                         [NameInMap("InternetIp")]
                         [Validation(Required=false)]
                         public string InternetIp { get; set; }
 
                         /// <summary>
-                        /// The CA certificate of the tunnel peer.
+                        /// <para>The CA certificate of the tunnel peer.</para>
+                        /// <para>This parameter is returned only if the VPN gateway is of the SM type.</para>
                         /// 
-                        /// This parameter is returned only if the VPN gateway is of the SM type.
+                        /// <b>Example:</b>
+                        /// <para>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</para>
                         /// </summary>
                         [NameInMap("RemoteCaCertificate")]
                         [Validation(Required=false)]
                         public string RemoteCaCertificate { get; set; }
 
                         /// <summary>
-                        /// The tunnel role. Valid values:
+                        /// <para>The tunnel role. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>master</b>: The tunnel is an active tunnel.</description></item>
+                        /// <item><description><b>slave</b>: The tunnel is a standby tunnel.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **master**: The tunnel is an active tunnel.
-                        /// *   **slave**: The tunnel is a standby tunnel.
+                        /// <b>Example:</b>
+                        /// <para>master</para>
                         /// </summary>
                         [NameInMap("Role")]
                         [Validation(Required=false)]
                         public string Role { get; set; }
 
                         /// <summary>
-                        /// The tunnel status. Valid values:
+                        /// <para>The tunnel status. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>active</b></description></item>
+                        /// <item><description><b>updating</b></description></item>
+                        /// <item><description><b>deleting</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **active**
-                        /// *   **updating**
-                        /// *   **deleting**
+                        /// <b>Example:</b>
+                        /// <para>active</para>
                         /// </summary>
                         [NameInMap("State")]
                         [Validation(Required=false)]
                         public string State { get; set; }
 
                         /// <summary>
-                        /// The state of the IPsec-VPN connection. Valid values:
+                        /// <para>The state of the IPsec-VPN connection. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>ike_sa_not_established</b>: Phase 1 negotiations failed.</description></item>
+                        /// <item><description><b>ike_sa_established</b>: Phase 1 negotiations succeeded.</description></item>
+                        /// <item><description><b>ipsec_sa_not_established</b>: Phase 2 negotiations failed.</description></item>
+                        /// <item><description><b>ipsec_sa_established</b>: Phase 2 negotiations succeeded.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **ike_sa_not_established**: Phase 1 negotiations failed.
-                        /// *   **ike_sa_established**: Phase 1 negotiations succeeded.
-                        /// *   **ipsec_sa_not_established**: Phase 2 negotiations failed.
-                        /// *   **ipsec_sa_established**: Phase 2 negotiations succeeded.
+                        /// <b>Example:</b>
+                        /// <para>ipsec_sa_established</para>
                         /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
                         public string Status { get; set; }
 
                         /// <summary>
-                        /// The BGP configurations.
+                        /// <para>The BGP configurations.</para>
                         /// </summary>
                         [NameInMap("TunnelBgpConfig")]
                         [Validation(Required=false)]
                         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig TunnelBgpConfig { get; set; }
                         public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig : TeaModel {
                             /// <summary>
-                            /// The negotiation state of BGP. Valid values:
+                            /// <para>The negotiation state of BGP. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>success</b></description></item>
+                            /// <item><description><b>false</b></description></item>
+                            /// </list>
                             /// 
-                            /// *   **success**
-                            /// *   **false**
+                            /// <b>Example:</b>
+                            /// <para>success</para>
                             /// </summary>
                             [NameInMap("BgpStatus")]
                             [Validation(Required=false)]
                             public string BgpStatus { get; set; }
 
                             /// <summary>
-                            /// The ASN on the Alibaba Cloud side.
+                            /// <para>The ASN on the Alibaba Cloud side.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>65530</para>
                             /// </summary>
                             [NameInMap("LocalAsn")]
                             [Validation(Required=false)]
                             public string LocalAsn { get; set; }
 
                             /// <summary>
-                            /// The BGP address on the Alibaba Cloud side.
+                            /// <para>The BGP address on the Alibaba Cloud side.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>169.254.10.1</para>
                             /// </summary>
                             [NameInMap("LocalBgpIp")]
                             [Validation(Required=false)]
                             public string LocalBgpIp { get; set; }
 
                             /// <summary>
-                            /// The ASN of the tunnel peer.
+                            /// <para>The ASN of the tunnel peer.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>65531</para>
                             /// </summary>
                             [NameInMap("PeerAsn")]
                             [Validation(Required=false)]
                             public string PeerAsn { get; set; }
 
                             /// <summary>
-                            /// The BGP IP address of the tunnel peer.
+                            /// <para>The BGP IP address of the tunnel peer.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>169.254.10.2</para>
                             /// </summary>
                             [NameInMap("PeerBgpIp")]
                             [Validation(Required=false)]
                             public string PeerBgpIp { get; set; }
 
                             /// <summary>
-                            /// The BGP CIDR block of the tunnel.
+                            /// <para>The BGP CIDR block of the tunnel.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>169.254.10.0/30</para>
                             /// </summary>
                             [NameInMap("TunnelCidr")]
                             [Validation(Required=false)]
@@ -539,80 +712,111 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         }
 
                         /// <summary>
-                        /// The tunnel ID.
+                        /// <para>The tunnel ID.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>tun-opsqc4d97wni27****</para>
                         /// </summary>
                         [NameInMap("TunnelId")]
                         [Validation(Required=false)]
                         public string TunnelId { get; set; }
 
                         /// <summary>
-                        /// The configuration of Phase 1 negotiations.
+                        /// <para>The configuration of Phase 1 negotiations.</para>
                         /// </summary>
                         [NameInMap("TunnelIkeConfig")]
                         [Validation(Required=false)]
                         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig TunnelIkeConfig { get; set; }
                         public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig : TeaModel {
                             /// <summary>
-                            /// The authentication algorithm in the IKE phase.
+                            /// <para>The authentication algorithm in the IKE phase.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>sha1</para>
                             /// </summary>
                             [NameInMap("IkeAuthAlg")]
                             [Validation(Required=false)]
                             public string IkeAuthAlg { get; set; }
 
                             /// <summary>
-                            /// The encryption algorithm in the IKE phase.
+                            /// <para>The encryption algorithm in the IKE phase.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>aes</para>
                             /// </summary>
                             [NameInMap("IkeEncAlg")]
                             [Validation(Required=false)]
                             public string IkeEncAlg { get; set; }
 
                             /// <summary>
-                            /// The lifetime in the IKE phase. Unit: seconds.
+                            /// <para>The lifetime in the IKE phase. Unit: seconds.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>86400</para>
                             /// </summary>
                             [NameInMap("IkeLifetime")]
                             [Validation(Required=false)]
                             public string IkeLifetime { get; set; }
 
                             /// <summary>
-                            /// The IKE negotiation mode.
+                            /// <para>The IKE negotiation mode.</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>main</b>: This mode offers higher security during negotiations.</description></item>
+                            /// <item><description><b>aggressive</b>: This mode is faster and has a higher success rate.</description></item>
+                            /// </list>
                             /// 
-                            /// *   **main**: This mode offers higher security during negotiations.
-                            /// *   **aggressive**: This mode is faster and has a higher success rate.
+                            /// <b>Example:</b>
+                            /// <para>main</para>
                             /// </summary>
                             [NameInMap("IkeMode")]
                             [Validation(Required=false)]
                             public string IkeMode { get; set; }
 
                             /// <summary>
-                            /// The DH group in the IKE phase.
+                            /// <para>The DH group in the IKE phase.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>group2</para>
                             /// </summary>
                             [NameInMap("IkePfs")]
                             [Validation(Required=false)]
                             public string IkePfs { get; set; }
 
                             /// <summary>
-                            /// The version of the IKE protocol.
+                            /// <para>The version of the IKE protocol.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>ikev1</para>
                             /// </summary>
                             [NameInMap("IkeVersion")]
                             [Validation(Required=false)]
                             public string IkeVersion { get; set; }
 
                             /// <summary>
-                            /// The identifier of the tunnel on the Alibaba Cloud side.
+                            /// <para>The identifier of the tunnel on the Alibaba Cloud side.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>47.21.XX.XX</para>
                             /// </summary>
                             [NameInMap("LocalId")]
                             [Validation(Required=false)]
                             public string LocalId { get; set; }
 
                             /// <summary>
-                            /// The pre-shared key.
+                            /// <para>The pre-shared key.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>123456****</para>
                             /// </summary>
                             [NameInMap("Psk")]
                             [Validation(Required=false)]
                             public string Psk { get; set; }
 
                             /// <summary>
-                            /// The identifier of the tunnel peer.
+                            /// <para>The identifier of the tunnel peer.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>47.42.XX.XX</para>
                             /// </summary>
                             [NameInMap("RemoteId")]
                             [Validation(Required=false)]
@@ -621,35 +825,47 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         }
 
                         /// <summary>
-                        /// The configurations of Phase 2 negotiations.
+                        /// <para>The configurations of Phase 2 negotiations.</para>
                         /// </summary>
                         [NameInMap("TunnelIpsecConfig")]
                         [Validation(Required=false)]
                         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig TunnelIpsecConfig { get; set; }
                         public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig : TeaModel {
                             /// <summary>
-                            /// The authentication algorithm in the IPsec phase.
+                            /// <para>The authentication algorithm in the IPsec phase.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>sha1</para>
                             /// </summary>
                             [NameInMap("IpsecAuthAlg")]
                             [Validation(Required=false)]
                             public string IpsecAuthAlg { get; set; }
 
                             /// <summary>
-                            /// The encryption algorithm in the IPsec phase.
+                            /// <para>The encryption algorithm in the IPsec phase.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>aes</para>
                             /// </summary>
                             [NameInMap("IpsecEncAlg")]
                             [Validation(Required=false)]
                             public string IpsecEncAlg { get; set; }
 
                             /// <summary>
-                            /// The lifetime in the IPsec phase. Unit: seconds.
+                            /// <para>The lifetime in the IPsec phase. Unit: seconds.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>86400</para>
                             /// </summary>
                             [NameInMap("IpsecLifetime")]
                             [Validation(Required=false)]
                             public string IpsecLifetime { get; set; }
 
                             /// <summary>
-                            /// The DH group in the IPsec phase.
+                            /// <para>The DH group in the IPsec phase.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>group2</para>
                             /// </summary>
                             [NameInMap("IpsecPfs")]
                             [Validation(Required=false)]
@@ -658,7 +874,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         }
 
                         /// <summary>
-                        /// The zone of the tunnel.
+                        /// <para>The zone of the tunnel.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>ap-southeast-5a</para>
                         /// </summary>
                         [NameInMap("ZoneNo")]
                         [Validation(Required=false)]
@@ -669,65 +888,89 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The health check configuration of the IPsec-VPN connection.
+                /// <para>The health check configuration of the IPsec-VPN connection.</para>
                 /// </summary>
                 [NameInMap("VcoHealthCheck")]
                 [Validation(Required=false)]
                 public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVcoHealthCheck VcoHealthCheck { get; set; }
                 public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVcoHealthCheck : TeaModel {
                     /// <summary>
-                    /// The destination IP address.
+                    /// <para>The destination IP address.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>192.168.0.1</para>
                     /// </summary>
                     [NameInMap("Dip")]
                     [Validation(Required=false)]
                     public string Dip { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the health check feature is enabled.
+                    /// <para>Indicates whether the health check feature is enabled.</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>true</b></description></item>
+                    /// <item><description><b>false</b></description></item>
+                    /// </list>
                     /// 
-                    /// *   **true**
-                    /// *   **false**
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("Enable")]
                     [Validation(Required=false)]
                     public string Enable { get; set; }
 
                     /// <summary>
-                    /// The interval between two consecutive health checks. Unit: seconds.
+                    /// <para>The interval between two consecutive health checks. Unit: seconds.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2</para>
                     /// </summary>
                     [NameInMap("Interval")]
                     [Validation(Required=false)]
                     public int? Interval { get; set; }
 
                     /// <summary>
-                    /// Indicates whether advertised routes are withdrawn when the health check fails.
+                    /// <para>Indicates whether advertised routes are withdrawn when the health check fails.</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>revoke_route</b>: Advertised routes are withdrawn.</description></item>
+                    /// <item><description><b>reserve_route</b>: Advertised routes are not withdrawn.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **revoke_route**: Advertised routes are withdrawn.
-                    /// *   **reserve_route**: Advertised routes are not withdrawn.
+                    /// <b>Example:</b>
+                    /// <para>revoke_route</para>
                     /// </summary>
                     [NameInMap("Policy")]
                     [Validation(Required=false)]
                     public string Policy { get; set; }
 
                     /// <summary>
-                    /// The maximum number of health check retries.
+                    /// <para>The maximum number of health check retries.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3</para>
                     /// </summary>
                     [NameInMap("Retry")]
                     [Validation(Required=false)]
                     public int? Retry { get; set; }
 
                     /// <summary>
-                    /// The source IP address.
+                    /// <para>The source IP address.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>192.168.0.50</para>
                     /// </summary>
                     [NameInMap("Sip")]
                     [Validation(Required=false)]
                     public string Sip { get; set; }
 
                     /// <summary>
-                    /// The state of the health check. Valid values:
+                    /// <para>The state of the health check. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>success</b></description></item>
+                    /// <item><description><b>failed</b></description></item>
+                    /// </list>
                     /// 
-                    /// *   **success**
-                    /// *   **failed**
+                    /// <b>Example:</b>
+                    /// <para>success</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -736,59 +979,81 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The BGP configuration of the IPsec-VPN connection.
+                /// <para>The BGP configuration of the IPsec-VPN connection.</para>
                 /// </summary>
                 [NameInMap("VpnBgpConfig")]
                 [Validation(Required=false)]
                 public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVpnBgpConfig VpnBgpConfig { get; set; }
                 public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVpnBgpConfig : TeaModel {
                     /// <summary>
-                    /// The authentication key of the BGP routing protocol.
+                    /// <para>The authentication key of the BGP routing protocol.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>AuthKey****</para>
                     /// </summary>
                     [NameInMap("AuthKey")]
                     [Validation(Required=false)]
                     public string AuthKey { get; set; }
 
                     /// <summary>
-                    /// The ASN on the Alibaba Cloud side.
+                    /// <para>The ASN on the Alibaba Cloud side.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>65531</para>
                     /// </summary>
                     [NameInMap("LocalAsn")]
                     [Validation(Required=false)]
                     public long? LocalAsn { get; set; }
 
                     /// <summary>
-                    /// The BGP IP address on the Alibaba Cloud side.
+                    /// <para>The BGP IP address on the Alibaba Cloud side.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>169.254.10.2</para>
                     /// </summary>
                     [NameInMap("LocalBgpIp")]
                     [Validation(Required=false)]
                     public string LocalBgpIp { get; set; }
 
                     /// <summary>
-                    /// The ASN of the peer.
+                    /// <para>The ASN of the peer.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>65530</para>
                     /// </summary>
                     [NameInMap("PeerAsn")]
                     [Validation(Required=false)]
                     public long? PeerAsn { get; set; }
 
                     /// <summary>
-                    /// The BGP IP address of the peer.
+                    /// <para>The BGP IP address of the peer.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>169.254.10.1</para>
                     /// </summary>
                     [NameInMap("PeerBgpIp")]
                     [Validation(Required=false)]
                     public string PeerBgpIp { get; set; }
 
                     /// <summary>
-                    /// The negotiation state of the BGP routing protocol. Valid values:
+                    /// <para>The negotiation state of the BGP routing protocol. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>success</b></description></item>
+                    /// <item><description><b>false</b></description></item>
+                    /// </list>
                     /// 
-                    /// *   **success**
-                    /// *   **false**
+                    /// <b>Example:</b>
+                    /// <para>success</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// The BGP CIDR block of the IPsec-VPN connection. The CIDR block falls within 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.
+                    /// <para>The BGP CIDR block of the IPsec-VPN connection. The CIDR block falls within 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>169.254.10.0/30</para>
                     /// </summary>
                     [NameInMap("TunnelCidr")]
                     [Validation(Required=false)]
@@ -797,14 +1062,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the IPsec-VPN connection.
+                /// <para>The ID of the IPsec-VPN connection.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vco-bp10lz7aejumd****</para>
                 /// </summary>
                 [NameInMap("VpnConnectionId")]
                 [Validation(Required=false)]
                 public string VpnConnectionId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPN gateway.
+                /// <para>The ID of the VPN gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpn-bp1q8bgx4xnkm****</para>
                 /// </summary>
                 [NameInMap("VpnGatewayId")]
                 [Validation(Required=false)]

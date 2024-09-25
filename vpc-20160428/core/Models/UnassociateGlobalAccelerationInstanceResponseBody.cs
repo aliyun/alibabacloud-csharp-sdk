@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateGlobalAccelerationInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BD5BCEE8-F62C-40C2-9AC3-89XXXXXXXXX</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

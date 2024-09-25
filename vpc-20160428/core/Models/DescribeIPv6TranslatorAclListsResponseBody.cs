@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIPv6TranslatorAclListsResponseBody : TeaModel {
         /// <summary>
-        /// The list of network ACLs.
+        /// <para>The list of network ACLs.</para>
         /// </summary>
         [NameInMap("Ipv6TranslatorAcls")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAclsIPv6TranslatorAcl> IPv6TranslatorAcl { get; set; }
             public class DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAclsIPv6TranslatorAcl : TeaModel {
                 /// <summary>
-                /// The ACL ID.
+                /// <para>The ACL ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ipv6transacl-bp1de2****</para>
                 /// </summary>
                 [NameInMap("AclId")]
                 [Validation(Required=false)]
                 public string AclId { get; set; }
 
                 /// <summary>
-                /// The ACL name.
+                /// <para>The ACL name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>acl1</para>
                 /// </summary>
                 [NameInMap("AclName")]
                 [Validation(Required=false)]
@@ -39,28 +45,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54B48E3D-DF70-471B-AA93-08E683A1B45</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

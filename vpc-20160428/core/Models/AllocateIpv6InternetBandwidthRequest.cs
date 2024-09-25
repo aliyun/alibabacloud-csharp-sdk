@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateIpv6InternetBandwidthRequest : TeaModel {
         /// <summary>
-        /// The Internet bandwidth of the IPv6 gateway. Unit: Mbit/s. Valid values: **1 to 5000**.
+        /// <para>The Internet bandwidth of the IPv6 gateway. Unit: Mbit/s. Valid values: <b>1 to 5000</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -34,28 +39,36 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The metering method of the Internet bandwidth for the IPv6 address. Valid values:
+        /// <para>The metering method of the Internet bandwidth for the IPv6 address. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PayByTraffic</b>: pay-by-data-transfer</description></item>
+        /// <item><description><b>PayByBandwidth</b> (default): pay-by-bandwidth</description></item>
+        /// </list>
         /// 
-        /// *   **PayByTraffic**: pay-by-data-transfer
-        /// *   **PayByBandwidth** (default): pay-by-bandwidth
+        /// <b>Example:</b>
+        /// <para>PayByBandwidth</para>
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// The ID of the IPv6 address.
+        /// <para>The ID of the IPv6 address.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ipv6-2zen5j4axcp5l5qyy****</para>
         /// </summary>
         [NameInMap("Ipv6AddressId")]
         [Validation(Required=false)]
         public string Ipv6AddressId { get; set; }
 
         /// <summary>
-        /// The ID of the IPv6 gateway.
+        /// <para>The ID of the IPv6 gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ipv6gw-uf6hcyzu65v98v3du****</para>
         /// </summary>
         [NameInMap("Ipv6GatewayId")]
         [Validation(Required=false)]
@@ -70,9 +83,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <para>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-huhehaote</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

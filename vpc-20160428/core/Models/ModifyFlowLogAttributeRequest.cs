@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyFlowLogAttributeRequest : TeaModel {
         /// <summary>
-        /// The new sampling interval of the flow log. Unit: minutes. Valid values: **1**, **5**, and **10**.
+        /// <para>The new sampling interval of the flow log. Unit: minutes. Valid values: <b>1</b>, <b>5</b>, and <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("AggregationInterval")]
         [Validation(Required=false)]
         public int? AggregationInterval { get; set; }
 
         /// <summary>
-        /// The new description of the flow log.
+        /// <para>The new description of the flow log.</para>
+        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>This is my Flowlog.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the flow log.
+        /// <para>The ID of the flow log.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>fl-m5e8vhz2t21sel1nq****</para>
         /// </summary>
         [NameInMap("FlowLogId")]
         [Validation(Required=false)]
         public string FlowLogId { get; set; }
 
         /// <summary>
-        /// The new name of the flow log.
+        /// <para>The new name of the flow log.</para>
+        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>myFlowlog</para>
         /// </summary>
         [NameInMap("FlowLogName")]
         [Validation(Required=false)]
         public string FlowLogName { get; set; }
+
+        [NameInMap("IpVersion")]
+        [Validation(Required=false)]
+        public string IpVersion { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -52,11 +65,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the flow log is created.
+        /// <para>The ID of the region where the flow log is created.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-qingdao</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

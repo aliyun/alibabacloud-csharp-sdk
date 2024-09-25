@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateExpressConnectTrafficQosQueueRequest : TeaModel {
         /// <summary>
-        /// The percentage of bandwidth allocated to the QoS queue.
+        /// <para>The percentage of bandwidth allocated to the QoS queue.</para>
+        /// <list type="bullet">
+        /// <item><description>If QueueType is set to <b>Medium</b>, this parameter is required. Valid values: 1 to 100.</description></item>
+        /// <item><description>If QueueType is set to <b>Default</b>, a value of - is returned.</description></item>
+        /// </list>
         /// 
-        /// *   If QueueType is set to **Medium**, this parameter is required. Valid values: 1 to 100.
-        /// *   If QueueType is set to **Default**, a value of - is returned.
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("BandwidthPercent")]
         [Validation(Required=false)]
         public string BandwidthPercent { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// <b>Example:</b>
+        /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -39,53 +46,64 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the QoS policy.
+        /// <para>The ID of the QoS policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>qos-2giu0a6vd5x0mv4700</para>
         /// </summary>
         [NameInMap("QosId")]
         [Validation(Required=false)]
         public string QosId { get; set; }
 
         /// <summary>
-        /// The description of the QoS queue.
+        /// <para>The description of the QoS queue.</para>
+        /// <para>It must be 0 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// It must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>qos-queue-test</para>
         /// </summary>
         [NameInMap("QueueDescription")]
         [Validation(Required=false)]
         public string QueueDescription { get; set; }
 
         /// <summary>
-        /// The name of the QoS queue.
+        /// <para>The name of the QoS queue.</para>
+        /// <para>It must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// It must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>qos-queue-test</para>
         /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]
         public string QueueName { get; set; }
 
         /// <summary>
-        /// The priority of the QoS queue. Valid values:
+        /// <para>The priority of the QoS queue. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>High</b></description></item>
+        /// <item><description><b>Medium</b></description></item>
+        /// <item><description><b>Default</b>: default queue.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You cannot create a QoS queue of the default priority.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **High**
-        /// *   **Medium**
-        /// *   **Default**: default queue.
-        /// 
-        /// > You cannot create a QoS queue of the default priority.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>High</para>
         /// </summary>
         [NameInMap("QueueType")]
         [Validation(Required=false)]
         public string QueueType { get; set; }
 
         /// <summary>
-        /// The region ID of the QoS policy.
+        /// <para>The region ID of the QoS policy.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

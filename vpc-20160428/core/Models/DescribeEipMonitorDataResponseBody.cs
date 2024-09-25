@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeEipMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// The detailed information about the monitoring data of the EIP.
+        /// <para>The detailed information about the monitoring data of the EIP.</para>
         /// </summary>
         [NameInMap("EipMonitorDatas")]
         [Validation(Required=false)]
@@ -20,40 +20,59 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData> EipMonitorData { get; set; }
             public class DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
                 [NameInMap("EipBandwidth")]
                 [Validation(Required=false)]
                 public int? EipBandwidth { get; set; }
 
                 /// <summary>
-                /// The sum of inbound and outbound traffic.
+                /// <para>The sum of inbound and outbound traffic.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>465</para>
                 /// </summary>
                 [NameInMap("EipFlow")]
                 [Validation(Required=false)]
                 public long? EipFlow { get; set; }
 
                 /// <summary>
-                /// The number of packets.
+                /// <para>The number of packets.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3434</para>
                 /// </summary>
                 [NameInMap("EipPackets")]
                 [Validation(Required=false)]
                 public int? EipPackets { get; set; }
 
                 /// <summary>
-                /// The inbound traffic. Unit: bytes.
+                /// <para>The inbound traffic. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>122</para>
                 /// </summary>
                 [NameInMap("EipRX")]
                 [Validation(Required=false)]
                 public long? EipRX { get; set; }
 
                 /// <summary>
-                /// The outbound traffic. Unit: bytes.
+                /// <para>The outbound traffic. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>343</para>
                 /// </summary>
                 [NameInMap("EipTX")]
                 [Validation(Required=false)]
                 public long? EipTX { get; set; }
 
                 /// <summary>
-                /// The timestamp of the monitoring data. Specify the time in the ISO8601 standard. Example: `2020-01-21T09:50:23Z`.
+                /// <para>The timestamp of the monitoring data. Specify the time in the ISO8601 standard. Example: <c>2020-01-21T09:50:23Z</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-01-21T09:50:23Z</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -64,7 +83,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C8B26B44-0189-443E-9816-D951F59623A9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ReleaseEipSegmentAddressResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F7A6301A-64BA-41EC-8284-8F4838C15D1F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,36 +10,46 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnPbrRouteEntryRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID is different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate a token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID is different for each request.
+        /// <b>Example:</b>
+        /// <para>d7d24a21-f4ba-4454-9173-b3****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the policy-based route.
+        /// <para>The description of the policy-based route.</para>
+        /// <para>The description must be 1 to 100 characters in length, and cannot start with http:// or https://.</para>
         /// 
-        /// The description must be 1 to 100 characters in length, and cannot start with http:// or https://.
+        /// <b>Example:</b>
+        /// <para>desctest</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The next hop of the policy-based route.
+        /// <para>The next hop of the policy-based route.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vco-bp15oes1py4i66rmd****</para>
         /// </summary>
         [NameInMap("NextHop")]
         [Validation(Required=false)]
         public string NextHop { get; set; }
 
         /// <summary>
-        /// The tunneling protocol. Set the value to **Ipsec**.
+        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ipsec</para>
         /// </summary>
         [NameInMap("OverlayMode")]
         [Validation(Required=false)]
@@ -54,30 +64,37 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The priority of the policy-based route. Valid values: **1** to **100**. Default value: **10**.
+        /// <para>The priority of the policy-based route. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>A smaller value indicates a higher priority.</para>
         /// 
-        /// A smaller value indicates a higher priority.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
 
         /// <summary>
-        /// Specifies whether to advertise the policy-based route to a virtual private cloud (VPC) route table. Valid values:
+        /// <para>Specifies whether to advertise the policy-based route to a virtual private cloud (VPC) route table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **true**
-        /// *   **false**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("PublishVpc")]
         [Validation(Required=false)]
         public bool? PublishVpc { get; set; }
 
         /// <summary>
-        /// The region ID of the VPN gateway. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <para>The region ID of the VPN gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -92,45 +109,53 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The destination CIDR block of the policy-based route.
+        /// <para>The destination CIDR block of the policy-based route.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10.0.0.0/24</para>
         /// </summary>
         [NameInMap("RouteDest")]
         [Validation(Required=false)]
         public string RouteDest { get; set; }
 
         /// <summary>
-        /// The source CIDR block of the policy-based route.
+        /// <para>The source CIDR block of the policy-based route.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>192.168.1.0/24</para>
         /// </summary>
         [NameInMap("RouteSource")]
         [Validation(Required=false)]
         public string RouteSource { get; set; }
 
         /// <summary>
-        /// The VPN gateway ID.
+        /// <para>The VPN gateway ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpn-bp1a3kqjiiq9legfx****</para>
         /// </summary>
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]
         public string VpnGatewayId { get; set; }
 
         /// <summary>
-        /// The weight of the policy-based route.
+        /// <para>The weight of the policy-based route.</para>
+        /// <para>If you use the same VPN gateway to establish active/standby IPsec-VPN connections, you can configure route weights to specify which connection is active. A value of 100 specifies the active connection, whereas a value of 0 specifies the standby connection.</para>
+        /// <para>You can configure health checks to automatically check the connectivity of IPsec-VPN connections. If the active connection is down, the standby connection automatically takes over. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</para>
+        /// <list type="bullet">
+        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</description></item>
+        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you specify active/standby IPsec-VPN connections, the active policy-based route and the standby policy-based route must have the same source and destination CIDR blocks.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// If you use the same VPN gateway to establish active/standby IPsec-VPN connections, you can configure route weights to specify which connection is active. A value of 100 specifies the active connection, whereas a value of 0 specifies the standby connection.
-        /// 
-        /// You can configure health checks to automatically check the connectivity of IPsec-VPN connections. If the active connection is down, the standby connection automatically takes over. For more information, see [CreateVpnConnection](https://help.aliyun.com/document_detail/120391.html).
-        /// 
-        /// *   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.
-        /// *   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.
-        /// 
-        /// >  If you specify active/standby IPsec-VPN connections, the active policy-based route and the standby policy-based route must have the same source and destination CIDR blocks.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

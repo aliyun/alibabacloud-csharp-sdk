@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetDhcpOptionsSetResponseBody : TeaModel {
         /// <summary>
-        /// The information about the virtual private cloud (VPC) that is associated with the DHCP options set.
+        /// <para>The information about the virtual private cloud (VPC) that is associated with the DHCP options set.</para>
         /// </summary>
         [NameInMap("AssociateVpcs")]
         [Validation(Required=false)]
         public List<GetDhcpOptionsSetResponseBodyAssociateVpcs> AssociateVpcs { get; set; }
         public class GetDhcpOptionsSetResponseBodyAssociateVpcs : TeaModel {
             /// <summary>
-            /// The status of the VPC that is associated with the DHCP options set. Valid values:
+            /// <para>The status of the VPC that is associated with the DHCP options set. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>InUse</b>: in use</description></item>
+            /// <item><description><b>Pending</b>: being configured</description></item>
+            /// </list>
             /// 
-            /// *   **InUse**: in use
-            /// *   **Pending**: being configured
+            /// <b>Example:</b>
+            /// <para>InUse</para>
             /// </summary>
             [NameInMap("AssociateStatus")]
             [Validation(Required=false)]
             public string AssociateStatus { get; set; }
 
             /// <summary>
-            /// The ID of the VPC that is associated with the DHCP options set.
+            /// <para>The ID of the VPC that is associated with the DHCP options set.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-eb3b54r6otues4tjj****</para>
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -36,41 +43,55 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The configuration information about the DHCP options set.
+        /// <para>The configuration information about the DHCP options set.</para>
         /// </summary>
         [NameInMap("DhcpOptions")]
         [Validation(Required=false)]
         public GetDhcpOptionsSetResponseBodyDhcpOptions DhcpOptions { get; set; }
         public class GetDhcpOptionsSetResponseBodyDhcpOptions : TeaModel {
             /// <summary>
-            /// The suffix of the hostname.
+            /// <para>The suffix of the hostname.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The IP address of the DNS server.
+            /// <para>The IP address of the DNS server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.XX.XX.123</para>
             /// </summary>
             [NameInMap("DomainNameServers")]
             [Validation(Required=false)]
             public string DomainNameServers { get; set; }
 
             /// <summary>
-            /// The lease time of the IPv6 addresses for the DHCP options set.
+            /// <para>The lease time of the IPv6 addresses for the DHCP options set.</para>
+            /// <list type="bullet">
+            /// <item><description>If you use hours as the unit, Valid values are <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</description></item>
+            /// <item><description>If you use days as the unit, Valid values are <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</description></item>
+            /// </list>
             /// 
-            /// *   If you use hours as the unit, Valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
-            /// *   If you use days as the unit, Valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
+            /// <b>Example:</b>
+            /// <para>3650d</para>
             /// </summary>
             [NameInMap("Ipv6LeaseTime")]
             [Validation(Required=false)]
             public string Ipv6LeaseTime { get; set; }
 
             /// <summary>
-            /// The lease time of the IPv4 addresses for the DHCP options set.
+            /// <para>The lease time of the IPv4 addresses for the DHCP options set.</para>
+            /// <list type="bullet">
+            /// <item><description>If you use hours as the unit, valid values are <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</description></item>
+            /// <item><description>If you use days as the unit, valid values are <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</description></item>
+            /// </list>
             /// 
-            /// *   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
-            /// *   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
+            /// <b>Example:</b>
+            /// <para>3650d</para>
             /// </summary>
             [NameInMap("LeaseTime")]
             [Validation(Required=false)]
@@ -79,75 +100,103 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The description of the DHCP options set.
+        /// <para>The description of the DHCP options set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("DhcpOptionsSetDescription")]
         [Validation(Required=false)]
         public string DhcpOptionsSetDescription { get; set; }
 
         /// <summary>
-        /// The ID of the DHCP options set.
+        /// <para>The ID of the DHCP options set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dopt-o6w0df4epg9zo8isy****</para>
         /// </summary>
         [NameInMap("DhcpOptionsSetId")]
         [Validation(Required=false)]
         public string DhcpOptionsSetId { get; set; }
 
         /// <summary>
-        /// The name of the DHCP options set.
+        /// <para>The name of the DHCP options set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("DhcpOptionsSetName")]
         [Validation(Required=false)]
         public string DhcpOptionsSetName { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the DHCP options set belongs.
+        /// <para>The ID of the Alibaba Cloud account to which the DHCP options set belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>283117732402483989</para>
         /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxazb4ph****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The status of the DHCP options set. Valid values:
+        /// <para>The status of the DHCP options set. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Available</b>: available</description></item>
+        /// <item><description><b>InUse</b>: in use</description></item>
+        /// <item><description><b>Deleted</b>: deleted</description></item>
+        /// <item><description><b>Pending</b>: being configured</description></item>
+        /// </list>
         /// 
-        /// *   **Available**: available
-        /// *   **InUse**: in use
-        /// *   **Deleted**: deleted
-        /// *   **Pending**: being configured
+        /// <b>Example:</b>
+        /// <para>Available</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The tag list.
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetDhcpOptionsSetResponseBodyTags> Tags { get; set; }
         public class GetDhcpOptionsSetResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>FinanceDept</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>FinanceJoshua</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

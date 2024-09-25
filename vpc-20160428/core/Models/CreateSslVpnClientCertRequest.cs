@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateSslVpnClientCertRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <remarks>
+        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> may be different for each API request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-        /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// <b>Example:</b>
+        /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The name of the SSL client certificate.
+        /// <para>The name of the SSL client certificate.</para>
+        /// <para>The name must be 1 to 100 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>SslVpnClientCert1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -38,11 +43,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VPN gateway is created.
+        /// <para>The ID of the region where the VPN gateway is created.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -57,9 +63,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the SSL server.
+        /// <para>The ID of the SSL server.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vss-m5et0q3iy1qex328w****</para>
         /// </summary>
         [NameInMap("SslVpnServerId")]
         [Validation(Required=false)]

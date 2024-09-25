@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePhysicalConnectionOccupancyOrderResponseBody : TeaModel {
         /// <summary>
-        /// The details.
+        /// <para>The details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreatePhysicalConnectionOccupancyOrderResponseBodyData Data { get; set; }
         public class CreatePhysicalConnectionOccupancyOrderResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the order that is placed.
+            /// <para>The ID of the order that is placed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50187055895****</para>
             /// </summary>
             [NameInMap("OrderId")]
             [Validation(Required=false)]
@@ -26,7 +29,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9B9300FE-11E2-4E3B-949C-BED3B44DD26D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

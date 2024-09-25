@@ -10,34 +10,42 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouterInterfacesRequest : TeaModel {
         /// <summary>
-        /// The filter information.
+        /// <para>The filter information.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeRouterInterfacesRequestFilter> Filter { get; set; }
         public class DescribeRouterInterfacesRequestFilter : TeaModel {
             /// <summary>
-            /// The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:
+            /// <para>The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:</para>
+            /// <list type="bullet">
+            /// <item><description><b>RouterInterfaceId</b>: the ID of the router interface.</description></item>
+            /// <item><description><b>RouterId</b>: the ID of the router.</description></item>
+            /// <item><description><b>RouterType</b>: the router type. Valid values: <b>VRouter</b> and <b>VBR</b>.</description></item>
+            /// <item><description><b>RouterInterfaceOwnerId</b>: the ID of the Alibaba Cloud account to which the router interface belongs.</description></item>
+            /// <item><description><b>OppositeInterfaceId</b>: the ID of the peer router interface.</description></item>
+            /// <item><description><b>OppositeRouterType</b>: the type of the peer router interface. Valid values: <b>VRouter</b> and <b>VBR</b>.</description></item>
+            /// <item><description><b>OppositeRouterId</b>: the ID of the peer router.</description></item>
+            /// <item><description><b>OppositeInterfaceOwnerId</b>: the ID of the Alibaba Cloud account to which the peer router interface belongs.</description></item>
+            /// <item><description><b>Status</b>: the status of the router interface.</description></item>
+            /// <item><description><b>Name</b>: the name of the router interface.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> The logical operator among multiple values in a filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator among filter conditions is AND. Only routers that meet all the filter conditions are queried.</para>
+            /// </remarks>
             /// 
-            /// *   **RouterInterfaceId**: the ID of the router interface.
-            /// *   **RouterId**: the ID of the router.
-            /// *   **RouterType**: the router type. Valid values: **VRouter** and **VBR**.
-            /// *   **RouterInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the router interface belongs.
-            /// *   **OppositeInterfaceId**: the ID of the peer router interface.
-            /// *   **OppositeRouterType**: the type of the peer router interface. Valid values: **VRouter** and **VBR**.
-            /// *   **OppositeRouterId**: the ID of the peer router.
-            /// *   **OppositeInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the peer router interface belongs.
-            /// *   **Status**: the status of the router interface.
-            /// *   **Name**: the name of the router interface.
-            /// 
-            /// >  The logical operator among multiple values in a filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator among filter conditions is AND. Only routers that meet all the filter conditions are queried.
+            /// <b>Example:</b>
+            /// <para>Filter.1.Status</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// Specifies the value in the filter condition based on the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.
+            /// <para>Specifies the value in the filter condition based on the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Filter.1.Active 1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -46,10 +54,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// Specifies whether renewal data is included. Valid values:
+        /// <para>Specifies whether renewal data is included. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false** (default)
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IncludeReservationData")]
         [Validation(Required=false)]
@@ -60,34 +72,43 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
+        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the router interface.
+        /// <para>The region ID of the router interface.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Resource Group ID.
+        /// <para>Resource Group ID.</para>
+        /// <para>For more information about resource groups, please refer to <a href="https://help.aliyun.com/document_detail/94475.html">What is a Resource Group?</a></para>
         /// 
-        /// For more information about resource groups, please refer to [What is a Resource Group?](https://help.aliyun.com/document_detail/94475.html)
+        /// <b>Example:</b>
+        /// <para>rg-acfmxazb4ph6aiy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -102,25 +123,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags of the resource.
+        /// <para>The tags of the resource.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeRouterInterfacesRequestTags> Tags { get; set; }
         public class DescribeRouterInterfacesRequestTags : TeaModel {
             /// <summary>
-            /// The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.
+            /// <para>The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.</para>
+            /// <para>A tag key can support up to 128 characters, cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</para>
             /// 
-            /// A tag key can support up to 128 characters, cannot start with \\"aliyun\\" or \\"acs:\\", and cannot contain \\"http://\\" or \\"https://\\".
+            /// <b>Example:</b>
+            /// <para>FinanceDept</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.
+            /// <para>The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.</para>
+            /// <para>A maximum of 128 characters are supported, it cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and it cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</para>
             /// 
-            /// A maximum of 128 characters are supported, it cannot start with \\"aliyun\\" or \\"acs:\\", and it cannot contain \\"http://\\" or \\"https://\\".
+            /// <b>Example:</b>
+            /// <para>FinanceJoshua</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

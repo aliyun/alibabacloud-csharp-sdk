@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyExpressConnectTrafficQosRuleResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7B48B4B9-1EAD-469F-B488-594DAB4B6A1A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyCommonBandwidthPackageAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B450CAD8-50BC-4506-ADA7-35C6CE63E96B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

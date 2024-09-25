@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeTagKeysRequest : TeaModel {
         /// <summary>
-        /// The tag keys.
+        /// <para>The tag keys.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>keyword</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.
+        /// <para>The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResult")]
         [Validation(Required=false)]
         public int? MaxResult { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If this is your first query or no next query is to be sent, ignore this parameter.</description></item>
+        /// <item><description>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</description></item>
+        /// </list>
         /// 
-        /// *   If this is your first query or no next query is to be sent, ignore this parameter.
-        /// *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -42,11 +52,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource.
+        /// <para>The region ID of the resource.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -65,15 +76,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The resource type. Valid values:
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
+        /// <item><description><b>VSWITCH</b>: vSwitch</description></item>
+        /// <item><description><b>ROUTETABLE</b>: route table</description></item>
+        /// <item><description><b>EIP</b>: elastic IP address (EIP)</description></item>
+        /// <item><description><b>VpnGateway</b>: VPN gateway</description></item>
+        /// <item><description><b>NATGATEWAY</b>: NAT gateway</description></item>
+        /// <item><description><b>COMMONBANDWIDTHPACKAGE</b>: EIP bandwidth plan</description></item>
+        /// </list>
         /// 
-        /// *   **VPC**: virtual private cloud (VPC)
-        /// *   **VSWITCH**: vSwitch
-        /// *   **ROUTETABLE**: route table
-        /// *   **EIP**: elastic IP address (EIP)
-        /// *   **VpnGateway**: VPN gateway
-        /// *   **NATGATEWAY**: NAT gateway
-        /// *   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

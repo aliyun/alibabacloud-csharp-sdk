@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIpv6GatewaysResponseBody : TeaModel {
         /// <summary>
-        /// The information about the IPv6 gateway.
+        /// <para>The information about the IPv6 gateway.</para>
         /// </summary>
         [NameInMap("Ipv6Gateways")]
         [Validation(Required=false)]
@@ -21,86 +21,117 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway> Ipv6Gateway { get; set; }
             public class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway : TeaModel {
                 /// <summary>
-                /// The status of the IPv6 gateway. Valid values:
+                /// <para>The status of the IPv6 gateway. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Normal</b></description></item>
+                /// <item><description><b>FinancialLocked</b></description></item>
+                /// <item><description><b>SecurityLocked</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Normal**
-                /// *   **FinancialLocked**
-                /// *   **SecurityLocked**
+                /// <b>Example:</b>
+                /// <para>Normal</para>
                 /// </summary>
                 [NameInMap("BusinessStatus")]
                 [Validation(Required=false)]
                 public string BusinessStatus { get; set; }
 
                 /// <summary>
-                /// The time when the IPv6 gateway was created.
+                /// <para>The time when the IPv6 gateway was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-12-20T14:51:23Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the IPv6 gateway.
+                /// <para>The description of the IPv6 gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>descriptionforIPv6GW</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The time when the IPv6 gateway expires.
+                /// <para>The time when the IPv6 gateway expires.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-12-20T14:51:23Z</para>
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The billing method of the IPv6 gateway.
+                /// <para>The billing method of the IPv6 gateway.</para>
+                /// <para>Only <b>PostPaid</b> may be returned, which indicates that the IPv6 gateway uses the pay-as-you-go billing method.</para>
                 /// 
-                /// Only **PostPaid** may be returned, which indicates that the IPv6 gateway uses the pay-as-you-go billing method.
+                /// <b>Example:</b>
+                /// <para>PostPaid</para>
                 /// </summary>
                 [NameInMap("InstanceChargeType")]
                 [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }
 
                 /// <summary>
-                /// The ID of the IPv6 gateway.
+                /// <para>The ID of the IPv6 gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ipv6gw-hp3rwmtmfhgisipv6gw-hp3rwmtmfhgis****</para>
                 /// </summary>
                 [NameInMap("Ipv6GatewayId")]
                 [Validation(Required=false)]
                 public string Ipv6GatewayId { get; set; }
 
                 /// <summary>
-                /// The name of the IPv6 gateway.
+                /// <para>The name of the IPv6 gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ipv6GW</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the region in which the IPv6 gateway is deployed.
+                /// <para>The ID of the region in which the IPv6 gateway is deployed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-huhehaote</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The resource group ID.
+                /// <para>The resource group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-bp67acfmxazb4ph****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The status of the IPv6 gateway. Valid values:
+                /// <para>The status of the IPv6 gateway. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Pending</b></description></item>
+                /// <item><description><b>Available</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Pending**
-                /// *   **Available**
+                /// <b>Example:</b>
+                /// <para>Available</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The information about the tags.
+                /// <para>The information about the tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -111,14 +142,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag> Tag { get; set; }
                     public class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// <para>The tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>FinanceDept</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// <para>The tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>FinanceJoshua</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -129,7 +166,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the VPC to which the IPv6 gateway belongs.
+                /// <para>The ID of the VPC to which the IPv6 gateway belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-123sedrfswd23****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -140,28 +180,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E3A06196-3E7C-490D-8F39-CB4B5A0CE8AD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

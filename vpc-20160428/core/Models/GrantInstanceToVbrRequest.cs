@@ -10,57 +10,70 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GrantInstanceToVbrRequest : TeaModel {
         /// <summary>
-        /// The VBRs that need to acquire permissions on the VPC. Valid values:
+        /// <para>The VBRs that need to acquire permissions on the VPC. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>All</b>: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave <b>VbrInstanceIds</b> empty.</description></item>
+        /// <item><description><b>Specify</b>: Permissions on the VPC are granted to the specified VBRs. <b>VbrInstanceIds</b> must be assigned a value.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **All**: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave **VbrInstanceIds** empty.
-        /// *   **Specify**: Permissions on the VPC are granted to the specified VBRs. **VbrInstanceIds** must be assigned a value.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>All</para>
         /// </summary>
         [NameInMap("GrantType")]
         [Validation(Required=false)]
         public string GrantType { get; set; }
 
         /// <summary>
-        /// The ID of the VPC.
+        /// <para>The ID of the VPC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-bp1lqhq93q8evjpky****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VPC is deployed.
+        /// <para>The ID of the region where the VPC is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The information about the VBRs.
+        /// <para>The information about the VBRs.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("VbrInstanceIds")]
         [Validation(Required=false)]
         public List<string> VbrInstanceIds { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the VBR belongs.
+        /// <para>The ID of the Alibaba Cloud account to which the VBR belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1210123456123456</para>
         /// </summary>
         [NameInMap("VbrOwnerUid")]
         [Validation(Required=false)]
         public long? VbrOwnerUid { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VBR is deployed.
+        /// <para>The ID of the region where the VBR is deployed.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("VbrRegionNo")]
         [Validation(Required=false)]

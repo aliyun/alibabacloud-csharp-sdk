@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UpdateTrafficMirrorFilterRuleAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>02EB8585-D4DC-4E29-A0F4-7C588C82863C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,34 +10,45 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVcoRouteEntryRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-4266****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the destination-based route.
+        /// <para>The description of the destination-based route.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>desctest</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The next hop of the destination-based route.
+        /// <para>The next hop of the destination-based route.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vco-p0w2jpkhi2eeop6q6****</para>
         /// </summary>
         [NameInMap("NextHop")]
         [Validation(Required=false)]
         public string NextHop { get; set; }
 
         /// <summary>
-        /// The tunneling protocol. Set the value to **Ipsec**, which specifies the IPsec tunneling protocol.
+        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b>, which specifies the IPsec tunneling protocol.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ipsec</para>
         /// </summary>
         [NameInMap("OverlayMode")]
         [Validation(Required=false)]
@@ -48,11 +59,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OwnerAccount { get; set; }
 
         /// <summary>
-        /// The ID of the region where the IPsec-VPN connection is established.
+        /// <para>The ID of the region where the IPsec-VPN connection is established.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -67,30 +79,37 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The destination CIDR block of the destination-based route.
+        /// <para>The destination CIDR block of the destination-based route.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>192.168.10.0/24</para>
         /// </summary>
         [NameInMap("RouteDest")]
         [Validation(Required=false)]
         public string RouteDest { get; set; }
 
         /// <summary>
-        /// The ID of the IPsec-VPN connection.
+        /// <para>The ID of the IPsec-VPN connection.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vco-p0w2jpkhi2eeop6q6****</para>
         /// </summary>
         [NameInMap("VpnConnectionId")]
         [Validation(Required=false)]
         public string VpnConnectionId { get; set; }
 
         /// <summary>
-        /// The weight of the destination-based route. Valid values:
+        /// <para>The weight of the destination-based route. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: a low priority</description></item>
+        /// <item><description><b>100</b>: a high priority</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **0**: a low priority
-        /// *   **100**: a high priority
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

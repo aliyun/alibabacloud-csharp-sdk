@@ -10,20 +10,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateGlobalAccelerationInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the GA instance.
+        /// <para>The ID of the GA instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ga-1sxeedefrr33****</para>
         /// </summary>
         [NameInMap("GlobalAccelerationInstanceId")]
         [Validation(Required=false)]
         public string GlobalAccelerationInstanceId { get; set; }
 
         /// <summary>
-        /// The backend server type. Valid values:
+        /// <para>The backend server type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>RemoteEcsInstance</b>: Elastic Compute Service (ECS) instance</description></item>
+        /// <item><description><b>RemoteSlbInstance</b>: Server Load Balancer (SLB) instance</description></item>
+        /// <item><description><b>RemoteEniInstance</b>: elastic network interface (ENI)</description></item>
+        /// </list>
         /// 
-        /// *   **RemoteEcsInstance**: Elastic Compute Service (ECS) instance
-        /// *   **RemoteSlbInstance**: Server Load Balancer (SLB) instance
-        /// *   **RemoteEniInstance**: elastic network interface (ENI)
+        /// <b>Example:</b>
+        /// <para>RemoteEcsInstance</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -38,11 +44,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the GA instance.
+        /// <para>The region ID of the GA instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

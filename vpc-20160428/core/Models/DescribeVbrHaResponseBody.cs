@@ -10,68 +10,95 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVbrHaResponseBody : TeaModel {
         /// <summary>
-        /// The time when the VBR was created.
+        /// <para>The time when the VBR was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-06-08T12:20:55</para>
         /// </summary>
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// The description of the VBR failover group.
+        /// <para>The description of the VBR failover group.</para>
+        /// <para>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>desc</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the VBR failover group.
+        /// <para>The name of the VBR failover group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VBRHa</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the other VBR in the VBR failover group.
+        /// <para>The ID of the other VBR in the VBR failover group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vbr-bp12mw1f8k3jgygk9****</para>
         /// </summary>
         [NameInMap("PeerVbrId")]
         [Validation(Required=false)]
         public string PeerVbrId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the VBR is deployed.
+        /// <para>The ID of the region in which the VBR is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status of the VBR failover group.
+        /// <para>The status of the VBR failover group.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Creating</b></description></item>
+        /// <item><description><b>Active</b></description></item>
+        /// </list>
         /// 
-        /// *   **Creating**
-        /// *   **Active**
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The ID of the VBR failover group.
+        /// <para>The ID of the VBR failover group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vbrha-sa1sxheuxtd98****</para>
         /// </summary>
         [NameInMap("VbrHaId")]
         [Validation(Required=false)]
         public string VbrHaId { get; set; }
 
         /// <summary>
-        /// The VBR ID.
+        /// <para>The VBR ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vbr-bp1jcg5cmxjbl9xgc****</para>
         /// </summary>
         [NameInMap("VbrId")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVirtualBorderRouterResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the VBR.
+        /// <para>The ID of the VBR.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vbr-bp1jcg5cmxjbl9xgc****</para>
         /// </summary>
         [NameInMap("VbrId")]
         [Validation(Required=false)]

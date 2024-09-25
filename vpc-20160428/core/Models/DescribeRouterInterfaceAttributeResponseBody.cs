@@ -10,402 +10,548 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouterInterfaceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the access point.
+        /// <para>The ID of the access point.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ap-cn-qingdao-ls-A</para>
         /// </summary>
         [NameInMap("AccessPointId")]
         [Validation(Required=false)]
         public string AccessPointId { get; set; }
 
         /// <summary>
-        /// The bandwidth of the router interface. Unit: Mbit/s.
+        /// <para>The bandwidth of the router interface. Unit: Mbit/s.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// The status of the router interface. Valid values:
+        /// <para>The status of the router interface. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Normal</b></description></item>
+        /// <item><description><b>FinancialLocked</b></description></item>
+        /// <item><description><b>SecurityLocked</b></description></item>
+        /// </list>
         /// 
-        /// *   **Normal**
-        /// *   **FinancialLocked**
-        /// *   **SecurityLocked**
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("BusinessStatus")]
         [Validation(Required=false)]
         public string BusinessStatus { get; set; }
 
         /// <summary>
-        /// The billing method. Valid values:
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>AfterPay</b>: pay-as-you-go</description></item>
+        /// <item><description><b>PrePaid</b>: subscription</description></item>
+        /// </list>
         /// 
-        /// *   **AfterPay**: pay-as-you-go
-        /// *   **PrePaid**: subscription
+        /// <b>Example:</b>
+        /// <para>AfterPay</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The time when the connection was established.
+        /// <para>The time when the connection was established.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-04-14T08:58:04Z</para>
         /// </summary>
         [NameInMap("ConnectedTime")]
         [Validation(Required=false)]
         public string ConnectedTime { get; set; }
 
         /// <summary>
-        /// The time when the router interface was created.
+        /// <para>The time when the router interface was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-04-14T08:57:24Z</para>
         /// </summary>
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// Indicates whether the connection is a cross-border connection. Valid values:
+        /// <para>Indicates whether the connection is a cross-border connection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b></description></item>
+        /// </list>
         /// 
-        /// *   **false**
-        /// *   **true**
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("CrossBorder")]
         [Validation(Required=false)]
         public bool? CrossBorder { get; set; }
 
         /// <summary>
-        /// The description of the router interface.
+        /// <para>The description of the router interface.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Peer interface.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The end of the time range during which data was queried.
+        /// <para>The end of the time range during which data was queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2999-09-08T16:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:
+        /// <para>Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter takes effect only when <b>RouterType</b> is set to <b>VBR</b> and <b>OppositeRouterType</b> is set to <b>VRouter</b>.</para>
+        /// </description></item>
+        /// <item><description><para>When <b>FastLinkMode</b> is set to <b>true</b>, <b>Role</b> must be set to <b>InitiatingSide</b>. <b>AccessPointId</b>, <b>OppositeRouterType</b>, <b>OpppsiteRouterId</b>, and <b>OppositeInterfaceOwnerId</b> are required.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false** (default)
-        /// 
-        /// > 
-        /// 
-        /// *   This parameter takes effect only when **RouterType** is set to **VBR** and **OppositeRouterType** is set to **VRouter**.
-        /// 
-        /// *   When **FastLinkMode** is set to **true**, **Role** must be set to **InitiatingSide**. **AccessPointId**, **OppositeRouterType**, **OpppsiteRouterId**, and **OppositeInterfaceOwnerId** are required.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("FastLinkMode")]
         [Validation(Required=false)]
         public string FastLinkMode { get; set; }
 
         /// <summary>
-        /// The time when the router interface was modified.
+        /// <para>The time when the router interface was modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-04-28T10:02:12Z</para>
         /// </summary>
         [NameInMap("GmtModified")]
         [Validation(Required=false)]
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// Indicates whether renewal data is included. Valid values:
+        /// <para>Indicates whether renewal data is included. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b></description></item>
+        /// </list>
         /// 
-        /// *   **false**
-        /// *   **true**
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("HasReservationData")]
         [Validation(Required=false)]
         public string HasReservationData { get; set; }
 
         /// <summary>
-        /// The rate of health checks. Unit: seconds. The value indicates the interval at which probe packets are sent during a health check.
+        /// <para>The rate of health checks. Unit: seconds. The value indicates the interval at which probe packets are sent during a health check.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("HcRate")]
         [Validation(Required=false)]
         public int? HcRate { get; set; }
 
         /// <summary>
-        /// The healthy threshold. This value indicates the number of probe packets that are sent during a health check. Unit: packets.
+        /// <para>The healthy threshold. This value indicates the number of probe packets that are sent during a health check. Unit: packets.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("HcThreshold")]
         [Validation(Required=false)]
         public int? HcThreshold { get; set; }
 
         /// <summary>
-        /// The source IP address that is used for the health check.
+        /// <para>The source IP address that is used for the health check.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.1.XX.XX</para>
         /// </summary>
         [NameInMap("HealthCheckSourceIp")]
         [Validation(Required=false)]
         public string HealthCheckSourceIp { get; set; }
 
         /// <summary>
-        /// The status of the health check. Valid values:
+        /// <para>The status of the health check. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Abnormal</b></description></item>
+        /// <item><description><b>Normal</b></description></item>
+        /// <item><description><b>NoRedundantRoute</b></description></item>
+        /// <item><description><b>NoHealthCheckConfig</b></description></item>
+        /// </list>
         /// 
-        /// *   **Abnormal**
-        /// *   **Normal**
-        /// *   **NoRedundantRoute**
-        /// *   **NoHealthCheckConfig**
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("HealthCheckStatus")]
         [Validation(Required=false)]
         public string HealthCheckStatus { get; set; }
 
         /// <summary>
-        /// The destination IP address that is used for the health check.
+        /// <para>The destination IP address that is used for the health check.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2.2.XX.XX</para>
         /// </summary>
         [NameInMap("HealthCheckTargetIp")]
         [Validation(Required=false)]
         public string HealthCheckTargetIp { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The name of the router interface.
+        /// <para>The name of the router interface.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RouterInterface1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the peer access point.
+        /// <para>The ID of the peer access point.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ap-cn-qingdao-ls-B</para>
         /// </summary>
         [NameInMap("OppositeAccessPointId")]
         [Validation(Required=false)]
         public string OppositeAccessPointId { get; set; }
 
         /// <summary>
-        /// The maximum bandwidth of the peer router interface. Unit: Mbit/s.
+        /// <para>The maximum bandwidth of the peer router interface. Unit: Mbit/s.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("OppositeBandwidth")]
         [Validation(Required=false)]
         public int? OppositeBandwidth { get; set; }
 
         /// <summary>
-        /// The service status of the peer router interface. Valid values:
+        /// <para>The service status of the peer router interface. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Normal</b></description></item>
+        /// <item><description><b>FinancialLocked</b></description></item>
+        /// <item><description><b>SecurityLocked</b></description></item>
+        /// </list>
         /// 
-        /// *   **Normal**
-        /// *   **FinancialLocked**
-        /// *   **SecurityLocked**
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("OppositeInterfaceBusinessStatus")]
         [Validation(Required=false)]
         public string OppositeInterfaceBusinessStatus { get; set; }
 
         /// <summary>
-        /// The ID of the peer router interface.
+        /// <para>The ID of the peer router interface.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ri-bp1xkrzttximaoxbl****</para>
         /// </summary>
         [NameInMap("OppositeInterfaceId")]
         [Validation(Required=false)]
         public string OppositeInterfaceId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the peer router interface belongs.
+        /// <para>The ID of the Alibaba Cloud account to which the peer router interface belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1321932713****</para>
         /// </summary>
         [NameInMap("OppositeInterfaceOwnerId")]
         [Validation(Required=false)]
         public string OppositeInterfaceOwnerId { get; set; }
 
         /// <summary>
-        /// The specification of the peer router interface. Valid values:
+        /// <para>The specification of the peer router interface. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Mini.2</b>: 2 Mbit/s</description></item>
+        /// <item><description><b>Mini.5</b>: 5 Mbit/s</description></item>
+        /// <item><description><b>Small.1</b>: 10 Mbit/s</description></item>
+        /// <item><description><b>Small.2</b>: 20 Mbit/s</description></item>
+        /// <item><description><b>Small.5</b>: 50 Mbit/s</description></item>
+        /// <item><description><b>Middle.1</b>: 100 Mbit/s</description></item>
+        /// <item><description><b>Middle.2</b>: 200 Mbit/s</description></item>
+        /// <item><description><b>Middle.5</b>: 500 Mbit/s</description></item>
+        /// <item><description><b>Large.1</b>: 1,000 Mbit/s</description></item>
+        /// <item><description><b>Large.2</b>: 2,000 Mbit/s</description></item>
+        /// <item><description><b>Large.5</b>: 5,000 Mbit/s</description></item>
+        /// <item><description><b>Xlarge.1</b>: 10,000 Mbit/s</description></item>
+        /// <item><description><b>Negative</b>: not applicable</description></item>
+        /// </list>
         /// 
-        /// *   **Mini.2**: 2 Mbit/s
-        /// *   **Mini.5**: 5 Mbit/s
-        /// *   **Small.1**: 10 Mbit/s
-        /// *   **Small.2**: 20 Mbit/s
-        /// *   **Small.5**: 50 Mbit/s
-        /// *   **Middle.1**: 100 Mbit/s
-        /// *   **Middle.2**: 200 Mbit/s
-        /// *   **Middle.5**: 500 Mbit/s
-        /// *   **Large.1**: 1,000 Mbit/s
-        /// *   **Large.2**: 2,000 Mbit/s
-        /// *   **Large.5**: 5,000 Mbit/s
-        /// *   **Xlarge.1**: 10,000 Mbit/s
-        /// *   **Negative**: not applicable
+        /// <b>Example:</b>
+        /// <para>Negative</para>
         /// </summary>
         [NameInMap("OppositeInterfaceSpec")]
         [Validation(Required=false)]
         public string OppositeInterfaceSpec { get; set; }
 
         /// <summary>
-        /// The status of the peer router interface. Valid values:
+        /// <para>The status of the peer router interface. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Idle</b></description></item>
+        /// <item><description><b>AcceptingConnecting</b></description></item>
+        /// <item><description><b>Connecting</b></description></item>
+        /// <item><description><b>Activating</b></description></item>
+        /// <item><description><b>Active</b></description></item>
+        /// <item><description><b>Modifying</b></description></item>
+        /// <item><description><b>Deactivating</b></description></item>
+        /// <item><description><b>Inactive</b></description></item>
+        /// <item><description><b>Deleting</b></description></item>
+        /// <item><description><b>Deleted</b></description></item>
+        /// </list>
         /// 
-        /// *   **Idle**
-        /// *   **AcceptingConnecting**
-        /// *   **Connecting**
-        /// *   **Activating**
-        /// *   **Active**
-        /// *   **Modifying**
-        /// *   **Deactivating**
-        /// *   **Inactive**
-        /// *   **Deleting**
-        /// *   **Deleted**
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("OppositeInterfaceStatus")]
         [Validation(Required=false)]
         public string OppositeInterfaceStatus { get; set; }
 
         /// <summary>
-        /// The region ID of the peer router interface.
+        /// <para>The region ID of the peer router interface.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("OppositeRegionId")]
         [Validation(Required=false)]
         public string OppositeRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the router to which the peer router interface belongs.
+        /// <para>The ID of the router to which the peer router interface belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vrt-bp11xvy6lb9photuu****</para>
         /// </summary>
         [NameInMap("OppositeRouterId")]
         [Validation(Required=false)]
         public string OppositeRouterId { get; set; }
 
         /// <summary>
-        /// The type of the router to which the peer router interface belongs. Valid values:
+        /// <para>The type of the router to which the peer router interface belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VRouter</b></description></item>
+        /// <item><description><b>VBR</b></description></item>
+        /// </list>
         /// 
-        /// *   **VRouter**
-        /// *   **VBR**
+        /// <b>Example:</b>
+        /// <para>VRouter</para>
         /// </summary>
         [NameInMap("OppositeRouterType")]
         [Validation(Required=false)]
         public string OppositeRouterType { get; set; }
 
         /// <summary>
-        /// The ID of the peer VPC.
+        /// <para>The ID of the peer VPC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1b49rqrybk45nio****</para>
         /// </summary>
         [NameInMap("OppositeVpcInstanceId")]
         [Validation(Required=false)]
         public string OppositeVpcInstanceId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>01818199-04F6-47F4-9ADF-7CC824CF57A4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The time when the renewal takes effect.
+        /// <para>The time when the renewal takes effect.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-06-11T16:00:00Z</para>
         /// </summary>
         [NameInMap("ReservationActiveTime")]
         [Validation(Required=false)]
         public string ReservationActiveTime { get; set; }
 
         /// <summary>
-        /// The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.
+        /// <para>The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("ReservationBandwidth")]
         [Validation(Required=false)]
         public string ReservationBandwidth { get; set; }
 
         /// <summary>
-        /// The metering method that is used after the renewal takes effect. Valid values: If **PayByBandwidth** is returned, it indicates that the Express Connect circuit is billed on a pay-by-bandwidth basis.
+        /// <para>The metering method that is used after the renewal takes effect. Valid values: If <b>PayByBandwidth</b> is returned, it indicates that the Express Connect circuit is billed on a pay-by-bandwidth basis.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PayByBandwidth</para>
         /// </summary>
         [NameInMap("ReservationInternetChargeType")]
         [Validation(Required=false)]
         public string ReservationInternetChargeType { get; set; }
 
         /// <summary>
-        /// The type of the renewal order. Only **RENEW** may be returned, which indicates that the order is placed for service renewal.
+        /// <para>The type of the renewal order. Only <b>RENEW</b> may be returned, which indicates that the order is placed for service renewal.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RENEW</para>
         /// </summary>
         [NameInMap("ReservationOrderType")]
         [Validation(Required=false)]
         public string ReservationOrderType { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></para>
         /// 
-        /// For more information about resource groups, see [What is a resource group?](https://help.aliyun.com/document_detail/94475.html)
+        /// <b>Example:</b>
+        /// <para>rg-acfmxazb4ph6aiy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The role of the router interface in the peering connection.
+        /// <para>The role of the router interface in the peering connection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InitiatingSide</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }
 
         /// <summary>
-        /// The ID of the router to which the router interface belongs.
+        /// <para>The ID of the router to which the router interface belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vbr-m5ex0xf63xk8s5bob****</para>
         /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]
         public string RouterId { get; set; }
 
         /// <summary>
-        /// The ID of the router interface.
+        /// <para>The ID of the router interface.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ri-m5egfc10sednwk2yt****</para>
         /// </summary>
         [NameInMap("RouterInterfaceId")]
         [Validation(Required=false)]
         public string RouterInterfaceId { get; set; }
 
         /// <summary>
-        /// The type of the router to which the route table belongs. Valid values:
+        /// <para>The type of the router to which the route table belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VRouter</b></description></item>
+        /// <item><description><b>VBR</b></description></item>
+        /// </list>
         /// 
-        /// *   **VRouter**
-        /// *   **VBR**
+        /// <b>Example:</b>
+        /// <para>VRouter</para>
         /// </summary>
         [NameInMap("RouterType")]
         [Validation(Required=false)]
         public string RouterType { get; set; }
 
         /// <summary>
-        /// The specification of the router interface. Valid values:
+        /// <para>The specification of the router interface. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Mini.2</b>: 2 Mbit/s</description></item>
+        /// <item><description><b>Mini.5</b>: 5 Mbit/s</description></item>
+        /// <item><description><b>Small.1</b>: 10 Mbit/s</description></item>
+        /// <item><description><b>Small.2</b>: 20 Mbit/s</description></item>
+        /// <item><description><b>Small.5</b>: 50 Mbit/s</description></item>
+        /// <item><description><b>Middle.1</b>: 100 Mbit/s</description></item>
+        /// <item><description><b>Middle.2</b>: 200 Mbit/s</description></item>
+        /// <item><description><b>Middle.5</b>: 500 Mbit/s</description></item>
+        /// <item><description><b>Large.1</b>: 1,000 Mbit/s</description></item>
+        /// <item><description><b>Large.2</b>: 2,000 Mbit/s</description></item>
+        /// <item><description><b>Large.5</b>: 5,000 Mbit/s</description></item>
+        /// <item><description><b>Xlarge.1</b>: 10,000 Mbit/s</description></item>
+        /// </list>
         /// 
-        /// *   **Mini.2**: 2 Mbit/s
-        /// *   **Mini.5**: 5 Mbit/s
-        /// *   **Small.1**: 10 Mbit/s
-        /// *   **Small.2**: 20 Mbit/s
-        /// *   **Small.5**: 50 Mbit/s
-        /// *   **Middle.1**: 100 Mbit/s
-        /// *   **Middle.2**: 200 Mbit/s
-        /// *   **Middle.5**: 500 Mbit/s
-        /// *   **Large.1**: 1,000 Mbit/s
-        /// *   **Large.2**: 2,000 Mbit/s
-        /// *   **Large.5**: 5,000 Mbit/s
-        /// *   **Xlarge.1**: 10,000 Mbit/s
+        /// <b>Example:</b>
+        /// <para>Mini.2</para>
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]
         public string Spec { get; set; }
 
         /// <summary>
-        /// The status of the router interface. Valid values:
+        /// <para>The status of the router interface. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Idle</b></description></item>
+        /// <item><description><b>AcceptingConnecting</b></description></item>
+        /// <item><description><b>Connecting</b></description></item>
+        /// <item><description><b>Activating</b></description></item>
+        /// <item><description><b>Active</b></description></item>
+        /// <item><description><b>Modifying</b></description></item>
+        /// <item><description><b>Deactivating</b></description></item>
+        /// <item><description><b>Inactive</b></description></item>
+        /// <item><description><b>Deleting</b></description></item>
+        /// </list>
         /// 
-        /// *   **Idle**
-        /// *   **AcceptingConnecting**
-        /// *   **Connecting**
-        /// *   **Activating**
-        /// *   **Active**
-        /// *   **Modifying**
-        /// *   **Deactivating**
-        /// *   **Inactive**
-        /// *   **Deleting**
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values: true and false.
+        /// <para>Indicates whether the request is successful. Valid values: true and false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The tag of the resource.
+        /// <para>The tag of the resource.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -416,18 +562,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeRouterInterfaceAttributeResponseBodyTagsTags> Tags { get; set; }
             public class DescribeRouterInterfaceAttributeResponseBodyTagsTags : TeaModel {
                 /// <summary>
-                /// The key of tag N added to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.
+                /// <para>The key of tag N added to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</para>
+                /// <para>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
-                /// The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                /// <b>Example:</b>
+                /// <para>FinanceDept</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+                /// <para>The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</para>
+                /// <para>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
-                /// It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                /// <b>Example:</b>
+                /// <para>FinanceJoshua</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -438,7 +588,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) to which the router interface belongs.
+        /// <para>The ID of the virtual private cloud (VPC) to which the router interface belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1b49rqrybk45nio****</para>
         /// </summary>
         [NameInMap("VpcInstanceId")]
         [Validation(Required=false)]

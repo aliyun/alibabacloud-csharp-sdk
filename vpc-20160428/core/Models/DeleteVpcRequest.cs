@@ -14,25 +14,33 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// - **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// - **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// Specifies whether to forcefully delete the VPC. Valid values:
+        /// <para>Specifies whether to forcefully delete the VPC. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b> (default): no</description></item>
+        /// </list>
+        /// <para>You can forcefully delete a VPC in the following scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.</description></item>
+        /// <item><description>Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.</description></item>
+        /// </list>
         /// 
-        /// - **true**: yes
-        /// - **false** (default): no
-        /// 
-        /// You can forcefully delete a VPC in the following scenarios:
-        /// 
-        /// - Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.
-        /// - Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ForceDelete")]
         [Validation(Required=false)]
@@ -47,9 +55,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VPC is deployed.
+        /// <para>The ID of the region where the VPC is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -64,9 +74,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC that you want to delete.
+        /// <para>The ID of the VPC that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-bp1m7v25emi1h5mtc****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

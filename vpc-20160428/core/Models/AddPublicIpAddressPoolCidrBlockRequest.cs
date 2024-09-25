@@ -10,41 +10,55 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AddPublicIpAddressPoolCidrBlockRequest : TeaModel {
         /// <summary>
-        /// The CIDR block.
+        /// <para>The CIDR block.</para>
+        /// <remarks>
+        /// <para> You can specify only one of <b>CidrBlock</b> and <b>CidrMask</b>.</para>
+        /// </remarks>
         /// 
-        /// >  You can specify only one of **CidrBlock** and **CidrMask**.
+        /// <b>Example:</b>
+        /// <para>47.0.XX.XX/24</para>
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// The subnet mask of the CIDR block. After you enter the subnet mask, the system automatically allocates IP addresses.
+        /// <para>The subnet mask of the CIDR block. After you enter the subnet mask, the system automatically allocates IP addresses.</para>
+        /// <para>Valid values: <b>24</b> to <b>28</b>.</para>
+        /// <remarks>
+        /// <para> You can specify only one of <b>CidrBlock</b> and <b>CidrMask</b>.</para>
+        /// </remarks>
         /// 
-        /// Valid values: **24** to **28**.
-        /// 
-        /// >  You can specify only one of **CidrBlock** and **CidrMask**.
+        /// <b>Example:</b>
+        /// <para>24</para>
         /// </summary>
         [NameInMap("CidrMask")]
         [Validation(Required=false)]
         public int? CidrMask { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>02fb3da4-130e-11****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run, without performing the actual request. Valid values:
+        /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -59,18 +73,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the IP address pool.
+        /// <para>The ID of the IP address pool.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pippool-6wetvn6fumkgycssx****</para>
         /// </summary>
         [NameInMap("PublicIpAddressPoolId")]
         [Validation(Required=false)]
         public string PublicIpAddressPoolId { get; set; }
 
         /// <summary>
-        /// The region ID of the IP address pool to which you want to add the CIDR block.
+        /// <para>The region ID of the IP address pool to which you want to add the CIDR block.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-chengdu</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

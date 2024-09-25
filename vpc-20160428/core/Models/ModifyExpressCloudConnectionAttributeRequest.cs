@@ -10,37 +10,51 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyExpressCloudConnectionAttributeRequest : TeaModel {
         /// <summary>
-        /// The BGP autonomous system number (ASN) to be configured for the Smart Access Gateway (SAG) device.
+        /// <para>The BGP autonomous system number (ASN) to be configured for the Smart Access Gateway (SAG) device.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sag-ejfge***</para>
         /// </summary>
         [NameInMap("BgpAs")]
         [Validation(Required=false)]
         public string BgpAs { get; set; }
 
         /// <summary>
-        /// The peer IP address when the SAG device is connected to the cloud.
+        /// <para>The peer IP address when the SAG device is connected to the cloud.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.16.**.**</para>
         /// </summary>
         [NameInMap("CeIp")]
         [Validation(Required=false)]
         public string CeIp { get; set; }
 
         /// <summary>
-        /// Descriptions of ECC.
+        /// <para>Descriptions of ECC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECC</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the ECC instance.
+        /// <para>The ID of the ECC instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ecc-bp1t9osmuln*******</para>
         /// </summary>
         [NameInMap("EccId")]
         [Validation(Required=false)]
         public string EccId { get; set; }
 
         /// <summary>
-        /// The name of the ECC instance.
+        /// <para>The name of the ECC instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>doctest</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -55,16 +69,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The on-premises IP address when the SAG device is connected to the cloud.
+        /// <para>The on-premises IP address when the SAG device is connected to the cloud.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.10.**.**</para>
         /// </summary>
         [NameInMap("PeIp")]
         [Validation(Required=false)]
         public string PeIp { get; set; }
 
         /// <summary>
-        /// The region ID of the ECC instance.
+        /// <para>The region ID of the ECC instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

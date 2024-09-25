@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyRouteEntryResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>861E6630-AEC0-4B2D-B214-6CB5E44B7F04</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyForwardEntryResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2315DEB7-5E92-423A-91F7-4C1EC9AD97C3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CheckCanAllocateVpcPrivateIpAddressRequest : TeaModel {
         /// <summary>
-        /// The version of the private IP address. Valid values:
+        /// <para>The version of the private IP address. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ipv4</b> If you want to query an IPv4 address, this parameter is optional.</description></item>
+        /// <item><description><b>ipv6</b> If you want to query an IPv6 address, this parameter is required.</description></item>
+        /// </list>
         /// 
-        /// *   **ipv4** If you want to query an IPv4 address, this parameter is optional.
-        /// *   **ipv6** If you want to query an IPv6 address, this parameter is required.
+        /// <b>Example:</b>
+        /// <para>ipv4</para>
         /// </summary>
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
@@ -28,20 +32,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the **VSwitchId** parameter.
+        /// <para>To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the <b>VSwitchId</b> parameter.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10.0.0.7</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The region ID of the vSwitch to which the private IP address that you want to query belongs.
+        /// <para>The region ID of the vSwitch to which the private IP address that you want to query belongs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-qingdao</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -56,9 +63,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch to which the private IP address to be queried belongs.
+        /// <para>The ID of the vSwitch to which the private IP address to be queried belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vsw-m5ew3t46z2drmifnt****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

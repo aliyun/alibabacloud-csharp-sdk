@@ -10,40 +10,57 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIPv6TranslatorRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Valid values: **true and false**.
+        /// <para>Specifies whether to enable automatic payment. Valid values: <b>true and false</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s. Valid values: **1** to **200**. If you do not specify the bandwidth for the mapping entry, the bandwidth is shared with the mapping entry.
+        /// <para>The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s. Valid values: <b>1</b> to <b>200</b>. If you do not specify the bandwidth for the mapping entry, the bandwidth is shared with the mapping entry.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the default bandwidth is 10 Mbit/s.</para>
+        /// </remarks>
         /// 
-        /// > If you do not specify this parameter, the default bandwidth is 10 Mbit/s.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sha111</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The subscription duration.
+        /// <para>The subscription duration.</para>
+        /// <list type="bullet">
+        /// <item><description>If the billing cycle is <b>Month</b>, valid values are <b>1</b> to <b>9</b>.</description></item>
+        /// <item><description>If the billing cycle is <b>Year</b>, set the value to <b>3</b>.</description></item>
+        /// </list>
         /// 
-        /// *   If the billing cycle is **Month**, valid values are **1** to **9**.
-        /// *   If the billing cycle is **Year**, set the value to **3**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
         /// <summary>
-        /// The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length and must start with a letter. It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with `http://` or `https://`.
+        /// <para>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length and must start with a letter. It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipv6_1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -58,29 +75,39 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The billing method of the IPv6 Translation Service instance. Valid values:
+        /// <para>The billing method of the IPv6 Translation Service instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PREPAY</b>: subscription</description></item>
+        /// <item><description><b>POSTPAY</b>: pay-as-you-go</description></item>
+        /// </list>
         /// 
-        /// *   **PREPAY**: subscription
-        /// *   **POSTPAY**: pay-as-you-go
+        /// <b>Example:</b>
+        /// <para>PREPAY</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// The billing cycle of the subscription. Valid values:
+        /// <para>The billing cycle of the subscription. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Month</b> (default)</description></item>
+        /// <item><description><b>Year</b></description></item>
+        /// </list>
         /// 
-        /// *   **Month** (default)
-        /// *   **Year**
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <para>The region of the IPv6 Translation Service instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cm-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -95,7 +122,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The specification of the IPv6 Translation Service instance. Set the value to **small**.
+        /// <para>The specification of the IPv6 Translation Service instance. Set the value to <b>small</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>small</para>
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

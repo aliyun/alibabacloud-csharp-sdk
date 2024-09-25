@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeBgpGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the BGP group.
+        /// <para>The ID of the BGP group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bgpg-bp1k25cyp26cllath****</para>
         /// </summary>
         [NameInMap("BgpGroupId")]
         [Validation(Required=false)]
         public string BgpGroupId { get; set; }
 
         /// <summary>
-        /// Specifies whether the BGP group is the default one. Valid values:
+        /// <para>Specifies whether the BGP group is the default one. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b></description></item>
+        /// </list>
         /// 
-        /// *   **false**
-        /// *   **true**
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
@@ -35,25 +42,32 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. The maximum value is **50**. Default value: **10**.
+        /// <para>The number of entries per page. The maximum value is <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the VBR is deployed.
+        /// <para>The ID of the region in which the VBR is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -68,7 +82,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual border router (VBR) that is associated with the BGP group.
+        /// <para>The ID of the virtual border router (VBR) that is associated with the BGP group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vbr-bp1ctxy813985gkuk****</para>
         /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]

@@ -10,304 +10,405 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVirtualPhysicalConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned in this query.
+        /// <para>The number of entries returned in this query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the value of <b>NextToken</b> is not returned, it indicates that no next query is to be sent.</description></item>
+        /// <item><description>If <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
+        /// </list>
         /// 
-        /// *   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.
-        /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+        /// <b>Example:</b>
+        /// <para>dd20****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2A55F69E-EE3D-5CBE-8805-734F7D5B46B9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The list of hosted connections returned.
+        /// <para>The list of hosted connections returned.</para>
         /// </summary>
         [NameInMap("VirtualPhysicalConnections")]
         [Validation(Required=false)]
         public List<ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnections> VirtualPhysicalConnections { get; set; }
         public class ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnections : TeaModel {
             /// <summary>
-            /// The ID of the access point that is associated with the Express Connect circuit.
+            /// <para>The ID of the access point that is associated with the Express Connect circuit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ap-cn-hangzhou-finance-yh-E</para>
             /// </summary>
             [NameInMap("AccessPointId")]
             [Validation(Required=false)]
             public string AccessPointId { get; set; }
 
             /// <summary>
-            /// The geographical location of the access device.
+            /// <para>The geographical location of the access device.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Yuhang Economic Development Zone XXX Intersection, Yuhang XX Machine Room, E*** Suite.</para>
             /// </summary>
             [NameInMap("AdLocation")]
             [Validation(Required=false)]
             public string AdLocation { get; set; }
 
             /// <summary>
-            /// The Alibaba Cloud account ID of the hosted connection owner.
+            /// <para>The Alibaba Cloud account ID of the hosted connection owner.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>253460731706911258</para>
             /// </summary>
             [NameInMap("AliUid")]
             [Validation(Required=false)]
             public string AliUid { get; set; }
 
             /// <summary>
-            /// The bandwidth of the Express Connect circuit. Unit: Mbit/s.
+            /// <para>The bandwidth of the Express Connect circuit. Unit: Mbit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public long? Bandwidth { get; set; }
 
             /// <summary>
-            /// The status of the Express Connect circuit. Valid values:
+            /// <para>The status of the Express Connect circuit. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Normal</b></description></item>
+            /// <item><description><b>FinancialLocked</b></description></item>
+            /// <item><description><b>SecurityLocked</b></description></item>
+            /// </list>
             /// 
-            /// *   **Normal**
-            /// *   **FinancialLocked**
-            /// *   **SecurityLocked**
+            /// <b>Example:</b>
+            /// <para>Normal</para>
             /// </summary>
             [NameInMap("BusinessStatus")]
             [Validation(Required=false)]
             public string BusinessStatus { get; set; }
 
             /// <summary>
-            /// The billing method of the Express Connect circuit.
+            /// <para>The billing method of the Express Connect circuit.</para>
+            /// <para>If <b>Prepaid</b> is returned, it indicates that the Express Connect circuit is billed on a subscription basis.</para>
             /// 
-            /// If **Prepaid** is returned, it indicates that the Express Connect circuit is billed on a subscription basis.
+            /// <b>Example:</b>
+            /// <para>Prepaid</para>
             /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
+            /// <para>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>longtel001</para>
             /// </summary>
             [NameInMap("CircuitCode")]
             [Validation(Required=false)]
             public string CircuitCode { get; set; }
 
             /// <summary>
-            /// The time when the Express Connect circuit was created.
+            /// <para>The time when the Express Connect circuit was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-06-08T12:20:55</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The description of the Express Connect circuit.
+            /// <para>The description of the Express Connect circuit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>desctest</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The time when the Express Connect circuit is enabled.
+            /// <para>The time when the Express Connect circuit is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-10-08T10:44Z</para>
             /// </summary>
             [NameInMap("EnabledTime")]
             [Validation(Required=false)]
             public string EnabledTime { get; set; }
 
             /// <summary>
-            /// The expiration date of the hosted connection.
+            /// <para>The expiration date of the hosted connection.</para>
+            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
-            /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+            /// <b>Example:</b>
+            /// <para>2021-11-08T16:00:00Z</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
             /// <summary>
-            /// The estimated maximum bandwidth of the shared Express Connect circuit. The estimated bandwidth takes effect after you complete the payment.
+            /// <para>The estimated maximum bandwidth of the shared Express Connect circuit. The estimated bandwidth takes effect after you complete the payment.</para>
+            /// <para><b>M</b> indicates Mbit/s and <b>G</b> indicates Gbit/s.</para>
             /// 
-            /// **M** indicates Mbit/s and **G** indicates Gbit/s.
+            /// <b>Example:</b>
+            /// <para>50M</para>
             /// </summary>
             [NameInMap("ExpectSpec")]
             [Validation(Required=false)]
             public string ExpectSpec { get; set; }
 
             /// <summary>
-            /// The connectivity provider of the Express Connect circuit. Valid values:
+            /// <para>The connectivity provider of the Express Connect circuit. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>CT</b>: China Telecom.</description></item>
+            /// <item><description><b>CU</b>: China Unicom.</description></item>
+            /// <item><description><b>CM</b>: China Mobile.</description></item>
+            /// <item><description><b>CO</b>: other connectivity providers in the Chinese mainland.</description></item>
+            /// <item><description><b>Equinix</b>: Equinix.</description></item>
+            /// <item><description><b>Other</b>: other connectivity providers outside the Chinese mainland.</description></item>
+            /// </list>
             /// 
-            /// *   **CT**: China Telecom.
-            /// *   **CU**: China Unicom.
-            /// *   **CM**: China Mobile.
-            /// *   **CO**: other connectivity providers in the Chinese mainland.
-            /// *   **Equinix**: Equinix.
-            /// *   **Other**: other connectivity providers outside the Chinese mainland.
+            /// <b>Example:</b>
+            /// <para>CU</para>
             /// </summary>
             [NameInMap("LineOperator")]
             [Validation(Required=false)]
             public string LineOperator { get; set; }
 
             /// <summary>
-            /// The status of the letter of authorization (LOA). Valid values:
+            /// <para>The status of the letter of authorization (LOA). Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Applying</b></description></item>
+            /// <item><description><b>Accept</b></description></item>
+            /// <item><description><b>Available</b></description></item>
+            /// <item><description><b>Rejected</b></description></item>
+            /// <item><description><b>Completing</b></description></item>
+            /// <item><description><b>Complete</b></description></item>
+            /// <item><description><b>Deleted</b></description></item>
+            /// </list>
             /// 
-            /// *   **Applying**
-            /// *   **Accept**
-            /// *   **Available**
-            /// *   **Rejected**
-            /// *   **Completing**
-            /// *   **Complete**
-            /// *   **Deleted**
+            /// <b>Example:</b>
+            /// <para>Available</para>
             /// </summary>
             [NameInMap("LoaStatus")]
             [Validation(Required=false)]
             public string LoaStatus { get; set; }
 
             /// <summary>
-            /// The name of the Express Connect circuit.
+            /// <para>The name of the Express Connect circuit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>nametest</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The payer for the shared Express Connect circuit. Valid values:
+            /// <para>The payer for the shared Express Connect circuit. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>PayByPhysicalConnectionOwner</b>: the owner of the shared Express Connect circuit</description></item>
+            /// <item><description><b>PayByVirtualPhysicalConnectionOwner</b>: the owner of the hosted connection</description></item>
+            /// </list>
             /// 
-            /// *   **PayByPhysicalConnectionOwner**: the owner of the shared Express Connect circuit
-            /// *   **PayByVirtualPhysicalConnectionOwner**: the owner of the hosted connection
+            /// <b>Example:</b>
+            /// <para>PayByPhysicalConnectionOwner</para>
             /// </summary>
             [NameInMap("OrderMode")]
             [Validation(Required=false)]
             public string OrderMode { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account to which the Express Connect circuit belongs.
+            /// <para>The ID of the Alibaba Cloud account to which the Express Connect circuit belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>283117732402483989</para>
             /// </summary>
             [NameInMap("ParentPhysicalConnectionAliUid")]
             [Validation(Required=false)]
             public string ParentPhysicalConnectionAliUid { get; set; }
 
             /// <summary>
-            /// The ID of the Express Connect circuit.
+            /// <para>The ID of the Express Connect circuit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pc-bp1ciz7ekd2grn1as****</para>
             /// </summary>
             [NameInMap("ParentPhysicalConnectionId")]
             [Validation(Required=false)]
             public string ParentPhysicalConnectionId { get; set; }
 
             /// <summary>
-            /// The geographical location of the data center.
+            /// <para>The geographical location of the data center.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>XX Number, XX Road, XX Town, XX District, Hangzhou City, Zhejiang Province.</para>
             /// </summary>
             [NameInMap("PeerLocation")]
             [Validation(Required=false)]
             public string PeerLocation { get; set; }
 
             /// <summary>
-            /// The ID of the hosted connection.
+            /// <para>The ID of the hosted connection.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pc-bp1mrgfbtmc9brre7****</para>
             /// </summary>
             [NameInMap("PhysicalConnectionId")]
             [Validation(Required=false)]
             public string PhysicalConnectionId { get; set; }
 
             /// <summary>
-            /// The ID of the port on the access device.
+            /// <para>The ID of the port on the access device.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("PortNumber")]
             [Validation(Required=false)]
             public string PortNumber { get; set; }
 
             /// <summary>
-            /// The port type. Valid values:
+            /// <para>The port type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>100Base-T</b>: 100 Mbit/s copper Ethernet port</description></item>
+            /// <item><description><b>1000Base-T</b>: 1,000 Mbit/s copper Ethernet port</description></item>
+            /// <item><description><b>1000Base-LX</b>: 1,000 Mbit/s single-mode optical port (10 km)</description></item>
+            /// <item><description><b>10GBase-T</b>: 10,000 Mbit/s copper Ethernet port</description></item>
+            /// <item><description><b>10GBase-LR</b>: 10,000 Mbit/s single-mode optical port (10 km)</description></item>
+            /// <item><description><b>40GBase-LR</b>: 40,000 Mbit/s single-mode optical port</description></item>
+            /// <item><description><b>100GBase-LR</b>: 100,000 Mbit/s single-mode optical port</description></item>
+            /// </list>
             /// 
-            /// *   **100Base-T**: 100 Mbit/s copper Ethernet port
-            /// *   **1000Base-T**: 1,000 Mbit/s copper Ethernet port
-            /// *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)
-            /// *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
-            /// *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)
-            /// *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
-            /// *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
+            /// <b>Example:</b>
+            /// <para>10GBase-LR</para>
             /// </summary>
             [NameInMap("PortType")]
             [Validation(Required=false)]
             public string PortType { get; set; }
 
             /// <summary>
-            /// The type of the Express Connect circuit. Valid values:
+            /// <para>The type of the Express Connect circuit. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>VirtualPhysicalConnection</b>: shared Express Connect circuit</description></item>
+            /// <item><description><b>PhysicalConnection</b>: dedicated Express Connect circuit</description></item>
+            /// </list>
             /// 
-            /// *   **VirtualPhysicalConnection**: shared Express Connect circuit
-            /// *   **PhysicalConnection**: dedicated Express Connect circuit
+            /// <b>Example:</b>
+            /// <para>VirtualPhysicalConnection</para>
             /// </summary>
             [NameInMap("ProductType")]
             [Validation(Required=false)]
             public string ProductType { get; set; }
 
             /// <summary>
-            /// The ID of the redundant Express Connect circuit.
+            /// <para>The ID of the redundant Express Connect circuit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pc-119mfjzm****</para>
             /// </summary>
             [NameInMap("RedundantPhysicalConnectionId")]
             [Validation(Required=false)]
             public string RedundantPhysicalConnectionId { get; set; }
 
             /// <summary>
-            /// The ID of the resource group to which the hosted connection belongs.
+            /// <para>The ID of the resource group to which the hosted connection belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfm3wmsyuimpma</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The bandwidth value of the hosted connection.
+            /// <para>The bandwidth value of the hosted connection.</para>
+            /// <para><b>M</b> indicates Mbit/s and <b>G</b> indicates Gbit/s.</para>
             /// 
-            /// **M** indicates Mbit/s and **G** indicates Gbit/s.
+            /// <b>Example:</b>
+            /// <para>50M</para>
             /// </summary>
             [NameInMap("Spec")]
             [Validation(Required=false)]
             public string Spec { get; set; }
 
             /// <summary>
-            /// The status of the Express Connect circuit. Valid values:
+            /// <para>The status of the Express Connect circuit. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Initial</b>: The application is under review.</description></item>
+            /// <item><description><b>Approved</b>: The application is approved.</description></item>
+            /// <item><description><b>Allocating</b>: The system is allocating resources.</description></item>
+            /// <item><description><b>Allocated</b>: The Express Connect circuit is under construction.</description></item>
+            /// <item><description><b>Confirmed</b>: The Express Connect circuit is pending for user confirmation.</description></item>
+            /// <item><description><b>Enabled</b>: The Express Connect circuit is enabled.</description></item>
+            /// <item><description><b>Rejected</b>: The application is rejected.</description></item>
+            /// <item><description><b>Canceled</b>: The application is canceled.</description></item>
+            /// <item><description><b>Allocation Failed</b>: The system failed to allocate resources.</description></item>
+            /// <item><description><b>Terminated</b>: The Express Connect circuit is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   **Initial**: The application is under review.
-            /// *   **Approved**: The application is approved.
-            /// *   **Allocating**: The system is allocating resources.
-            /// *   **Allocated**: The Express Connect circuit is under construction.
-            /// *   **Confirmed**: The Express Connect circuit is pending for user confirmation.
-            /// *   **Enabled**: The Express Connect circuit is enabled.
-            /// *   **Rejected**: The application is rejected.
-            /// *   **Canceled**: The application is canceled.
-            /// *   **Allocation Failed**: The system failed to allocate resources.
-            /// *   **Terminated**: The Express Connect circuit is disabled.
+            /// <b>Example:</b>
+            /// <para>Enabled</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The tag list.
+            /// <para>The tag list.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags> Tags { get; set; }
             public class ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags : TeaModel {
                 /// <summary>
-                /// The key of tag N that is added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+                /// <para>The key of tag N that is added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
+                /// <para>It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
-                /// It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                /// <b>Example:</b>
+                /// <para>FinanceDept</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of tag N that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+                /// <para>The value of tag N that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</para>
+                /// <para>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
-                /// It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                /// <b>Example:</b>
+                /// <para>FinanceJoshua</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -316,25 +417,35 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The type of Express Connect circuit. Default value: **VPC**.
+            /// <para>The type of Express Connect circuit. Default value: <b>VPC</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VPC</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The status of the hosted connection. Valid values:
+            /// <para>The status of the hosted connection. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Confirmed</b></description></item>
+            /// <item><description><b>UnConfirmed</b></description></item>
+            /// <item><description><b>Deleted</b></description></item>
+            /// </list>
             /// 
-            /// *   **Confirmed**
-            /// *   **UnConfirmed**
-            /// *   **Deleted**
+            /// <b>Example:</b>
+            /// <para>Confirmed</para>
             /// </summary>
             [NameInMap("VirtualPhysicalConnectionStatus")]
             [Validation(Required=false)]
             public string VirtualPhysicalConnectionStatus { get; set; }
 
             /// <summary>
-            /// The VLAN ID of the hosted connection.
+            /// <para>The VLAN ID of the hosted connection.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("VlanId")]
             [Validation(Required=false)]

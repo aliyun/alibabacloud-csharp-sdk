@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouteTableListResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the route table.
+        /// <para>The ID of the route table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The type of the cloud resource with which the route table is associated. Valid values:
+        /// <para>The type of the cloud resource with which the route table is associated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VSwitch</b>: vSwitch</description></item>
+        /// <item><description><b>Gateway</b>: IPv4 gateway</description></item>
+        /// </list>
         /// 
-        /// *   **VSwitch**: vSwitch
-        /// *   **Gateway**: IPv4 gateway
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the vRouter to which the route table belongs.
+        /// <para>The ID of the vRouter to which the route table belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DC668356-BCB4-42FD-9BC3-FA2B2E04B634</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The description of the route table.
+        /// <para>The description of the route table.</para>
         /// </summary>
         [NameInMap("RouterTableList")]
         [Validation(Required=false)]
@@ -45,31 +55,41 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeRouteTableListResponseBodyRouterTableListRouterTableListType> RouterTableListType { get; set; }
             public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListType : TeaModel {
                 /// <summary>
-                /// The tags.
+                /// <para>The tags.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VSwitch</para>
                 /// </summary>
                 [NameInMap("AssociateType")]
                 [Validation(Required=false)]
                 public string AssociateType { get; set; }
 
                 /// <summary>
-                /// The type of the router to which the route table belongs. Valid values:
+                /// <para>The type of the router to which the route table belongs. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>VRouter</b></description></item>
+                /// <item><description><b>VBR</b></description></item>
+                /// </list>
                 /// 
-                /// *   **VRouter**
-                /// *   **VBR**
+                /// <b>Example:</b>
+                /// <para>2021-08-22T10:40:25Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The information about the vSwitches.
+                /// <para>The information about the vSwitches.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>This is Route Table.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The detailed information about the IPv4 gateway.
+                /// <para>The detailed information about the IPv4 gateway.</para>
                 /// </summary>
                 [NameInMap("GatewayIds")]
                 [Validation(Required=false)]
@@ -82,74 +102,103 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The value of tag N added to the resource.
+                /// <para>The value of tag N added to the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>253460731706911258</para>
                 /// </summary>
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public long? OwnerId { get; set; }
 
                 /// <summary>
-                /// The detailed information about the IPv4 gateway.
+                /// <para>The detailed information about the IPv4 gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-acfmxazb4ph****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// Whether to receive the propagation routes. Valid Values:
+                /// <para>Whether to receive the propagation routes. Valid Values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>True</b>: The propagation route is received.</para>
+                /// </description></item>
+                /// <item><description><para><b>False</b>: The propagation route is not received.</para>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// *   **True**: The propagation route is received.
-                /// 
-                /// *   **False**: The propagation route is not received.
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("RoutePropagationEnable")]
                 [Validation(Required=false)]
                 public bool? RoutePropagationEnable { get; set; }
 
                 /// <summary>
-                /// The key of tag N added to the resource.
+                /// <para>The key of tag N added to the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vtb-bp145q7glnuzdvzu2****</para>
                 /// </summary>
                 [NameInMap("RouteTableId")]
                 [Validation(Required=false)]
                 public string RouteTableId { get; set; }
 
                 /// <summary>
-                /// The name of the route table.
+                /// <para>The name of the route table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>doctest</para>
                 /// </summary>
                 [NameInMap("RouteTableName")]
                 [Validation(Required=false)]
                 public string RouteTableName { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// <para>The ID of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>System</para>
                 /// </summary>
                 [NameInMap("RouteTableType")]
                 [Validation(Required=false)]
                 public string RouteTableType { get; set; }
 
                 /// <summary>
-                /// The tag added to the route table.
+                /// <para>The tag added to the route table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vrt-bp1lhl0taikrteen8****</para>
                 /// </summary>
                 [NameInMap("RouterId")]
                 [Validation(Required=false)]
                 public string RouterId { get; set; }
 
                 /// <summary>
-                /// The detailed information about the IPv4 gateway.
+                /// <para>The detailed information about the IPv4 gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VRouter</para>
                 /// </summary>
                 [NameInMap("RouterType")]
                 [Validation(Required=false)]
                 public string RouterType { get; set; }
 
                 /// <summary>
-                /// The name of the route table.
+                /// <para>The name of the route table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Available</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tags.
+                /// <para>The tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -160,18 +209,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag> Tag { get; set; }
                     public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+                        /// <para>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+                        /// <para>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
                         /// 
-                        /// The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.
+                        /// <b>Example:</b>
+                        /// <para>type</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+                        /// <para>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+                        /// <para>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
                         /// 
-                        /// The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+                        /// <b>Example:</b>
+                        /// <para>ingress</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -182,7 +235,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The vSwitch IDs.
+                /// <para>The vSwitch IDs.</para>
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
@@ -195,7 +248,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the resource group to which the route table belongs.
+                /// <para>The ID of the resource group to which the route table belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp15zckdt37pq72****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -206,7 +262,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the route table belongs.
+        /// <para>The ID of the Alibaba Cloud account to which the route table belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

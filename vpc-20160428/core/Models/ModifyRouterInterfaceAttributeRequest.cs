@@ -10,93 +10,127 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyRouterInterfaceAttributeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to delete the health check IP addresses configured on the router interface. Valid values:
+        /// <para>Specifies whether to delete the health check IP addresses configured on the router interface. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false** (default)
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DeleteHealthCheckIp")]
         [Validation(Required=false)]
         public bool? DeleteHealthCheckIp { get; set; }
 
         /// <summary>
-        /// The description of the router interface.
+        /// <para>The description of the router interface.</para>
+        /// <para>The value must be 2 to 256 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The value must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>The description of the router interface.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The rate of health checks. Unit: milliseconds. The recommended value is **2000**. This value specifies the interval at which probe packets are sent during a health check.
+        /// <para>The rate of health checks. Unit: milliseconds. The recommended value is <b>2000</b>. This value specifies the interval at which probe packets are sent during a health check.</para>
+        /// <para>In this example, <b>HcThreshold</b> is set to <b>8</b> and <b>HcRate</b> is set to <b>2000</b>. In this example, probe packets are sent from <b>HealthCheckSourceIp</b> (source address) to <b>HealthCheckTargetIp</b> (destination address) every 2,000 seconds. If no response is returned for eight consecutive times, the health check fails.</para>
         /// 
-        /// In this example, **HcThreshold** is set to **8** and **HcRate** is set to **2000**. In this example, probe packets are sent from **HealthCheckSourceIp** (source address) to **HealthCheckTargetIp** (destination address) every 2,000 seconds. If no response is returned for eight consecutive times, the health check fails.
+        /// <b>Example:</b>
+        /// <para>2000</para>
         /// </summary>
         [NameInMap("HcRate")]
         [Validation(Required=false)]
         public int? HcRate { get; set; }
 
         /// <summary>
-        /// The healthy threshold. Unit: packets. We recommend that you set the value to **8**. This value specifies the number of probe packets that are sent during a health check.
+        /// <para>The healthy threshold. Unit: packets. We recommend that you set the value to <b>8</b>. This value specifies the number of probe packets that are sent during a health check.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("HcThreshold")]
         [Validation(Required=false)]
         public int? HcThreshold { get; set; }
 
         /// <summary>
-        /// The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).
+        /// <para>The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).</para>
+        /// <remarks>
+        /// <para> You can set this parameter when an Express Connect circuit is used.</para>
+        /// </remarks>
         /// 
-        /// >  You can set this parameter when an Express Connect circuit is used.
+        /// <b>Example:</b>
+        /// <para>116.62.XX.XX</para>
         /// </summary>
         [NameInMap("HealthCheckSourceIp")]
         [Validation(Required=false)]
         public string HealthCheckSourceIp { get; set; }
 
         /// <summary>
-        /// The destination IP address that is used to perform health checks.
+        /// <para>The destination IP address that is used to perform health checks.</para>
+        /// <remarks>
+        /// <para> This parameter is required when <b>HealthCheckSourceIp</b> is specified.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required when **HealthCheckSourceIp** is specified.
+        /// <b>Example:</b>
+        /// <para>116.62.XX.XX</para>
         /// </summary>
         [NameInMap("HealthCheckTargetIp")]
         [Validation(Required=false)]
         public string HealthCheckTargetIp { get; set; }
 
         /// <summary>
-        /// The name of the router interface.
+        /// <para>The name of the router interface.</para>
+        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
+        /// <b>Example:</b>
+        /// <para>TEST</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the peer router interface.
+        /// <para>The ID of the peer router interface.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ri-2zeo3xzyf38r4urz****</para>
         /// </summary>
         [NameInMap("OppositeInterfaceId")]
         [Validation(Required=false)]
         public string OppositeInterfaceId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the peer router interface belongs.
+        /// <para>The ID of the Alibaba Cloud account to which the peer router interface belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>28768383240243****</para>
         /// </summary>
         [NameInMap("OppositeInterfaceOwnerId")]
         [Validation(Required=false)]
         public long? OppositeInterfaceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the peer router.
+        /// <para>The ID of the peer router.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vrt-bp1jcg5cmxjbl9xgc****</para>
         /// </summary>
         [NameInMap("OppositeRouterId")]
         [Validation(Required=false)]
         public string OppositeRouterId { get; set; }
 
         /// <summary>
-        /// The type of router to which the peer router interface belongs. Valid values:
+        /// <para>The type of router to which the peer router interface belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VRouter</b></description></item>
+        /// <item><description><b>VBR</b> (default)</description></item>
+        /// </list>
         /// 
-        /// *   **VRouter**
-        /// *   **VBR** (default)
+        /// <b>Example:</b>
+        /// <para>VBR</para>
         /// </summary>
         [NameInMap("OppositeRouterType")]
         [Validation(Required=false)]
@@ -107,11 +141,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the router interface.
+        /// <para>The region ID of the router interface.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -126,9 +161,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the router interface.
+        /// <para>The ID of the router interface.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ri-2zeo3xzyf38r4urz****</para>
         /// </summary>
         [NameInMap("RouterInterfaceId")]
         [Validation(Required=false)]

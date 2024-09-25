@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class WithdrawVpcPublishedRouteEntriesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -38,14 +46,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<WithdrawVpcPublishedRouteEntriesRequestRouteEntries> RouteEntries { get; set; }
         public class WithdrawVpcPublishedRouteEntriesRequestRouteEntries : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.0.0.0/24</para>
             /// </summary>
             [NameInMap("DestinationCidrBlock")]
             [Validation(Required=false)]
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vtb-bp145q7glnuzd****</para>
             /// </summary>
             [NameInMap("RouteTableId")]
             [Validation(Required=false)]
@@ -54,14 +68,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecr-dhw2xsds5****</para>
         /// </summary>
         [NameInMap("TargetInstanceId")]
         [Validation(Required=false)]
         public string TargetInstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECR</para>
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]

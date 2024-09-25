@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyExpressCloudConnectionBandwidthRequest : TeaModel {
         /// <summary>
-        /// The bandwidth of the ECC instance.
+        /// <para>The bandwidth of the ECC instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public string Bandwidth { get; set; }
 
         /// <summary>
-        /// The ID of the ECC instance.
+        /// <para>The ID of the ECC instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ecc-xxxxxxxxx</para>
         /// </summary>
         [NameInMap("EccId")]
         [Validation(Required=false)]
@@ -34,9 +39,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

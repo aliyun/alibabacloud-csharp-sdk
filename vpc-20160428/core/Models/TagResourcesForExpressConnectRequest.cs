@@ -18,20 +18,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the resource is deployed.
+        /// <para>The ID of the region in which the resource is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource IDs. You can specify up to 20 resource IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The resource IDs. You can specify up to 20 resource IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -46,40 +46,46 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// <para>The type of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PHYSICALCONNECTION</b>: Express Connect circuit.</description></item>
+        /// <item><description><b>VIRTUALBORDERROUTER</b>: virtual border router (VBR).</description></item>
+        /// <item><description><b>ROUTERINTERFACE</b>: router interface.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **PHYSICALCONNECTION**: Express Connect circuit.
-        /// *   **VIRTUALBORDERROUTER**: virtual border router (VBR).
-        /// *   **ROUTERINTERFACE**: router interface.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PHYSICALCONNECTION</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags to add to the resource.
-        /// 
-        /// This parameter is required.
+        /// <para>The tags to add to the resource.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesForExpressConnectRequestTag> Tag { get; set; }
         public class TagResourcesForExpressConnectRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// <para>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
             /// 
-            /// The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+            /// <b>Example:</b>
+            /// <para>FinanceDept</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+            /// <para>The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
             /// 
-            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+            /// <b>Example:</b>
+            /// <para>FinanceJoshua</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

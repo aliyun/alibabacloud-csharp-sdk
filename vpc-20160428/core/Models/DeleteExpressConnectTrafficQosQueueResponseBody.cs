@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteExpressConnectTrafficQosQueueResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>9B9300FE-11E2-4E3B-949C-BED3B44DD26D</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

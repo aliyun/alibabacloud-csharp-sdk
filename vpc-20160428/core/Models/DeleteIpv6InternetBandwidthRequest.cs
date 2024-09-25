@@ -18,16 +18,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of the IPv6 address.
+        /// <para>The ID of the IPv6 address.</para>
+        /// <remarks>
+        /// <para> You must specify one of <b>Ipv6AddressId</b> and <b>Ipv6InternetBandwidthId</b>.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.
+        /// <b>Example:</b>
+        /// <para>ipv6-2zen5j4axcp5l5qyy****</para>
         /// </summary>
         [NameInMap("Ipv6AddressId")]
         [Validation(Required=false)]
         public string Ipv6AddressId { get; set; }
 
         /// <summary>
-        /// The instance ID of the Internet bandwidth of the IPv6 address.
+        /// <para>The instance ID of the Internet bandwidth of the IPv6 address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipv6bw-uf6hcyzu65v98v3du****</para>
         /// </summary>
         [NameInMap("Ipv6InternetBandwidthId")]
         [Validation(Required=false)]
@@ -42,11 +49,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the IPv6 gateway.
+        /// <para>The region ID of the IPv6 gateway.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-huhehaote</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

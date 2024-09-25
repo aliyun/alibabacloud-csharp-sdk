@@ -10,101 +10,138 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnClientCertResponseBody : TeaModel {
         /// <summary>
-        /// The CA certificate.
+        /// <para>The CA certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CA certificate</para>
         /// </summary>
         [NameInMap("CaCert")]
         [Validation(Required=false)]
         public string CaCert { get; set; }
 
         /// <summary>
-        /// The client certificate.
+        /// <para>The client certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Client certificate</para>
         /// </summary>
         [NameInMap("ClientCert")]
         [Validation(Required=false)]
         public string ClientCert { get; set; }
 
         /// <summary>
-        /// The client configuration.
+        /// <para>The client configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Client configuration</para>
         /// </summary>
         [NameInMap("ClientConfig")]
         [Validation(Required=false)]
         public string ClientConfig { get; set; }
 
         /// <summary>
-        /// The client key.
+        /// <para>The client key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The key of the client</para>
         /// </summary>
         [NameInMap("ClientKey")]
         [Validation(Required=false)]
         public string ClientKey { get; set; }
 
         /// <summary>
-        /// The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.
+        /// <para>The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.</para>
+        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
         /// 
-        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// <b>Example:</b>
+        /// <para>1552550980000</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.
+        /// <para>The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.</para>
+        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
         /// 
-        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// <b>Example:</b>
+        /// <para>1647158980000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The name of the SSL client certificate.
+        /// <para>The name of the SSL client certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nametest</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the region where the SSL client certificate is created.
+        /// <para>The ID of the region where the SSL client certificate is created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the SSL client certificate belongs.
+        /// <para>The ID of the resource group to which the SSL client certificate belongs.</para>
+        /// <para>The SSL client certificate and the SSL server associated with the SSL client certificate belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</para>
         /// 
-        /// The SSL client certificate and the SSL server associated with the SSL client certificate belong to the same resource group. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.
+        /// <b>Example:</b>
+        /// <para>rg-acfmzs372yg****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the SSL client certificate.
+        /// <para>The ID of the SSL client certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsc-bp13k5mp4tg8v3z9b****</para>
         /// </summary>
         [NameInMap("SslVpnClientCertId")]
         [Validation(Required=false)]
         public string SslVpnClientCertId { get; set; }
 
         /// <summary>
-        /// The ID of the SSL server.
+        /// <para>The ID of the SSL server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vss-bp155e9yclsg1xgq4****</para>
         /// </summary>
         [NameInMap("SslVpnServerId")]
         [Validation(Required=false)]
         public string SslVpnServerId { get; set; }
 
         /// <summary>
-        /// The status of the SSL client certificate. Valid values:
+        /// <para>The status of the SSL client certificate. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>expiring-soon</b></description></item>
+        /// <item><description><b>normal</b></description></item>
+        /// <item><description><b>expired</b></description></item>
+        /// </list>
         /// 
-        /// *   **expiring-soon**
-        /// *   **normal**
-        /// *   **expired**
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

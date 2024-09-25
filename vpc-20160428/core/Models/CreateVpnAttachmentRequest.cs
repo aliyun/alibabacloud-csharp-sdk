@@ -10,181 +10,232 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnAttachmentRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically configure routes. Valid values:
+        /// <para>Specifies whether to automatically configure routes. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default)</description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true** (default)
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoConfigRoute")]
         [Validation(Required=false)]
         public bool? AutoConfigRoute { get; set; }
 
         /// <summary>
-        /// The Border Gateway Protocol (BGP) configurations:
+        /// <para>The Border Gateway Protocol (BGP) configurations:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>BgpConfig.EnableBgp</b>: specifies whether to enable BGP. Valid values: <b>true</b> and <b>false</b>. Default value: false.</para>
+        /// </description></item>
+        /// <item><description><para><b>BgpConfig.LocalAsn</b>: the ASN on the Alibaba Cloud side. Valid values: <b>1</b> to <b>4294967295</b>. Default value: <b>45104</b>.</para>
+        /// <para>You can enter the ASN in two segments. Separate the first 16 bits of the ASN from the remaining 16 bits with a period (.). Enter the number in each segment in decimal format.</para>
+        /// <para>For example, if you enter 123.456, the ASN is: 123 × 65536 + 456 = 8061384.</para>
+        /// </description></item>
+        /// <item><description><para><b>BgpConfig.TunnelCidr</b>: the CIDR block of the IPsec tunnel. The CIDR block falls within 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.</para>
+        /// </description></item>
+        /// <item><description><para><b>LocalBgpIp:</b> the BGP IP address on the Alibaba Cloud side. This IP address must fall within the CIDR block range of the IPsec tunnel.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you configure BGP, we recommend that you learn about how BGP works and the limits. For more information, see <a href="https://help.aliyun.com/document_detail/170235.html">BGP dynamic routing </a>.</description></item>
+        /// <item><description>We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. Refer to the relevant documentation for the private ASN range.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   **BgpConfig.EnableBgp**: specifies whether to enable BGP. Valid values: **true** and **false**. Default value: false.
-        /// 
-        /// *   **BgpConfig.LocalAsn**: the ASN on the Alibaba Cloud side. Valid values: **1** to **4294967295**. Default value: **45104**.
-        /// 
-        ///     You can enter the ASN in two segments. Separate the first 16 bits of the ASN from the remaining 16 bits with a period (.). Enter the number in each segment in decimal format.
-        /// 
-        ///     For example, if you enter 123.456, the ASN is: 123 × 65536 + 456 = 8061384.
-        /// 
-        /// *   **BgpConfig.TunnelCidr**: the CIDR block of the IPsec tunnel. The CIDR block falls within 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.
-        /// 
-        /// *   **LocalBgpIp:** the BGP IP address on the Alibaba Cloud side. This IP address must fall within the CIDR block range of the IPsec tunnel.
-        /// 
-        /// > *   Before you configure BGP, we recommend that you learn about how BGP works and the limits. For more information, see [BGP dynamic routing ](https://help.aliyun.com/document_detail/170235.html).
-        /// > *   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. Refer to the relevant documentation for the private ASN range.
+        /// <b>Example:</b>
+        /// <para>{&quot;EnableBgp&quot;:&quot;true&quot;,&quot;LocalAsn&quot;:&quot;45104&quot;,&quot;TunnelCidr&quot;:&quot;169.254.11.0/30&quot;,&quot;LocalBgpIp&quot;:&quot;169.254.11.1&quot;}</para>
         /// </summary>
         [NameInMap("BgpConfig")]
         [Validation(Required=false)]
         public string BgpConfig { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-4266****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the customer gateway.
+        /// <para>The ID of the customer gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cgw-p0w2jemrcj5u61un8****</para>
         /// </summary>
         [NameInMap("CustomerGatewayId")]
         [Validation(Required=false)]
         public string CustomerGatewayId { get; set; }
 
         /// <summary>
-        /// Specifies whether to immediately start IPsec negotiations after the configuration takes effect. Valid values:
+        /// <para>Specifies whether to immediately start IPsec negotiations after the configuration takes effect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: immediately starts IPsec negotiations after the configuration is complete.</description></item>
+        /// <item><description><b>false</b> (default): starts IPsec negotiations when inbound traffic is received.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: immediately starts IPsec negotiations after the configuration is complete.
-        /// *   **false** (default): starts IPsec negotiations when inbound traffic is received.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("EffectImmediately")]
         [Validation(Required=false)]
         public bool? EffectImmediately { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the dead peer detection (DPD) feature. Valid values:
+        /// <para>Specifies whether to enable the dead peer detection (DPD) feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default) The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no response is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.</description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true** (default) The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no response is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableDpd")]
         [Validation(Required=false)]
         public bool? EnableDpd { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable NAT traversal. Valid values:
+        /// <para>Specifies whether to enable NAT traversal. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default) After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the VPN tunnel.</description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true** (default) After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the VPN tunnel.
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableNatTraversal")]
         [Validation(Required=false)]
         public bool? EnableNatTraversal { get; set; }
 
         /// <summary>
-        /// The health check configuration:
+        /// <para>The health check configuration:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>HealthCheckConfig.enable</b>: specifies whether to enable health checks. Valid values: <b>true</b> and <b>false</b>. Default value: false.</para>
+        /// </description></item>
+        /// <item><description><para><b>HealthCheckConfig.dip</b>: the destination IP address configured for health checks. Enter the IP address on the data center side that the VPC can communicate with through the IPsec-VPN connection.</para>
+        /// </description></item>
+        /// <item><description><para><b>HealthCheckConfig.sip</b>: the source IP address configured for health checks. Enter the IP address on the VPC side that the data center can communicate with through the IPsec-VPN connection.</para>
+        /// </description></item>
+        /// <item><description><para><b>HealthCheckConfig.interval</b>: the time interval of health check retries. Unit: seconds. Default value: <b>3</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>HealthCheckConfig.retry</b>: the maximum number of health check retries. Default value: <b>3</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>HealthCheckConfig.Policy</b>: specifies whether to withdraw published routes when health checks fail. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>revoke_route</b> (default): withdraws published routes.</description></item>
+        /// <item><description><b>reserve_route</b>: does not withdraw published routes.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **HealthCheckConfig.enable**: specifies whether to enable health checks. Valid values: **true** and **false**. Default value: false.
-        /// 
-        /// *   **HealthCheckConfig.dip**: the destination IP address configured for health checks. Enter the IP address on the data center side that the VPC can communicate with through the IPsec-VPN connection.
-        /// 
-        /// *   **HealthCheckConfig.sip**: the source IP address configured for health checks. Enter the IP address on the VPC side that the data center can communicate with through the IPsec-VPN connection.
-        /// 
-        /// *   **HealthCheckConfig.interval**: the time interval of health check retries. Unit: seconds. Default value: **3**.
-        /// 
-        /// *   **HealthCheckConfig.retry**: the maximum number of health check retries. Default value: **3**.
-        /// 
-        /// *   **HealthCheckConfig.Policy**: specifies whether to withdraw published routes when health checks fail. Valid values:
-        /// 
-        ///     *   **revoke_route** (default): withdraws published routes.
-        ///     *   **reserve_route**: does not withdraw published routes.
+        /// <b>Example:</b>
+        /// <para>{&quot;enable&quot;:&quot;true&quot;,&quot;dip&quot;:&quot;192.168.1.1&quot;,&quot;sip&quot;:&quot;10.1.1.1&quot;,&quot;interval&quot;:&quot;3&quot;,&quot;retry&quot;:&quot;3&quot;,&quot;Policy&quot;: &quot;revoke_route&quot;}</para>
         /// </summary>
         [NameInMap("HealthCheckConfig")]
         [Validation(Required=false)]
         public string HealthCheckConfig { get; set; }
 
         /// <summary>
-        /// The configurations of Phase 1 negotiations:
+        /// <para>The configurations of Phase 1 negotiations:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>IkeConfig.Psk</b>: The pre-shared key that is used for authentication between the VPN gateway and the data center.</para>
+        /// <list type="bullet">
+        /// <item><description>It must be 1 to 100 characters in length, and can contain letters, digits, and the following characters: <c>~!`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</c></description></item>
+        /// <item><description>If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to query the pre-shared key that is generated by the system.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the data center. Otherwise, a connection cannot be established between the data center and the VPN gateway.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description><para><b>IkeConfig.IkeVersion</b>: the IKE version. Valid values: <b>ikev1</b> and <b>ikev2</b>. Default value: <b>ikev1</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkeConfig.IkeMode</b>: the negotiation mode. Valid values: <b>main</b> and <b>aggressive</b>. Default value: <b>main</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkeConfig.IkeEncAlg:</b> the encryption algorithm that is used in Phase 1 negotiations. Valid values: <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>. Default value: <b>aes</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkeConfig.IkeAuthAlg</b>: the authentication algorithm that is used in Phase 1 negotiations. Valid values: <b>md5</b>, <b>sha1</b>, <b>sha256</b>, <b>sha384</b>, and <b>sha512</b>. Default value: <b>md5</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkeConfig.IkePfs</b>: the Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Valid values: <b>group1</b>, <b>group2</b>, <b>group5</b>, and <b>group14</b>. Default value: <b>group2</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkeConfig.IkeLifetime</b>: the SA lifetime determined by Phase 1 negotiations. Unit: seconds. Valid values: <b>0</b> to <b>86400</b>. Default value: <b>86400</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkeConfig.LocalId</b>: the identifier on the Alibaba Cloud side. The identifier cannot exceed 100 characters in length. This parameter is empty by default.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkeConfig.RemoteId</b>: the identifier on the data center side. The identifier cannot exceed 100 characters in length. The default value is the IP address of the customer gateway.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **IkeConfig.Psk**: The pre-shared key that is used for authentication between the VPN gateway and the data center.
-        /// 
-        ///     *   It must be 1 to 100 characters in length, and can contain letters, digits, and the following characters: ``~!`@#$%^&*()_-+={}[]|;:\\",.<>/?``
-        ///     *   If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the [DescribeVpnConnection](https://help.aliyun.com/document_detail/2526951.html) operation to query the pre-shared key that is generated by the system.
-        /// 
-        ///     > The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the data center. Otherwise, a connection cannot be established between the data center and the VPN gateway.
-        /// 
-        /// *   **IkeConfig.IkeVersion**: the IKE version. Valid values: **ikev1** and **ikev2**. Default value: **ikev1**.
-        /// 
-        /// *   **IkeConfig.IkeMode**: the negotiation mode. Valid values: **main** and **aggressive**. Default value: **main**.
-        /// 
-        /// *   **IkeConfig.IkeEncAlg:** the encryption algorithm that is used in Phase 1 negotiations. Valid values: **aes**, **aes192**, **aes256**, **des**, and **3des**. Default value: **aes**.
-        /// 
-        /// *   **IkeConfig.IkeAuthAlg**: the authentication algorithm that is used in Phase 1 negotiations. Valid values: **md5**, **sha1**, **sha256**, **sha384**, and **sha512**. Default value: **md5**.
-        /// 
-        /// *   **IkeConfig.IkePfs**: the Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Valid values: **group1**, **group2**, **group5**, and **group14**. Default value: **group2**.
-        /// 
-        /// *   **IkeConfig.IkeLifetime**: the SA lifetime determined by Phase 1 negotiations. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.
-        /// 
-        /// *   **IkeConfig.LocalId**: the identifier on the Alibaba Cloud side. The identifier cannot exceed 100 characters in length. This parameter is empty by default.
-        /// 
-        /// *   **IkeConfig.RemoteId**: the identifier on the data center side. The identifier cannot exceed 100 characters in length. The default value is the IP address of the customer gateway.
+        /// <b>Example:</b>
+        /// <para>{&quot;Psk&quot;:&quot;1234****&quot;,&quot;IkeVersion&quot;:&quot;ikev1&quot;,&quot;IkeMode&quot;:&quot;main&quot;,&quot;IkeEncAlg&quot;:&quot;aes&quot;,&quot;IkeAuthAlg&quot;:&quot;sha1&quot;,&quot;IkePfs&quot;:&quot;group2&quot;,&quot;IkeLifetime&quot;:86400,&quot;LocalId&quot;:&quot;47.XX.XX.1&quot;,&quot;RemoteId&quot;:&quot;47.XX.XX.2&quot;}</para>
         /// </summary>
         [NameInMap("IkeConfig")]
         [Validation(Required=false)]
         public string IkeConfig { get; set; }
 
         /// <summary>
-        /// The configurations of Phase 2 negotiations:
+        /// <para>The configurations of Phase 2 negotiations:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IpsecConfig.IpsecEncAlg</b>: the encryption algorithm that is used in Phase 2 negotiations. Valid values: <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>. Default value: <b>aes</b>.</description></item>
+        /// <item><description><b>IpsecConfig. IpsecAuthAlg</b>: the authentication algorithm that is used in Phase 2 negotiations. Valid values: <b>md5</b>, <b>sha1</b>, <b>sha256</b>, <b>sha384</b>, and <b>sha512</b>. Default value: <b>md5</b>.</description></item>
+        /// <item><description><b>IpsecConfig. IpsecPfs</b>: the Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiations. Valid values: <b>disabled</b>, <b>group1</b>, <b>group2</b>, <b>group5</b>, and <b>group14</b>. Default value: <b>group2</b>.</description></item>
+        /// <item><description><b>IpsecConfig. IpsecLifetime</b>: the SA lifetime that is determined by Phase 2 negotiations. Unit: seconds. Valid values: <b>0</b> to <b>86400</b>. Default value: <b>86400</b>.</description></item>
+        /// </list>
         /// 
-        /// *   **IpsecConfig.IpsecEncAlg**: the encryption algorithm that is used in Phase 2 negotiations. Valid values: **aes**, **aes192**, **aes256**, **des**, and **3des**. Default value: **aes**.
-        /// *   **IpsecConfig. IpsecAuthAlg**: the authentication algorithm that is used in Phase 2 negotiations. Valid values: **md5**, **sha1**, **sha256**, **sha384**, and **sha512**. Default value: **md5**.
-        /// *   **IpsecConfig. IpsecPfs**: the Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiations. Valid values: **disabled**, **group1**, **group2**, **group5**, and **group14**. Default value: **group2**.
-        /// *   **IpsecConfig. IpsecLifetime**: the SA lifetime that is determined by Phase 2 negotiations. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.
+        /// <b>Example:</b>
+        /// <para>{&quot;IpsecEncAlg&quot;:&quot;aes&quot;,&quot;IpsecAuthAlg&quot;:&quot;sha1&quot;,&quot;IpsecPfs&quot;:&quot;group2&quot;,&quot;IpsecLifetime&quot;:86400}</para>
         /// </summary>
         [NameInMap("IpsecConfig")]
         [Validation(Required=false)]
         public string IpsecConfig { get; set; }
 
         /// <summary>
-        /// The CIDR block on the VPC side. The CIDR block is used in Phase 2 negotiations.
+        /// <para>The CIDR block on the VPC side. The CIDR block is used in Phase 2 negotiations.</para>
+        /// <para>Separate multiple CIDR blocks with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.</para>
+        /// <para>The following routing modes are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>If you set <b>LocalSubnet</b> and <b>RemoteSubnet</b> to 0.0.0.0/0, the routing mode of the IPsec-VPN connection is set to Destination Routing Mode.</description></item>
+        /// <item><description>If you set <b>LocalSubnet</b> and <b>RemoteSubnet</b> to specific CIDR blocks, the routing mode of the IPsec-VPN connection is set to Protected Data Flows.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Separate multiple CIDR blocks with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.
-        /// 
-        /// The following routing modes are supported:
-        /// 
-        /// *   If you set **LocalSubnet** and **RemoteSubnet** to 0.0.0.0/0, the routing mode of the IPsec-VPN connection is set to Destination Routing Mode.
-        /// *   If you set **LocalSubnet** and **RemoteSubnet** to specific CIDR blocks, the routing mode of the IPsec-VPN connection is set to Protected Data Flows.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10.1.1.0/24,10.1.2.0/24</para>
         /// </summary>
         [NameInMap("LocalSubnet")]
         [Validation(Required=false)]
         public string LocalSubnet { get; set; }
 
         /// <summary>
-        /// The name of the IPsec-VPN connection.
+        /// <para>The name of the IPsec-VPN connection.</para>
+        /// <para>The name must be 1 to 100 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
-        /// The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
+        /// <b>Example:</b>
+        /// <para>nametest</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The network type of the IPsec-VPN connection. Valid values:
+        /// <para>The network type of the IPsec-VPN connection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>public</b> (default)</description></item>
+        /// <item><description><b>private</b></description></item>
+        /// </list>
         /// 
-        /// *   **public** (default)
-        /// *   **private**
+        /// <b>Example:</b>
+        /// <para>public</para>
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -195,44 +246,53 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OwnerAccount { get; set; }
 
         /// <summary>
-        /// The region ID of the IPsec-VPN connection.
+        /// <para>The region ID of the IPsec-VPN connection.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The peer CA certificate when a ShangMi (SM) VPN gateway is used to create the IPsec-VPN connection.
+        /// <para>The peer CA certificate when a ShangMi (SM) VPN gateway is used to create the IPsec-VPN connection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</para>
         /// </summary>
         [NameInMap("RemoteCaCert")]
         [Validation(Required=false)]
         public string RemoteCaCert { get; set; }
 
         /// <summary>
-        /// The CIDR block on the data center side. This CIDR block is used in Phase 2 negotiations.
+        /// <para>The CIDR block on the data center side. This CIDR block is used in Phase 2 negotiations.</para>
+        /// <para>Separate multiple CIDR blocks with commas (,). Example: 192.168.3.0/24,192.168.4.0/24.</para>
+        /// <para>The following routing modes are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>If you set <b>LocalSubnet</b> and <b>RemoteSubnet</b> to 0.0.0.0/0, the routing mode of the IPsec-VPN connection is set to Destination Routing Mode.</description></item>
+        /// <item><description>If you set <b>LocalSubnet</b> and <b>RemoteSubnet</b> to specific CIDR blocks, the routing mode of the IPsec-VPN connection is set to Protected Data Flows.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Separate multiple CIDR blocks with commas (,). Example: 192.168.3.0/24,192.168.4.0/24.
-        /// 
-        /// The following routing modes are supported:
-        /// 
-        /// *   If you set **LocalSubnet** and **RemoteSubnet** to 0.0.0.0/0, the routing mode of the IPsec-VPN connection is set to Destination Routing Mode.
-        /// *   If you set **LocalSubnet** and **RemoteSubnet** to specific CIDR blocks, the routing mode of the IPsec-VPN connection is set to Protected Data Flows.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10.1.3.0/24,10.1.4.0/24</para>
         /// </summary>
         [NameInMap("RemoteSubnet")]
         [Validation(Required=false)]
         public string RemoteSubnet { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the IPsec-VPN connection belongs.
+        /// <para>The ID of the resource group to which the IPsec-VPN connection belongs.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group IDs.</description></item>
+        /// <item><description>If you do not specify a resource group ID, the IPsec-VPN connection belongs to the default resource group.</description></item>
+        /// </list>
         /// 
-        /// *   You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource group IDs.
-        /// *   If you do not specify a resource group ID, the IPsec-VPN connection belongs to the default resource group.
+        /// <b>Example:</b>
+        /// <para>rg-acfmzs372yg****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -247,33 +307,33 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tag value.
-        /// 
-        /// The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
-        /// 
-        /// Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.
+        /// <para>The tag value.</para>
+        /// <para>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+        /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateVpnAttachmentRequestTags> Tags { get; set; }
         public class CreateVpnAttachmentRequestTags : TeaModel {
             /// <summary>
-            /// The tag key. The tag key cannot be an empty string.
+            /// <para>The tag key. The tag key cannot be an empty string.</para>
+            /// <para>It can be at most 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>You can specify at most 20 tag keys in each call.</para>
             /// 
-            /// It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-            /// 
-            /// You can specify at most 20 tag keys in each call.
+            /// <b>Example:</b>
+            /// <para>TagKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// <para>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</para>
             /// 
-            /// The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
-            /// 
-            /// Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
+            /// <b>Example:</b>
+            /// <para>TagValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

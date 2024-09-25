@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class MoveVpnResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource.
+        /// <para>The ID of the resource.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpn-8vb3lzn7biepthri8****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the new resource group.
+        /// <para>The ID of the new resource group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rg-acfmzs372yg****</para>
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
@@ -36,11 +40,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource.
+        /// <para>The region ID of the resource.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-zhangjiakou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -55,19 +60,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of resource.
+        /// <para>The type of resource.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>VpnGateway</b>: VPN gateway</para>
+        /// <para>After you move a VPN gateway to a new resource group, the following associated resources are also moved to the new resource group: IPsec servers, SSL servers, SSL client certificates, and IPsec-VPN connections.</para>
+        /// </description></item>
+        /// <item><description><para><b>CustomerGateway</b>: customer gateway</para>
+        /// </description></item>
+        /// <item><description><para><b>VpnAttachment</b>: IPsec-VPN connection</para>
+        /// <para>An IPsec-VPN connection associated with a transit router or not associate with a resource.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **VpnGateway**: VPN gateway
-        /// 
-        ///     After you move a VPN gateway to a new resource group, the following associated resources are also moved to the new resource group: IPsec servers, SSL servers, SSL client certificates, and IPsec-VPN connections.
-        /// 
-        /// *   **CustomerGateway**: customer gateway
-        /// 
-        /// *   **VpnAttachment**: IPsec-VPN connection
-        /// 
-        ///     An IPsec-VPN connection associated with a transit router or not associate with a resource.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>VpnGateway</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

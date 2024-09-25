@@ -18,11 +18,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the route table.
+        /// <para>The region ID of the route table.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,31 +38,39 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the route. Valid values:
+        /// <para>The type of the route. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>All</b>: all route types</description></item>
+        /// <item><description><b>Custom</b>: a custom route</description></item>
+        /// <item><description><b>System</b>: a system route</description></item>
+        /// <item><description><b>BGP</b>: a BGP route</description></item>
+        /// <item><description><b>CEN</b>: a Cloud Enterprise Network (CEN) route</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **All**: all route types
-        /// *   **Custom**: a custom route
-        /// *   **System**: a system route
-        /// *   **BGP**: a BGP route
-        /// *   **CEN**: a Cloud Enterprise Network (CEN) route
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("RouteEntryType")]
         [Validation(Required=false)]
         public string RouteEntryType { get; set; }
 
         /// <summary>
-        /// The ID of the route table that you want to query.
+        /// <para>The ID of the route table that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vtb-bp145q7glnuzdvzu2****</para>
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) to which the route table belongs.
+        /// <para>The ID of the virtual private cloud (VPC) to which the route table belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-bp15zckdt37pq72****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

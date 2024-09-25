@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeEipGatewayInfoResponseBody : TeaModel {
         /// <summary>
-        /// The status code of the operation.
+        /// <para>The status code of the operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The detailed information about the EIP.
+        /// <para>The detailed information about the EIP.</para>
         /// </summary>
         [NameInMap("EipInfos")]
         [Validation(Required=false)]
@@ -28,21 +31,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeEipGatewayInfoResponseBodyEipInfosEipInfo> EipInfo { get; set; }
             public class DescribeEipGatewayInfoResponseBodyEipInfosEipInfo : TeaModel {
                 /// <summary>
-                /// The IP address of the EIP.
+                /// <para>The IP address of the EIP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>47.XX.XX.236</para>
                 /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
                 /// <summary>
-                /// The IP address of the gateway that is associated with the EIP.
+                /// <para>The IP address of the gateway that is associated with the EIP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>47.XX.XX.1</para>
                 /// </summary>
                 [NameInMap("IpGw")]
                 [Validation(Required=false)]
                 public string IpGw { get; set; }
 
                 /// <summary>
-                /// The subnet mask of the EIP.
+                /// <para>The subnet mask of the EIP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>255.255.255.0</para>
                 /// </summary>
                 [NameInMap("IpMask")]
                 [Validation(Required=false)]
@@ -53,14 +65,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The result of the operation.
+        /// <para>The result of the operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C0FD0EED-F90D-4479-803D-DD62335357E5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

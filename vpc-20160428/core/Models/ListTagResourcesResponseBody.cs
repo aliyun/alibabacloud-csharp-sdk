@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If no value is returned for <b>NextToken</b>, no next queries are sent.</description></item>
+        /// <item><description>If a value is returned for <b>NextToken</b>, the value is used to retrieve a new page of results.</description></item>
+        /// </list>
         /// 
-        /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DE65F6B7-7566-4802-9007-96F2494AC512</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tag key.
+        /// <para>The tag key.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -38,36 +45,49 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
-                /// The ID of the resource.
+                /// <para>The ID of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp16qjewdsunr41m1****</para>
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource. Valid values:
+                /// <para>The type of the resource. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
+                /// <item><description><b>VSWITCH</b>: vSwitch</description></item>
+                /// <item><description><b>ROUTETABLE</b>: route table</description></item>
+                /// <item><description><b>EIP</b>: EIP</description></item>
+                /// <item><description><b>VpnGateWay</b>: VPN gateway</description></item>
+                /// <item><description><b>NATGATEWAY</b>: NAT gateway</description></item>
+                /// <item><description><b>COMMONBANDWIDTHPACKAGE</b>: EIP bandwidth plan</description></item>
+                /// </list>
                 /// 
-                /// *   **VPC**: virtual private cloud (VPC)
-                /// *   **VSWITCH**: vSwitch
-                /// *   **ROUTETABLE**: route table
-                /// *   **EIP**: EIP
-                /// *   **VpnGateWay**: VPN gateway
-                /// *   **NATGATEWAY**: NAT gateway
-                /// *   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FinanceDept</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FinanceJoshua</para>
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnClientCertsResponseBody : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the SSL client certificates.
+        /// <para>The information about the SSL client certificates.</para>
         /// </summary>
         [NameInMap("SslVpnClientCertKeys")]
         [Validation(Required=false)]
@@ -42,66 +51,88 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey> SslVpnClientCertKey { get; set; }
             public class DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey : TeaModel {
                 /// <summary>
-                /// The timestamp that indicates when the SSL client certificate was created. Unit: millisecond.
+                /// <para>The timestamp that indicates when the SSL client certificate was created. Unit: millisecond.</para>
+                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
                 /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                /// <b>Example:</b>
+                /// <para>1492747187000</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The timestamp that indicates when the SSL client certificate expires. Unit: millisecond.
+                /// <para>The timestamp that indicates when the SSL client certificate expires. Unit: millisecond.</para>
+                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
                 /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                /// <b>Example:</b>
+                /// <para>1494966335000</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// The name of the SSL client certificate.
+                /// <para>The name of the SSL client certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cert1</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The region where the SSL client certificate is created.
+                /// <para>The region where the SSL client certificate is created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the SSL client certificate belongs.
+                /// <para>The ID of the resource group to which the SSL client certificate belongs.</para>
+                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group information.</para>
                 /// 
-                /// You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.
+                /// <b>Example:</b>
+                /// <para>rg-acfmzs372yg****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The ID of the SSL client certificate.
+                /// <para>The ID of the SSL client certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsc-bp1n8wcf134yl0osr****</para>
                 /// </summary>
                 [NameInMap("SslVpnClientCertId")]
                 [Validation(Required=false)]
                 public string SslVpnClientCertId { get; set; }
 
                 /// <summary>
-                /// The ID of the SSL server.
+                /// <para>The ID of the SSL server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vss-bp18q7hzj6largv4v****</para>
                 /// </summary>
                 [NameInMap("SslVpnServerId")]
                 [Validation(Required=false)]
                 public string SslVpnServerId { get; set; }
 
                 /// <summary>
-                /// The status of the SSL client certificate. Valid values:
+                /// <para>The status of the SSL client certificate. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>expiring-soon</b></description></item>
+                /// <item><description><b>normal</b></description></item>
+                /// <item><description><b>expired</b></description></item>
+                /// </list>
                 /// 
-                /// *   **expiring-soon**
-                /// *   **normal**
-                /// *   **expired**
+                /// <b>Example:</b>
+                /// <para>normal</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -112,7 +143,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The number of entries returned.
+        /// <para>The number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

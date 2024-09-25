@@ -10,18 +10,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnSslServerLogsRequest : TeaModel {
         /// <summary>
-        /// The beginning of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.
+        /// <para>The beginning of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.</para>
+        /// <remarks>
+        /// <para> If you specify <b>From</b>, you must also specify <b>To</b> or <b>MinutePeriod</b>.</para>
+        /// </remarks>
         /// 
-        /// >  If you specify **From**, you must also specify **To** or **MinutePeriod**.
+        /// <b>Example:</b>
+        /// <para>1600738962</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public int? From { get; set; }
 
         /// <summary>
-        /// The interval at which log data is queried. Unit: minutes.
+        /// <para>The interval at which log data is queried. Unit: minutes.</para>
+        /// <remarks>
+        /// <para> If both <b>From</b> and <b>To</b> are not specified, you must specify <b>MinutePeriod</b>.</para>
+        /// </remarks>
         /// 
-        /// >  If both **From** and **To** are not specified, you must specify **MinutePeriod**.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MinutePeriod")]
         [Validation(Required=false)]
@@ -36,23 +44,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where the SSL server is created. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <para>The ID of the region where the SSL server is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -67,25 +83,34 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the SSL client certificate.
+        /// <para>The ID of the SSL client certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsc-m5euof6s5jy8vs5kd****</para>
         /// </summary>
         [NameInMap("SslVpnClientCertId")]
         [Validation(Required=false)]
         public string SslVpnClientCertId { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.
+        /// <para>The end of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.</para>
+        /// <remarks>
+        /// <para> If you specify <b>To</b>, you must also specify <b>From</b> or <b>MinutePeriod</b>.</para>
+        /// </remarks>
         /// 
-        /// >  If you specify **To**, you must also specify **From** or **MinutePeriod**.
+        /// <b>Example:</b>
+        /// <para>1600738962</para>
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]
         public int? To { get; set; }
 
         /// <summary>
-        /// The ID of the SSL server.
+        /// <para>The ID of the SSL server.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vss-bp155e9yclsg1xgq4****</para>
         /// </summary>
         [NameInMap("VpnSslServerId")]
         [Validation(Required=false)]

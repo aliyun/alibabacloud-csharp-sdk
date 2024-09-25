@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeHaVipsResponseBody : TeaModel {
         /// <summary>
-        /// The details about the HAVIP.
+        /// <para>The details about the HAVIP.</para>
         /// </summary>
         [NameInMap("HaVips")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeHaVipsResponseBodyHaVipsHaVip> HaVip { get; set; }
             public class DescribeHaVipsResponseBodyHaVipsHaVip : TeaModel {
                 /// <summary>
-                /// The list of EIPs associated with the HAVIP.
+                /// <para>The list of EIPs associated with the HAVIP.</para>
                 /// </summary>
                 [NameInMap("AssociatedEipAddresses")]
                 [Validation(Required=false)]
@@ -34,17 +34,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The type of the instance with which the HAVIP is associated. Valid values:
+                /// <para>The type of the instance with which the HAVIP is associated. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>EcsInstance</b>: Elastic Compute Service (ECS) instance</description></item>
+                /// <item><description><b>NetworkInterface</b>: elastic network interface (ENI)</description></item>
+                /// </list>
                 /// 
-                /// *   **EcsInstance**: Elastic Compute Service (ECS) instance
-                /// *   **NetworkInterface**: elastic network interface (ENI)
+                /// <b>Example:</b>
+                /// <para>EcsInstance</para>
                 /// </summary>
                 [NameInMap("AssociatedInstanceType")]
                 [Validation(Required=false)]
                 public string AssociatedInstanceType { get; set; }
 
                 /// <summary>
-                /// The information about the instance associated with the HAVIP.
+                /// <para>The information about the instance associated with the HAVIP.</para>
                 /// </summary>
                 [NameInMap("AssociatedInstances")]
                 [Validation(Required=false)]
@@ -57,81 +61,112 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The parameter is invalid. No value is returned.
+                /// <para>The parameter is invalid. No value is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>none</para>
                 /// </summary>
                 [NameInMap("ChargeType")]
                 [Validation(Required=false)]
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// The time when the HAVIP was created.
+                /// <para>The time when the HAVIP was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-07-03T14:25:26Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The description of the HAVIP.
+                /// <para>The description of the HAVIP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>My HaVip</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the HAVIP.
+                /// <para>The ID of the HAVIP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>havip-bp149uyvut73dpld****</para>
                 /// </summary>
                 [NameInMap("HaVipId")]
                 [Validation(Required=false)]
                 public string HaVipId { get; set; }
 
                 /// <summary>
-                /// The private IP address of the HAVIP.
+                /// <para>The private IP address of the HAVIP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.24.5</para>
                 /// </summary>
                 [NameInMap("IpAddress")]
                 [Validation(Required=false)]
                 public string IpAddress { get; set; }
 
                 /// <summary>
-                /// The ID of the active instance that is associated with the HAVIP.
+                /// <para>The ID of the active instance that is associated with the HAVIP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-bp145q7glnuzdvz****</para>
                 /// </summary>
                 [NameInMap("MasterInstanceId")]
                 [Validation(Required=false)]
                 public string MasterInstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the HAVIP.
+                /// <para>The name of the HAVIP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the region to which the HAVIP belongs.
+                /// <para>The ID of the region to which the HAVIP belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the HAVIP belongs.
+                /// <para>The ID of the resource group to which the HAVIP belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-bp67acfmxazb4ph****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The status of the HAVIP. Valid values:
+                /// <para>The status of the HAVIP. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Creating</b>: The server group is being created.</description></item>
+                /// <item><description><b>Available</b>: The FULLNAT entry is available.</description></item>
+                /// <item><description><b>Deleting</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Creating**: The server group is being created.
-                /// *   **Available**: The FULLNAT entry is available.
-                /// *   **Deleting**
+                /// <b>Example:</b>
+                /// <para>Available</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tag list.
+                /// <para>The tag list.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -142,14 +177,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeHaVipsResponseBodyHaVipsHaVipTagsTag> Tag { get; set; }
                     public class DescribeHaVipsResponseBodyHaVipsHaVipTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of tag N added to the resource.
+                        /// <para>The key of tag N added to the resource.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>FinanceDept</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of tag N added to the resource.
+                        /// <para>The value of tag N added to the resource.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>FinanceJoshua</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -160,14 +201,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the vSwitch to which the HAVIP belongs.
+                /// <para>The ID of the vSwitch to which the HAVIP belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-bp1pkt1fba8e824ez****</para>
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC to which the HAVIP belongs.
+                /// <para>The ID of the VPC to which the HAVIP belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp1kcm36tevkpms97****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -178,28 +225,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>33E480C5-B46F-4CA5-B6FD-D77C746E86AB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// <para>The number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

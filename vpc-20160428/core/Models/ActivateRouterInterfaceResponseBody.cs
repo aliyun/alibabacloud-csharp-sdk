@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ActivateRouterInterfaceResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>079874CD-AEC1-43E6-AC03-ADD96B6E4907</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

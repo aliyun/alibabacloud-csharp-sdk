@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnAttachmentsRequest : TeaModel {
         /// <summary>
-        /// The type of resource that is associated with the IPsec-VPN connection. Default value: **CEN**.
+        /// <para>The type of resource that is associated with the IPsec-VPN connection. Default value: <b>CEN</b>.</para>
+        /// <para>Set the value to <b>CEN</b>, which specifies to query IPsec-VPN connections associated with the transit router.</para>
         /// 
-        /// Set the value to **CEN**, which specifies to query IPsec-VPN connections associated with the transit router.
+        /// <b>Example:</b>
+        /// <para>CEN</para>
         /// </summary>
         [NameInMap("AttachType")]
         [Validation(Required=false)]
@@ -27,25 +29,32 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
+        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where the IPsec-VPN connection is established.
+        /// <para>The ID of the region where the IPsec-VPN connection is established.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -60,9 +69,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the IPsec-VPN connection.
+        /// <para>The ID of the IPsec-VPN connection.</para>
+        /// <remarks>
+        /// <para> If you do not specify an IPsec-VPN connection ID, all IPsec-VPN connections associated with a transit router in the region are queried.</para>
+        /// </remarks>
         /// 
-        /// >  If you do not specify an IPsec-VPN connection ID, all IPsec-VPN connections associated with a transit router in the region are queried.
+        /// <b>Example:</b>
+        /// <para>vco-p0w2jpkhi2eeop6q6****</para>
         /// </summary>
         [NameInMap("VpnConnectionId")]
         [Validation(Required=false)]

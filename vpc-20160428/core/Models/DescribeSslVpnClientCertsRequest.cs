@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnClientCertsRequest : TeaModel {
         /// <summary>
-        /// The name of the SSL client certificate.
+        /// <para>The name of the SSL client certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cert1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -25,35 +28,44 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
+        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the SSL client certificate.
+        /// <para>The region ID of the SSL client certificate.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the SSL client certificate belongs.
+        /// <para>The ID of the resource group to which the SSL client certificate belongs.</para>
+        /// <para>The SSL client certificate is the same as the resource group of the SSL server associated with it.
+        /// You can call the <a href="https://help.aliyun.com/document_detail/2794078.html">DescribeSslVpnServers</a> operation to query the ID of the resource group to which the SSL server belongs.</para>
         /// 
-        /// The SSL client certificate is the same as the resource group of the SSL server associated with it.
-        /// You can call the [DescribeSslVpnServers](https://help.aliyun.com/document_detail/2794078.html) operation to query the ID of the resource group to which the SSL server belongs.
+        /// <b>Example:</b>
+        /// <para>rg-acfmzs372yg****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -68,14 +80,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the SSL client certificate.
+        /// <para>The ID of the SSL client certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsc-bp1n8wcf134yl0osr****</para>
         /// </summary>
         [NameInMap("SslVpnClientCertId")]
         [Validation(Required=false)]
         public string SslVpnClientCertId { get; set; }
 
         /// <summary>
-        /// The ID of the SSL server.
+        /// <para>The ID of the SSL server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vss-bp18q7hzj6largv4v****</para>
         /// </summary>
         [NameInMap("SslVpnServerId")]
         [Validation(Required=false)]

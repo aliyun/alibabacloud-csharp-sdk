@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeTagKeysForExpressConnectRequest : TeaModel {
         /// <summary>
-        /// The keyword of the tag. Fuzzy match is supported. You can specify a keyword to query all tags that contain the keyword.
+        /// <para>The keyword of the tag. Fuzzy match is supported. You can specify a keyword to query all tags that contain the keyword.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>keyword</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResult")]
         [Validation(Required=false)]
         public int? MaxResult { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <list type="bullet">
+        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
+        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// </list>
         /// 
-        /// *   You do not need to specify this parameter for the first request.
-        /// *   You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -42,18 +52,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the resource resides.
+        /// <para>The ID of the region to which the resource resides.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the resources. You can specify up to 20 resource IDs.
+        /// <para>The IDs of the resources. You can specify up to 20 resource IDs.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -68,7 +79,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to **PHYSICALCONNECTION**, which specifies an Express Connect circuit.
+        /// <para>The type of the resource. Set the value to <b>PHYSICALCONNECTION</b>, which specifies an Express Connect circuit.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PHYSICALCONNECTION</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

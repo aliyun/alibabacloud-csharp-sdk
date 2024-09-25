@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateNatGatewayResponseBody : TeaModel {
         /// <summary>
-        /// A list of DNAT entries.
+        /// <para>A list of DNAT entries.</para>
         /// </summary>
         [NameInMap("ForwardTableIds")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// A list of FULLNAT entries.
+        /// <para>A list of FULLNAT entries.</para>
         /// </summary>
         [NameInMap("FullNatTableIds")]
         [Validation(Required=false)]
@@ -36,21 +36,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the NAT gateway.
+        /// <para>The ID of the NAT gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ngw-112za33e4****</para>
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2315DEB7-5E92-423A-91F7-4C1EC9AD97C3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// A list of SNAT entries.
+        /// <para>A list of SNAT entries.</para>
         /// </summary>
         [NameInMap("SnatTableIds")]
         [Validation(Required=false)]

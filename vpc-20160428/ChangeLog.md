@@ -1,3 +1,9 @@
+2024-09-25 Version: 6.10.4
+- Update API CreateFlowLog: add param IpVersion.
+- Update API DescribeFlowLogs: update response param.
+- Update API ModifyFlowLogAttribute: add param IpVersion.
+
+
 2024-09-14 Version: 6.10.3
 - Update API ListVpcPublishedRouteEntries: update response param.
 

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteVpnPbrRouteEntryResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
