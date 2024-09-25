@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
-    public class CredentialVerifyRequest : TeaModel {
+    public class CredentialVerifyShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>4601*****</para>
@@ -75,17 +75,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 
         [NameInMap("MerchantDetail")]
         [Validation(Required=false)]
-        public List<CredentialVerifyRequestMerchantDetail> MerchantDetail { get; set; }
-        public class CredentialVerifyRequestMerchantDetail : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string MerchantDetailShrink { get; set; }
 
         [NameInMap("MerchantId")]
         [Validation(Required=false)]

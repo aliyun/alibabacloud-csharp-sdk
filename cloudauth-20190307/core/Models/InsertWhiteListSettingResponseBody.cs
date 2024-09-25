@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
-    public class VehicleMetaVerifyResponseBody : TeaModel {
+    public class InsertWhiteListSettingResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>200</para>
@@ -29,25 +29,27 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8FC3D6AC-9FED-4311-8DA7-C4BF4*****</para>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
-        public VehicleMetaVerifyResponseBodyResultObject ResultObject { get; set; }
-        public class VehicleMetaVerifyResponseBodyResultObject : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("BizCode")]
-            [Validation(Required=false)]
-            public string BizCode { get; set; }
+        public bool? ResultObject { get; set; }
 
-        }
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

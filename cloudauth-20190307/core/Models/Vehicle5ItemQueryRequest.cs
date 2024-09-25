@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Vehicle5ItemQueryRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>normal</para>
+        /// </summary>
         [NameInMap("ParamType")]
         [Validation(Required=false)]
         public string ParamType { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string VehicleNum { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>02</para>
+        /// </summary>
         [NameInMap("VehicleType")]
         [Validation(Required=false)]
         public string VehicleType { get; set; }

@@ -8,42 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
-    public class DescribePageFaceVerifyDataRequest : TeaModel {
+    public class InsertWhiteListSettingRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>330103xxxxxxxxxxxx</para>
         /// </summary>
-        [NameInMap("CurrentPage")]
+        [NameInMap("CertNo")]
         [Validation(Required=false)]
-        public long? CurrentPage { get; set; }
+        public string CertNo { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2023-04-30</para>
+        /// <para>shsf57a4e0d9981c3bd66dc754f3d3cd</para>
         /// </summary>
-        [NameInMap("EndDate")]
+        [NameInMap("CertifyId")]
         [Validation(Required=false)]
-        public string EndDate { get; set; }
+        public string CertifyId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>xxxxxx</para>
         /// </summary>
-        [NameInMap("PageSize")]
+        [NameInMap("Remark")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
+        public string Remark { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ID_PLUS</para>
-        /// </summary>
-        [NameInMap("ProductCode")]
-        [Validation(Required=false)]
-        public string ProductCode { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>36**01</para>
+        /// <para>100000xxxx</para>
         /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
@@ -51,11 +43,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2023-04-10</para>
+        /// <para>antcloudauth</para>
         /// </summary>
-        [NameInMap("StartDate")]
+        [NameInMap("ServiceCode")]
         [Validation(Required=false)]
-        public string StartDate { get; set; }
+        public string ServiceCode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("ValidDay")]
+        [Validation(Required=false)]
+        public int? ValidDay { get; set; }
 
     }
 

@@ -8,16 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
-    public class DescribeVerifySDKRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1KQMcnLd4m37LN2D0F0WCD</para>
-        /// </summary>
-        [NameInMap("TaskId")]
+    public class RemoveWhiteListSettingRequest : TeaModel {
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public List<long?> Ids { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>antcloudauth</para>
+        /// </summary>
+        [NameInMap("ServiceCode")]
+        [Validation(Required=false)]
+        public string ServiceCode { get; set; }
 
     }
 
