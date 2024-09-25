@@ -991,6 +991,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig VpcConfig { get; set; }
             public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig : TeaModel {
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
