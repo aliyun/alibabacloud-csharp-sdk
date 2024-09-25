@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class RejectServiceUsageResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4DB0F536-B3BE-4F0D-BD29-E83FB56D550C</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetArtifactRepositoryCredentialsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the resources that can be uploaded.
+        /// <para>The information about the resources that can be uploaded.</para>
         /// </summary>
         [NameInMap("AvailableResources")]
         [Validation(Required=false)]
         public List<GetArtifactRepositoryCredentialsResponseBodyAvailableResources> AvailableResources { get; set; }
         public class GetArtifactRepositoryCredentialsResponseBodyAvailableResources : TeaModel {
             /// <summary>
-            /// The path.
+            /// <para>The path.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;/xxx/&quot;</para>
             /// </summary>
             [NameInMap("Path")]
             [Validation(Required=false)]
             public string Path { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// <para>The region ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oss-cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The repository name.
+            /// <para>The repository name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>computenest-artifacts-draft-cn-hangzhou</para>
             /// </summary>
             [NameInMap("RepositoryName")]
             [Validation(Required=false)]
@@ -40,42 +49,57 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// The credentials.
+        /// <para>The credentials.</para>
         /// </summary>
         [NameInMap("Credentials")]
         [Validation(Required=false)]
         public GetArtifactRepositoryCredentialsResponseBodyCredentials Credentials { get; set; }
         public class GetArtifactRepositoryCredentialsResponseBodyCredentials : TeaModel {
             /// <summary>
-            /// The AccessKey ID.
+            /// <para>The AccessKey ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>STS.xxx</para>
             /// </summary>
             [NameInMap("AccessKeyId")]
             [Validation(Required=false)]
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// The AccessKey secret.
+            /// <para>The AccessKey secret.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx</para>
             /// </summary>
             [NameInMap("AccessKeySecret")]
             [Validation(Required=false)]
             public string AccessKeySecret { get; set; }
 
             /// <summary>
-            /// The password.
+            /// <para>The password.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eyJ0aW1lIjoiMTUyNjU0OTc5:0705733****</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
 
             /// <summary>
-            /// The Security Token Service (STS) token.
+            /// <para>The Security Token Service (STS) token.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx</para>
             /// </summary>
             [NameInMap("SecurityToken")]
             [Validation(Required=false)]
             public string SecurityToken { get; set; }
 
             /// <summary>
-            /// The username.
+            /// <para>The username.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx</para>
             /// </summary>
             [NameInMap("Username")]
             [Validation(Required=false)]
@@ -84,14 +108,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// The time when the credentials expired.
+        /// <para>The time when the credentials expired.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1526549792000</para>
         /// </summary>
         [NameInMap("ExpireDate")]
         [Validation(Required=false)]
         public string ExpireDate { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>94E89857-B994-44B6-9C4F-DBD200E9XXXX</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

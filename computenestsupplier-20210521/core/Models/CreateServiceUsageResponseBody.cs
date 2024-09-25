@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class CreateServiceUsageResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E73F09DC-6C13-5CB1-A10F-7A4E125ABD2C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

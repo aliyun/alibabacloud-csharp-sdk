@@ -8,9 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class GetServiceInstanceRequest : TeaModel {
+    public class PreLaunchServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <b>Example:</b>
+        /// <para>10CM943JP0EN9D51H</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,15 +28,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>si-d6ab3a63ccbb4b17****</para>
+        /// <para>service-f7024a22ea5149xxxxxx</para>
         /// </summary>
-        [NameInMap("ServiceInstanceId")]
+        [NameInMap("ServiceId")]
         [Validation(Required=false)]
-        public string ServiceInstanceId { get; set; }
+        public string ServiceId { get; set; }
 
     }
 

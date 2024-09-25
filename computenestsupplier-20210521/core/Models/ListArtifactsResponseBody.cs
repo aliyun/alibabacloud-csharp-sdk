@@ -10,91 +10,122 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListArtifactsResponseBody : TeaModel {
         /// <summary>
-        /// The information about deployment packages.
+        /// <para>The information about deployment packages.</para>
         /// </summary>
         [NameInMap("Artifacts")]
         [Validation(Required=false)]
         public List<ListArtifactsResponseBodyArtifacts> Artifacts { get; set; }
         public class ListArtifactsResponseBodyArtifacts : TeaModel {
             /// <summary>
-            /// The ID of the deployment package.
+            /// <para>The ID of the deployment package.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>artifact-eea08d1e2d3a43aexxxx</para>
             /// </summary>
             [NameInMap("ArtifactId")]
             [Validation(Required=false)]
             public string ArtifactId { get; set; }
 
             /// <summary>
-            /// The type of the deployment package.
+            /// <para>The type of the deployment package.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>EcsImage</para>
             /// </summary>
             [NameInMap("ArtifactType")]
             [Validation(Required=false)]
             public string ArtifactType { get; set; }
 
             /// <summary>
-            /// The description of the deployment package.
+            /// <para>The description of the deployment package.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The time when the deployment package was modified.
+            /// <para>The time when the deployment package was modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-10-20T02:19:55Z</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The latest version of the deployment package.
+            /// <para>The latest version of the deployment package.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("MaxVersion")]
             [Validation(Required=false)]
             public string MaxVersion { get; set; }
 
             /// <summary>
-            /// The name of the deployment package.
+            /// <para>The name of the deployment package.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aek25rexxxxxxxx</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The status of the deployment package. Valid values:
+            /// <para>The status of the deployment package. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Created: The deployment package is created.</description></item>
+            /// <item><description>Scanning: The deployment package is being scanned.</description></item>
+            /// <item><description>ScanFailed: The deployment package failed to be scanned.</description></item>
+            /// <item><description>Delivering: The deployment package is being distributed.</description></item>
+            /// <item><description>Available: The deployment package is available.</description></item>
+            /// <item><description>Deleted: The deployment package is deleted.</description></item>
+            /// </list>
             /// 
-            /// *   Created: The deployment package is created.
-            /// *   Scanning: The deployment package is being scanned.
-            /// *   ScanFailed: The deployment package failed to be scanned.
-            /// *   Delivering: The deployment package is being distributed.
-            /// *   Available: The deployment package is available.
-            /// *   Deleted: The deployment package is deleted.
+            /// <b>Example:</b>
+            /// <para>Created</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The tags.
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListArtifactsResponseBodyArtifactsTags> Tags { get; set; }
             public class ListArtifactsResponseBodyArtifactsTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key1</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value1</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -105,28 +136,40 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// The number of entries per page. Valid values: 1 to 100. Default value: 20.
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hRQzE=</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>46577928-3162-15A6-9084-69820EB9xxxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

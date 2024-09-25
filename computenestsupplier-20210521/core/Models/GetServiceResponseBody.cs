@@ -10,92 +10,129 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetServiceResponseBody : TeaModel {
         /// <summary>
-        /// The alert configurations of the service.
+        /// <para>The alert configurations of the service.</para>
+        /// <remarks>
+        /// <para> This parameter takes effect only when you specify an alert policy for <b>PolicyNames</b>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter takes effect only when you specify an alert policy for **PolicyNames**.
+        /// <b>Example:</b>
+        /// <para>{
+        ///   &quot;TemplateUrl&quot;: &quot;<a href="http://template.file.url">http://template.file.url</a>&quot;,
+        ///   // 应用分组级别告警元数据
+        ///   &quot;ApplicationGroups&quot;: [
+        ///     {
+        ///       &quot;Name&quot;: &quot;applicationGroup1&quot;,
+        ///       &quot;TemplateUrl&quot;: &quot;url1&quot;
+        ///     },
+        ///     {
+        ///       &quot;Name&quot;: &quot;applicationGroup2&quot;,
+        ///       &quot;TemplateUrl&quot;: &quot;url2&quot;
+        ///     }
+        ///   ]
+        /// }</para>
         /// </summary>
         [NameInMap("AlarmMetadata")]
         [Validation(Required=false)]
         public string AlarmMetadata { get; set; }
 
         /// <summary>
-        /// The approval type of the service usage application. Valid values:
+        /// <para>The approval type of the service usage application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Manual: The application is manually approved.</description></item>
+        /// <item><description>AutoPass: The application is automatically approved.</description></item>
+        /// </list>
         /// 
-        /// *   Manual: The application is manually approved.
-        /// *   AutoPass: The application is automatically approved.
+        /// <b>Example:</b>
+        /// <para>Manual</para>
         /// </summary>
         [NameInMap("ApprovalType")]
         [Validation(Required=false)]
         public string ApprovalType { get; set; }
 
         /// <summary>
-        /// The information of build service information.
+        /// <para>The information of build service information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{ &quot;RepoUrl&quot;: &quot;<a href="https://github.com/user/repo.git">https://github.com/user/repo.git</a>&quot;, &quot;Brancn&quot;: &quot;main&quot;}</para>
         /// </summary>
         [NameInMap("BuildInfo")]
         [Validation(Required=false)]
         public string BuildInfo { get; set; }
 
         /// <summary>
-        /// The category of the service.
+        /// <para>The category of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DevOps</para>
         /// </summary>
         [NameInMap("Categories")]
         [Validation(Required=false)]
         public string Categories { get; set; }
 
         /// <summary>
-        /// The commodity details.
+        /// <para>The commodity details.</para>
         /// </summary>
         [NameInMap("Commodity")]
         [Validation(Required=false)]
         public GetServiceResponseBodyCommodity Commodity { get; set; }
         public class GetServiceResponseBodyCommodity : TeaModel {
             /// <summary>
-            /// The billing method of the service. Valid values:
+            /// <para>The billing method of the service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>PREPAY</b> (default): subscription.</description></item>
+            /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
+            /// </list>
             /// 
-            /// *   **PREPAY** (default): subscription.
-            /// *   **POSTPAY**: pay-as-you-go.
+            /// <b>Example:</b>
+            /// <para>PREPAY</para>
             /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The commodity code of the service in Alibaba Cloud Marketplace.
+            /// <para>The commodity code of the service in Alibaba Cloud Marketplace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cmjj00xxxx</para>
             /// </summary>
             [NameInMap("CommodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// The commodity modules.
+            /// <para>The commodity modules.</para>
             /// </summary>
             [NameInMap("Components")]
             [Validation(Required=false)]
             public List<string> Components { get; set; }
 
             /// <summary>
-            /// The configuration metadata related to Lingxiao.
+            /// <para>The configuration metadata related to Lingxiao.</para>
             /// </summary>
             [NameInMap("CssMetadata")]
             [Validation(Required=false)]
             public GetServiceResponseBodyCommodityCssMetadata CssMetadata { get; set; }
             public class GetServiceResponseBodyCommodityCssMetadata : TeaModel {
                 /// <summary>
-                /// The mapping information about the billing items.
+                /// <para>The mapping information about the billing items.</para>
                 /// </summary>
                 [NameInMap("ComponentsMappings")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityCssMetadataComponentsMappings> ComponentsMappings { get; set; }
                 public class GetServiceResponseBodyCommodityCssMetadataComponentsMappings : TeaModel {
                     /// <summary>
-                    /// The mappings.
+                    /// <para>The mappings.</para>
                     /// </summary>
                     [NameInMap("Mappings")]
                     [Validation(Required=false)]
                     public Dictionary<string, string> Mappings { get; set; }
 
                     /// <summary>
-                    /// The template name.
+                    /// <para>The template name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Template 1</para>
                     /// </summary>
                     [NameInMap("TemplateName")]
                     [Validation(Required=false)]
@@ -104,35 +141,47 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 }
 
                 /// <summary>
-                /// Metering item configuration information.
+                /// <para>Metering item configuration information.</para>
                 /// </summary>
                 [NameInMap("MeteringEntityExtraInfos")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos> MeteringEntityExtraInfos { get; set; }
                 public class GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos : TeaModel {
                     /// <summary>
-                    /// The ID of the entity.
+                    /// <para>The ID of the entity.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cmgj0048****-Frequency-1</para>
                     /// </summary>
                     [NameInMap("EntityId")]
                     [Validation(Required=false)]
                     public string EntityId { get; set; }
 
                     /// <summary>
-                    /// Name of a measurement indicator.
+                    /// <para>Name of a measurement indicator.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>AvgMemory</para>
                     /// </summary>
                     [NameInMap("MetricName")]
                     [Validation(Required=false)]
                     public string MetricName { get; set; }
 
                     /// <summary>
-                    /// Custom PromQL.
+                    /// <para>Custom PromQL.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>avg_over_time(count(kube_pod_info{namespace=\&quot;default\&quot;})[1h:1m])</para>
                     /// </summary>
                     [NameInMap("Promql")]
                     [Validation(Required=false)]
                     public string Promql { get; set; }
 
                     /// <summary>
-                    /// Measurement indicators.
+                    /// <para>Measurement indicators.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ComputeNestPrometheus</para>
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -141,28 +190,37 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 }
 
                 /// <summary>
-                /// The binding relationship between package and measurement dimension.
+                /// <para>The binding relationship between package and measurement dimension.</para>
                 /// </summary>
                 [NameInMap("MeteringEntityMappings")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings> MeteringEntityMappings { get; set; }
                 public class GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings : TeaModel {
                     /// <summary>
-                    /// The ID of the entity.
+                    /// <para>The ID of the entity.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cmgj0015****-Frequency-1</para>
                     /// </summary>
                     [NameInMap("EntityIds")]
                     [Validation(Required=false)]
                     public string EntityIds { get; set; }
 
                     /// <summary>
-                    /// The package name.
+                    /// <para>The package name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>按量付费套餐</para>
                     /// </summary>
                     [NameInMap("SpecificationName")]
                     [Validation(Required=false)]
                     public string SpecificationName { get; set; }
 
                     /// <summary>
-                    /// The template name.
+                    /// <para>The template name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>模板1</para>
                     /// </summary>
                     [NameInMap("TemplateName")]
                     [Validation(Required=false)]
@@ -173,42 +231,54 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// The metadata of Alibaba Cloud Marketplace.
+            /// <para>The metadata of Alibaba Cloud Marketplace.</para>
             /// </summary>
             [NameInMap("MarketplaceMetadata")]
             [Validation(Required=false)]
             public GetServiceResponseBodyCommodityMarketplaceMetadata MarketplaceMetadata { get; set; }
             public class GetServiceResponseBodyCommodityMarketplaceMetadata : TeaModel {
                 /// <summary>
-                /// The configurations of the billable items.
+                /// <para>The configurations of the billable items.</para>
                 /// </summary>
                 [NameInMap("MeteringEntityExtraInfos")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos> MeteringEntityExtraInfos { get; set; }
                 public class GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos : TeaModel {
                     /// <summary>
-                    /// The ID of the billable item.
+                    /// <para>The ID of the billable item.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cmgjxxxxxxxx-NetworkOut-2</para>
                     /// </summary>
                     [NameInMap("EntityId")]
                     [Validation(Required=false)]
                     public string EntityId { get; set; }
 
                     /// <summary>
-                    /// The metric name.
+                    /// <para>The metric name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>NetworkLantency</para>
                     /// </summary>
                     [NameInMap("MetricName")]
                     [Validation(Required=false)]
                     public string MetricName { get; set; }
 
                     /// <summary>
-                    /// The custom prometheus statement.
+                    /// <para>The custom prometheus statement.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>avg_over_time(count(kube_pod_info{namespace=\&quot;default\&quot;})[1h:1m])</para>
                     /// </summary>
                     [NameInMap("Promql")]
                     [Validation(Required=false)]
                     public string Promql { get; set; }
 
                     /// <summary>
-                    /// The metric.
+                    /// <para>The metric.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>AvgPod</para>
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -217,28 +287,37 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 }
 
                 /// <summary>
-                /// The billable items that are associated with the package.
+                /// <para>The billable items that are associated with the package.</para>
                 /// </summary>
                 [NameInMap("MeteringEntityMappings")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings> MeteringEntityMappings { get; set; }
                 public class GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings : TeaModel {
                     /// <summary>
-                    /// The ID of the billable item.
+                    /// <para>The ID of the billable item.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cmgjxxxxxxxx-NetworkOut-2</para>
                     /// </summary>
                     [NameInMap("EntityIds")]
                     [Validation(Required=false)]
                     public string EntityIds { get; set; }
 
                     /// <summary>
-                    /// The name of the specification package.
+                    /// <para>The name of the specification package.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Pay-as-you-go Package</para>
                     /// </summary>
                     [NameInMap("SpecificationName")]
                     [Validation(Required=false)]
                     public string SpecificationName { get; set; }
 
                     /// <summary>
-                    /// The template name.
+                    /// <para>The template name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Template 1</para>
                     /// </summary>
                     [NameInMap("TemplateName")]
                     [Validation(Required=false)]
@@ -247,38 +326,51 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 }
 
                 /// <summary>
-                /// The mappings between the service specifications and the template or package.
+                /// <para>The mappings between the service specifications and the template or package.</para>
                 /// </summary>
                 [NameInMap("SpecificationMappings")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings> SpecificationMappings { get; set; }
                 public class GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings : TeaModel {
                     /// <summary>
-                    /// The specification code of the service in Alibaba Cloud Marketplace.
+                    /// <para>The specification code of the service in Alibaba Cloud Marketplace.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cmjj00xxxx</para>
                     /// </summary>
                     [NameInMap("SpecificationCode")]
                     [Validation(Required=false)]
                     public string SpecificationCode { get; set; }
 
                     /// <summary>
-                    /// The name of the specification package.
+                    /// <para>The name of the specification package.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Pay-as-you-go</para>
                     /// </summary>
                     [NameInMap("SpecificationName")]
                     [Validation(Required=false)]
                     public string SpecificationName { get; set; }
 
                     /// <summary>
-                    /// The template name.
+                    /// <para>The template name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Template 1</para>
                     /// </summary>
                     [NameInMap("TemplateName")]
                     [Validation(Required=false)]
                     public string TemplateName { get; set; }
 
                     /// <summary>
-                    /// The trial policy. Valid values:
+                    /// <para>The trial policy. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Trial: Trials are supported.</description></item>
+                    /// <item><description>NotTrial: Trials are not supported.</description></item>
+                    /// </list>
                     /// 
-                    /// *   Trial: Trials are supported.
-                    /// *   NotTrial: Trials are not supported.
+                    /// <b>Example:</b>
+                    /// <para>NotTrial</para>
                     /// </summary>
                     [NameInMap("TrialType")]
                     [Validation(Required=false)]
@@ -289,21 +381,27 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// The information about the billable item.
+            /// <para>The information about the billable item.</para>
             /// </summary>
             [NameInMap("MeteringEntities")]
             [Validation(Required=false)]
             public List<GetServiceResponseBodyCommodityMeteringEntities> MeteringEntities { get; set; }
             public class GetServiceResponseBodyCommodityMeteringEntities : TeaModel {
                 /// <summary>
-                /// The ID of the billable item.
+                /// <para>The ID of the billable item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cmgjxxxxxxxx-NetworkOut</para>
                 /// </summary>
                 [NameInMap("EntityId")]
                 [Validation(Required=false)]
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// The name of the billable item.
+                /// <para>The name of the billable item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>spring-boot-demo</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -312,35 +410,44 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// The configuration metadata related to Saas Boost.
+            /// <para>The configuration metadata related to Saas Boost.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{ &quot;Enabled&quot;:false // The public endpoint of the SaaS Boost instance. &quot;PublicAccessUrl&quot;:&quot;<a href="https://example.com">https://example.com</a>&quot; }</para>
             /// </summary>
             [NameInMap("SaasBoostMetadata")]
             [Validation(Required=false)]
             public string SaasBoostMetadata { get; set; }
 
             /// <summary>
-            /// The specification details of the service in Alibaba Cloud Marketplace.
+            /// <para>The specification details of the service in Alibaba Cloud Marketplace.</para>
             /// </summary>
             [NameInMap("Specifications")]
             [Validation(Required=false)]
             public List<GetServiceResponseBodyCommoditySpecifications> Specifications { get; set; }
             public class GetServiceResponseBodyCommoditySpecifications : TeaModel {
                 /// <summary>
-                /// The commodity code.
+                /// <para>The commodity code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cmjj00xxxx</para>
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The specification name.
+                /// <para>The specification name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>specifications1</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The subscription duration. Unit: week or year.
+                /// <para>The subscription duration. Unit: week or year.</para>
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]
@@ -349,10 +456,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// The service type. Valid values:
+            /// <para>The service type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>marketplace: Alibaba Cloud Marketplace.</description></item>
+            /// <item><description>Css: Lingxiao.</description></item>
+            /// </list>
             /// 
-            /// *   marketplace: Alibaba Cloud Marketplace.
-            /// *   Css: Lingxiao.
+            /// <b>Example:</b>
+            /// <para>Marketplace</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -361,240 +472,332 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// The commodity code of the service in Alibaba Cloud Marketplace.
+        /// <para>The commodity code of the service in Alibaba Cloud Marketplace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cmjj00xxxx</para>
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// The time when the service was created.
+        /// <para>The time when the service was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-05-20T00:00:00Z</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// The binding configurations of the commodity module.
+        /// <para>The binding configurations of the commodity module.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>componesConfigs</para>
         /// </summary>
         [NameInMap("CrossRegionConnectionStatus")]
         [Validation(Required=false)]
         public string CrossRegionConnectionStatus { get; set; }
 
         /// <summary>
-        /// The validity period of the default license. Unit: day. Valid values: 1 to 1000.
+        /// <para>The validity period of the default license. Unit: day. Valid values: 1 to 1000.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("DefaultLicenseDays")]
         [Validation(Required=false)]
         public long? DefaultLicenseDays { get; set; }
 
         /// <summary>
-        /// The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.
+        /// <para>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;TemplateConfigs\&quot;:[{\&quot;Name\&quot;:\&quot;模板1\&quot;,\&quot;Url\&quot;:\&quot;oss://computenest-test/template&quot; 
+        ///             + &quot;.json?RegionId=cn-beijing\&quot;,\&quot;PredefinedParameters\&quot;:[{\&quot;Name\&quot;:\&quot;低配版\&quot;,&quot; 
+        ///             + &quot;\&quot;Parameters\&quot;:{\&quot;InstanceType\&quot;:\&quot;ecs.g5.large\&quot;,\&quot;DataDiskSize\&quot;:40}},{\&quot;Name\&quot;:\&quot;高配版\&quot;,&quot; 
+        ///             + &quot;\&quot;Parameters\&quot;:{\&quot;InstanceType\&quot;:\&quot;ecs.g5.large\&quot;,\&quot;DataDiskSize\&quot;:200}}]}]}</para>
         /// </summary>
         [NameInMap("DeployMetadata")]
         [Validation(Required=false)]
         public string DeployMetadata { get; set; }
 
         /// <summary>
-        /// The deployment type of the service. Valid values:
+        /// <para>The deployment type of the service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ros: The service is deployed by using Resource Orchestration Service (ROS).</description></item>
+        /// <item><description>terraform: The service is deployed by using Terraform.</description></item>
+        /// <item><description>spi: The service is deployed by calling a service provider interface (SPI).</description></item>
+        /// <item><description>operation: The service is deployed by using a hosted O\&amp;M service.</description></item>
+        /// <item><description>container: The service is deployed by using a container.</description></item>
+        /// <item><description>pkg: The service is deployed by using a package.</description></item>
+        /// </list>
         /// 
-        /// *   ros: The service is deployed by using Resource Orchestration Service (ROS).
-        /// *   terraform: The service is deployed by using Terraform.
-        /// *   spi: The service is deployed by calling a service provider interface (SPI).
-        /// *   operation: The service is deployed by using a hosted O\\&M service.
-        /// *   container: The service is deployed by using a container.
-        /// *   pkg: The service is deployed by using a package.
+        /// <b>Example:</b>
+        /// <para>ros</para>
         /// </summary>
         [NameInMap("DeployType")]
         [Validation(Required=false)]
         public string DeployType { get; set; }
 
         /// <summary>
-        /// The duration for which hosted O\\&M is implemented. Unit: seconds.
+        /// <para>The duration for which hosted O\&amp;M is implemented. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>259200</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public long? Duration { get; set; }
 
         /// <summary>
-        /// The report source.
+        /// <para>The report source.</para>
         /// </summary>
         [NameInMap("EntitySource")]
         [Validation(Required=false)]
         public Dictionary<string, string> EntitySource { get; set; }
 
         /// <summary>
-        /// Indicates whether the hosted O\\&M feature is enabled for the service. Default value: false. Valid values:
+        /// <para>Indicates whether the hosted O\&amp;M feature is enabled for the service. Default value: false. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is returned if you set <b>ServiceType</b> to <b>private</b>.</para>
+        /// </remarks>
         /// 
-        /// *   true
-        /// *   false
-        /// 
-        /// >  This parameter is returned if you set **ServiceType** to **private**.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsSupportOperated")]
         [Validation(Required=false)]
         public bool? IsSupportOperated { get; set; }
 
         /// <summary>
-        /// The license metadata.
+        /// <para>The license metadata.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;renewType&quot;:&quot;MONTHLY&quot;}</para>
         /// </summary>
         [NameInMap("LicenseMetadata")]
         [Validation(Required=false)]
         public string LicenseMetadata { get; set; }
 
         /// <summary>
-        /// The logging configurations.
+        /// <para>The logging configurations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{ &quot;Logstores&quot;: [ { &quot;LogstoreName&quot;: &quot;access-log&quot;, &quot;LogPath&quot;: &quot;/home/admin/app/logs&quot;, # This parameter is not required for containers. Configure the parameter in the YAML file. &quot;FilePattern&quot;: &quot;access.log\*&quot; # This parameter is not required for containers. Configure the parameter in the YAML file. } ] }</para>
         /// </summary>
         [NameInMap("LogMetadata")]
         [Validation(Required=false)]
         public string LogMetadata { get; set; }
 
         /// <summary>
-        /// The hosted O\\&M configurations.
+        /// <para>The hosted O\&amp;M configurations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;PrometheusConfigMap\&quot;:{\&quot;New_Vpc_Ack_And_Jumpserver\&quot;:{}}}</para>
         /// </summary>
         [NameInMap("OperationMetadata")]
         [Validation(Required=false)]
         public string OperationMetadata { get; set; }
 
         /// <summary>
-        /// The source for which fees are generated. Valid values:
+        /// <para>The source for which fees are generated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>None: No fees are generated.</description></item>
+        /// <item><description>Marketplace: Fees are generated for Alibaba Cloud Marketplace.</description></item>
+        /// <item><description>Custom: The custom fees.</description></item>
+        /// </list>
         /// 
-        /// *   None: No fees are generated.
-        /// *   Marketplace: Fees are generated for Alibaba Cloud Marketplace.
-        /// *   Custom: The custom fees.
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("PayFromType")]
         [Validation(Required=false)]
         public string PayFromType { get; set; }
 
         /// <summary>
-        /// The billing method of the service. Valid values:
+        /// <para>The billing method of the service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Permanent: Once you purchase the service, you can use it permanently.</description></item>
+        /// <item><description>Subscription: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a subscription basis.</description></item>
+        /// <item><description>PayAsYouGo: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a pay-as-you-go basis.</description></item>
+        /// <item><description>CustomFixTime: You are charged for the service based on a custom duration fixed by the service provider.</description></item>
+        /// </list>
         /// 
-        /// *   Permanent: Once you purchase the service, you can use it permanently.
-        /// *   Subscription: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a subscription basis.
-        /// *   PayAsYouGo: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a pay-as-you-go basis.
-        /// *   CustomFixTime: You are charged for the service based on a custom duration fixed by the service provider.
+        /// <b>Example:</b>
+        /// <para>Permanent</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// The permissions on the service. Valid values:
+        /// <para>The permissions on the service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Deployable: Permissions to deploy the service.</description></item>
+        /// <item><description>Accessible: Permissions to access the service.</description></item>
+        /// </list>
         /// 
-        /// *   Deployable: Permissions to deploy the service.
-        /// *   Accessible: Permissions to access the service.
+        /// <b>Example:</b>
+        /// <para>Deployable</para>
         /// </summary>
         [NameInMap("Permission")]
         [Validation(Required=false)]
         public string Permission { get; set; }
 
         /// <summary>
-        /// The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O\\&M policies are supported.
+        /// <para>The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O\&amp;M policies are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>policyName1, policyName2</para>
         /// </summary>
         [NameInMap("PolicyNames")]
         [Validation(Required=false)]
         public string PolicyNames { get; set; }
 
         /// <summary>
-        /// The deployment progress of the service instance. Unit: percentage.
+        /// <para>The deployment progress of the service instance. Unit: percentage.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90</para>
         /// </summary>
         [NameInMap("Progress")]
         [Validation(Required=false)]
         public long? Progress { get; set; }
 
         /// <summary>
-        /// The time when the service was published.
+        /// <para>The time when the service was published.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-05-21T00:00:00Z</para>
         /// </summary>
         [NameInMap("PublishTime")]
         [Validation(Required=false)]
         public string PublishTime { get; set; }
 
         /// <summary>
-        /// The registration ID.
+        /// <para>The registration ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sr-04056c2ab4b94bxxxxxx</para>
         /// </summary>
         [NameInMap("RegistrationId")]
         [Validation(Required=false)]
         public string RegistrationId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the distribution is supported. Valid values:
+        /// <para>Indicates whether the distribution is supported. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false</description></item>
+        /// <item><description>true</description></item>
+        /// </list>
         /// 
-        /// *   false
-        /// *   true
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Resellable")]
         [Validation(Required=false)]
         public bool? Resellable { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekzuqyxxxxxx</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The URL of the service audit file.
+        /// <para>The URL of the service audit file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://service-info-public.oss-cn-hangzhou.aliyuncs.com/1690707531xxxxxx/service-document/be3382cd-xxxx-xxxx-xxxx-f8707ec12879.docx">https://service-info-public.oss-cn-hangzhou.aliyuncs.com/1690707531xxxxxx/service-document/be3382cd-xxxx-xxxx-xxxx-f8707ec12879.docx</a></para>
         /// </summary>
         [NameInMap("ServiceAuditDocumentUrl")]
         [Validation(Required=false)]
         public string ServiceAuditDocumentUrl { get; set; }
 
         /// <summary>
-        /// Indicates whether the service is visible. Valid values:
+        /// <para>Indicates whether the service is visible. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>INVISIBLE</description></item>
+        /// <item><description>DISCOVERABLE</description></item>
+        /// </list>
         /// 
-        /// *   INVISIBLE
-        /// *   DISCOVERABLE
+        /// <b>Example:</b>
+        /// <para>DISCOVERABLE</para>
         /// </summary>
         [NameInMap("ServiceDiscoverable")]
         [Validation(Required=false)]
         public string ServiceDiscoverable { get; set; }
 
         /// <summary>
-        /// The URL of the service documentation.
+        /// <para>The URL of the service documentation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://example1.com">http://example1.com</a></para>
         /// </summary>
         [NameInMap("ServiceDocUrl")]
         [Validation(Required=false)]
         public string ServiceDocUrl { get; set; }
 
         /// <summary>
-        /// The service ID.
+        /// <para>The service ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>service-70a3b15bb62643xxxxxx</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// The information about the service.
+        /// <para>The information about the service.</para>
         /// </summary>
         [NameInMap("ServiceInfos")]
         [Validation(Required=false)]
         public List<GetServiceResponseBodyServiceInfos> ServiceInfos { get; set; }
         public class GetServiceResponseBodyServiceInfos : TeaModel {
             /// <summary>
-            /// The agreement information about the service.
+            /// <para>The agreement information about the service.</para>
             /// </summary>
             [NameInMap("Agreements")]
             [Validation(Required=false)]
             public List<GetServiceResponseBodyServiceInfosAgreements> Agreements { get; set; }
             public class GetServiceResponseBodyServiceInfosAgreements : TeaModel {
                 /// <summary>
-                /// The agreement name.
+                /// <para>The agreement name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Name</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The agreement URL.
+                /// <para>The agreement URL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://aliyun.com/xxxxxxxx.html">https://aliyun.com/xxxxxxxx.html</a></para>
                 /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
@@ -603,38 +806,54 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// The URL of the service icon.
+            /// <para>The URL of the service icon.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png">https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png</a></para>
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public string Image { get; set; }
 
             /// <summary>
-            /// The language of the service. Valid values:
+            /// <para>The language of the service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>zh-CN: Chinese</description></item>
+            /// <item><description>en-US: English</description></item>
+            /// </list>
             /// 
-            /// *   zh-CN: Chinese
-            /// *   en-US: English
+            /// <b>Example:</b>
+            /// <para>zh-CN</para>
             /// </summary>
             [NameInMap("Locale")]
             [Validation(Required=false)]
             public string Locale { get; set; }
 
             /// <summary>
-            /// The URL of the detailed description of the service.
+            /// <para>The URL of the detailed description of the service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://example.com">https://example.com</a></para>
             /// </summary>
             [NameInMap("LongDescriptionUrl")]
             [Validation(Required=false)]
             public string LongDescriptionUrl { get; set; }
 
             /// <summary>
-            /// The service name.
+            /// <para>The service name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>WordPress</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The description of the service.
+            /// <para>The description of the service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>B是A公司自主设计并研发的开源分布式的关系型数据库</para>
             /// </summary>
             [NameInMap("ShortDescription")]
             [Validation(Required=false)]
@@ -643,131 +862,182 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// The URL of the service page.
+        /// <para>The URL of the service page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://example2.com">http://example2.com</a></para>
         /// </summary>
         [NameInMap("ServiceProductUrl")]
         [Validation(Required=false)]
         public string ServiceProductUrl { get; set; }
 
         /// <summary>
-        /// The type of the service. Valid values:
+        /// <para>The type of the service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>private: The service is a private service and is deployed within the account of a customer.</description></item>
+        /// <item><description>managed: The service is a fully managed service and is deployed within the account of a service provider.</description></item>
+        /// <item><description>operation: The service is a hosted O\&amp;M service.</description></item>
+        /// </list>
         /// 
-        /// *   private: The service is a private service and is deployed within the account of a customer.
-        /// *   managed: The service is a fully managed service and is deployed within the account of a service provider.
-        /// *   operation: The service is a hosted O\\&M service.
+        /// <b>Example:</b>
+        /// <para>private</para>
         /// </summary>
         [NameInMap("ServiceType")]
         [Validation(Required=false)]
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// The permission type of the deployment URL. Valid values:
+        /// <para>The permission type of the deployment URL. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Public: All users can go to the URL to create a service instance or a trial service instance.</description></item>
+        /// <item><description>Restricted: Only users in the whitelist can go to the URL to create a service instance or a trial service instance.</description></item>
+        /// <item><description>OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a service instance.</description></item>
+        /// <item><description>OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.</description></item>
+        /// <item><description>Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.</description></item>
+        /// </list>
         /// 
-        /// *   Public: All users can go to the URL to create a service instance or a trial service instance.
-        /// *   Restricted: Only users in the whitelist can go to the URL to create a service instance or a trial service instance.
-        /// *   OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a service instance.
-        /// *   OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.
-        /// *   Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.
+        /// <b>Example:</b>
+        /// <para>Public</para>
         /// </summary>
         [NameInMap("ShareType")]
         [Validation(Required=false)]
         public string ShareType { get; set; }
 
         /// <summary>
-        /// The share status of the instance.
+        /// <para>The share status of the instance.</para>
+        /// <remarks>
+        /// <para>This parameter is discontinued.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is discontinued.
+        /// <b>Example:</b>
+        /// <para>This parameter is discontinued.</para>
         /// </summary>
         [NameInMap("ShareTypeStatus")]
         [Validation(Required=false)]
         public string ShareTypeStatus { get; set; }
 
         /// <summary>
-        /// The ID of the distribution source service.
+        /// <para>The ID of the distribution source service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>service-70a3b15bb62643xxxxxx</para>
         /// </summary>
         [NameInMap("SourceServiceId")]
         [Validation(Required=false)]
         public string SourceServiceId { get; set; }
 
         /// <summary>
-        /// The version of the distribution source service.
+        /// <para>The version of the distribution source service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("SourceServiceVersion")]
         [Validation(Required=false)]
         public string SourceServiceVersion { get; set; }
 
         /// <summary>
-        /// The name of the distribution source service provider.
+        /// <para>The name of the distribution source service provider.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SourceSupplier</para>
         /// </summary>
         [NameInMap("SourceSupplierName")]
         [Validation(Required=false)]
         public string SourceSupplierName { get; set; }
 
         /// <summary>
-        /// The statistics.
+        /// <para>The statistics.</para>
         /// </summary>
         [NameInMap("Statistic")]
         [Validation(Required=false)]
         public GetServiceResponseBodyStatistic Statistic { get; set; }
         public class GetServiceResponseBodyStatistic : TeaModel {
             /// <summary>
-            /// The total number of service instances that belong to the service. The service instances that are deleted are counted.
+            /// <para>The total number of service instances that belong to the service. The service instances that are deleted are counted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>75</para>
             /// </summary>
             [NameInMap("AccumulativeInstanceCount")]
             [Validation(Required=false)]
             public int? AccumulativeInstanceCount { get; set; }
 
             /// <summary>
-            /// The total amount consumed for trial service instances. Unit: CNY.
+            /// <para>The total amount consumed for trial service instances. Unit: CNY.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80.35</para>
             /// </summary>
             [NameInMap("AccumulativePocAmount")]
             [Validation(Required=false)]
             public double? AccumulativePocAmount { get; set; }
 
             /// <summary>
-            /// The total number of users who use the service. The historical users are counted.
+            /// <para>The total number of users who use the service. The historical users are counted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>60</para>
             /// </summary>
             [NameInMap("AccumulativeUserCount")]
             [Validation(Required=false)]
             public int? AccumulativeUserCount { get; set; }
 
             /// <summary>
-            /// The average amount consumed for trial service instances per instance. Unit: CNY.
+            /// <para>The average amount consumed for trial service instances per instance. Unit: CNY.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40.17</para>
             /// </summary>
             [NameInMap("AveragePocAmount")]
             [Validation(Required=false)]
             public double? AveragePocAmount { get; set; }
 
             /// <summary>
-            /// The average duration for which trial service instances are in use. Unit: Hour.
+            /// <para>The average duration for which trial service instances are in use. Unit: Hour.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AveragePocDuration")]
             [Validation(Required=false)]
             public double? AveragePocDuration { get; set; }
 
             /// <summary>
-            /// The average amount consumed for trial service instances per a period of time. Unit: CNY.
+            /// <para>The average amount consumed for trial service instances per a period of time. Unit: CNY.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>167.9</para>
             /// </summary>
             [NameInMap("AveragePocUnitAmount")]
             [Validation(Required=false)]
             public double? AveragePocUnitAmount { get; set; }
 
             /// <summary>
-            /// The number of online service instances. It means the number of service instances that are successfully deployed.
+            /// <para>The number of online service instances. It means the number of service instances that are successfully deployed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("DeployedServiceInstanceCount")]
             [Validation(Required=false)]
             public int? DeployedServiceInstanceCount { get; set; }
 
             /// <summary>
-            /// The number of online users. It means the number of users who successfully deployed the service instances.
+            /// <para>The number of online users. It means the number of users who successfully deployed the service instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("DeployedUserCount")]
             [Validation(Required=false)]
             public int? DeployedUserCount { get; set; }
 
             /// <summary>
-            /// The number of service applications that are in the Submitted state.
+            /// <para>The number of service applications that are in the Submitted state.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("SubmittedUsageCount")]
             [Validation(Required=false)]
@@ -776,56 +1046,75 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// The status of the service. Valid values:
+        /// <para>The status of the service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Draft: The service is a draft.</description></item>
+        /// <item><description>Submitted: The service is submitted for review. You cannot modify services in this state.</description></item>
+        /// <item><description>Approved: The service is approved. You cannot modify services in this state. You can publish services in this state.</description></item>
+        /// <item><description>Launching: The service is being published.</description></item>
+        /// <item><description>Online: The service is published.</description></item>
+        /// <item><description>Offline: The service is unpublished.</description></item>
+        /// </list>
         /// 
-        /// *   Draft: The service is a draft.
-        /// *   Submitted: The service is submitted for review. You cannot modify services in this state.
-        /// *   Approved: The service is approved. You cannot modify services in this state. You can publish services in this state.
-        /// *   Launching: The service is being published.
-        /// *   Online: The service is published.
-        /// *   Offline: The service is unpublished.
+        /// <b>Example:</b>
+        /// <para>Online</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The description of the service status.
+        /// <para>The description of the service status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>deploy successfully</para>
         /// </summary>
         [NameInMap("StatusDetail")]
         [Validation(Required=false)]
         public string StatusDetail { get; set; }
 
         /// <summary>
-        /// The name of the service provider.
+        /// <para>The name of the service provider.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Alibaba Cloud</para>
         /// </summary>
         [NameInMap("SupplierName")]
         [Validation(Required=false)]
         public string SupplierName { get; set; }
 
         /// <summary>
-        /// The URL of the service provider.
+        /// <para>The URL of the service provider.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://example.com">http://example.com</a></para>
         /// </summary>
         [NameInMap("SupplierUrl")]
         [Validation(Required=false)]
         public string SupplierUrl { get; set; }
 
         /// <summary>
-        /// The service tags.
+        /// <para>The service tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetServiceResponseBodyTags> Tags { get; set; }
         public class GetServiceResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key1</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -834,83 +1123,117 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// The type of the tenant. Valid values:
+        /// <para>The type of the tenant. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SingleTenant</description></item>
+        /// <item><description>MultiTenant</description></item>
+        /// </list>
         /// 
-        /// *   SingleTenant
-        /// *   MultiTenant
+        /// <b>Example:</b>
+        /// <para>SingleTenant</para>
         /// </summary>
         [NameInMap("TenantType")]
         [Validation(Required=false)]
         public string TenantType { get; set; }
 
         /// <summary>
-        /// The status of the test. Valid values:
+        /// <para>The status of the test. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>CONFIG_IS_NULL</c>: No test configurations exist.</description></item>
+        /// <item><description><c>SERVICE_TEST_SUCCEED</c>: The service passed the test.</description></item>
+        /// <item><description><c>SERVICE_TSET_DOING</c>: The service does not pass the test.</description></item>
+        /// </list>
         /// 
-        /// *   `CONFIG_IS_NULL`: No test configurations exist.
-        /// *   `SERVICE_TEST_SUCCEED`: The service passed the test.
-        /// *   `SERVICE_TSET_DOING`: The service does not pass the test.
+        /// <b>Example:</b>
+        /// <para>SERVICE_TEST_SUCCEED</para>
         /// </summary>
         [NameInMap("TestStatus")]
         [Validation(Required=false)]
         public string TestStatus { get; set; }
 
         /// <summary>
-        /// The trial duration. Unit: day. The maximum trial duration cannot exceed 30 days.
+        /// <para>The trial duration. Unit: day. The maximum trial duration cannot exceed 30 days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
         /// </summary>
         [NameInMap("TrialDuration")]
         [Validation(Required=false)]
         public long? TrialDuration { get; set; }
 
         /// <summary>
-        /// The trial policy. Valid values:
+        /// <para>The trial policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Trial: Trials are supported.</description></item>
+        /// <item><description>NotTrial: Trials are not supported.</description></item>
+        /// </list>
         /// 
-        /// *   Trial: Trials are supported.
-        /// *   NotTrial: Trials are not supported.
+        /// <b>Example:</b>
+        /// <para>Trial</para>
         /// </summary>
         [NameInMap("TrialType")]
         [Validation(Required=false)]
         public string TrialType { get; set; }
 
         /// <summary>
-        /// The time when the service was updated.
+        /// <para>The time when the service was updated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-05-22T00:00:00Z</para>
         /// </summary>
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// The metadata about the upgrade.
+        /// <para>The metadata about the upgrade.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;Description\&quot;:\&quot;xxx\&quot;,\&quot;SupportRollback\&quot;:true,\&quot;SupportUpgradeFromVersions\&quot;:[],\&quot;UpgradeComponents\&quot;:[\&quot;Configuration\&quot;]}</para>
         /// </summary>
         [NameInMap("UpgradeMetadata")]
         [Validation(Required=false)]
         public string UpgradeMetadata { get; set; }
 
         /// <summary>
-        /// The service version.
+        /// <para>The service version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.0</para>
         /// </summary>
         [NameInMap("Version")]
         [Validation(Required=false)]
         public string Version { get; set; }
 
         /// <summary>
-        /// The version name.
+        /// <para>The version name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v1</para>
         /// </summary>
         [NameInMap("VersionName")]
         [Validation(Required=false)]
         public string VersionName { get; set; }
 
         /// <summary>
-        /// Indicates whether the service is a virtual Internet service. Valid values:
+        /// <para>Indicates whether the service is a virtual Internet service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false</description></item>
+        /// <item><description>true</description></item>
+        /// </list>
         /// 
-        /// *   false
-        /// *   true
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("VirtualInternetService")]
         [Validation(Required=false)]
         public string VirtualInternetService { get; set; }
 
         /// <summary>
-        /// The ID of the virtual Internet service.
+        /// <para>The ID of the virtual Internet service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>service-70a3b15bb62643xxxxxx</para>
         /// </summary>
         [NameInMap("VirtualInternetServiceId")]
         [Validation(Required=false)]

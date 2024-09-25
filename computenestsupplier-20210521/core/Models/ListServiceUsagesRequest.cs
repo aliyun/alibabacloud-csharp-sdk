@@ -10,26 +10,30 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceUsagesRequest : TeaModel {
         /// <summary>
-        /// The filter.
+        /// <para>The filter.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListServiceUsagesRequestFilter> Filter { get; set; }
         public class ListServiceUsagesRequestFilter : TeaModel {
             /// <summary>
-            /// The parameter name of the filter. You can specify one or more filters. Valid values:
+            /// <para>The parameter name of the filter. You can specify one or more filters. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ServiceId: the ID of the service.</description></item>
+            /// <item><description>ServiceName: the service name.</description></item>
+            /// <item><description>Status: the state of the service.</description></item>
+            /// <item><description>SupplierName: the name of the service provider.</description></item>
+            /// </list>
             /// 
-            /// *   ServiceId: the ID of the service.
-            /// *   ServiceName: the service name.
-            /// *   Status: the state of the service.
-            /// *   SupplierName: the name of the service provider.
+            /// <b>Example:</b>
+            /// <para>ServiceId</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The parameter value N of the filter. Valid values of N: 1 to 10.
+            /// <para>The parameter value N of the filter. Valid values of N: 1 to 10.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -38,21 +42,30 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// The number of entries per page. Valid values: 1 to 100. Default value: 20.
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAWns8w4MmhzeptXVRG0PUEU=</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The role of the service provider.
+        /// <para>The role of the service provider.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Supplier</para>
         /// </summary>
         [NameInMap("SupplierRole")]
         [Validation(Required=false)]

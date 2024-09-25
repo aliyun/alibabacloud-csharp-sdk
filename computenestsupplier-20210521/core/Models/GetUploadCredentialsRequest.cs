@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetUploadCredentialsRequest : TeaModel {
         /// <summary>
-        /// The file name to upload.
+        /// <para>The file name to upload.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>template.yaml</para>
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// Specifies whether the file is publicly accessible. Valid values: **public** or **private**. The default value is **private**.
+        /// <para>Specifies whether the file is publicly accessible. Valid values: <b>public</b> or <b>private</b>. The default value is <b>private</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>public</para>
         /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]

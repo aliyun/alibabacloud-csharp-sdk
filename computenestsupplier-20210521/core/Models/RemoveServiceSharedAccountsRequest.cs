@@ -10,44 +10,54 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class RemoveServiceSharedAccountsRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+        /// <b>Example:</b>
+        /// <para>10CM943JP0EN9D51H</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The service ID.
+        /// <para>The service ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>service-0e6fca6a51a54420****</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// The share type of the service. Default value: SharedAccount. Valid values:
+        /// <para>The share type of the service. Default value: SharedAccount. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SharedAccount: The service is shared by multiple accounts.</description></item>
+        /// <item><description>Reseller: The service is distributed.</description></item>
+        /// </list>
         /// 
-        /// *   SharedAccount: The service is shared by multiple accounts.
-        /// *   Reseller: The service is distributed.
+        /// <b>Example:</b>
+        /// <para>SharedAccount</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserAliUids")]
         [Validation(Required=false)]

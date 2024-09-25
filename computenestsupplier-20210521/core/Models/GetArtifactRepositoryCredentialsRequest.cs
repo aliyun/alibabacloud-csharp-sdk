@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetArtifactRepositoryCredentialsRequest : TeaModel {
         /// <summary>
-        /// The type of the deployment package. Valid values:
+        /// <para>The type of the deployment package. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>File: Object Storage Service (OSS) object.</description></item>
+        /// <item><description>AcrImage: container image.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   File: Object Storage Service (OSS) object.
-        /// *   AcrImage: container image.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>File</para>
         /// </summary>
         [NameInMap("ArtifactType")]
         [Validation(Required=false)]
         public string ArtifactType { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("DeployRegionId")]
         [Validation(Required=false)]

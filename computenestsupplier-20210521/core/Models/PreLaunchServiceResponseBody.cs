@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class ModifyServiceInstanceResourcesResponseBody : TeaModel {
+    public class PreLaunchServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>46577928-3162-15A6-9084-69820EB9xxxx</para>
+        /// <para>4DB0F536-B3BE-4F0D-BD29-E83FB56D550C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

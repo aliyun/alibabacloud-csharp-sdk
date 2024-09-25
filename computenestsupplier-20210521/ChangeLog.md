@@ -1,3 +1,15 @@
+2024-09-25 Version: 2.4.0
+- Support API LaunchService.
+- Support API PreLaunchService.
+- Update API CreateService: add param DryRun.
+- Update API CreateService: update response param.
+- Update API UpdateService: add param DryRun.
+- Update API UpdateService: update param Commodity.
+- Update API UpdateService: update param UpdateOption.
+- Update API UpdateService: update response param.
+- Update API UpdateServiceInstanceAttribute: add param Reason.
+
+
 2024-07-30 Version: 2.3.1
 - Update API UpdateService: update param UpdateOption.
 

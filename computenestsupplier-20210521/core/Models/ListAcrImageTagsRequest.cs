@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListAcrImageTagsRequest : TeaModel {
         /// <summary>
-        /// The type of the deployment package. Default value: AcrImage. Valid values:
+        /// <para>The type of the deployment package. Default value: AcrImage. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>HelmChart: Helm chart image.</description></item>
+        /// <item><description>AcrImage: container image.</description></item>
+        /// </list>
         /// 
-        /// *   HelmChart: Helm chart image.
-        /// *   AcrImage: container image.
+        /// <b>Example:</b>
+        /// <para>AcrImage</para>
         /// </summary>
         [NameInMap("ArtifactType")]
         [Validation(Required=false)]
         public string ArtifactType { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: 1 to 100. Default value: 20.
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAW8kZY+u1sYOaYf5JmgmDQQ=</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The image ID.
+        /// <para>The image ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crr-3gqhkza0wbxxxxxx</para>
         /// </summary>
         [NameInMap("RepoId")]
         [Validation(Required=false)]

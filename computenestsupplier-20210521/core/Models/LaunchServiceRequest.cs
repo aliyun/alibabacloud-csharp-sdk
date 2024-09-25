@@ -8,20 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class StartServiceInstanceRequest : TeaModel {
+    public class LaunchServiceRequest : TeaModel {
+        [NameInMap("Categories")]
+        [Validation(Required=false)]
+        public List<string> Categories { get; set; }
+
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>10CM943JP0EN9****</para>
+        /// <para>10CM943JP0EN9D51H</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("Recommend")]
+        [Validation(Required=false)]
+        public bool? Recommend { get; set; }
+
         /// <summary>
-        /// <para>The region ID where the service instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,15 +36,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>si-d6ab3a63ccbb4b17****</para>
+        /// <para>service-0e6fca6a51a544xxxxxx</para>
         /// </summary>
-        [NameInMap("ServiceInstanceId")]
+        [NameInMap("ServiceId")]
         [Validation(Required=false)]
-        public string ServiceInstanceId { get; set; }
+        public string ServiceId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.0</para>
+        /// </summary>
+        [NameInMap("ServiceVersion")]
+        [Validation(Required=false)]
+        public string ServiceVersion { get; set; }
 
     }
 

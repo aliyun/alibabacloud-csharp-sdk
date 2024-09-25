@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class DeleteArtifactRequest : TeaModel {
         /// <summary>
-        /// The ID of the artifact.
+        /// <para>The ID of the artifact.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>artifact-eea08d1e2d3a43aexxxx</para>
         /// </summary>
         [NameInMap("ArtifactId")]
         [Validation(Required=false)]
         public string ArtifactId { get; set; }
 
         /// <summary>
-        /// The version of the artifact.
+        /// <para>The version of the artifact.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("ArtifactVersion")]
         [Validation(Required=false)]

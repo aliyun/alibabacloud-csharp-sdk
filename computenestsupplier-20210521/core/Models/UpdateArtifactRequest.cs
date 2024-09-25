@@ -10,82 +10,110 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpdateArtifactRequest : TeaModel {
         /// <summary>
-        /// The ID of the deployment package.
+        /// <para>The ID of the deployment package.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>artifact-eea08d1e2d3a43aexxxx</para>
         /// </summary>
         [NameInMap("ArtifactId")]
         [Validation(Required=false)]
         public string ArtifactId { get; set; }
 
         /// <summary>
-        /// The properties of the deployment package.
-        /// 
-        /// This parameter is required.
+        /// <para>The properties of the deployment package.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ArtifactProperty")]
         [Validation(Required=false)]
         public UpdateArtifactRequestArtifactProperty ArtifactProperty { get; set; }
         public class UpdateArtifactRequestArtifactProperty : TeaModel {
             /// <summary>
-            /// The commodity code of the service in Alibaba Cloud Marketplace.
+            /// <para>The commodity code of the service in Alibaba Cloud Marketplace.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the deployment package is an image.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is available only if the deployment package is an image.
+            /// <b>Example:</b>
+            /// <para>cmjj00xxxx</para>
             /// </summary>
             [NameInMap("CommodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// The commodity version of the service in Alibaba Cloud Marketplace.
+            /// <para>The commodity version of the service in Alibaba Cloud Marketplace.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the deployment package is an image.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is available only if the deployment package is an image.
+            /// <b>Example:</b>
+            /// <para>V1.0</para>
             /// </summary>
             [NameInMap("CommodityVersion")]
             [Validation(Required=false)]
             public string CommodityVersion { get; set; }
 
             /// <summary>
-            /// The metadata of the Object Storage Service (OSS) object.
+            /// <para>The metadata of the Object Storage Service (OSS) object.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the deployment package is an OSS object.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is available only if the deployment package is an OSS object.
+            /// <b>Example:</b>
+            /// <para>{\&quot;WorkDir\&quot;:\&quot;/root\&quot;,\&quot;CommandType\&quot;:\&quot;RunShellScript\&quot;,\&quot;Platform\&quot;:\&quot;Linux\&quot;,\&quot;Script\&quot;:\&quot;echo hello\&quot;}</para>
             /// </summary>
             [NameInMap("FileScriptMetadata")]
             [Validation(Required=false)]
             public string FileScriptMetadata { get; set; }
 
             /// <summary>
-            /// The image ID.
+            /// <para>The image ID.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the deployment package is an image.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is available only if the deployment package is an image.
+            /// <b>Example:</b>
+            /// <para>m-0xij191j9cuev6ucxxxx</para>
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// <para>The region ID.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the deployment package is an image.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is available only if the deployment package is an image.
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The script content of the deployment package.
+            /// <para>The script content of the deployment package.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the deployment package is a script.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is available only if the deployment package is a script.
+            /// <b>Example:</b>
+            /// <para>{&quot;ScriptMetadata&quot;:&quot;{\&quot;CommandType\&quot;:\&quot;RunShellScript\&quot;,\&quot;Platform\&quot;:\&quot;Linux\&quot;,\&quot;Script\&quot;:\&quot;ls\&quot;}&quot;}</para>
             /// </summary>
             [NameInMap("ScriptMetadata")]
             [Validation(Required=false)]
             public string ScriptMetadata { get; set; }
 
             /// <summary>
-            /// The URL of the deployment package object.
+            /// <para>The URL of the deployment package object.</para>
+            /// <remarks>
+            /// <para>Note This parameter is available only if the deployment package is an file.</para>
+            /// </remarks>
             /// 
-            /// 
-            /// > Note This parameter is available only if the deployment package is an file.
+            /// <b>Example:</b>
+            /// <para><a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1309208528xxxxxx/template/2e1ce8fc-xxxx-481c-9e8e-789ba9db487d.json">https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1309208528xxxxxx/template/2e1ce8fc-xxxx-481c-9e8e-789ba9db487d.json</a></para>
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -94,23 +122,28 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// The description of the deployment package.
+        /// <para>The description of the deployment package.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The IDs of the regions that support the deployment package.
+        /// <para>The IDs of the regions that support the deployment package.</para>
         /// </summary>
         [NameInMap("SupportRegionIds")]
         [Validation(Required=false)]
         public List<string> SupportRegionIds { get; set; }
 
         /// <summary>
-        /// The version name of the deployment package.
+        /// <para>The version name of the deployment package.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>v1</para>
         /// </summary>
         [NameInMap("VersionName")]
         [Validation(Required=false)]
