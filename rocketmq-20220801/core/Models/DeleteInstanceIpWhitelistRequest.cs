@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class DeleteInstanceIpWhitelistRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.0.0.0/0</para>
         /// </summary>
         [NameInMap("ipWhitelist")]
         [Validation(Required=false)]

@@ -10,70 +10,94 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MissingPageNumber</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListRegionsResponseBodyData> Data { get; set; }
         public class ListRegionsResponseBodyData : TeaModel {
             /// <summary>
-            /// The time when the ApsaraMQ for RocketMQ instance was created.
+            /// <para>The time when the ApsaraMQ for RocketMQ instance was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-08-01 20:05:50</para>
             /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// <para>The region ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The region name.
+            /// <para>The region name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hangzhou</para>
             /// </summary>
             [NameInMap("regionName")]
             [Validation(Required=false)]
             public string RegionName { get; set; }
 
             /// <summary>
-            /// Indicates whether ApsaraMQ for RocketMQ V4 is activated.
+            /// <para>Indicates whether ApsaraMQ for RocketMQ V4 is activated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("supportRocketmqV4")]
             [Validation(Required=false)]
             public bool? SupportRocketmqV4 { get; set; }
 
             /// <summary>
-            /// Indicates whether ApsaraMQ for RocketMQ V5 is activated.
+            /// <para>Indicates whether ApsaraMQ for RocketMQ V5 is activated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("supportRocketmqV5")]
             [Validation(Required=false)]
             public bool? SupportRocketmqV5 { get; set; }
 
             /// <summary>
-            /// The region tags.
+            /// <para>The region tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<ListRegionsResponseBodyDataTags> Tags { get; set; }
             public class ListRegionsResponseBodyDataTags : TeaModel {
                 /// <summary>
-                /// The tag code.
+                /// <para>The tag code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xx</para>
                 /// </summary>
                 [NameInMap("tagCode")]
                 [Validation(Required=false)]
                 public string TagCode { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xx</para>
                 /// </summary>
                 [NameInMap("tagValue")]
                 [Validation(Required=false)]
@@ -82,7 +106,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// The time when the ApsaraMQ for RocketMQ instance was last modified.
+            /// <para>The time when the ApsaraMQ for RocketMQ instance was last modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-08-01 20:05:50</para>
             /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]
@@ -91,42 +118,60 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// The dynamic error code.
+        /// <para>The dynamic error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ConsumerGroupId</para>
         /// </summary>
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// The dynamic error message.
+        /// <para>The dynamic error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>instanceId</para>
         /// </summary>
         [NameInMap("dynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("httpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Parameter instanceId is mandatory for this action .</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0B962390-D84B-5D44-8C11-79DF40299D41</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

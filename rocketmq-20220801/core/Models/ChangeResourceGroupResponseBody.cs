@@ -10,56 +10,80 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the call failed.
+        /// <para>The error code returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Instance.NotFound</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned result.
+        /// <para>The returned result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The dynamic error code.
+        /// <para>The dynamic error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InstanceId</para>
         /// </summary>
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// The dynamic error message.
+        /// <para>The dynamic error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>instanceId</para>
         /// </summary>
         [NameInMap("dynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>400</para>
         /// </summary>
         [NameInMap("httpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The instance cannot be found.</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.
+        /// <para>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AF9A8B10-C426-530F-A0DD-96320B39****</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful.
+        /// <para>Indicates whether the call was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

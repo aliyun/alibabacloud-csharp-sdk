@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class DeleteInstanceAclRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("resourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Topic</para>
         /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]

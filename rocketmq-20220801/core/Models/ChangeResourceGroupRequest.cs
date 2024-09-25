@@ -10,40 +10,46 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the region in which the instance resides.
+        /// <para>The ID of the region in which the instance resides.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance is changed.
+        /// <para>The ID of the resource group to which the instance is changed.</para>
+        /// <para>You can call the <a href="https://www.alibabacloud.com/help/resource-management/latest/listresourcegroups">ListResourceGroups</a> operation to query existing resource groups.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListResourceGroups](https://www.alibabacloud.com/help/resource-management/latest/listresourcegroups) operation to query existing resource groups.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rg-9gLOoK****</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the resource. Set this parameter to the ID of the ApsaraMQ for RocketMQ instance whose resource group you want to change.
+        /// <para>The ID of the resource. Set this parameter to the ID of the ApsaraMQ for RocketMQ instance whose resource group you want to change.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c2c5d1274a8d4317a13bc5b0d4******</para>
         /// </summary>
         [NameInMap("resourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The type of resource.
+        /// <para>The type of resource.</para>
+        /// <para>Set this parameter to <b>instance</b>. The value of this parameter cannot be changed.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Set this parameter to **instance**. The value of this parameter cannot be changed.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>instance</para>
         /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]

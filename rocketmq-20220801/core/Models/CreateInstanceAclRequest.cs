@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateInstanceAclRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Pub</para>
         /// </summary>
         [NameInMap("actions")]
         [Validation(Required=false)]
         public string Actions { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Allow</para>
         /// </summary>
         [NameInMap("decision")]
         [Validation(Required=false)]
@@ -28,14 +34,20 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public List<string> IpWhitelists { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("resourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Topic</para>
         /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]

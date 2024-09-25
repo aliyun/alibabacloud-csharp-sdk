@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>7F00000100207A4F0F294A938F7807AE</para>
+        /// </summary>
         [NameInMap("messageId")]
         [Validation(Required=false)]
         public string MessageId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>XSCBillResult</para>
+        /// </summary>
         [NameInMap("messageKey")]
         [Validation(Required=false)]
         public string MessageKey { get; set; }

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateInstanceAccountRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("username")]
         [Validation(Required=false)]

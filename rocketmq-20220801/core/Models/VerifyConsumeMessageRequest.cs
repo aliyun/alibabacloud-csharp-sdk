@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class VerifyConsumeMessageRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zeekr-settlement-server-dc555456f-v2lcg@1@1@qfvorazqns</para>
         /// </summary>
         [NameInMap("clientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TEST_FINANCE_STOCK_OUT_GROUP</para>
         /// </summary>
         [NameInMap("consumerGroupId")]
         [Validation(Required=false)]

@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -85,14 +95,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(ChangeResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -133,12 +153,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroup(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -146,12 +172,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ChangeResourceGroupWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -159,16 +191,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ChangeResourceGroupWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Creates a consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request CreateConsumerGroupRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public CreateConsumerGroupResponse CreateConsumerGroupWithOptions(string instanceId, string consumerGroupId, CreateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -205,16 +252,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateConsumerGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request CreateConsumerGroupRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public async Task<CreateConsumerGroupResponse> CreateConsumerGroupWithOptionsAsync(string instanceId, string consumerGroupId, CreateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -251,14 +313,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request CreateConsumerGroupRequest
-         * @return CreateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public CreateConsumerGroupResponse CreateConsumerGroup(string instanceId, string consumerGroupId, CreateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -266,14 +339,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return CreateConsumerGroupWithOptions(instanceId, consumerGroupId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates a consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request CreateConsumerGroupRequest
-         * @return CreateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public async Task<CreateConsumerGroupResponse> CreateConsumerGroupAsync(string instanceId, string consumerGroupId, CreateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -281,16 +365,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await CreateConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates an ApsaraMQ for RocketMQ 5.x instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request CreateInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApsaraMQ for RocketMQ 5.x instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -377,16 +476,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an ApsaraMQ for RocketMQ 5.x instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request CreateInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApsaraMQ for RocketMQ 5.x instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -473,14 +587,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an ApsaraMQ for RocketMQ 5.x instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request CreateInstanceRequest
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApsaraMQ for RocketMQ 5.x instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstance(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -488,14 +613,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return CreateInstanceWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Creates an ApsaraMQ for RocketMQ 5.x instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request CreateInstanceRequest
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApsaraMQ for RocketMQ 5.x instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceAsync(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -503,14 +639,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await CreateInstanceWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 创建访问控制acl用户
-         *
-         * @param request CreateInstanceAccountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceAccountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceAccountResponse
+        /// </returns>
         public CreateInstanceAccountResponse CreateInstanceAccountWithOptions(string instanceId, CreateInstanceAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -543,14 +689,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateInstanceAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建访问控制acl用户
-         *
-         * @param request CreateInstanceAccountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceAccountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceAccountResponse
+        /// </returns>
         public async Task<CreateInstanceAccountResponse> CreateInstanceAccountWithOptionsAsync(string instanceId, CreateInstanceAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -583,12 +739,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateInstanceAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建访问控制acl用户
-         *
-         * @param request CreateInstanceAccountRequest
-         * @return CreateInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceAccountResponse
+        /// </returns>
         public CreateInstanceAccountResponse CreateInstanceAccount(string instanceId, CreateInstanceAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -596,12 +758,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return CreateInstanceAccountWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建访问控制acl用户
-         *
-         * @param request CreateInstanceAccountRequest
-         * @return CreateInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceAccountResponse
+        /// </returns>
         public async Task<CreateInstanceAccountResponse> CreateInstanceAccountAsync(string instanceId, CreateInstanceAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -609,14 +777,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await CreateInstanceAccountWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建访问控制acl数据
-         *
-         * @param request CreateInstanceAclRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceAclRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceAclResponse
+        /// </returns>
         public CreateInstanceAclResponse CreateInstanceAclWithOptions(string instanceId, string username, CreateInstanceAclRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -661,14 +839,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateInstanceAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建访问控制acl数据
-         *
-         * @param request CreateInstanceAclRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceAclRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceAclResponse
+        /// </returns>
         public async Task<CreateInstanceAclResponse> CreateInstanceAclWithOptionsAsync(string instanceId, string username, CreateInstanceAclRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -713,12 +901,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateInstanceAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建访问控制acl数据
-         *
-         * @param request CreateInstanceAclRequest
-         * @return CreateInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceAclResponse
+        /// </returns>
         public CreateInstanceAclResponse CreateInstanceAcl(string instanceId, string username, CreateInstanceAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -726,12 +920,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return CreateInstanceAclWithOptions(instanceId, username, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建访问控制acl数据
-         *
-         * @param request CreateInstanceAclRequest
-         * @return CreateInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceAclResponse
+        /// </returns>
         public async Task<CreateInstanceAclResponse> CreateInstanceAclAsync(string instanceId, string username, CreateInstanceAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -739,14 +939,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await CreateInstanceAclWithOptionsAsync(instanceId, username, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建访问控制ip白名单
-         *
-         * @param request CreateInstanceIpWhitelistRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制ip白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceIpWhitelistRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceIpWhitelistResponse
+        /// </returns>
         public CreateInstanceIpWhitelistResponse CreateInstanceIpWhitelistWithOptions(string instanceId, CreateInstanceIpWhitelistRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -775,14 +985,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateInstanceIpWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建访问控制ip白名单
-         *
-         * @param request CreateInstanceIpWhitelistRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制ip白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceIpWhitelistRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceIpWhitelistResponse
+        /// </returns>
         public async Task<CreateInstanceIpWhitelistResponse> CreateInstanceIpWhitelistWithOptionsAsync(string instanceId, CreateInstanceIpWhitelistRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -811,12 +1031,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateInstanceIpWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建访问控制ip白名单
-         *
-         * @param request CreateInstanceIpWhitelistRequest
-         * @return CreateInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制ip白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceIpWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceIpWhitelistResponse
+        /// </returns>
         public CreateInstanceIpWhitelistResponse CreateInstanceIpWhitelist(string instanceId, CreateInstanceIpWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -824,12 +1050,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return CreateInstanceIpWhitelistWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建访问控制ip白名单
-         *
-         * @param request CreateInstanceIpWhitelistRequest
-         * @return CreateInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建访问控制ip白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceIpWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceIpWhitelistResponse
+        /// </returns>
         public async Task<CreateInstanceIpWhitelistResponse> CreateInstanceIpWhitelistAsync(string instanceId, CreateInstanceIpWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -837,14 +1069,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await CreateInstanceIpWhitelistWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates a topic.
-         *
-         * @param request CreateTopicRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTopicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTopicResponse
+        /// </returns>
         public CreateTopicResponse CreateTopicWithOptions(string instanceId, string topicName, CreateTopicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -877,14 +1119,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateTopicResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a topic.
-         *
-         * @param request CreateTopicRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTopicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTopicResponse
+        /// </returns>
         public async Task<CreateTopicResponse> CreateTopicWithOptionsAsync(string instanceId, string topicName, CreateTopicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -917,12 +1169,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateTopicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a topic.
-         *
-         * @param request CreateTopicRequest
-         * @return CreateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTopicResponse
+        /// </returns>
         public CreateTopicResponse CreateTopic(string instanceId, string topicName, CreateTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -930,12 +1188,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return CreateTopicWithOptions(instanceId, topicName, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates a topic.
-         *
-         * @param request CreateTopicRequest
-         * @return CreateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTopicResponse
+        /// </returns>
         public async Task<CreateTopicResponse> CreateTopicAsync(string instanceId, string topicName, CreateTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -943,16 +1207,29 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await CreateTopicWithOptionsAsync(instanceId, topicName, request, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a specified consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+        /// After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public DeleteConsumerGroupResponse DeleteConsumerGroupWithOptions(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -974,16 +1251,29 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a specified consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+        /// After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroupWithOptionsAsync(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1005,14 +1295,22 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a specified consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.
-         *
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+        /// After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public DeleteConsumerGroupResponse DeleteConsumerGroup(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1020,14 +1318,22 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return DeleteConsumerGroupWithOptions(instanceId, consumerGroupId, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a specified consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.
-         *
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+        /// After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroupAsync(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1035,14 +1341,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await DeleteConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, headers, runtime);
         }
 
-        /**
-         * @summary 取消消费组订阅关系
-         *
-         * @param request DeleteConsumerGroupSubscriptionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConsumerGroupSubscriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消消费组订阅关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConsumerGroupSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupSubscriptionResponse
+        /// </returns>
         public DeleteConsumerGroupSubscriptionResponse DeleteConsumerGroupSubscriptionWithOptions(string instanceId, string consumerGroupId, DeleteConsumerGroupSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1079,14 +1395,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteConsumerGroupSubscriptionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消消费组订阅关系
-         *
-         * @param request DeleteConsumerGroupSubscriptionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConsumerGroupSubscriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消消费组订阅关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConsumerGroupSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupSubscriptionResponse
+        /// </returns>
         public async Task<DeleteConsumerGroupSubscriptionResponse> DeleteConsumerGroupSubscriptionWithOptionsAsync(string instanceId, string consumerGroupId, DeleteConsumerGroupSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1123,12 +1449,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteConsumerGroupSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消消费组订阅关系
-         *
-         * @param request DeleteConsumerGroupSubscriptionRequest
-         * @return DeleteConsumerGroupSubscriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消消费组订阅关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConsumerGroupSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupSubscriptionResponse
+        /// </returns>
         public DeleteConsumerGroupSubscriptionResponse DeleteConsumerGroupSubscription(string instanceId, string consumerGroupId, DeleteConsumerGroupSubscriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1136,12 +1468,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return DeleteConsumerGroupSubscriptionWithOptions(instanceId, consumerGroupId, request, headers, runtime);
         }
 
-        /**
-         * @summary 取消消费组订阅关系
-         *
-         * @param request DeleteConsumerGroupSubscriptionRequest
-         * @return DeleteConsumerGroupSubscriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消消费组订阅关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConsumerGroupSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupSubscriptionResponse
+        /// </returns>
         public async Task<DeleteConsumerGroupSubscriptionResponse> DeleteConsumerGroupSubscriptionAsync(string instanceId, string consumerGroupId, DeleteConsumerGroupSubscriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1149,17 +1487,32 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await DeleteConsumerGroupSubscriptionWithOptionsAsync(instanceId, consumerGroupId, request, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a ApsaraMQ for RocketMQ instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         * *   After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.
-         * *   This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a ApsaraMQ for RocketMQ instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.</description></item>
+        /// <item><description>This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1181,17 +1534,32 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a ApsaraMQ for RocketMQ instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         * *   After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.
-         * *   This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a ApsaraMQ for RocketMQ instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.</description></item>
+        /// <item><description>This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1213,15 +1581,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a ApsaraMQ for RocketMQ instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         * *   After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.
-         * *   This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.
-         *
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a ApsaraMQ for RocketMQ instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.</description></item>
+        /// <item><description>This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstance(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1229,15 +1607,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return DeleteInstanceWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a ApsaraMQ for RocketMQ instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         * *   After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.
-         * *   This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.
-         *
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a ApsaraMQ for RocketMQ instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.</description></item>
+        /// <item><description>This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1245,13 +1633,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await DeleteInstanceWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary 删除访问控制acl用户
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceAccountResponse
+        /// </returns>
         public DeleteInstanceAccountResponse DeleteInstanceAccountWithOptions(string instanceId, string username, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1273,13 +1669,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteInstanceAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除访问控制acl用户
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceAccountResponse
+        /// </returns>
         public async Task<DeleteInstanceAccountResponse> DeleteInstanceAccountWithOptionsAsync(string instanceId, string username, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1301,11 +1705,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteInstanceAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除访问控制acl用户
-         *
-         * @return DeleteInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteInstanceAccountResponse
+        /// </returns>
         public DeleteInstanceAccountResponse DeleteInstanceAccount(string instanceId, string username)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1313,11 +1720,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return DeleteInstanceAccountWithOptions(instanceId, username, headers, runtime);
         }
 
-        /**
-         * @summary 删除访问控制acl用户
-         *
-         * @return DeleteInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteInstanceAccountResponse
+        /// </returns>
         public async Task<DeleteInstanceAccountResponse> DeleteInstanceAccountAsync(string instanceId, string username)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1325,14 +1735,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await DeleteInstanceAccountWithOptionsAsync(instanceId, username, headers, runtime);
         }
 
-        /**
-         * @summary 删除访问控制acl数据
-         *
-         * @param request DeleteInstanceAclRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceAclRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceAclResponse
+        /// </returns>
         public DeleteInstanceAclResponse DeleteInstanceAclWithOptions(string instanceId, string username, DeleteInstanceAclRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1365,14 +1785,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteInstanceAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除访问控制acl数据
-         *
-         * @param request DeleteInstanceAclRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceAclRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceAclResponse
+        /// </returns>
         public async Task<DeleteInstanceAclResponse> DeleteInstanceAclWithOptionsAsync(string instanceId, string username, DeleteInstanceAclRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1405,12 +1835,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteInstanceAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除访问控制acl数据
-         *
-         * @param request DeleteInstanceAclRequest
-         * @return DeleteInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceAclResponse
+        /// </returns>
         public DeleteInstanceAclResponse DeleteInstanceAcl(string instanceId, string username, DeleteInstanceAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1418,12 +1854,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return DeleteInstanceAclWithOptions(instanceId, username, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除访问控制acl数据
-         *
-         * @param request DeleteInstanceAclRequest
-         * @return DeleteInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceAclResponse
+        /// </returns>
         public async Task<DeleteInstanceAclResponse> DeleteInstanceAclAsync(string instanceId, string username, DeleteInstanceAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1431,14 +1873,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await DeleteInstanceAclWithOptionsAsync(instanceId, username, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除访问控制ip白名单
-         *
-         * @param request DeleteInstanceIpWhitelistRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制ip白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceIpWhitelistRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceIpWhitelistResponse
+        /// </returns>
         public DeleteInstanceIpWhitelistResponse DeleteInstanceIpWhitelistWithOptions(string instanceId, DeleteInstanceIpWhitelistRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1467,14 +1919,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteInstanceIpWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除访问控制ip白名单
-         *
-         * @param request DeleteInstanceIpWhitelistRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制ip白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceIpWhitelistRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceIpWhitelistResponse
+        /// </returns>
         public async Task<DeleteInstanceIpWhitelistResponse> DeleteInstanceIpWhitelistWithOptionsAsync(string instanceId, DeleteInstanceIpWhitelistRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1503,12 +1965,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteInstanceIpWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除访问控制ip白名单
-         *
-         * @param request DeleteInstanceIpWhitelistRequest
-         * @return DeleteInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制ip白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceIpWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceIpWhitelistResponse
+        /// </returns>
         public DeleteInstanceIpWhitelistResponse DeleteInstanceIpWhitelist(string instanceId, DeleteInstanceIpWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1516,12 +1984,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return DeleteInstanceIpWhitelistWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除访问控制ip白名单
-         *
-         * @param request DeleteInstanceIpWhitelistRequest
-         * @return DeleteInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制ip白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceIpWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceIpWhitelistResponse
+        /// </returns>
         public async Task<DeleteInstanceIpWhitelistResponse> DeleteInstanceIpWhitelistAsync(string instanceId, DeleteInstanceIpWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1529,15 +2003,26 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await DeleteInstanceIpWhitelistWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a specified topic.
-         *
-         * @description If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTopicResponse
+        /// </returns>
         public DeleteTopicResponse DeleteTopicWithOptions(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1559,15 +2044,26 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteTopicResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a specified topic.
-         *
-         * @description If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTopicResponse
+        /// </returns>
         public async Task<DeleteTopicResponse> DeleteTopicWithOptionsAsync(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1589,13 +2085,19 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteTopicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a specified topic.
-         *
-         * @description If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.
-         *
-         * @return DeleteTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteTopicResponse
+        /// </returns>
         public DeleteTopicResponse DeleteTopic(string instanceId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1603,13 +2105,19 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return DeleteTopicWithOptions(instanceId, topicName, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a specified topic.
-         *
-         * @description If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.
-         *
-         * @return DeleteTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteTopicResponse
+        /// </returns>
         public async Task<DeleteTopicResponse> DeleteTopicAsync(string instanceId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1617,15 +2125,28 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await DeleteTopicWithOptionsAsync(instanceId, topicName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of a specified consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupResponse
+        /// </returns>
         public GetConsumerGroupResponse GetConsumerGroupWithOptions(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1647,15 +2168,28 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetConsumerGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a specified consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupResponse
+        /// </returns>
         public async Task<GetConsumerGroupResponse> GetConsumerGroupWithOptionsAsync(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1677,13 +2211,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a specified consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @return GetConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupResponse
+        /// </returns>
         public GetConsumerGroupResponse GetConsumerGroup(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1691,13 +2233,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return GetConsumerGroupWithOptions(instanceId, consumerGroupId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of a specified consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @return GetConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupResponse
+        /// </returns>
         public async Task<GetConsumerGroupResponse> GetConsumerGroupAsync(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1705,13 +2255,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await GetConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, headers, runtime);
         }
 
-        /**
-         * @summary 查询消费者组堆积信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerGroupLagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者组堆积信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupLagResponse
+        /// </returns>
         public GetConsumerGroupLagResponse GetConsumerGroupLagWithOptions(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1733,13 +2291,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetConsumerGroupLagResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询消费者组堆积信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerGroupLagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者组堆积信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupLagResponse
+        /// </returns>
         public async Task<GetConsumerGroupLagResponse> GetConsumerGroupLagWithOptionsAsync(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1761,11 +2327,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetConsumerGroupLagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询消费者组堆积信息
-         *
-         * @return GetConsumerGroupLagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者组堆积信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupLagResponse
+        /// </returns>
         public GetConsumerGroupLagResponse GetConsumerGroupLag(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1773,11 +2342,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return GetConsumerGroupLagWithOptions(instanceId, consumerGroupId, headers, runtime);
         }
 
-        /**
-         * @summary 查询消费者组堆积信息
-         *
-         * @return GetConsumerGroupLagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者组堆积信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupLagResponse
+        /// </returns>
         public async Task<GetConsumerGroupLagResponse> GetConsumerGroupLagAsync(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1785,13 +2357,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await GetConsumerGroupLagWithOptionsAsync(instanceId, consumerGroupId, headers, runtime);
         }
 
-        /**
-         * @summary 查询消费组订阅关系列表客户端分布
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerGroupSubscriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费组订阅关系列表客户端分布</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupSubscriptionResponse
+        /// </returns>
         public GetConsumerGroupSubscriptionResponse GetConsumerGroupSubscriptionWithOptions(string instanceId, string consumerGroupId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1813,13 +2393,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetConsumerGroupSubscriptionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询消费组订阅关系列表客户端分布
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerGroupSubscriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费组订阅关系列表客户端分布</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupSubscriptionResponse
+        /// </returns>
         public async Task<GetConsumerGroupSubscriptionResponse> GetConsumerGroupSubscriptionWithOptionsAsync(string instanceId, string consumerGroupId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1841,11 +2429,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetConsumerGroupSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询消费组订阅关系列表客户端分布
-         *
-         * @return GetConsumerGroupSubscriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费组订阅关系列表客户端分布</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupSubscriptionResponse
+        /// </returns>
         public GetConsumerGroupSubscriptionResponse GetConsumerGroupSubscription(string instanceId, string consumerGroupId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1853,11 +2444,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return GetConsumerGroupSubscriptionWithOptions(instanceId, consumerGroupId, topicName, headers, runtime);
         }
 
-        /**
-         * @summary 查询消费组订阅关系列表客户端分布
-         *
-         * @return GetConsumerGroupSubscriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费组订阅关系列表客户端分布</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetConsumerGroupSubscriptionResponse
+        /// </returns>
         public async Task<GetConsumerGroupSubscriptionResponse> GetConsumerGroupSubscriptionAsync(string instanceId, string consumerGroupId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1865,14 +2459,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await GetConsumerGroupSubscriptionWithOptionsAsync(instanceId, consumerGroupId, topicName, headers, runtime);
         }
 
-        /**
-         * @summary 查询消费者堆栈信息
-         *
-         * @param request GetConsumerStackRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerStackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者堆栈信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerStackRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerStackResponse
+        /// </returns>
         public GetConsumerStackResponse GetConsumerStackWithOptions(string instanceId, string consumerGroupId, GetConsumerStackRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1901,14 +2505,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetConsumerStackResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询消费者堆栈信息
-         *
-         * @param request GetConsumerStackRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerStackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者堆栈信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerStackRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerStackResponse
+        /// </returns>
         public async Task<GetConsumerStackResponse> GetConsumerStackWithOptionsAsync(string instanceId, string consumerGroupId, GetConsumerStackRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1937,12 +2551,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetConsumerStackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询消费者堆栈信息
-         *
-         * @param request GetConsumerStackRequest
-         * @return GetConsumerStackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者堆栈信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerStackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerStackResponse
+        /// </returns>
         public GetConsumerStackResponse GetConsumerStack(string instanceId, string consumerGroupId, GetConsumerStackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1950,12 +2570,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return GetConsumerStackWithOptions(instanceId, consumerGroupId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询消费者堆栈信息
-         *
-         * @param request GetConsumerStackRequest
-         * @return GetConsumerStackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者堆栈信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerStackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerStackResponse
+        /// </returns>
         public async Task<GetConsumerStackResponse> GetConsumerStackAsync(string instanceId, string consumerGroupId, GetConsumerStackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1963,15 +2589,28 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await GetConsumerStackWithOptionsAsync(instanceId, consumerGroupId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the detailed information about an instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public GetInstanceResponse GetInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1993,15 +2632,28 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the detailed information about an instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public async Task<GetInstanceResponse> GetInstanceWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2023,13 +2675,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the detailed information about an instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public GetInstanceResponse GetInstance(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2037,13 +2697,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return GetInstanceWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the detailed information about an instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public async Task<GetInstanceResponse> GetInstanceAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2051,14 +2719,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await GetInstanceWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary 获取实例账号
-         *
-         * @param request GetInstanceAccountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceAccountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceAccountResponse
+        /// </returns>
         public GetInstanceAccountResponse GetInstanceAccountWithOptions(string instanceId, GetInstanceAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2087,14 +2765,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetInstanceAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取实例账号
-         *
-         * @param request GetInstanceAccountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceAccountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceAccountResponse
+        /// </returns>
         public async Task<GetInstanceAccountResponse> GetInstanceAccountWithOptionsAsync(string instanceId, GetInstanceAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2123,12 +2811,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetInstanceAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取实例账号
-         *
-         * @param request GetInstanceAccountRequest
-         * @return GetInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceAccountResponse
+        /// </returns>
         public GetInstanceAccountResponse GetInstanceAccount(string instanceId, GetInstanceAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2136,12 +2830,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return GetInstanceAccountWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取实例账号
-         *
-         * @param request GetInstanceAccountRequest
-         * @return GetInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceAccountResponse
+        /// </returns>
         public async Task<GetInstanceAccountResponse> GetInstanceAccountAsync(string instanceId, GetInstanceAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2149,13 +2849,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await GetInstanceAccountWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 消息详情
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetMessageDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>消息详情</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessageDetailResponse
+        /// </returns>
         public GetMessageDetailResponse GetMessageDetailWithOptions(string instanceId, string topicName, string messageId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2177,13 +2885,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetMessageDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 消息详情
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetMessageDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>消息详情</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessageDetailResponse
+        /// </returns>
         public async Task<GetMessageDetailResponse> GetMessageDetailWithOptionsAsync(string instanceId, string topicName, string messageId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2205,11 +2921,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetMessageDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 消息详情
-         *
-         * @return GetMessageDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>消息详情</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMessageDetailResponse
+        /// </returns>
         public GetMessageDetailResponse GetMessageDetail(string instanceId, string topicName, string messageId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2217,11 +2936,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return GetMessageDetailWithOptions(instanceId, topicName, messageId, headers, runtime);
         }
 
-        /**
-         * @summary 消息详情
-         *
-         * @return GetMessageDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>消息详情</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMessageDetailResponse
+        /// </returns>
         public async Task<GetMessageDetailResponse> GetMessageDetailAsync(string instanceId, string topicName, string messageId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2229,13 +2951,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await GetMessageDetailWithOptionsAsync(instanceId, topicName, messageId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of a specified topic.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicResponse
+        /// </returns>
         public GetTopicResponse GetTopicWithOptions(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2257,13 +2987,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetTopicResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a specified topic.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicResponse
+        /// </returns>
         public async Task<GetTopicResponse> GetTopicWithOptionsAsync(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2285,11 +3023,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetTopicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a specified topic.
-         *
-         * @return GetTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified topic.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTopicResponse
+        /// </returns>
         public GetTopicResponse GetTopic(string instanceId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2297,11 +3038,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return GetTopicWithOptions(instanceId, topicName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of a specified topic.
-         *
-         * @return GetTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified topic.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTopicResponse
+        /// </returns>
         public async Task<GetTopicResponse> GetTopicAsync(string instanceId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2309,13 +3053,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await GetTopicWithOptionsAsync(instanceId, topicName, headers, runtime);
         }
 
-        /**
-         * @summary 轨迹查询
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTraceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轨迹查询</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTraceResponse
+        /// </returns>
         public GetTraceResponse GetTraceWithOptions(string instanceId, string topicName, string messageId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2337,13 +3089,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetTraceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 轨迹查询
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTraceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轨迹查询</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTraceResponse
+        /// </returns>
         public async Task<GetTraceResponse> GetTraceWithOptionsAsync(string instanceId, string topicName, string messageId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2365,11 +3125,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetTraceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 轨迹查询
-         *
-         * @return GetTraceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轨迹查询</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTraceResponse
+        /// </returns>
         public GetTraceResponse GetTrace(string instanceId, string topicName, string messageId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2377,11 +3140,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return GetTraceWithOptions(instanceId, topicName, messageId, headers, runtime);
         }
 
-        /**
-         * @summary 轨迹查询
-         *
-         * @return GetTraceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轨迹查询</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTraceResponse
+        /// </returns>
         public async Task<GetTraceResponse> GetTraceAsync(string instanceId, string topicName, string messageId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2389,13 +3155,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await GetTraceWithOptionsAsync(instanceId, topicName, messageId, headers, runtime);
         }
 
-        /**
-         * @summary 查询支持的可用区
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAvailableZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询支持的可用区</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableZonesResponse
+        /// </returns>
         public ListAvailableZonesResponse ListAvailableZonesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2417,13 +3191,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListAvailableZonesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询支持的可用区
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAvailableZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询支持的可用区</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableZonesResponse
+        /// </returns>
         public async Task<ListAvailableZonesResponse> ListAvailableZonesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2445,11 +3227,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListAvailableZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询支持的可用区
-         *
-         * @return ListAvailableZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询支持的可用区</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListAvailableZonesResponse
+        /// </returns>
         public ListAvailableZonesResponse ListAvailableZones()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2457,11 +3242,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListAvailableZonesWithOptions(headers, runtime);
         }
 
-        /**
-         * @summary 查询支持的可用区
-         *
-         * @return ListAvailableZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询支持的可用区</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListAvailableZonesResponse
+        /// </returns>
         public async Task<ListAvailableZonesResponse> ListAvailableZonesAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2469,13 +3257,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListAvailableZonesWithOptionsAsync(headers, runtime);
         }
 
-        /**
-         * @summary 查询消费者客户端连接信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListConsumerConnectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者客户端连接信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerConnectionsResponse
+        /// </returns>
         public ListConsumerConnectionsResponse ListConsumerConnectionsWithOptions(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2497,13 +3293,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListConsumerConnectionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询消费者客户端连接信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListConsumerConnectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者客户端连接信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerConnectionsResponse
+        /// </returns>
         public async Task<ListConsumerConnectionsResponse> ListConsumerConnectionsWithOptionsAsync(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2525,11 +3329,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListConsumerConnectionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询消费者客户端连接信息
-         *
-         * @return ListConsumerConnectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者客户端连接信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListConsumerConnectionsResponse
+        /// </returns>
         public ListConsumerConnectionsResponse ListConsumerConnections(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2537,11 +3344,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListConsumerConnectionsWithOptions(instanceId, consumerGroupId, headers, runtime);
         }
 
-        /**
-         * @summary 查询消费者客户端连接信息
-         *
-         * @return ListConsumerConnectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者客户端连接信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListConsumerConnectionsResponse
+        /// </returns>
         public async Task<ListConsumerConnectionsResponse> ListConsumerConnectionsAsync(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2549,13 +3359,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListConsumerConnectionsWithOptionsAsync(instanceId, consumerGroupId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the subscriptions of a specific consumer group.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListConsumerGroupSubscriptionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscriptions of a specific consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupSubscriptionsResponse
+        /// </returns>
         public ListConsumerGroupSubscriptionsResponse ListConsumerGroupSubscriptionsWithOptions(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2577,13 +3395,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListConsumerGroupSubscriptionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the subscriptions of a specific consumer group.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListConsumerGroupSubscriptionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscriptions of a specific consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupSubscriptionsResponse
+        /// </returns>
         public async Task<ListConsumerGroupSubscriptionsResponse> ListConsumerGroupSubscriptionsWithOptionsAsync(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2605,11 +3431,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListConsumerGroupSubscriptionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the subscriptions of a specific consumer group.
-         *
-         * @return ListConsumerGroupSubscriptionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscriptions of a specific consumer group.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupSubscriptionsResponse
+        /// </returns>
         public ListConsumerGroupSubscriptionsResponse ListConsumerGroupSubscriptions(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2617,11 +3446,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListConsumerGroupSubscriptionsWithOptions(instanceId, consumerGroupId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the subscriptions of a specific consumer group.
-         *
-         * @return ListConsumerGroupSubscriptionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscriptions of a specific consumer group.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupSubscriptionsResponse
+        /// </returns>
         public async Task<ListConsumerGroupSubscriptionsResponse> ListConsumerGroupSubscriptionsAsync(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2629,16 +3461,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListConsumerGroupSubscriptionsWithOptionsAsync(instanceId, consumerGroupId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the consumer groups in a specified instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request ListConsumerGroupsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListConsumerGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the consumer groups in a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConsumerGroupsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupsResponse
+        /// </returns>
         public ListConsumerGroupsResponse ListConsumerGroupsWithOptions(string instanceId, ListConsumerGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2675,16 +3522,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListConsumerGroupsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the consumer groups in a specified instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request ListConsumerGroupsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListConsumerGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the consumer groups in a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConsumerGroupsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupsResponse
+        /// </returns>
         public async Task<ListConsumerGroupsResponse> ListConsumerGroupsWithOptionsAsync(string instanceId, ListConsumerGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2721,14 +3583,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListConsumerGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the consumer groups in a specified instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request ListConsumerGroupsRequest
-         * @return ListConsumerGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the consumer groups in a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConsumerGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupsResponse
+        /// </returns>
         public ListConsumerGroupsResponse ListConsumerGroups(string instanceId, ListConsumerGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2736,14 +3609,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListConsumerGroupsWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the consumer groups in a specified instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request ListConsumerGroupsRequest
-         * @return ListConsumerGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the consumer groups in a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConsumerGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupsResponse
+        /// </returns>
         public async Task<ListConsumerGroupsResponse> ListConsumerGroupsAsync(string instanceId, ListConsumerGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2751,14 +3635,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListConsumerGroupsWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 访问控制acl用户列表
-         *
-         * @param request ListInstanceAccountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>访问控制acl用户列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceAccountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceAccountResponse
+        /// </returns>
         public ListInstanceAccountResponse ListInstanceAccountWithOptions(string instanceId, ListInstanceAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2803,14 +3697,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListInstanceAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 访问控制acl用户列表
-         *
-         * @param request ListInstanceAccountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>访问控制acl用户列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceAccountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceAccountResponse
+        /// </returns>
         public async Task<ListInstanceAccountResponse> ListInstanceAccountWithOptionsAsync(string instanceId, ListInstanceAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2855,12 +3759,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListInstanceAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 访问控制acl用户列表
-         *
-         * @param request ListInstanceAccountRequest
-         * @return ListInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>访问控制acl用户列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceAccountResponse
+        /// </returns>
         public ListInstanceAccountResponse ListInstanceAccount(string instanceId, ListInstanceAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2868,12 +3778,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListInstanceAccountWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 访问控制acl用户列表
-         *
-         * @param request ListInstanceAccountRequest
-         * @return ListInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>访问控制acl用户列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceAccountResponse
+        /// </returns>
         public async Task<ListInstanceAccountResponse> ListInstanceAccountAsync(string instanceId, ListInstanceAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2881,14 +3797,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListInstanceAccountWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 访问控制acl数据列表
-         *
-         * @param request ListInstanceAclRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>访问控制acl数据列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceAclRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceAclResponse
+        /// </returns>
         public ListInstanceAclResponse ListInstanceAclWithOptions(string instanceId, ListInstanceAclRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2925,14 +3851,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListInstanceAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 访问控制acl数据列表
-         *
-         * @param request ListInstanceAclRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>访问控制acl数据列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceAclRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceAclResponse
+        /// </returns>
         public async Task<ListInstanceAclResponse> ListInstanceAclWithOptionsAsync(string instanceId, ListInstanceAclRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2969,12 +3905,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListInstanceAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 访问控制acl数据列表
-         *
-         * @param request ListInstanceAclRequest
-         * @return ListInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>访问控制acl数据列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceAclResponse
+        /// </returns>
         public ListInstanceAclResponse ListInstanceAcl(string instanceId, ListInstanceAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2982,12 +3924,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListInstanceAclWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 访问控制acl数据列表
-         *
-         * @param request ListInstanceAclRequest
-         * @return ListInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>访问控制acl数据列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceAclResponse
+        /// </returns>
         public async Task<ListInstanceAclResponse> ListInstanceAclAsync(string instanceId, ListInstanceAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2995,14 +3943,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListInstanceAclWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询访问控制ip白名单列表
-         *
-         * @param request ListInstanceIpWhitelistRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询访问控制ip白名单列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceIpWhitelistRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceIpWhitelistResponse
+        /// </returns>
         public ListInstanceIpWhitelistResponse ListInstanceIpWhitelistWithOptions(string instanceId, ListInstanceIpWhitelistRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3039,14 +3997,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListInstanceIpWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询访问控制ip白名单列表
-         *
-         * @param request ListInstanceIpWhitelistRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询访问控制ip白名单列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceIpWhitelistRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceIpWhitelistResponse
+        /// </returns>
         public async Task<ListInstanceIpWhitelistResponse> ListInstanceIpWhitelistWithOptionsAsync(string instanceId, ListInstanceIpWhitelistRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3083,12 +4051,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListInstanceIpWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询访问控制ip白名单列表
-         *
-         * @param request ListInstanceIpWhitelistRequest
-         * @return ListInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询访问控制ip白名单列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceIpWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceIpWhitelistResponse
+        /// </returns>
         public ListInstanceIpWhitelistResponse ListInstanceIpWhitelist(string instanceId, ListInstanceIpWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3096,12 +4070,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListInstanceIpWhitelistWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询访问控制ip白名单列表
-         *
-         * @param request ListInstanceIpWhitelistRequest
-         * @return ListInstanceIpWhitelistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询访问控制ip白名单列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceIpWhitelistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceIpWhitelistResponse
+        /// </returns>
         public async Task<ListInstanceIpWhitelistResponse> ListInstanceIpWhitelistAsync(string instanceId, ListInstanceIpWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3109,16 +4089,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListInstanceIpWhitelistWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries all ApsaraMQ for RocketMQ instances in a specific region.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param tmpReq ListInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all ApsaraMQ for RocketMQ instances in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public ListInstancesResponse ListInstancesWithOptions(ListInstancesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3173,16 +4168,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all ApsaraMQ for RocketMQ instances in a specific region.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param tmpReq ListInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all ApsaraMQ for RocketMQ instances in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public async Task<ListInstancesResponse> ListInstancesWithOptionsAsync(ListInstancesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3237,14 +4247,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all ApsaraMQ for RocketMQ instances in a specific region.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request ListInstancesRequest
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all ApsaraMQ for RocketMQ instances in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public ListInstancesResponse ListInstances(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3252,14 +4273,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListInstancesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries all ApsaraMQ for RocketMQ instances in a specific region.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request ListInstancesRequest
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all ApsaraMQ for RocketMQ instances in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public async Task<ListInstancesResponse> ListInstancesAsync(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3267,14 +4299,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListInstancesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 查询消息列表
-         *
-         * @param request ListMessagesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListMessagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessagesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessagesResponse
+        /// </returns>
         public ListMessagesResponse ListMessagesWithOptions(string instanceId, string topicName, ListMessagesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3327,14 +4369,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListMessagesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询消息列表
-         *
-         * @param request ListMessagesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListMessagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessagesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessagesResponse
+        /// </returns>
         public async Task<ListMessagesResponse> ListMessagesWithOptionsAsync(string instanceId, string topicName, ListMessagesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3387,12 +4439,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListMessagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询消息列表
-         *
-         * @param request ListMessagesRequest
-         * @return ListMessagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessagesResponse
+        /// </returns>
         public ListMessagesResponse ListMessages(string instanceId, string topicName, ListMessagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3400,12 +4458,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListMessagesWithOptions(instanceId, topicName, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询消息列表
-         *
-         * @param request ListMessagesRequest
-         * @return ListMessagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessagesResponse
+        /// </returns>
         public async Task<ListMessagesResponse> ListMessagesAsync(string instanceId, string topicName, ListMessagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3413,13 +4477,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListMessagesWithOptionsAsync(instanceId, topicName, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries regions in which ApsaraMQ for RocketMQ is available.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries regions in which ApsaraMQ for RocketMQ is available.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
         public ListRegionsResponse ListRegionsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3441,13 +4513,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries regions in which ApsaraMQ for RocketMQ is available.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries regions in which ApsaraMQ for RocketMQ is available.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
         public async Task<ListRegionsResponse> ListRegionsWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3469,11 +4549,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries regions in which ApsaraMQ for RocketMQ is available.
-         *
-         * @return ListRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries regions in which ApsaraMQ for RocketMQ is available.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
         public ListRegionsResponse ListRegions()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3481,11 +4564,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListRegionsWithOptions(headers, runtime);
         }
 
-        /**
-         * @summary Queries regions in which ApsaraMQ for RocketMQ is available.
-         *
-         * @return ListRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries regions in which ApsaraMQ for RocketMQ is available.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
         public async Task<ListRegionsResponse> ListRegionsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3493,14 +4579,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListRegionsWithOptionsAsync(headers, runtime);
         }
 
-        /**
-         * @summary 查询可见的资源标签关系
-         *
-         * @param request ListTagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询可见的资源标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3549,14 +4645,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询可见的资源标签关系
-         *
-         * @param request ListTagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询可见的资源标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3605,12 +4711,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询可见的资源标签关系
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询可见的资源标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3618,12 +4730,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListTagResourcesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 查询可见的资源标签关系
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询可见的资源标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3631,13 +4749,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListTagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the subscriptions of a specific topic.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTopicSubscriptionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscriptions of a specific topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTopicSubscriptionsResponse
+        /// </returns>
         public ListTopicSubscriptionsResponse ListTopicSubscriptionsWithOptions(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3659,13 +4785,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListTopicSubscriptionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the subscriptions of a specific topic.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTopicSubscriptionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscriptions of a specific topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTopicSubscriptionsResponse
+        /// </returns>
         public async Task<ListTopicSubscriptionsResponse> ListTopicSubscriptionsWithOptionsAsync(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3687,11 +4821,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListTopicSubscriptionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the subscriptions of a specific topic.
-         *
-         * @return ListTopicSubscriptionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscriptions of a specific topic.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListTopicSubscriptionsResponse
+        /// </returns>
         public ListTopicSubscriptionsResponse ListTopicSubscriptions(string instanceId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3699,11 +4836,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListTopicSubscriptionsWithOptions(instanceId, topicName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the subscriptions of a specific topic.
-         *
-         * @return ListTopicSubscriptionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscriptions of a specific topic.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListTopicSubscriptionsResponse
+        /// </returns>
         public async Task<ListTopicSubscriptionsResponse> ListTopicSubscriptionsAsync(string instanceId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3711,14 +4851,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListTopicSubscriptionsWithOptionsAsync(instanceId, topicName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the topics in a specified instance.
-         *
-         * @param tmpReq ListTopicsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTopicsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the topics in a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListTopicsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTopicsResponse
+        /// </returns>
         public ListTopicsResponse ListTopicsWithOptions(string instanceId, ListTopicsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3765,14 +4915,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListTopicsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the topics in a specified instance.
-         *
-         * @param tmpReq ListTopicsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTopicsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the topics in a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListTopicsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTopicsResponse
+        /// </returns>
         public async Task<ListTopicsResponse> ListTopicsWithOptionsAsync(string instanceId, ListTopicsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3819,12 +4979,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListTopicsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the topics in a specified instance.
-         *
-         * @param request ListTopicsRequest
-         * @return ListTopicsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the topics in a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTopicsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTopicsResponse
+        /// </returns>
         public ListTopicsResponse ListTopics(string instanceId, ListTopicsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3832,12 +4998,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListTopicsWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the topics in a specified instance.
-         *
-         * @param request ListTopicsRequest
-         * @return ListTopicsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the topics in a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTopicsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTopicsResponse
+        /// </returns>
         public async Task<ListTopicsResponse> ListTopicsAsync(string instanceId, ListTopicsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3845,14 +5017,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListTopicsWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 轨迹消息列表
-         *
-         * @param request ListTracesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轨迹消息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTracesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTracesResponse
+        /// </returns>
         public ListTracesResponse ListTracesWithOptions(string instanceId, string topicName, ListTracesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3905,14 +5087,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListTracesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 轨迹消息列表
-         *
-         * @param request ListTracesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轨迹消息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTracesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTracesResponse
+        /// </returns>
         public async Task<ListTracesResponse> ListTracesWithOptionsAsync(string instanceId, string topicName, ListTracesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3965,12 +5157,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListTracesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 轨迹消息列表
-         *
-         * @param request ListTracesRequest
-         * @return ListTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轨迹消息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTracesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTracesResponse
+        /// </returns>
         public ListTracesResponse ListTraces(string instanceId, string topicName, ListTracesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3978,12 +5176,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ListTracesWithOptions(instanceId, topicName, request, headers, runtime);
         }
 
-        /**
-         * @summary 轨迹消息列表
-         *
-         * @param request ListTracesRequest
-         * @return ListTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轨迹消息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTracesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTracesResponse
+        /// </returns>
         public async Task<ListTracesResponse> ListTracesAsync(string instanceId, string topicName, ListTracesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3991,14 +5195,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ListTracesWithOptionsAsync(instanceId, topicName, request, headers, runtime);
         }
 
-        /**
-         * @summary Resets the consumer offset of a consumer group.
-         *
-         * @param request ResetConsumeOffsetRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetConsumeOffsetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the consumer offset of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetConsumeOffsetRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetConsumeOffsetResponse
+        /// </returns>
         public ResetConsumeOffsetResponse ResetConsumeOffsetWithOptions(string instanceId, string consumerGroupId, string topicName, ResetConsumeOffsetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4031,14 +5245,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ResetConsumeOffsetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Resets the consumer offset of a consumer group.
-         *
-         * @param request ResetConsumeOffsetRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetConsumeOffsetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the consumer offset of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetConsumeOffsetRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetConsumeOffsetResponse
+        /// </returns>
         public async Task<ResetConsumeOffsetResponse> ResetConsumeOffsetWithOptionsAsync(string instanceId, string consumerGroupId, string topicName, ResetConsumeOffsetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4071,12 +5295,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ResetConsumeOffsetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Resets the consumer offset of a consumer group.
-         *
-         * @param request ResetConsumeOffsetRequest
-         * @return ResetConsumeOffsetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the consumer offset of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetConsumeOffsetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetConsumeOffsetResponse
+        /// </returns>
         public ResetConsumeOffsetResponse ResetConsumeOffset(string instanceId, string consumerGroupId, string topicName, ResetConsumeOffsetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4084,12 +5314,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return ResetConsumeOffsetWithOptions(instanceId, consumerGroupId, topicName, request, headers, runtime);
         }
 
-        /**
-         * @summary Resets the consumer offset of a consumer group.
-         *
-         * @param request ResetConsumeOffsetRequest
-         * @return ResetConsumeOffsetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the consumer offset of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetConsumeOffsetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetConsumeOffsetResponse
+        /// </returns>
         public async Task<ResetConsumeOffsetResponse> ResetConsumeOffsetAsync(string instanceId, string consumerGroupId, string topicName, ResetConsumeOffsetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4097,14 +5333,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await ResetConsumeOffsetWithOptionsAsync(instanceId, consumerGroupId, topicName, request, headers, runtime);
         }
 
-        /**
-         * @summary 用户创建标签资源关系（用户标签）
-         *
-         * @param request TagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户创建标签资源关系（用户标签）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4145,14 +5391,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 用户创建标签资源关系（用户标签）
-         *
-         * @param request TagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户创建标签资源关系（用户标签）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4193,12 +5449,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 用户创建标签资源关系（用户标签）
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户创建标签资源关系（用户标签）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4206,12 +5468,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TagResourcesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 用户创建标签资源关系（用户标签）
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户创建标签资源关系（用户标签）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4219,14 +5487,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await TagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 用户删除标签资源关系
-         *
-         * @param request UntagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户删除标签资源关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4271,14 +5549,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 用户删除标签资源关系
-         *
-         * @param request UntagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户删除标签资源关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4323,12 +5611,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 用户删除标签资源关系
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户删除标签资源关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4336,12 +5630,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return UntagResourcesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 用户删除标签资源关系
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户删除标签资源关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4349,16 +5649,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await UntagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Updates the basic information about and the consumption retry policy of a consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request UpdateConsumerGroupRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information about and the consumption retry policy of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConsumerGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConsumerGroupResponse
+        /// </returns>
         public UpdateConsumerGroupResponse UpdateConsumerGroupWithOptions(string instanceId, string consumerGroupId, UpdateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4395,16 +5710,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateConsumerGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the basic information about and the consumption retry policy of a consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request UpdateConsumerGroupRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information about and the consumption retry policy of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConsumerGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConsumerGroupResponse
+        /// </returns>
         public async Task<UpdateConsumerGroupResponse> UpdateConsumerGroupWithOptionsAsync(string instanceId, string consumerGroupId, UpdateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4441,14 +5771,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the basic information about and the consumption retry policy of a consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request UpdateConsumerGroupRequest
-         * @return UpdateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information about and the consumption retry policy of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConsumerGroupResponse
+        /// </returns>
         public UpdateConsumerGroupResponse UpdateConsumerGroup(string instanceId, string consumerGroupId, UpdateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4456,14 +5797,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return UpdateConsumerGroupWithOptions(instanceId, consumerGroupId, request, headers, runtime);
         }
 
-        /**
-         * @summary Updates the basic information about and the consumption retry policy of a consumer group.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request UpdateConsumerGroupRequest
-         * @return UpdateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information about and the consumption retry policy of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConsumerGroupResponse
+        /// </returns>
         public async Task<UpdateConsumerGroupResponse> UpdateConsumerGroupAsync(string instanceId, string consumerGroupId, UpdateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4471,16 +5823,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await UpdateConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, request, headers, runtime);
         }
 
-        /**
-         * @summary Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request UpdateInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public UpdateInstanceResponse UpdateInstanceWithOptions(string instanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4525,16 +5892,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request UpdateInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public async Task<UpdateInstanceResponse> UpdateInstanceWithOptionsAsync(string instanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4579,14 +5961,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request UpdateInstanceRequest
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public UpdateInstanceResponse UpdateInstance(string instanceId, UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4594,14 +5987,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return UpdateInstanceWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.
-         *
-         * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-         *
-         * @param request UpdateInstanceRequest
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public async Task<UpdateInstanceResponse> UpdateInstanceAsync(string instanceId, UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4609,14 +6013,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await UpdateInstanceWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 修改访问控制acl用户
-         *
-         * @param request UpdateInstanceAccountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceAccountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceAccountResponse
+        /// </returns>
         public UpdateInstanceAccountResponse UpdateInstanceAccountWithOptions(string instanceId, string username, UpdateInstanceAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4649,14 +6063,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateInstanceAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改访问控制acl用户
-         *
-         * @param request UpdateInstanceAccountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceAccountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceAccountResponse
+        /// </returns>
         public async Task<UpdateInstanceAccountResponse> UpdateInstanceAccountWithOptionsAsync(string instanceId, string username, UpdateInstanceAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4689,12 +6113,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateInstanceAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改访问控制acl用户
-         *
-         * @param request UpdateInstanceAccountRequest
-         * @return UpdateInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceAccountResponse
+        /// </returns>
         public UpdateInstanceAccountResponse UpdateInstanceAccount(string instanceId, string username, UpdateInstanceAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4702,12 +6132,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return UpdateInstanceAccountWithOptions(instanceId, username, request, headers, runtime);
         }
 
-        /**
-         * @summary 修改访问控制acl用户
-         *
-         * @param request UpdateInstanceAccountRequest
-         * @return UpdateInstanceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改访问控制acl用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceAccountResponse
+        /// </returns>
         public async Task<UpdateInstanceAccountResponse> UpdateInstanceAccountAsync(string instanceId, string username, UpdateInstanceAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4715,14 +6151,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await UpdateInstanceAccountWithOptionsAsync(instanceId, username, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除访问控制acl数据
-         *
-         * @param request UpdateInstanceAclRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceAclRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceAclResponse
+        /// </returns>
         public UpdateInstanceAclResponse UpdateInstanceAclWithOptions(string instanceId, string username, UpdateInstanceAclRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4767,14 +6213,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateInstanceAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除访问控制acl数据
-         *
-         * @param request UpdateInstanceAclRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceAclRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceAclResponse
+        /// </returns>
         public async Task<UpdateInstanceAclResponse> UpdateInstanceAclWithOptionsAsync(string instanceId, string username, UpdateInstanceAclRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4819,12 +6275,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateInstanceAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除访问控制acl数据
-         *
-         * @param request UpdateInstanceAclRequest
-         * @return UpdateInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceAclResponse
+        /// </returns>
         public UpdateInstanceAclResponse UpdateInstanceAcl(string instanceId, string username, UpdateInstanceAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4832,12 +6294,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return UpdateInstanceAclWithOptions(instanceId, username, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除访问控制acl数据
-         *
-         * @param request UpdateInstanceAclRequest
-         * @return UpdateInstanceAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除访问控制acl数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceAclResponse
+        /// </returns>
         public async Task<UpdateInstanceAclResponse> UpdateInstanceAclAsync(string instanceId, string username, UpdateInstanceAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4845,14 +6313,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await UpdateInstanceAclWithOptionsAsync(instanceId, username, request, headers, runtime);
         }
 
-        /**
-         * @summary Updates the basic information about a topic.
-         *
-         * @param request UpdateTopicRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information about a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTopicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTopicResponse
+        /// </returns>
         public UpdateTopicResponse UpdateTopicWithOptions(string instanceId, string topicName, UpdateTopicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4881,14 +6359,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateTopicResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the basic information about a topic.
-         *
-         * @param request UpdateTopicRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information about a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTopicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTopicResponse
+        /// </returns>
         public async Task<UpdateTopicResponse> UpdateTopicWithOptionsAsync(string instanceId, string topicName, UpdateTopicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4917,12 +6405,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateTopicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the basic information about a topic.
-         *
-         * @param request UpdateTopicRequest
-         * @return UpdateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information about a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTopicResponse
+        /// </returns>
         public UpdateTopicResponse UpdateTopic(string instanceId, string topicName, UpdateTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4930,12 +6424,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return UpdateTopicWithOptions(instanceId, topicName, request, headers, runtime);
         }
 
-        /**
-         * @summary Updates the basic information about a topic.
-         *
-         * @param request UpdateTopicRequest
-         * @return UpdateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information about a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTopicResponse
+        /// </returns>
         public async Task<UpdateTopicResponse> UpdateTopicAsync(string instanceId, string topicName, UpdateTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4943,14 +6443,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await UpdateTopicWithOptionsAsync(instanceId, topicName, request, headers, runtime);
         }
 
-        /**
-         * @summary 消费验证
-         *
-         * @param request VerifyConsumeMessageRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return VerifyConsumeMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>消费验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyConsumeMessageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyConsumeMessageResponse
+        /// </returns>
         public VerifyConsumeMessageResponse VerifyConsumeMessageWithOptions(string instanceId, string topicName, string messageId, VerifyConsumeMessageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4983,14 +6493,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<VerifyConsumeMessageResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 消费验证
-         *
-         * @param request VerifyConsumeMessageRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return VerifyConsumeMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>消费验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyConsumeMessageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyConsumeMessageResponse
+        /// </returns>
         public async Task<VerifyConsumeMessageResponse> VerifyConsumeMessageWithOptionsAsync(string instanceId, string topicName, string messageId, VerifyConsumeMessageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5023,12 +6543,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<VerifyConsumeMessageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 消费验证
-         *
-         * @param request VerifyConsumeMessageRequest
-         * @return VerifyConsumeMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>消费验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyConsumeMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyConsumeMessageResponse
+        /// </returns>
         public VerifyConsumeMessageResponse VerifyConsumeMessage(string instanceId, string topicName, string messageId, VerifyConsumeMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5036,12 +6562,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return VerifyConsumeMessageWithOptions(instanceId, topicName, messageId, request, headers, runtime);
         }
 
-        /**
-         * @summary 消费验证
-         *
-         * @param request VerifyConsumeMessageRequest
-         * @return VerifyConsumeMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>消费验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyConsumeMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyConsumeMessageResponse
+        /// </returns>
         public async Task<VerifyConsumeMessageResponse> VerifyConsumeMessageAsync(string instanceId, string topicName, string messageId, VerifyConsumeMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5049,14 +6581,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return await VerifyConsumeMessageWithOptionsAsync(instanceId, topicName, messageId, request, headers, runtime);
         }
 
-        /**
-         * @summary 发送消息
-         *
-         * @param request VerifySendMessageRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return VerifySendMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifySendMessageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifySendMessageResponse
+        /// </returns>
         public VerifySendMessageResponse VerifySendMessageWithOptions(string instanceId, string topicName, VerifySendMessageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5093,14 +6635,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<VerifySendMessageResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 发送消息
-         *
-         * @param request VerifySendMessageRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return VerifySendMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifySendMessageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifySendMessageResponse
+        /// </returns>
         public async Task<VerifySendMessageResponse> VerifySendMessageWithOptionsAsync(string instanceId, string topicName, VerifySendMessageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5137,12 +6689,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<VerifySendMessageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 发送消息
-         *
-         * @param request VerifySendMessageRequest
-         * @return VerifySendMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifySendMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifySendMessageResponse
+        /// </returns>
         public VerifySendMessageResponse VerifySendMessage(string instanceId, string topicName, VerifySendMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5150,12 +6708,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return VerifySendMessageWithOptions(instanceId, topicName, request, headers, runtime);
         }
 
-        /**
-         * @summary 发送消息
-         *
-         * @param request VerifySendMessageRequest
-         * @return VerifySendMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifySendMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifySendMessageResponse
+        /// </returns>
         public async Task<VerifySendMessageResponse> VerifySendMessageAsync(string instanceId, string topicName, VerifySendMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

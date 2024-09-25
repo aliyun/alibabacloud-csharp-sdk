@@ -10,74 +10,80 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class GetConsumerGroupResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InvalidConsumerGroupId</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The result data that is returned.
+        /// <para>The result data that is returned.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetConsumerGroupResponseBodyData Data { get; set; }
         public class GetConsumerGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// The consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](https://help.aliyun.com/document_detail/440356.html).
+            /// <para>The consumption retry policy that you want to configure for the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</para>
             /// </summary>
             [NameInMap("consumeRetryPolicy")]
             [Validation(Required=false)]
             public GetConsumerGroupResponseBodyDataConsumeRetryPolicy ConsumeRetryPolicy { get; set; }
             public class GetConsumerGroupResponseBodyDataConsumeRetryPolicy : TeaModel {
                 /// <summary>
-                /// The dead-letter topic.
+                /// <para>The dead-letter topic.</para>
+                /// <para>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</para>
                 /// 
-                /// If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](https://help.aliyun.com/document_detail/440356.html).
+                /// <b>Example:</b>
+                /// <para>DLQ_mqtest</para>
                 /// </summary>
                 [NameInMap("deadLetterTargetTopic")]
                 [Validation(Required=false)]
                 public string DeadLetterTargetTopic { get; set; }
 
                 /// <summary>
-                /// The maximum number of retries.
+                /// <para>The maximum number of retries.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>16</para>
                 /// </summary>
                 [NameInMap("maxRetryTimes")]
                 [Validation(Required=false)]
                 public int? MaxRetryTimes { get; set; }
 
                 /// <summary>
-                /// The retry policy.
+                /// <para>The retry policy.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>FixedRetryPolicy</para>
+                /// <!-- -->
                 /// 
-                /// Valid values:
+                /// <para>:</para>
+                /// <!-- -->
                 /// 
-                /// *   FixedRetryPolicy
+                /// <para>Failed messages are retried at a fixed interval</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <para>.</para>
+                /// </description></item>
+                /// <item><description><para>DefaultRetryPolicy</para>
+                /// <!-- -->
                 /// 
-                ///     :
+                /// <para>:</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <para>Failed messages are retried at incremental intervals as the number of retries increases</para>
+                /// <!-- -->
                 /// 
-                ///     Failed messages are retried at a fixed interval
+                /// <para>.</para>
+                /// </description></item>
+                /// </list>
                 /// 
-                ///     <!-- -->
-                /// 
-                ///     .
-                /// 
-                /// *   DefaultRetryPolicy
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     Failed messages are retried at incremental intervals as the number of retries increases
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     .
+                /// <b>Example:</b>
+                /// <para>DefaultRetryPolicy</para>
                 /// </summary>
                 [NameInMap("retryPolicy")]
                 [Validation(Required=false)]
@@ -86,112 +92,125 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// The ID of the consumer group.
+            /// <para>The ID of the consumer group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CID-TEST</para>
             /// </summary>
             [NameInMap("consumerGroupId")]
             [Validation(Required=false)]
             public string ConsumerGroupId { get; set; }
 
             /// <summary>
-            /// The time when the consumer group was created.
+            /// <para>The time when the consumer group was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-08-01 20:05:50</para>
             /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The message delivery order of the consumer group.
+            /// <para>The message delivery order of the consumer group.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Concurrently</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <para>:</para>
+            /// <!-- -->
             /// 
-            /// *   Concurrently
+            /// <para>concurrent delivery</para>
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Orderly</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <para>:</para>
+            /// <!-- -->
             /// 
-            ///     :
+            /// <para>ordered delivery</para>
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            ///     concurrent delivery
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Orderly
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     ordered delivery
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Concurrently</para>
             /// </summary>
             [NameInMap("deliveryOrderType")]
             [Validation(Required=false)]
             public string DeliveryOrderType { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// <para>The ID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rmq-cn-7e22ody****</para>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the instance resides.
+            /// <para>The ID of the region in which the instance resides.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The remarks on the consumer group.
+            /// <para>The remarks on the consumer group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>This is the remark for test.</para>
             /// </summary>
             [NameInMap("remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
             /// <summary>
-            /// The state of the consumer group.
+            /// <para>The state of the consumer group.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>RUNNING</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <para>: The consumer group is</para>
+            /// <!-- -->
             /// 
-            /// *   RUNNING
+            /// <para>running</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <para>.</para>
+            /// </description></item>
+            /// <item><description><para>CREATING</para>
+            /// <!-- -->
             /// 
-            ///     : The consumer group is
+            /// <para>: The consumer group is</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <para>being created</para>
+            /// <!-- -->
             /// 
-            ///     running
+            /// <para>.</para>
+            /// </description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            ///     .
-            /// 
-            /// *   CREATING
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     : The consumer group is
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     being created
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
+            /// <b>Example:</b>
+            /// <para>RUNNING</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The time when the consumer group was last updated.
+            /// <para>The time when the consumer group was last updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-08-01 20:05:50</para>
             /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]
@@ -200,42 +219,60 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// The dynamic error code.
+        /// <para>The dynamic error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ConsumerGroupId</para>
         /// </summary>
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// The dynamic error message.
+        /// <para>The dynamic error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>consumerGroupId</para>
         /// </summary>
         [NameInMap("dynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>400</para>
         /// </summary>
         [NameInMap("httpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Parameter consumerGroupId is invalid.</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+        /// <para>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C7F94090-3358-506A-97DC-34BC803C****</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful.
+        /// <para>Indicates whether the call is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

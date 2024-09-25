@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class GetConsumerStackRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.26.76.48@Lqd7dImlp9KJ5V84</para>
         /// </summary>
         [NameInMap("clientId")]
         [Validation(Required=false)]

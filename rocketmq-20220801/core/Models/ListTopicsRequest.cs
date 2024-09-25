@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListTopicsRequest : TeaModel {
         /// <summary>
-        /// The condition that you want to use to filter topics in the instance. If you leave this parameter empty, all topics in the instance are queried.
+        /// <para>The condition that you want to use to filter topics in the instance. If you leave this parameter empty, all topics in the instance are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>topic_test</para>
         /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
 
         /// <summary>
-        /// The message types of the topics.
+        /// <para>The message types of the topics.</para>
         /// </summary>
         [NameInMap("messageTypes")]
         [Validation(Required=false)]
         public List<string> MessageTypes { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]

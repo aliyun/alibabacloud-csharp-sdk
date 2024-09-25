@@ -10,39 +10,45 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateConsumerGroupRequest : TeaModel {
         /// <summary>
-        /// The new consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](https://help.aliyun.com/document_detail/440356.html).
-        /// 
-        /// This parameter is required.
+        /// <para>The new consumption retry policy that you want to configure for the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("consumeRetryPolicy")]
         [Validation(Required=false)]
         public UpdateConsumerGroupRequestConsumeRetryPolicy ConsumeRetryPolicy { get; set; }
         public class UpdateConsumerGroupRequestConsumeRetryPolicy : TeaModel {
             /// <summary>
-            /// The dead-letter topic.
+            /// <para>The dead-letter topic.</para>
+            /// <para>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</para>
             /// 
-            /// If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](https://help.aliyun.com/document_detail/440356.html).
+            /// <b>Example:</b>
+            /// <para>DLQ_mqtest</para>
             /// </summary>
             [NameInMap("deadLetterTargetTopic")]
             [Validation(Required=false)]
             public string DeadLetterTargetTopic { get; set; }
 
             /// <summary>
-            /// The maximum number of retries.
+            /// <para>The maximum number of retries.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16</para>
             /// </summary>
             [NameInMap("maxRetryTimes")]
             [Validation(Required=false)]
             public int? MaxRetryTimes { get; set; }
 
             /// <summary>
-            /// The retry policy. For more information, see [Message retry](https://help.aliyun.com/document_detail/440356.html).
+            /// <para>The retry policy. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Message retry</a>.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>FixedRetryPolicy: Failed messages are retried at a fixed interval.</description></item>
+            /// <item><description>DefaultRetryPolicy: Failed messages are retried at incremental intervals as the number of retries increases.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// Valid values:
-            /// 
-            /// *   FixedRetryPolicy: Failed messages are retried at a fixed interval.
-            /// *   DefaultRetryPolicy: Failed messages are retried at incremental intervals as the number of retries increases.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>DefaultRetryPolicy</para>
             /// </summary>
             [NameInMap("retryPolicy")]
             [Validation(Required=false)]
@@ -51,21 +57,26 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// The new message delivery order of the consumer group.
+        /// <para>The new message delivery order of the consumer group.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Concurrently: concurrent delivery</description></item>
+        /// <item><description>Orderly: ordered delivery</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid values:
-        /// 
-        /// *   Concurrently: concurrent delivery
-        /// *   Orderly: ordered delivery
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Concurrently</para>
         /// </summary>
         [NameInMap("deliveryOrderType")]
         [Validation(Required=false)]
         public string DeliveryOrderType { get; set; }
 
         /// <summary>
-        /// The new remarks on the consumer group.
+        /// <para>The new remarks on the consumer group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is the remark for test.</para>
         /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]
