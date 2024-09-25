@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDBNodesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-***************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Details about the nodes.
+        /// <para>Details about the nodes.</para>
         /// </summary>
         [NameInMap("DBNodeIds")]
         [Validation(Required=false)]
@@ -30,14 +33,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// The ID of the order.
+        /// <para>The ID of the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2148126708*****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E053E730-5755-4AA9-AA9D-A47867******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

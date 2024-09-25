@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterMaintainTimeResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>70656639-1416-479F-AF13-D08197******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterServerlessConfRequest : TeaModel {
         /// <summary>
-        /// The ID of the serverless cluster.
+        /// <para>The ID of the serverless cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-bp10gr51qasnl****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

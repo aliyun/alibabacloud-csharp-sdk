@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBNodesParametersRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The node ID. You can specify multiple node IDs. Separate multiple node IDs with commas (,).
+        /// <para>The node ID. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pi-<b><b><b><b><b><b><b><b>,pi-</b></b></b></b></b></b></b></b></para>
         /// </summary>
         [NameInMap("DBNodeIds")]
         [Validation(Required=false)]

@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeLogBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query all the information about the available clusters in the target region, including the cluster ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query all the information about the available clusters in the target region, including the cluster ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-*****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

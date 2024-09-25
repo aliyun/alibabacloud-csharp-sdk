@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateGlobalDatabaseNetworkRequest : TeaModel {
         /// <summary>
-        /// The ID of the primary cluster.
+        /// <para>The ID of the primary cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-bp1q76364ird*****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -23,12 +25,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? EnableGlobalDomainName { get; set; }
 
         /// <summary>
-        /// The description of the GDN. The description must meet the following requirements:
+        /// <para>The description of the GDN. The description must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>It cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></description></item>
+        /// <item><description>It must start with a letter.</description></item>
+        /// <item><description>It can contain letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>It must be 2 to 126 characters in length.</description></item>
+        /// </list>
         /// 
-        /// *   It cannot start with [http:// or https://.](http://https://。)
-        /// *   It must start with a letter.
-        /// *   It can contain letters, digits, underscores (_), and hyphens (-).
-        /// *   It must be 2 to 126 characters in length.
+        /// <b>Example:</b>
+        /// <para>GDN-fortest</para>
         /// </summary>
         [NameInMap("GDNDescription")]
         [Validation(Required=false)]
@@ -43,7 +49,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-************</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
         /// <summary>
-        /// The details of backup sets.
+        /// <para>The details of backup sets.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,139 +21,185 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeBackupsResponseBodyItemsBackup> Backup { get; set; }
             public class DescribeBackupsResponseBodyItemsBackup : TeaModel {
                 /// <summary>
-                /// The end time of the backup task. The time is displayed in UTC.
+                /// <para>The end time of the backup task. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-11-15T07:30:20Z</para>
                 /// </summary>
                 [NameInMap("BackupEndTime")]
                 [Validation(Required=false)]
                 public string BackupEndTime { get; set; }
 
                 /// <summary>
-                /// The ID of the backup set.
+                /// <para>The ID of the backup set.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>61*******</para>
                 /// </summary>
                 [NameInMap("BackupId")]
                 [Validation(Required=false)]
                 public string BackupId { get; set; }
 
                 /// <summary>
-                /// The backup method. Only **Snapshot** may be returned.
+                /// <para>The backup method. Only <b>Snapshot</b> may be returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Snapshot</para>
                 /// </summary>
                 [NameInMap("BackupMethod")]
                 [Validation(Required=false)]
                 public string BackupMethod { get; set; }
 
                 /// <summary>
-                /// The backup mode. Valid values:
+                /// <para>The backup mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Automated</b></description></item>
+                /// <item><description><b>Manual</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Automated**
-                /// *   **Manual**
+                /// <b>Example:</b>
+                /// <para>Automated</para>
                 /// </summary>
                 [NameInMap("BackupMode")]
                 [Validation(Required=false)]
                 public string BackupMode { get; set; }
 
                 /// <summary>
-                /// The size of the backup set. Unit: bytes.
+                /// <para>The size of the backup set. Unit: bytes.</para>
+                /// <remarks>
+                /// <para>After you delete the target snapshot backups, the storage space that is consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share specific data blocks. For more information, see <a href="https://help.aliyun.com/document_detail/164881.html">FAQ about backup</a>.</para>
+                /// </remarks>
                 /// 
-                /// > After you delete the target snapshot backups, the storage space that is consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share specific data blocks. For more information, see [FAQ about backup](https://help.aliyun.com/document_detail/164881.html).
+                /// <b>Example:</b>
+                /// <para>4639948800</para>
                 /// </summary>
                 [NameInMap("BackupSetSize")]
                 [Validation(Required=false)]
                 public string BackupSetSize { get; set; }
 
                 /// <summary>
-                /// The start time of the backup task. The time is displayed in UTC. Unit: seconds.
+                /// <para>The start time of the backup task. The time is displayed in UTC. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-11-15T07:30:05Z</para>
                 /// </summary>
                 [NameInMap("BackupStartTime")]
                 [Validation(Required=false)]
                 public string BackupStartTime { get; set; }
 
                 /// <summary>
-                /// The status of the backup set. Valid values:
+                /// <para>The status of the backup set. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Success</b></description></item>
+                /// <item><description><b>Failed</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Success**
-                /// *   **Failed**
+                /// <b>Example:</b>
+                /// <para>Success</para>
                 /// </summary>
                 [NameInMap("BackupStatus")]
                 [Validation(Required=false)]
                 public string BackupStatus { get; set; }
 
                 /// <summary>
-                /// The type of the backup. Only **FullBackup** may be returned.
+                /// <para>The type of the backup. Only <b>FullBackup</b> may be returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FullBackup</para>
                 /// </summary>
                 [NameInMap("BackupType")]
                 [Validation(Required=false)]
                 public string BackupType { get; set; }
 
                 /// <summary>
-                /// The level of the backup set. Valid values:
+                /// <para>The level of the backup set. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Level-1</b></description></item>
+                /// <item><description><b>Level-2</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Level-1**
-                /// *   **Level-2**
+                /// <b>Example:</b>
+                /// <para>Level-1</para>
                 /// </summary>
                 [NameInMap("BackupsLevel")]
                 [Validation(Required=false)]
                 public string BackupsLevel { get; set; }
 
                 /// <summary>
-                /// The snapshot checkpoint time. The value follows the Unix time format. Unit: seconds.
+                /// <para>The snapshot checkpoint time. The value follows the Unix time format. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1605425407</para>
                 /// </summary>
                 [NameInMap("ConsistentTime")]
                 [Validation(Required=false)]
                 public string ConsistentTime { get; set; }
 
                 /// <summary>
-                /// The ID of the cluster.
+                /// <para>The ID of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pc-****************</para>
                 /// </summary>
                 [NameInMap("DBClusterId")]
                 [Validation(Required=false)]
                 public string DBClusterId { get; set; }
 
                 /// <summary>
-                /// The expected expiration time of the backup set.
-                /// > This parameter is supported only for instances that are enabled with sparse backup.
+                /// <para>The expected expiration time of the backup set.</para>
+                /// <remarks>
+                /// <para>This parameter is supported only for instances that are enabled with sparse backup.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-10-24T08:13:23Z</para>
                 /// </summary>
                 [NameInMap("ExpectExpireTime")]
                 [Validation(Required=false)]
                 public string ExpectExpireTime { get; set; }
 
                 /// <summary>
-                /// The expected expiration type of the backup set (This parameter is supported only for instances that are enabled with sparse backup).
+                /// <para>The expected expiration type of the backup set (This parameter is supported only for instances that are enabled with sparse backup).</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>NEVER</para>
+                /// <!-- -->
                 /// 
-                /// Valid values:
+                /// <!-- -->
                 /// 
-                /// *   NEVER
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>EXPIRED</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>DELAY</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                /// *   EXPIRED
+                /// <!-- --></description></item>
+                /// </list>
                 /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   DELAY
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
+                /// <b>Example:</b>
+                /// <para>EXPIRED</para>
                 /// </summary>
                 [NameInMap("ExpectExpireType")]
                 [Validation(Required=false)]
                 public string ExpectExpireType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the backup set is available. Valid values:
+                /// <para>Indicates whether the backup set is available. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: The backup set is unavailable.</description></item>
+                /// <item><description><b>1</b>: The backup set is available.</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: The backup set is unavailable.
-                /// *   **1**: The backup set is available.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("IsAvail")]
                 [Validation(Required=false)]
@@ -164,28 +210,40 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public string PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>24A1990B-4F6E-482B-B8CB-75C612******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

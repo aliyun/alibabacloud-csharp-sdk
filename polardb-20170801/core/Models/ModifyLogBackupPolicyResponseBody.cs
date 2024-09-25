@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyLogBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>345174B4-FAB3-412E-A326-BEDDA9******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

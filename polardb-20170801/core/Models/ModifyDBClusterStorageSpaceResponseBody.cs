@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterStorageSpaceResponseBody : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-*************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The order ID.
+        /// <para>The order ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2035629******</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>685F028C-4FCD-407D-A559-072D63******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

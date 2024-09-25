@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDBClusterEndpointResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CD35F3-F3-44CA-AFFF-BAF869******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

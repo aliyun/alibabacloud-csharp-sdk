@@ -10,48 +10,68 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterTDEResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-***************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Indicates whether automatic encryption is enabled for new tables. Valid values:
+        /// <para>Indicates whether automatic encryption is enabled for new tables. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ON</b></description></item>
+        /// <item><description><b>OFF</b></description></item>
+        /// </list>
         /// 
-        /// *   **ON**
-        /// *   **OFF**
+        /// <b>Example:</b>
+        /// <para>ON</para>
         /// </summary>
         [NameInMap("EncryptNewTables")]
         [Validation(Required=false)]
         public string EncryptNewTables { get; set; }
 
         /// <summary>
-        /// The ID of the custom key.
+        /// <para>The ID of the custom key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2a4f4ac2-<b><b>-</b></b>-<b><b>-</b></b>********</para>
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E37D1508-EC3B-4E06-A24A-C7AC31******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The region where the TDE key resides.
+        /// <para>The region where the TDE key resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("TDERegion")]
         [Validation(Required=false)]
         public string TDERegion { get; set; }
 
         /// <summary>
-        /// Indicates whether TDE encryption is enabled. Valid values:
+        /// <para>Indicates whether TDE encryption is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enabled</b></description></item>
+        /// <item><description><b>Disabled</b></description></item>
+        /// </list>
         /// 
-        /// *   **Enabled**
-        /// *   **Disabled**
+        /// <b>Example:</b>
+        /// <para>Enabled</para>
         /// </summary>
         [NameInMap("TDEStatus")]
         [Validation(Required=false)]

@@ -10,97 +10,134 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDatabaseRequest : TeaModel {
         /// <summary>
-        /// The name of the account that is authorized to access the database. You can call the [DescribeAccounts](https://help.aliyun.com/document_detail/98107.html) operation to query account information.
-        /// >- You can specify only a standard account. By default, privileged accounts have all permissions on all databases. You do not need to grant privileged accounts the permissions to access the database.
-        /// >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.
+        /// <para>The name of the account that is authorized to access the database. You can call the <a href="https://help.aliyun.com/document_detail/98107.html">DescribeAccounts</a> operation to query account information.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can specify only a standard account. By default, privileged accounts have all permissions on all databases. You do not need to grant privileged accounts the permissions to access the database.</description></item>
+        /// <item><description>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testacc</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The permissions that are granted to the account. Valid values:
+        /// <para>The permissions that are granted to the account. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ReadWrite</b>: read and write permissions.</description></item>
+        /// <item><description><b>ReadOnly</b>: read-only permissions.</description></item>
+        /// <item><description><b>DMLOnly</b>: the permissions to execute only DML statements.</description></item>
+        /// <item><description><b>DDLOnly</b>: the permissions to execute only DDL statements.</description></item>
+        /// <item><description><b>ReadIndex</b>: the read-only and index permissions.</description></item>
+        /// </list>
+        /// <para>If you leave this parameter empty, the default value <b>ReadWrite</b> is used.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is valid only if you specify <b>AccountName</b>.</description></item>
+        /// <item><description>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</description></item>
+        /// <item><description>This parameter is optional for PolarDB for MySQL clusters.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   **ReadWrite**: read and write permissions.
-        /// *   **ReadOnly**: read-only permissions.
-        /// *   **DMLOnly**: the permissions to execute only DML statements.
-        /// *   **DDLOnly**: the permissions to execute only DDL statements.
-        /// *   **ReadIndex**: the read-only and index permissions.
-        /// 
-        /// If you leave this parameter empty, the default value **ReadWrite** is used.
-        /// 
-        /// >- This parameter is valid only if you specify **AccountName**.
-        /// >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.
-        /// >- This parameter is optional for PolarDB for MySQL clusters.
+        /// <b>Example:</b>
+        /// <para>ReadWrite</para>
         /// </summary>
         [NameInMap("AccountPrivilege")]
         [Validation(Required=false)]
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// The character set that is used by the cluster. For more information, see [Character set tables](https://help.aliyun.com/document_detail/99716.html).
+        /// <para>The character set that is used by the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/99716.html">Character set tables</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>utf8</para>
         /// </summary>
         [NameInMap("CharacterSetName")]
         [Validation(Required=false)]
         public string CharacterSetName { get; set; }
 
         /// <summary>
-        /// The language that indicates the collation of the databases that are created.
+        /// <para>The language that defines the collation rules in the database.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>The language must be compatible with the character set that is specified by <b>CharacterSetName</b>.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is required for a PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL cluster. This parameter is optional for a PolarDB for MySQL cluster. To view the valid values of this parameter, perform the following steps: Log on to the PolarDB console and click the ID of the cluster. In the left-side navigation pane, choose <b>Settings and Management</b> &gt; <b>Databases</b>. Then, click <b>Create Database</b>.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > *   The language must be compatible with the character set that is specified by **CharacterSetName**.
-        /// >*   This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is not supported by PolarDB for MySQL clusters.
-        /// 
-        /// To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose **Settings and Management** > **Databases**. Then, click **Create Database**.
+        /// <b>Example:</b>
+        /// <para>C</para>
         /// </summary>
         [NameInMap("Collate")]
         [Validation(Required=false)]
         public string Collate { get; set; }
 
         /// <summary>
-        /// The language that indicates the character type of the database.
+        /// <para>The language that indicates the character type of the database.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The language must be compatible with the character set that is specified by <b>CharacterSetName</b>.</description></item>
+        /// <item><description>The value that you specify must be the same as the value of <b>Collate</b>.</description></item>
+        /// <item><description>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <para>To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose <b>Settings and Management</b> &gt; <b>Databases</b>. Then, click <b>Create Database</b>.</para>
         /// 
-        /// >- The language must be compatible with the character set that is specified by **CharacterSetName**.
-        /// >- The value that you specify must be the same as the value of **Collate**.
-        /// >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.
-        /// 
-        /// To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose **Settings and Management** > **Databases**. Then, click **Create Database**.
+        /// <b>Example:</b>
+        /// <para>C</para>
         /// </summary>
         [NameInMap("Ctype")]
         [Validation(Required=false)]
         public string Ctype { get; set; }
 
         /// <summary>
-        /// The ID of cluster.
+        /// <para>The ID of cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-**************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The description of the database. The description must meet the following requirements:
+        /// <para>The description of the database. The description must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>It must be 2 to 256 characters in length.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. This parameter is optional for a PolarDB for MySQL cluster.</para>
+        /// </remarks>
         /// 
-        /// *   It cannot start with `http://` or `https://`.
-        /// *   It must be 2 to 256 characters in length.
-        /// 
-        /// > This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. This parameter is optional for a PolarDB for MySQL cluster.
+        /// <b>Example:</b>
+        /// <para>testdesc</para>
         /// </summary>
         [NameInMap("DBDescription")]
         [Validation(Required=false)]
         public string DBDescription { get; set; }
 
         /// <summary>
-        /// The name of the database. The name must meet the following requirements:
+        /// <para>The name of the database. The name must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The name can contain lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
+        /// <item><description>The name must start with a lowercase letter and end with a lowercase letter or a digit. The name must be 1 to 64 characters in length.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Do not use reserved words as database names, such as <c>test</c> or <c>mysql</c>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The name can contain lowercase letters, digits, hyphens (-), and underscores (_).
-        /// *   The name must start with a lowercase letter and end with a lowercase letter or a digit. The name must be 1 to 64 characters in length.
-        /// 
-        /// > Do not use reserved words as database names, such as `test` or `mysql`.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testDB</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

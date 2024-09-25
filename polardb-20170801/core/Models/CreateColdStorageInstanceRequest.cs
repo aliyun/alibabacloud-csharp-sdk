@@ -9,16 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateColdStorageInstanceRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>6000170000591aed949d0f5********************</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxxxxxxxx</para>
+        /// </summary>
         [NameInMap("ColdStorageInstanceDescription")]
         [Validation(Required=false)]
         public string ColdStorageInstanceDescription { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-wz9ye3xrtj60ua6d1</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -32,6 +43,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-************</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

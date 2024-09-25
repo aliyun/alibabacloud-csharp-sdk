@@ -10,31 +10,46 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeMetaListRequest : TeaModel {
         /// <summary>
-        /// The ID of the data backup file.
+        /// <para>The ID of the data backup file.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>When you run a query, you must specify the <c>BackId</c> or <c>RestoreTime</c> parameter.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the ID of the backup set.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// >*   When you run a query, you must specify the `BackId` or `RestoreTime` parameter.
-        /// >*   You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the ID of the backup set.
+        /// <b>Example:</b>
+        /// <para>111111</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of all clusters under your account.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-**************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specify the specific database name (such as `test_db`) to query the names of all data tables that can be restored in the desired database.
+        /// <para>Specify the specific database name (such as <c>test_db</c>) to query the names of all data tables that can be restored in the desired database.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can specify only one database name each time.</description></item>
+        /// <item><description>If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// >*   You can specify only one database name each time.
-        /// >*   If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.
+        /// <b>Example:</b>
+        /// <para>test_db</para>
         /// </summary>
         [NameInMap("GetDbName")]
         [Validation(Required=false)]
@@ -49,29 +64,39 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+        /// <para>The number of the page to return. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values:
+        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// <para>Default value: <b>30</b>.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **30**
-        /// 
-        /// *   **50**
-        /// 
-        /// *   **100**
-        /// 
-        ///     Default value: **30**.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance resides. You can call the [DescribeDBClusterAttribute](https://help.aliyun.com/document_detail/2319132.html) operation to query the region ID of the instance.
+        /// <para>The ID of the region in which the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/2319132.html">DescribeDBClusterAttribute</a> operation to query the region ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionCode")]
         [Validation(Required=false)]
@@ -86,9 +111,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The point in time for the restoration. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.
+        /// <para>The point in time for the restoration. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para> When you run a query, you must specify the <c>BackId</c> or <c>RestoreTime</c> parameter. You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the point in time for the restoration.</para>
+        /// </remarks>
         /// 
-        /// >  When you run a query, you must specify the `BackId` or `RestoreTime` parameter. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the point in time for the restoration.
+        /// <b>Example:</b>
+        /// <para>2020-10-04T01:40:00Z</para>
         /// </summary>
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]

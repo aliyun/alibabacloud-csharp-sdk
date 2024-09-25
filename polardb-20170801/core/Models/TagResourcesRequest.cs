@@ -18,16 +18,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// <para>The region ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-*****************</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -42,34 +47,44 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to **cluster**.
+        /// <para>The type of the resource. Set the value to <b>cluster</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cluster</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag. To create multiple tags for a cluster at a time, click **Add** to add tag keys.
+            /// <para>The key of the tag. To create multiple tags for a cluster at a time, click <b>Add</b> to add tag keys.</para>
+            /// <remarks>
+            /// <para> You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of <c>Tag.N.Key</c> is paired with a value of <c>Tag.N.Value</c>.</para>
+            /// </remarks>
             /// 
-            /// >  You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.
+            /// <b>Example:</b>
+            /// <para>type</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag. To create multiple tags for a cluster at a time, click **Add** to add tag values.
+            /// <para>The value of the tag. To create multiple tags for a cluster at a time, click <b>Add</b> to add tag values.</para>
+            /// <remarks>
+            /// <para> You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of <c>Tag.N.Value</c> is paired with a value of <c>Tag.N.Key</c>.</para>
+            /// </remarks>
             /// 
-            /// >  You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of `Tag.N.Value` is paired with a value of `Tag.N.Key`.
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

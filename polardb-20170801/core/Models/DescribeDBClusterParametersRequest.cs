@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterParametersRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-**********</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The type of the parameter information to query. Valid values:
+        /// <para>The type of the parameter information to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Normal</b>: the information about the cluster parameters</description></item>
+        /// <item><description><b>MigrationFromRDS</b>: a comparison of parameters between the source RDS instance and the destination PolarDB cluster</description></item>
+        /// </list>
         /// 
-        /// *   **Normal**: the information about the cluster parameters
-        /// *   **MigrationFromRDS**: a comparison of parameters between the source RDS instance and the destination PolarDB cluster
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("DescribeType")]
         [Validation(Required=false)]

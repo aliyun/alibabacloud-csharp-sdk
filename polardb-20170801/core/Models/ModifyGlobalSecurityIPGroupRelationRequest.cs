@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyGlobalSecurityIPGroupRelationRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-*****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the IP whitelist template.
+        /// <para>The ID of the IP whitelist template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>g-zsldxfiwjmti0kcm****</para>
         /// </summary>
         [NameInMap("GlobalSecurityGroupId")]
         [Validation(Required=false)]
@@ -36,16 +40,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-**********</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

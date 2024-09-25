@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
         /// <summary>
-        /// The dedicated cluster ID.
+        /// <para>The dedicated cluster ID.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the <b>VpcId</b> and <b>DedicatedHostGroupId</b> parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify at least one of the **VpcId** and **DedicatedHostGroupId** parameters.
+        /// <b>Example:</b>
+        /// <para>dhg-4n****</para>
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
@@ -27,28 +31,40 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number of the page to return. Default value: 1.
+        /// <para>The page number of the page to return. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Maximum value: 50. Default value: 50.
+        /// <para>The number of entries to return per page. Maximum value: 50. Default value: 50.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where the vSwitch belongs.
+        /// <para>The ID of the region where the vSwitch belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the vSwitch belongs.
+        /// <para>The ID of the resource group to which the vSwitch belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-bp67acfmxazb4ph****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -67,16 +83,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private type (VPC) to which the vSwitch belongs.
+        /// <para>The ID of the virtual private type (VPC) to which the vSwitch belongs.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the <b>VpcId</b> and <b>DedicatedHostGroupId</b> parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify at least one of the **VpcId** and **DedicatedHostGroupId** parameters.
+        /// <b>Example:</b>
+        /// <para>vpc-25cdvfeq58pl****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The ID of the zone to which the vSwitch belongs.
+        /// <para>The ID of the zone to which the vSwitch belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-d</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

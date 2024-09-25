@@ -10,40 +10,54 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterSSLRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint.
+        /// <para>The ID of the endpoint.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is required for a PolarDB for MySQL cluster.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.</para>
+        /// </description></item>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/153414.html">DescribeDBClusterSSL</a> operation to view the details of the endpoint.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   This parameter is required for a PolarDB for MySQL cluster.
-        /// 
-        /// *   This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.
-        /// *   You can call the [DescribeDBClusterSSL](https://help.aliyun.com/document_detail/153414.html) operation to view the details of the endpoint.
+        /// <b>Example:</b>
+        /// <para>pe-******************</para>
         /// </summary>
         [NameInMap("DBEndpointId")]
         [Validation(Required=false)]
         public string DBEndpointId { get; set; }
 
         /// <summary>
-        /// The network type supported by the endpoint that is specified by **DBEndpointId**. Valid values:
+        /// <para>The network type supported by the endpoint that is specified by <b>DBEndpointId</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Public</b></description></item>
+        /// <item><description><b>Private</b></description></item>
+        /// <item><description><b>Inner</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is required for a PolarDB for MySQL cluster.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **Public**
-        /// *   **Private**
-        /// *   **Inner**
-        /// 
-        /// > 
-        /// 
-        /// *   This parameter is required for a PolarDB for MySQL cluster.
-        /// 
-        /// *   This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.
+        /// <b>Example:</b>
+        /// <para>Public</para>
         /// </summary>
         [NameInMap("NetType")]
         [Validation(Required=false)]
@@ -66,23 +80,32 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether automatic rotation of SSL certificates is enabled.
+        /// <para>Specifies whether automatic rotation of SSL certificates is enabled.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enable</b>: The feature is enabled.</description></item>
+        /// <item><description><b>Disable</b>: The feature is disabled.</description></item>
+        /// </list>
         /// 
-        /// *   **Enable**: The feature is enabled.
-        /// *   **Disable**: The feature is disabled.
+        /// <b>Example:</b>
+        /// <para>Enable</para>
         /// </summary>
         [NameInMap("SSLAutoRotate")]
         [Validation(Required=false)]
         public string SSLAutoRotate { get; set; }
 
         /// <summary>
-        /// The SSL encryption status. Valid values:
+        /// <para>The SSL encryption status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Disable</b>: SSL encryption is disabled.</description></item>
+        /// <item><description><b>Enable</b>: SSL encryption is enabled.</description></item>
+        /// <item><description><b>Update</b>: The SSL certificate is updated.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. For more information, see <a href="https://help.aliyun.com/document_detail/153182.html">Configure SSL encryption</a>.</para>
+        /// </remarks>
         /// 
-        /// *   **Disable**: SSL encryption is disabled.
-        /// *   **Enable**: SSL encryption is enabled.
-        /// *   **Update**: The SSL certificate is updated.
-        /// 
-        /// > After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. For more information, see [Configure SSL encryption](https://help.aliyun.com/document_detail/153182.html).
+        /// <b>Example:</b>
+        /// <para>Enable</para>
         /// </summary>
         [NameInMap("SSLEnabled")]
         [Validation(Required=false)]

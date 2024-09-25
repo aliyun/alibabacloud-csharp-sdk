@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterAuditLogCollectorRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable or disable SQL collector. Valid values:
+        /// <para>Specifies whether to enable or disable SQL collector. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enable</description></item>
+        /// <item><description>Disable</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Enable
-        /// *   Disable
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Enable</para>
         /// </summary>
         [NameInMap("CollectorStatus")]
         [Validation(Required=false)]
         public string CollectorStatus { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-***************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

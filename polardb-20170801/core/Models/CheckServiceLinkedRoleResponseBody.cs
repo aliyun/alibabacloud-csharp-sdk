@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CheckServiceLinkedRoleResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the SLR is created.
+        /// <para>Indicates whether the SLR is created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("HasServiceLinkedRole")]
         [Validation(Required=false)]
         public bool? HasServiceLinkedRole { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3F9E6A3B-C13E-4064-A010-18582A******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

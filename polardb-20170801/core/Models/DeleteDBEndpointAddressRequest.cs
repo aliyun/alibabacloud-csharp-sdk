@@ -10,31 +10,39 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteDBEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your account, such as the cluster ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of all clusters that belong to your account, such as the cluster ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint.
+        /// <para>The ID of the endpoint.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the endpoints of a specified PolarDB cluster.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusterEndpoints](https://help.aliyun.com/document_detail/98205.html) operation to query the endpoints of a specified PolarDB cluster.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pe-***************</para>
         /// </summary>
         [NameInMap("DBEndpointId")]
         [Validation(Required=false)]
         public string DBEndpointId { get; set; }
 
         /// <summary>
-        /// The network type of the endpoint. Set the value to **Public** (public network).
+        /// <para>The network type of the endpoint. Set the value to <b>Public</b> (public network).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Public</para>
         /// </summary>
         [NameInMap("NetType")]
         [Validation(Required=false)]

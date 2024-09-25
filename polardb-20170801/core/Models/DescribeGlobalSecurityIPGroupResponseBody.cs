@@ -10,48 +10,62 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGlobalSecurityIPGroupResponseBody : TeaModel {
         /// <summary>
-        /// The details of the global IP whitelist template.
+        /// <para>The details of the global IP whitelist template.</para>
         /// </summary>
         [NameInMap("GlobalSecurityIPGroup")]
         [Validation(Required=false)]
         public List<DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup> GlobalSecurityIPGroup { get; set; }
         public class DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup : TeaModel {
             /// <summary>
-            /// The details of the clusters that are associated with the global IP address whitelist template.
+            /// <para>The details of the clusters that are associated with the global IP address whitelist template.</para>
             /// </summary>
             [NameInMap("DBInstances")]
             [Validation(Required=false)]
             public List<string> DBInstances { get; set; }
 
             /// <summary>
-            /// The IP address in the global IP whitelist template.
+            /// <para>The IP address in the global IP whitelist template.</para>
+            /// <remarks>
+            /// <para> Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to all IP whitelists.</para>
+            /// </remarks>
             /// 
-            /// >  Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to all IP whitelists.
+            /// <b>Example:</b>
+            /// <para>192.168.0.1</para>
             /// </summary>
             [NameInMap("GIpList")]
             [Validation(Required=false)]
             public string GIpList { get; set; }
 
             /// <summary>
-            /// The name of the global IP whitelist template. The name must meet the following requirements:
+            /// <para>The name of the global IP whitelist template. The name must meet the following requirements:</para>
+            /// <list type="bullet">
+            /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
+            /// <item><description>The name must start with a letter and end with a letter or a digit.</description></item>
+            /// <item><description>The name must be 2 to 120 characters in length.</description></item>
+            /// </list>
             /// 
-            /// *   The name can contain lowercase letters, digits, and underscores (_).
-            /// *   The name must start with a letter and end with a letter or a digit.
-            /// *   The name must be 2 to 120 characters in length.
+            /// <b>Example:</b>
+            /// <para>test_123</para>
             /// </summary>
             [NameInMap("GlobalIgName")]
             [Validation(Required=false)]
             public string GlobalIgName { get; set; }
 
             /// <summary>
-            /// The ID of the global IP whitelist template.
+            /// <para>The ID of the global IP whitelist template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>g-zsldxfiwjmti0kcm****</para>
             /// </summary>
             [NameInMap("GlobalSecurityGroupId")]
             [Validation(Required=false)]
             public string GlobalSecurityGroupId { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// <para>The ID of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -60,7 +74,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9B7BFB11-C077-4FE3-B051-F69CEB******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

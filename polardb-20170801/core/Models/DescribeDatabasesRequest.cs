@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDatabasesRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-**************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// <remarks>
+        /// <para>You cannot specify multiple database names.</para>
+        /// </remarks>
         /// 
-        /// > You cannot specify multiple database names.
+        /// <b>Example:</b>
+        /// <para>test_db</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
@@ -36,20 +42,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values:
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
+        /// <para>Default value: <b>30</b>.</para>
         /// 
-        /// *   **30**
-        /// *   **50**
-        /// *   **100**
-        /// 
-        /// Default value: **30**.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

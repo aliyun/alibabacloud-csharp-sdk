@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePendingMaintenanceActionsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return the historical tasks. Valid values:
+        /// <para>Specifies whether to return the historical tasks. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: returns the current task.</description></item>
+        /// <item><description><b>1</b>: returns the historical tasks.</description></item>
+        /// </list>
+        /// <para>Default value: <b>0</b>.</para>
         /// 
-        /// *   **0**: returns the current task.
-        /// *   **1**: returns the historical tasks.
-        /// 
-        /// Default value: **0**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("IsHistory")]
         [Validation(Required=false)]
@@ -30,16 +33,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-************</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

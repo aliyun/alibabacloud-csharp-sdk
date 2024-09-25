@@ -10,29 +10,36 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RevokeAccountPrivilegeRequest : TeaModel {
         /// <summary>
-        /// The name of the account.
+        /// <para>The name of the account.</para>
+        /// <remarks>
+        /// <para> You can specify only a standard account.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can specify only a standard account.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testacc</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The ID of the PolarDB cluster.
+        /// <para>The ID of the PolarDB cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The names of the databases. If you need to specify multiple database names, separate the names with commas (,).
+        /// <para>The names of the databases. If you need to specify multiple database names, separate the names with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testdb</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

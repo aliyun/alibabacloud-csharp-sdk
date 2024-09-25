@@ -10,51 +10,64 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterAvailableResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The available zones of the cluster.
+        /// <para>The available zones of the cluster.</para>
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
         public List<DescribeDBClusterAvailableResourcesResponseBodyAvailableZones> AvailableZones { get; set; }
         public class DescribeDBClusterAvailableResourcesResponseBodyAvailableZones : TeaModel {
             /// <summary>
-            /// The region ID of the cluster.
+            /// <para>The region ID of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The database engines that the available resources support.
+            /// <para>The database engines that the available resources support.</para>
             /// </summary>
             [NameInMap("SupportedEngines")]
             [Validation(Required=false)]
             public List<DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEngines> SupportedEngines { get; set; }
             public class DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEngines : TeaModel {
                 /// <summary>
-                /// The available resources.
+                /// <para>The available resources.</para>
                 /// </summary>
                 [NameInMap("AvailableResources")]
                 [Validation(Required=false)]
                 public List<DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEnginesAvailableResources> AvailableResources { get; set; }
                 public class DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEnginesAvailableResources : TeaModel {
                     /// <summary>
-                    /// The edition of the cluster. Valid values:
+                    /// <para>The edition of the cluster. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>Normal</b>: Cluster Edition.</description></item>
+                    /// <item><description><b>Basic</b>: Single Node Edition.</description></item>
+                    /// <item><description><b>ArchiveNormal</b>: X-Engine.</description></item>
+                    /// <item><description><b>NormalMultimaster</b>: Multi-master Cluster (Database/Table) Edition.</description></item>
+                    /// <item><description><b>SENormal</b>: Standard Edition.</description></item>
+                    /// </list>
+                    /// <remarks>
+                    /// <list type="bullet">
+                    /// <item><description>Only PolarDB for MySQL supports Single Node Edition.</description></item>
+                    /// <item><description>Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.</description></item>
+                    /// </list>
+                    /// </remarks>
                     /// 
-                    /// *   **Normal**: Cluster Edition.
-                    /// *   **Basic**: Single Node Edition.
-                    /// *   **ArchiveNormal**: X-Engine.
-                    /// *   **NormalMultimaster**: Multi-master Cluster (Database/Table) Edition.
-                    /// *   **SENormal**: Standard Edition.
-                    /// 
-                    /// >- Only PolarDB for MySQL supports Single Node Edition.
-                    /// >- Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.
+                    /// <b>Example:</b>
+                    /// <para>Normal</para>
                     /// </summary>
                     [NameInMap("Category")]
                     [Validation(Required=false)]
                     public string Category { get; set; }
 
                     /// <summary>
-                    /// The specifications of the node.
+                    /// <para>The specifications of the node.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>polar.mysql.x4.large</para>
                     /// </summary>
                     [NameInMap("DBNodeClass")]
                     [Validation(Required=false)]
@@ -63,7 +76,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 }
 
                 /// <summary>
-                /// The version of the database engine.
+                /// <para>The version of the database engine.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mysql57</para>
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
@@ -72,7 +88,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// The zone ID of the cluster.
+            /// <para>The zone ID of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-i</para>
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
@@ -81,7 +100,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2B19F698-8FFC-4918-B9E2-58D878******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePendingMaintenanceActionRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return the historical tasks. Valid values:
+        /// <para>Specifies whether to return the historical tasks. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: returns the current task.</description></item>
+        /// <item><description><b>1</b>: returns the historical tasks.</description></item>
+        /// </list>
+        /// <para>Default value: <b>0</b>.</para>
         /// 
-        /// *   **0**: returns the current task.
-        /// *   **1**: returns the historical tasks.
-        /// 
-        /// Default value: **0**.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("IsHistory")]
         [Validation(Required=false)]
@@ -30,34 +33,48 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
+        /// <para>The page number. The value of this parameter must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: **30**, **50**, or **100**.
+        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, or <b>100</b>.</para>
+        /// <para>Default value: <b>30</b>.</para>
         /// 
-        /// Default value: **30**.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the pending event. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the regions and zones that are supported by PolarDB.
-        /// >- You can set this parameter to **all** to view all pending events within your account.
-        /// >- If you set `Region` to **all**, you must set `TaskType` to **all**.
+        /// <para>The region ID of the pending event. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions and zones that are supported by PolarDB.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can set this parameter to <b>all</b> to view all pending events within your account.</description></item>
+        /// <item><description>If you set <c>Region</c> to <b>all</b>, you must set <c>TaskType</c> to <b>all</b>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>all</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-************</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -76,17 +93,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The task type of pending events. Valid values:
+        /// <para>The task type of pending events. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DatabaseSoftwareUpgrading</b>: database software upgrades</description></item>
+        /// <item><description><b>DatabaseHardwareMaintenance</b>: hardware maintenance and upgrades</description></item>
+        /// <item><description><b>DatabaseStorageUpgrading</b>: database storage upgrades</description></item>
+        /// <item><description><b>DatabaseProxyUpgrading</b>: minor version upgrades of the proxy</description></item>
+        /// <item><description><b>all</b>: queries the details of the pending events of all preceding types.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If the <c>Region</c> parameter is set to <b>all</b>, the <c>TaskType</c> parameter must be set to <b>all</b>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **DatabaseSoftwareUpgrading**: database software upgrades
-        /// *   **DatabaseHardwareMaintenance**: hardware maintenance and upgrades
-        /// *   **DatabaseStorageUpgrading**: database storage upgrades
-        /// *   **DatabaseProxyUpgrading**: minor version upgrades of the proxy
-        /// *   **all**: queries the details of the pending events of all preceding types.
-        /// 
-        /// > If the `Region` parameter is set to **all**, the `TaskType` parameter must be set to **all**.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>all</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

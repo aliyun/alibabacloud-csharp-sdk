@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBDescriptionRequest : TeaModel {
         /// <summary>
-        /// The ID of cluster.
+        /// <para>The ID of cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-***************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The description of the database. The description must meet the following requirements:
+        /// <para>The description of the database. The description must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>It must be 2 to 256 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   It cannot start with `http://` or `https://`.
-        /// *   It must be 2 to 256 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DBDesc</para>
         /// </summary>
         [NameInMap("DBDescription")]
         [Validation(Required=false)]
         public string DBDescription { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testDB</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

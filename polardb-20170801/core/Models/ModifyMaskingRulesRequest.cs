@@ -10,71 +10,100 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyMaskingRulesRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-*****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the specified masking rule. Valid values:
+        /// <para>Specifies whether to enable the specified masking rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is valid only when the <c>RuleNameList</c> parameter is specfied.</para>
+        /// </remarks>
         /// 
-        /// *   **true**
-        /// *   **false**
-        /// 
-        /// > This parameter is valid only when the `RuleNameList` parameter is specfied.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public string Enable { get; set; }
 
         /// <summary>
-        /// The parameter that is used to specify the masking rule that you want to modify and the value in the JSON format. All parameter values are of the string type. Example: `{"auto": {"databases": ["db1"], "tables": ["tb1"], "columns": ["c1,c2"] }, "description": "This rule will be applied to the columns c1 and c2 in table t1", "enabled": true, "applies_to": ["user"]}`. Parameters in the function:
+        /// <para>The parameter that is used to specify the masking rule that you want to modify and the value in the JSON format. All parameter values are of the string type. Example: <c>{&quot;auto&quot;: {&quot;databases&quot;: [&quot;db1&quot;], &quot;tables&quot;: [&quot;tb1&quot;], &quot;columns&quot;: [&quot;c1,c2&quot;] }, &quot;description&quot;: &quot;This rule will be applied to the columns c1 and c2 in table t1&quot;, &quot;enabled&quot;: true, &quot;applies_to&quot;: [&quot;user&quot;]}</c>. Parameters in the function:</para>
+        /// <list type="bullet">
+        /// <item><description><c>&quot;auto&quot;</c>: specifies that the dynamic masking algorithm is supported. This parameter is required.</description></item>
+        /// <item><description><c>&quot;databases&quot;</c>: Optional. The names of databases to which the masking rule is applied. Separate the names with commas (,). If you leave this parameter empty, the masking rule applies to all databases in the cluster.</description></item>
+        /// <item><description><c>&quot;tables&quot;</c>: Optional. The names of tables to which the masking rule is applied. Separate the names with commas (,). If you leave this parameter empty, the rule applies to all tables in the cluster.</description></item>
+        /// <item><description><c>&quot;columns&quot;</c>: Required. The names of fields to which the masking rule is applied. Separate the names with commas (,).</description></item>
+        /// <item><description><c>&quot;description&quot;</c>: Optional. The description of the masking rule. The description can be up to 64 characters in length.</description></item>
+        /// <item><description><c>&quot;enabled&quot;</c>: Required. Specifies whether to enable the masking rule. Valid values: <b>true</b> and <b>false</b>.</description></item>
+        /// <item><description><c>&quot;applies_to&quot;</c>: The names of database accounts to which the masking rule is applied. Separate the names with commas (,).</description></item>
+        /// <item><description><c>&quot;exempted&quot;</c>: The names of database accounts to which the masking rule is not applied. Separate the names with commas (,).</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you specify <c>RuleName</c>, <c>RuleConfig</c> parameter is required. </description></item>
+        /// <item><description>You need to select either <c>&quot;applies_to&quot;</c> or <c>&quot;exempted&quot;</c>.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   `"auto"`: specifies that the dynamic masking algorithm is supported. This parameter is required.
-        /// *   `"databases"`: Optional. The names of databases to which the masking rule is applied. Separate the names with commas (,). If you leave this parameter empty, the masking rule applies to all databases in the cluster.
-        /// *   `"tables"`: Optional. The names of tables to which the masking rule is applied. Separate the names with commas (,). If you leave this parameter empty, the rule applies to all tables in the cluster.
-        /// *   `"columns"`: Required. The names of fields to which the masking rule is applied. Separate the names with commas (,).
-        /// *   `"description"`: Optional. The description of the masking rule. The description can be up to 64 characters in length.
-        /// *   `"enabled"`: Required. Specifies whether to enable the masking rule. Valid values: **true** and **false**.
-        /// *   `"applies_to"`: The names of database accounts to which the masking rule is applied. Separate the names with commas (,).
-        /// *   `"exempted"`: The names of database accounts to which the masking rule is not applied. Separate the names with commas (,).
-        /// 
-        /// >- If you specify `RuleName`, `RuleConfig` parameter is required. 
-        /// >- You need to select either `"applies_to"` or `"exempted"`.
+        /// <b>Example:</b>
+        /// <para>{&quot;auto&quot;: {&quot;databases&quot;: [&quot;db1&quot;], &quot;tables&quot;: [&quot;tb1&quot;], &quot;columns&quot;: [&quot;c1,c2&quot;] }, &quot;description&quot;: &quot;This rule will be applied to the columns c1 and c2 in table t1&quot;, &quot;enabled&quot;: true, &quot;applies_to&quot;: [&quot;user&quot;]}</para>
         /// </summary>
         [NameInMap("RuleConfig")]
         [Validation(Required=false)]
         public string RuleConfig { get; set; }
 
         /// <summary>
-        /// The name of the data masking rule. You can specify only one rule name at a time.
+        /// <para>The name of the data masking rule. You can specify only one rule name at a time.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeMaskingRules</a> operation to query the details of all masking rules for a specified cluster, such as the names of the masking rules.</description></item>
+        /// <item><description>If the rule name does not exist in the cluster, the system automatically creates a masking rule based on the name and the value of <c>RuleConfig</c>.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// >- You can call the [DescribeMaskingRules](https://help.aliyun.com/document_detail/212573.html) operation to query the details of all masking rules for a specified cluster, such as the names of the masking rules.
-        /// >- If the rule name does not exist in the cluster, the system automatically creates a masking rule based on the name and the value of `RuleConfig`.
+        /// <b>Example:</b>
+        /// <para>testrule</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The list of masking rule names. You can specify one or more masking rules at a time. Separate the masking rule names with commas (,).
+        /// <para>The list of masking rule names. You can specify one or more masking rules at a time. Separate the masking rule names with commas (,).</para>
+        /// <remarks>
+        /// <para>You must specify either the <c>RuleName</c> or <c>RuleNameList</c> parameter.</para>
+        /// </remarks>
         /// 
-        /// > You must specify either the `RuleName` or `RuleNameList` parameter.
+        /// <b>Example:</b>
+        /// <para>testrule</para>
         /// </summary>
         [NameInMap("RuleNameList")]
         [Validation(Required=false)]
         public string RuleNameList { get; set; }
 
         /// <summary>
-        /// The version of the masking rule. Default value: v1. Valid values:
+        /// <para>The version of the masking rule. Default value: v1. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>v1</description></item>
+        /// <item><description>v2</description></item>
+        /// </list>
         /// 
-        /// *   v1
-        /// *   v2
+        /// <b>Example:</b>
+        /// <para>v2</para>
         /// </summary>
         [NameInMap("RuleVersion")]
         [Validation(Required=false)]

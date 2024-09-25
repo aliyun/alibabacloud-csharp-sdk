@@ -10,44 +10,54 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class GrantAccountPrivilegeRequest : TeaModel {
         /// <summary>
-        /// The username of the account.
+        /// <para>The username of the account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testacc</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The permissions that are granted to the account. Valid values:
+        /// <para>The permissions that are granted to the account. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ReadWrite</b>: read and write permissions</description></item>
+        /// <item><description><b>ReadOnly</b>: read-only permissions</description></item>
+        /// <item><description><b>DMLOnly</b>: The account is granted the permissions to execute only DML statements on the database.</description></item>
+        /// <item><description><b>DDLOnly</b>: The account is granted the permissions to execute only DDL statements on the database.</description></item>
+        /// <item><description><b>ReadIndex</b>: The account has the read and index permissions on the database.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>The number of <b>AccountPrivilege</b> values must be the consistent with the number of <b>DBName</b> values. Each account permission must correspond to a database name in sequence. For example, you can set <b>DBName</b> to <c>testdb_1,testdb_2</c> and set <b>AccountPrivilege</b> to <c>ReadWrite,ReadOnly</c>. In this case, the specified standard account is granted the <b>read and write</b> permissions on the <b>testdb_1</b> database and the <b>read</b> permission on the <b>testdb_2</b> database.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **ReadWrite**: read and write permissions
-        /// *   **ReadOnly**: read-only permissions
-        /// *   **DMLOnly**: The account is granted the permissions to execute only DML statements on the database.
-        /// *   **DDLOnly**: The account is granted the permissions to execute only DDL statements on the database.
-        /// *   **ReadIndex**: The account has the read and index permissions on the database.
-        /// 
-        /// > The number of **AccountPrivilege** values must be the consistent with the number of **DBName** values. Each account permission must correspond to a database name in sequence. For example, you can set **DBName** to `testdb_1,testdb_2` and set **AccountPrivilege** to `ReadWrite,ReadOnly`. In this case, the specified standard account is granted the **read and write** permissions on the **testdb_1** database and the **read** permission on the **testdb_2** database.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ReadWrite,ReadOnly</para>
         /// </summary>
         [NameInMap("AccountPrivilege")]
         [Validation(Required=false)]
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The names of the databases that the account can access. You can grant the access permissions on one or more databases to the specified standard account. If you need to specify multiple database names, separate the database names with commas (,).
+        /// <para>The names of the databases that the account can access. You can grant the access permissions on one or more databases to the specified standard account. If you need to specify multiple database names, separate the database names with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testdb_1,testdb_2</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

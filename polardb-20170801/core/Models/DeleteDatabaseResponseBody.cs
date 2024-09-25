@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2FED790E-FB61-4721-8C1C-07C627******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

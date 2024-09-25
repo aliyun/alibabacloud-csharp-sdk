@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterDeletionRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to.obtain the cluster ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to.obtain the cluster ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-bp1313h70cd5m****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -29,10 +32,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the cluster lock feature. Default value: false. Valid values:
+        /// <para>Specifies whether to enable the cluster lock feature. Default value: false. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables the cluster lock feature. If you enable the cluster lock feature, you cannot directly release the cluster. You must disable the cluster lock feature before you can release the cluster.</description></item>
+        /// <item><description><b>false</b>: disables the cluster lock feature.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: enables the cluster lock feature. If you enable the cluster lock feature, you cannot directly release the cluster. You must disable the cluster lock feature before you can release the cluster.
-        /// *   **false**: disables the cluster lock feature.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Protection")]
         [Validation(Required=false)]

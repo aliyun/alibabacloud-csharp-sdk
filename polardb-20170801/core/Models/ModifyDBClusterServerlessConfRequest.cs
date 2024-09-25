@@ -10,29 +10,39 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterServerlessConfRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable No-activity Suspension. Default value: false. Valid values:
+        /// <para>Specifies whether to enable No-activity Suspension. Default value: false. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AllowShutDown")]
         [Validation(Required=false)]
         public string AllowShutDown { get; set; }
 
         /// <summary>
-        /// The ID of the serverless cluster.
+        /// <para>The ID of the serverless cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-bp10gr51qasnl****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:
+        /// <para>Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false: scheduled task</description></item>
+        /// <item><description>true: immediate task</description></item>
+        /// </list>
         /// 
-        /// *   false: scheduled task
-        /// *   true: immediate task
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("FromTimeService")]
         [Validation(Required=false)]
@@ -47,19 +57,32 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The latest start time for upgrading the specifications within the scheduled time period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
-        /// > * The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.
-        /// >*   If you specify PlannedStartTime but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: `PlannedEndTime value + 30 minutes`. For example, if you set PlannedStartTime to `2021-01-14T09:00:00Z` and you do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
+        /// <para>The latest start time for upgrading the specifications within the scheduled time period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</description></item>
+        /// <item><description>If you specify PlannedStartTime but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: <c>PlannedEndTime value + 30 minutes</c>. For example, if you set PlannedStartTime to <c>2021-01-14T09:00:00Z</c> and you do not specify PlannedEndTime, the latest start time of the task is set to <c>2021-01-14T09:30:00Z</c>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-01-14T09:30:00Z</para>
         /// </summary>
         [NameInMap("PlannedEndTime")]
         [Validation(Required=false)]
         public string PlannedEndTime { get; set; }
 
         /// <summary>
-        /// The earliest start time of the scheduled task for adding the read-only node. The scheduled task specifies that the task is run in the required period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+        /// <para>The earliest start time of the scheduled task for adding the read-only node. The scheduled task specifies that the task is run in the required period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can specify a point in time between <c>2021-01-14T09:00:00Z</c> and <c>2021-01-15T09:00:00Z</c>.</description></item>
+        /// <item><description>If you leave this parameter empty, the task for adding the read-only node is immediately run by default.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > *   The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in time between `2021-01-14T09:00:00Z` and `2021-01-15T09:00:00Z`.
-        /// >*   If you leave this parameter empty, the task for adding the read-only node is immediately run by default.
+        /// <b>Example:</b>
+        /// <para>2021-01-14T09:00:00Z</para>
         /// </summary>
         [NameInMap("PlannedStartTime")]
         [Validation(Required=false)]
@@ -74,49 +97,70 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The maximum number of stable AP read-only nodes. Valid values: 0 to 7.
+        /// <para>The maximum number of stable AP read-only nodes. Valid values: 0 to 7.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ScaleApRoNumMax")]
         [Validation(Required=false)]
         public string ScaleApRoNumMax { get; set; }
 
         /// <summary>
-        /// The minimum number of stable AP read-only nodes. Valid values: 0 to 7.
+        /// <para>The minimum number of stable AP read-only nodes. Valid values: 0 to 7.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ScaleApRoNumMin")]
         [Validation(Required=false)]
         public string ScaleApRoNumMin { get; set; }
 
         /// <summary>
-        /// The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.
+        /// <para>The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("ScaleMax")]
         [Validation(Required=false)]
         public string ScaleMax { get; set; }
 
         /// <summary>
-        /// The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.
+        /// <para>The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ScaleMin")]
         [Validation(Required=false)]
         public string ScaleMin { get; set; }
 
         /// <summary>
-        /// The maximum number of read-only nodes for scaling. Valid values: 0 to 15.
+        /// <para>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("ScaleRoNumMax")]
         [Validation(Required=false)]
         public string ScaleRoNumMax { get; set; }
 
         /// <summary>
-        /// The minimum number of read-only nodes for scaling. Valid values: 0 to 15.
+        /// <para>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ScaleRoNumMin")]
         [Validation(Required=false)]
         public string ScaleRoNumMin { get; set; }
 
         /// <summary>
-        /// The detection period for No-activity Suspension. Valid values: 5 to 1440. Unit: minutes. The detection duration must be a multiple of 5 minutes.
+        /// <para>The detection period for No-activity Suspension. Valid values: 5 to 1440. Unit: minutes. The detection duration must be a multiple of 5 minutes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("SecondsUntilAutoPause")]
         [Validation(Required=false)]

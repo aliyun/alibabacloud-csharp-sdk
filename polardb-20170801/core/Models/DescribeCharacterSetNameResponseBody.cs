@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeCharacterSetNameResponseBody : TeaModel {
         /// <summary>
-        /// The character sets that are supported.
+        /// <para>The character sets that are supported.</para>
         /// </summary>
         [NameInMap("CharacterSetNameItems")]
         [Validation(Required=false)]
@@ -23,14 +23,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// The type of the database engine.
+        /// <para>The type of the database engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>POLARDB</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34458CD3-33E0-4624-BFEF-840C15******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

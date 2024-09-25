@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGlobalDatabaseNetworkRequest : TeaModel {
         /// <summary>
-        /// The ID of the GDN.
+        /// <para>The ID of the GDN.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gdn-bp1fttxsrmv*****</para>
         /// </summary>
         [NameInMap("GDNId")]
         [Validation(Required=false)]
@@ -27,7 +29,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-************</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

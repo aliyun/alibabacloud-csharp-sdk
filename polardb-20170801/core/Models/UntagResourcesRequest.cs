@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to unbinds all tags from the cluster. Valid values: **true** and **false**. Default value: **false**.
+        /// <para>Specifies whether to unbinds all tags from the cluster. Valid values: <b>true</b> and <b>false</b>. Default value: <b>false</b>.</para>
+        /// <remarks>
+        /// <para> This parameter takes effect only when the value of the <c>TagKey.n</c> parameter is empty.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter takes effect only when the value of the `TagKey.n` parameter is empty.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -27,20 +31,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available regions.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the clusters.
+        /// <para>The IDs of the clusters.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-***************</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -55,16 +64,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to **cluster**.
+        /// <para>The type of the resource. Set the value to <b>cluster</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cluster</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The keys of the tags.
+        /// <para>The keys of the tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>type</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

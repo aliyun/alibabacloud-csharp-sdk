@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeParameterGroupsRequest : TeaModel {
         /// <summary>
-        /// The type of the database engine. Only **MySQL** is supported.
+        /// <para>The type of the database engine. Only <b>MySQL</b> is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
         /// </summary>
         [NameInMap("DBType")]
         [Validation(Required=false)]
         public string DBType { get; set; }
 
         /// <summary>
-        /// The version of the database engine. Valid values:
+        /// <para>The version of the database engine. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>5.6</b></description></item>
+        /// <item><description><b>5.7</b></description></item>
+        /// <item><description><b>8.0</b></description></item>
+        /// </list>
         /// 
-        /// *   **5.6**
-        /// *   **5.7**
-        /// *   **8.0**
+        /// <b>Example:</b>
+        /// <para>8.0</para>
         /// </summary>
         [NameInMap("DBVersion")]
         [Validation(Required=false)]
@@ -36,18 +43,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// <para>The region ID of the cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all regions that are available for your account, such as the region ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query all regions that are available for your account, such as the region ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the virtual node belongs.
+        /// <para>The ID of the resource group to which the virtual node belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-************</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

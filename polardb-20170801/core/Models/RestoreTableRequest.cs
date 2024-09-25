@@ -10,20 +10,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RestoreTableRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set.
+        /// <para>The ID of the backup set.</para>
+        /// <remarks>
+        /// <para> You must specify this parameter if you need to restore a database or a table by using a backup set. You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the ID of the backup set.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify this parameter if you need to restore a database or a table by using a backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the ID of the backup set.
+        /// <b>Example:</b>
+        /// <para>111111</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters within your account.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of all clusters within your account.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-bp***************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -46,13 +53,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The point in time for the restoration. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.
+        /// <para>The point in time for the restoration. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You must specify this parameter if you need to restore the database or the table to a point in time.</para>
+        /// </description></item>
+        /// <item><description><para>You can restore your cluster to a particular time only over the past seven days.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   You must specify this parameter if you need to restore the database or the table to a point in time.
-        /// 
-        /// *   You can restore your cluster to a particular time only over the past seven days.
+        /// <b>Example:</b>
+        /// <para>2020-10-04T01:40:00Z</para>
         /// </summary>
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]
@@ -63,11 +75,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The JSON string that contains the information of the database and the table that you want to restore. All values of the database and table information are of the string type. Example: `[ { "tables":[ { "name":"testtb", "type":"table", "newname":"testtb_restore" } ], "name":"testdb", "type":"db", "newname":"testdb_restore" } ]`.
+        /// <para>The JSON string that contains the information of the database and the table that you want to restore. All values of the database and table information are of the string type. Example: <c>[ { &quot;tables&quot;:[ { &quot;name&quot;:&quot;testtb&quot;, &quot;type&quot;:&quot;table&quot;, &quot;newname&quot;:&quot;testtb_restore&quot; } ], &quot;name&quot;:&quot;testdb&quot;, &quot;type&quot;:&quot;db&quot;, &quot;newname&quot;:&quot;testdb_restore&quot; } ]</c>.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to query the names and details of databases and tables that can be restored and enter their information into the corresponding locations in the preceding example.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeMetaList](https://help.aliyun.com/document_detail/194770.html) operation to query the names and details of databases and tables that can be restored and enter their information into the corresponding locations in the preceding example.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[ { &quot;tables&quot;:[ { &quot;name&quot;:&quot;testtb&quot;, &quot;type&quot;:&quot;table&quot;, &quot;newname&quot;:&quot;testtb_restore&quot; } ], &quot;name&quot;:&quot;testdb&quot;, &quot;type&quot;:&quot;db&quot;, &quot;newname&quot;:&quot;testdb_restore&quot; } ]</para>
         /// </summary>
         [NameInMap("TableMeta")]
         [Validation(Required=false)]

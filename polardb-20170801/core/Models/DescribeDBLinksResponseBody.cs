@@ -10,58 +10,80 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBLinksResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-a*************</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// Details about the database links.
+        /// <para>Details about the database links.</para>
         /// </summary>
         [NameInMap("DBLinkInfos")]
         [Validation(Required=false)]
         public List<DescribeDBLinksResponseBodyDBLinkInfos> DBLinkInfos { get; set; }
         public class DescribeDBLinksResponseBodyDBLinkInfos : TeaModel {
             /// <summary>
-            /// The ID of the source cluster that the database link connects.
+            /// <para>The ID of the source cluster that the database link connects.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pc-a*************</para>
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// The name of the database link.
+            /// <para>The name of the database link.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dblink_test</para>
             /// </summary>
             [NameInMap("DBLinkName")]
             [Validation(Required=false)]
             public string DBLinkName { get; set; }
 
             /// <summary>
-            /// The name of the source database of the database link.
+            /// <para>The name of the source database of the database link.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testdb1</para>
             /// </summary>
             [NameInMap("SourceDBName")]
             [Validation(Required=false)]
             public string SourceDBName { get; set; }
 
             /// <summary>
-            /// The account of the destination database of the database link.
+            /// <para>The account of the destination database of the database link.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testacc</para>
             /// </summary>
             [NameInMap("TargetAccount")]
             [Validation(Required=false)]
             public string TargetAccount { get; set; }
 
             /// <summary>
-            /// The ID of the destination cluster that the database link connects.
+            /// <para>The ID of the destination cluster that the database link connects.</para>
+            /// <remarks>
+            /// <para>If the destination cluster is not a PolarDB for Oracle cluster, the returned value is empty.</para>
+            /// </remarks>
             /// 
-            /// > If the destination cluster is not a PolarDB for Oracle cluster, the returned value is empty.
+            /// <b>Example:</b>
+            /// <para>pc-b************</para>
             /// </summary>
             [NameInMap("TargetDBInstanceName")]
             [Validation(Required=false)]
             public string TargetDBInstanceName { get; set; }
 
             /// <summary>
-            /// The name of the destination database of the database link.
+            /// <para>The name of the destination database of the database link.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testdb2</para>
             /// </summary>
             [NameInMap("TargetDBName")]
             [Validation(Required=false)]
@@ -70,7 +92,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>45D24263-7E3A-4140-9472-************</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

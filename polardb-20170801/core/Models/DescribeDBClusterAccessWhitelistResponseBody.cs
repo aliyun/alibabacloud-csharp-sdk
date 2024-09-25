@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterAccessWhitelistResponseBody : TeaModel {
         /// <summary>
-        /// The Elastic Compute Service (ECS) security groups that are associated with the cluster.
+        /// <para>The Elastic Compute Service (ECS) security groups that are associated with the cluster.</para>
         /// </summary>
         [NameInMap("DBClusterSecurityGroups")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup> DBClusterSecurityGroup { get; set; }
             public class DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup : TeaModel {
                 /// <summary>
-                /// The ID of the ECS security group.
+                /// <para>The ID of the ECS security group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sg-bp**************</para>
                 /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// The name of the ECS security group.
+                /// <para>The name of the ECS security group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-********************</para>
                 /// </summary>
                 [NameInMap("SecurityGroupName")]
                 [Validation(Required=false)]
@@ -39,7 +45,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// The details about the cluster.
+        /// <para>The details about the cluster.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -50,36 +56,54 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeDBClusterAccessWhitelistResponseBodyItemsDBClusterIPArray> DBClusterIPArray { get; set; }
             public class DescribeDBClusterAccessWhitelistResponseBodyItemsDBClusterIPArray : TeaModel {
                 /// <summary>
-                /// The attributes of the IP whitelist group. Set this parameter to **hidden** to hide the IP whitelist group in the console.
+                /// <para>The attributes of the IP whitelist group. Set this parameter to <b>hidden</b> to hide the IP whitelist group in the console.</para>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description>The IP whitelist group that has appeared in the console cannot be hidden.</description></item>
+                /// <item><description>This parameter can be specified only when the <b>WhiteListType</b> parameter is set to <b>IP</b>.</description></item>
+                /// </list>
+                /// </remarks>
                 /// 
-                /// > *   The IP whitelist group that has appeared in the console cannot be hidden.
-                /// > *   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
+                /// <b>Example:</b>
+                /// <para>hidden</para>
                 /// </summary>
                 [NameInMap("DBClusterIPArrayAttribute")]
                 [Validation(Required=false)]
                 public string DBClusterIPArrayAttribute { get; set; }
 
                 /// <summary>
-                /// The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit.
+                /// <para>The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit.</para>
+                /// <list type="bullet">
+                /// <item><description>If the specified whitelist group name does not exist, the whitelist group is created.</description></item>
+                /// <item><description>If the specified whitelist group name exists, the whitelist group is modified.</description></item>
+                /// <item><description>If you do not specify this parameter, the default group is modified.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description>You can create a maximum of 50 IP whitelist groups for a cluster.</description></item>
+                /// <item><description>This parameter can be specified only when the <b>WhiteListType</b> parameter is set to <b>IP</b>.</description></item>
+                /// </list>
+                /// </remarks>
                 /// 
-                /// *   If the specified whitelist group name does not exist, the whitelist group is created.
-                /// *   If the specified whitelist group name exists, the whitelist group is modified.
-                /// *   If you do not specify this parameter, the default group is modified.
-                /// 
-                /// > *   You can create a maximum of 50 IP whitelist groups for a cluster.
-                /// >*   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("DBClusterIPArrayName")]
                 [Validation(Required=false)]
                 public string DBClusterIPArrayName { get; set; }
 
                 /// <summary>
-                /// The IP addresses or Classless Inter-Domain Routing (CIDR) blocks in the IP whitelist group. You can add 1,000 IP addresses or CIDR blocks to all the IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported:
+                /// <para>The IP addresses or Classless Inter-Domain Routing (CIDR) blocks in the IP whitelist group. You can add 1,000 IP addresses or CIDR blocks to all the IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported:</para>
+                /// <list type="bullet">
+                /// <item><description>IP addresses. Example: 10.23.12.24.</description></item>
+                /// <item><description>CIDR blocks. Example: 10.23.12.24/24. 24 indicates the length of the prefix of the CIDR block. The length is the range of 1 to 32.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> This parameter can be specified only when the <b>WhiteListType</b> parameter is set to <b>IP</b>.</para>
+                /// </remarks>
                 /// 
-                /// *   IP addresses. Example: 10.23.12.24.
-                /// *   CIDR blocks. Example: 10.23.12.24/24. 24 indicates the length of the prefix of the CIDR block. The length is the range of 1 to 32.
-                /// 
-                /// >  This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
+                /// <b>Example:</b>
+                /// <para>11.<em><b>.</b></em>.<em><b>,11.</b></em>.<em><b>.</b></em></para>
                 /// </summary>
                 [NameInMap("SecurityIps")]
                 [Validation(Required=false)]
@@ -90,7 +114,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>559E91A2-CDA3-4E9F-808B-29D738******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

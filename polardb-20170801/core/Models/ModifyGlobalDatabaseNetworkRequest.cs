@@ -14,21 +14,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? EnableGlobalDomainName { get; set; }
 
         /// <summary>
-        /// The description of the GDN. The description must meet the following requirements:
+        /// <para>The description of the GDN. The description must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>It must start with a letter.</description></item>
+        /// <item><description>It can contain letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>It must be 2 to 126 characters in length.</description></item>
+        /// </list>
         /// 
-        /// *   It cannot start with `http://` or `https://`.
-        /// *   It must start with a letter.
-        /// *   It can contain letters, digits, underscores (_), and hyphens (-).
-        /// *   It must be 2 to 126 characters in length.
+        /// <b>Example:</b>
+        /// <para>GDN-fortest</para>
         /// </summary>
         [NameInMap("GDNDescription")]
         [Validation(Required=false)]
         public string GDNDescription { get; set; }
 
         /// <summary>
-        /// The ID of the GDN.
+        /// <para>The ID of the GDN.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gdn-bp1fttxsrmv*****</para>
         /// </summary>
         [NameInMap("GDNId")]
         [Validation(Required=false)]
@@ -43,7 +49,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-************</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,99 +10,132 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// The description of the account. The description must meet the following requirements:
+        /// <para>The description of the account. The description must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>It must be 2 to 256 characters in length.</description></item>
+        /// </list>
         /// 
-        /// *   It cannot start with `http://` or `https://`.
-        /// *   It must be 2 to 256 characters in length.
+        /// <b>Example:</b>
+        /// <para>testdes</para>
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// The name of the account. The name must meet the following requirements:
+        /// <para>The name of the account. The name must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>It must start with a lowercase letter and end with a letter or a digit.</description></item>
+        /// <item><description>It can contain lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>It must be 2 to 16 characters in length.</description></item>
+        /// <item><description>It cannot be root, admin, or another username that is reserved by the system.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   It must start with a lowercase letter and end with a letter or a digit.
-        /// *   It can contain lowercase letters, digits, and underscores (_).
-        /// *   It must be 2 to 16 characters in length.
-        /// *   It cannot be root, admin, or another username that is reserved by the system.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testacc</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The password of the account. The password must meet the following requirements:
+        /// <para>The password of the account. The password must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>It must be 8 to 32 characters in length.</description></item>
+        /// <item><description>Special characters include <c>! @ # $ % ^ &amp; * ( ) _ + - =</c></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-        /// *   It must be 8 to 32 characters in length.
-        /// *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Test1111</para>
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// The permissions that are granted to the account. Valid values:
+        /// <para>The permissions that are granted to the account. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ReadWrite</b>: read and write permissions</description></item>
+        /// <item><description><b>ReadOnly</b>: read-only permissions</description></item>
+        /// <item><description><b>DMLOnly</b>: the permissions to execute only DML statements</description></item>
+        /// <item><description><b>DDLOnly</b>: the permissions to execute only DDL statements</description></item>
+        /// <item><description><b>ReadIndex</b>: the read and index permissions</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>The <c>AccountPrivilege</c> parameter is valid only after you specify the <c>DBName</c> parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If multiple database names are specified by the <c>DBName</c> parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,). For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set <c>DBName</c> to <c>DB1,DB2</c>, and set <c>AccountPrivilege</c> to <c>ReadWrite,ReadOnly</c>.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **ReadWrite**: read and write permissions
-        /// *   **ReadOnly**: read-only permissions
-        /// *   **DMLOnly**: the permissions to execute only DML statements
-        /// *   **DDLOnly**: the permissions to execute only DDL statements
-        /// *   **ReadIndex**: the read and index permissions
-        /// 
-        /// > 
-        /// 
-        /// *   The `AccountPrivilege` parameter is valid only after you specify the `DBName` parameter.
-        /// 
-        /// *   If multiple database names are specified by the `DBName` parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,). For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set `DBName` to `DB1,DB2`, and set `AccountPrivilege` to `ReadWrite,ReadOnly`.
-        /// *   This parameter is valid only for standard accounts of PolarDB for MySQL clusters.
+        /// <b>Example:</b>
+        /// <para>ReadWrite</para>
         /// </summary>
         [NameInMap("AccountPrivilege")]
         [Validation(Required=false)]
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// The type of the account. Valid values:
+        /// <para>The type of the account. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Normal</b>: standard account</description></item>
+        /// <item><description><b>Super</b>: privileged account</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you leave this parameter empty, the default value <b>Super</b> is used.</para>
+        /// </description></item>
+        /// <item><description><para>You can create multiple privileged accounts for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</para>
+        /// </description></item>
+        /// <item><description><para>You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **Normal**: standard account
-        /// *   **Super**: privileged account
-        /// 
-        /// > 
-        /// 
-        /// *   If you leave this parameter empty, the default value **Super** is used.
-        /// 
-        /// *   You can create multiple privileged accounts for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see [Create a database account](https://help.aliyun.com/document_detail/68508.html).
-        /// *   You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see [Create a database account](https://help.aliyun.com/document_detail/68508.html).
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of cluster.
+        /// <para>The ID of cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-**************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The name of the database that can be accessed by the account. To enter multiple database names, separate the names with commas (,).
+        /// <para>The name of the database that can be accessed by the account. To enter multiple database names, separate the names with commas (,).</para>
+        /// <remarks>
+        /// <para>This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is valid only for standard accounts of PolarDB for MySQL clusters.
+        /// <b>Example:</b>
+        /// <para>testdb</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

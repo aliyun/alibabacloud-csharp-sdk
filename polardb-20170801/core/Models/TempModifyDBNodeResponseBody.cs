@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class TempModifyDBNodeResponseBody : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-xxxxxxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The details of the nodes.
+        /// <para>The details of the nodes.</para>
         /// </summary>
         [NameInMap("DBNodeIds")]
         [Validation(Required=false)]
         public List<string> DBNodeIds { get; set; }
 
         /// <summary>
-        /// The ID of the order.
+        /// <para>The ID of the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2035638*******</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>69A85BAF-1089-4CDF-A82F-0A140F******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

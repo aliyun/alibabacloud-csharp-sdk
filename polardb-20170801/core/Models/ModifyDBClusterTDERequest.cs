@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterTDERequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable automatic encryption for new tables. Valid values:
+        /// <para>Specifies whether to enable automatic encryption for new tables. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ON</b></description></item>
+        /// <item><description><b>OFF</b></description></item>
+        /// </list>
         /// 
-        /// *   **ON**
-        /// *   **OFF**
+        /// <b>Example:</b>
+        /// <para>ON</para>
         /// </summary>
         [NameInMap("EncryptNewTables")]
         [Validation(Required=false)]
         public string EncryptNewTables { get; set; }
 
         /// <summary>
-        /// The ID of the custom key.
+        /// <para>The ID of the custom key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>749c1df7-<b><b>-</b></b>-<b><b>-</b></b>*****</para>
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
@@ -52,16 +61,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](https://help.aliyun.com/document_detail/93689.html).
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::1406926*****:role/aliyunrdsinstanceencryptiondefaultrole</para>
         /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// Modifies the TDE status. Set the value to **Enable**.
+        /// <para>Modifies the TDE status. Set the value to <b>Enable</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Enable</para>
         /// </summary>
         [NameInMap("TDEStatus")]
         [Validation(Required=false)]

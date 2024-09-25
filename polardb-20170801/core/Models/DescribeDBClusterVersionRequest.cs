@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterVersionRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to query the information about the latest versions or the versions to which the cluster can be updated. Valid values:
+        /// <para>Specifies whether to query the information about the latest versions or the versions to which the cluster can be updated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>LATEST_VERSION: the information about the latest versions.</description></item>
+        /// <item><description>AVAILABLE_VERSION: the information about the versions to which the cluster can be updated.</description></item>
+        /// </list>
         /// 
-        /// *   LATEST_VERSION: the information about the latest versions.
-        /// *   AVAILABLE_VERSION: the information about the versions to which the cluster can be updated.
+        /// <b>Example:</b>
+        /// <para>LATEST_VERSION</para>
         /// </summary>
         [NameInMap("DescribeType")]
         [Validation(Required=false)]

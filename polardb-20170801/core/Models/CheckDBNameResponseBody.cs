@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CheckDBNameResponseBody : TeaModel {
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_db</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CDB3258F-B5DE-43C4-8935-CBA0CA******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,16 +10,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateParameterGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the parameter template.
+        /// <para>The ID of the parameter template.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeParameterGroups](https://help.aliyun.com/document_detail/207178.html) operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.
+        /// <b>Example:</b>
+        /// <para>pcpg-**************</para>
         /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>514D1D87-E243-4A5F-A87D-2785C3******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

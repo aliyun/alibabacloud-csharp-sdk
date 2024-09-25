@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RestartDBLinkResponseBody : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E56531A4-E552-40BA-9C58-137B80******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The task ID.
+        /// <para>The task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ec8c4723-eac5-4f12-becb-01ac08******</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

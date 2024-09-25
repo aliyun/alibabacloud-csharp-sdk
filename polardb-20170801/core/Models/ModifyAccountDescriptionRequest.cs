@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyAccountDescriptionRequest : TeaModel {
         /// <summary>
-        /// The description of the account. The description must meet the following requirements:
+        /// <para>The description of the account. The description must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The description cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description must be 2 to 256 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The description cannot start with `http://` or `https://`.
-        /// *   The description must be 2 to 256 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// The name of the account.
+        /// <para>The name of the account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testacc</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-*************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

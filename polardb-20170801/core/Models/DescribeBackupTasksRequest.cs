@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupTasksRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup task.
+        /// <para>The ID of the backup task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11111111</para>
         /// </summary>
         [NameInMap("BackupJobId")]
         [Validation(Required=false)]
         public string BackupJobId { get; set; }
 
         /// <summary>
-        /// The backup mode. Valid values:
+        /// <para>The backup mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Automated</b></description></item>
+        /// <item><description><b>Manual</b></description></item>
+        /// </list>
         /// 
-        /// *   **Automated**
-        /// *   **Manual**
+        /// <b>Example:</b>
+        /// <para>Manual</para>
         /// </summary>
         [NameInMap("BackupMode")]
         [Validation(Required=false)]
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-***************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

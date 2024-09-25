@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterPerformanceResponseBody : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-*****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The type of the database engine.
+        /// <para>The type of the database engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
         /// </summary>
         [NameInMap("DBType")]
         [Validation(Required=false)]
         public string DBType { get; set; }
 
         /// <summary>
-        /// The version of the database engine.
+        /// <para>The version of the database engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8.0</para>
         /// </summary>
         [NameInMap("DBVersion")]
         [Validation(Required=false)]
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// The end time of the query. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+        /// <para>The end time of the query. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-09-23T01:01:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The cluster performance metrics.
+        /// <para>The cluster performance metrics.</para>
         /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
@@ -49,30 +61,40 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem> PerformanceItem { get; set; }
             public class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem : TeaModel {
                 /// <summary>
-                /// The ID of the cluster node.
+                /// <para>The ID of the cluster node.</para>
+                /// <remarks>
+                /// <para> The value of this parameter is not returned if the <c>Key</c> parameter is set to <c>PolarDBDiskUsage</c>.</para>
+                /// </remarks>
                 /// 
-                /// >  The value of this parameter is not returned if the `Key` parameter is set to `PolarDBDiskUsage`.
+                /// <b>Example:</b>
+                /// <para>pi-*************</para>
                 /// </summary>
                 [NameInMap("DBNodeId")]
                 [Validation(Required=false)]
                 public string DBNodeId { get; set; }
 
                 /// <summary>
-                /// The performance metrics that are returned.
+                /// <para>The performance metrics that are returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PolarDBDiskUsage</para>
                 /// </summary>
                 [NameInMap("Measurement")]
                 [Validation(Required=false)]
                 public string Measurement { get; set; }
 
                 /// <summary>
-                /// The name of the performance metric.
+                /// <para>The name of the performance metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mean_data_size</para>
                 /// </summary>
                 [NameInMap("MetricName")]
                 [Validation(Required=false)]
                 public string MetricName { get; set; }
 
                 /// <summary>
-                /// The performance metrics.
+                /// <para>The performance metrics.</para>
                 /// </summary>
                 [NameInMap("Points")]
                 [Validation(Required=false)]
@@ -83,14 +105,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     public List<DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue> PerformanceItemValue { get; set; }
                     public class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue : TeaModel {
                         /// <summary>
-                        /// The timestamp of the metric. This value is a UNIX timestamp. Unit: millisecond.
+                        /// <para>The timestamp of the metric. This value is a UNIX timestamp. Unit: millisecond.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1600822800000</para>
                         /// </summary>
                         [NameInMap("Timestamp")]
                         [Validation(Required=false)]
                         public long? Timestamp { get; set; }
 
                         /// <summary>
-                        /// The value of the metric.
+                        /// <para>The value of the metric.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>42.38</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -105,14 +133,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>35D3E3DA-4650-407A-BFF5-59BFF1******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The start time of the query. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+        /// <para>The start time of the query. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-09-23T01:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -10,46 +10,60 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeClassListRequest : TeaModel {
         /// <summary>
-        /// The code of the commodity. Valid values:
+        /// <para>The code of the commodity. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>polardb_sub: the subscription cluster in regions in the Chinese mainland</description></item>
+        /// <item><description>polardb_sub _intl: the subscription cluster in regions outside the Chinese mainland</description></item>
+        /// <item><description>polardb_payg: the pay-as-you-go cluster in regions in the Chinese mainland</description></item>
+        /// <item><description>polardb_payg_intl: the pay-as-you-go cluster in regions outside the Chinese mainland</description></item>
+        /// <item><description>polardb_sub_jushita: the subscription cluster for CloudTmall</description></item>
+        /// <item><description>polardb_payg_jushita: the pay-as-you-go cluster for CloudTmall</description></item>
+        /// <item><description>polardb_sub_cainiao: the subscription cluster for Cainiao</description></item>
+        /// <item><description>polardb_payg_cainiao: the pay-as-you-go cluster for Cainiao</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you use an Alibaba Cloud account on the China site, you can view only the codes of the commodities that are available in the Chinese mainland.</description></item>
+        /// <item><description>If you are using an Alibaba Cloud international account, you can view only the codes of the commodities that are available outside the Chinese mainland.</description></item>
+        /// <item><description>If you use a CloudTmall account, you can view only the codes of the commodities that are available in CloudTmall.</description></item>
+        /// <item><description>If you use a Cainiao account, you can view only the codes of the commodities that are available in Cainiao.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   polardb_sub: the subscription cluster in regions in the Chinese mainland
-        /// *   polardb_sub _intl: the subscription cluster in regions outside the Chinese mainland
-        /// *   polardb_payg: the pay-as-you-go cluster in regions in the Chinese mainland
-        /// *   polardb_payg_intl: the pay-as-you-go cluster in regions outside the Chinese mainland
-        /// *   polardb_sub_jushita: the subscription cluster for CloudTmall
-        /// *   polardb_payg_jushita: the pay-as-you-go cluster for CloudTmall
-        /// *   polardb_sub_cainiao: the subscription cluster for Cainiao
-        /// *   polardb_payg_cainiao: the pay-as-you-go cluster for Cainiao
-        /// 
-        /// > *   If you use an Alibaba Cloud account on the China site, you can view only the codes of the commodities that are available in the Chinese mainland.
-        /// >*   If you are using an Alibaba Cloud international account, you can view only the codes of the commodities that are available outside the Chinese mainland.
-        /// >*   If you use a CloudTmall account, you can view only the codes of the commodities that are available in CloudTmall.
-        /// >*   If you use a Cainiao account, you can view only the codes of the commodities that are available in Cainiao.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>polardb_sub</para>
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// The number of nodes. Valid values:
+        /// <para>The number of nodes. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>single: Standalone Edition.</description></item>
+        /// <item><description>cluster: Cluster Edition.</description></item>
+        /// <item><description>all: both Standalone Edition and Cluster Edition.</description></item>
+        /// </list>
         /// 
-        /// *   single: Standalone Edition.
-        /// *   cluster: Cluster Edition.
-        /// *   all: both Standalone Edition and Cluster Edition.
+        /// <b>Example:</b>
+        /// <para>cluster</para>
         /// </summary>
         [NameInMap("MasterHa")]
         [Validation(Required=false)]
         public string MasterHa { get; set; }
 
         /// <summary>
-        /// The type of the order. Valid values:
+        /// <para>The type of the order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>BUY: The order is used to purchase a cluster.</description></item>
+        /// <item><description>UPGRADE: The order is used to change the specifications of a cluster.</description></item>
+        /// <item><description>RENEW: The order is used to renew a cluster.</description></item>
+        /// <item><description>CONVERT: The order is used to change the billing method of a cluster.</description></item>
+        /// </list>
         /// 
-        /// *   BUY: The order is used to purchase a cluster.
-        /// *   UPGRADE: The order is used to change the specifications of a cluster.
-        /// *   RENEW: The order is used to renew a cluster.
-        /// *   CONVERT: The order is used to change the billing method of a cluster.
+        /// <b>Example:</b>
+        /// <para>BUY</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -64,14 +78,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// <para>The region ID of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-************</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

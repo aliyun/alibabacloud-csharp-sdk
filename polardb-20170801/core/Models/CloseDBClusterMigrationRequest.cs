@@ -10,23 +10,29 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CloseDBClusterMigrationRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to continue to enable binary logging. Valid values:
+        /// <para>Specifies whether to continue to enable binary logging. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: continues to enable binary logging.</description></item>
+        /// <item><description><b>false</b>: disables binary logging.</description></item>
+        /// </list>
+        /// <para>Default value: <b>true</b>.</para>
+        /// <remarks>
+        /// <para>If binary logging is disabled, your PolarDB cluster is restarted.</para>
+        /// </remarks>
         /// 
-        /// *   **true**: continues to enable binary logging.
-        /// *   **false**: disables binary logging.
-        /// 
-        /// Default value: **true**.
-        /// 
-        /// > If binary logging is disabled, your PolarDB cluster is restarted.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ContinueEnableBinlog")]
         [Validation(Required=false)]
         public bool? ContinueEnableBinlog { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-**************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

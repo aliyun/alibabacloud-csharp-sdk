@@ -10,38 +10,49 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterAvailableResourcesRequest : TeaModel {
         /// <summary>
-        /// The specifications of the node. For more information, see [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html).
+        /// <para>The specifications of the node. For more information, see <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>polar.mysql.x4.large</para>
         /// </summary>
         [NameInMap("DBNodeClass")]
         [Validation(Required=false)]
         public string DBNodeClass { get; set; }
 
         /// <summary>
-        /// The type of the database engine. Valid values:
+        /// <para>The type of the database engine. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>Oracle</b></description></item>
+        /// </list>
         /// 
-        /// *   **MySQL**
-        /// *   **PostgreSQL**
-        /// *   **Oracle**
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
         /// </summary>
         [NameInMap("DBType")]
         [Validation(Required=false)]
         public string DBType { get; set; }
 
         /// <summary>
-        /// The version of the database engine. Valid values for the MySQL database engine:
+        /// <para>The version of the database engine. Valid values for the MySQL database engine:</para>
+        /// <list type="bullet">
+        /// <item><description><b>5.6</b></description></item>
+        /// <item><description><b>5.7</b></description></item>
+        /// <item><description><b>8.0</b></description></item>
+        /// </list>
+        /// <para>Valid values for the PostgreSQL database engine:</para>
+        /// <list type="bullet">
+        /// <item><description><b>11</b></description></item>
+        /// <item><description><b>14</b></description></item>
+        /// </list>
+        /// <para>Valid value for the Oracle database engine: <b>11</b></para>
+        /// <remarks>
+        /// <para>This parameter is required when you specify the <b>DBType</b> parameter.</para>
+        /// </remarks>
         /// 
-        /// *   **5.6**
-        /// *   **5.7**
-        /// *   **8.0**
-        /// 
-        /// Valid values for the PostgreSQL database engine:
-        /// 
-        /// *   **11**
-        /// *   **14**
-        /// 
-        /// Valid value for the Oracle database engine: **11**
-        /// 
-        /// > This parameter is required when you specify the **DBType** parameter.
+        /// <b>Example:</b>
+        /// <para>5.6</para>
         /// </summary>
         [NameInMap("DBVersion")]
         [Validation(Required=false)]
@@ -56,21 +67,28 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The billing method of the cluster. Valid values:
+        /// <para>The billing method of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>Prepaid</b>: subscription</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Postpaid**: pay-as-you-go
-        /// *   **Prepaid**: subscription
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Postpaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster. Default value: **cn-hangzhou**.
+        /// <para>The region ID of the cluster. Default value: <b>cn-hangzhou</b>.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available regions.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -85,9 +103,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The zone ID of the cluster.
+        /// <para>The zone ID of the cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available zones.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available zones.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-i</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

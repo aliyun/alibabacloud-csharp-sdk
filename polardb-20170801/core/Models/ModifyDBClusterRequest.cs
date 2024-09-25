@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterRequest : TeaModel {
         /// <summary>
-        /// Enable storage compression function. The value of this parameter is ON.
+        /// <para>Enable storage compression function. The value of this parameter is ON.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ON</para>
         /// </summary>
         [NameInMap("CompressStorage")]
         [Validation(Required=false)]
         public string CompressStorage { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para> You can call the DescribeDBClusters operation to query information about all PolarDB clusters that are deployed in a specified region, such as cluster IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the DescribeDBClusters operation to query information about all PolarDB clusters that are deployed in a specified region, such as cluster IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-*************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -32,10 +38,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBNodeCrashList { get; set; }
 
         /// <summary>
-        /// The method used to replicate data across zones. Valid values:
+        /// <para>The method used to replicate data across zones. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>AsyncSync</b>: the asynchronous mode.</description></item>
+        /// <item><description><b>SemiSync</b>: the semi-synchronous mode.</description></item>
+        /// </list>
         /// 
-        /// *   **AsyncSync**: the asynchronous mode.
-        /// *   **SemiSync**: the semi-synchronous mode.
+        /// <b>Example:</b>
+        /// <para>AsynSync</para>
         /// </summary>
         [NameInMap("DataSyncMode")]
         [Validation(Required=false)]
@@ -46,15 +56,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FaultInjectionType { get; set; }
 
         /// <summary>
-        /// The fault scenario that you want to simulate for the cluster.
+        /// <para>The fault scenario that you want to simulate for the cluster.</para>
+        /// <list type="bullet">
+        /// <item><description>Set the value to <b>0</b>. The value 0 indicates the scenario in which the primary zone of the cluster fails.</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter takes effect only when you set the <c>StandbyHAMode</c> parameter to 0.</para>
+        /// </description></item>
+        /// <item><description><para>If you set this parameter to 0, all compute nodes deployed in the primary zone are unavailable. In this case, the switchover degrades the cluster performance.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   Set the value to **0**. The value 0 indicates the scenario in which the primary zone of the cluster fails.
-        /// 
-        /// > 
-        /// 
-        /// *   This parameter takes effect only when you set the `StandbyHAMode` parameter to 0.
-        /// 
-        /// *   If you set this parameter to 0, all compute nodes deployed in the primary zone are unavailable. In this case, the switchover degrades the cluster performance.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("FaultSimulateMode")]
         [Validation(Required=false)]
@@ -77,30 +93,42 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the cross-zone automatic switchover mode. Valid values:
+        /// <para>Specifies whether to enable the cross-zone automatic switchover mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ON</b>: Enable the cross-zone automatic switchover mode.</description></item>
+        /// <item><description><b>OFF</b>: Disable the cross-zone automatic switchover mode.</description></item>
+        /// <item><description><b>0</b>: Enable the customer drill mode.</description></item>
+        /// </list>
         /// 
-        /// *   **ON**: Enable the cross-zone automatic switchover mode.
-        /// *   **OFF**: Disable the cross-zone automatic switchover mode.
-        /// *   **0**: Enable the customer drill mode.
+        /// <b>Example:</b>
+        /// <para>ON</para>
         /// </summary>
         [NameInMap("StandbyHAMode")]
         [Validation(Required=false)]
         public string StandbyHAMode { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable automatic storage scaling for the cluster of Standard Edition. Valid values:
+        /// <para>Specifies whether to enable automatic storage scaling for the cluster of Standard Edition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enable</description></item>
+        /// <item><description>Disable</description></item>
+        /// </list>
         /// 
-        /// *   Enable
-        /// *   Disable
+        /// <b>Example:</b>
+        /// <para>Enable</para>
         /// </summary>
         [NameInMap("StorageAutoScale")]
         [Validation(Required=false)]
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// The maximum storage capacity of the cluster of Standard Edition in automatic scaling. Unit: GB.
+        /// <para>The maximum storage capacity of the cluster of Standard Edition in automatic scaling. Unit: GB.</para>
+        /// <remarks>
+        /// <para> The maximum value of this parameter is 32000.</para>
+        /// </remarks>
         /// 
-        /// >  The maximum value of this parameter is 32000.
+        /// <b>Example:</b>
+        /// <para>800</para>
         /// </summary>
         [NameInMap("StorageUpperBound")]
         [Validation(Required=false)]

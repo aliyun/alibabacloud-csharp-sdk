@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterMaintainTimeRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-***************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The maintenance window of the cluster. Specify the maintenance window in the `HH:mmZ-HH:mmZ` format. For example, the value `16:00Z-17:00Z` indicates that the cluster can be maintained from 00:00 to 01:00 (UTC+8).
-        ///  
-        /// >  The maintenance window must start on the hour and last for an hour.
+        /// <para>The maintenance window of the cluster. Specify the maintenance window in the <c>HH:mmZ-HH:mmZ</c> format. For example, the value <c>16:00Z-17:00Z</c> indicates that the cluster can be maintained from 00:00 to 01:00 (UTC+8).</para>
+        /// <remarks>
+        /// <para> The maintenance window must start on the hour and last for an hour.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>02:00Z-03:00Z</para>
         /// </summary>
         [NameInMap("MaintainTime")]
         [Validation(Required=false)]
