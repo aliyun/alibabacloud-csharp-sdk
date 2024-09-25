@@ -10,98 +10,125 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayRouteOnAuthResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the data.
+        /// <para>The details of the data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListGatewayRouteOnAuthResponseBodyData> Data { get; set; }
         public class ListGatewayRouteOnAuthResponseBodyData : TeaModel {
             /// <summary>
-            /// The domain ID.
+            /// <para>The domain ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>235</para>
             /// </summary>
             [NameInMap("DomainId")]
             [Validation(Required=false)]
             public long? DomainId { get; set; }
 
             /// <summary>
-            /// The domain IDs.
+            /// <para>The domain IDs.</para>
             /// </summary>
             [NameInMap("DomainIdList")]
             [Validation(Required=false)]
             public List<long?> DomainIdList { get; set; }
 
             /// <summary>
-            /// The domain name.
+            /// <para>The domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123.com</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The domain names.
+            /// <para>The domain names.</para>
             /// </summary>
             [NameInMap("DomainNameList")]
             [Validation(Required=false)]
             public List<string> DomainNameList { get; set; }
 
             /// <summary>
-            /// The gateway ID.
+            /// <para>The gateway ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>399</para>
             /// </summary>
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// The unique ID of the gateway.
+            /// <para>The unique ID of the gateway.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>gw-7ea3da97b96543e19f6c597c****</para>
             /// </summary>
             [NameInMap("GatewayUniqueId")]
             [Validation(Required=false)]
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// The route ID.
+            /// <para>The route ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public int? Id { get; set; }
 
             /// <summary>
-            /// The name of the route.
+            /// <para>The name of the route.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ceshi</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The information about route matching.
+            /// <para>The information about route matching.</para>
             /// </summary>
             [NameInMap("RoutePredicates")]
             [Validation(Required=false)]
             public ListGatewayRouteOnAuthResponseBodyDataRoutePredicates RoutePredicates { get; set; }
             public class ListGatewayRouteOnAuthResponseBodyDataRoutePredicates : TeaModel {
                 /// <summary>
-                /// The information about route matching.
+                /// <para>The information about route matching.</para>
                 /// </summary>
                 [NameInMap("PathPredicates")]
                 [Validation(Required=false)]
                 public ListGatewayRouteOnAuthResponseBodyDataRoutePredicatesPathPredicates PathPredicates { get; set; }
                 public class ListGatewayRouteOnAuthResponseBodyDataRoutePredicatesPathPredicates : TeaModel {
                     /// <summary>
-                    /// The path.
+                    /// <para>The path.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/api</para>
                     /// </summary>
                     [NameInMap("Path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// The matching type.
+                    /// <para>The matching type.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>PRE</para>
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -114,31 +141,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request is successfully processed.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>58E06A0A-BD2C-47A0-99C2-B100F353****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c></description></item>
+        /// <item><description><c>false</c></description></item>
+        /// </list>
         /// 
-        /// *   `true`
-        /// *   `false`
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

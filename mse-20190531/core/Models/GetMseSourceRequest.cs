@@ -10,34 +10,48 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetMseSourceRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// <para>The unique ID of the gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-7ea3da97b96543e19f6c597cd4a9****</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The MSE engine type. Valid values:
+        /// <para>The MSE engine type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NACOS</description></item>
+        /// <item><description>ZOOKEEPER</description></item>
+        /// </list>
         /// 
-        /// *   NACOS
-        /// *   ZOOKEEPER
+        /// <b>Example:</b>
+        /// <para>NACOS</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// <para>VPC ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1t50e045b5g7i3p****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

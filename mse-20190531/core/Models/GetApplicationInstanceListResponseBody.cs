@@ -10,56 +10,71 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetApplicationInstanceListResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetApplicationInstanceListResponseBodyData Data { get; set; }
         public class GetApplicationInstanceListResponseBodyData : TeaModel {
             /// <summary>
-            /// The page number. Pages start from page 1.
+            /// <para>The page number. Pages start from page 1.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The queried nodes.
+            /// <para>The queried nodes.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<GetApplicationInstanceListResponseBodyDataResult> Result { get; set; }
             public class GetApplicationInstanceListResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The node IP address.
+                /// <para>The node IP address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10.1.2.3</para>
                 /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
                 /// <summary>
-                /// The application port.
+                /// <para>The application port.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8080</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
                 /// <summary>
-                /// The node tags.
+                /// <para>The node tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<GetApplicationInstanceListResponseBodyDataResultTags> Tags { get; set; }
                 public class GetApplicationInstanceListResponseBodyDataResultTags : TeaModel {
                     /// <summary>
-                    /// 标签值。
+                    /// <para>标签值。</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>gray</para>
                     /// </summary>
                     [NameInMap("Tag")]
                     [Validation(Required=false)]
@@ -70,7 +85,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The total number of nodes.
+            /// <para>The total number of nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalSize")]
             [Validation(Required=false)]

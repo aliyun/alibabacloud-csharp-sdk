@@ -10,47 +10,65 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListInstanceCountRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
+        /// <para>The type of the instance. Valid values: ZooKeeper and Nacos-Ans.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Nacos-Ans</para>
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The edition type of the instance. Valid values:
+        /// <para>The edition type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>mse_dev</c>: Developer Edition</description></item>
+        /// <item><description><c>mse_pro</c>: Professional Edition</description></item>
+        /// </list>
         /// 
-        /// *   `mse_dev`: Developer Edition
-        /// *   `mse_pro`: Professional Edition
+        /// <b>Example:</b>
+        /// <para>mse_pro</para>
         /// </summary>
         [NameInMap("MseVersion")]
         [Validation(Required=false)]
         public string MseVersion { get; set; }
 
         /// <summary>
-        /// The ID of the region where the instance resides. Examples:
+        /// <para>The ID of the region where the instance resides. Examples:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-hangzhou: China (Hangzhou)</description></item>
+        /// <item><description>cn-beijing: China (Beijing)</description></item>
+        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
+        /// <item><description>cn-zhangjiakou: China (Zhangjiakou)</description></item>
+        /// <item><description>cn-shenzhen: China (Shenzhen)</description></item>
+        /// </list>
         /// 
-        /// *   cn-hangzhou: China (Hangzhou)
-        /// *   cn-beijing: China (Beijing)
-        /// *   cn-shanghai: China (Shanghai)
-        /// *   cn-zhangjiakou: China (Zhangjiakou)
-        /// *   cn-shenzhen: China (Shenzhen)
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The extended request parameters in the JSON format.
+        /// <para>The extended request parameters in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]

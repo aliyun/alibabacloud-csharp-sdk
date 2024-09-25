@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryAllSwimmingLaneGroupRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The name of the Microservices Engine (MSE) namespace that you want to query.
+        /// <para>The name of the Microservices Engine (MSE) namespace that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

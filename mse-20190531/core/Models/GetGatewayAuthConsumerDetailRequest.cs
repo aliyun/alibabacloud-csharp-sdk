@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetGatewayAuthConsumerDetailRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// <para>The unique ID of the gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gw-1a4ab101d5924b6f92c5ec98a84*****</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The ID of the consumer.
+        /// <para>The ID of the consumer.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>120</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

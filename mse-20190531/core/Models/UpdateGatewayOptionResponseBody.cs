@@ -10,48 +10,68 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayOptionResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;LogConfigDetails\&quot;: {\&quot;LogEnabled\&quot;: True}, \&quot;TraceDetails\&quot;: {\&quot;Sample\&quot;: 17, \&quot;TraceEnabled\&quot;: True}}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GatewayOption Data { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// <list type="bullet">
+        /// <item><description>If the request is successful, a success message is returned.</description></item>
+        /// <item><description>If the request fails, an error message is returned.</description></item>
+        /// </list>
         /// 
-        /// *   If the request is successful, a success message is returned.
-        /// *   If the request fails, an error message is returned.
+        /// <b>Example:</b>
+        /// <para>The request is successfully processed.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>124D02EB-DBDD-534D-A701-B4A95D3D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

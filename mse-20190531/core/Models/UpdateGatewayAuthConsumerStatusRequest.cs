@@ -10,40 +10,51 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayAuthConsumerStatusRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The status of the consumer. Valid values:
+        /// <para>The status of the consumer. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The consumer is enabled.</description></item>
+        /// <item><description>false: The consumer is disabled.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   true: The consumer is enabled.
-        /// *   false: The consumer is disabled.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ConsumerStatus")]
         [Validation(Required=false)]
         public bool? ConsumerStatus { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// <para>The unique ID of the gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gw-685f661467b54f48b7b7a76605ce****</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The consumer ID.
+        /// <para>The consumer ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

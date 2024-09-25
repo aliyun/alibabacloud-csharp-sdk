@@ -10,77 +10,108 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetServiceListPageResponseBody : TeaModel {
         /// <summary>
-        /// The response to the request.
+        /// <para>The response to the request.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetServiceListPageResponseBodyData Data { get; set; }
         public class GetServiceListPageResponseBodyData : TeaModel {
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public string PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public string PageSize { get; set; }
 
             /// <summary>
-            /// The data on the current page.
+            /// <para>The data on the current page.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<GetServiceListPageResponseBodyDataResult> Result { get; set; }
             public class GetServiceListPageResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The application ID.
+                /// <para>The application ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dez4xxxxx@f3f75ed8ffxxxxx</para>
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The application name.
+                /// <para>The application name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example-app</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// The time when the service was last updated.
+                /// <para>The time when the service was last updated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123456</para>
                 /// </summary>
                 [NameInMap("GmtModifyTime")]
                 [Validation(Required=false)]
                 public string GmtModifyTime { get; set; }
 
                 /// <summary>
-                /// The group to which the service belongs.
+                /// <para>The group to which the service belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DEFAULT_GROUP</para>
                 /// </summary>
                 [NameInMap("Group")]
                 [Validation(Required=false)]
                 public string Group { get; set; }
 
                 /// <summary>
-                /// The number of service nodes.
+                /// <para>The number of service nodes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("InstanceNum")]
                 [Validation(Required=false)]
                 public int? InstanceNum { get; set; }
 
                 /// <summary>
-                /// The service name.
+                /// <para>The service name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sc-A</para>
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
+                [NameInMap("ServiceType")]
+                [Validation(Required=false)]
+                public string ServiceType { get; set; }
+
                 /// <summary>
-                /// The service version.
+                /// <para>The service version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -89,7 +120,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalSize")]
             [Validation(Required=false)]
@@ -98,21 +132,30 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The request information.
+        /// <para>The request information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A2F946FB-F2E3-5BF4-8CBE-xxxxxxxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

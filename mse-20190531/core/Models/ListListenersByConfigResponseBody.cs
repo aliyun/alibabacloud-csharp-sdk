@@ -10,56 +10,74 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListListenersByConfigResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-100-000</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>202</para>
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// The information about listeners.
+        /// <para>The information about listeners.</para>
         /// </summary>
         [NameInMap("Listeners")]
         [Validation(Required=false)]
         public List<ListListenersByConfigResponseBodyListeners> Listeners { get; set; }
         public class ListListenersByConfigResponseBodyListeners : TeaModel {
             /// <summary>
-            /// The IP address.
+            /// <para>The IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.1.1.1</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The label of the listener.
+            /// <para>The label of the listener.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public Dictionary<string, string> Labels { get; set; }
 
             /// <summary>
-            /// The verification string.
+            /// <para>The verification string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>23sdfdf</para>
             /// </summary>
             [NameInMap("Md5")]
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
             /// <summary>
-            /// The status.
+            /// <para>The status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>beta</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The current version of the listener. Valid values: gray and normal.
+            /// <para>The current version of the listener. Valid values: gray and normal.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>gray</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -68,45 +86,64 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>75E1442F-11EC-567A-9CF0-5A36F7904F39</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

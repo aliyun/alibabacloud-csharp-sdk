@@ -10,40 +10,43 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetPluginConfigResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetPluginConfigResponseBodyData Data { get; set; }
         public class GetPluginConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// The category of the plug-in. Valid values:
+            /// <para>The category of the plug-in. Valid values:</para>
+            /// <para>0: user-defined</para>
+            /// <para>1: permission authentication</para>
+            /// <para>2: security protection</para>
+            /// <para>3: transmission protocol</para>
+            /// <para>4: traffic control</para>
+            /// <para>5: traffic observation</para>
             /// 
-            /// 0: user-defined
-            /// 
-            /// 1: permission authentication
-            /// 
-            /// 2: security protection
-            /// 
-            /// 3: transmission protocol
-            /// 
-            /// 4: traffic control
-            /// 
-            /// 5: traffic observation
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public int? Category { get; set; }
 
             /// <summary>
-            /// The information about the plug-in configuration used for checking.
+            /// <para>The information about the plug-in configuration used for checking.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>\# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</para>
             /// </summary>
             [NameInMap("ConfigCheck")]
             [Validation(Required=false)]
@@ -53,81 +56,109 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ConfigExample { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("DomainConfigStartIndex")]
             [Validation(Required=false)]
             public int? DomainConfigStartIndex { get; set; }
 
             /// <summary>
-            /// The list of gateway plug-in configurations.
+            /// <para>The list of gateway plug-in configurations.</para>
             /// </summary>
             [NameInMap("GatewayConfigList")]
             [Validation(Required=false)]
             public List<GetPluginConfigResponseBodyDataGatewayConfigList> GatewayConfigList { get; set; }
             public class GetPluginConfigResponseBodyDataGatewayConfigList : TeaModel {
                 /// <summary>
-                /// The plug-in configuration.
+                /// <para>The plug-in configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>\# Configure a check for the required fields of the plug-in, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</para>
                 /// </summary>
                 [NameInMap("Config")]
                 [Validation(Required=false)]
                 public string Config { get; set; }
 
                 /// <summary>
-                /// The application scope of the plug-in. Valid values:
+                /// <para>The application scope of the plug-in. Valid values:</para>
+                /// <para>0: global</para>
+                /// <para>1: domain names</para>
+                /// <para>2: routes</para>
                 /// 
-                /// 0: global
-                /// 
-                /// 1: domain names
-                /// 
-                /// 2: routes
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ConfigLevel")]
                 [Validation(Required=false)]
                 public int? ConfigLevel { get; set; }
 
                 /// <summary>
-                /// Indicates whether the plug-in is enabled.
+                /// <para>Indicates whether the plug-in is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Enable")]
                 [Validation(Required=false)]
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// The ID of the gateway.
+                /// <para>The ID of the gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("GatewayId")]
                 [Validation(Required=false)]
                 public long? GatewayId { get; set; }
 
                 /// <summary>
-                /// The unique ID of the gateway.
+                /// <para>The unique ID of the gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gw-ubuwqygbq4783gqb2y3f87q****</para>
                 /// </summary>
                 [NameInMap("GatewayUniqueId")]
                 [Validation(Required=false)]
                 public string GatewayUniqueId { get; set; }
 
                 /// <summary>
-                /// The creation time.
+                /// <para>The creation time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1667309705000</para>
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// The update time.
+                /// <para>The update time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1667309705000</para>
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The ID of the plug-in configuration.
+                /// <para>The ID of the plug-in configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The ID of the gateway plug-in.
+                /// <para>The ID of the gateway plug-in.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("PluginId")]
                 [Validation(Required=false)]
@@ -141,6 +172,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>test-route</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -149,119 +184,163 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>7</para>
+            /// </summary>
             [NameInMap("GatewayConfigStartIndex")]
             [Validation(Required=false)]
             public int? GatewayConfigStartIndex { get; set; }
 
             /// <summary>
-            /// The ID of the plug-in.
+            /// <para>The ID of the plug-in.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The name of the image.
+            /// <para>The name of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>name</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
 
             /// <summary>
-            /// The mode.
+            /// <para>The mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public int? Mode { get; set; }
 
             /// <summary>
-            /// The name of the plug-in.
+            /// <para>The name of the plug-in.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The execution stage of the plug-in. Valid values:
+            /// <para>The execution stage of the plug-in. Valid values:</para>
+            /// <para>0: default stage</para>
+            /// <para>1: authorization stage</para>
+            /// <para>2: authentication stage</para>
+            /// <para>3: statistics stage</para>
             /// 
-            /// 0: default stage
-            /// 
-            /// 1: authorization stage
-            /// 
-            /// 2: authentication stage
-            /// 
-            /// 3: statistics stage
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Phase")]
             [Validation(Required=false)]
             public int? Phase { get; set; }
 
             /// <summary>
-            /// The ID of the creator.
+            /// <para>The ID of the creator.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("PrimaryUser")]
             [Validation(Required=false)]
             public string PrimaryUser { get; set; }
 
             /// <summary>
-            /// The execution priority of the plug-in. A larger value indicates a higher priority.
+            /// <para>The execution priority of the plug-in. A larger value indicates a higher priority.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
             /// <summary>
-            /// The publish status.
+            /// <para>The publish status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PublishState")]
             [Validation(Required=false)]
             public int? PublishState { get; set; }
 
             /// <summary>
-            /// The description of the README file.
+            /// <para>The description of the README file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>read me</para>
             /// </summary>
             [NameInMap("Readme")]
             [Validation(Required=false)]
             public string Readme { get; set; }
 
             /// <summary>
-            /// The description of the README file that is edited in English.
+            /// <para>The description of the README file that is edited in English.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>read me</para>
             /// </summary>
             [NameInMap("ReadmeEn")]
             [Validation(Required=false)]
             public string ReadmeEn { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("RouteConfigStartIndex")]
             [Validation(Required=false)]
             public int? RouteConfigStartIndex { get; set; }
 
             /// <summary>
-            /// Indicates whether the plug-in is enabled. Valid values:
+            /// <para>Indicates whether the plug-in is enabled. Valid values:</para>
+            /// <para>0: disabled</para>
+            /// <para>1: enabled</para>
             /// 
-            /// 0: disabled
-            /// 
-            /// 1: enabled
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The summary of the plug-in.
+            /// <para>The summary of the plug-in.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>This is a plug-in.</para>
             /// </summary>
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public string Summary { get; set; }
 
             /// <summary>
-            /// The type.
+            /// <para>The type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public int? Type { get; set; }
 
             /// <summary>
-            /// The version of the plug-in.
+            /// <para>The version of the plug-in.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -272,17 +351,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string VersionJson { get; set; }
 
             /// <summary>
-            /// The WebAssembly language. Valid values:
+            /// <para>The WebAssembly language. Valid values:</para>
+            /// <para>0: C++</para>
+            /// <para>1: TinyGo</para>
+            /// <para>2: Rust</para>
+            /// <para>3: AssemblyScript</para>
+            /// <para>4: Zig</para>
             /// 
-            /// 0: C++
-            /// 
-            /// 1: TinyGo
-            /// 
-            /// 2: Rust
-            /// 
-            /// 3: AssemblyScript
-            /// 
-            /// 4: Zig
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("WasmLang")]
             [Validation(Required=false)]
@@ -291,49 +368,70 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The dynamic error code.
+        /// <para>The dynamic error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>code</para>
         /// </summary>
         [NameInMap("DynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// The dynamic error message.
+        /// <para>The dynamic error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>message</para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>500</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>03A3E2F4-6804-5663-9D5D-2EC47A1*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

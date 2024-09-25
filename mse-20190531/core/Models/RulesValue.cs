@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Tag { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>gray</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -77,6 +81,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public int? Remainder { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>20</para>
+                    /// </summary>
                     [NameInMap("rate")]
                     [Validation(Required=false)]
                     public int? Rate { get; set; }
@@ -161,6 +169,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public List<string> ParamTypes { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>AND</para>
+                /// </summary>
                 [NameInMap("condition")]
                 [Validation(Required=false)]
                 public string Condition { get; set; }

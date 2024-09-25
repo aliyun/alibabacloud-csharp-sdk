@@ -10,101 +10,150 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListApplicationsWithTagRulesResponseBody : TeaModel {
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListApplicationsWithTagRulesResponseBodyData Data { get; set; }
         public class ListApplicationsWithTagRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The returned data.
+            /// <para>The returned data.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ListApplicationsWithTagRulesResponseBodyDataResult> Result { get; set; }
             public class ListApplicationsWithTagRulesResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The application ID.
+                /// <para>The application ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>daqijp6c31@xxx</para>
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The application name.
+                /// <para>The application name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>service-lottery-core</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// The MSE namespace to which the application belongs.
+                /// <para>The MSE namespace to which the application belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// The queried rules.
+                /// <para>The queried rules.</para>
                 /// </summary>
                 [NameInMap("RouteRules")]
                 [Validation(Required=false)]
                 public List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRules> RouteRules { get; set; }
                 public class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules : TeaModel {
                     /// <summary>
-                    /// Indicates whether the alert rule is enabled. Valid values:
+                    /// <para>Indicates whether the alert rule is enabled. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><c>true</c></description></item>
+                    /// <item><description><c>false</c></description></item>
+                    /// </list>
                     /// 
-                    /// *   `true`
-                    /// *   `false`
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("Enable")]
                     [Validation(Required=false)]
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// The rule ID.
+                    /// <para>The rule ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>653</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// The number of instances.
+                    /// <para>The number of instances.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("InstanceNum")]
                     [Validation(Required=false)]
                     public int? InstanceNum { get; set; }
 
                     /// <summary>
-                    /// The rule name.
+                    /// <para>The rule name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>dubbo</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The rate.
+                    /// <para>The rate.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10</para>
                     /// </summary>
                     [NameInMap("Rate")]
                     [Validation(Required=false)]
                     public int? Rate { get; set; }
 
                     /// <summary>
-                    /// The details of the routing rule.
+                    /// <para>The details of the routing rule.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{
+                    ///       &quot;dubbo&quot;: [{
+                    ///     &quot;serviceName&quot;: &quot;com.taobao.hsf.common.DemoService&quot;,
+                    ///     &quot;group&quot;: &quot;&quot;,
+                    ///     &quot;version&quot;: &quot;&quot;,
+                    ///     &quot;methodName&quot;: &quot;sayHello&quot;,
+                    ///     &quot;condition&quot;: &quot;AND&quot;,
+                    ///     &quot;argumentItems&quot;: [{
+                    ///         &quot;index&quot;: 0,
+                    ///         &quot;expr&quot;: &quot;&quot;,
+                    ///         &quot;operator&quot;: &quot;rawvalue&quot;,
+                    ///         &quot;value&quot;: &quot;jim&quot;,
+                    ///         &quot;cond&quot;: &quot;==&quot;
+                    ///     }]
+                    ///       }]
+                    ///   }</para>
                     /// </summary>
                     [NameInMap("Rules")]
                     [Validation(Required=false)]
@@ -285,14 +334,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     }
 
                     /// <summary>
-                    /// The status.
+                    /// <para>The status.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public int? Status { get; set; }
 
                     /// <summary>
-                    /// The tag.
+                    /// <para>The tag.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>gray</para>
                     /// </summary>
                     [NameInMap("Tag")]
                     [Validation(Required=false)]
@@ -301,10 +356,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// The route state. Valid values:
+                /// <para>The route state. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: disabled</description></item>
+                /// <item><description>1: enabled</description></item>
+                /// </list>
                 /// 
-                /// *   0: disabled
-                /// *   1: enabled
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("RouteStatus")]
                 [Validation(Required=false)]
@@ -313,7 +372,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalSize")]
             [Validation(Required=false)]
@@ -322,34 +384,48 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <list type="bullet">
+        /// <item><description>If the request is successful, a success message is returned.</description></item>
+        /// <item><description>If the request fails, an error message is returned.</description></item>
+        /// </list>
         /// 
-        /// *   If the request is successful, a success message is returned.
-        /// *   If the request fails, an error message is returned.
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7466566F-F30F-4A29-965D-3E0AF21D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

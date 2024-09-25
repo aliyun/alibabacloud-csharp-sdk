@@ -9,14 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayFlowRuleRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// just for POP
+        /// <para>just for POP</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>param</para>
         /// </summary>
         [NameInMap("FilterParams")]
         [Validation(Required=false)]

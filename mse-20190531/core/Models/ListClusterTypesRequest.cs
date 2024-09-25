@@ -10,37 +10,52 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListClusterTypesRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The network type. Valid values:
+        /// <para>The network type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>slb</description></item>
+        /// <item><description>eni</description></item>
+        /// </list>
         /// 
-        /// *   slb
-        /// *   eni
+        /// <b>Example:</b>
+        /// <para>slb</para>
         /// </summary>
         [NameInMap("ConnectType")]
         [Validation(Required=false)]
         public string ConnectType { get; set; }
 
         /// <summary>
-        /// The edition of the MSE instance that you want to purchase.
+        /// <para>The edition of the MSE instance that you want to purchase.</para>
+        /// <list type="bullet">
+        /// <item><description>mse_pro: Professional Edition</description></item>
+        /// <item><description>mse_dev: Developer Edition</description></item>
+        /// </list>
         /// 
-        /// *   mse_pro: Professional Edition
-        /// *   mse_dev: Developer Edition
+        /// <b>Example:</b>
+        /// <para>mse_pro</para>
         /// </summary>
         [NameInMap("MseVersion")]
         [Validation(Required=false)]
         public string MseVersion { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
+        /// <para>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

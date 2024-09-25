@@ -10,63 +10,82 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayAuthConsumerResourceRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the consumer.
+        /// <para>The ID of the consumer.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("ConsumerId")]
         [Validation(Required=false)]
         public long? ConsumerId { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// <para>The unique ID of the gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gw-3f97e2989c344f35ab3fd62b19f1****</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public string PageNum { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The resource authorization status. Valid values:
+        /// <para>The resource authorization status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enabled</description></item>
+        /// <item><description>false: disabled</description></item>
+        /// </list>
         /// 
-        /// *   true: enabled
-        /// *   false: disabled
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ResourceStatus")]
         [Validation(Required=false)]
         public bool? ResourceStatus { get; set; }
 
         /// <summary>
-        /// The name of the route.
+        /// <para>The name of the route.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("RouteName")]
         [Validation(Required=false)]

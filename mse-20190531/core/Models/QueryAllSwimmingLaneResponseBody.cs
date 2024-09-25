@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryAllSwimmingLaneResponseBody : TeaModel {
         /// <summary>
-        /// The details of the data.
+        /// <para>The details of the data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{id:100,name:&quot;test&quot;}]</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -84,6 +87,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute GatewaySwimmingLaneRoute { get; set; }
             public class QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("CanaryModel")]
                 [Validation(Required=false)]
                 public int? CanaryModel { get; set; }
@@ -92,10 +99,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions> Conditions { get; set; }
                 public class QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PRE</para>
+                    /// </summary>
                     [NameInMap("Cond")]
                     [Validation(Required=false)]
                     public string Cond { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>name</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -104,24 +119,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public List<string> NameList { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>header</para>
+                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xiaoming</para>
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("GatewayId")]
                 [Validation(Required=false)]
                 public long? GatewayId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>gw-84efde2ee1464260bdb17a5b****</para>
+                /// </summary>
                 [NameInMap("GatewayUniqueId")]
                 [Validation(Required=false)]
                 public string GatewayUniqueId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
                 [NameInMap("Percentage")]
                 [Validation(Required=false)]
                 public int? Percentage { get; set; }
@@ -154,10 +189,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Client</para>
+            /// </summary>
             [NameInMap("MessageQueueFilterSide")]
             [Validation(Required=false)]
             public string MessageQueueFilterSide { get; set; }
@@ -166,10 +209,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? MessageQueueGrayEnable { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>swimmingGroup</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
@@ -182,6 +233,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? RecordCanaryDetail { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
@@ -190,6 +245,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Tag { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>12345</para>
+            /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
@@ -209,31 +268,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-100-000</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request was successfully processed.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DC34E4A3-5F1C-4E40-86EA-02EDF967****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

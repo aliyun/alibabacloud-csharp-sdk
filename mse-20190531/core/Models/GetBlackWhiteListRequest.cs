@@ -10,38 +10,54 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetBlackWhiteListRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// <para>The unique ID of the gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-32d5c9769c1842b1a2cc3426c59e****</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the whitelist.
+        /// <para>Specifies whether to enable the whitelist.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsWhite")]
         [Validation(Required=false)]
         public bool? IsWhite { get; set; }
 
         /// <summary>
-        /// The type of the resource.
+        /// <para>The type of the resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GATEWAY</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The type.
+        /// <para>The type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IP</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

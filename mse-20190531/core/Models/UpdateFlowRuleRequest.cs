@@ -10,116 +10,133 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateFlowRuleRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The application ID.
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hkhon1po62@c3df23522******</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The application name.
+        /// <para>The application name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>spring-cloud-a</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// The throttling effect.
+        /// <para>The throttling effect.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        /// *   0
+        /// <para>fast failure</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>2</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        ///     :
+        /// <para>in queue</para>
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     fast failure
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   2
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     in queue
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ControlBehavior")]
         [Validation(Required=false)]
         public int? ControlBehavior { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the rule.
+        /// <para>Specifies whether to enable the rule.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   true
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   false
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// The timeout period. Unit: milliseconds. This parameter is required when the value of ControlBehavior is set to 2.
+        /// <para>The timeout period. Unit: milliseconds. This parameter is required when the value of ControlBehavior is set to 2.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>500</para>
         /// </summary>
         [NameInMap("MaxQueueingTimeMs")]
         [Validation(Required=false)]
         public int? MaxQueueingTimeMs { get; set; }
 
         /// <summary>
-        /// The namespace.
+        /// <para>The namespace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The rule ID.
+        /// <para>The rule ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>13</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// The throttling threshold.
+        /// <para>The throttling threshold.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]

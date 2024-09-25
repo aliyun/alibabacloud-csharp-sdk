@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class RemoveAuthPolicyRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>259</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

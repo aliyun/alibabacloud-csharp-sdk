@@ -10,61 +10,81 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreatePluginConfigShrinkRequest : TeaModel {
         /// <summary>
-        /// The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
+        /// <para>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The plug-in configuration. The configuration content of the WebAssembly (Wasm) plug-in is in the YAML format. The configuration content of the Lua plug-in is Lua code.
+        /// <para>The plug-in configuration. The configuration content of the WebAssembly (Wasm) plug-in is in the YAML format. The configuration content of the Lua plug-in is Lua code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>status_code: 200
+        /// headers:</para>
+        /// <list type="bullet">
+        /// <item><description>Content-Type=application/json
+        /// body: &quot;{\&quot;rule\&quot;: \&quot;global\&quot;}&quot;</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// The application scope of the plug-in. Valid values:
+        /// <para>The application scope of the plug-in. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: global</description></item>
+        /// <item><description>1: route</description></item>
+        /// <item><description>2: domain name</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   0: global
-        /// *   1: route
-        /// *   2: domain name
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ConfigLevel")]
         [Validation(Required=false)]
         public int? ConfigLevel { get; set; }
 
         /// <summary>
-        /// Indicates whether the plug-in is enabled.
+        /// <para>Indicates whether the plug-in is enabled.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// <para>The unique ID of the gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gw-ubuwqygbq4783gqb2y3f87q****</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The gateway plug-in ID.
+        /// <para>The gateway plug-in ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PluginId")]
         [Validation(Required=false)]
         public long? PluginId { get; set; }
 
         /// <summary>
-        /// The domain IDs or route IDs. They are distinguished based on ConfigLevel.
+        /// <para>The domain IDs or route IDs. They are distinguished based on ConfigLevel.</para>
         /// </summary>
         [NameInMap("ResourceIdList")]
         [Validation(Required=false)]

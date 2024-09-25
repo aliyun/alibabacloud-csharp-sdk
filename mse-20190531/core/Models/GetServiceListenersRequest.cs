@@ -10,19 +10,29 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetServiceListenersRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
-        /// <summary>
-        /// The ID of the MSE instance to which the service belongs.
+        /// <term><b>Obsolete</b></term>
         /// 
-        /// >  You must specify InstanceId or ClusterId.
+        /// <summary>
+        /// <para>The ID of the MSE instance to which the service belongs.</para>
+        /// <remarks>
+        /// <para> You must specify InstanceId or ClusterId.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-09k1q11****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -30,74 +40,106 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the cluster to which the service belongs.
+        /// <para>The name of the cluster to which the service belongs.</para>
+        /// <remarks>
+        /// <para>The cluster is a concept for Nacos services and is not equivalent to a Microservices Engine (MSE) instance.</para>
+        /// </remarks>
         /// 
-        /// > The cluster is a concept for Nacos services and is not equivalent to a Microservices Engine (MSE) instance.
+        /// <b>Example:</b>
+        /// <para>DEFAULT</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The group to which the service belongs.
+        /// <para>The group to which the service belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>WEB_GROUP</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// A reserved parameter.
+        /// <para>A reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>none</para>
         /// </summary>
         [NameInMap("HasIpCount")]
         [Validation(Required=false)]
         public string HasIpCount { get; set; }
 
         /// <summary>
-        /// The ID of the instance to which the service belongs.
+        /// <para>The ID of the instance to which the service belongs.</para>
+        /// <remarks>
+        /// <para>You must specify InstanceId or ClusterId.</para>
+        /// </remarks>
         /// 
-        /// > You must specify InstanceId or ClusterId.
+        /// <b>Example:</b>
+        /// <para>mse_prepaid_public_cn-tl32odtt20j</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The namespace to which the service belongs.
+        /// <para>The namespace to which the service belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ddaf8f12-****-b1c1-86e7c72e266b</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The extended request parameters in the JSON format.
+        /// <para>The extended request parameters in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// The name of the service whose listeners you want to query.
+        /// <para>The name of the service whose listeners you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zeekr-orderboss</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]

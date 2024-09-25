@@ -10,40 +10,52 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayServiceTrafficPolicyRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh-CN</b> (default): Chinese</description></item>
+        /// <item><description><b>en-US</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh-CN** (default): Chinese
-        /// *   **en-US**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the gateway.
+        /// <para>The ID of the gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>429</para>
         /// </summary>
         [NameInMap("GatewayId")]
         [Validation(Required=false)]
         public long? GatewayId { get; set; }
 
         /// <summary>
-        /// The traffic policy of the gateway.
-        /// 
-        /// This parameter is required.
+        /// <para>The traffic policy of the gateway.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("GatewayTrafficPolicy")]
         [Validation(Required=false)]
         public TrafficPolicy GatewayTrafficPolicy { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// <para>The unique ID of the gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-75c5036c083e4f89ba8ef9fafff2e902</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The ID of the service.
+        /// <para>The ID of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>411</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]

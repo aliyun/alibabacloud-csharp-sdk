@@ -10,92 +10,110 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The billing method. Valid values: PREPAY and POSTPAY.
+        /// <para>The billing method. Valid values: PREPAY and POSTPAY.</para>
+        /// <para>Ignore this parameter for serverless instances.</para>
         /// 
-        /// Ignore this parameter for serverless instances.
+        /// <b>Example:</b>
+        /// <para>POSTPAY</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The engine specifications. Valid values:
+        /// <para>The engine specifications. Valid values:</para>
+        /// <para>[Professional Edition]</para>
+        /// <list type="bullet">
+        /// <item><description><c>MSE_SC_2_4_60_c</c>: 2 vCPUs and 4 GB of memory</description></item>
+        /// <item><description><c>MSE_SC_1_2_60_c</c>: 1 vCPU and 2 GB of memory</description></item>
+        /// <item><description><c>MSE_SC_4_8_60_c</c>: 4 vCPUs and 8 GB of memory</description></item>
+        /// <item><description><c>MSE_SC_8_16_60_c</c>: 8 vCPUs and 16 GB of memory</description></item>
+        /// <item><description><c>MSE_SC_16_32_60_c</c>: 16 vCPUs and 32 GB of memory</description></item>
+        /// </list>
+        /// <para>[Developer Edition]</para>
+        /// <list type="bullet">
+        /// <item><description><c>MSE_SC_1_2_60_c</c>: 1 vCPU and 2 GB of memory</description></item>
+        /// <item><description><c>MSE_SC_2_4_60_c</c>: 2 vCPUs and 4 GB of memory</description></item>
+        /// </list>
+        /// <para>[Serverless Edition]</para>
+        /// <para>Ignore this parameter or set this parameter to <c>MSE_SC_SERVERLESS</c>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// [Professional Edition]
-        /// 
-        /// *   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory
-        /// *   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory
-        /// *   `MSE_SC_4_8_60_c`: 4 vCPUs and 8 GB of memory
-        /// *   `MSE_SC_8_16_60_c`: 8 vCPUs and 16 GB of memory
-        /// *   `MSE_SC_16_32_60_c`: 16 vCPUs and 32 GB of memory
-        /// 
-        /// [Developer Edition]
-        /// 
-        /// *   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory
-        /// *   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory
-        /// 
-        /// [Serverless Edition]
-        /// 
-        /// Ignore this parameter or set this parameter to `MSE_SC_SERVERLESS`.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MSE_SC_2_4_60_c</para>
         /// </summary>
         [NameInMap("ClusterSpecification")]
         [Validation(Required=false)]
         public string ClusterSpecification { get; set; }
 
         /// <summary>
-        /// The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
+        /// <para>The type of the instance. Valid values: ZooKeeper and Nacos-Ans.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Nacos-Ans</para>
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The engine version of the instance. Valid values:
+        /// <para>The engine version of the instance. Valid values:</para>
+        /// <para>[Professional Edition]</para>
+        /// <list type="bullet">
+        /// <item><description><c>NACOS_2_0_0</c></description></item>
+        /// <item><description><c>ZooKeeper_3_8_0</c></description></item>
+        /// </list>
+        /// <para>[Developer Edition]</para>
+        /// <list type="bullet">
+        /// <item><description><c>NACOS_2_0_0</c></description></item>
+        /// <item><description><c>ZooKeeper_3_8_0</c></description></item>
+        /// </list>
+        /// <para>[Serverless Edition]</para>
+        /// <list type="bullet">
+        /// <item><description><c>NACOS_2_0_0</c></description></item>
+        /// <item><description><c>ZooKeeper_3_8_0</c></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// [Professional Edition]
-        /// 
-        /// *   `NACOS_2_0_0`
-        /// *   `ZooKeeper_3_8_0`
-        /// 
-        /// [Developer Edition]
-        /// 
-        /// *   `NACOS_2_0_0`
-        /// *   `ZooKeeper_3_8_0`
-        /// 
-        /// [Serverless Edition]
-        /// 
-        /// *   `NACOS_2_0_0`
-        /// *   `ZooKeeper_3_8_0`
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>NACOS_2_0_0</para>
         /// </summary>
         [NameInMap("ClusterVersion")]
         [Validation(Required=false)]
         public string ClusterVersion { get; set; }
 
         /// <summary>
-        /// The network connection type. Valid values: `slb` or `single_eni`. For instances of the Developer Edition in some regions, only the value `single_eni` is supported.
+        /// <para>The network connection type. Valid values: <c>slb</c> or <c>single_eni</c>. For instances of the Developer Edition in some regions, only the value <c>single_eni</c> is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>slb</para>
         /// </summary>
         [NameInMap("ConnectionType")]
         [Validation(Required=false)]
         public string ConnectionType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// This parameter is obsolete.
+        /// <para>This parameter is obsolete.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alicloud-disk-ssd</para>
         /// </summary>
         [NameInMap("DiskType")]
         [Validation(Required=false)]
@@ -103,83 +121,99 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to `single_eni`.
+        /// <para>Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to <c>single_eni</c>.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   true
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   false
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
         [NameInMap("EipEnabled")]
         [Validation(Required=false)]
         public bool? EipEnabled { get; set; }
 
         /// <summary>
-        /// The number of nodes in the instance. Valid values: 1 to 9.
+        /// <para>The number of nodes in the instance. Valid values: 1 to 9.</para>
+        /// <para>[Professional Edition]</para>
+        /// <list type="bullet">
+        /// <item><description>The value must be greater than or equal to 3 and must be an odd number.</description></item>
+        /// </list>
+        /// <para>[Developer Edition]</para>
+        /// <list type="bullet">
+        /// <item><description>The value must be 1.</description></item>
+        /// </list>
+        /// <para>[Serverless Edition]</para>
+        /// <para>Ignore this parameter.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// [Professional Edition]
-        /// 
-        /// *   The value must be greater than or equal to 3 and must be an odd number.
-        /// 
-        /// [Developer Edition]
-        /// 
-        /// *   The value must be 1.
-        /// 
-        /// [Serverless Edition]
-        /// 
-        /// Ignore this parameter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("InstanceCount")]
         [Validation(Required=false)]
         public int? InstanceCount { get; set; }
 
         /// <summary>
-        /// The custom name of the instance.
+        /// <para>The custom name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tanshuyingtest001</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// Configure this parameter unless otherwise specified. Valid values:
+        /// <para>Configure this parameter unless otherwise specified. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>mse_pro</c>: Professional Edition</description></item>
+        /// <item><description><c>mse_dev</c>: Developer Edition</description></item>
+        /// <item><description><c>mse_dev</c>: Serverless Edition</description></item>
+        /// </list>
         /// 
-        /// *   `mse_pro`: Professional Edition
-        /// *   `mse_dev`: Developer Edition
-        /// *   `mse_dev`: Serverless Edition
+        /// <b>Example:</b>
+        /// <para>mse_pro</para>
         /// </summary>
         [NameInMap("MseVersion")]
         [Validation(Required=false)]
         public string MseVersion { get; set; }
 
         /// <summary>
-        /// The network type of the MSE instance. Valid values:
+        /// <para>The network type of the MSE instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>privatenet</c>: VPC</description></item>
+        /// <item><description><c>pubnet</c>: Internet</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   `privatenet`: VPC
-        /// *   `pubnet`: Internet
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>privatenet</para>
         /// </summary>
         [NameInMap("NetType")]
         [Validation(Required=false)]
         public string NetType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// This parameter is obsolete.
+        /// <para>This parameter is obsolete.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>slb.s1.small</para>
         /// </summary>
         [NameInMap("PrivateSlbSpecification")]
         [Validation(Required=false)]
@@ -187,16 +221,23 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PrivateSlbSpecification { get; set; }
 
         /// <summary>
-        /// This parameter is valid only if the ConnectionType parameter is set to `slb`. The value 0 indicates that the Server Load Balancer (SLB) instance is not connected over the Internet. A value greater than 1 indicates the fixed bandwidth that is used to access the SLB instance over the Internet. Unit: Mbit/s.
+        /// <para>This parameter is valid only if the ConnectionType parameter is set to <c>slb</c>. The value 0 indicates that the Server Load Balancer (SLB) instance is not connected over the Internet. A value greater than 1 indicates the fixed bandwidth that is used to access the SLB instance over the Internet. Unit: Mbit/s.</para>
+        /// <para>Valid values: 0 to 5000.</para>
         /// 
-        /// Valid values: 0 to 5000.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("PubNetworkFlow")]
         [Validation(Required=false)]
         public string PubNetworkFlow { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// This parameter is obsolete.
+        /// <para>This parameter is obsolete.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>slb.s1.small</para>
         /// </summary>
         [NameInMap("PubSlbSpecification")]
         [Validation(Required=false)]
@@ -204,60 +245,79 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PubSlbSpecification { get; set; }
 
         /// <summary>
-        /// The region where the instance resides. Examples:
+        /// <para>The region where the instance resides. Examples:</para>
+        /// <list type="bullet">
+        /// <item><description><c>cn-hangzhou</c>: China (Hangzhou)</description></item>
+        /// <item><description><c>cn-beijing</c>: China (Beijing)</description></item>
+        /// <item><description><c>cn-shanghai</c>: China (Shanghai)</description></item>
+        /// <item><description><c>cn-zhangjiakou</c>: China (Zhangjiakou)</description></item>
+        /// <item><description><c>cn-shenzhen</c>: China (Shenzhen)</description></item>
+        /// </list>
         /// 
-        /// *   `cn-hangzhou`: China (Hangzhou)
-        /// *   `cn-beijing`: China (Beijing)
-        /// *   `cn-shanghai`: China (Shanghai)
-        /// *   `cn-zhangjiakou`: China (Zhangjiakou)
-        /// *   `cn-shenzhen`: China (Shenzhen)
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The extended request parameters in the JSON format.
+        /// <para>The extended request parameters in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. For the details of resource groups, see [View basic information of a resource group](https://help.aliyun.com/document_detail/457230.html).
+        /// <para>The ID of the resource group. For the details of resource groups, see <a href="https://help.aliyun.com/document_detail/457230.html">View basic information of a resource group</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekzcqmoay3dlyq</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The type of the security group to which the instance belongs. This parameter is valid only if the ConnectionType parameter is set to `single_eni`.
+        /// <para>The type of the security group to which the instance belongs. This parameter is valid only if the ConnectionType parameter is set to <c>single_eni</c>.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>enterprise</description></item>
+        /// <item><description>normal</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   enterprise
-        /// *   normal
+        /// <b>Example:</b>
+        /// <para>enterprise</para>
         /// </summary>
         [NameInMap("SecurityGroupType")]
         [Validation(Required=false)]
         public string SecurityGroupType { get; set; }
 
         /// <summary>
-        /// The tags to add to the resource. You can specify up to 20 tags.
+        /// <para>The tags to add to the resource. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateClusterRequestTag> Tag { get; set; }
         public class CreateClusterRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the resource.
+            /// <para>The key of tag N to add to the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>env</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the resource.
+            /// <para>The value of tag N to add to the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>prd</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -266,14 +326,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// <para>The ID of the vSwitch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-bp17opt4v18sto39k****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC).
+        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1t50e045b5g7i3p****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

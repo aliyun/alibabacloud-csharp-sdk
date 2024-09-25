@@ -10,44 +10,57 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddSecurityGroupRuleRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The description.
+        /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the gateway.
+        /// <para>The ID of the gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gw-c9bc5afd61014165bd58f621b491****</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The range of port numbers.
+        /// <para>The range of port numbers.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1/65535</para>
         /// </summary>
         [NameInMap("PortRange")]
         [Validation(Required=false)]
         public string PortRange { get; set; }
 
         /// <summary>
-        /// The ID of the security group.
+        /// <para>The ID of the security group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sg-wz929kxhcdpw9z8idqd8</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

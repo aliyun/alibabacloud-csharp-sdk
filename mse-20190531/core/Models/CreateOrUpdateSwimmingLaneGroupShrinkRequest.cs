@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateOrUpdateSwimmingLaneGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The IDs of applications. Separate application IDs with commas (,).
+        /// <para>The IDs of applications. Separate application IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hkhon1po62@c3df23522baa898,hkhon1po62@66e5235415730a5,hkhon1po62@958bba95910341f</para>
         /// </summary>
         [NameInMap("AppIds")]
         [Validation(Required=false)]
@@ -31,51 +38,74 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? CanaryModel { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable database canary release.
+        /// <para>Specifies whether to enable database canary release.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DbGrayEnable")]
         [Validation(Required=false)]
         public bool? DbGrayEnable { get; set; }
 
         /// <summary>
-        /// The ingress application.
+        /// <para>The ingress application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ingress</para>
         /// </summary>
         [NameInMap("EntryApp")]
         [Validation(Required=false)]
         public string EntryApp { get; set; }
 
         /// <summary>
-        /// The ID of the lane group. A value of -1 is used to create a lane group. A value greater than 0 is used to modify the specified lane group.
+        /// <para>The ID of the lane group. A value of -1 is used to create a lane group. A value greater than 0 is used to modify the specified lane group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>120</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The side for message filtering when the canary release for messaging feature is enabled.
+        /// <para>The side for message filtering when the canary release for messaging feature is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Server</para>
         /// </summary>
         [NameInMap("MessageQueueFilterSide")]
         [Validation(Required=false)]
         public string MessageQueueFilterSide { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable canary release for messaging.
+        /// <para>Specifies whether to enable canary release for messaging.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("MessageQueueGrayEnable")]
         [Validation(Required=false)]
         public bool? MessageQueueGrayEnable { get; set; }
 
         /// <summary>
-        /// The name.
+        /// <para>The name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>group1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The name of the Microservices Engine (MSE) namespace.
+        /// <para>The name of the Microservices Engine (MSE) namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -86,14 +116,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PathsShrink { get; set; }
 
         /// <summary>
-        /// Specifies whether to record request details.
+        /// <para>Specifies whether to record request details.</para>
         /// </summary>
         [NameInMap("RecordCanaryDetail")]
         [Validation(Required=false)]
         public bool? RecordCanaryDetail { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -104,7 +137,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RouteIdsShrink { get; set; }
 
         /// <summary>
-        /// The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.
+        /// <para>The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

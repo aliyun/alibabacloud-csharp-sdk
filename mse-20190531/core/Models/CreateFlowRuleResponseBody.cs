@@ -10,128 +10,153 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateFlowRuleResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateFlowRuleResponseBodyData Data { get; set; }
         public class CreateFlowRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// The application ID.
+            /// <para>The application ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hkhon1po62@54e1f42f3******</para>
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
             /// <summary>
-            /// The application name.
+            /// <para>The application name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>spring-cloud-a</para>
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
             /// <summary>
-            /// The throttling effect.
+            /// <para>The throttling effect.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>0</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <para>:</para>
+            /// <!-- -->
             /// 
-            /// *   0
+            /// <para>fast failure</para>
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>2</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <para>:</para>
+            /// <!-- -->
             /// 
-            ///     :
+            /// <para>in queue</para>
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            ///     fast failure
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   2
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     in queue
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ControlBehavior")]
             [Validation(Required=false)]
             public int? ControlBehavior { get; set; }
 
             /// <summary>
-            /// Indicates whether the rule is enabled.
+            /// <para>Indicates whether the rule is enabled.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   true
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   false
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// The ID.
+            /// <para>The ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.
+            /// <para>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>500</para>
             /// </summary>
             [NameInMap("MaxQueueingTimeMs")]
             [Validation(Required=false)]
             public int? MaxQueueingTimeMs { get; set; }
 
             /// <summary>
-            /// The namespace.
+            /// <para>The namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// <para>The region ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The name of the API resource.
+            /// <para>The name of the API resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>app</para>
             /// </summary>
             [NameInMap("Resource")]
             [Validation(Required=false)]
             public string Resource { get; set; }
 
             /// <summary>
-            /// The throttling threshold.
+            /// <para>The throttling threshold.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("Threshold")]
             [Validation(Required=false)]
@@ -140,39 +165,43 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>69AD2AA7-DB47-449B-941B-B14409DF****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   true
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   false
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

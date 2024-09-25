@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetKubernetesSourceResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetKubernetesSourceResponseBodyData> Data { get; set; }
         public class GetKubernetesSourceResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the ACK cluster.
+            /// <para>The ID of the ACK cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cbc1efca895a64af097ff00b26f3f****</para>
             /// </summary>
             [NameInMap("Cluster")]
             [Validation(Required=false)]
             public string Cluster { get; set; }
 
             /// <summary>
-            /// The name of the ACK cluster.
+            /// <para>The name of the ACK cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>k8s-demo</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -40,31 +49,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>You are not authorized to perform this operation.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1085A66C-DEF1-58EE-A0A4-31E00C9FC0D5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

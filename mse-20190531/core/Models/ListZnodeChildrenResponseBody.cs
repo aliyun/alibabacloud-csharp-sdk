@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListZnodeChildrenResponseBody : TeaModel {
         /// <summary>
-        /// The details of the data.
+        /// <para>The details of the data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListZnodeChildrenResponseBodyData> Data { get; set; }
         public class ListZnodeChildrenResponseBodyData : TeaModel {
             /// <summary>
-            /// The data of the node.
+            /// <para>The data of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cluster</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public string Data { get; set; }
 
             /// <summary>
-            /// Indicates whether the node information was returned. Valid values:
+            /// <para>Indicates whether the node information was returned. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: The node information was returned.</description></item>
+            /// <item><description><c>false</c>: The node information failed to be returned.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: The node information was returned.
-            /// *   `false`: The node information failed to be returned.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Dir")]
             [Validation(Required=false)]
             public bool? Dir { get; set; }
 
             /// <summary>
-            /// The name of the node.
+            /// <para>The name of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mse-bc1a29b0-160230875****-reg-center-0-1</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The path of the node.
+            /// <para>The path of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/zookeeper</para>
             /// </summary>
             [NameInMap("Path")]
             [Validation(Required=false)]
@@ -50,31 +63,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-100-000</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request is successfully processed.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BDB6CE0B-9CAF-41B5-9FEA-E08BE8E2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

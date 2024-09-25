@@ -10,84 +10,119 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetEngineNamepaceResponseBody : TeaModel {
         /// <summary>
-        /// The number of configurations.
+        /// <para>The number of configurations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ConfigCount")]
         [Validation(Required=false)]
         public string ConfigCount { get; set; }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-100-000</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>202</para>
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the namespace.
+        /// <para>The ID of the namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>public</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The description of the namespace.
+        /// <para>The description of the namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mytest</para>
         /// </summary>
         [NameInMap("NamespaceDesc")]
         [Validation(Required=false)]
         public string NamespaceDesc { get; set; }
 
         /// <summary>
-        /// The display name of the namespace.
+        /// <para>The display name of the namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>public</para>
         /// </summary>
         [NameInMap("NamespaceShowName")]
         [Validation(Required=false)]
         public string NamespaceShowName { get; set; }
 
         /// <summary>
-        /// The quota of configurations.
+        /// <para>The quota of configurations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Quota")]
         [Validation(Required=false)]
         public string Quota { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FA8F966F-420C-52F5-B49E-6ED7CCE02697</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The type of the namespace. Valid values:
+        /// <para>The type of the namespace. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: global configuration</description></item>
+        /// <item><description>1: default namespace</description></item>
+        /// <item><description>2: custom namespace</description></item>
+        /// </list>
         /// 
-        /// *   0: global configuration
-        /// *   1: default namespace
-        /// *   2: custom namespace
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

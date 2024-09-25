@@ -10,45 +10,61 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListSecurityGroupResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data structure.
+        /// <para>The data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListSecurityGroupResponseBodyData> Data { get; set; }
         public class ListSecurityGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the security group.
+            /// <para>The ID of the security group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sg-8vb8gsmrqyc35k645rk6</para>
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// The name of the security group.
+            /// <para>The name of the security group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sg2</para>
             /// </summary>
             [NameInMap("SecurityGroupName")]
             [Validation(Required=false)]
             public string SecurityGroupName { get; set; }
 
             /// <summary>
-            /// The type of the security group. Valid values:
+            /// <para>The type of the security group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>normal: basic security group</description></item>
+            /// <item><description>enterprise: advanced security group For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Advanced security groups</a>.</description></item>
+            /// </list>
             /// 
-            /// *   normal: basic security group
-            /// *   enterprise: advanced security group For more information, see [Advanced security groups](https://help.aliyun.com/document_detail/120621.html).
+            /// <b>Example:</b>
+            /// <para>enterprise</para>
             /// </summary>
             [NameInMap("SecurityGroupType")]
             [Validation(Required=false)]
             public string SecurityGroupType { get; set; }
 
             /// <summary>
-            /// The ID of the virtual private cloud (VPC).
+            /// <para>The ID of the virtual private cloud (VPC).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-bp1b</para>
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -57,31 +73,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>316F5F64-F73D-42DC-8632-01E308B6****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

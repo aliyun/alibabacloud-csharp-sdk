@@ -10,77 +10,104 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class PullServicesResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<PullServicesResponseBodyData> Data { get; set; }
         public class PullServicesResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the group.
+            /// <para>The name of the group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
             /// <summary>
-            /// The namespace.
+            /// <para>The namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The alias of the namespace.
+            /// <para>The alias of the namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>public</para>
             /// </summary>
             [NameInMap("NamespaceShowName")]
             [Validation(Required=false)]
             public string NamespaceShowName { get; set; }
 
             /// <summary>
-            /// The information about services.
+            /// <para>The information about services.</para>
             /// </summary>
             [NameInMap("Services")]
             [Validation(Required=false)]
             public List<PullServicesResponseBodyDataServices> Services { get; set; }
             public class PullServicesResponseBodyDataServices : TeaModel {
                 /// <summary>
-                /// The name of the group.
+                /// <para>The name of the group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The name of the service.
+                /// <para>The name of the service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The namespace.
+                /// <para>The namespace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>public</para>
                 /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// The ID of the service source.
+                /// <para>The ID of the service source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("SourceId")]
                 [Validation(Required=false)]
                 public string SourceId { get; set; }
 
                 /// <summary>
-                /// The type of the service source.
+                /// <para>The type of the service source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MSE</para>
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
@@ -91,31 +118,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>You are not authorized to perform this operation. Action: mse:PullServices, Resource: acs:mse:cn-shenzhen:1228932054837788:*</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC0A99B9-8BA3-5FE3-8FE7-D7C719CF7BD2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

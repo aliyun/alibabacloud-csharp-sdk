@@ -10,91 +10,127 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetBlackWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. A value of 200 indicates that the request is successful.
+        /// <para>The status code returned. A value of 200 indicates that the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data of the node.
+        /// <para>The data of the node.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBlackWhiteListResponseBodyData Data { get; set; }
         public class GetBlackWhiteListResponseBodyData : TeaModel {
             /// <summary>
-            /// The content of the blacklist.
+            /// <para>The content of the blacklist.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>text</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// The ID of the gateway.
+            /// <para>The ID of the gateway.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }
 
             /// <summary>
-            /// The unique ID of the gateway.
+            /// <para>The unique ID of the gateway.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>gw-7ea3da97b96543e19f6c597c****</para>
             /// </summary>
             [NameInMap("GatewayUniqueId")]
             [Validation(Required=false)]
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// The creation time.
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-01-07T10:07:57.000+0000</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The modification time.
+            /// <para>The modification time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-01-07T10:07:57.000+0000</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The ID.
+            /// <para>The ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>275</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// Indicates whether the whitelist is enabled.
+            /// <para>Indicates whether the whitelist is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsWhite")]
             [Validation(Required=false)]
             public bool? IsWhite { get; set; }
 
             /// <summary>
-            /// The ID of the resource.
+            /// <para>The ID of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public long? ResourceId { get; set; }
 
             /// <summary>
-            /// The type of a resource.
+            /// <para>The type of a resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>GATEWAY</para>
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The status of the blacklist or whitelist.
+            /// <para>The status of the blacklist or whitelist.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>on</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The type.
+            /// <para>The type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IP</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -103,31 +139,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>You are not authorized to perform this operation.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>89CBC928-4F57-51FA-A413-EE0F4CD87200</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

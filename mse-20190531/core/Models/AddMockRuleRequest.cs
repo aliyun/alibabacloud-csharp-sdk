@@ -10,109 +10,141 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddMockRuleRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the custom application.
+        /// <para>The ID of the custom application.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{\&quot;appName\&quot;:\&quot;provide\&quot;,\&quot;appId\&quot;:\&quot;bst8l6o735@f6d8aaf6e56e67d\&quot;}]</para>
         /// </summary>
         [NameInMap("ConsumerAppIds")]
         [Validation(Required=false)]
         public string ConsumerAppIds { get; set; }
 
         /// <summary>
-        /// The items in the recycle bin.
+        /// <para>The items in the recycle bin.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("DubboMockItems")]
         [Validation(Required=false)]
         public string DubboMockItems { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the alert rule. Valid values:
+        /// <para>Specifies whether to enable the alert rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: enables the alert rule.</description></item>
+        /// <item><description><c>false</c>: disables the alert rule.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: enables the alert rule.
-        /// *   `false`: disables the alert rule.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// The description.
+        /// <para>The description.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("ExtraJson")]
         [Validation(Required=false)]
         public string ExtraJson { get; set; }
 
         /// <summary>
-        /// The response time (RT) threshold of slow calls. Valid values:
+        /// <para>The response time (RT) threshold of slow calls. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>\- 15: 15 ms</description></item>
+        /// <item><description>\- 30: 30 ms</description></item>
+        /// <item><description>\- 60: 60 ms</description></item>
+        /// <item><description>\- 120: 120 ms</description></item>
+        /// </list>
         /// 
-        /// *   \\- 15: 15 ms
-        /// *   \\- 30: 30 ms
-        /// *   \\- 60: 60 ms
-        /// *   \\- 120: 120 ms
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MockType")]
         [Validation(Required=false)]
         public long? MockType { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>agent-auto-test-sc</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the service provider application.
+        /// <para>The ID of the service provider application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dcqtkuhnc4@66e5235415****</para>
         /// </summary>
         [NameInMap("ProviderAppId")]
         [Validation(Required=false)]
         public string ProviderAppId { get; set; }
 
         /// <summary>
-        /// The name of the service provider application.
+        /// <para>The name of the service provider application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo-cartservice</para>
         /// </summary>
         [NameInMap("ProviderAppName")]
         [Validation(Required=false)]
         public string ProviderAppName { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The input parameters. The JSON format is supported.
+        /// <para>The input parameters. The JSON format is supported.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("ScMockItems")]
         [Validation(Required=false)]
         public string ScMockItems { get; set; }
 
         /// <summary>
-        /// The rule source.
+        /// <para>The rule source.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>edasmsc</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

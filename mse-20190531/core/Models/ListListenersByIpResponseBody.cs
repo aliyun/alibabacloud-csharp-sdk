@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListListenersByIpResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MSE-100-000</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>202</para>
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// The information about listeners.
+        /// <para>The information about listeners.</para>
         /// </summary>
         [NameInMap("Listeners")]
         [Validation(Required=false)]
         public List<ListListenersByIpResponseBodyListeners> Listeners { get; set; }
         public class ListListenersByIpResponseBodyListeners : TeaModel {
             /// <summary>
-            /// The ID of the data.
+            /// <para>The ID of the data.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test.yaml</para>
             /// </summary>
             [NameInMap("DataId")]
             [Validation(Required=false)]
             public string DataId { get; set; }
 
             /// <summary>
-            /// The group.
+            /// <para>The group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("Group")]
             [Validation(Required=false)]
             public string Group { get; set; }
 
             /// <summary>
-            /// The verification string.
+            /// <para>The verification string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>23sdfdf</para>
             /// </summary>
             [NameInMap("Md5")]
             [Validation(Required=false)]
@@ -58,45 +73,64 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request was successfully processed.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54973C90-F379-4372-9AA5-053A3F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of returned instances.
+        /// <para>The total number of returned instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

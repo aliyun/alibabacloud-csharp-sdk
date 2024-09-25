@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateGatewayIsolationRuleResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>608</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public long? Data { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>94B12406-E44D-57C9-BF93-A8B35BFF****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

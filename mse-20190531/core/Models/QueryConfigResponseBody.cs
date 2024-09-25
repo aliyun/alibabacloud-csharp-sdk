@@ -10,96 +10,130 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryConfigResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryConfigResponseBodyData Data { get; set; }
         public class QueryConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether Simple Authentication and Security Layer (SASL) forced identity authentication is enabled for the ZooKeeper instance.
+            /// <para>Indicates whether Simple Authentication and Security Layer (SASL) forced identity authentication is enabled for the ZooKeeper instance.</para>
             /// </summary>
             [NameInMap("AuthEnabled")]
             [Validation(Required=false)]
             public bool? AuthEnabled { get; set; }
 
             /// <summary>
-            /// A reserved parameter.
+            /// <para>A reserved parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>none</para>
             /// </summary>
             [NameInMap("AutopurgePurgeInterval")]
             [Validation(Required=false)]
             public string AutopurgePurgeInterval { get; set; }
 
             /// <summary>
-            /// A reserved parameter.
+            /// <para>A reserved parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>none</para>
             /// </summary>
             [NameInMap("AutopurgeSnapRetainCount")]
             [Validation(Required=false)]
             public string AutopurgeSnapRetainCount { get; set; }
 
             /// <summary>
-            /// The name of the instance.
+            /// <para>The name of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>name</para>
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// Indicates whether RAM authentication of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
+            /// <para>Indicates whether RAM authentication of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: enabled.</description></item>
+            /// <item><description><c>false</c>: disabled.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: enabled.
-            /// *   `false`: disabled.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ConfigAuthEnabled")]
             [Validation(Required=false)]
             public bool? ConfigAuthEnabled { get; set; }
 
             /// <summary>
-            /// Indicates whether RAM authentication is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
+            /// <para>Indicates whether RAM authentication is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: supported.</description></item>
+            /// <item><description><c>false</c>: not supported.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: supported.
-            /// *   `false`: not supported.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ConfigAuthSupported")]
             [Validation(Required=false)]
             public bool? ConfigAuthSupported { get; set; }
 
             /// <summary>
-            /// The maximum size of contents in a configuration. Unit: KB.
+            /// <para>The maximum size of contents in a configuration. Unit: KB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("ConfigContentLimit")]
             [Validation(Required=false)]
             public long? ConfigContentLimit { get; set; }
 
             /// <summary>
-            /// Indicates whether configuration encryption of a configuration center is enabled by the instance. This parameter is valid for Nacos instances. Valid values:
+            /// <para>Indicates whether configuration encryption of a configuration center is enabled by the instance. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: enabled.</description></item>
+            /// <item><description><c>false</c>: disabled.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: enabled.
-            /// *   `false`: disabled.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ConfigSecretEnabled")]
             [Validation(Required=false)]
             public bool? ConfigSecretEnabled { get; set; }
 
             /// <summary>
-            /// Indicates whether configuration encryption of a configuration center is supported by the instance. This parameter is valid for Nacos instances. Valid values:
+            /// <para>Indicates whether configuration encryption of a configuration center is supported by the instance. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: supported.</description></item>
+            /// <item><description><c>false</c>: not supported.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: supported.
-            /// *   `false`: not supported.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ConfigSecretSupported")]
             [Validation(Required=false)]
             public bool? ConfigSecretSupported { get; set; }
 
             /// <summary>
-            /// Indicates whether the Nacos open source console is enabled.
+            /// <para>Indicates whether the Nacos open source console is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ConsoleUIEnabled")]
             [Validation(Required=false)]
@@ -110,91 +144,126 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Enable4lw { get; set; }
 
             /// <summary>
-            /// Indicates whether access port 8761 was enabled for Eureka. If this port is disabled, applications cannot use the Eureka protocol for service registration and discovery.
+            /// <para>Indicates whether access port 8761 was enabled for Eureka. If this port is disabled, applications cannot use the Eureka protocol for service registration and discovery.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("EurekaSupported")]
             [Validation(Required=false)]
             public bool? EurekaSupported { get; set; }
 
             /// <summary>
-            /// Indicates whether the time to live (TTL) configuration is enabled. This parameter is valid for ZooKeeper instances.
+            /// <para>Indicates whether the time to live (TTL) configuration is enabled. This parameter is valid for ZooKeeper instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ExtendedTypesEnable")]
             [Validation(Required=false)]
             public bool? ExtendedTypesEnable { get; set; }
 
             /// <summary>
-            /// The maximum connection duration of the instance. Unit: seconds. This parameter is valid for ZooKeeper instances.
+            /// <para>The maximum connection duration of the instance. Unit: seconds. This parameter is valid for ZooKeeper instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("InitLimit")]
             [Validation(Required=false)]
             public string InitLimit { get; set; }
 
             /// <summary>
-            /// The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. Unit: bytes.
+            /// <para>The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("JuteMaxbuffer")]
             [Validation(Required=false)]
             public string JuteMaxbuffer { get; set; }
 
             /// <summary>
-            /// A reserved parameter.
+            /// <para>A reserved parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>none</para>
             /// </summary>
             [NameInMap("JvmFlagsCustom")]
             [Validation(Required=false)]
             public string JvmFlagsCustom { get; set; }
 
             /// <summary>
-            /// Indicates whether Mesh Configuration Protocol (MCP) is enabled. This parameter is valid for Nacos instances. Valid values:
+            /// <para>Indicates whether Mesh Configuration Protocol (MCP) is enabled. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: enabled.</description></item>
+            /// <item><description><c>false</c>: disabled.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: enabled.
-            /// *   `false`: disabled.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("MCPEnabled")]
             [Validation(Required=false)]
             public bool? MCPEnabled { get; set; }
 
             /// <summary>
-            /// Indicates whether MCP is supported. This parameter is valid for Nacos instances. Valid values:
+            /// <para>Indicates whether MCP is supported. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: supported.</description></item>
+            /// <item><description><c>false</c>: not supported.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: supported.
-            /// *   `false`: not supported.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("MCPSupported")]
             [Validation(Required=false)]
             public bool? MCPSupported { get; set; }
 
             /// <summary>
-            /// The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\\
-            /// If this parameter is set to 0, no limits are imposed on the number of connections.
+            /// <para>The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\
+            /// If this parameter is set to 0, no limits are imposed on the number of connections.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("MaxClientCnxns")]
             [Validation(Required=false)]
             public string MaxClientCnxns { get; set; }
 
             /// <summary>
-            /// The maximum timeout period. This parameter is valid for ZooKeeper instances.
+            /// <para>The maximum timeout period. This parameter is valid for ZooKeeper instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-1</para>
             /// </summary>
             [NameInMap("MaxSessionTimeout")]
             [Validation(Required=false)]
             public string MaxSessionTimeout { get; set; }
 
             /// <summary>
-            /// The minimum timeout period. This parameter is valid for ZooKeeper instances.
+            /// <para>The minimum timeout period. This parameter is valid for ZooKeeper instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-1</para>
             /// </summary>
             [NameInMap("MinSessionTimeout")]
             [Validation(Required=false)]
             public string MinSessionTimeout { get; set; }
 
             /// <summary>
-            /// The runtime configuration of the Nacos instance.
+            /// <para>The runtime configuration of the Nacos instance.</para>
             /// </summary>
             [NameInMap("NacosRunningEnv")]
             [Validation(Required=false)]
             public QueryConfigResponseBodyDataNacosRunningEnv NacosRunningEnv { get; set; }
             public class QueryConfigResponseBodyDataNacosRunningEnv : TeaModel {
                 /// <summary>
-                /// Indicates whether empty list protection is enabled.
+                /// <para>Indicates whether empty list protection is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("emptyProtect")]
                 [Validation(Required=false)]
@@ -203,92 +272,130 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// Indicates whether RAM authentication of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
+            /// <para>Indicates whether RAM authentication of a registry is enabled. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: enabled.</description></item>
+            /// <item><description><c>false</c>: disabled.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: enabled.
-            /// *   `false`: disabled.
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("NamingAuthEnabled")]
             [Validation(Required=false)]
             public bool? NamingAuthEnabled { get; set; }
 
             /// <summary>
-            /// Indicates whether RAM authentication of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
+            /// <para>Indicates whether RAM authentication of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: supported.</description></item>
+            /// <item><description><c>false</c>: not supported.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: supported.
-            /// *   `false`: not supported.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("NamingAuthSupported")]
             [Validation(Required=false)]
             public bool? NamingAuthSupported { get; set; }
 
             /// <summary>
-            /// Indicates whether service creation is supported for the instance. This parameter is valid for Nacos instances. Valid values:
+            /// <para>Indicates whether service creation is supported for the instance. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: supported.</description></item>
+            /// <item><description><c>false</c>: not supported.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: supported.
-            /// *   `false`: not supported.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("NamingCreateServiceSupported")]
             [Validation(Required=false)]
             public bool? NamingCreateServiceSupported { get; set; }
 
             /// <summary>
-            /// Indicates whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:
+            /// <para>Indicates whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: enabled.</description></item>
+            /// <item><description><c>false</c>: disabled.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: enabled.
-            /// *   `false`: disabled.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("OpenSuperAcl")]
             [Validation(Required=false)]
             public bool? OpenSuperAcl { get; set; }
 
             /// <summary>
-            /// The password that corresponds to the username. This parameter is valid only if OpenSuperAcl is set to true.
+            /// <para>The password that corresponds to the username. This parameter is valid only if OpenSuperAcl is set to true.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>password</para>
             /// </summary>
             [NameInMap("PassWord")]
             [Validation(Required=false)]
             public string PassWord { get; set; }
 
             /// <summary>
-            /// Indicates whether the instance was restarted and new configurations have taken effect. Valid values:
+            /// <para>Indicates whether the instance was restarted and new configurations have taken effect. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: The restart was successful.</description></item>
+            /// <item><description><c>false</c>: The restart failed.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: The restart was successful.
-            /// *   `false`: The restart failed.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("RestartFlag")]
             [Validation(Required=false)]
             public bool? RestartFlag { get; set; }
 
             /// <summary>
-            /// The frequency for generating snapshots. This parameter is valid for ZooKeeper instances.
+            /// <para>The frequency for generating snapshots. This parameter is valid for ZooKeeper instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100000</para>
             /// </summary>
             [NameInMap("SnapshotCount")]
             [Validation(Required=false)]
             public string SnapshotCount { get; set; }
 
             /// <summary>
-            /// The connection timeout period of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
+            /// <para>The connection timeout period of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("SyncLimit")]
             [Validation(Required=false)]
             public string SyncLimit { get; set; }
 
             /// <summary>
-            /// MSE Nacos supports TLS transmission link encryption since version 2.1.2.1. Nacos clients must be upgraded to version 2.2.1 or later. After TLS is enabled, the system performance will decrease by about 10%. You must evaluate the system capacity. For more information about the relevant operations, see Nacos TLS transmission encryption.
+            /// <para>MSE Nacos supports TLS transmission link encryption since version 2.1.2.1. Nacos clients must be upgraded to version 2.2.1 or later. After TLS is enabled, the system performance will decrease by about 10%. You must evaluate the system capacity. For more information about the relevant operations, see Nacos TLS transmission encryption.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("TLSEnabled")]
             [Validation(Required=false)]
             public bool? TLSEnabled { get; set; }
 
             /// <summary>
-            /// The time unit of the engine. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.
+            /// <para>The time unit of the engine. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2000</para>
             /// </summary>
             [NameInMap("TickTime")]
             [Validation(Required=false)]
             public string TickTime { get; set; }
 
             /// <summary>
-            /// The username of the user. This parameter is valid only if OpenSuperAcl is set to true.
+            /// <para>The username of the user. This parameter is valid only if OpenSuperAcl is set to true.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>name</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -297,31 +404,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request was successfully processed.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8BD1E58D-0755-42AC-A599-E6B55112EC53</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

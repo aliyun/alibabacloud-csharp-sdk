@@ -10,79 +10,109 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateServiceSourceShrinkRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese.
-        /// *   en: English.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The address.
+        /// <para>The address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c9ad2a0717032427e920754e25b49e3b5</para>
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
         /// <summary>
-        /// The ID of the gateway.
+        /// <para>The ID of the gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>429</para>
         /// </summary>
         [NameInMap("GatewayId")]
         [Validation(Required=false)]
         public long? GatewayId { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// <para>The unique ID of the gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-cdd1bb9bfb8341e9805f931a3ba1f4c6</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The ID of the service source.
+        /// <para>The ID of the service source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>63</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The configurations of Ingress resources.
+        /// <para>The configurations of Ingress resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("IngressOptionsRequest")]
         [Validation(Required=false)]
         public string IngressOptionsRequestShrink { get; set; }
 
         /// <summary>
-        /// The name.
+        /// <para>The name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>istio</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// An array of service root paths.
+        /// <para>An array of service root paths.</para>
         /// </summary>
         [NameInMap("PathList")]
         [Validation(Required=false)]
         public string PathListShrink { get; set; }
 
         /// <summary>
-        /// The service source. Valid values:
+        /// <para>The service source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>K8s: ACK cluster.</description></item>
+        /// <item><description>MSE: Nacos instance.</description></item>
+        /// </list>
         /// 
-        /// *   K8s: ACK cluster.
-        /// *   MSE: Nacos instance.
+        /// <b>Example:</b>
+        /// <para>K8s</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// The type of the service source. Valid values:
+        /// <para>The type of the service source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>K8s: ACK cluster.</description></item>
+        /// <item><description>NACOS: Nacos instance.</description></item>
+        /// </list>
         /// 
-        /// *   K8s: ACK cluster.
-        /// *   NACOS: Nacos instance.
+        /// <b>Example:</b>
+        /// <para>K8s</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

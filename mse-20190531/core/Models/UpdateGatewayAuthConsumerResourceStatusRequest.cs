@@ -10,49 +10,62 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayAuthConsumerResourceStatusRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the consumer.
+        /// <para>The ID of the consumer.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("ConsumerId")]
         [Validation(Required=false)]
         public long? ConsumerId { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// <para>The unique ID of the gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gw-2a99625886d54722be94d92e9a69****</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The list of IDs of the authorized resources that a user wants to update.
+        /// <para>The list of IDs of the authorized resources that a user wants to update.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1,2,3,4</para>
         /// </summary>
         [NameInMap("IdList")]
         [Validation(Required=false)]
         public string IdList { get; set; }
 
         /// <summary>
-        /// The resource authorization status. Valid values:
+        /// <para>The resource authorization status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enabled</description></item>
+        /// <item><description>false: disabled</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   true: enabled
-        /// *   false: disabled
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ResourceStatus")]
         [Validation(Required=false)]

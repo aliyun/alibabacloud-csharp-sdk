@@ -10,28 +10,35 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayRouteAuthRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The authentication configurations.
-        /// 
-        /// This parameter is required.
+        /// <para>The authentication configurations.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AuthJSON")]
         [Validation(Required=false)]
         public UpdateGatewayRouteAuthRequestAuthJSON AuthJSON { get; set; }
         public class UpdateGatewayRouteAuthRequestAuthJSON : TeaModel {
             /// <summary>
-            /// The authentication type. If an empty string is passed, no authentication type is available. Valid values:
+            /// <para>The authentication type. If an empty string is passed, no authentication type is available. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>JWT</description></item>
+            /// </list>
             /// 
-            /// *   JWT
+            /// <b>Example:</b>
+            /// <para>JWT</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -40,25 +47,32 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The gateway ID.
+        /// <para>The gateway ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>102</para>
         /// </summary>
         [NameInMap("GatewayId")]
         [Validation(Required=false)]
         public long? GatewayId { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// <para>The unique ID of the gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gw-0adf3ad751284cc69fcf9669fba*****</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The route ID.
+        /// <para>The route ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>109</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

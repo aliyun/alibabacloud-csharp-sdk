@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteGatewayServiceVersionRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// <para>The unique ID of the gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-b6988bd16920479d9104e1729f97****</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The ID of the service.
+        /// <para>The ID of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>777</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public long? ServiceId { get; set; }
 
         /// <summary>
-        /// The version of the service.
+        /// <para>The version of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;name\&quot;:\&quot;app\&quot;,\&quot;labels\&quot;:[{\&quot;key\&quot;:\&quot;app\&quot;,\&quot;value\&quot;:\&quot;demo-server\&quot;}]}</para>
         /// </summary>
         [NameInMap("ServiceVersion")]
         [Validation(Required=false)]

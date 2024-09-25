@@ -10,56 +10,79 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddMigrationTaskRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The type of the instance. Valid values:
+        /// <para>The type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Nacos-Ans</description></item>
+        /// <item><description>ZooKeeper</description></item>
+        /// <item><description>Eureka</description></item>
+        /// </list>
         /// 
-        /// *   Nacos-Ans
-        /// *   ZooKeeper
-        /// *   Eureka
+        /// <b>Example:</b>
+        /// <para>Nacos-Ans</para>
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The endpoint of the source instance node.
+        /// <para>The endpoint of the source instance node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.1.1:8848</para>
         /// </summary>
         [NameInMap("OriginInstanceAddress")]
         [Validation(Required=false)]
         public string OriginInstanceAddress { get; set; }
 
         /// <summary>
-        /// The name of the source instance.
+        /// <para>The name of the source instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Source instance</para>
         /// </summary>
         [NameInMap("OriginInstanceName")]
         [Validation(Required=false)]
         public string OriginInstanceName { get; set; }
 
         /// <summary>
-        /// The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.
+        /// <para>The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>namesapceId1,namesapceId2</para>
         /// </summary>
         [NameInMap("OriginInstanceNamespace")]
         [Validation(Required=false)]
         public string OriginInstanceNamespace { get; set; }
 
         /// <summary>
-        /// The description.
+        /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a description.</para>
         /// </summary>
         [NameInMap("ProjectDesc")]
         [Validation(Required=false)]
         public string ProjectDesc { get; set; }
 
         /// <summary>
-        /// The extended request parameters in the JSON format.
+        /// <para>The extended request parameters in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
@@ -70,21 +93,30 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SyncType { get; set; }
 
         /// <summary>
-        /// The name of the destination instance.
+        /// <para>The name of the destination instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Destination instance</para>
         /// </summary>
         [NameInMap("TargetClusterName")]
         [Validation(Required=false)]
         public string TargetClusterName { get; set; }
 
         /// <summary>
-        /// The URL of the destination instance.
+        /// <para>The URL of the destination instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-66*****-nacos-ans.mse.aliyuncs.com:8848</para>
         /// </summary>
         [NameInMap("TargetClusterUrl")]
         [Validation(Required=false)]
         public string TargetClusterUrl { get; set; }
 
         /// <summary>
-        /// The ID of the destination instance.
+        /// <para>The ID of the destination instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-cn-ud82*****</para>
         /// </summary>
         [NameInMap("TargetInstanceId")]
         [Validation(Required=false)]

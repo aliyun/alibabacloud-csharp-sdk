@@ -10,107 +10,149 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListEurekaInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The details of the data.
+        /// <para>The details of the data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListEurekaInstancesResponseBodyData> Data { get; set; }
         public class ListEurekaInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the application.
+            /// <para>The name of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CONTACTINFO</para>
             /// </summary>
             [NameInMap("App")]
             [Validation(Required=false)]
             public string App { get; set; }
 
             /// <summary>
-            /// The timeout period of the instance.\\
-            /// After the specified timeout period expires, the service is unavailable by default and is deleted.
+            /// <para>The timeout period of the instance.\
+            /// After the specified timeout period expires, the service is unavailable by default and is deleted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>90</para>
             /// </summary>
             [NameInMap("DurationInSecs")]
             [Validation(Required=false)]
             public int? DurationInSecs { get; set; }
 
             /// <summary>
-            /// The URL of the homepage.
+            /// <para>The URL of the homepage.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://30.5.XX.XX:8091/">http://30.5.XX.XX:8091/</a></para>
             /// </summary>
             [NameInMap("HomePageUrl")]
             [Validation(Required=false)]
             public string HomePageUrl { get; set; }
 
             /// <summary>
-            /// The hostname.
+            /// <para>The hostname.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30.5.XX.XX</para>
             /// </summary>
             [NameInMap("HostName")]
             [Validation(Required=false)]
             public string HostName { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// <para>The ID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>L-PC1A6A28-****.hz.ali.com:contactinfo:8091</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The IP address.
+            /// <para>The IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30.5.XX.XX</para>
             /// </summary>
             [NameInMap("IpAddr")]
             [Validation(Required=false)]
             public string IpAddr { get; set; }
 
             /// <summary>
-            /// The time when the instance was last modified.
+            /// <para>The time when the instance was last modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20201009115543</para>
             /// </summary>
             [NameInMap("LastDirtyTimestamp")]
             [Validation(Required=false)]
             public long? LastDirtyTimestamp { get; set; }
 
             /// <summary>
-            /// The time when the instance heartbeat was last checked.
+            /// <para>The time when the instance heartbeat was last checked.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20201010071203</para>
             /// </summary>
             [NameInMap("LastUpdatedTimestamp")]
             [Validation(Required=false)]
             public long? LastUpdatedTimestamp { get; set; }
 
             /// <summary>
-            /// The metadata.
+            /// <para>The metadata.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[string]</para>
             /// </summary>
             [NameInMap("Metadata")]
             [Validation(Required=false)]
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// The service port number.
+            /// <para>The service port number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8091</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// The maximum interval between two heartbeat checks after a heartbeat check times out.\\
-            /// Default value: 10.
+            /// <para>The maximum interval between two heartbeat checks after a heartbeat check times out.\
+            /// Default value: 10.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("RenewalIntervalInSecs")]
             [Validation(Required=false)]
             public int? RenewalIntervalInSecs { get; set; }
 
             /// <summary>
-            /// The security port.
+            /// <para>The security port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>443</para>
             /// </summary>
             [NameInMap("SecurePort")]
             [Validation(Required=false)]
             public int? SecurePort { get; set; }
 
             /// <summary>
-            /// The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.
+            /// <para>The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1/1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The virtual IP address (VIP).
+            /// <para>The virtual IP address (VIP).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>contactinfo</para>
             /// </summary>
             [NameInMap("VipAddress")]
             [Validation(Required=false)]
@@ -119,59 +161,84 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-100-000</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>202</para>
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request is successfully processed.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>316F5F64-F73D-42DC-8632-01E308B6****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of returned instances.
+        /// <para>The total number of returned instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateGatewayFlowRuleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the rule.
+        /// <para>The ID of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>608</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public long? Data { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>72FC625E-9629-591B-9C01-3F0BFDAB****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

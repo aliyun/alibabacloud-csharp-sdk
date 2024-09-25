@@ -10,165 +10,232 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetGatewayDomainDetailResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>403</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetGatewayDomainDetailResponseBodyData Data { get; set; }
         public class GetGatewayDomainDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// The start time.
+            /// <para>The start time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-04-01 02:35:12</para>
             /// </summary>
             [NameInMap("AfterDate")]
             [Validation(Required=false)]
             public long? AfterDate { get; set; }
 
             /// <summary>
-            /// The algorithm.
+            /// <para>The algorithm.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>RSA</para>
             /// </summary>
             [NameInMap("Algorithm")]
             [Validation(Required=false)]
             public string Algorithm { get; set; }
 
             /// <summary>
-            /// The expiration time.
+            /// <para>The expiration time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-04-01 02:35:12</para>
             /// </summary>
             [NameInMap("BeforeDate")]
             [Validation(Required=false)]
             public long? BeforeDate { get; set; }
 
             /// <summary>
-            /// The ID of the certificate.
+            /// <para>The ID of the certificate.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>234-cn-hangzhou</para>
             /// </summary>
             [NameInMap("CertIdentifier")]
             [Validation(Required=false)]
             public string CertIdentifier { get; set; }
 
             /// <summary>
-            /// The name of the certificate.
+            /// <para>The name of the certificate.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("CertName")]
             [Validation(Required=false)]
             public string CertName { get; set; }
 
             /// <summary>
-            /// The public domain name.
+            /// <para>The public domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>name</para>
             /// </summary>
             [NameInMap("CommonName")]
             [Validation(Required=false)]
             public string CommonName { get; set; }
 
             /// <summary>
-            /// The ID of the gateway.
+            /// <para>The ID of the gateway.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }
 
             /// <summary>
-            /// The unique ID of the gateway.
+            /// <para>The unique ID of the gateway.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>gw-7ea3da97b96543e19f6c597cd4a9****</para>
             /// </summary>
             [NameInMap("GatewayUniqueId")]
             [Validation(Required=false)]
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// The start time.
+            /// <para>The start time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-04-01 02:35:12</para>
             /// </summary>
             [NameInMap("GmtAfter")]
             [Validation(Required=false)]
             public string GmtAfter { get; set; }
 
             /// <summary>
-            /// The expiration time.
+            /// <para>The expiration time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-04-01 02:35:12</para>
             /// </summary>
             [NameInMap("GmtBefore")]
             [Validation(Required=false)]
             public string GmtBefore { get; set; }
 
             /// <summary>
-            /// The creation time.
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-01-07T10:07:57.000+0000</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The update time.
+            /// <para>The update time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-01-07T10:07:57.000+0000</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// Indicates whether `HTTP/2` is enabled.
+            /// <para>Indicates whether <c>HTTP/2</c> is enabled.</para>
+            /// <list type="bullet">
+            /// <item><description><c>open</c>: <c>HTTP/2</c> is enabled.</description></item>
+            /// <item><description><c>close</c>: <c>HTTP/2</c> is disabled.</description></item>
+            /// <item><description><c>globalConfig</c>: Global configurations are used.</description></item>
+            /// </list>
             /// 
-            /// *   `open`: `HTTP/2` is enabled.
-            /// *   `close`: `HTTP/2` is disabled.
-            /// *   `globalConfig`: Global configurations are used.
+            /// <b>Example:</b>
+            /// <para>close</para>
             /// </summary>
             [NameInMap("Http2")]
             [Validation(Required=false)]
             public string Http2 { get; set; }
 
             /// <summary>
-            /// The ID.
+            /// <para>The ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The issuer.
+            /// <para>The issuer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Istio</para>
             /// </summary>
             [NameInMap("Issuer")]
             [Validation(Required=false)]
             public string Issuer { get; set; }
 
             /// <summary>
-            /// Indicates whether HTTPS is forcibly used.
+            /// <para>Indicates whether HTTPS is forcibly used.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("MustHttps")]
             [Validation(Required=false)]
             public bool? MustHttps { get; set; }
 
             /// <summary>
-            /// The domain name.
+            /// <para>The domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test.com</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The protocol of the gateway.
+            /// <para>The protocol of the gateway.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HTTP</para>
             /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
             /// <summary>
-            /// The name of the extended field.
+            /// <para>The name of the extended field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test.com</para>
             /// </summary>
             [NameInMap("Sans")]
             [Validation(Required=false)]
             public string Sans { get; set; }
 
             /// <summary>
-            /// The maximum version of Transport Layer Security (TLS).
+            /// <para>The maximum version of Transport Layer Security (TLS).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TLS 1.3</para>
             /// </summary>
             [NameInMap("TlsMax")]
             [Validation(Required=false)]
             public string TlsMax { get; set; }
 
             /// <summary>
-            /// The minimum version of TLS.
+            /// <para>The minimum version of TLS.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TLS 1.0</para>
             /// </summary>
             [NameInMap("TlsMin")]
             [Validation(Required=false)]
@@ -177,31 +244,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>You are not authorized to perform this operation.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>88B83302-CD88-54D3-8DF2-208BFDC73F0D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

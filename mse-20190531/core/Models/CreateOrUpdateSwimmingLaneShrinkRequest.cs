@@ -10,28 +10,42 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateOrUpdateSwimmingLaneShrinkRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
+        /// <para>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the lane.
+        /// <para>Specifies whether to enable the lane.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.
+        /// <para>Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("EnableRules")]
         [Validation(Required=false)]
         public bool? EnableRules { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// The JSON string.
+        /// <para>The JSON string.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("EntryRule")]
         [Validation(Required=false)]
@@ -42,6 +56,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRules> EntryRules { get; set; }
         public class CreateOrUpdateSwimmingLaneShrinkRequestEntryRules : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AND</para>
+            /// </summary>
             [NameInMap("Condition")]
             [Validation(Required=false)]
             public string Condition { get; set; }
@@ -103,40 +121,54 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.
+        /// <para>The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.</para>
         /// </summary>
         [NameInMap("GatewaySwimmingLaneRouteJson")]
         [Validation(Required=false)]
         public string GatewaySwimmingLaneRouteJsonShrink { get; set; }
 
         /// <summary>
-        /// The language of the response. Valid values:****
+        /// <para>The language of the response. Valid values:****</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh-CN</b>: Chinese</description></item>
+        /// <item><description><b>en-US</b>: English</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Default value: <b>zh-CN</b>.</para>
+        /// </remarks>
         /// 
-        /// *   **zh-CN**: Chinese
-        /// *   **en-US**: English
-        /// 
-        /// > Default value: **zh-CN**.
+        /// <b>Example:</b>
+        /// <para>115</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.
+        /// <para>The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-1</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The name of the lane.
+        /// <para>The name of the lane.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Test lane</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
@@ -146,14 +178,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? PathIndependentPercentageEnable { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The tag.
+        /// <para>The tag.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gray</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

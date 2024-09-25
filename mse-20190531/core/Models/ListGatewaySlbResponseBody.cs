@@ -10,105 +10,147 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewaySlbResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data entries returned.
+        /// <para>The data entries returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListGatewaySlbResponseBodyData> Data { get; set; }
         public class ListGatewaySlbResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether the edit operation is supported.
+            /// <para>Indicates whether the edit operation is supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("EditEnable")]
             [Validation(Required=false)]
             public bool? EditEnable { get; set; }
 
             /// <summary>
-            /// The ID of the gateway.
+            /// <para>The ID of the gateway.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// The mode of the SLB instance.
+            /// <para>The mode of the SLB instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>UserSelect</para>
             /// </summary>
             [NameInMap("GatewaySlbMode")]
             [Validation(Required=false)]
             public string GatewaySlbMode { get; set; }
 
             /// <summary>
-            /// The association status.
+            /// <para>The association status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Ready</para>
             /// </summary>
             [NameInMap("GatewaySlbStatus")]
             [Validation(Required=false)]
             public string GatewaySlbStatus { get; set; }
 
             /// <summary>
-            /// The creation time.
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-01-14 14:39:16</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The port number of the HTTP virtual service group.
+            /// <para>The port number of the HTTP virtual service group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("HttpPort")]
             [Validation(Required=false)]
             public int? HttpPort { get; set; }
 
             /// <summary>
-            /// The port number of the HTTPS virtual service group.
+            /// <para>The port number of the HTTPS virtual service group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>443</para>
             /// </summary>
             [NameInMap("HttpsPort")]
             [Validation(Required=false)]
             public int? HttpsPort { get; set; }
 
             /// <summary>
-            /// The ID of the HTTPS virtual service group.
+            /// <para>The ID of the HTTPS virtual service group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>353</para>
             /// </summary>
             [NameInMap("HttpsVServerGroupId")]
             [Validation(Required=false)]
             public string HttpsVServerGroupId { get; set; }
 
             /// <summary>
-            /// The ID.
+            /// <para>The ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ID</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The service weight.
+            /// <para>The service weight.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("ServiceWeight")]
             [Validation(Required=false)]
             public int? ServiceWeight { get; set; }
 
             /// <summary>
-            /// The ID of the SLB instance.
+            /// <para>The ID of the SLB instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>lb-bp1kmnli3hdpreptw2ah3</para>
             /// </summary>
             [NameInMap("SlbId")]
             [Validation(Required=false)]
             public string SlbId { get; set; }
 
             /// <summary>
-            /// The IP address of the SLB instance.
+            /// <para>The IP address of the SLB instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>121.199.XX.XX</para>
             /// </summary>
             [NameInMap("SlbIp")]
             [Validation(Required=false)]
             public string SlbIp { get; set; }
 
             /// <summary>
-            /// The port number of the SLB instance.
+            /// <para>The port number of the SLB instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80,443</para>
             /// </summary>
             [NameInMap("SlbPort")]
             [Validation(Required=false)]
@@ -119,21 +161,30 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string SlbType { get; set; }
 
             /// <summary>
-            /// The description of the status.
+            /// <para>The description of the status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Associating</para>
             /// </summary>
             [NameInMap("StatusDesc")]
             [Validation(Required=false)]
             public string StatusDesc { get; set; }
 
             /// <summary>
-            /// The type.
+            /// <para>The type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PUB_NET</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The ID of the HTTP virtual service group.
+            /// <para>The ID of the HTTP virtual service group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>353</para>
             /// </summary>
             [NameInMap("VServerGroupId")]
             [Validation(Required=false)]
@@ -168,31 +219,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request is successfully processed.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EAB345F4-3AC3-560C-B653-65717703****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,19 +10,29 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListAnsServiceClustersRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
-        /// <summary>
-        /// The ID of the MSE cluster.
+        /// <term><b>Obsolete</b></term>
         /// 
-        /// >  The MSE cluster is different from the cluster of the Nacos service.
+        /// <summary>
+        /// <para>The ID of the MSE cluster.</para>
+        /// <remarks>
+        /// <para> The MSE cluster is different from the cluster of the Nacos service.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-09k1q110q01</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -30,53 +40,72 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The alias of the cluster.
+        /// <para>The alias of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-7413****</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The name of the group.
+        /// <para>The name of the group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DEFAULT_GROUP</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse_prepaid_public_cn-tl32a6****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the namespace.
+        /// <para>The ID of the namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12233****</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The name of the service.
+        /// <para>The name of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nacos.test.3</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]

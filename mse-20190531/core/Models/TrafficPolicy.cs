@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public string Path { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0s</para>
+                    /// </summary>
                     [NameInMap("TTL")]
                     [Validation(Required=false)]
                     public string TTL { get; set; }
@@ -45,6 +49,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>RANDOM</para>
+            /// </summary>
             [NameInMap("LoadbalancerType")]
             [Validation(Required=false)]
             public string LoadbalancerType { get; set; }
@@ -72,7 +80,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Sni { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SIMPLE</para>
             /// </summary>
             [NameInMap("TlsMode")]
             [Validation(Required=false)]

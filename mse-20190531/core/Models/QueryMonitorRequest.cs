@@ -10,85 +10,104 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryMonitorRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The timestamp when the monitoring ends.
+        /// <para>The timestamp when the monitoring ends.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1666678376</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-cn-****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The metric type. The following metric types are supported:
+        /// <para>The metric type. The following metric types are supported:</para>
+        /// <para>[Basic system metrics]</para>
+        /// <list type="bullet">
+        /// <item><description>cpuUsage</description></item>
+        /// <item><description>memoryUsage</description></item>
+        /// <item><description>diskUsage</description></item>
+        /// <item><description>gcCount</description></item>
+        /// <item><description>gcTime</description></item>
+        /// </list>
+        /// <para>[Nacos registry]</para>
+        /// <list type="bullet">
+        /// <item><description>serviceCount</description></item>
+        /// <item><description>writeCostTime</description></item>
+        /// <item><description>readCostTime</description></item>
+        /// <item><description>TPS regCenterTps</description></item>
+        /// <item><description>QPS regCenterQps</description></item>
+        /// </list>
+        /// <para>[Nacos configuration center]</para>
+        /// <list type="bullet">
+        /// <item><description>publish</description></item>
+        /// <item><description>getConfig</description></item>
+        /// </list>
+        /// <para>[zookeeper]</para>
+        /// <list type="bullet">
+        /// <item><description>TPS zk_TpsCount</description></item>
+        /// <item><description>QPS zk_QpsCount</description></item>
+        /// <item><description>zookeeper_AvgRequestLatency</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// [Basic system metrics]
-        /// 
-        /// *   cpuUsage
-        /// *   memoryUsage
-        /// *   diskUsage
-        /// *   gcCount
-        /// *   gcTime
-        /// 
-        /// [Nacos registry]
-        /// 
-        /// *   serviceCount
-        /// *   writeCostTime
-        /// *   readCostTime
-        /// *   TPS regCenterTps
-        /// *   QPS regCenterQps
-        /// 
-        /// [Nacos configuration center]
-        /// 
-        /// *   publish
-        /// *   getConfig
-        /// 
-        /// [zookeeper]
-        /// 
-        /// *   TPS zk_TpsCount
-        /// *   QPS zk_QpsCount
-        /// *   zookeeper_AvgRequestLatency
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>regCenterQps</para>
         /// </summary>
         [NameInMap("MonitorType")]
         [Validation(Required=false)]
         public string MonitorType { get; set; }
 
         /// <summary>
-        /// The extended request parameters in the JSON format.
+        /// <para>The extended request parameters in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// The timestamp when the monitoring starts.
+        /// <para>The timestamp when the monitoring starts.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1666678376</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// The interval between data points. Unit: seconds.
+        /// <para>The interval between data points. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
         /// </summary>
         [NameInMap("Step")]
         [Validation(Required=false)]

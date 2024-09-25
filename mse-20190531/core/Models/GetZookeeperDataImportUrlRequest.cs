@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetZookeeperDataImportUrlRequest : TeaModel {
         /// <summary>
-        /// RestResult
+        /// <para>RestResult</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zip</para>
         /// </summary>
         [NameInMap("ContentType")]
         [Validation(Required=false)]
         public string ContentType { get; set; }
 
         /// <summary>
-        /// The type of the file.
+        /// <para>The type of the file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse_prepaid_public_cn-zvp2xzzkk06</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
