@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedInstanceListRequest : TeaModel {
+        [NameInMap("AssetType")]
+        [Validation(Required=false)]
+        public string AssetType { get; set; }
+
+        [NameInMap("CspmStatus")]
+        [Validation(Required=false)]
+        public bool? CspmStatus { get; set; }
+
         /// <summary>
         /// <para>The number of the page to return.</para>
         /// 

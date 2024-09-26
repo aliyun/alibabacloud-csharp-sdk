@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? ExposedComponentCount { get; set; }
 
+        [NameInMap("ExposedDdsCount")]
+        [Validation(Required=false)]
+        public int? ExposedDdsCount { get; set; }
+
+        [NameInMap("ExposedEcsCount")]
+        [Validation(Required=false)]
+        public int? ExposedEcsCount { get; set; }
+
         /// <summary>
         /// <para>The total number of servers that are exposed on the Internet.</para>
         /// 
@@ -48,6 +56,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("ExposedIpCount")]
         [Validation(Required=false)]
         public int? ExposedIpCount { get; set; }
+
+        [NameInMap("ExposedKvstoreCount")]
+        [Validation(Required=false)]
+        public int? ExposedKvstoreCount { get; set; }
 
         /// <summary>
         /// <para>The total number of medium-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</para>
@@ -78,6 +90,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("ExposedPortCount")]
         [Validation(Required=false)]
         public int? ExposedPortCount { get; set; }
+
+        [NameInMap("ExposedRdsCount")]
+        [Validation(Required=false)]
+        public int? ExposedRdsCount { get; set; }
 
         /// <summary>
         /// <para>The total number of system keys that are detected on your servers and are exposed on the Internet.</para>

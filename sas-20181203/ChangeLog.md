@@ -1,3 +1,11 @@
+2024-09-26 Version: 3.1.1
+- Update API DescribeExposedInstanceDetail: update response param.
+- Update API DescribeExposedInstanceList: add param AssetType.
+- Update API DescribeExposedInstanceList: add param CspmStatus.
+- Update API DescribeExposedInstanceList: update response param.
+- Update API DescribeExposedStatistics: update response param.
+
+
 2024-09-24 Version: 3.1.0
 - Support API AddPublishBatch.
 - Support API BatchCreateMaliciousNote.

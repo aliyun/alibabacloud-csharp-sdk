@@ -91,6 +91,48 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("CspmRiskList")]
+            [Validation(Required=false)]
+            public List<DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList> CspmRiskList { get; set; }
+            public class DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList : TeaModel {
+                [NameInMap("AssetSubType")]
+                [Validation(Required=false)]
+                public int? AssetSubType { get; set; }
+
+                [NameInMap("AssetSubTypeName")]
+                [Validation(Required=false)]
+                public string AssetSubTypeName { get; set; }
+
+                [NameInMap("AssetType")]
+                [Validation(Required=false)]
+                public int? AssetType { get; set; }
+
+                [NameInMap("AssetTypeName")]
+                [Validation(Required=false)]
+                public string AssetTypeName { get; set; }
+
+                [NameInMap("CheckName")]
+                [Validation(Required=false)]
+                public string CheckName { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+                [NameInMap("RiskLevel")]
+                [Validation(Required=false)]
+                public string RiskLevel { get; set; }
+
+                [NameInMap("Vendor")]
+                [Validation(Required=false)]
+                public int? Vendor { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The server component that is exposed on the Internet.</para>
             /// 

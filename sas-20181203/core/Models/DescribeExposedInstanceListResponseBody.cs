@@ -26,6 +26,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? AsapVulCount { get; set; }
 
+            [NameInMap("AssetType")]
+            [Validation(Required=false)]
+            public int? AssetType { get; set; }
+
+            [NameInMap("CloudAssetInfo")]
+            [Validation(Required=false)]
+            public string CloudAssetInfo { get; set; }
+
+            [NameInMap("CspmAlarmCount")]
+            [Validation(Required=false)]
+            public int? CspmAlarmCount { get; set; }
+
             /// <summary>
             /// <para>The total number of servers that are exposed on the Internet.</para>
             /// 

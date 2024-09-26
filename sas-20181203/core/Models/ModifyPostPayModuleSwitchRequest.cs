@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;VUL&quot;:1，&quot;CSPM&quot;:0}</para>
+        /// <para>{&quot;VUL&quot;:1,&quot;CSPM&quot;:0}</para>
         /// </summary>
         [NameInMap("PostPayModuleSwitch")]
         [Validation(Required=false)]
