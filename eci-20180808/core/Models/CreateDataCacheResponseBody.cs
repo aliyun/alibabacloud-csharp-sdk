@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class CreateDataCacheResponseBody : TeaModel {
         /// <summary>
-        /// The DataCache ID.
+        /// <para>The DataCache ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>edc-bp15l4vvys94oo******</para>
         /// </summary>
         [NameInMap("DataCacheId")]
         [Validation(Required=false)]
         public string DataCacheId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D81A4A13-6DCC-4579-AC62-90A6C3EC7BBC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

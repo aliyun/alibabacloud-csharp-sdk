@@ -10,93 +10,121 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class DescribeContainerGroupStatusResponseBody : TeaModel {
         /// <summary>
-        /// The collection of the statuses of the container groups.
+        /// <para>The collection of the statuses of the container groups.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeContainerGroupStatusResponseBodyData> Data { get; set; }
         public class DescribeContainerGroupStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// Annotations that are added to the container groups.
+            /// <para>Annotations that are added to the container groups.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;{\&quot;tenancy.x-k8s.io/namespace\&quot;:\&quot;redis\&quot;}&quot;</para>
             /// </summary>
             [NameInMap("Annotations")]
             [Validation(Required=false)]
             public string Annotations { get; set; }
 
             /// <summary>
-            /// The ID of the container group.
+            /// <para>The ID of the container group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eci-bp1jrgfqqy54kg5hc****</para>
             /// </summary>
             [NameInMap("ContainerGroupId")]
             [Validation(Required=false)]
             public string ContainerGroupId { get; set; }
 
             /// <summary>
-            /// The name of the container group.
+            /// <para>The name of the container group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>nginx</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The namespace in which the container group resides.
+            /// <para>The namespace in which the container group resides.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The status of the container group.
+            /// <para>The status of the container group.</para>
             /// </summary>
             [NameInMap("PodStatus")]
             [Validation(Required=false)]
             public DescribeContainerGroupStatusResponseBodyDataPodStatus PodStatus { get; set; }
             public class DescribeContainerGroupStatusResponseBodyDataPodStatus : TeaModel {
                 /// <summary>
-                /// The conditions of the container group.
+                /// <para>The conditions of the container group.</para>
                 /// </summary>
                 [NameInMap("Conditions")]
                 [Validation(Required=false)]
                 public List<DescribeContainerGroupStatusResponseBodyDataPodStatusConditions> Conditions { get; set; }
                 public class DescribeContainerGroupStatusResponseBodyDataPodStatusConditions : TeaModel {
                     /// <summary>
-                    /// The message about the event.
+                    /// <para>The message about the event.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Completed</para>
                     /// </summary>
                     [NameInMap("Message")]
                     [Validation(Required=false)]
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// The reason for the transition into the current status of the event.
+                    /// <para>The reason for the transition into the current status of the event.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Completed</para>
                     /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
                     public string Reason { get; set; }
 
                     /// <summary>
-                    /// The time when the status last changed.
+                    /// <para>The time when the status last changed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2021-05-12T07:02:47Z</para>
                     /// </summary>
                     [NameInMap("lastTransitionTime")]
                     [Validation(Required=false)]
                     public string LastTransitionTime { get; set; }
 
                     /// <summary>
-                    /// The status of the condition.
+                    /// <para>The status of the condition.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>True</para>
                     /// </summary>
                     [NameInMap("status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// The type of the condition. Valid values:
+                    /// <para>The type of the condition. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>PodReadyToStartContainers</description></item>
+                    /// <item><description>Initialized</description></item>
+                    /// <item><description>Ready</description></item>
+                    /// <item><description>ContainersReady</description></item>
+                    /// <item><description>PodScheduled</description></item>
+                    /// <item><description>ContainerHasSufficientDisk</description></item>
+                    /// <item><description>ContainerInstanceCreated</description></item>
+                    /// <item><description>Unschedulable</description></item>
+                    /// </list>
                     /// 
-                    /// *   PodReadyToStartContainers
-                    /// *   Initialized
-                    /// *   Ready
-                    /// *   ContainersReady
-                    /// *   PodScheduled
-                    /// *   ContainerHasSufficientDisk
-                    /// *   ContainerInstanceCreated
-                    /// *   Unschedulable
+                    /// <b>Example:</b>
+                    /// <para>Ready</para>
                     /// </summary>
                     [NameInMap("type")]
                     [Validation(Required=false)]
@@ -105,42 +133,51 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The statuses about the containers.
+                /// <para>The statuses about the containers.</para>
                 /// </summary>
                 [NameInMap("ContainerStatuses")]
                 [Validation(Required=false)]
                 public List<DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses> ContainerStatuses { get; set; }
                 public class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses : TeaModel {
                     /// <summary>
-                    /// The image of the container.
+                    /// <para>The image of the container.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>registry-vpc.cn-zhangjiakou.aliyuncs.com/eci_open/ubuntu:18.04</para>
                     /// </summary>
                     [NameInMap("Image")]
                     [Validation(Required=false)]
                     public string Image { get; set; }
 
                     /// <summary>
-                    /// The image ID.
+                    /// <para>The image ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>registry-vpc.cn-zhangjiakou.aliyuncs.com/eci_open/ubuntu@sha256:134c7fe821b9d359490cd009ce7ca322453f4f2d018623f849e580a89a685e5d</para>
                     /// </summary>
                     [NameInMap("ImageID")]
                     [Validation(Required=false)]
                     public string ImageID { get; set; }
 
                     /// <summary>
-                    /// The last status of the container.
+                    /// <para>The last status of the container.</para>
                     /// </summary>
                     [NameInMap("LastState")]
                     [Validation(Required=false)]
                     public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState LastState { get; set; }
                     public class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState : TeaModel {
                         /// <summary>
-                        /// The container is created and running.
+                        /// <para>The container is created and running.</para>
                         /// </summary>
                         [NameInMap("Running")]
                         [Validation(Required=false)]
                         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning Running { get; set; }
                         public class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning : TeaModel {
                             /// <summary>
-                            /// The time when the container started to run.
+                            /// <para>The time when the container started to run.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>2021-05-23T20:49:31Z</para>
                             /// </summary>
                             [NameInMap("StartedAtstartedAt")]
                             [Validation(Required=false)]
@@ -149,56 +186,77 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                         }
 
                         /// <summary>
-                        /// The container is terminated and exits after a successful or failed running.
+                        /// <para>The container is terminated and exits after a successful or failed running.</para>
                         /// </summary>
                         [NameInMap("Terminated")]
                         [Validation(Required=false)]
                         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated Terminated { get; set; }
                         public class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated : TeaModel {
                             /// <summary>
-                            /// The container ID.
+                            /// <para>The container ID.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>containerd://3ff993933bea366c4719e43a1b067d89bc7f01f1f573981659a44ff17a******</para>
                             /// </summary>
                             [NameInMap("ContainerID")]
                             [Validation(Required=false)]
                             public string ContainerID { get; set; }
 
                             /// <summary>
-                            /// The exit code.
+                            /// <para>The exit code.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("ExitCode")]
                             [Validation(Required=false)]
                             public int? ExitCode { get; set; }
 
                             /// <summary>
-                            /// The time when the container ends running.
+                            /// <para>The time when the container ends running.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>2021-05-23T20:49:31Z</para>
                             /// </summary>
                             [NameInMap("FinishedAt")]
                             [Validation(Required=false)]
                             public string FinishedAt { get; set; }
 
                             /// <summary>
-                            /// The message about the event.
+                            /// <para>The message about the event.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Completed</para>
                             /// </summary>
                             [NameInMap("Message")]
                             [Validation(Required=false)]
                             public string Message { get; set; }
 
                             /// <summary>
-                            /// The reason for the transition into the current status of the event.
+                            /// <para>The reason for the transition into the current status of the event.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Completed</para>
                             /// </summary>
                             [NameInMap("Reason")]
                             [Validation(Required=false)]
                             public string Reason { get; set; }
 
                             /// <summary>
-                            /// The signal code.
+                            /// <para>The signal code.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>1</para>
                             /// </summary>
                             [NameInMap("Signal")]
                             [Validation(Required=false)]
                             public int? Signal { get; set; }
 
                             /// <summary>
-                            /// The time when the container started to run.
+                            /// <para>The time when the container started to run.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>2021-05-12T07:02:52Z</para>
                             /// </summary>
                             [NameInMap("StartedAt")]
                             [Validation(Required=false)]
@@ -207,21 +265,27 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                         }
 
                         /// <summary>
-                        /// The container is waiting for being created.
+                        /// <para>The container is waiting for being created.</para>
                         /// </summary>
                         [NameInMap("Waiting")]
                         [Validation(Required=false)]
                         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting Waiting { get; set; }
                         public class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting : TeaModel {
                             /// <summary>
-                            /// The message about the event.
+                            /// <para>The message about the event.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Back-off</para>
                             /// </summary>
                             [NameInMap("Message")]
                             [Validation(Required=false)]
                             public string Message { get; set; }
 
                             /// <summary>
-                            /// The reason for the transition into the current status of the event.
+                            /// <para>The reason for the transition into the current status of the event.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Started</para>
                             /// </summary>
                             [NameInMap("Reason")]
                             [Validation(Required=false)]
@@ -232,53 +296,69 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     }
 
                     /// <summary>
-                    /// The name of the container.
+                    /// <para>The name of the container.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ubuntu</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the container is ready.
+                    /// <para>Indicates whether the container is ready.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("Ready")]
                     [Validation(Required=false)]
                     public bool? Ready { get; set; }
 
                     /// <summary>
-                    /// The number of times that the container restarted.
+                    /// <para>The number of times that the container restarted.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("RestartCount")]
                     [Validation(Required=false)]
                     public int? RestartCount { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the container is started.
+                    /// <para>Indicates whether the container is started.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("Started")]
                     [Validation(Required=false)]
                     public bool? Started { get; set; }
 
                     /// <summary>
-                    /// The status of the container. Valid values:
-                    /// 
-                    /// *   Waiting
-                    /// *   Running
-                    /// *   Terminated
+                    /// <para>The status of the container. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Waiting</description></item>
+                    /// <item><description>Running</description></item>
+                    /// <item><description>Terminated</description></item>
+                    /// </list>
                     /// </summary>
                     [NameInMap("State")]
                     [Validation(Required=false)]
                     public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState State { get; set; }
                     public class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState : TeaModel {
                         /// <summary>
-                        /// The container is created and running.
+                        /// <para>The container is created and running.</para>
                         /// </summary>
                         [NameInMap("Running")]
                         [Validation(Required=false)]
                         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning Running { get; set; }
                         public class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning : TeaModel {
                             /// <summary>
-                            /// The time when the container started to run.
+                            /// <para>The time when the container started to run.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>2021-05-23T20:49:31Z</para>
                             /// </summary>
                             [NameInMap("StartedAtstartedAt")]
                             [Validation(Required=false)]
@@ -287,56 +367,77 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                         }
 
                         /// <summary>
-                        /// The container is terminated and exits after a successful or failed running.
+                        /// <para>The container is terminated and exits after a successful or failed running.</para>
                         /// </summary>
                         [NameInMap("Terminated")]
                         [Validation(Required=false)]
                         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated Terminated { get; set; }
                         public class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated : TeaModel {
                             /// <summary>
-                            /// The container ID.
+                            /// <para>The container ID.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>containerd://3ff993933bea366c4719e43a1b067d89bc7f01f1f573981659a44ff17a******</para>
                             /// </summary>
                             [NameInMap("ContainerID")]
                             [Validation(Required=false)]
                             public string ContainerID { get; set; }
 
                             /// <summary>
-                            /// The exit code.
+                            /// <para>The exit code.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("ExitCode")]
                             [Validation(Required=false)]
                             public int? ExitCode { get; set; }
 
                             /// <summary>
-                            /// The time when the container ends running.
+                            /// <para>The time when the container ends running.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>2021-05-23T20:55:31Z</para>
                             /// </summary>
                             [NameInMap("FinishedAt")]
                             [Validation(Required=false)]
                             public string FinishedAt { get; set; }
 
                             /// <summary>
-                            /// The message about the event.
+                            /// <para>The message about the event.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Completed</para>
                             /// </summary>
                             [NameInMap("Message")]
                             [Validation(Required=false)]
                             public string Message { get; set; }
 
                             /// <summary>
-                            /// The reason for the transition into the current status of the event.
+                            /// <para>The reason for the transition into the current status of the event.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Completed</para>
                             /// </summary>
                             [NameInMap("Reason")]
                             [Validation(Required=false)]
                             public string Reason { get; set; }
 
                             /// <summary>
-                            /// The signal code.
+                            /// <para>The signal code.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>1</para>
                             /// </summary>
                             [NameInMap("Signal")]
                             [Validation(Required=false)]
                             public int? Signal { get; set; }
 
                             /// <summary>
-                            /// The time when the container started to run.
+                            /// <para>The time when the container started to run.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>2021-05-23T20:49:31Z</para>
                             /// </summary>
                             [NameInMap("StartedAt")]
                             [Validation(Required=false)]
@@ -345,21 +446,27 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                         }
 
                         /// <summary>
-                        /// The container is waiting for being created.
+                        /// <para>The container is waiting for being created.</para>
                         /// </summary>
                         [NameInMap("Waiting")]
                         [Validation(Required=false)]
                         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting Waiting { get; set; }
                         public class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting : TeaModel {
                             /// <summary>
-                            /// The message about the event.
+                            /// <para>The message about the event.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Back-off</para>
                             /// </summary>
                             [NameInMap("Message")]
                             [Validation(Required=false)]
                             public string Message { get; set; }
 
                             /// <summary>
-                            /// The reason for the transition into the current status of the event.
+                            /// <para>The reason for the transition into the current status of the event.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Started</para>
                             /// </summary>
                             [NameInMap("Reason")]
                             [Validation(Required=false)]
@@ -372,35 +479,47 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The IP address of the host.
+                /// <para>The IP address of the host.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.XX.XX</para>
                 /// </summary>
                 [NameInMap("HostIp")]
                 [Validation(Required=false)]
                 public string HostIp { get; set; }
 
                 /// <summary>
-                /// The lifecycle phase of the container group.
+                /// <para>The lifecycle phase of the container group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Running</para>
                 /// </summary>
                 [NameInMap("Phase")]
                 [Validation(Required=false)]
                 public string Phase { get; set; }
 
                 /// <summary>
-                /// The IP address of the container group.
+                /// <para>The IP address of the container group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.XX.XX</para>
                 /// </summary>
                 [NameInMap("PodIp")]
                 [Validation(Required=false)]
                 public string PodIp { get; set; }
 
                 /// <summary>
-                /// The IP addresses of the container groups.
+                /// <para>The IP addresses of the container groups.</para>
                 /// </summary>
                 [NameInMap("PodIps")]
                 [Validation(Required=false)]
                 public List<DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps> PodIps { get; set; }
                 public class DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps : TeaModel {
                     /// <summary>
-                    /// The IP address of the container group.
+                    /// <para>The IP address of the container group.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>192.168.XX.XX</para>
                     /// </summary>
                     [NameInMap("Ip")]
                     [Validation(Required=false)]
@@ -409,14 +528,20 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The quality of service (QoS) of the container group.
+                /// <para>The quality of service (QoS) of the container group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Guaranteed</para>
                 /// </summary>
                 [NameInMap("QosClass")]
                 [Validation(Required=false)]
                 public string QosClass { get; set; }
 
                 /// <summary>
-                /// The time when the container started to run.
+                /// <para>The time when the container started to run.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-05-12T07:02:47Z</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
@@ -425,14 +550,20 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The status of the container group.
+            /// <para>The status of the container group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The universally unique identifier (UUID) of the container group, which is similar to the unique identifier (UID) of the Kubernetes pod in terms of the concept and usage.
+            /// <para>The universally unique identifier (UUID) of the container group, which is similar to the unique identifier (UID) of the Kubernetes pod in terms of the concept and usage.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>78ee0657-987g-b8b2-1f507dic4****</para>
             /// </summary>
             [NameInMap("uuid")]
             [Validation(Required=false)]
@@ -441,21 +572,30 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d78f2dd8-5979-42fe-****-b16db43be5bc</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1340C38D-6189-54D1-86F6-7D5ECF3E0088</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

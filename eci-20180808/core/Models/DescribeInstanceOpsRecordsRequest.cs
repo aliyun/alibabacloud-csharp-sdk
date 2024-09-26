@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class DescribeInstanceOpsRecordsRequest : TeaModel {
         /// <summary>
-        /// The ID of the elastic container instance.
+        /// <para>The ID of the elastic container instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>eci-bp1dvysdafbh00t7****</para>
         /// </summary>
         [NameInMap("ContainerGroupId")]
         [Validation(Required=false)]
         public string ContainerGroupId { get; set; }
 
         /// <summary>
-        /// The type of the O\\&M task. Valid values:
+        /// <para>The type of the O\&amp;M task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>coredump</description></item>
+        /// <item><description>tcpdump</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   coredump
-        /// *   tcpdump
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>coredump</para>
         /// </summary>
         [NameInMap("OpsType")]
         [Validation(Required=false)]
@@ -39,9 +44,11 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

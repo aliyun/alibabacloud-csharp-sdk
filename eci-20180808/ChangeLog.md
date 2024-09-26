@@ -1,3 +1,8 @@
+2024-09-26 Version: 1.1.2
+- Update API CreateImageCache: add param OsType.
+- Update API DescribeContainerGroups: update response param.
+
+
 2024-06-28 Version: 1.1.1
 - Update API DeleteContainerGroup: add param Force.
 

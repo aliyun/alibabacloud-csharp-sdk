@@ -10,35 +10,41 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The queried regions.
+        /// <para>The queried regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// The recommended zones. Recommended zones are zones that have relatively sufficient resources in the current region.
+            /// <para>The recommended zones. Recommended zones are zones that have relatively sufficient resources in the current region.</para>
             /// </summary>
             [NameInMap("RecommendZones")]
             [Validation(Required=false)]
             public List<string> RecommendZones { get; set; }
 
             /// <summary>
-            /// The endpoint for the region.
+            /// <para>The endpoint for the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eci.aliyuncs.com</para>
             /// </summary>
             [NameInMap("RegionEndpoint")]
             [Validation(Required=false)]
             public string RegionEndpoint { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// <para>The region ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The queried zones.
+            /// <para>The queried zones.</para>
             /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
@@ -47,7 +53,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>89945DD3-9072-47D0-A318-353284CFC7B3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

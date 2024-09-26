@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class ExecContainerCommandRequest : TeaModel {
         /// <summary>
-        /// The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.\\
-        /// The strings must be in the JSON format. Example: `["/bin/sh", "-c", "ls -a"]`.
+        /// <para>The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.\
+        /// The strings must be in the JSON format. Example: <c>[&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;ls -a&quot;]</c>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;ls -a&quot;]</para>
         /// </summary>
         [NameInMap("Command")]
         [Validation(Required=false)]
         public string Command { get; set; }
 
         /// <summary>
-        /// The ID of the elastic container instance.
+        /// <para>The ID of the elastic container instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>eci-2zebxkiifulhl****</para>
         /// </summary>
         [NameInMap("ContainerGroupId")]
         [Validation(Required=false)]
         public string ContainerGroupId { get; set; }
 
         /// <summary>
-        /// The name of the container.
+        /// <para>The name of the container.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>nginx</para>
         /// </summary>
         [NameInMap("ContainerName")]
         [Validation(Required=false)]
@@ -46,9 +52,11 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -63,23 +71,32 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to read the commands from standard input (stdin). Default value: true.
+        /// <para>Specifies whether to read the commands from standard input (stdin). Default value: true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Stdin")]
         [Validation(Required=false)]
         public bool? Stdin { get; set; }
 
         /// <summary>
-        /// Specifies whether to immediately run the command and synchronously return the result. Default value: false.\\
-        /// If this parameter is set to true, TTY must be set to false. Command cannot be set to `/bin/bash`.
+        /// <para>Specifies whether to immediately run the command and synchronously return the result. Default value: false.\
+        /// If this parameter is set to true, TTY must be set to false. Command cannot be set to <c>/bin/bash</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Sync")]
         [Validation(Required=false)]
         public bool? Sync { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable interaction. Default value: false.\\
-        /// If the Command parameter is set to `/bin/bash`, set this parameter to true.
+        /// <para>Specifies whether to enable interaction. Default value: false.\
+        /// If the Command parameter is set to <c>/bin/bash</c>, set this parameter to true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("TTY")]
         [Validation(Required=false)]

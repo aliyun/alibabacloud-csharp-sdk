@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class DeleteVirtualNodeRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency of requests](https://help.aliyun.com/document_detail/25693.html).
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency of requests</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -25,9 +28,11 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the virtual node.
+        /// <para>The region ID of the virtual node.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -42,9 +47,11 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual node.
+        /// <para>The ID of the virtual node.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vnd-2ze960zkdqrldeaw****</para>
         /// </summary>
         [NameInMap("VirtualNodeId")]
         [Validation(Required=false)]

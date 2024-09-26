@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class UpdateVirtualNodeResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>89945DD3-9072-47D0-A318-353284CFC7B3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

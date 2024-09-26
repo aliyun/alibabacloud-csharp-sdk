@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class DescribeAvailableResourceResponseBody : TeaModel {
         /// <summary>
-        /// The zones in which the specified resources are available.
+        /// <para>The zones in which the specified resources are available.</para>
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone> AvailableZone { get; set; }
             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone : TeaModel {
                 /// <summary>
-                /// The resources that are available in the specified zone.
+                /// <para>The resources that are available in the specified zone.</para>
                 /// </summary>
                 [NameInMap("AvailableResources")]
                 [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource> AvailableResource { get; set; }
                     public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource : TeaModel {
                         /// <summary>
-                        /// The information about the resources that are available in the zones.
+                        /// <para>The information about the resources that are available in the zones.</para>
                         /// </summary>
                         [NameInMap("SupportedResources")]
                         [Validation(Required=false)]
@@ -43,22 +43,30 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource> SupportedResource { get; set; }
                             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource : TeaModel {
                                 /// <summary>
-                                /// The category of resources based on stock status. Valid values:
+                                /// <para>The category of resources based on stock status. Valid values:</para>
+                                /// <list type="bullet">
+                                /// <item><description>WithStock: Resources are in sufficient stock.</description></item>
+                                /// <item><description>ClosedWithStock: Resources are insufficient. We recommend that you use instance types that are in sufficient stock.</description></item>
+                                /// <item><description>WithoutStock: Resources are sold out and will be replenished. We recommend that you use instance types that are in sufficient stock.</description></item>
+                                /// <item><description>ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use instance types that are in sufficient stock.</description></item>
+                                /// </list>
                                 /// 
-                                /// *   WithStock: Resources are in sufficient stock.
-                                /// *   ClosedWithStock: Resources are insufficient. We recommend that you use instance types that are in sufficient stock.
-                                /// *   WithoutStock: Resources are sold out and will be replenished. We recommend that you use instance types that are in sufficient stock.
-                                /// *   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use instance types that are in sufficient stock.
+                                /// <b>Example:</b>
+                                /// <para>WithStock</para>
                                 /// </summary>
                                 [NameInMap("StatusCategory")]
                                 [Validation(Required=false)]
                                 public string StatusCategory { get; set; }
 
                                 /// <summary>
-                                /// The ECS instance types or instance families that are available in the zones.
+                                /// <para>The ECS instance types or instance families that are available in the zones.</para>
+                                /// <list type="bullet">
+                                /// <item><description>If the return value of the Type parameter is InstanceTypeFamily, this parameter indicates instance families that are returned.</description></item>
+                                /// <item><description>If the return value of the Type parameter is InstanceType, this parameter indicates instance types that are returned.</description></item>
+                                /// </list>
                                 /// 
-                                /// *   If the return value of the Type parameter is InstanceTypeFamily, this parameter indicates instance families that are returned.
-                                /// *   If the return value of the Type parameter is InstanceType, this parameter indicates instance types that are returned.
+                                /// <b>Example:</b>
+                                /// <para>ecs.c6</para>
                                 /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
@@ -69,10 +77,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                         }
 
                         /// <summary>
-                        /// The type of the resource. Valid values:
+                        /// <para>The type of the resource. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>InstanceTypeFamily: instance families.</description></item>
+                        /// <item><description>InstanceType: instance types.</description></item>
+                        /// </list>
                         /// 
-                        /// *   InstanceTypeFamily: instance families.
-                        /// *   InstanceType: instance types.
+                        /// <b>Example:</b>
+                        /// <para>InstanceTypeFamily</para>
                         /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
@@ -83,14 +95,20 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The region ID of the resources.
+                /// <para>The region ID of the resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The zone ID of the resources.
+                /// <para>The zone ID of the resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-e</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -101,7 +119,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6829735A-FF76-58C6-AECB-27CBF135A7AA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

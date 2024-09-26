@@ -14,28 +14,37 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public UpdateContainerGroupRequestDnsConfig DnsConfig { get; set; }
         public class UpdateContainerGroupRequestDnsConfig : TeaModel {
             /// <summary>
-            /// The IP addresses of DNS servers.
+            /// <para>The IP addresses of DNS servers.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.2.3.4</para>
             /// </summary>
             [NameInMap("NameServer")]
             [Validation(Required=false)]
             public List<string> NameServer { get; set; }
 
             /// <summary>
-            /// The configurations of DNS.
+            /// <para>The configurations of DNS.</para>
             /// </summary>
             [NameInMap("Option")]
             [Validation(Required=false)]
             public List<UpdateContainerGroupRequestDnsConfigOption> Option { get; set; }
             public class UpdateContainerGroupRequestDnsConfigOption : TeaModel {
                 /// <summary>
-                /// The option name of DNS configurations.
+                /// <para>The option name of DNS configurations.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ndots</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The option value of DNS configurations.
+                /// <para>The option value of DNS configurations.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -44,7 +53,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The search domains of the Domain Name System (DNS) server.
+            /// <para>The search domains of the Domain Name System (DNS) server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>my.dns.search.suffix</para>
             /// </summary>
             [NameInMap("Search")]
             [Validation(Required=false)]
@@ -53,35 +65,44 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// Details of the Container Registry Enterprise Edition instance that hosts the image of the init container.
+        /// <para>Details of the Container Registry Enterprise Edition instance that hosts the image of the init container.</para>
         /// </summary>
         [NameInMap("AcrRegistryInfo")]
         [Validation(Required=false)]
         public List<UpdateContainerGroupRequestAcrRegistryInfo> AcrRegistryInfo { get; set; }
         public class UpdateContainerGroupRequestAcrRegistryInfo : TeaModel {
             /// <summary>
-            /// The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify specific domain names. Separate multiple domain names with commas (,).
+            /// <para>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify specific domain names. Separate multiple domain names with commas (,).</para>
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public List<string> Domain { get; set; }
 
             /// <summary>
-            /// The ID of the Container Registry Enterprise Edition instance.
+            /// <para>The ID of the Container Registry Enterprise Edition instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cri-nwj395hgf6f3****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the Container Registry Enterprise Edition instance.
+            /// <para>The name of the Container Registry Enterprise Edition instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acr-test</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The ID of the region where the Container Registry Enterprise Edition instance resides.
+            /// <para>The ID of the region where the Container Registry Enterprise Edition instance resides.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-beijing</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -90,14 +111,17 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency](https://help.aliyun.com/document_detail/25693.html).
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The new configurations of the container group.
+        /// <para>The new configurations of the container group.</para>
         /// </summary>
         [NameInMap("Container")]
         [Validation(Required=false)]
@@ -256,28 +280,37 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The arguments that you want to pass to the startup command of the container. You can specify up to 10 arguments.
+            /// <para>The arguments that you want to pass to the startup command of the container. You can specify up to 10 arguments.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hello</para>
             /// </summary>
             [NameInMap("Arg")]
             [Validation(Required=false)]
             public List<string> Arg { get; set; }
 
             /// <summary>
-            /// The commands that you want to run to perform the health check.
+            /// <para>The commands that you want to run to perform the health check.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>echo</para>
             /// </summary>
             [NameInMap("Command")]
             [Validation(Required=false)]
             public List<string> Command { get; set; }
 
             /// <summary>
-            /// The number of vCPUs that you want to allocate to the container
+            /// <para>The number of vCPUs that you want to allocate to the container</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0</para>
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public float? Cpu { get; set; }
 
             /// <summary>
-            /// The environment variables for the container.
+            /// <para>The environment variables for the container.</para>
             /// </summary>
             [NameInMap("EnvironmentVar")]
             [Validation(Required=false)]
@@ -294,14 +327,20 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The name of the environment variable for the container.
+                /// <para>The name of the environment variable for the container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PATH</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the environment variable for the container.
+                /// <para>The value of the environment variable for the container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/usr/bin/local/</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -310,60 +349,82 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The number of GPUs that you want to allocate to the container.
+            /// <para>The number of GPUs that you want to allocate to the container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Gpu")]
             [Validation(Required=false)]
             public int? Gpu { get; set; }
 
             /// <summary>
-            /// The image of the container.
+            /// <para>The image of the container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>jenkins</para>
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public string Image { get; set; }
 
             /// <summary>
-            /// The image pulling policy. Valid values:
+            /// <para>The image pulling policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Always: Each time the instance is updated, image pulling is performed.</description></item>
+            /// <item><description>IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.</description></item>
+            /// <item><description>Never: On-premises images are always used. Image pulling is not performed.</description></item>
+            /// </list>
             /// 
-            /// *   Always: Each time the instance is updated, image pulling is performed.
-            /// *   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.
-            /// *   Never: On-premises images are always used. Image pulling is not performed.
+            /// <b>Example:</b>
+            /// <para>Never</para>
             /// </summary>
             [NameInMap("ImagePullPolicy")]
             [Validation(Required=false)]
             public string ImagePullPolicy { get; set; }
 
             /// <summary>
-            /// The commands to be executed in the container when you use the CLI to specify the postStart callback function.
+            /// <para>The commands to be executed in the container when you use the CLI to specify the postStart callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hide</para>
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerExec")]
             [Validation(Required=false)]
             public List<string> LifecyclePostStartHandlerExec { get; set; }
 
             /// <summary>
-            /// The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the postStart callback function.
+            /// <para>The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the postStart callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hide</para>
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetHost")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerHttpGetHost { get; set; }
 
             /// <summary>
-            /// The information about the valid HTTP request headers among the generated HTTP request headers.
+            /// <para>The information about the valid HTTP request headers among the generated HTTP request headers.</para>
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetHttpHeaders")]
             [Validation(Required=false)]
             public List<UpdateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeaders> LifecyclePostStartHandlerHttpGetHttpHeaders { get; set; }
             public class UpdateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeaders : TeaModel {
                 /// <summary>
-                /// The request parameter of the HTTP GET request when you use an HTTP request to specify the postStart callback function.
+                /// <para>The request parameter of the HTTP GET request when you use an HTTP request to specify the postStart callback function.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testValue</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The request parameter value of the HTTP GET request when you use an HTTP request to specify the postStart callback function.
+                /// <para>The request parameter value of the HTTP GET request when you use an HTTP request to specify the postStart callback function.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -372,70 +433,97 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.
+            /// <para>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/healthyz</para>
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetPath")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerHttpGetPath { get; set; }
 
             /// <summary>
-            /// The port to which the system sends the HTTP GET request when you use an HTTP request to specify the postStart callback function.
+            /// <para>The port to which the system sends the HTTP GET request when you use an HTTP request to specify the postStart callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetPort")]
             [Validation(Required=false)]
             public int? LifecyclePostStartHandlerHttpGetPort { get; set; }
 
             /// <summary>
-            /// The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.
+            /// <para>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/healthyz</para>
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetScheme")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerHttpGetScheme { get; set; }
 
             /// <summary>
-            /// The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the postStart callback function.
+            /// <para>The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the postStart callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.0.XX.XX</para>
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerTcpSocketHost")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerTcpSocketHost { get; set; }
 
             /// <summary>
-            /// The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.
+            /// <para>The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerTcpSocketPort")]
             [Validation(Required=false)]
             public int? LifecyclePostStartHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// The commands to be executed in the container when you use the CLI to specify the preStop callback function.
+            /// <para>The commands to be executed in the container when you use the CLI to specify the preStop callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hide</para>
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerExec")]
             [Validation(Required=false)]
             public List<string> LifecyclePreStopHandlerExec { get; set; }
 
             /// <summary>
-            /// The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the preStop callback function.
+            /// <para>The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the preStop callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.0.XX.XX</para>
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetHost")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerHttpGetHost { get; set; }
 
             /// <summary>
-            /// The information about the generated HTTP request header.
+            /// <para>The information about the generated HTTP request header.</para>
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetHttpHeader")]
             [Validation(Required=false)]
             public List<UpdateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader> LifecyclePreStopHandlerHttpGetHttpHeader { get; set; }
             public class UpdateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader : TeaModel {
                 /// <summary>
-                /// The request parameter of the HTTP GET request when you use an HTTP request to specify the preStop callback function.
+                /// <para>The request parameter of the HTTP GET request when you use an HTTP request to specify the preStop callback function.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The request parameter value of the HTTP GET request when you use an HTTP request to specify the preStop callback function.
+                /// <para>The request parameter value of the HTTP GET request when you use an HTTP request to specify the preStop callback function.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testValue</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -444,73 +532,101 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the preSop callback function.
+            /// <para>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the preSop callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/healthyz</para>
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetPath")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerHttpGetPath { get; set; }
 
             /// <summary>
-            /// The port to which the system sends the HTTP GET request for a health check when you use an HTTP request to specify the preStop callback function.
+            /// <para>The port to which the system sends the HTTP GET request for a health check when you use an HTTP request to specify the preStop callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetPort")]
             [Validation(Required=false)]
             public int? LifecyclePreStopHandlerHttpGetPort { get; set; }
 
             /// <summary>
-            /// The protocol type of the HTTP GET request when you use an HTTP request to specify the preStop callback function. Valid values:
+            /// <para>The protocol type of the HTTP GET request when you use an HTTP request to specify the preStop callback function. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>HTTP</description></item>
+            /// <item><description>HTTPS</description></item>
+            /// </list>
             /// 
-            /// *   HTTP
-            /// *   HTTPS
+            /// <b>Example:</b>
+            /// <para>HTTP</para>
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetScheme")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerHttpGetScheme { get; set; }
 
             /// <summary>
-            /// The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the preStop callback function.
+            /// <para>The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the preStop callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.0.XX.XX</para>
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerTcpSocketHost")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerTcpSocketHost { get; set; }
 
             /// <summary>
-            /// The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the preStop callback function.
+            /// <para>The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the preStop callback function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerTcpSocketPort")]
             [Validation(Required=false)]
             public int? LifecyclePreStopHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// The memory size of the container.
+            /// <para>The memory size of the container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2.0</para>
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public float? Memory { get; set; }
 
             /// <summary>
-            /// The name of the container.
+            /// <para>The name of the container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>jenkins</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The port to which the system sends an HTTP GET request for a health check.
+            /// <para>The port to which the system sends an HTTP GET request for a health check.</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public List<UpdateContainerGroupRequestContainerPort> Port { get; set; }
             public class UpdateContainerGroupRequestContainerPort : TeaModel {
                 /// <summary>
-                /// The port number. Valid values: 1 to 65535.
+                /// <para>The port number. Valid values: 1 to 65535.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8080</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The protocol of the container. Valid values: TCP and UDP.
+                /// <para>The protocol of the container. Valid values: TCP and UDP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TCP</para>
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
@@ -519,69 +635,93 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
+            /// <para>Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Stdin")]
             [Validation(Required=false)]
             public bool? Stdin { get; set; }
 
             /// <summary>
-            /// Specifies whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected among multiple sessions. If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container restarts.
+            /// <para>Specifies whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected among multiple sessions. If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container restarts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("StdinOnce")]
             [Validation(Required=false)]
             public bool? StdinOnce { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable interaction. Default value: false. If the command is a /bin/bash command, set the value to true.
+            /// <para>Specifies whether to enable interaction. Default value: false. If the command is a /bin/bash command, set the value to true.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Tty")]
             [Validation(Required=false)]
             public bool? Tty { get; set; }
 
             /// <summary>
-            /// Pod volumes that you want to mount into the filesystem of the container.
+            /// <para>Pod volumes that you want to mount into the filesystem of the container.</para>
             /// </summary>
             [NameInMap("VolumeMount")]
             [Validation(Required=false)]
             public List<UpdateContainerGroupRequestContainerVolumeMount> VolumeMount { get; set; }
             public class UpdateContainerGroupRequestContainerVolumeMount : TeaModel {
                 /// <summary>
-                /// The directory of the volume that is mounted to the container. The data in this directory is overwritten by the data on the volume. Specify this parameter with caution.
+                /// <para>The directory of the volume that is mounted to the container. The data in this directory is overwritten by the data on the volume. Specify this parameter with caution.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/usr/share/</para>
                 /// </summary>
                 [NameInMap("MountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+                /// <para>The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>None: This volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.</description></item>
+                /// <item><description>HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.</description></item>
+                /// <item><description>Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.</description></item>
+                /// </list>
+                /// <para>Default value: None.</para>
                 /// 
-                /// *   None: This volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.
-                /// *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.
-                /// *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.
-                /// 
-                /// Default value: None.
+                /// <b>Example:</b>
+                /// <para>None</para>
                 /// </summary>
                 [NameInMap("MountPropagation")]
                 [Validation(Required=false)]
                 public string MountPropagation { get; set; }
 
                 /// <summary>
-                /// The name of the volume that is mounted to the container. Valid values: the values of Volume.N.Name, which are the names of volumes that are mounted to the elastic container instance.
+                /// <para>The name of the volume that is mounted to the container. Valid values: the values of Volume.N.Name, which are the names of volumes that are mounted to the elastic container instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test-empty</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// Specifies whether the volume is read-only. Default value: false.
+                /// <para>Specifies whether the volume is read-only. Default value: false.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("ReadOnly")]
                 [Validation(Required=false)]
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// The subdirectory of the volume that is mounted to the container. You can use this parameter to mount the same volume to different subdirectories of the container.
+                /// <para>The subdirectory of the volume that is mounted to the container. You can use this parameter to mount the same volume to different subdirectories of the container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/usr/share/sub/</para>
                 /// </summary>
                 [NameInMap("SubPath")]
                 [Validation(Required=false)]
@@ -590,7 +730,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The working directory of the container.
+            /// <para>The working directory of the container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/usr/share/</para>
             /// </summary>
             [NameInMap("WorkingDir")]
             [Validation(Required=false)]
@@ -599,44 +742,58 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The ID of the elastic container instance that you want to update.
+        /// <para>The ID of the elastic container instance that you want to update.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>eci-2zelg8vwnlzdhf8hv****</para>
         /// </summary>
         [NameInMap("ContainerGroupId")]
         [Validation(Required=false)]
         public string ContainerGroupId { get; set; }
 
         /// <summary>
-        /// The number of vCPUs that are allocated to the elastic container instance.
+        /// <para>The number of vCPUs that are allocated to the elastic container instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2.0</para>
         /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public float? Cpu { get; set; }
 
         /// <summary>
-        /// The information about the credentials of the image repository.
+        /// <para>The information about the credentials of the image repository.</para>
         /// </summary>
         [NameInMap("ImageRegistryCredential")]
         [Validation(Required=false)]
         public List<UpdateContainerGroupRequestImageRegistryCredential> ImageRegistryCredential { get; set; }
         public class UpdateContainerGroupRequestImageRegistryCredential : TeaModel {
             /// <summary>
-            /// The password that you use to access the image repository.
+            /// <para>The password that you use to access the image repository.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>yourpassword</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
 
             /// <summary>
-            /// The address of the image repository. This address does not contain `http://` or `https://`.
+            /// <para>The address of the image repository. This address does not contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>registry.cn-shanghai.aliyuncs.com/ecitest/nginx:alpine</para>
             /// </summary>
             [NameInMap("Server")]
             [Validation(Required=false)]
             public string Server { get; set; }
 
             /// <summary>
-            /// The username that you use to access the image repository.
+            /// <para>The username that you use to access the image repository.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>yourname</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -645,7 +802,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The information about the new init container.
+        /// <para>The information about the new init container.</para>
         /// </summary>
         [NameInMap("InitContainer")]
         [Validation(Required=false)]
@@ -676,28 +833,37 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The arguments that you want to pass to the startup command of the init container.
+            /// <para>The arguments that you want to pass to the startup command of the init container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("Arg")]
             [Validation(Required=false)]
             public List<string> Arg { get; set; }
 
             /// <summary>
-            /// The commands that are used to start the init container.
+            /// <para>The commands that are used to start the init container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/bin/sh sleep</para>
             /// </summary>
             [NameInMap("Command")]
             [Validation(Required=false)]
             public List<string> Command { get; set; }
 
             /// <summary>
-            /// The number of vCPUs that you want to allocate to the init container.
+            /// <para>The number of vCPUs that you want to allocate to the init container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2.0</para>
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public float? Cpu { get; set; }
 
             /// <summary>
-            /// The environment variable of the init container.
+            /// <para>The environment variable of the init container.</para>
             /// </summary>
             [NameInMap("EnvironmentVar")]
             [Validation(Required=false)]
@@ -714,14 +880,20 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The name of the environment variable for the init container.
+                /// <para>The name of the environment variable for the init container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PATH</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the environment variable for the init container.
+                /// <para>The value of the environment variable for the init container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/usr/local/bin</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -730,60 +902,82 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The number of GPUs you want to allocate to the init container.
+            /// <para>The number of GPUs you want to allocate to the init container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Gpu")]
             [Validation(Required=false)]
             public int? Gpu { get; set; }
 
             /// <summary>
-            /// The image of the init container.
+            /// <para>The image of the init container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>nginx</para>
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public string Image { get; set; }
 
             /// <summary>
-            /// The image pulling policy. Valid values:
+            /// <para>The image pulling policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Always: Each time the instance is updated, image pulling is performed.</description></item>
+            /// <item><description>IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.</description></item>
+            /// <item><description>Never: On-premises images are always used. Image pulling is not performed.</description></item>
+            /// </list>
             /// 
-            /// *   Always: Each time the instance is updated, image pulling is performed.
-            /// *   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.
-            /// *   Never: On-premises images are always used. Image pulling is not performed.
+            /// <b>Example:</b>
+            /// <para>Onfailure</para>
             /// </summary>
             [NameInMap("ImagePullPolicy")]
             [Validation(Required=false)]
             public string ImagePullPolicy { get; set; }
 
             /// <summary>
-            /// The memory size of the init container.
+            /// <para>The memory size of the init container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4.0</para>
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public float? Memory { get; set; }
 
             /// <summary>
-            /// The name of the init container.
+            /// <para>The name of the init container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>init-nginx</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The port number. Valid values: 1 to 65535.
+            /// <para>The port number. Valid values: 1 to 65535.</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public List<UpdateContainerGroupRequestInitContainerPort> Port { get; set; }
             public class UpdateContainerGroupRequestInitContainerPort : TeaModel {
                 /// <summary>
-                /// The port number of the init container. Valid values: 1 to 65535.
+                /// <para>The port number of the init container. Valid values: 1 to 65535.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9000</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The protocol of the init container. Valid values: TCP and UDP.
+                /// <para>The protocol of the init container. Valid values: TCP and UDP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TCP</para>
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
@@ -792,69 +986,93 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// Specifies whether the init container allocates buffer resources to standard input streams when the init container is running. If you do not specify this parameter, an EOF error may occur when standard input streams in the init container are read. Default value: false.
+            /// <para>Specifies whether the init container allocates buffer resources to standard input streams when the init container is running. If you do not specify this parameter, an EOF error may occur when standard input streams in the init container are read. Default value: false.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Stdin")]
             [Validation(Required=false)]
             public bool? Stdin { get; set; }
 
             /// <summary>
-            /// Specifies whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected among multiple sessions. If StdinOnce is set to true, standard input streams are connected after the init container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the init container restarts.
+            /// <para>Specifies whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected among multiple sessions. If StdinOnce is set to true, standard input streams are connected after the init container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the init container restarts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("StdinOnce")]
             [Validation(Required=false)]
             public bool? StdinOnce { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable interaction. Default value: false. If the command is a /bin/bash command, set the value to true.
+            /// <para>Specifies whether to enable interaction. Default value: false. If the command is a /bin/bash command, set the value to true.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Tty")]
             [Validation(Required=false)]
             public bool? Tty { get; set; }
 
             /// <summary>
-            /// The information about the volume that you want to mount on the init container.
+            /// <para>The information about the volume that you want to mount on the init container.</para>
             /// </summary>
             [NameInMap("VolumeMount")]
             [Validation(Required=false)]
             public List<UpdateContainerGroupRequestInitContainerVolumeMount> VolumeMount { get; set; }
             public class UpdateContainerGroupRequestInitContainerVolumeMount : TeaModel {
                 /// <summary>
-                /// The mount directory of the init container. The data in this directory is overwritten by the data on the volume. Specify this parameter with caution.
+                /// <para>The mount directory of the init container. The data in this directory is overwritten by the data on the volume. Specify this parameter with caution.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/pod/data</para>
                 /// </summary>
                 [NameInMap("MountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+                /// <para>The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.</description></item>
+                /// <item><description>HostToContainer: The volume mount receives all subsequent mounts that are performed on this volume or subdirectories of this volume.</description></item>
+                /// <item><description>Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.</description></item>
+                /// </list>
+                /// <para>Default value: None.</para>
                 /// 
-                /// *   None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.
-                /// *   HostToContainer: The volume mount receives all subsequent mounts that are performed on this volume or subdirectories of this volume.
-                /// *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.
-                /// 
-                /// Default value: None.
+                /// <b>Example:</b>
+                /// <para>None</para>
                 /// </summary>
                 [NameInMap("MountPropagation")]
                 [Validation(Required=false)]
                 public string MountPropagation { get; set; }
 
                 /// <summary>
-                /// The name of the volume that is mounted to the init container. Valid values: the values of Volume.N.Name, which are the names of volumes that are mounted to the elastic container instance.
+                /// <para>The name of the volume that is mounted to the init container. Valid values: the values of Volume.N.Name, which are the names of volumes that are mounted to the elastic container instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default-volume1</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// Specifies whether the volume is read-only. Default value: false.
+                /// <para>Specifies whether the volume is read-only. Default value: false.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("ReadOnly")]
                 [Validation(Required=false)]
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// The subdirectory of the volume that is mounted to the init container. You can use this parameter to mount the same volume to different subdirectories of the init container.
+                /// <para>The subdirectory of the volume that is mounted to the init container. You can use this parameter to mount the same volume to different subdirectories of the init container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>data2/</para>
                 /// </summary>
                 [NameInMap("SubPath")]
                 [Validation(Required=false)]
@@ -863,7 +1081,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The working directory of the init container.
+            /// <para>The working directory of the init container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/bin/local/</para>
             /// </summary>
             [NameInMap("WorkingDir")]
             [Validation(Required=false)]
@@ -872,7 +1093,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The size of the memory that is allocated to the elastic container instance. Unit: GiB.
+        /// <para>The size of the memory that is allocated to the elastic container instance. Unit: GiB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4.0</para>
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
@@ -887,16 +1111,21 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-2df3isufhi38****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -911,32 +1140,42 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The restart policy of the elastic container instance. Valid values:
+        /// <para>The restart policy of the elastic container instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Always: Always restarts the instance if a container in the instance exits upon termination.</description></item>
+        /// <item><description>Never: Never restarts the instance if a container in the instance exits upon termination.</description></item>
+        /// <item><description>OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.</description></item>
+        /// </list>
         /// 
-        /// *   Always: Always restarts the instance if a container in the instance exits upon termination.
-        /// *   Never: Never restarts the instance if a container in the instance exits upon termination.
-        /// *   OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.
+        /// <b>Example:</b>
+        /// <para>Always</para>
         /// </summary>
         [NameInMap("RestartPolicy")]
         [Validation(Required=false)]
         public string RestartPolicy { get; set; }
 
         /// <summary>
-        /// The tags that are bound to the instance.
+        /// <para>The tags that are bound to the instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<UpdateContainerGroupRequestTag> Tag { get; set; }
         public class UpdateContainerGroupRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>name</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hxh</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -945,19 +1184,22 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The update type. Valid values:
+        /// <para>The update type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RenewUpdate: full updates. You must specify all relevant parameters to update the elastic container instance. For a parameter of the list type, you must specify all the items contained in the parameter even if you want to update only some of the items. For a parameter of the struct type, you must specify all the members even if you want to update only some of the members.</description></item>
+        /// <item><description>IncrementalUpdate: incremental updates. You may specify only the parameter that you want to update. Other related parameters remain unchanged.</description></item>
+        /// </list>
+        /// <para>Default value: RenewUpdate.</para>
         /// 
-        /// *   RenewUpdate: full updates. You must specify all relevant parameters to update the elastic container instance. For a parameter of the list type, you must specify all the items contained in the parameter even if you want to update only some of the items. For a parameter of the struct type, you must specify all the members even if you want to update only some of the members.
-        /// *   IncrementalUpdate: incremental updates. You may specify only the parameter that you want to update. Other related parameters remain unchanged.
-        /// 
-        /// Default value: RenewUpdate.
+        /// <b>Example:</b>
+        /// <para>RenewUpdate</para>
         /// </summary>
         [NameInMap("UpdateType")]
         [Validation(Required=false)]
         public string UpdateType { get; set; }
 
         /// <summary>
-        /// The volumes that are mounted to the instance.
+        /// <para>The volumes that are mounted to the instance.</para>
         /// </summary>
         [NameInMap("Volume")]
         [Validation(Required=false)]
@@ -1048,19 +1290,27 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The volume name.
+            /// <para>The volume name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-empty</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The type of the HostPath volume. Valid values:
+            /// <para>The type of the HostPath volume. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Directory</description></item>
+            /// <item><description>File</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> This parameter is not publicly available.</para>
+            /// </remarks>
             /// 
-            /// *   Directory
-            /// *   File
-            /// 
-            /// >  This parameter is not publicly available.
+            /// <b>Example:</b>
+            /// <para>EmptyDirVolume</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
