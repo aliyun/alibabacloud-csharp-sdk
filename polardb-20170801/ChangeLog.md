@@ -12,6 +12,20 @@
 - Update API TempModifyDBNode: update param AccessKeyId.
 
 
+2024-09-26 Version: 5.1.14
+- Update API CreateDBCluster: update param AccessKeyId.
+- Update API DescribeDBClusterTDE: update param AccessKeyId.
+- Update API DescribeDBClusterTDE: update response param.
+- Update API DescribeScheduleTasks: update param AccessKeyId.
+- Update API DescribeScheduleTasks: update response param.
+- Update API ModifyDBClusterServerlessConf: add param CrontabJobId.
+- Update API ModifyDBClusterServerlessConf: add param TaskId.
+- Update API ModifyDBClusterServerlessConf: update param AccessKeyId.
+- Update API ModifyDBClusterTDE: add param EnableAutomaticRotation.
+- Update API ModifyDBClusterTDE: update param AccessKeyId.
+- Update API TempModifyDBNode: update param AccessKeyId.
+
+
 2024-09-25 Version: 5.1.13
 - Update API DeleteDBCluster: update param AccessKeyId.
 - Update API DeleteDBCluster: update param BackupRetentionPolicyOnClusterDeletion.
