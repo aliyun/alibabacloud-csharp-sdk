@@ -10,42 +10,60 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeployFileResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the deployment task. The ID is used as the value of a specific request parameter when you call the [GetDeployment](https://help.aliyun.com/document_detail/173950.html) operation to query the details of the deployment task.
+        /// <para>The ID of the deployment task. The ID is used as the value of a specific request parameter when you call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to query the details of the deployment task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30000001</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public long? Data { get; set; }
 
         /// <summary>
-        /// The error code returned.
+        /// <para>The error code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Invalid.Tenant.ConnectionNotExists</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The connection does not exist.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can troubleshoot issues based on the ID.
+        /// <para>The ID of the request. You can troubleshoot issues based on the ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0000-ABCD-EFG****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

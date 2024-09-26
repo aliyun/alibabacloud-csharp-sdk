@@ -10,75 +10,100 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDeploymentsResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDeploymentsResponseBodyData Data { get; set; }
         public class ListDeploymentsResponseBodyData : TeaModel {
             /// <summary>
-            /// The deployment packages.
+            /// <para>The deployment packages.</para>
             /// </summary>
             [NameInMap("Deployments")]
             [Validation(Required=false)]
             public List<ListDeploymentsResponseBodyDataDeployments> Deployments { get; set; }
             public class ListDeploymentsResponseBodyDataDeployments : TeaModel {
                 /// <summary>
-                /// The time when the deployment package was created.
+                /// <para>The time when the deployment package was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1593877765000</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account used by the user who created the deployment package.
+                /// <para>The ID of the Alibaba Cloud account used by the user who created the deployment package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2003****</para>
                 /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// The error message returned when the deployment package failed.
+                /// <para>The error message returned when the deployment package failed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>OK</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// The time when the deployment package was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// <para>The time when the deployment package was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1593877765000</para>
                 /// </summary>
                 [NameInMap("ExecuteTime")]
                 [Validation(Required=false)]
                 public long? ExecuteTime { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account used by the user who ran the deployment package.
+                /// <para>The ID of the Alibaba Cloud account used by the user who ran the deployment package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2003****</para>
                 /// </summary>
                 [NameInMap("Executor")]
                 [Validation(Required=false)]
                 public string Executor { get; set; }
 
                 /// <summary>
-                /// The deployment package ID. You can call the [GetDeployment](https://help.aliyun.com/document_detail/173950.html) operation to obtain the ID.
+                /// <para>The deployment package ID. You can call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to obtain the ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>11111</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The name of the deployment package.
+                /// <para>The name of the deployment package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>auto_created</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The status of the deployment package. Valid values:
+                /// <para>The status of the deployment package. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: The deployment package is ready.</description></item>
+                /// <item><description>1: The deployment package is deployed.</description></item>
+                /// <item><description>2: The deployment package fails to be deployed.</description></item>
+                /// <item><description>6: The deployment package is rejected.</description></item>
+                /// </list>
                 /// 
-                /// *   0: The deployment package is ready.
-                /// *   1: The deployment package is deployed.
-                /// *   2: The deployment package fails to be deployed.
-                /// *   6: The deployment package is rejected.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -87,21 +112,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>13</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -110,7 +144,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0000-ABCD-EFG</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

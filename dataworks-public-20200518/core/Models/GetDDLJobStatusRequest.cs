@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDDLJobStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the DDL task.
+        /// <para>The ID of the DDL task.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>abc</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteRemindRequest : TeaModel {
         /// <summary>
-        /// The ID of the custom alert rule.
+        /// <para>The ID of the custom alert rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("RemindId")]
         [Validation(Required=false)]

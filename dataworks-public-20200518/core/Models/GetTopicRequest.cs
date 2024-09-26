@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetTopicRequest : TeaModel {
         /// <summary>
-        /// The event ID. You can call the [ListTopics](https://help.aliyun.com/document_detail/173973.html) operation to query the ID.
+        /// <para>The event ID. You can call the <a href="https://help.aliyun.com/document_detail/173973.html">ListTopics</a> operation to query the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("TopicId")]
         [Validation(Required=false)]

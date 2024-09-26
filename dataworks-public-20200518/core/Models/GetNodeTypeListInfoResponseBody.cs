@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeTypeListInfoResponseBody : TeaModel {
         /// <summary>
-        /// The list of node types.
+        /// <para>The list of node types.</para>
         /// </summary>
         [NameInMap("NodeTypeInfoList")]
         [Validation(Required=false)]
         public GetNodeTypeListInfoResponseBodyNodeTypeInfoList NodeTypeInfoList { get; set; }
         public class GetNodeTypeListInfoResponseBodyNodeTypeInfoList : TeaModel {
             /// <summary>
-            /// The information about a node type.
+            /// <para>The information about a node type.</para>
             /// </summary>
             [NameInMap("NodeTypeInfo")]
             [Validation(Required=false)]
             public List<GetNodeTypeListInfoResponseBodyNodeTypeInfoListNodeTypeInfo> NodeTypeInfo { get; set; }
             public class GetNodeTypeListInfoResponseBodyNodeTypeInfoListNodeTypeInfo : TeaModel {
                 /// <summary>
-                /// The type of the node, which is specified by a number.
+                /// <para>The type of the node, which is specified by a number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public int? NodeType { get; set; }
 
                 /// <summary>
-                /// The name of the node type.
+                /// <para>The name of the node type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ODPS SQL</para>
                 /// </summary>
                 [NameInMap("NodeTypeName")]
                 [Validation(Required=false)]
@@ -40,21 +46,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>127</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -63,7 +78,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0000-ABCD-EFG****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

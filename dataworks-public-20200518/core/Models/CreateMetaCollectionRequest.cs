@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateMetaCollectionRequest : TeaModel {
         /// <summary>
-        /// The type of the collection.
+        /// <para>The type of the collection.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ALBUM</para>
         /// </summary>
         [NameInMap("CollectionType")]
         [Validation(Required=false)]
         public string CollectionType { get; set; }
 
         /// <summary>
-        /// The comment of the collection. The comment must be 1 to 64 characters in length.
+        /// <para>The comment of the collection. The comment must be 1 to 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>this is a comment</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// The name of the collection. The name must be 1 to 32 characters in length.
+        /// <para>The name of the collection. The name must be 1 to 32 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>collection_name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The unique identifier of the parent collection.
+        /// <para>The unique identifier of the parent collection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>album.333508</para>
         /// </summary>
         [NameInMap("ParentQualifiedName")]
         [Validation(Required=false)]

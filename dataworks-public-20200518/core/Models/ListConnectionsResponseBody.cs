@@ -10,345 +10,418 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// The query results for data sources that are returned on multiple pages.
+        /// <para>The query results for data sources that are returned on multiple pages.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListConnectionsResponseBodyData Data { get; set; }
         public class ListConnectionsResponseBodyData : TeaModel {
             /// <summary>
-            /// The data sources.
+            /// <para>The data sources.</para>
             /// </summary>
             [NameInMap("Connections")]
             [Validation(Required=false)]
             public List<ListConnectionsResponseBodyDataConnections> Connections { get; set; }
             public class ListConnectionsResponseBodyDataConnections : TeaModel {
                 /// <summary>
-                /// The ID of the compute engine with which the data source is associated.
+                /// <para>The ID of the compute engine with which the data source is associated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123</para>
                 /// </summary>
                 [NameInMap("BindingCalcEngineId")]
                 [Validation(Required=false)]
                 public int? BindingCalcEngineId { get; set; }
 
                 /// <summary>
-                /// The status of the data source. Valid values:
+                /// <para>The status of the data source. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: The data source is normal.</description></item>
+                /// <item><description>2: The data source is disabled.</description></item>
+                /// </list>
                 /// 
-                /// *   1: The data source is normal.
-                /// *   2: The data source is disabled.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("ConnectStatus")]
                 [Validation(Required=false)]
                 public int? ConnectStatus { get; set; }
 
                 /// <summary>
-                /// The type of the data source. Valid values:
+                /// <para>The type of the data source. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>odps</description></item>
+                /// <item><description>mysql</description></item>
+                /// <item><description>rds</description></item>
+                /// <item><description>oss</description></item>
+                /// <item><description>sqlserver</description></item>
+                /// <item><description>polardb</description></item>
+                /// <item><description>oracle</description></item>
+                /// <item><description>mongodb</description></item>
+                /// <item><description>emr</description></item>
+                /// <item><description>postgresql</description></item>
+                /// <item><description>analyticdb_for_mysql</description></item>
+                /// <item><description>hybriddb_for_postgresql</description></item>
+                /// <item><description>holo</description></item>
+                /// </list>
                 /// 
-                /// *   odps
-                /// *   mysql
-                /// *   rds
-                /// *   oss
-                /// *   sqlserver
-                /// *   polardb
-                /// *   oracle
-                /// *   mongodb
-                /// *   emr
-                /// *   postgresql
-                /// *   analyticdb_for_mysql
-                /// *   hybriddb_for_postgresql
-                /// *   holo
+                /// <b>Example:</b>
+                /// <para>mysql</para>
                 /// </summary>
                 [NameInMap("ConnectionType")]
                 [Validation(Required=false)]
                 public string ConnectionType { get; set; }
 
                 /// <summary>
-                /// The details of the data source. Examples of details of some common data sources:
-                /// 
-                /// *   odps
-                /// 
+                /// <para>The details of the data source. Examples of details of some common data sources:</para>
+                /// <list type="bullet">
+                /// <item><description>odps</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "accessId": "xssssss",
-                ///       "accessKey": "xsaxsaxsa",
-                ///       "authType": 2,
-                ///       "endpoint": "http://service.odps.aliyun.com/api",
-                ///       "project": "xsaxsax",
-                ///       "tag": "public"
-                ///     }
-                /// 
-                /// *   mysql
-                /// 
+                /// <pre><c>{
+                ///   &quot;accessId&quot;: &quot;xssssss&quot;,
+                ///   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
+                ///   &quot;authType&quot;: 2,
+                ///   &quot;endpoint&quot;: &quot;http://service.odps.aliyun.com/api&quot;,
+                ///   &quot;project&quot;: &quot;xsaxsax&quot;,
+                ///   &quot;tag&quot;: &quot;public&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>mysql</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "database": "xsaxsa",
-                ///       "instanceName": "rm-xsaxsa",
-                ///       "password": "xsaxsa",
-                ///       "rdsOwnerId": "xasxsa",
-                ///       "regionId": "cn-shanghai",
-                ///       "tag": "rds",
-                ///       "username": "xsaxsa"
-                ///     }
-                /// 
-                /// *   rds
-                /// 
+                /// <pre><c>{
+                ///   &quot;database&quot;: &quot;xsaxsa&quot;,
+                ///   &quot;instanceName&quot;: &quot;rm-xsaxsa&quot;,
+                ///   &quot;password&quot;: &quot;xsaxsa&quot;,
+                ///   &quot;rdsOwnerId&quot;: &quot;xasxsa&quot;,
+                ///   &quot;regionId&quot;: &quot;cn-shanghai&quot;,
+                ///   &quot;tag&quot;: &quot;rds&quot;,
+                ///   &quot;username&quot;: &quot;xsaxsa&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>rds</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "configType": 1,
-                ///       "tag": "rds",
-                ///       "database": "xsaxsa",
-                ///       "username": "xsaxsa",
-                ///       "password": "xssaxsa$32050",
-                ///       "instanceName": "rm-xsaxs",
-                ///       "rdsOwnerId": "11111111"
-                ///     }
-                /// 
-                /// *   oss
-                /// 
+                /// <pre><c>{
+                ///   &quot;configType&quot;: 1,
+                ///   &quot;tag&quot;: &quot;rds&quot;,
+                ///   &quot;database&quot;: &quot;xsaxsa&quot;,
+                ///   &quot;username&quot;: &quot;xsaxsa&quot;,
+                ///   &quot;password&quot;: &quot;xssaxsa$32050&quot;,
+                ///   &quot;instanceName&quot;: &quot;rm-xsaxs&quot;,
+                ///   &quot;rdsOwnerId&quot;: &quot;11111111&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>oss</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "accessId": "sssssxx",
-                ///       "accessKey": "xsaxaxsaxs",
-                ///       "bucket": "xsa-xs-xs",
-                ///       "endpoint": "http://oss-cn-shanghai.aliyuncs.com",
-                ///       "tag": "public"
-                ///     }
-                /// 
-                /// *   sqlserver
-                /// 
+                /// <pre><c>{
+                ///   &quot;accessId&quot;: &quot;sssssxx&quot;,
+                ///   &quot;accessKey&quot;: &quot;xsaxaxsaxs&quot;,
+                ///   &quot;bucket&quot;: &quot;xsa-xs-xs&quot;,
+                ///   &quot;endpoint&quot;: &quot;http://oss-cn-shanghai.aliyuncs.com&quot;,
+                ///   &quot;tag&quot;: &quot;public&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>sqlserver</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "jdbcUrl": "jdbc:sqlserver://xsaxsa-xsaxsa.database.xxx.cn:123;DatabaseName=xsxs-xsxs",
-                ///       "password": "sdasda$fs",
-                ///       "tag": "public",
-                ///       "username": "sxaxacdacdd"
-                ///     }
-                /// 
-                /// *   polardb
-                /// 
+                /// <pre><c>{
+                ///   &quot;jdbcUrl&quot;: &quot;jdbc:sqlserver://xsaxsa-xsaxsa.database.xxx.cn:123;DatabaseName=xsxs-xsxs&quot;,
+                ///   &quot;password&quot;: &quot;sdasda$fs&quot;,
+                ///   &quot;tag&quot;: &quot;public&quot;,
+                ///   &quot;username&quot;: &quot;sxaxacdacdd&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>polardb</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "clusterId": "pc-sdadsadsa",
-                ///       "database": "dsadsadsa",
-                ///       "ownerId": "121212122",
-                ///       "password": "sdasdafssa",
-                ///       "region": "cn-shanghai",
-                ///       "tag": "polardb",
-                ///       "username": "asdadsads"
-                ///     }
-                /// 
-                /// *   oracle
-                /// 
+                /// <pre><c>{
+                ///   &quot;clusterId&quot;: &quot;pc-sdadsadsa&quot;,
+                ///   &quot;database&quot;: &quot;dsadsadsa&quot;,
+                ///   &quot;ownerId&quot;: &quot;121212122&quot;,
+                ///   &quot;password&quot;: &quot;sdasdafssa&quot;,
+                ///   &quot;region&quot;: &quot;cn-shanghai&quot;,
+                ///   &quot;tag&quot;: &quot;polardb&quot;,
+                ///   &quot;username&quot;: &quot;asdadsads&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>oracle</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "jdbcUrl": "jdbc:oracle:saaa:@xxxxx:1521:PROD",
-                ///       "password": "sxasaxsa",
-                ///       "tag": "public",
-                ///       "username": "sasfadfa"
-                ///     }
-                /// 
-                /// *   mongodb
-                /// 
+                /// <pre><c>{
+                ///   &quot;jdbcUrl&quot;: &quot;jdbc:oracle:saaa:@xxxxx:1521:PROD&quot;,
+                ///   &quot;password&quot;: &quot;sxasaxsa&quot;,
+                ///   &quot;tag&quot;: &quot;public&quot;,
+                ///   &quot;username&quot;: &quot;sasfadfa&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>mongodb</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "address": "[\\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\\"]",
-                ///       "database": "admin",
-                ///       "password": "sadsda@",
-                ///       "tag": "public",
-                ///       "username": "dsadsadas"
-                ///     }
-                /// 
-                /// *   emr
-                /// 
+                /// <pre><c>{
+                ///   &quot;address&quot;: &quot;[\\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\\&quot;]&quot;,
+                ///   &quot;database&quot;: &quot;admin&quot;,
+                ///   &quot;password&quot;: &quot;sadsda@&quot;,
+                ///   &quot;tag&quot;: &quot;public&quot;,
+                ///   &quot;username&quot;: &quot;dsadsadas&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>emr</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "accessId": "xsaxsa",
-                ///       "emrClusterId": "C-dsads",
-                ///       "emrResourceQueueName": "default",
-                ///       "emrEndpoint": "emr.aliyuncs.com",
-                ///       "accessKey": "dsadsad",
-                ///       "emrUserId": "224833315798889783",
-                ///       "name": "sasdsadsa",
-                ///       "emrAccessMode": "simple",
-                ///       "region": "cn-shanghai",
-                ///       "authType": "2",
-                ///       "emrProjectId": "FP-sdadsad"
-                ///     }
-                /// 
-                /// *   postgresql
-                /// 
+                /// <pre><c>{
+                ///   &quot;accessId&quot;: &quot;xsaxsa&quot;,
+                ///   &quot;emrClusterId&quot;: &quot;C-dsads&quot;,
+                ///   &quot;emrResourceQueueName&quot;: &quot;default&quot;,
+                ///   &quot;emrEndpoint&quot;: &quot;emr.aliyuncs.com&quot;,
+                ///   &quot;accessKey&quot;: &quot;dsadsad&quot;,
+                ///   &quot;emrUserId&quot;: &quot;224833315798889783&quot;,
+                ///   &quot;name&quot;: &quot;sasdsadsa&quot;,
+                ///   &quot;emrAccessMode&quot;: &quot;simple&quot;,
+                ///   &quot;region&quot;: &quot;cn-shanghai&quot;,
+                ///   &quot;authType&quot;: &quot;2&quot;,
+                ///   &quot;emrProjectId&quot;: &quot;FP-sdadsad&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>postgresql</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "jdbcUrl": "jdbc:postgresql://xxxx:1921/ssss",
-                ///       "password": "sdadsads",
-                ///       "tag": "public",
-                ///       "username": "sdsasda"
-                ///     }
-                /// 
-                /// *   analyticdb_for_mysql
-                /// 
+                /// <pre><c>{
+                ///   &quot;jdbcUrl&quot;: &quot;jdbc:postgresql://xxxx:1921/ssss&quot;,
+                ///   &quot;password&quot;: &quot;sdadsads&quot;,
+                ///   &quot;tag&quot;: &quot;public&quot;,
+                ///   &quot;username&quot;: &quot;sdsasda&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>analyticdb_for_mysql</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "instanceId": "am-sadsada",
-                ///       "database": "xsxsx",
-                ///       "username": "xsxsa",
-                ///       "password": "asdadsa",
-                ///       "connectionString": "am-xssxsxs.ads.aliyuncs.com:3306"
-                ///     }
-                /// 
-                /// *   hybriddb_for_postgresql
-                /// 
+                /// <pre><c>{
+                ///   &quot;instanceId&quot;: &quot;am-sadsada&quot;,
+                ///   &quot;database&quot;: &quot;xsxsx&quot;,
+                ///   &quot;username&quot;: &quot;xsxsa&quot;,
+                ///   &quot;password&quot;: &quot;asdadsa&quot;,
+                ///   &quot;connectionString&quot;: &quot;am-xssxsxs.ads.aliyuncs.com:3306&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>hybriddb_for_postgresql</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "connectionString": "gp-xsaxsaxa-master.gpdbmaster.rds.aliyuncs.com",
-                ///       "database": "xsaxsaxas",
-                ///       "password": "xsaxsaxsa@11",
-                ///       "instanceId": "gp-xsaxsaxsa",
-                ///       "port": "541132",
-                ///       "ownerId": "xsaxsaxsas",
-                ///       "username": "sadsad"
-                ///     }
-                /// 
-                /// *   holo
-                /// 
+                /// <pre><c>{
+                ///   &quot;connectionString&quot;: &quot;gp-xsaxsaxa-master.gpdbmaster.rds.aliyuncs.com&quot;,
+                ///   &quot;database&quot;: &quot;xsaxsaxas&quot;,
+                ///   &quot;password&quot;: &quot;xsaxsaxsa@11&quot;,
+                ///   &quot;instanceId&quot;: &quot;gp-xsaxsaxsa&quot;,
+                ///   &quot;port&quot;: &quot;541132&quot;,
+                ///   &quot;ownerId&quot;: &quot;xsaxsaxsas&quot;,
+                ///   &quot;username&quot;: &quot;sadsad&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>holo</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "accessId": "xsaxsaxs",
-                ///       "accessKey": "xsaxsaxsa",
-                ///       "database": "xsaxsaxsa",
-                ///       "instanceId": "xsaxa",
-                ///       "tag": "aliyun"
-                ///     }
-                /// 
-                /// *   kafka
-                /// 
+                /// <pre><c>{
+                ///   &quot;accessId&quot;: &quot;xsaxsaxs&quot;,
+                ///   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
+                ///   &quot;database&quot;: &quot;xsaxsaxsa&quot;,
+                ///   &quot;instanceId&quot;: &quot;xsaxa&quot;,
+                ///   &quot;tag&quot;: &quot;aliyun&quot;
+                /// }
+                /// </c></pre>
+                /// <list type="bullet">
+                /// <item><description>kafka</description></item>
+                /// </list>
                 /// <!---->
                 /// 
-                ///     {
-                ///       "instanceId": "xsax-cn-xsaxsa",
-                ///       "regionId": "cn-shanghai",
-                ///       "tag": "aliyun",
-                ///       "ownerId": "1212121212112"
-                ///     }
+                /// <pre><c>{
+                ///   &quot;instanceId&quot;: &quot;xsax-cn-xsaxsa&quot;,
+                ///   &quot;regionId&quot;: &quot;cn-shanghai&quot;,
+                ///   &quot;tag&quot;: &quot;aliyun&quot;,
+                ///   &quot;ownerId&quot;: &quot;1212121212112&quot;
+                /// }
+                /// </c></pre>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;database\&quot;:\&quot;xxx\&quot;,\&quot;instanceName\&quot;:\&quot;xxx\&quot;,\&quot;password\&quot;:\&quot;xxx\&quot;,\&quot;rdsOwnerId\&quot;:\&quot;xxx\&quot;,\&quot;tag\&quot;:\&quot;rds\&quot;,\&quot;username\&quot;:\&quot;xxx\&quot;}</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
-                /// Indicates whether the compute engine that is associated with the data source is the default compute engine used by data sources of the same type.
+                /// <para>Indicates whether the compute engine that is associated with the data source is the default compute engine used by data sources of the same type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("DefaultEngine")]
                 [Validation(Required=false)]
                 public bool? DefaultEngine { get; set; }
 
                 /// <summary>
-                /// The description of the data source.
+                /// <para>The description of the data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>a connection</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The environment in which the data source is used. Valid values:
+                /// <para>The environment in which the data source is used. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: development environment</description></item>
+                /// <item><description>1: production environment</description></item>
+                /// </list>
                 /// 
-                /// *   0: development environment
-                /// *   1: production environment
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("EnvType")]
                 [Validation(Required=false)]
                 public int? EnvType { get; set; }
 
                 /// <summary>
-                /// The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.
+                /// <para>The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Mar 17, 2021 4:09:32 PM</para>
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.
+                /// <para>The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Mar 17, 2021 4:09:32 PM</para>
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The data source ID.
+                /// <para>The data source ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// The name of the data source.
+                /// <para>The name of the data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>abc</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account that is used to last modify the data source.
+                /// <para>The ID of the Alibaba Cloud account that is used to last modify the data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>193543050****</para>
                 /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// The ID of the workspace with which the data source is associated.
+                /// <para>The ID of the workspace with which the data source is associated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123</para>
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
                 public int? ProjectId { get; set; }
 
                 /// <summary>
-                /// The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.
+                /// <para>The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>300</para>
                 /// </summary>
                 [NameInMap("Sequence")]
                 [Validation(Required=false)]
                 public int? Sequence { get; set; }
 
                 /// <summary>
-                /// Indicates whether the data source is a shared data source.
+                /// <para>Indicates whether the data source is a shared data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Shared")]
                 [Validation(Required=false)]
                 public bool? Shared { get; set; }
 
                 /// <summary>
-                /// The status of the data source. Valid values:
+                /// <para>The status of the data source. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: The data source is normal.</description></item>
+                /// <item><description>2: The data source is disabled.</description></item>
+                /// </list>
                 /// 
-                /// *   1: The data source is normal.
-                /// *   2: The data source is disabled.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// The subtype of the data source. This parameter is used in scenarios where a type includes subtypes. The following type and subtypes are supported:
+                /// <para>The subtype of the data source. This parameter is used in scenarios where a type includes subtypes. The following type and subtypes are supported:</para>
+                /// <list type="bullet">
+                /// <item><description>Type: <c>rds</c></description></item>
+                /// <item><description>Subtypes: <c>mysql</c>, <c>sqlserver</c>, and <c>postgresql</c>.</description></item>
+                /// </list>
                 /// 
-                /// *   Type: `rds`
-                /// *   Subtypes: `mysql`, `sqlserver`, and `postgresql`.
+                /// <b>Example:</b>
+                /// <para>mysql</para>
                 /// </summary>
                 [NameInMap("SubType")]
                 [Validation(Required=false)]
                 public string SubType { get; set; }
 
                 /// <summary>
-                /// The tenant ID.
+                /// <para>The tenant ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1234567</para>
                 /// </summary>
                 [NameInMap("TenantId")]
                 [Validation(Required=false)]
@@ -357,21 +430,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page. Default value: 10. Maximum value: 100.
+            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of data sources returned.
+            /// <para>The total number of data sources returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -380,21 +462,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bc14115159376359****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

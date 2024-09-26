@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableLineageResponseBody : TeaModel {
         /// <summary>
-        /// The business data.
+        /// <para>The business data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMetaTableLineageResponseBodyData Data { get; set; }
         public class GetMetaTableLineageResponseBodyData : TeaModel {
             /// <summary>
-            /// The information about the table.
+            /// <para>The information about the table.</para>
             /// </summary>
             [NameInMap("DataEntityList")]
             [Validation(Required=false)]
             public List<GetMetaTableLineageResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaTableLineageResponseBodyDataDataEntityList : TeaModel {
                 /// <summary>
-                /// The time when the table was created.
+                /// <para>The time when the table was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1638720736000</para>
                 /// </summary>
                 [NameInMap("CreateTimestamp")]
                 [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>db1</para>
                 /// </summary>
                 [NameInMap("DatabaseName")]
                 [Validation(Required=false)]
                 public string DatabaseName { get; set; }
 
                 /// <summary>
-                /// The unique identifier of the table.
+                /// <para>The unique identifier of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>odps.tt.name</para>
                 /// </summary>
                 [NameInMap("TableGuid")]
                 [Validation(Required=false)]
                 public string TableGuid { get; set; }
 
                 /// <summary>
-                /// The name of the table.
+                /// <para>The name of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>name</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
@@ -54,14 +66,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// Indicates whether the next page exists.
+            /// <para>Indicates whether the next page exists.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("HasNext")]
             [Validation(Required=false)]
             public bool? HasNext { get; set; }
 
             /// <summary>
-            /// The logic of paging. If the value true is returned for the HasNext parameter and a value is returned for the NextPrimaryKey parameter in the response of the previous request, you must use the value of the NextPrimaryKey parameter for the next request.
+            /// <para>The logic of paging. If the value true is returned for the HasNext parameter and a value is returned for the NextPrimaryKey parameter in the response of the previous request, you must use the value of the NextPrimaryKey parameter for the next request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>odps | retail_e_commerce_2 | retail_e_commerce_2 | dws_ec_trd__cate_commodity_gmv_kpy_fy</para>
             /// </summary>
             [NameInMap("NextPrimaryKey")]
             [Validation(Required=false)]
@@ -70,35 +88,50 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Invalid.Tenant.ConnectionNotExists</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The connection does not exist.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bc1ec92159376</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

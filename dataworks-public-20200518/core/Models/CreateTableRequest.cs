@@ -10,83 +10,101 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateTableRequest : TeaModel {
         /// <summary>
-        /// The ID of the MaxCompute project. Specify the ID in the odps.{projectName} format.
+        /// <para>The ID of the MaxCompute project. Specify the ID in the odps.{projectName} format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>odps.test</para>
         /// </summary>
         [NameInMap("AppGuid")]
         [Validation(Required=false)]
         public string AppGuid { get; set; }
 
         /// <summary>
-        /// The ID of the associated category. You can call the [GetMetaCategory](https://help.aliyun.com/document_detail/173932.html) operation to query the IDs of all categories that can be associated.
+        /// <para>The ID of the associated category. You can call the <a href="https://help.aliyun.com/document_detail/173932.html">GetMetaCategory</a> operation to query the IDs of all categories that can be associated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>101</para>
         /// </summary>
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// A reserved parameter.
+        /// <para>A reserved parameter.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The list of fields. A maximum of 1,000 fields are supported.
-        /// 
-        /// This parameter is required.
+        /// <para>The list of fields. A maximum of 1,000 fields are supported.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public List<CreateTableRequestColumns> Columns { get; set; }
         public class CreateTableRequestColumns : TeaModel {
             /// <summary>
-            /// The name of the field. You can configure a maximum of 1,000 fields when you call the CreateTable operation to create a table.
+            /// <para>The name of the field. You can configure a maximum of 1,000 fields when you call the CreateTable operation to create a table.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>columnName1</para>
             /// </summary>
             [NameInMap("ColumnName")]
             [Validation(Required=false)]
             public string ColumnName { get; set; }
 
             /// <summary>
-            /// The display name of the field.
+            /// <para>The display name of the field.</para>
             /// </summary>
             [NameInMap("ColumnNameCn")]
             [Validation(Required=false)]
             public string ColumnNameCn { get; set; }
 
             /// <summary>
-            /// The data type of the field. For information about supported data types, see [Data type editions](https://help.aliyun.com/document_detail/27821.html) in MaxCompute documentation.
+            /// <para>The data type of the field. For information about supported data types, see <a href="https://help.aliyun.com/document_detail/27821.html">Data type editions</a> in MaxCompute documentation.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>string</para>
             /// </summary>
             [NameInMap("ColumnType")]
             [Validation(Required=false)]
             public string ColumnType { get; set; }
 
             /// <summary>
-            /// The comment of the field.
+            /// <para>The comment of the field.</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// Specifies whether the field is a partition field.
+            /// <para>Specifies whether the field is a partition field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsPartitionCol")]
             [Validation(Required=false)]
             public bool? IsPartitionCol { get; set; }
 
             /// <summary>
-            /// The length of the field. For more information, see [MaxCompute data type editions](https://help.aliyun.com/document_detail/159541.html).
+            /// <para>The length of the field. For more information, see <a href="https://help.aliyun.com/document_detail/159541.html">MaxCompute data type editions</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("Length")]
             [Validation(Required=false)]
             public int? Length { get; set; }
 
             /// <summary>
-            /// The sequence number of the field. You can use this parameter to specify how fields are sorted in a table. By default, fields are sorted based on the order in which requests are created. If the field is a partition field, this parameter is not supported.
+            /// <para>The sequence number of the field. You can use this parameter to specify how fields are sorted in a table. By default, fields are sorted based on the order in which requests are created. If the field is a partition field, this parameter is not supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("SeqNumber")]
             [Validation(Required=false)]
@@ -95,74 +113,101 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The comment.
+        /// <para>The comment.</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// The endpoint of MaxCompute.
+        /// <para>The endpoint of MaxCompute.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>odps://abc</para>
         /// </summary>
         [NameInMap("Endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// The environment type of the DataWorks workspace. Valid values:
+        /// <para>The environment type of the DataWorks workspace. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: development environment</description></item>
+        /// <item><description>1: production environment</description></item>
+        /// </list>
         /// 
-        /// *   0: development environment
-        /// *   1: production environment
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public int? EnvType { get; set; }
 
         /// <summary>
-        /// The storage type of the external table. Valid values:
+        /// <para>The storage type of the external table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Object Storage Service (OSS)</description></item>
+        /// <item><description>1: Tablestore</description></item>
+        /// <item><description>2: Volume</description></item>
+        /// <item><description>3: MySQL</description></item>
+        /// </list>
         /// 
-        /// *   0: Object Storage Service (OSS)
-        /// *   1: Tablestore
-        /// *   2: Volume
-        /// *   3: MySQL
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ExternalTableType")]
         [Validation(Required=false)]
         public string ExternalTableType { get; set; }
 
         /// <summary>
-        /// Specifies whether to create a MaxCompute partitioned table. Valid values: 1 and 0. The value 1 indicates a partitioned table. The value 0 indicates a non-partitioned table. This parameter is deprecated. Do not use this parameter. The Column.N.isPartitionCol parameter is used to specify whether to create a MaxCompute partitioned table. If the Column.N.isPartitionCol parameter is set to true, a MaxCompute partitioned table is created.
+        /// <para>Specifies whether to create a MaxCompute partitioned table. Valid values: 1 and 0. The value 1 indicates a partitioned table. The value 0 indicates a non-partitioned table. This parameter is deprecated. Do not use this parameter. The Column.N.isPartitionCol parameter is used to specify whether to create a MaxCompute partitioned table. If the Column.N.isPartitionCol parameter is set to true, a MaxCompute partitioned table is created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("HasPart")]
         [Validation(Required=false)]
         public int? HasPart { get; set; }
 
         /// <summary>
-        /// Specifies whether to create a view or table. Valid values:
+        /// <para>Specifies whether to create a view or table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Create a table.</description></item>
+        /// <item><description>1: Create a view.</description></item>
+        /// </list>
         /// 
-        /// *   0: Create a table.
-        /// *   1: Create a view.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("IsView")]
         [Validation(Required=false)]
         public int? IsView { get; set; }
 
         /// <summary>
-        /// The lifecycle of the table. Unit: days. By default, this parameter is left empty, which indicates that the table is permanently stored.
+        /// <para>The lifecycle of the table. Unit: days. By default, this parameter is left empty, which indicates that the table is permanently stored.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("LifeCycle")]
         [Validation(Required=false)]
         public int? LifeCycle { get; set; }
 
         /// <summary>
-        /// The storage location of the external table.
+        /// <para>The storage location of the external table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>location</para>
         /// </summary>
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
 
         /// <summary>
-        /// The ID of the logical level.
+        /// <para>The ID of the logical level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>101</para>
         /// </summary>
         [NameInMap("LogicalLevelId")]
         [Validation(Required=false)]
@@ -173,51 +218,71 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the physical level.
+        /// <para>The ID of the physical level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>101</para>
         /// </summary>
         [NameInMap("PhysicsLevelId")]
         [Validation(Required=false)]
         public long? PhysicsLevelId { get; set; }
 
         /// <summary>
-        /// The DataWorks workspace ID.
+        /// <para>The DataWorks workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.
+        /// <para>The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("Schema")]
         [Validation(Required=false)]
         public string Schema { get; set; }
 
         /// <summary>
-        /// The name of the table.
+        /// <para>The name of the table.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tableName1</para>
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]
         public string TableName { get; set; }
 
         /// <summary>
-        /// The list of themes.
+        /// <para>The list of themes.</para>
         /// </summary>
         [NameInMap("Themes")]
         [Validation(Required=false)]
         public List<CreateTableRequestThemes> Themes { get; set; }
         public class CreateTableRequestThemes : TeaModel {
             /// <summary>
-            /// The theme ID.
+            /// <para>The theme ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>101</para>
             /// </summary>
             [NameInMap("ThemeId")]
             [Validation(Required=false)]
             public long? ThemeId { get; set; }
 
             /// <summary>
-            /// The level that corresponds to the theme ID.
+            /// <para>The level that corresponds to the theme ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>101</para>
             /// </summary>
             [NameInMap("ThemeLevel")]
             [Validation(Required=false)]
@@ -226,11 +291,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// Specifies whether the table or workspace is visible. Valid values:
+        /// <para>Specifies whether the table or workspace is visible. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Both the table and workspace are invisible.</description></item>
+        /// <item><description>1: Both the table and workspace are visible.</description></item>
+        /// <item><description>2: Only the workspace is visible.</description></item>
+        /// </list>
         /// 
-        /// *   0: Both the table and workspace are invisible.
-        /// *   1: Both the table and workspace are visible.
-        /// *   2: Only the workspace is visible.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]

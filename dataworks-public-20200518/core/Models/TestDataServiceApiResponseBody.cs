@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TestDataServiceApiResponseBody : TeaModel {
         /// <summary>
-        /// The information about the test.
+        /// <para>The information about the test.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TestDataServiceApiResponseBodyData Data { get; set; }
         public class TestDataServiceApiResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the test.
+            /// <para>The ID of the test.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>232432</para>
             /// </summary>
             [NameInMap("TestId")]
             [Validation(Required=false)]
@@ -26,7 +29,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abdsfewe</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

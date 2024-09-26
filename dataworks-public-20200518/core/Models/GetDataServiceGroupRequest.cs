@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataServiceGroupRequest : TeaModel {
         /// <summary>
-        /// The business process ID.
+        /// <para>The business process ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ds_123abc</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The workspace ID.
+        /// <para>The workspace ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10001</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The tenant ID. This parameter is deprecated.
+        /// <para>The tenant ID. This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10002</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

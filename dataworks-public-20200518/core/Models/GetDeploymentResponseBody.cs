@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDeploymentResponseBody : TeaModel {
         /// <summary>
-        /// The data about the deployment task.
+        /// <para>The data about the deployment task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -20,14 +20,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<GetDeploymentResponseBodyDataDeployedItems> DeployedItems { get; set; }
             public class GetDeploymentResponseBodyDataDeployedItems : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>507642378</para>
+                /// </summary>
                 [NameInMap("FileId")]
                 [Validation(Required=false)]
                 public long? FileId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>7</para>
+                /// </summary>
                 [NameInMap("FileVersion")]
                 [Validation(Required=false)]
                 public long? FileVersion { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
@@ -35,80 +47,108 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The details of the deployment task.
+            /// <para>The details of the deployment task.</para>
             /// </summary>
             [NameInMap("Deployment")]
             [Validation(Required=false)]
             public GetDeploymentResponseBodyDataDeployment Deployment { get; set; }
             public class GetDeploymentResponseBodyDataDeployment : TeaModel {
                 /// <summary>
-                /// The check status of one or more files in the deployment task. If the value of the ToEnvironment parameter is 1, the files can be deployed to the production environment only when the value of the Status parameter is 1 and the CheckingStatus parameter is empty. Valid values:
+                /// <para>The check status of one or more files in the deployment task. If the value of the ToEnvironment parameter is 1, the files can be deployed to the production environment only when the value of the Status parameter is 1 and the CheckingStatus parameter is empty. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>7: The file failed the check.</description></item>
+                /// <item><description>8: The file is being checked.</description></item>
+                /// </list>
                 /// 
-                /// *   7: The file failed the check.
-                /// *   8: The file is being checked.
+                /// <b>Example:</b>
+                /// <para>7</para>
                 /// </summary>
                 [NameInMap("CheckingStatus")]
                 [Validation(Required=false)]
                 public int? CheckingStatus { get; set; }
 
                 /// <summary>
-                /// The time when the deployment task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// <para>The time when the deployment task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1593877765000</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account used by the user who created the deployment task.
+                /// <para>The ID of the Alibaba Cloud account used by the user who created the deployment task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20030****</para>
                 /// </summary>
                 [NameInMap("CreatorId")]
                 [Validation(Required=false)]
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// The error message that was returned when the deployment task failed. In this case, the value of the Status parameter is 2.
+                /// <para>The error message that was returned when the deployment task failed. In this case, the value of the Status parameter is 2.</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// The time when the deployment task was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// <para>The time when the deployment task was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1593877765000</para>
                 /// </summary>
                 [NameInMap("ExecuteTime")]
                 [Validation(Required=false)]
                 public long? ExecuteTime { get; set; }
 
                 /// <summary>
-                /// The environment in which the deployment task was run. Valid values: 0 and 1. A value of 0 indicates the on-premises environment. A value of 1 indicates the development environment.
+                /// <para>The environment in which the deployment task was run. Valid values: 0 and 1. A value of 0 indicates the on-premises environment. A value of 1 indicates the development environment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("FromEnvironment")]
                 [Validation(Required=false)]
                 public int? FromEnvironment { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account used by the user who ran the deployment task.
+                /// <para>The ID of the Alibaba Cloud account used by the user who ran the deployment task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2003****</para>
                 /// </summary>
                 [NameInMap("HandlerId")]
                 [Validation(Required=false)]
                 public string HandlerId { get; set; }
 
                 /// <summary>
-                /// The name of the deployment task. The value is the same as the name of the specific deployment task that is displayed on the Release Package page in the Deploy module.
+                /// <para>The name of the deployment task. The value is the same as the name of the specific deployment task that is displayed on the Release Package page in the Deploy module.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ods_user_info_d-2020-07-04_20030****</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The status of the deployment task. Valid values: 0, 1, and 2. A value of 0 indicates that the task is ready. A value of 1 indicates that the task was successful. A value of 2 indicates that the task failed.
+                /// <para>The status of the deployment task. Valid values: 0, 1, and 2. A value of 0 indicates that the task is ready. A value of 1 indicates that the task was successful. A value of 2 indicates that the task failed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// The environment to which the file was deployed. Valid values: 1 and 2. A value of 1 indicates the development environment. A value of 2 indicates the production environment.
+                /// <para>The environment to which the file was deployed. Valid values: 1 and 2. A value of 1 indicates the development environment. A value of 2 indicates the production environment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("ToEnvironment")]
                 [Validation(Required=false)]
@@ -119,35 +159,50 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// <para>The error code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Invalid.Tenant.ConnectionNotExists</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The connection does not exist.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can troubleshoot errors based on the ID.
+        /// <para>The ID of the request. You can troubleshoot errors based on the ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0000-ABCD-EFG****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

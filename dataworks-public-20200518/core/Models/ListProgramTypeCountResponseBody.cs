@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProgramTypeCountResponseBody : TeaModel {
         /// <summary>
-        /// The list of node types and quantity.
+        /// <para>The list of node types and quantity.</para>
         /// </summary>
         [NameInMap("ProgramTypeAndCounts")]
         [Validation(Required=false)]
         public List<ListProgramTypeCountResponseBodyProgramTypeAndCounts> ProgramTypeAndCounts { get; set; }
         public class ListProgramTypeCountResponseBodyProgramTypeAndCounts : TeaModel {
             /// <summary>
-            /// The number of nodes.
+            /// <para>The number of nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The node type.
+            /// <para>The node type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ODPS_SQL</para>
             /// </summary>
             [NameInMap("ProgramType")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E6F0DBDD-5AD****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateIDEEventResultResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8abcb91f-d266-4073-b907-2ed670378ed1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -25,38 +25,70 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public ListTablesResponseBodyDataTableEntityListEntityContent EntityContent { get; set; }
                 public class ListTablesResponseBodyDataTableEntityListEntityContent : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>accountId:cn-shanghai:odps:project</para>
+                    /// </summary>
                     [NameInMap("DataSourceQualifiedName")]
                     [Validation(Required=false)]
                     public string DataSourceQualifiedName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>e70f92239d491057f6a2563b545bdaf8cc6b537d9dc55ec84c55f7cfefg</para>
+                    /// </summary>
                     [NameInMap("DataSourceUniqueId")]
                     [Validation(Required=false)]
                     public string DataSourceUniqueId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>database</para>
+                    /// </summary>
                     [NameInMap("DatabaseName")]
                     [Validation(Required=false)]
                     public string DatabaseName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>rm-uf6rn0123</para>
+                    /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>project</para>
+                    /// </summary>
                     [NameInMap("ProjectName")]
                     [Validation(Required=false)]
                     public string ProjectName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>table</para>
+                    /// </summary>
                     [NameInMap("TableName")]
                     [Validation(Required=false)]
                     public string TableName { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>maxcompute-table.project.table</para>
+                /// </summary>
                 [NameInMap("EntityQualifiedName")]
                 [Validation(Required=false)]
                 public string EntityQualifiedName { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
@@ -64,7 +96,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E25887B7-579C-54A5-9C4F-83A0DE367DD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

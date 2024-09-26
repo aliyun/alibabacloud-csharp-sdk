@@ -10,13 +10,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgPlatformQueryProjectsAndSchemaFromMetaRequest : TeaModel {
         /// <summary>
-        /// The type of the compute engine. Valid values:
+        /// <para>The type of the compute engine. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ODPS.ODPS</description></item>
+        /// <item><description>EMR</description></item>
+        /// <item><description>HOLO.POSTGRES</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   ODPS.ODPS
-        /// *   EMR
-        /// *   HOLO.POSTGRES
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>EMR</para>
         /// </summary>
         [NameInMap("EngineName")]
         [Validation(Required=false)]

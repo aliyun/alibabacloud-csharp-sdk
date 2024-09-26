@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetSuccessInstanceTrendResponseBody : TeaModel {
         /// <summary>
-        /// The trend of statistics on the instance status in different time periods.
+        /// <para>The trend of statistics on the instance status in different time periods.</para>
         /// </summary>
         [NameInMap("InstanceStatusTrend")]
         [Validation(Required=false)]
         public GetSuccessInstanceTrendResponseBodyInstanceStatusTrend InstanceStatusTrend { get; set; }
         public class GetSuccessInstanceTrendResponseBodyInstanceStatusTrend : TeaModel {
             /// <summary>
-            /// The average trend.
+            /// <para>The average trend.</para>
             /// </summary>
             [NameInMap("AvgTrend")]
             [Validation(Required=false)]
             public List<GetSuccessInstanceTrendResponseBodyInstanceStatusTrendAvgTrend> AvgTrend { get; set; }
             public class GetSuccessInstanceTrendResponseBodyInstanceStatusTrendAvgTrend : TeaModel {
                 /// <summary>
-                /// The number of instances.
+                /// <para>The number of instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// The point in time. Valid values: 00:00 to 23:00.
+                /// <para>The point in time. Valid values: 00:00 to 23:00.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>01:00</para>
                 /// </summary>
                 [NameInMap("TimePoint")]
                 [Validation(Required=false)]
@@ -40,21 +46,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The trend on the current day.
+            /// <para>The trend on the current day.</para>
             /// </summary>
             [NameInMap("TodayTrend")]
             [Validation(Required=false)]
             public List<GetSuccessInstanceTrendResponseBodyInstanceStatusTrendTodayTrend> TodayTrend { get; set; }
             public class GetSuccessInstanceTrendResponseBodyInstanceStatusTrendTodayTrend : TeaModel {
                 /// <summary>
-                /// The number of instances.
+                /// <para>The number of instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// The point in time. Valid values: 00:00 to 23:00.
+                /// <para>The point in time. Valid values: 00:00 to 23:00.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>01:00</para>
                 /// </summary>
                 [NameInMap("TimePoint")]
                 [Validation(Required=false)]
@@ -63,21 +75,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The trend on the previous day.
+            /// <para>The trend on the previous day.</para>
             /// </summary>
             [NameInMap("YesterdayTrend")]
             [Validation(Required=false)]
             public List<GetSuccessInstanceTrendResponseBodyInstanceStatusTrendYesterdayTrend> YesterdayTrend { get; set; }
             public class GetSuccessInstanceTrendResponseBodyInstanceStatusTrendYesterdayTrend : TeaModel {
                 /// <summary>
-                /// The number of instances.
+                /// <para>The number of instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// The point in time. Valid values: 00:00 to 23:00.
+                /// <para>The point in time. Valid values: 00:00 to 23:00.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>01:00</para>
                 /// </summary>
                 [NameInMap("TimePoint")]
                 [Validation(Required=false)]
@@ -88,7 +106,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>952795279527ab****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

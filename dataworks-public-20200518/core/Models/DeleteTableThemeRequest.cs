@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteTableThemeRequest : TeaModel {
         /// <summary>
-        /// The ID of the DataWorks workspace.
+        /// <para>The ID of the DataWorks workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The ID of the theme.
+        /// <para>The ID of the theme.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("ThemeId")]
         [Validation(Required=false)]

@@ -10,98 +10,125 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateProjectRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. This parameter can be left empty.
+        /// <para>The client token that is used to ensure the idempotence of the request. This parameter can be left empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABFUOEUOTRTRJKE</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to disable the Develop role. Valid values:
+        /// <para>Specifies whether to disable the Develop role. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// </list>
         /// 
-        /// *   **false** (default)
-        /// *   **true**
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DisableDevelopment")]
         [Validation(Required=false)]
         public bool? DisableDevelopment { get; set; }
 
         /// <summary>
-        /// Specifies whether to allow you to download the query result from DataStudio. Valid values:
+        /// <para>Specifies whether to allow you to download the query result from DataStudio. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b> (default): allows you to download the query result from DataStudio.</description></item>
+        /// <item><description><b>0</b>: does not allow you to download the query result from DataStudio.</description></item>
+        /// </list>
         /// 
-        /// *   **1** (default): allows you to download the query result from DataStudio.
-        /// *   **0**: does not allow you to download the query result from DataStudio.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("IsAllowDownload")]
         [Validation(Required=false)]
         public int? IsAllowDownload { get; set; }
 
         /// <summary>
-        /// The description of the workspace.
+        /// <para>The description of the workspace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test_describe</para>
         /// </summary>
         [NameInMap("ProjectDescription")]
         [Validation(Required=false)]
         public string ProjectDescription { get; set; }
 
         /// <summary>
-        /// The name of the workspace. The name can contain only letters, digits, and underscores (_) and must start with a letter or digit.
+        /// <para>The name of the workspace. The name can contain only letters, digits, and underscores (_) and must start with a letter or digit.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test_project</para>
         /// </summary>
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
-        /// The mode of the workspace. For more information about the differences between the modes of workspaces, see [Differences between workspaces in basic mode and workspaces in standard mode](https://help.aliyun.com/document_detail/85772.html).
+        /// <para>The mode of the workspace. For more information about the differences between the modes of workspaces, see <a href="https://help.aliyun.com/document_detail/85772.html">Differences between workspaces in basic mode and workspaces in standard mode</a>.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2</b> (default): basic mode</description></item>
+        /// <item><description><b>3</b>: standard mode</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   **2** (default): basic mode
-        /// *   **3**: standard mode
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectMode")]
         [Validation(Required=false)]
         public int? ProjectMode { get; set; }
 
         /// <summary>
-        /// The display name of the workspace.
+        /// <para>The display name of the workspace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test_project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzbn7pti3****</para>
         /// </summary>
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tags added to the workspace.
+        /// <para>The tags added to the workspace.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateProjectRequestTags> Tags { get; set; }
         public class CreateProjectRequestTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>key</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

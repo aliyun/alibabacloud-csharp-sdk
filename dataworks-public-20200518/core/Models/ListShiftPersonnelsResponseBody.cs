@@ -10,56 +10,71 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListShiftPersonnelsResponseBody : TeaModel {
         /// <summary>
-        /// The pagination data.
+        /// <para>The pagination data.</para>
         /// </summary>
         [NameInMap("Paging")]
         [Validation(Required=false)]
         public ListShiftPersonnelsResponseBodyPaging Paging { get; set; }
         public class ListShiftPersonnelsResponseBodyPaging : TeaModel {
             /// <summary>
-            /// The page number. Valid values: 1 to 100. Default value: 1.
+            /// <para>The page number. Valid values: 1 to 100. Default value: 1.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page. Default value: 10. Maximum value: 100.
+            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// A list of on-duty engineers in a shift schedule.
+            /// <para>A list of on-duty engineers in a shift schedule.</para>
             /// </summary>
             [NameInMap("ShiftPersons")]
             [Validation(Required=false)]
             public List<ListShiftPersonnelsResponseBodyPagingShiftPersons> ShiftPersons { get; set; }
             public class ListShiftPersonnelsResponseBodyPagingShiftPersons : TeaModel {
                 /// <summary>
-                /// The time when the on-duty engineer starts the shift.
+                /// <para>The time when the on-duty engineer starts the shift.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1593950832000</para>
                 /// </summary>
                 [NameInMap("BeginTime")]
                 [Validation(Required=false)]
                 public long? BeginTime { get; set; }
 
                 /// <summary>
-                /// The time when the on-duty engineer ends the shift.
+                /// <para>The time when the on-duty engineer ends the shift.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1593950832000</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// The name of the on-duty engineer.
+                /// <para>The name of the on-duty engineer.</para>
                 /// </summary>
                 [NameInMap("ShiftPersonName")]
                 [Validation(Required=false)]
                 public string ShiftPersonName { get; set; }
 
                 /// <summary>
-                /// The UID of the on-duty engineer.
+                /// <para>The UID of the on-duty engineer.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3726346****</para>
                 /// </summary>
                 [NameInMap("ShiftPersonUID")]
                 [Validation(Required=false)]
@@ -68,7 +83,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -77,7 +95,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request ID. You can use the ID to troubleshoot issues.
+        /// <para>The request ID. You can use the ID to troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0000-ABCD-EFG</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,54 +10,60 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDIAlarmRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the task with which the alert rule is associated.
+        /// <para>The ID of the task with which the alert rule is associated.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>11265</para>
         /// </summary>
         [NameInMap("DIJobId")]
         [Validation(Required=false)]
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// The description of the alert rule.
+        /// <para>The description of the alert rule.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the alert rule. By default, the alert rule is disabled.
+        /// <para>Specifies whether to enable the alert rule. By default, the alert rule is disabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// The metric type in the alert rule. Valid values:
+        /// <para>The metric type in the alert rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Heartbeat</description></item>
+        /// <item><description>FailoverCount</description></item>
+        /// <item><description>Delay</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Heartbeat
-        /// *   FailoverCount
-        /// *   Delay
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Heartbeat</para>
         /// </summary>
         [NameInMap("MetricType")]
         [Validation(Required=false)]
         public string MetricType { get; set; }
 
         /// <summary>
-        /// The alert notification settings.
-        /// 
-        /// This parameter is required.
+        /// <para>The alert notification settings.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NotificationSettings")]
         [Validation(Required=false)]
         public string NotificationSettingsShrink { get; set; }
 
         /// <summary>
-        /// The conditions that can trigger the alert rule.
-        /// 
-        /// This parameter is required.
+        /// <para>The conditions that can trigger the alert rule.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TriggerConditions")]
         [Validation(Required=false)]

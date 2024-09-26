@@ -10,98 +10,137 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDagResponseBody : TeaModel {
         /// <summary>
-        /// The details of the DAG.
+        /// <para>The details of the DAG.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDagResponseBodyData Data { get; set; }
         public class GetDagResponseBodyData : TeaModel {
             /// <summary>
-            /// The data timestamp.
+            /// <para>The data timestamp.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1605052800000</para>
             /// </summary>
             [NameInMap("Bizdate")]
             [Validation(Required=false)]
             public long? Bizdate { get; set; }
 
             /// <summary>
-            /// The time when the DAG was created.
+            /// <para>The time when the DAG was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1605052800000</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The creator.
+            /// <para>The creator.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1736629400048545</para>
             /// </summary>
             [NameInMap("CreateUser")]
             [Validation(Required=false)]
             public string CreateUser { get; set; }
 
             /// <summary>
-            /// The DAG ID.
+            /// <para>The DAG ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>351249682</para>
             /// </summary>
             [NameInMap("DagId")]
             [Validation(Required=false)]
             public long? DagId { get; set; }
 
             /// <summary>
-            /// The time when the DAG finished running.
+            /// <para>The time when the DAG finished running.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1605052800000</para>
             /// </summary>
             [NameInMap("FinishTime")]
             [Validation(Required=false)]
             public long? FinishTime { get; set; }
 
             /// <summary>
-            /// The time when the DAG was scheduled to run.
+            /// <para>The time when the DAG was scheduled to run.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1605052800000</para>
             /// </summary>
             [NameInMap("Gmtdate")]
             [Validation(Required=false)]
             public long? Gmtdate { get; set; }
 
             /// <summary>
-            /// The time when the DAG was last modified.
+            /// <para>The time when the DAG was last modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1605052800000</para>
             /// </summary>
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// The name of the DAG.
+            /// <para>The name of the DAG.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_dag</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The sequence number of the operation.
+            /// <para>The sequence number of the operation.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("OpSeq")]
             [Validation(Required=false)]
             public long? OpSeq { get; set; }
 
             /// <summary>
-            /// The workspace ID.
+            /// <para>The workspace ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>112345</para>
             /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// The time when the DAG started to run.
+            /// <para>The time when the DAG started to run.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1605052800000</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// The status of the DAG. Valid values: CREATED, RUNNING, FAILURE, and SUCCESS.
+            /// <para>The status of the DAG. Valid values: CREATED, RUNNING, FAILURE, and SUCCESS.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>FAILURE</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG. The value MANUAL indicates the DAG for a manually triggered workflow. The value SMOKE_TEST indicates the DAG for a smoke testing workflow. The value SUPPLY_DATA indicates the DAG for a data backfill instance. The value BUSINESS_PROCESS_DAG indicates the DAG for a one-time workflow.
+            /// <para>The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG. The value MANUAL indicates the DAG for a manually triggered workflow. The value SMOKE_TEST indicates the DAG for a smoke testing workflow. The value SUPPLY_DATA indicates the DAG for a data backfill instance. The value BUSINESS_PROCESS_DAG indicates the DAG for a one-time workflow.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MANUAL_FLOW</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -110,35 +149,50 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Invalid.Tenant.ConnectionNotExists</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The connection does not exist.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7782a299-b291-4fee-8424-cf8058efa8e8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

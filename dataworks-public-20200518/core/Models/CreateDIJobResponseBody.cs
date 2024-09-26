@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDIJobResponseBody : TeaModel {
         /// <summary>
-        /// The synchronization task ID.
+        /// <para>The synchronization task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11792</para>
         /// </summary>
         [NameInMap("DIJobId")]
         [Validation(Required=false)]
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the request ID to query logs and troubleshoot issues.
+        /// <para>The request ID. You can use the request ID to query logs and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4F6AB6B3-41FB-5EBB-AFB2-0C98D49DA2BB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteDataServiceApiAuthorityRequest : TeaModel {
         /// <summary>
-        /// The API ID.
+        /// <para>The API ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10001</para>
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public long? ApiId { get; set; }
 
         /// <summary>
-        /// The ID of the workspace from which you want to revoke the access permissions on the API.
+        /// <para>The ID of the workspace from which you want to revoke the access permissions on the API.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10002</para>
         /// </summary>
         [NameInMap("AuthorizedProjectId")]
         [Validation(Required=false)]
         public long? AuthorizedProjectId { get; set; }
 
         /// <summary>
-        /// The workspace ID.
+        /// <para>The workspace ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10003</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The tenant ID. This parameter is deprecated.
+        /// <para>The tenant ID. This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10004</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

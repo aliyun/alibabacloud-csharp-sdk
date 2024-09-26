@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableIntroWikiRequest : TeaModel {
         /// <summary>
-        /// The GUID of the metatable.
+        /// <para>The GUID of the metatable.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>odps.engine_name.table_name</para>
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]
         public string TableGuid { get; set; }
 
         /// <summary>
-        /// The version of the instructions.
+        /// <para>The version of the instructions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("WikiVersion")]
         [Validation(Required=false)]

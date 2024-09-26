@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetBaselineStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the baseline.
+        /// <para>The ID of the baseline.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("BaselineId")]
         [Validation(Required=false)]
         public long? BaselineId { get; set; }
 
         /// <summary>
-        /// The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\\"T\\"HH:mm:ssZ format. The time must be in UTC.
+        /// <para>The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2020-07-07T00:00:00+0800</para>
         /// </summary>
         [NameInMap("Bizdate")]
         [Validation(Required=false)]
         public string Bizdate { get; set; }
 
         /// <summary>
-        /// The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.
+        /// <para>The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("InGroupId")]
         [Validation(Required=false)]

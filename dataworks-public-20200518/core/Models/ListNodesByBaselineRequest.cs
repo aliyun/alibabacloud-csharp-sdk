@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesByBaselineRequest : TeaModel {
         /// <summary>
-        /// The baseline ID. You can call the [ListBaselineConfigs](https://help.aliyun.com/document_detail/173964.html) operation to query the baseline ID.
+        /// <para>The baseline ID. You can call the <a href="https://help.aliyun.com/document_detail/173964.html">ListBaselineConfigs</a> operation to query the baseline ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("BaselineId")]
         [Validation(Required=false)]

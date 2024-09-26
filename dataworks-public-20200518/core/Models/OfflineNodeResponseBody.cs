@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class OfflineNodeResponseBody : TeaModel {
         /// <summary>
-        /// The request ID. You can use the request ID to query logs and troubleshoot issues.
+        /// <para>The request ID. You can use the request ID to query logs and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E6F0DBDD-5AD****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

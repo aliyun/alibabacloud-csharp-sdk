@@ -9,26 +9,50 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateBusinessResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100001</para>
+        /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
         public long? BusinessId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Invalid.Tenant.ConnectionNotExists</para>
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>The connection does not exist.</para>
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0000-ABCD-EFG****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

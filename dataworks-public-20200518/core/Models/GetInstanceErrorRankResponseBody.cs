@@ -10,56 +10,71 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceErrorRankResponseBody : TeaModel {
         /// <summary>
-        /// The ranking data of nodes on which errors occurred.
+        /// <para>The ranking data of nodes on which errors occurred.</para>
         /// </summary>
         [NameInMap("InstanceErrorRank")]
         [Validation(Required=false)]
         public GetInstanceErrorRankResponseBodyInstanceErrorRank InstanceErrorRank { get; set; }
         public class GetInstanceErrorRankResponseBodyInstanceErrorRank : TeaModel {
             /// <summary>
-            /// The ranking data of nodes on which errors occurred within the last month.
+            /// <para>The ranking data of nodes on which errors occurred within the last month.</para>
             /// </summary>
             [NameInMap("ErrorRank")]
             [Validation(Required=false)]
             public List<GetInstanceErrorRankResponseBodyInstanceErrorRankErrorRank> ErrorRank { get; set; }
             public class GetInstanceErrorRankResponseBodyInstanceErrorRankErrorRank : TeaModel {
                 /// <summary>
-                /// The number of errors that occurred on the node.
+                /// <para>The number of errors that occurred on the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// The node ID.
+                /// <para>The node ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9527</para>
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public long? NodeId { get; set; }
 
                 /// <summary>
-                /// The name of the node.
+                /// <para>The name of the node.</para>
                 /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account used by the node owner.
+                /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>952795279527</para>
                 /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// The type of the node.
+                /// <para>The type of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("PrgType")]
                 [Validation(Required=false)]
                 public int? PrgType { get; set; }
 
                 /// <summary>
-                /// The DataWorks workspace ID.
+                /// <para>The DataWorks workspace ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9527</para>
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
@@ -68,7 +83,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The timestamp at which the rankings were updated.
+            /// <para>The timestamp at which the rankings were updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1600963200000</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -77,7 +95,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>952795279527****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

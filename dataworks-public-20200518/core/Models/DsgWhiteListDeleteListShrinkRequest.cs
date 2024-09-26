@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgWhiteListDeleteListShrinkRequest : TeaModel {
         /// <summary>
-        /// The IDs of the whitelists.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the whitelists.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]

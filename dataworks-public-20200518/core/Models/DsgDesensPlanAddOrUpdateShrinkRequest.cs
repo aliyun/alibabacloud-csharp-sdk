@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgDesensPlanAddOrUpdateShrinkRequest : TeaModel {
         /// <summary>
-        /// A collection of data masking rules that you want to add or modify.
-        /// 
-        /// This parameter is required.
+        /// <para>A collection of data masking rules that you want to add or modify.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesensRules")]
         [Validation(Required=false)]

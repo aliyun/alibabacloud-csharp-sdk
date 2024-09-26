@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SearchNodesByOutputRequest : TeaModel {
         /// <summary>
-        /// The output names of the node. If you specify multiple output names, separate them with commas (,).
+        /// <para>The output names of the node. If you specify multiple output names, separate them with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>aaaaa.1231412_out,bbbb.12313123_out</para>
         /// </summary>
         [NameInMap("Outputs")]
         [Validation(Required=false)]
         public string Outputs { get; set; }
 
         /// <summary>
-        /// The environment of Operation Center. Valid values: PROD and DEV.
+        /// <para>The environment of Operation Center. Valid values: PROD and DEV.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PROD</para>
         /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]

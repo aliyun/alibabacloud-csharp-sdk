@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetAlertMessageRequest : TeaModel {
         /// <summary>
-        /// The alert ID. You can all the [ListAlertMessages](https://help.aliyun.com/document_detail/173961.html) operation to obtain the alert ID.
+        /// <para>The alert ID. You can all the <a href="https://help.aliyun.com/document_detail/173961.html">ListAlertMessages</a> operation to obtain the alert ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1421</para>
         /// </summary>
         [NameInMap("AlertId")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class AddToMetaCategoryRequest : TeaModel {
         /// <summary>
-        /// The ID of the category.
+        /// <para>The ID of the category.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// The GUID of the metatable.
+        /// <para>The GUID of the metatable.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>odps.engine_name.table_name</para>
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]

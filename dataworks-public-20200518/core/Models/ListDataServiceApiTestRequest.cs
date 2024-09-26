@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceApiTestRequest : TeaModel {
         /// <summary>
-        /// The ID of the DataService Studio API on which tests are performed.
+        /// <para>The ID of the DataService Studio API on which tests are performed.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public long? ApiId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100.
+        /// <para>The number of entries to return on each page. Maximum value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

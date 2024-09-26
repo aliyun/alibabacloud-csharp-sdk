@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class LineageRelationRegisterBulkVO : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1684327487964</para>
+        /// </summary>
         [NameInMap("CreateTimestamp")]
         [Validation(Required=false)]
         public long? CreateTimestamp { get; set; }

@@ -10,44 +10,61 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateBusinessRequest : TeaModel {
         /// <summary>
-        /// The ID of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to obtain the workflow ID.
+        /// <para>The ID of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to obtain the workflow ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>300000</para>
         /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
         public long? BusinessId { get; set; }
 
         /// <summary>
-        /// The name of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to obtain the workflow name.
+        /// <para>The name of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to obtain the workflow name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MyBusiness</para>
         /// </summary>
         [NameInMap("BusinessName")]
         [Validation(Required=false)]
         public string BusinessName { get; set; }
 
         /// <summary>
-        /// The description of the workflow.
+        /// <para>The description of the workflow.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>modified from my first business</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The owner of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to obtain the workflow owner.
+        /// <para>The owner of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to obtain the workflow owner.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>348428****</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
+        /// <para>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either this parameter or ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
+        /// <para>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either this parameter or ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dw_project</para>
         /// </summary>
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]

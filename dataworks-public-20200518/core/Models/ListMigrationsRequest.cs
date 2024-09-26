@@ -10,39 +10,55 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListMigrationsRequest : TeaModel {
         /// <summary>
-        /// The migration task type. Valid values: IMPORT and EXPORT.
+        /// <para>The migration task type. Valid values: IMPORT and EXPORT.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>IMPORT</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
         [NameInMap("MigrationType")]
         [Validation(Required=false)]
         public string MigrationType { get; set; }
 
         /// <summary>
-        /// The owner ID.
+        /// <para>The owner ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>193379****</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: 100.
+        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID.
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

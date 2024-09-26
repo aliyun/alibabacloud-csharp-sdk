@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string RelationshipGuid { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sql</para>
+        /// </summary>
         [NameInMap("RelationshipType")]
         [Validation(Required=false)]
         public string RelationshipType { get; set; }

@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateMetaCollectionRequest : TeaModel {
         /// <summary>
-        /// The comment of the collection. The comment must be 1 to 64 characters in length.
+        /// <para>The comment of the collection. The comment must be 1 to 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>this is a comment</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// The name of the collection.
+        /// <para>The name of the collection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>myCollectionName</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The unique identifier of the collection.
+        /// <para>The unique identifier of the collection.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>album.396397</para>
         /// </summary>
         [NameInMap("QualifiedName")]
         [Validation(Required=false)]

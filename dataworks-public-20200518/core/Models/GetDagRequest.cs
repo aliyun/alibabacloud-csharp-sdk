@@ -10,22 +10,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDagRequest : TeaModel {
         /// <summary>
-        /// The ID of the DAG. You can use one of the following method to obtain the ID:
+        /// <para>The ID of the DAG. You can use one of the following method to obtain the ID:</para>
+        /// <list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/2780209.html">RunCycleDagNodes</a> operation and obtain the value of the <b>Data</b> response parameter.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/2780210.html">RunSmokeTest</a> operation and obtain the value of the <b>Data</b> response parameter.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/2780218.html">RunManualDagNodes</a> operation and obtain the value of the <b>DagId</b> response parameter.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Call the [RunCycleDagNodes](https://help.aliyun.com/document_detail/2780209.html) operation and obtain the value of the **Data** response parameter.
-        /// *   Call the [RunSmokeTest](https://help.aliyun.com/document_detail/2780210.html) operation and obtain the value of the **Data** response parameter.
-        /// *   Call the [RunManualDagNodes](https://help.aliyun.com/document_detail/2780218.html) operation and obtain the value of the **DagId** response parameter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123141452344525</para>
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The environment of the workspace. Valid values: PROD and DEV.
+        /// <para>The environment of the workspace. Valid values: PROD and DEV.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PROD</para>
         /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]

@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListInstanceAmountResponseBody : TeaModel {
         /// <summary>
-        /// The trend of the number of auto triggered node instances within the specified period of time.
+        /// <para>The trend of the number of auto triggered node instances within the specified period of time.</para>
         /// </summary>
         [NameInMap("InstanceCounts")]
         [Validation(Required=false)]
         public List<ListInstanceAmountResponseBodyInstanceCounts> InstanceCounts { get; set; }
         public class ListInstanceAmountResponseBodyInstanceCounts : TeaModel {
             /// <summary>
-            /// The number of auto triggered node instances.
+            /// <para>The number of auto triggered node instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9527</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The data timestamp at which the number of auto triggered node instances was obtained. This value is a UNIX timestamp.
+            /// <para>The data timestamp at which the number of auto triggered node instances was obtained. This value is a UNIX timestamp.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1623772800000</para>
             /// </summary>
             [NameInMap("Date")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>95279527adhfj****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeRequest : TeaModel {
         /// <summary>
-        /// The interval at which the node is rerun after the node fails to run.
+        /// <para>The interval at which the node is rerun after the node fails to run.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// The priority of the node. Valid values: 1, 3, 5, 7, and 8.
+        /// <para>The priority of the node. Valid values: 1, 3, 5, 7, and 8.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PROD</para>
         /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]

@@ -10,33 +10,41 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateNodeRunModeRequest : TeaModel {
         /// <summary>
-        /// The node ID. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the node ID.
+        /// <para>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// The environment in which the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment, and the value PROD indicates the production environment.
+        /// <para>The environment in which the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment, and the value PROD indicates the production environment.</para>
+        /// <list type="bullet">
+        /// <item><description>PROD</description></item>
+        /// <item><description>DEV</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   PROD
-        /// *   DEV
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PROD</para>
         /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform on the node. Valid values:
+        /// <para>The operation that you want to perform on the node. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: indicates that you want to unfreeze the node.</description></item>
+        /// <item><description>2: indicates that you want to freeze the node.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   0: indicates that you want to unfreeze the node.
-        /// *   2: indicates that you want to freeze the node.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("SchedulerType")]
         [Validation(Required=false)]

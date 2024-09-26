@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDIAlarmRulesRequest : TeaModel {
         /// <summary>
-        /// The ID of the task with which the alert rules are associated.
+        /// <para>The ID of the task with which the alert rules are associated.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>11260</para>
         /// </summary>
         [NameInMap("DIJobId")]
         [Validation(Required=false)]
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: 1.
+        /// <para>The page number. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 10.
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

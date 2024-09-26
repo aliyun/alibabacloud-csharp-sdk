@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateTableLevelRequest : TeaModel {
         /// <summary>
-        /// The description of the table level.
+        /// <para>The description of the table level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The HTTP status code returned.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The type of the table level. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.
+        /// <para>The type of the table level. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("LevelType")]
         [Validation(Required=false)]
         public int? LevelType { get; set; }
 
         /// <summary>
-        /// The name of the table level.
+        /// <para>The name of the table level.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>The description of the table level.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The DataWorks workspace ID.
+        /// <para>The DataWorks workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

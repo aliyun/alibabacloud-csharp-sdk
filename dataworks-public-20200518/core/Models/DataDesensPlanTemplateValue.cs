@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DataDesensPlanTemplateValue : TeaModel {
         /// <summary>
-        /// The name of the data masking method.
+        /// <para>The name of the data masking method.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hash</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Indicates whether a watermark is added. Valid values:
+        /// <para>Indicates whether a watermark is added. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: allow</description></item>
+        /// <item><description>false: disallow</description></item>
+        /// </list>
         /// 
-        /// *   true: allow
-        /// *   false: disallow
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("SupportWaterMark")]
         [Validation(Required=false)]
         public bool? SupportWaterMark { get; set; }
 
         /// <summary>
-        /// The data masking parameters and their descriptions.
+        /// <para>The data masking parameters and their descriptions.</para>
         /// </summary>
         [NameInMap("ExtParamTemplate")]
         [Validation(Required=false)]

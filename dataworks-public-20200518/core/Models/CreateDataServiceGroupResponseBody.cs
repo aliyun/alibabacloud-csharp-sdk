@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDataServiceGroupResponseBody : TeaModel {
         /// <summary>
-        /// The business process ID.
+        /// <para>The business process ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ds_12345</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0000-ABCD-EF****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

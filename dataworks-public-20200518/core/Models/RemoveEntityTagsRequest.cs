@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RemoveEntityTagsRequest : TeaModel {
         /// <summary>
-        /// The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.
+        /// <para>The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>maxcompute-table.projectA.tableA</para>
         /// </summary>
         [NameInMap("QualifiedName")]
         [Validation(Required=false)]
         public string QualifiedName { get; set; }
 
         /// <summary>
-        /// The tag keys.
-        /// 
-        /// This parameter is required.
+        /// <para>The tag keys.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]

@@ -10,234 +10,294 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataSourcesResponseBody : TeaModel {
         /// <summary>
-        /// The query result returned.
+        /// <para>The query result returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDataSourcesResponseBodyData Data { get; set; }
         public class ListDataSourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// The data sources.
+            /// <para>The data sources.</para>
             /// </summary>
             [NameInMap("DataSources")]
             [Validation(Required=false)]
             public List<ListDataSourcesResponseBodyDataDataSources> DataSources { get; set; }
             public class ListDataSourcesResponseBodyDataDataSources : TeaModel {
                 /// <summary>
-                /// The ID of the compute engine with which the data source is associated.
+                /// <para>The ID of the compute engine with which the data source is associated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123</para>
                 /// </summary>
                 [NameInMap("BindingCalcEngineId")]
                 [Validation(Required=false)]
                 public long? BindingCalcEngineId { get; set; }
 
                 /// <summary>
-                /// The status of the data source. Valid values:
+                /// <para>The status of the data source. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: The data source is accessible.</description></item>
+                /// <item><description>2: The data source is inaccessible.</description></item>
+                /// </list>
                 /// 
-                /// *   1: The data source is accessible.
-                /// *   2: The data source is inaccessible.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("ConnectStatus")]
                 [Validation(Required=false)]
                 public int? ConnectStatus { get; set; }
 
                 /// <summary>
-                /// The data connection string. The value of this parameter is in the JSON format. Examples of connection strings of common data sources:
+                /// <para>The data connection string. The value of this parameter is in the JSON format. Examples of connection strings of common data sources:</para>
+                /// <list type="bullet">
+                /// <item><description><para>MaxCompute</para>
+                /// <pre><c>{
+                ///   &quot;pubEndpoint&quot;: &quot;http://service.cn.maxcompute.aliyun.com/api&quot;,
+                ///   &quot;accessId&quot;: &quot;xxxxxxx&quot;,
+                ///   &quot;securityToken&quot;: null,
+                ///   &quot;endpoint&quot;: &quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,
+                ///   &quot;accessKey&quot;: &quot;***&quot;,
+                ///   &quot;name&quot;: &quot;PRE_PROJECT_A_engine&quot;,
+                ///   &quot;project&quot;: &quot;PRE_PROJECT_A&quot;,
+                ///   &quot;vpcEndpoint&quot;: &quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,
+                ///   &quot;region&quot;: &quot;cn-shanghai&quot;,
+                ///   &quot;authType&quot;: &quot;2&quot;
+                /// }
+                /// </c></pre>
+                /// </description></item>
+                /// <item><description><para>MySQL</para>
+                /// <pre><c>{
+                ///   &quot;configType&quot;: &quot;1&quot;,
+                ///   &quot;database&quot;: &quot;mysql_d111b&quot;,
+                ///   &quot;instanceName&quot;: &quot;rm-xxxxxx&quot;,
+                ///   &quot;password&quot;: &quot;***&quot;,
+                ///   &quot;rdsOwnerId&quot;: &quot;12133xxxxxx&quot;,
+                ///   &quot;tag&quot;: &quot;rds&quot;,
+                ///   &quot;username&quot;: &quot;mysql_db111&quot;
+                /// }
+                /// </c></pre>
+                /// </description></item>
+                /// <item><description><para>ApsaraDB RDS for SQL Server</para>
+                /// <pre><c>{
+                ///   &quot;configType&quot;: &quot;1&quot;,
+                ///   &quot;jdbcUrl&quot;: &quot;jdbc:sqlserver://rm-xxxxx.sqlserver.rds.aliyuncs.com:1433;DatabaseName=sqlserver_db1&quot;,
+                ///   &quot;password&quot;: &quot;***&quot;,
+                ///   &quot;tag&quot;: &quot;public&quot;,
+                ///   &quot;username&quot;: &quot;sqlserver_db111&quot;
+                /// }
+                /// </c></pre>
+                /// </description></item>
+                /// <item><description><para>Object Storage Service (OSS)</para>
+                /// <pre><c>{
+                ///   &quot;accessId&quot;: &quot;LTAINbR9Uxxxx&quot;,
+                ///   &quot;accessKey&quot;: &quot;***&quot;,
+                ///   &quot;bucket&quot;: &quot;bigxxx1223&quot;,
+                ///   &quot;configType&quot;: &quot;1&quot;,
+                ///   &quot;endpoint&quot;: &quot;http://oss-cn-hangzhou.aliyuncs.com&quot;,
+                ///   &quot;tag&quot;: &quot;public&quot;
+                /// }
+                /// </c></pre>
+                /// </description></item>
+                /// <item><description><para>ApsaraDB RDS for PostgreSQL</para>
+                /// <pre><c>{
+                ///   &quot;configType&quot;: &quot;1&quot;,
+                ///   &quot;database&quot;: &quot;cdp_xxx&quot;,
+                ///   &quot;instanceName&quot;: &quot;rm-xxxx&quot;,
+                ///   &quot;password&quot;: &quot;***&quot;,
+                ///   &quot;rdsOwnerId&quot;: &quot;121xxxxx&quot;,
+                ///   &quot;tag&quot;: &quot;rds&quot;,
+                ///   &quot;username&quot;: &quot;cdp_xxx&quot;
+                /// }
+                /// </c></pre>
+                /// </description></item>
+                /// <item><description><para>AnalyticDB for MySQL</para>
+                /// <pre><c>{
+                ///   &quot;configType&quot;: &quot;1&quot;,
+                ///   &quot;password&quot;: &quot;***&quot;,
+                ///   &quot;schema&quot;: &quot;ads_demo&quot;,
+                ///   &quot;tag&quot;: &quot;public&quot;,
+                ///   &quot;url&quot;: &quot;ads-xxx-xxxx.cn-hangzhou-1.ads.aliyuncs.com:3029&quot;,
+                ///   &quot;username&quot;: &quot;lslslsls&quot;
+                /// }
+                /// </c></pre>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// *   MaxCompute
-                /// 
-                ///         {
-                ///           "pubEndpoint": "http://service.cn.maxcompute.aliyun.com/api",
-                ///           "accessId": "xxxxxxx",
-                ///           "securityToken": null,
-                ///           "endpoint": "http://service.cn.maxcompute.aliyun-inc.com/api",
-                ///           "accessKey": "***",
-                ///           "name": "PRE_PROJECT_A_engine",
-                ///           "project": "PRE_PROJECT_A",
-                ///           "vpcEndpoint": "http://service.cn.maxcompute.aliyun-inc.com/api",
-                ///           "region": "cn-shanghai",
-                ///           "authType": "2"
-                ///         }
-                /// 
-                /// *   MySQL
-                /// 
-                ///         {
-                ///           "configType": "1",
-                ///           "database": "mysql_d111b",
-                ///           "instanceName": "rm-xxxxxx",
-                ///           "password": "***",
-                ///           "rdsOwnerId": "12133xxxxxx",
-                ///           "tag": "rds",
-                ///           "username": "mysql_db111"
-                ///         }
-                /// 
-                /// *   ApsaraDB RDS for SQL Server
-                /// 
-                ///         {
-                ///           "configType": "1",
-                ///           "jdbcUrl": "jdbc:sqlserver://rm-xxxxx.sqlserver.rds.aliyuncs.com:1433;DatabaseName=sqlserver_db1",
-                ///           "password": "***",
-                ///           "tag": "public",
-                ///           "username": "sqlserver_db111"
-                ///         }
-                /// 
-                /// *   Object Storage Service (OSS)
-                /// 
-                ///         {
-                ///           "accessId": "LTAINbR9Uxxxx",
-                ///           "accessKey": "***",
-                ///           "bucket": "bigxxx1223",
-                ///           "configType": "1",
-                ///           "endpoint": "http://oss-cn-hangzhou.aliyuncs.com",
-                ///           "tag": "public"
-                ///         }
-                /// 
-                /// *   ApsaraDB RDS for PostgreSQL
-                /// 
-                ///         {
-                ///           "configType": "1",
-                ///           "database": "cdp_xxx",
-                ///           "instanceName": "rm-xxxx",
-                ///           "password": "***",
-                ///           "rdsOwnerId": "121xxxxx",
-                ///           "tag": "rds",
-                ///           "username": "cdp_xxx"
-                ///         }
-                /// 
-                /// *   AnalyticDB for MySQL
-                /// 
-                ///         {
-                ///           "configType": "1",
-                ///           "password": "***",
-                ///           "schema": "ads_demo",
-                ///           "tag": "public",
-                ///           "url": "ads-xxx-xxxx.cn-hangzhou-1.ads.aliyuncs.com:3029",
-                ///           "username": "lslslsls"
-                ///         }
+                /// <b>Example:</b>
+                /// <para>{&quot;pubEndpoint&quot;:&quot;<a href="http://service.cn.maxcompute.aliyun.com/api%22,%22accessId%22:%22TMP.3KecGjvzy3i8MYfn2BGHgF7EHGyBFZcHm7GgngrABVRyvvKQrfF5kskR36xP361C3dqwbGo7SGYptAeGyiTwHXqLaBUvYC%22,%22securityToken%22:null,%22endpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22accessKey%22:%22***%22,%22name%22:%22PRE_PROJECT_A_engine%22,%22project%22:%22PRE_PROJECT_A%22,%22vpcEndpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22region%22:%22cn-shanghai%22,%22authType%22:%222%22%7D">http://service.cn.maxcompute.aliyun.com/api&quot;,&quot;accessId&quot;:&quot;TMP.3KecGjvzy3i8MYfn2BGHgF7EHGyBFZcHm7GgngrABVRyvvKQrfF5kskR36xP361C3dqwbGo7SGYptAeGyiTwHXqLaBUvYC&quot;,&quot;securityToken&quot;:null,&quot;endpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;accessKey&quot;:&quot;***&quot;,&quot;name&quot;:&quot;PRE_PROJECT_A_engine&quot;,&quot;project&quot;:&quot;PRE_PROJECT_A&quot;,&quot;vpcEndpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;region&quot;:&quot;cn-shanghai&quot;,&quot;authType&quot;:&quot;2&quot;}</a></para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
-                /// The type of the data source. Valid values:
+                /// <para>The type of the data source. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>odps</description></item>
+                /// <item><description>mysql</description></item>
+                /// <item><description>rds</description></item>
+                /// <item><description>oss</description></item>
+                /// <item><description>sqlserver</description></item>
+                /// <item><description>polardb</description></item>
+                /// <item><description>oracle</description></item>
+                /// <item><description>mongodb</description></item>
+                /// <item><description>emr</description></item>
+                /// <item><description>postgresql</description></item>
+                /// <item><description>analyticdb_for_mysql</description></item>
+                /// <item><description>hybriddb_for_postgresql</description></item>
+                /// <item><description>holo</description></item>
+                /// </list>
                 /// 
-                /// *   odps
-                /// *   mysql
-                /// *   rds
-                /// *   oss
-                /// *   sqlserver
-                /// *   polardb
-                /// *   oracle
-                /// *   mongodb
-                /// *   emr
-                /// *   postgresql
-                /// *   analyticdb_for_mysql
-                /// *   hybriddb_for_postgresql
-                /// *   holo
+                /// <b>Example:</b>
+                /// <para>rds</para>
                 /// </summary>
                 [NameInMap("DataSourceType")]
                 [Validation(Required=false)]
                 public string DataSourceType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the compute engine that is associated with the data source is the default compute engine used by data sources of the same type.
+                /// <para>Indicates whether the compute engine that is associated with the data source is the default compute engine used by data sources of the same type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("DefaultEngine")]
                 [Validation(Required=false)]
                 public bool? DefaultEngine { get; set; }
 
                 /// <summary>
-                /// The description of the data source.
+                /// <para>The description of the data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>a connection</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The environment in which the data source is used. Valid values:
+                /// <para>The environment in which the data source is used. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: development environment</description></item>
+                /// <item><description>1: production environment</description></item>
+                /// </list>
                 /// 
-                /// *   0: development environment
-                /// *   1: production environment
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("EnvType")]
                 [Validation(Required=false)]
                 public int? EnvType { get; set; }
 
                 /// <summary>
-                /// The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.
+                /// <para>The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Mar 17, 2021 4:09:32 PM</para>
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.
+                /// <para>The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Mar 17, 2021 4:09:32 PM</para>
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The data source ID.
+                /// <para>The data source ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The name of the data source.
+                /// <para>The name of the data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>abc</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account that is used to last modify the data source.
+                /// <para>The ID of the Alibaba Cloud account that is used to last modify the data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>193543050****</para>
                 /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// The ID of the workspace to which the data source belongs.
+                /// <para>The ID of the workspace to which the data source belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123</para>
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
                 public int? ProjectId { get; set; }
 
                 /// <summary>
-                /// The sequence number of the data source. Data sources are sorted in descending order based on the value of this parameter.
+                /// <para>The sequence number of the data source. Data sources are sorted in descending order based on the value of this parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>300</para>
                 /// </summary>
                 [NameInMap("Sequence")]
                 [Validation(Required=false)]
                 public int? Sequence { get; set; }
 
                 /// <summary>
-                /// Indicates whether the data source is a shared data source.
+                /// <para>Indicates whether the data source is a shared data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Shared")]
                 [Validation(Required=false)]
                 public bool? Shared { get; set; }
 
                 /// <summary>
-                /// The status of the data source. Valid values:
+                /// <para>The status of the data source. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: The data source is accessible.</description></item>
+                /// <item><description>2: The data source is inaccessible.</description></item>
+                /// </list>
                 /// 
-                /// *   1: The data source is accessible.
-                /// *   2: The data source is inaccessible.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.
+                /// <para>The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mysql</para>
                 /// </summary>
                 [NameInMap("SubType")]
                 [Validation(Required=false)]
                 public string SubType { get; set; }
 
                 /// <summary>
-                /// The tenant ID.
+                /// <para>The tenant ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1234567</para>
                 /// </summary>
                 [NameInMap("TenantId")]
                 [Validation(Required=false)]
@@ -246,21 +306,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of data sources.
+            /// <para>The total number of data sources.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>233</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -269,21 +338,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bc14115159376359****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

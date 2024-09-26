@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetManualDagInstancesRequest : TeaModel {
         /// <summary>
-        /// The ID of the directed acyclic graph (DAG) for the manually triggered workflow. You can call the [CreateManualDag](https://help.aliyun.com/document_detail/189728.html) operation to query the ID.
+        /// <para>The ID of the directed acyclic graph (DAG) for the manually triggered workflow. You can call the <a href="https://help.aliyun.com/document_detail/189728.html">CreateManualDag</a> operation to query the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>7000001231241</para>
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public string DagId { get; set; }
 
         /// <summary>
-        /// The environment of Operation Center. Valid values: PROD and DEV.
+        /// <para>The environment of Operation Center. Valid values: PROD and DEV.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>RPOD</para>
         /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// The name of the workspace to which the manually triggered workflow belongs. You can log on to the DataWorks console and go to the Workspace Settings panel to query the name.
+        /// <para>The name of the workspace to which the manually triggered workflow belongs. You can log on to the DataWorks console and go to the Workspace Settings panel to query the name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test_workspace</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]

@@ -10,41 +10,44 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableAddColumnRequest : TeaModel {
         /// <summary>
-        /// The list of fields.
-        /// 
-        /// This parameter is required.
+        /// <para>The list of fields.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Column")]
         [Validation(Required=false)]
         public List<UpdateTableAddColumnRequestColumn> Column { get; set; }
         public class UpdateTableAddColumnRequestColumn : TeaModel {
             /// <summary>
-            /// The name of the field.
+            /// <para>The name of the field.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>abc</para>
             /// </summary>
             [NameInMap("ColumnName")]
             [Validation(Required=false)]
             public string ColumnName { get; set; }
 
             /// <summary>
-            /// The display name of the field.
+            /// <para>The display name of the field.</para>
             /// </summary>
             [NameInMap("ColumnNameCn")]
             [Validation(Required=false)]
             public string ColumnNameCn { get; set; }
 
             /// <summary>
-            /// The type of the field. For more information, see MaxCompute field types.
+            /// <para>The type of the field. For more information, see MaxCompute field types.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>string</para>
             /// </summary>
             [NameInMap("ColumnType")]
             [Validation(Required=false)]
             public string ColumnType { get; set; }
 
             /// <summary>
-            /// The comment of the field.
+            /// <para>The comment of the field.</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
@@ -53,9 +56,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The globally unique identifier (GUID) of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.
+        /// <para>The globally unique identifier (GUID) of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>odps.engine_name.table_name</para>
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]

@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProjectMembersRequest : TeaModel {
         /// <summary>
-        /// The page number. Valid values: 1 to 30. Default value: 1.
+        /// <para>The page number. Valid values: 1 to 30. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 10. Maximum value: 100.
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace.
+        /// <para>The ID of the DataWorks workspace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>27</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

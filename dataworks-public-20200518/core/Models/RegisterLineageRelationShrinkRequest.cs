@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RegisterLineageRelationShrinkRequest : TeaModel {
         /// <summary>
-        /// The structure whose lineage you want to register to DataWorks.
-        /// 
-        /// This parameter is required.
+        /// <para>The structure whose lineage you want to register to DataWorks.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LineageRelationRegisterVO")]
         [Validation(Required=false)]

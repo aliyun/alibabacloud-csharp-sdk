@@ -10,80 +10,92 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDIAlarmRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the task with which the alert rule is associated.
+        /// <para>The ID of the task with which the alert rule is associated.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>11265</para>
         /// </summary>
         [NameInMap("DIJobId")]
         [Validation(Required=false)]
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// The description of the alert rule.
+        /// <para>The description of the alert rule.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the alert rule. By default, the alert rule is disabled.
+        /// <para>Specifies whether to enable the alert rule. By default, the alert rule is disabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// The metric type in the alert rule. Valid values:
+        /// <para>The metric type in the alert rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Heartbeat</description></item>
+        /// <item><description>FailoverCount</description></item>
+        /// <item><description>Delay</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Heartbeat
-        /// *   FailoverCount
-        /// *   Delay
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Heartbeat</para>
         /// </summary>
         [NameInMap("MetricType")]
         [Validation(Required=false)]
         public string MetricType { get; set; }
 
         /// <summary>
-        /// The alert notification settings.
-        /// 
-        /// This parameter is required.
+        /// <para>The alert notification settings.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NotificationSettings")]
         [Validation(Required=false)]
         public CreateDIAlarmRuleRequestNotificationSettings NotificationSettings { get; set; }
         public class CreateDIAlarmRuleRequestNotificationSettings : TeaModel {
             /// <summary>
-            /// The duration of the alert suppression interval. Default value: 5. Unit: minutes.
+            /// <para>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("InhibitionInterval")]
             [Validation(Required=false)]
             public int? InhibitionInterval { get; set; }
 
             /// <summary>
-            /// The alert notification methods.
-            /// 
-            /// This parameter is required.
+            /// <para>The alert notification methods.</para>
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("NotificationChannels")]
             [Validation(Required=false)]
             public List<CreateDIAlarmRuleRequestNotificationSettingsNotificationChannels> NotificationChannels { get; set; }
             public class CreateDIAlarmRuleRequestNotificationSettingsNotificationChannels : TeaModel {
                 /// <summary>
-                /// The alert notification methods.
+                /// <para>The alert notification methods.</para>
                 /// </summary>
                 [NameInMap("Channels")]
                 [Validation(Required=false)]
                 public List<string> Channels { get; set; }
 
                 /// <summary>
-                /// The severity level.
+                /// <para>The severity level.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Warning</description></item>
+                /// <item><description>Critical</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   Warning
-                /// *   Critical
+                /// <b>Example:</b>
+                /// <para>Warning</para>
                 /// </summary>
                 [NameInMap("Severity")]
                 [Validation(Required=false)]
@@ -92,26 +104,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The alert notification recipients.
-            /// 
-            /// This parameter is required.
+            /// <para>The alert notification recipients.</para>
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("NotificationReceivers")]
             [Validation(Required=false)]
             public List<CreateDIAlarmRuleRequestNotificationSettingsNotificationReceivers> NotificationReceivers { get; set; }
             public class CreateDIAlarmRuleRequestNotificationSettingsNotificationReceivers : TeaModel {
                 /// <summary>
-                /// The recipient type.
+                /// <para>The recipient type.</para>
+                /// <list type="bullet">
+                /// <item><description>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</description></item>
+                /// <item><description>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</description></item>
+                /// </list>
                 /// 
-                /// *   If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.
-                /// *   If the alert notification method is Ding, the recipient type is DingTalk chatbot token.
+                /// <b>Example:</b>
+                /// <para>DingToken</para>
                 /// </summary>
                 [NameInMap("ReceiverType")]
                 [Validation(Required=false)]
                 public string ReceiverType { get; set; }
 
                 /// <summary>
-                /// The recipients.
+                /// <para>The recipients.</para>
                 /// </summary>
                 [NameInMap("ReceiverValues")]
                 [Validation(Required=false)]
@@ -122,37 +137,47 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The conditions that can trigger the alert rule.
-        /// 
-        /// This parameter is required.
+        /// <para>The conditions that can trigger the alert rule.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TriggerConditions")]
         [Validation(Required=false)]
         public List<CreateDIAlarmRuleRequestTriggerConditions> TriggerConditions { get; set; }
         public class CreateDIAlarmRuleRequestTriggerConditions : TeaModel {
             /// <summary>
-            /// The time interval for alert calculation. Unit: minutes.
+            /// <para>The time interval for alert calculation. Unit: minutes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>15</para>
             /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public long? Duration { get; set; }
 
             /// <summary>
-            /// The severity level. Valid values:
+            /// <para>The severity level. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Warning</description></item>
+            /// <item><description>Critical</description></item>
+            /// </list>
             /// 
-            /// *   Warning
-            /// *   Critical
+            /// <b>Example:</b>
+            /// <para>Warning</para>
             /// </summary>
             [NameInMap("Severity")]
             [Validation(Required=false)]
             public string Severity { get; set; }
 
             /// <summary>
-            /// The alert threshold.
+            /// <para>The alert threshold.</para>
+            /// <list type="bullet">
+            /// <item><description>If the alert rule is for task status, you do not need to specify a threshold.</description></item>
+            /// <item><description>If the alert rule is for failovers, specify the number of failovers.</description></item>
+            /// <item><description>If the alert rule is for latency, the threshold is the latency duration, in seconds.</description></item>
+            /// </list>
             /// 
-            /// *   If the alert rule is for task status, you do not need to specify a threshold.
-            /// *   If the alert rule is for failovers, specify the number of failovers.
-            /// *   If the alert rule is for latency, the threshold is the latency duration, in seconds.
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("Threshold")]
             [Validation(Required=false)]

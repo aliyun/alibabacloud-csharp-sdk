@@ -10,41 +10,51 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListMeasureDataRequest : TeaModel {
         /// <summary>
-        /// The measurement component.
+        /// <para>The measurement component.</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter is set to Count if the DomainCode parameter is set to DideAlarmPhone or DideAlarmSms. In this case, statistics on the number of phone calls or text messages that are used to send alert notifications are collected.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   This parameter is set to Count if the DomainCode parameter is set to DideAlarmPhone or DideAlarmSms. In this case, statistics on the number of phone calls or text messages that are used to send alert notifications are collected.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Count</para>
         /// </summary>
         [NameInMap("ComponentCode")]
         [Validation(Required=false)]
         public string ComponentCode { get; set; }
 
         /// <summary>
-        /// The item to be measured. Valid values:
+        /// <para>The item to be measured. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DideAlarmPhone: phone call-based alerts</description></item>
+        /// <item><description>DideAlarmSms: text message-based alerts</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   DideAlarmPhone: phone call-based alerts
-        /// *   DideAlarmSms: text message-based alerts
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DideAlarmPhone</para>
         /// </summary>
         [NameInMap("DomainCode")]
         [Validation(Required=false)]
         public string DomainCode { get; set; }
 
         /// <summary>
-        /// The end timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.
+        /// <para>The end timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1717430400000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The start timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.
+        /// <para>The start timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1717344000000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

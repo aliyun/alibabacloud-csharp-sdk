@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDIAlarmRuleRequest : TeaModel {
         /// <summary>
-        /// The alert rule ID.
+        /// <para>The alert rule ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>34994</para>
         /// </summary>
         [NameInMap("DIAlarmRuleId")]
         [Validation(Required=false)]

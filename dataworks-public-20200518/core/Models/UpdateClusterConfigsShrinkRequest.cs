@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateClusterConfigsShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public long? ClusterId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SPARK_CONF</para>
         /// </summary>
         [NameInMap("ConfigType")]
         [Validation(Required=false)]
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConfigValues")]
         [Validation(Required=false)]
         public string ConfigValuesShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5678</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

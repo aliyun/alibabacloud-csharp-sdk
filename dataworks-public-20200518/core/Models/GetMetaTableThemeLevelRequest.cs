@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableThemeLevelRequest : TeaModel {
         /// <summary>
-        /// The type of the data source. Set the value to odps.
+        /// <para>The type of the data source. Set the value to odps.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>odps</para>
         /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// The GUID of the metatable. Specify the GUID in the format of odps.${projectName}.${tableName}.
+        /// <para>The GUID of the metatable. Specify the GUID in the format of odps.${projectName}.${tableName}.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>odps.project1.name1</para>
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]

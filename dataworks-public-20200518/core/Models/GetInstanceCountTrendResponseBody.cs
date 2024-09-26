@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceCountTrendResponseBody : TeaModel {
         /// <summary>
-        /// The quantity trend of instances.
+        /// <para>The quantity trend of instances.</para>
         /// </summary>
         [NameInMap("InstanceCounts")]
         [Validation(Required=false)]
         public List<GetInstanceCountTrendResponseBodyInstanceCounts> InstanceCounts { get; set; }
         public class GetInstanceCountTrendResponseBodyInstanceCounts : TeaModel {
             /// <summary>
-            /// The number of instances.
+            /// <para>The number of instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9527</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The data timestamp.
+            /// <para>The data timestamp.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1600963200000</para>
             /// </summary>
             [NameInMap("Date")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>95279527adhfj****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

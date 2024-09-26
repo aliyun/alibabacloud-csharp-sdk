@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteDIJobRequest : TeaModel {
         /// <summary>
-        /// The task ID.
+        /// <para>The task ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>11126</para>
         /// </summary>
         [NameInMap("DIJobId")]
         [Validation(Required=false)]

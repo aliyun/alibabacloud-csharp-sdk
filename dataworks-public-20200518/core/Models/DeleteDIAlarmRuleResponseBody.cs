@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteDIAlarmRuleResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C99E2BE6-9DEA-5C2E-8F51-1DDCFEADE490</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,35 +10,44 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesByBaselineResponseBody : TeaModel {
         /// <summary>
-        /// The nodes in the baseline.
+        /// <para>The nodes in the baseline.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListNodesByBaselineResponseBodyData> Data { get; set; }
         public class ListNodesByBaselineResponseBodyData : TeaModel {
             /// <summary>
-            /// The node ID.
+            /// <para>The node ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public long? NodeId { get; set; }
 
             /// <summary>
-            /// The name of the node.
+            /// <para>The name of the node.</para>
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account used by the node owner.
+            /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9527952****</para>
             /// </summary>
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }
 
             /// <summary>
-            /// The ID of the workspace to which the node belongs.
+            /// <para>The ID of the workspace to which the node belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234</para>
             /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
@@ -47,35 +56,50 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1031203110005</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The specified parameters are invalid.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the ID to troubleshoot issues.
+        /// <para>The request ID. You can use the ID to troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0000-ABCD-E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

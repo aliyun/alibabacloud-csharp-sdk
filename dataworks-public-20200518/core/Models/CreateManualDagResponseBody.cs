@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateManualDagResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the DAG for the manually triggered workflow. You can call an operation with this parameter as a request parameter to query the details and states of the nodes in the manually triggered workflow.
+        /// <para>The ID of the DAG for the manually triggered workflow. You can call an operation with this parameter as a request parameter to query the details and states of the nodes in the manually triggered workflow.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>700000123123141</para>
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AASFDFSDFG-DFSDF-DFSDFD-SDFSDF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

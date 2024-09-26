@@ -10,23 +10,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeployDISyncTaskResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:
-        /// 
-        /// *   success: The real-time synchronization node or data synchronization solution is deployed.
-        /// *   fail: The real-time synchronization node or data synchronization solution fails to be deployed.
+        /// <para>Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>success: The real-time synchronization node or data synchronization solution is deployed.</description></item>
+        /// <item><description>fail: The real-time synchronization node or data synchronization solution fails to be deployed.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeployDISyncTaskResponseBodyData Data { get; set; }
         public class DeployDISyncTaskResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>submit and deploy fail.</para>
+            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The cause of the failure to deploy the real-time synchronization node or data synchronization solution.
+            /// <para>The cause of the failure to deploy the real-time synchronization node or data synchronization solution.</para>
+            /// <para>If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.</para>
             /// 
-            /// If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.
+            /// <b>Example:</b>
+            /// <para>success</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -35,14 +42,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The result of deploying the real-time synchronization node or data synchronization solution.
+        /// <para>The result of deploying the real-time synchronization node or data synchronization solution.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bc1411515937635973****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can query logs and troubleshoot issues based on the ID.
+        /// <para>The ID of the request. You can query logs and troubleshoot issues based on the ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

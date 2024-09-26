@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetFileRequest : TeaModel {
         /// <summary>
-        /// The ID of the file. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to obtain the ID.
+        /// <para>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to obtain the ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100000001</para>
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
         public long? FileId { get; set; }
 
         /// <summary>
-        /// The ID of the node that is scheduled. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to obtain the node ID.
+        /// <para>The ID of the node that is scheduled. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to obtain the node ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200000001</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID.</para>
+        /// <para>You must configure this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</para>
         /// 
-        /// You must configure this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
+        /// <b>Example:</b>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The name of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace name.
+        /// <para>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace name.</para>
+        /// <para>You must configure this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</para>
         /// 
-        /// You must configure this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
+        /// <b>Example:</b>
+        /// <para>dw_project</para>
         /// </summary>
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]

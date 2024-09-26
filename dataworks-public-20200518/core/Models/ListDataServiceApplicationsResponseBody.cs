@@ -10,35 +10,44 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDataServiceApplicationsResponseBodyData Data { get; set; }
         public class ListDataServiceApplicationsResponseBodyData : TeaModel {
             /// <summary>
-            /// The basic information of the applications.
+            /// <para>The basic information of the applications.</para>
             /// </summary>
             [NameInMap("Applications")]
             [Validation(Required=false)]
             public List<ListDataServiceApplicationsResponseBodyDataApplications> Applications { get; set; }
             public class ListDataServiceApplicationsResponseBodyDataApplications : TeaModel {
                 /// <summary>
-                /// The application ID.
+                /// <para>The application ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20000</para>
                 /// </summary>
                 [NameInMap("ApplicationId")]
                 [Validation(Required=false)]
                 public long? ApplicationId { get; set; }
 
                 /// <summary>
-                /// The name of the application.
+                /// <para>The name of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>My application</para>
                 /// </summary>
                 [NameInMap("ApplicationName")]
                 [Validation(Required=false)]
                 public string ApplicationName { get; set; }
 
                 /// <summary>
-                /// The workspace ID.
+                /// <para>The workspace ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10000</para>
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
@@ -47,21 +56,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.
+            /// <para>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page. Default value: 10. Maximum value: 100.
+            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -70,35 +88,50 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0000-ABCD-EFG***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

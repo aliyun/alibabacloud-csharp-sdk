@@ -10,41 +10,54 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListLineageRequest : TeaModel {
         /// <summary>
-        /// The lineage type. Valid values:\\
-        /// up: ancestor lineage\\
-        /// down: descendant lineage
+        /// <para>The lineage type. Valid values:\
+        /// up: ancestor lineage\
+        /// down: descendant lineage</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>up</para>
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }
 
         /// <summary>
-        /// The unique identifier of the entity.
+        /// <para>The unique identifier of the entity.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>maxcompute-table.project.table</para>
         /// </summary>
         [NameInMap("EntityQualifiedName")]
         [Validation(Required=false)]
         public string EntityQualifiedName { get; set; }
 
         /// <summary>
-        /// The keyword of the entity name.
+        /// <para>The keyword of the entity name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name-keyword</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>next-token-from-previous-request</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: 100.
+        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

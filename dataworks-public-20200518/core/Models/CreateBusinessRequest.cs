@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateBusinessRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BusinessName")]
         [Validation(Required=false)]
@@ -20,18 +20,34 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000000000001</para>
+        /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10000</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dw_project</para>
+        /// </summary>
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]
         public string ProjectIdentifier { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
+        /// </summary>
         [NameInMap("UseType")]
         [Validation(Required=false)]
         public string UseType { get; set; }

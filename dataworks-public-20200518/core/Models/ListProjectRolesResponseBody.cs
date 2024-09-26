@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProjectRolesResponseBody : TeaModel {
         /// <summary>
-        /// The roles in the DataWorks workspace.
+        /// <para>The roles in the DataWorks workspace.</para>
         /// </summary>
         [NameInMap("ProjectRoleList")]
         [Validation(Required=false)]
         public List<ListProjectRolesResponseBodyProjectRoleList> ProjectRoleList { get; set; }
         public class ListProjectRolesResponseBodyProjectRoleList : TeaModel {
             /// <summary>
-            /// The code of the role in the DataWorks workspace.
+            /// <para>The code of the role in the DataWorks workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>role_project_guest</para>
             /// </summary>
             [NameInMap("ProjectRoleCode")]
             [Validation(Required=false)]
             public string ProjectRoleCode { get; set; }
 
             /// <summary>
-            /// The ID of the role in the DataWorks workspace.
+            /// <para>The ID of the role in the DataWorks workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ProjectRoleId")]
             [Validation(Required=false)]
             public int? ProjectRoleId { get; set; }
 
             /// <summary>
-            /// The name of the role in the DataWorks workspace.
+            /// <para>The name of the role in the DataWorks workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>visitor</para>
             /// </summary>
             [NameInMap("ProjectRoleName")]
             [Validation(Required=false)]
             public string ProjectRoleName { get; set; }
 
             /// <summary>
-            /// The type of the role in the DataWorks workspace.
+            /// <para>The type of the role in the DataWorks workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ProjectRoleType")]
             [Validation(Required=false)]
@@ -47,7 +59,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AFAE64E-D1BE-432B-A9****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

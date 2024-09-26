@@ -10,42 +10,59 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunCycleDagNodesResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the nodes in the workflow. You can query instances based on the IDs.
+        /// <para>The IDs of the nodes in the workflow. You can query instances based on the IDs.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<long?> Data { get; set; }
 
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Invalid.Tenant.ConnectionNotExists</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The connection does not exist.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the request ID to query logs and troubleshoot issues.
+        /// <para>The request ID. You can use the request ID to query logs and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <remarks>
+        /// <para>E6F0DBDD-5AD****</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

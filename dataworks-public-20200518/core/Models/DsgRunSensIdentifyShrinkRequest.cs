@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgRunSensIdentifyShrinkRequest : TeaModel {
         /// <summary>
-        /// The parameters that you need to configure to scan specified metadata.
+        /// <para>The parameters that you need to configure to scan specified metadata.</para>
         /// </summary>
         [NameInMap("EsMetaParams")]
         [Validation(Required=false)]
         public string EsMetaParamsShrink { get; set; }
 
         /// <summary>
-        /// The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
+        /// <para>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10241024</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

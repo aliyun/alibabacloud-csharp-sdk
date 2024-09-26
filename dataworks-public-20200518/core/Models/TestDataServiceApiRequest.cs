@@ -10,37 +10,48 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TestDataServiceApiRequest : TeaModel {
         /// <summary>
-        /// The ID of the DataService Studio API on which the test is performed.
+        /// <para>The ID of the DataService Studio API on which the test is performed.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12343</para>
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public long? ApiId { get; set; }
 
         /// <summary>
-        /// The data of the request body.
+        /// <para>The data of the request body.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;name&quot;:&quot;test&quot;}</para>
         /// </summary>
         [NameInMap("BodyContent")]
         [Validation(Required=false)]
         public string BodyContent { get; set; }
 
         /// <summary>
-        /// The request parameters that are contained in the request body.
+        /// <para>The request parameters that are contained in the request body.</para>
         /// </summary>
         [NameInMap("BodyParams")]
         [Validation(Required=false)]
         public List<TestDataServiceApiRequestBodyParams> BodyParams { get; set; }
         public class TestDataServiceApiRequestBodyParams : TeaModel {
             /// <summary>
-            /// The name of the parameter.
+            /// <para>The name of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>name</para>
             /// </summary>
             [NameInMap("ParamKey")]
             [Validation(Required=false)]
             public string ParamKey { get; set; }
 
             /// <summary>
-            /// The value of the parameter.
+            /// <para>The value of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("ParamValue")]
             [Validation(Required=false)]
@@ -49,21 +60,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request parameters that are contained in the request header.
+        /// <para>The request parameters that are contained in the request header.</para>
         /// </summary>
         [NameInMap("HeadParams")]
         [Validation(Required=false)]
         public List<TestDataServiceApiRequestHeadParams> HeadParams { get; set; }
         public class TestDataServiceApiRequestHeadParams : TeaModel {
             /// <summary>
-            /// The name of the parameter.
+            /// <para>The name of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>requestId</para>
             /// </summary>
             [NameInMap("ParamKey")]
             [Validation(Required=false)]
             public string ParamKey { get; set; }
 
             /// <summary>
-            /// The value of the parameter.
+            /// <para>The value of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abcd</para>
             /// </summary>
             [NameInMap("ParamValue")]
             [Validation(Required=false)]
@@ -72,21 +89,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request parameters that are contained in the request path.
+        /// <para>The request parameters that are contained in the request path.</para>
         /// </summary>
         [NameInMap("PathParams")]
         [Validation(Required=false)]
         public List<TestDataServiceApiRequestPathParams> PathParams { get; set; }
         public class TestDataServiceApiRequestPathParams : TeaModel {
             /// <summary>
-            /// The name of the parameter.
+            /// <para>The name of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>path1</para>
             /// </summary>
             [NameInMap("ParamKey")]
             [Validation(Required=false)]
             public string ParamKey { get; set; }
 
             /// <summary>
-            /// The value of the parameter.
+            /// <para>The value of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>api</para>
             /// </summary>
             [NameInMap("ParamValue")]
             [Validation(Required=false)]
@@ -95,21 +118,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The request parameters that are contained in the query.
+        /// <para>The request parameters that are contained in the query.</para>
         /// </summary>
         [NameInMap("QueryParam")]
         [Validation(Required=false)]
         public List<TestDataServiceApiRequestQueryParam> QueryParam { get; set; }
         public class TestDataServiceApiRequestQueryParam : TeaModel {
             /// <summary>
-            /// The name of the parameter.
+            /// <para>The name of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>name</para>
             /// </summary>
             [NameInMap("ParamKey")]
             [Validation(Required=false)]
             public string ParamKey { get; set; }
 
             /// <summary>
-            /// The value of the parameter.
+            /// <para>The value of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("ParamValue")]
             [Validation(Required=false)]

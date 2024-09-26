@@ -10,39 +10,52 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFileVersionsRequest : TeaModel {
         /// <summary>
-        /// The ID of the file. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID.
+        /// <para>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>100000001</para>
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
         public long? FileId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 10. Maximum value: 100.
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.
+        /// <para>The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.
+        /// <para>The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.</para>
+        /// <para>You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.</para>
         /// 
-        /// You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.
+        /// <b>Example:</b>
+        /// <para>dw_project</para>
         /// </summary>
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]

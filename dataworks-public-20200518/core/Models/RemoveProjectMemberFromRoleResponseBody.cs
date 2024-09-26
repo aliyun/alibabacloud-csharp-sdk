@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RemoveProjectMemberFromRoleResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AFAE64E-D1BE-432B-A9****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

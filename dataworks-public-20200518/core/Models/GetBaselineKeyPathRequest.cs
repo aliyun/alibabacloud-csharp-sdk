@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetBaselineKeyPathRequest : TeaModel {
         /// <summary>
-        /// The name of the event.
+        /// <para>The name of the event.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("BaselineId")]
         [Validation(Required=false)]
         public long? BaselineId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2020-07-07T00:00:00+0800</para>
         /// </summary>
         [NameInMap("Bizdate")]
         [Validation(Required=false)]
         public string Bizdate { get; set; }
 
         /// <summary>
-        /// The ID of the event.
+        /// <para>The ID of the event.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("InGroupId")]
         [Validation(Required=false)]

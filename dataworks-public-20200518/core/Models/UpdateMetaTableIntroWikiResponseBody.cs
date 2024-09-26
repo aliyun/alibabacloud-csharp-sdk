@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateMetaTableIntroWikiResponseBody : TeaModel {
         /// <summary>
-        /// The request ID. You can troubleshoot issues based on the ID.
+        /// <para>The request ID. You can troubleshoot issues based on the ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abcde</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the instructions on how to use the table are updated.
+        /// <para>Indicates whether the instructions on how to use the table are updated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("UpdateResult")]
         [Validation(Required=false)]

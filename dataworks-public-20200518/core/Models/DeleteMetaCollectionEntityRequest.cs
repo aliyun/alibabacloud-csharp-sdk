@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteMetaCollectionEntityRequest : TeaModel {
         /// <summary>
-        /// The unique identifier of the collection.
+        /// <para>The unique identifier of the collection.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>album.12345</para>
         /// </summary>
         [NameInMap("CollectionQualifiedName")]
         [Validation(Required=false)]
         public string CollectionQualifiedName { get; set; }
 
         /// <summary>
-        /// The unique identifier of the entity.
+        /// <para>The unique identifier of the entity.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>maxcompute.projectA.tableB</para>
         /// </summary>
         [NameInMap("EntityQualifiedName")]
         [Validation(Required=false)]

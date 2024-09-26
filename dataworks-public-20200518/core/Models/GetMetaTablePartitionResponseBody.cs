@@ -10,91 +10,124 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTablePartitionResponseBody : TeaModel {
         /// <summary>
-        /// The returned result.
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMetaTablePartitionResponseBodyData Data { get; set; }
         public class GetMetaTablePartitionResponseBodyData : TeaModel {
             /// <summary>
-            /// The list of partitions.
+            /// <para>The list of partitions.</para>
             /// </summary>
             [NameInMap("DataEntityList")]
             [Validation(Required=false)]
             public List<GetMetaTablePartitionResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaTablePartitionResponseBodyDataDataEntityList : TeaModel {
                 /// <summary>
-                /// The comment.
+                /// <para>The comment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                /// <para>The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1590032868000</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The size of the partition. Unit: bytes.
+                /// <para>The size of the partition. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>19</para>
                 /// </summary>
                 [NameInMap("DataSize")]
                 [Validation(Required=false)]
                 public long? DataSize { get; set; }
 
                 /// <summary>
-                /// The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                /// <para>The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1590032868000</para>
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
                 public long? ModifiedTime { get; set; }
 
                 /// <summary>
-                /// The GUID of the partition.
+                /// <para>The GUID of the partition.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>odps.engine_name.table_name.pt=20170614</para>
                 /// </summary>
                 [NameInMap("PartitionGuid")]
                 [Validation(Required=false)]
                 public string PartitionGuid { get; set; }
 
                 /// <summary>
-                /// The location of the Hive partition.
+                /// <para>The location of the Hive partition.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>abc</para>
                 /// </summary>
                 [NameInMap("PartitionLocation")]
                 [Validation(Required=false)]
                 public string PartitionLocation { get; set; }
 
                 /// <summary>
-                /// The name of the partition.
+                /// <para>The name of the partition.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pt=20170614</para>
                 /// </summary>
                 [NameInMap("PartitionName")]
                 [Validation(Required=false)]
                 public string PartitionName { get; set; }
 
                 /// <summary>
-                /// The path of the partition.
+                /// <para>The path of the partition.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>abc</para>
                 /// </summary>
                 [NameInMap("PartitionPath")]
                 [Validation(Required=false)]
                 public string PartitionPath { get; set; }
 
                 /// <summary>
-                /// The type of the partition.
+                /// <para>The type of the partition.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>abc</para>
                 /// </summary>
                 [NameInMap("PartitionType")]
                 [Validation(Required=false)]
                 public string PartitionType { get; set; }
 
                 /// <summary>
-                /// The number of entries in the partition.
+                /// <para>The number of entries in the partition.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>233</para>
                 /// </summary>
                 [NameInMap("RecordCount")]
                 [Validation(Required=false)]
                 public long? RecordCount { get; set; }
 
                 /// <summary>
-                /// The unique identifier of the metatable.
+                /// <para>The unique identifier of the metatable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>odps.engine_name.table_name</para>
                 /// </summary>
                 [NameInMap("TableGuid")]
                 [Validation(Required=false)]
@@ -103,21 +136,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page. Default value: 10. Maximum value: 100.
+            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of partitions.
+            /// <para>The total number of partitions.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -126,35 +168,50 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// <para>The error code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Invalid.Tenant.ConnectionNotExists</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The connection does not exist.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bc1ec92159376</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UserEntityTag : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>priority</para>
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public string TagKey { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>p1</para>
+        /// </summary>
         [NameInMap("TagValue")]
         [Validation(Required=false)]
         public string TagValue { get; set; }

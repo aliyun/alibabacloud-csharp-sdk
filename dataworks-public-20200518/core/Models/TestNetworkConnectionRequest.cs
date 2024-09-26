@@ -10,39 +10,48 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TestNetworkConnectionRequest : TeaModel {
         /// <summary>
-        /// The name of the data source.
+        /// <para>The name of the data source.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>mysql_name</para>
         /// </summary>
         [NameInMap("DatasourceName")]
         [Validation(Required=false)]
         public string DatasourceName { get; set; }
 
         /// <summary>
-        /// The environment in which the data source resides. Valid values:
+        /// <para>The environment in which the data source resides. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: development environment</description></item>
+        /// <item><description>1: production environment</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   0: development environment
-        /// *   1: production environment
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace to which the data sources belong. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.
+        /// <para>The ID of the DataWorks workspace to which the data sources belong. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID of the workspace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The identifier of the resource group. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/173913.html) operation to query the identifier of the resource group.
+        /// <para>The identifier of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>S_res_group_2XXXX4_1619100XXXXX</para>
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]

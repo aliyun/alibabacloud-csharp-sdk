@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgUserGroupDeleteShrinkRequest : TeaModel {
         /// <summary>
-        /// The information about the user group.
+        /// <para>The information about the user group.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]

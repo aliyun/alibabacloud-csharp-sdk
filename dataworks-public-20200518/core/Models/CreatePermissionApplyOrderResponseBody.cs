@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreatePermissionApplyOrderResponseBody : TeaModel {
         /// <summary>
-        /// The request order ID.
+        /// <para>The request order ID.</para>
         /// </summary>
         [NameInMap("FlowId")]
         [Validation(Required=false)]
         public List<string> FlowId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bc1ec92159376****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

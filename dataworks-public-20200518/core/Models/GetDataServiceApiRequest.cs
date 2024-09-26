@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataServiceApiRequest : TeaModel {
         /// <summary>
-        /// The ID of the DataService Studio API.
+        /// <para>The ID of the DataService Studio API.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public long? ApiId { get; set; }
 
         /// <summary>
-        /// The ID of the workspace.
+        /// <para>The ID of the workspace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10001</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The tenant ID.
+        /// <para>The tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10002</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

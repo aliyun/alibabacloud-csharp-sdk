@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateMetaCategoryRequest : TeaModel {
         /// <summary>
-        /// The remarks of the category.
+        /// <para>The remarks of the category.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>category 1</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// The name of the category.
+        /// <para>The name of the category.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>category_name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the parent category.
+        /// <para>The ID of the parent category.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ParentId")]
         [Validation(Required=false)]
