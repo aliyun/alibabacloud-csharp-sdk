@@ -129,6 +129,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string ReferencePrice { get; set; }
 
+            [NameInMap("category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            [NameInMap("storageType")]
+            [Validation(Required=false)]
+            public string StorageType { get; set; }
+
         }
 
         /// <summary>

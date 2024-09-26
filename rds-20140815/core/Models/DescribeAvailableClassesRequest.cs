@@ -81,12 +81,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description><b>local_ssd</b>: local SSD. This is the recommended storage type.</description></item>
         /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
-        /// <item><description><b>cloud_essd</b>: enhanced SSDs (ESSDs) of performance level 1 (PL1)</description></item>
-        /// <item><description><b>cloud_essd2</b>: ESSDs of PL2</description></item>
-        /// <item><description><b>cloud_essd3</b>: ESSD of PL3</description></item>
+        /// <item><description><b>cloud_essd</b>: performance level 1 (PL1) Enterprise SSD (ESSD)</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to <b>cloud_essd</b>.</para>
+        /// <para> Serverless instances use only PL1 ESSDs. If you want to create a serverless instance, you must set this parameter to <b>cloud_essd</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The type of the order. Set the value to <b>BUY</b></para>
+        /// <para>The type of order. Set the value to <b>BUY</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>

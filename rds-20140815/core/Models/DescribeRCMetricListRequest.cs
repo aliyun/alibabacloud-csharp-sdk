@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCMetricListRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the time range to query. The end time must be later than the start time. Example: <c>2024-08-06 10:15:00</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-08-06 10:15:00</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The reserved parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>None</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Express { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rc-dh2jf9n6j4s14926****</para>
         /// </summary>
@@ -34,6 +40,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// <para>Default value: 1000.</para>
+        /// <remarks>
+        /// <para> The maximum value of the Length parameter in a request is 1440.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -42,6 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Length { get; set; }
 
         /// <summary>
+        /// <para>The metric that you want to use. For more information, see <a href="javascript:void%5C(0%5C)">CloudMonitor metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +65,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MetricName { get; set; }
 
         /// <summary>
+        /// <para>The pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6178f1825f9fb76ce0b5e8707e68181f</para>
         /// </summary>
@@ -60,6 +75,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The statistical period of the monitoring data.</para>
+        /// <para>Set the value to 60 or an integer multiple of 60.</para>
+        /// <para>Unit: seconds.</para>
+        /// <para>Default value: 60.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -68,6 +88,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Period { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -76,6 +98,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query. Example: <c>2024-08-06 10:05:00</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-08-06 10:05:00</para>
         /// </summary>

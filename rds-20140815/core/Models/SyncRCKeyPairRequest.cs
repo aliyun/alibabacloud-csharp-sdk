@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SyncRCKeyPairRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the key pair.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>customer_keypairs</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

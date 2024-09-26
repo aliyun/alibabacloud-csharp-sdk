@@ -1,3 +1,13 @@
+2024-09-26 Version: 7.2.3
+- Update API CloneDBInstance: add param DBInstanceDescription.
+- Update API CreateDBInstance: update param Period.
+- Update API DescribeAvailableClasses: update param DBInstanceStorageType.
+- Update API ListClasses: add param Engine.
+- Update API ListClasses: update response param.
+- Update API ModifyAccountMaskingPrivilege: add param RegionId.
+- Update API ModifyMaskingRules: add param RegionId.
+
+
 2024-09-24 Version: 7.2.2
 - Update API CreateDBInstance: update param Period.
 - Update API DescribeAvailableClasses: update param DBInstanceStorageType.

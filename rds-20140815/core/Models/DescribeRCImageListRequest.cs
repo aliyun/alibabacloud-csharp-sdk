@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCImageListRequest : TeaModel {
         /// <summary>
+        /// <para>The image architecture. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>x86_64</description></item>
+        /// <item><description>arm64</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>x86_64</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Architecture { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -34,6 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +55,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The image type. Set the value to <b>self</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>self</para>
         /// </summary>

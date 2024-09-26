@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateRCDeploymentSetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The deployment set ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ds-uf6c8qerk019bj1l****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DeploymentSetId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8B993DA9-5272-5414-94E3-4CA8BA0146C2</para>
         /// </summary>

@@ -91,10 +91,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to apply the password policy.</para>
+        /// <para>Specifies whether to use a password policy.</para>
         /// <remarks>
-        /// <para> This parameter is available only for specific ApsaraDB RDS for SQL Server instances. If your instance uses the shared instance family or runs SQL Server 2008 R2, this parameter is unavailable.</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is available only for ApsaraDB RDS for SQL Server instances that do not belong to the shared instance family and do not run SQL Server 2008 R2.</para>
+        /// </description></item>
+        /// <item><description><para>Before you call this operation, you must configure a password policy for the account of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/2848317.html">Configure a password policy for the account of an ApsaraDB RDS for SQL Server instance</a>.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

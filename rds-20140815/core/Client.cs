@@ -2927,6 +2927,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["DBInstanceClass"] = request.DBInstanceClass;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceDescription))
+            {
+                query["DBInstanceDescription"] = request.DBInstanceDescription;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
@@ -3115,6 +3119,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
             {
                 query["DBInstanceClass"] = request.DBInstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceDescription))
+            {
+                query["DBInstanceDescription"] = request.DBInstanceDescription;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
@@ -4447,14 +4455,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <item><description>SQL Server</description></item>
         /// <item><description>MariaDB</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see <a href="https://help.aliyun.com/document_detail/2402073.html">List of operations by function of DBS</a>.</para>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <h3><a href="#"></a>Feature description</h3>
+        /// <para>This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also call an operation of Database Backup (DBS) to create a backup set. For more information, see <a href="https://help.aliyun.com/document_detail/2841997.html">List of operations by function</a>.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
         /// <item><description>The instance is in the Running state.</description></item>
         /// <item><description>The instance does not have ongoing backup tasks.</description></item>
-        /// <item><description>The number of backup files that are created per day for an instance cannot exceed 20.</description></item>
+        /// <item><description>The number of backup sets that can be created for an instance per day cannot exceed 20.</description></item>
         /// </list>
         /// <h3><a href="#"></a>References</h3>
         /// <list type="bullet">
@@ -4536,14 +4544,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <item><description>SQL Server</description></item>
         /// <item><description>MariaDB</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see <a href="https://help.aliyun.com/document_detail/2402073.html">List of operations by function of DBS</a>.</para>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <h3><a href="#"></a>Feature description</h3>
+        /// <para>This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also call an operation of Database Backup (DBS) to create a backup set. For more information, see <a href="https://help.aliyun.com/document_detail/2841997.html">List of operations by function</a>.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
         /// <item><description>The instance is in the Running state.</description></item>
         /// <item><description>The instance does not have ongoing backup tasks.</description></item>
-        /// <item><description>The number of backup files that are created per day for an instance cannot exceed 20.</description></item>
+        /// <item><description>The number of backup sets that can be created for an instance per day cannot exceed 20.</description></item>
         /// </list>
         /// <h3><a href="#"></a>References</h3>
         /// <list type="bullet">
@@ -4625,14 +4633,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <item><description>SQL Server</description></item>
         /// <item><description>MariaDB</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see <a href="https://help.aliyun.com/document_detail/2402073.html">List of operations by function of DBS</a>.</para>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <h3><a href="#"></a>Feature description</h3>
+        /// <para>This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also call an operation of Database Backup (DBS) to create a backup set. For more information, see <a href="https://help.aliyun.com/document_detail/2841997.html">List of operations by function</a>.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
         /// <item><description>The instance is in the Running state.</description></item>
         /// <item><description>The instance does not have ongoing backup tasks.</description></item>
-        /// <item><description>The number of backup files that are created per day for an instance cannot exceed 20.</description></item>
+        /// <item><description>The number of backup sets that can be created for an instance per day cannot exceed 20.</description></item>
         /// </list>
         /// <h3><a href="#"></a>References</h3>
         /// <list type="bullet">
@@ -4670,14 +4678,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <item><description>SQL Server</description></item>
         /// <item><description>MariaDB</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see <a href="https://help.aliyun.com/document_detail/2402073.html">List of operations by function of DBS</a>.</para>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <h3><a href="#"></a>Feature description</h3>
+        /// <para>This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also call an operation of Database Backup (DBS) to create a backup set. For more information, see <a href="https://help.aliyun.com/document_detail/2841997.html">List of operations by function</a>.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
         /// <item><description>The instance is in the Running state.</description></item>
         /// <item><description>The instance does not have ongoing backup tasks.</description></item>
-        /// <item><description>The number of backup files that are created per day for an instance cannot exceed 20.</description></item>
+        /// <item><description>The number of backup sets that can be created for an instance per day cannot exceed 20.</description></item>
         /// </list>
         /// <h3><a href="#"></a>References</h3>
         /// <list type="bullet">
@@ -10291,7 +10299,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建RDS CUSTOM部署集</para>
+        /// <para>Creates a deployment set for an RDS Custom instance in a region. Before you call this operation, you must specify parameters such as OnUnableToRedeployFailedInstance, DeploymentSetName, and Strategy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10357,7 +10365,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建RDS CUSTOM部署集</para>
+        /// <para>Creates a deployment set for an RDS Custom instance in a region. Before you call this operation, you must specify parameters such as OnUnableToRedeployFailedInstance, DeploymentSetName, and Strategy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10423,7 +10431,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建RDS CUSTOM部署集</para>
+        /// <para>Creates a deployment set for an RDS Custom instance in a region. Before you call this operation, you must specify parameters such as OnUnableToRedeployFailedInstance, DeploymentSetName, and Strategy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10441,7 +10449,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建RDS CUSTOM部署集</para>
+        /// <para>Creates a deployment set for an RDS Custom instance in a region. Before you call this operation, you must specify parameters such as OnUnableToRedeployFailedInstance, DeploymentSetName, and Strategy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15195,7 +15203,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除RDS CUSTOM部署集</para>
+        /// <para>Deletes a deployment set for an RDS Custom instance. Before you call this operation, you must specify parameters such as RegionId and DeploymentSetId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15241,7 +15249,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除RDS CUSTOM部署集</para>
+        /// <para>Deletes a deployment set for an RDS Custom instance. Before you call this operation, you must specify parameters such as RegionId and DeploymentSetId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15287,7 +15295,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除RDS CUSTOM部署集</para>
+        /// <para>Deletes a deployment set for an RDS Custom instance. Before you call this operation, you must specify parameters such as RegionId and DeploymentSetId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15305,7 +15313,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除RDS CUSTOM部署集</para>
+        /// <para>Deletes a deployment set for an RDS Custom instance. Before you call this operation, you must specify parameters such as RegionId and DeploymentSetId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15459,8 +15467,13 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除RDS用户专属主机实例</para>
+        /// <para>Releases a subscription RDS Custom instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteRCInstancesRequest
@@ -15523,8 +15536,13 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除RDS用户专属主机实例</para>
+        /// <para>Releases a subscription RDS Custom instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteRCInstancesRequest
@@ -15587,8 +15605,13 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除RDS用户专属主机实例</para>
+        /// <para>Releases a subscription RDS Custom instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRCInstancesRequest
@@ -15605,8 +15628,13 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除RDS用户专属主机实例</para>
+        /// <para>Releases a subscription RDS Custom instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRCInstancesRequest
@@ -37555,7 +37583,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述RDS CUSTOM部署集</para>
+        /// <para>Queries the details of one or more deployment sets for RDS Custom instances. Before you call this operation, you must specify parameters such as DeploymentSetIds, Strategy, and DeploymentSetName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37593,7 +37621,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述RDS CUSTOM部署集</para>
+        /// <para>Queries the details of one or more deployment sets for RDS Custom instances. Before you call this operation, you must specify parameters such as DeploymentSetIds, Strategy, and DeploymentSetName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37631,7 +37659,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述RDS CUSTOM部署集</para>
+        /// <para>Queries the details of one or more deployment sets for RDS Custom instances. Before you call this operation, you must specify parameters such as DeploymentSetIds, Strategy, and DeploymentSetName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37649,7 +37677,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述RDS CUSTOM部署集</para>
+        /// <para>Queries the details of one or more deployment sets for RDS Custom instances. Before you call this operation, you must specify parameters such as DeploymentSetIds, Strategy, and DeploymentSetName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37667,7 +37695,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像资源</para>
+        /// <para>Queries custom images that can be used to create an RDS Custom instance. Before you call this operation, you must specify parameters such as RegionId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37705,7 +37733,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像资源</para>
+        /// <para>Queries custom images that can be used to create an RDS Custom instance. Before you call this operation, you must specify parameters such as RegionId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37743,7 +37771,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像资源</para>
+        /// <para>Queries custom images that can be used to create an RDS Custom instance. Before you call this operation, you must specify parameters such as RegionId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37761,7 +37789,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像资源</para>
+        /// <para>Queries custom images that can be used to create an RDS Custom instance. Before you call this operation, you must specify parameters such as RegionId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37779,7 +37807,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS用户专属主机实例</para>
+        /// <para>Queries the details of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37817,7 +37845,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS用户专属主机实例</para>
+        /// <para>Queries the details of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37855,7 +37883,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS用户专属主机实例</para>
+        /// <para>Queries the details of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37873,7 +37901,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS用户专属主机实例</para>
+        /// <para>Queries the details of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37891,7 +37919,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RC实例列表</para>
+        /// <para>Queries the details of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37949,7 +37977,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RC实例列表</para>
+        /// <para>Queries the details of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38007,7 +38035,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RC实例列表</para>
+        /// <para>Queries the details of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38025,7 +38053,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RC实例列表</para>
+        /// <para>Queries the details of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38043,7 +38071,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定云产品的指定监控项的监控数据</para>
+        /// <para>Queries the monitoring data of a metric for an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38081,7 +38109,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定云产品的指定监控项的监控数据</para>
+        /// <para>Queries the monitoring data of a metric for an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38119,7 +38147,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定云产品的指定监控项的监控数据</para>
+        /// <para>Queries the monitoring data of a metric for an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38137,7 +38165,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定云产品的指定监控项的监控数据</para>
+        /// <para>Queries the monitoring data of a metric for an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45687,6 +45715,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
             {
                 query["OrderType"] = request.OrderType;
@@ -45767,6 +45799,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
             {
@@ -59279,8 +59315,23 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyRCInstance</para>
+        /// <para>Upgrades or downgrades the instance type of a subscription RDS Custom instance. The new instance type takes effect for the remaining lifecycle of the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing methods, pricing, and refund rules of RDS Custom.
+        /// Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot change the instance type of an expired instance. You can renew the instance and try again.</description></item>
+        /// <item><description>When you downgrade the instance type of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>The instance must be in the Stopped state.</description></item>
+        /// <item><description>The price difference is refunded to the payment account you used. Vouchers that have been redeemed are not refundable.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation is asynchronous. Wait 5 to 10 seconds for the instance type change to complete. Then, restart the instance by calling the RebootInstance operation or by using the console for the instance type change to take effect. If you restart only the operating system of the instance, the instance type change does not take effect. If the instance is in the Stopped state, you need only to start the instance. You do not need to restart the instance after it enters the Running state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyRCInstanceRequest
@@ -59341,8 +59392,23 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyRCInstance</para>
+        /// <para>Upgrades or downgrades the instance type of a subscription RDS Custom instance. The new instance type takes effect for the remaining lifecycle of the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing methods, pricing, and refund rules of RDS Custom.
+        /// Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot change the instance type of an expired instance. You can renew the instance and try again.</description></item>
+        /// <item><description>When you downgrade the instance type of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>The instance must be in the Stopped state.</description></item>
+        /// <item><description>The price difference is refunded to the payment account you used. Vouchers that have been redeemed are not refundable.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation is asynchronous. Wait 5 to 10 seconds for the instance type change to complete. Then, restart the instance by calling the RebootInstance operation or by using the console for the instance type change to take effect. If you restart only the operating system of the instance, the instance type change does not take effect. If the instance is in the Stopped state, you need only to start the instance. You do not need to restart the instance after it enters the Running state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyRCInstanceRequest
@@ -59403,8 +59469,23 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyRCInstance</para>
+        /// <para>Upgrades or downgrades the instance type of a subscription RDS Custom instance. The new instance type takes effect for the remaining lifecycle of the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing methods, pricing, and refund rules of RDS Custom.
+        /// Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot change the instance type of an expired instance. You can renew the instance and try again.</description></item>
+        /// <item><description>When you downgrade the instance type of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>The instance must be in the Stopped state.</description></item>
+        /// <item><description>The price difference is refunded to the payment account you used. Vouchers that have been redeemed are not refundable.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation is asynchronous. Wait 5 to 10 seconds for the instance type change to complete. Then, restart the instance by calling the RebootInstance operation or by using the console for the instance type change to take effect. If you restart only the operating system of the instance, the instance type change does not take effect. If the instance is in the Stopped state, you need only to start the instance. You do not need to restart the instance after it enters the Running state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyRCInstanceRequest
@@ -59421,8 +59502,23 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyRCInstance</para>
+        /// <para>Upgrades or downgrades the instance type of a subscription RDS Custom instance. The new instance type takes effect for the remaining lifecycle of the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing methods, pricing, and refund rules of RDS Custom.
+        /// Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot change the instance type of an expired instance. You can renew the instance and try again.</description></item>
+        /// <item><description>When you downgrade the instance type of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>The instance must be in the Stopped state.</description></item>
+        /// <item><description>The price difference is refunded to the payment account you used. Vouchers that have been redeemed are not refundable.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation is asynchronous. Wait 5 to 10 seconds for the instance type change to complete. Then, restart the instance by calling the RebootInstance operation or by using the console for the instance type change to take effect. If you restart only the operating system of the instance, the instance type change does not take effect. If the instance is in the Stopped state, you need only to start the instance. You do not need to restart the instance after it enters the Running state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyRCInstanceRequest
@@ -62487,7 +62583,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启RDS用户专属主机实例</para>
+        /// <para>Restarts an RDS Custom instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62541,7 +62637,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启RDS用户专属主机实例</para>
+        /// <para>Restarts an RDS Custom instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62595,7 +62691,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启RDS用户专属主机实例</para>
+        /// <para>Restarts an RDS Custom instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62613,7 +62709,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启RDS用户专属主机实例</para>
+        /// <para>Restarts an RDS Custom instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -65175,7 +65271,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResizeRCInstanceDisk</para>
+        /// <para>Expand the storage capacity of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -65237,7 +65333,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResizeRCInstanceDisk</para>
+        /// <para>Expand the storage capacity of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -65299,7 +65395,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResizeRCInstanceDisk</para>
+        /// <para>Expand the storage capacity of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -65317,7 +65413,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResizeRCInstanceDisk</para>
+        /// <para>Expand the storage capacity of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67239,7 +67335,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动RDS用户专属主机实例</para>
+        /// <para>Starts RDS Custom instances that are in the Stopped state. After the operation is successfully called, the instances enter the Starting state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67285,7 +67381,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动RDS用户专属主机实例</para>
+        /// <para>Starts RDS Custom instances that are in the Stopped state. After the operation is successfully called, the instances enter the Starting state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67331,7 +67427,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动RDS用户专属主机实例</para>
+        /// <para>Starts RDS Custom instances that are in the Stopped state. After the operation is successfully called, the instances enter the Starting state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67349,7 +67445,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动RDS用户专属主机实例</para>
+        /// <para>Starts RDS Custom instances that are in the Stopped state. After the operation is successfully called, the instances enter the Starting state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67595,7 +67691,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止RDS用户专属主机实例</para>
+        /// <para>Stops an RDS Custom instance that is in the Running state. After the operation is successfully called, the status of the RDS Custom instance changes from Stopping to Stopped.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67645,7 +67741,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止RDS用户专属主机实例</para>
+        /// <para>Stops an RDS Custom instance that is in the Running state. After the operation is successfully called, the status of the RDS Custom instance changes from Stopping to Stopped.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67695,7 +67791,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止RDS用户专属主机实例</para>
+        /// <para>Stops an RDS Custom instance that is in the Running state. After the operation is successfully called, the status of the RDS Custom instance changes from Stopping to Stopped.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67713,7 +67809,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止RDS用户专属主机实例</para>
+        /// <para>Stops an RDS Custom instance that is in the Running state. After the operation is successfully called, the status of the RDS Custom instance changes from Stopping to Stopped.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68475,7 +68571,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步密钥对</para>
+        /// <para>Synchronizes a custom key pair to an RDS Custom instance. If you change the key pair that you created for your RDS Custom instance and you want the change to immediately take effect on the RDS Custom instance, you can call this operation to synchronize the new key pair to the RDS Custom instance. For example, you delete a key pair that has the same name as another key pair and recreate the key pair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68521,7 +68617,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步密钥对</para>
+        /// <para>Synchronizes a custom key pair to an RDS Custom instance. If you change the key pair that you created for your RDS Custom instance and you want the change to immediately take effect on the RDS Custom instance, you can call this operation to synchronize the new key pair to the RDS Custom instance. For example, you delete a key pair that has the same name as another key pair and recreate the key pair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68567,7 +68663,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步密钥对</para>
+        /// <para>Synchronizes a custom key pair to an RDS Custom instance. If you change the key pair that you created for your RDS Custom instance and you want the change to immediately take effect on the RDS Custom instance, you can call this operation to synchronize the new key pair to the RDS Custom instance. For example, you delete a key pair that has the same name as another key pair and recreate the key pair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68585,7 +68681,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步密钥对</para>
+        /// <para>Synchronizes a custom key pair to an RDS Custom instance. If you change the key pair that you created for your RDS Custom instance and you want the change to immediately take effect on the RDS Custom instance, you can call this operation to synchronize the new key pair to the RDS Custom instance. For example, you delete a key pair that has the same name as another key pair and recreate the key pair.</para>
         /// </summary>
         /// 
         /// <param name="request">

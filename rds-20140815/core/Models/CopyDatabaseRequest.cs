@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Destination database name.</para>
+        /// <para>The destination database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>db2***</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Reserve account.</para>
+        /// <para>The reserved account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Source database name.</para>
+        /// <para>The source database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>db1***</para>

@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
+        [NameInMap("DBInstanceDescription")]
+        [Validation(Required=false)]
+        public string DBInstanceDescription { get; set; }
+
         /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>

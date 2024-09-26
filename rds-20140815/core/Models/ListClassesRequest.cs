@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
         /// <summary>
         /// <para>The type of order that you want to query. Valid values:</para>
         /// <list type="bullet">
