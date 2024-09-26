@@ -10,72 +10,100 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeSubscriptionMetaResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InternalError</para>
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Value of Input Parameter %s is not valid.</para>
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C12E7A51-09A4-5796-94BE-08B6DA******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the subtasks.
+        /// <para>The details of the subtasks.</para>
         /// </summary>
         [NameInMap("SubscriptionMetaList")]
         [Validation(Required=false)]
         public List<DescribeSubscriptionMetaResponseBodySubscriptionMetaList> SubscriptionMetaList { get; set; }
         public class DescribeSubscriptionMetaResponseBodySubscriptionMetaList : TeaModel {
             /// <summary>
-            /// The consumer offset of the subtask. It is a UNIX timestamp that is generated when the client consumes the first data record. Unit: seconds.
+            /// <para>The consumer offset of the subtask. It is a UNIX timestamp that is generated when the client consumes the first data record. Unit: seconds.</para>
+            /// <remarks>
+            /// <para> You can use a search engine to obtain a UNIX timestamp converter.</para>
+            /// </remarks>
             /// 
-            /// >  You can use a search engine to obtain a UNIX timestamp converter.
+            /// <b>Example:</b>
+            /// <para>1610524452</para>
             /// </summary>
             [NameInMap("Checkpoint")]
             [Validation(Required=false)]
             public long? Checkpoint { get; set; }
 
             /// <summary>
-            /// The objects of the subtask. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).
+            /// <para>The objects of the subtask. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;dtstestdata\&quot;:{\&quot;name\&quot;:\&quot;dtstestdata\&quot;,\&quot;all\&quot;:false,\&quot;Table\&quot;:{\&quot;order\&quot;:{\&quot;name\&quot;:\&quot;order\&quot;,\&quot;all\&quot;:true}}}}</para>
             /// </summary>
             [NameInMap("DBList")]
             [Validation(Required=false)]
             public string DBList { get; set; }
 
             /// <summary>
-            /// The endpoint and port number of the change tracking instance.
+            /// <para>The endpoint and port number of the change tracking instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dts-cn-hangzhou.aliyuncs.com:18001</para>
             /// </summary>
             [NameInMap("DProxyUrl")]
             [Validation(Required=false)]
             public string DProxyUrl { get; set; }
 
             /// <summary>
-            /// The consumer group ID of the subtask.
+            /// <para>The consumer group ID of the subtask.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>z38m91gg2******</para>
             /// </summary>
             [NameInMap("Sid")]
             [Validation(Required=false)]
             public string Sid { get; set; }
 
             /// <summary>
-            /// The topic of the subtask.
+            /// <para>The topic of the subtask.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn_hangzhou_rm_bp1n0x0x5tz******_dtstestdata_version2</para>
             /// </summary>
             [NameInMap("Topic")]
             [Validation(Required=false)]
@@ -84,7 +112,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

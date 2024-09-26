@@ -10,20 +10,28 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ListDedicatedClusterRequest : TeaModel {
         /// <summary>
-        /// The basis on which the retrieved entries are sorted if multiple DTS dedicated clusters are returned. Valid values:
+        /// <para>The basis on which the retrieved entries are sorted if multiple DTS dedicated clusters are returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>gmtCreated</b>: the time when a cluster was created.</description></item>
+        /// <item><description><b>orderCount</b>: the number of nodes in a cluster.</description></item>
+        /// </list>
         /// 
-        /// *   **gmtCreated**: the time when a cluster was created.
-        /// *   **orderCount**: the number of nodes in a cluster.
+        /// <b>Example:</b>
+        /// <para>gmtCreated</para>
         /// </summary>
         [NameInMap("OrderColumn")]
         [Validation(Required=false)]
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// The order in which you want to sort the retrieved entries. Valid values:
+        /// <para>The order in which you want to sort the retrieved entries. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>asc: sorts the retrieved entries in ascending order. This is the default value.</description></item>
+        /// <item><description>desc: sorts the retrieved entries in descending order.</description></item>
+        /// </list>
         /// 
-        /// *   asc: sorts the retrieved entries in ascending order. This is the default value.
-        /// *   desc: sorts the retrieved entries in descending order.
+        /// <b>Example:</b>
+        /// <para>asc</para>
         /// </summary>
         [NameInMap("OrderDirection")]
         [Validation(Required=false)]
@@ -34,30 +42,43 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
+        /// <para>The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of clusters to return on each page.
+        /// <para>The number of clusters to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The content of the query condition.
+        /// <para>The content of the query condition.</para>
+        /// <remarks>
+        /// <para> You must set the <b>Type parameter</b> to specify the type of the query condition.</para>
+        /// </remarks>
         /// 
-        /// >  You must set the **Type parameter** to specify the type of the query condition.
+        /// <b>Example:</b>
+        /// <para>dtspk3f13r731m****</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public string Params { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -68,29 +89,38 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The status of the cluster. Valid values:
+        /// <para>The status of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>init</b>: The cluster is being initialized.</description></item>
+        /// <item><description><b>schedule</b>: The cluster is pending scheduling.</description></item>
+        /// <item><description><b>running</b>: The cluster is running.</description></item>
+        /// <item><description><b>upgrade</b>: The cluster is being upgraded.</description></item>
+        /// <item><description><b>downgrade</b>: The cluster is being downgraded.</description></item>
+        /// <item><description><b>locked</b>: The cluster is locked.</description></item>
+        /// <item><description><b>releasing</b>: The cluster is being released.</description></item>
+        /// <item><description><b>released</b>: The cluster is released.</description></item>
+        /// </list>
         /// 
-        /// *   **init**: The cluster is being initialized.
-        /// *   **schedule**: The cluster is pending scheduling.
-        /// *   **running**: The cluster is running.
-        /// *   **upgrade**: The cluster is being upgraded.
-        /// *   **downgrade**: The cluster is being downgraded.
-        /// *   **locked**: The cluster is locked.
-        /// *   **releasing**: The cluster is being released.
-        /// *   **released**: The cluster is released.
+        /// <b>Example:</b>
+        /// <para>init</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
 
         /// <summary>
-        /// The type of the query condition. Valid values:
+        /// <para>The type of the query condition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>NAME</b>: the name of the cluster.</description></item>
+        /// <item><description><b>INSTANCE</b>: the ID of a cluster instance.</description></item>
+        /// <item><description><b>DEDICAETEDCLUSTERID</b>: the ID of a dedicated cluster.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You must specify the query condition by using the <b>Params</b> parameter.</para>
+        /// </remarks>
         /// 
-        /// *   **NAME**: the name of the cluster.
-        /// *   **INSTANCE**: the ID of a cluster instance.
-        /// *   **DEDICAETEDCLUSTERID**: the ID of a dedicated cluster.
-        /// 
-        /// >  You must specify the query condition by using the **Params** parameter.
+        /// <b>Example:</b>
+        /// <para>NAME</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -10,27 +10,35 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class UpgradeTwoWayRequest : TeaModel {
         /// <summary>
-        /// The instance class of the two-way synchronization task. Valid values: **large**, **medium**, **micro**, and **small**.
+        /// <para>The instance class of the two-way synchronization task. Valid values: <b>large</b>, <b>medium</b>, <b>micro</b>, and <b>small</b>.</para>
+        /// <remarks>
+        /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  For more information, see [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>large</para>
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// The ID of the data synchronization instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.
+        /// <para>The ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dtsh77p49x4k28****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

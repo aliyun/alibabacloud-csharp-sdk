@@ -9,38 +9,55 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyDtsJobPasswordRequest : TeaModel {
+        [NameInMap("DtsInstanceId")]
+        [Validation(Required=false)]
+        public string DtsInstanceId { get; set; }
+
         /// <summary>
-        /// The ID of the data migration, data synchronization, or change tracking task.
+        /// <para>The ID of the data migration, data synchronization, or change tracking task.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>l3m1213ye7l****</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// Specifies the database to which the password belongs. Valid values:
+        /// <para>Specifies the database to which the password belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>src</b>: source database</description></item>
+        /// <item><description><b>dest</b>: destination database</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter must be specified.</para>
+        /// </remarks>
         /// 
-        /// *   **src**: source database
-        /// *   **dest**: destination database
-        /// 
-        /// >  This parameter must be specified.
+        /// <b>Example:</b>
+        /// <para>src</para>
         /// </summary>
         [NameInMap("Endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// The new password of the account.
+        /// <para>The new password of the account.</para>
+        /// <remarks>
+        /// <para> This parameter must be specified and cannot be the same as the current password.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter must be specified and cannot be the same as the current password.
+        /// <b>Example:</b>
+        /// <para>Test123456</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// The ID of the region where the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -50,10 +67,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("SynchronizationDirection")]
+        [Validation(Required=false)]
+        public string SynchronizationDirection { get; set; }
+
         /// <summary>
-        /// The account of the source or destination database.
+        /// <para>The account of the source or destination database.</para>
+        /// <remarks>
+        /// <para> This parameter must be specified.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter must be specified.
+        /// <b>Example:</b>
+        /// <para>dtstest</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

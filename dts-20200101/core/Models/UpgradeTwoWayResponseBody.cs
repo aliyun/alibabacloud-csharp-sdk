@@ -10,54 +10,77 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class UpgradeTwoWayResponseBody : TeaModel {
         /// <summary>
-        /// The dynamic error code. This parameter will be removed in the future.
+        /// <para>The dynamic error code. This parameter will be removed in the future.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>403</para>
         /// </summary>
         [NameInMap("DynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
+        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <remarks>
+        /// <para> If the return value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and that of the <b>DynamicMessage</b> parameter is <b>InstanceId</b>, the specified <b>InstanceId</b> parameter is invalid.</para>
+        /// </remarks>
         /// 
-        /// >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and that of the **DynamicMessage** parameter is **InstanceId**, the specified **InstanceId** parameter is invalid.
+        /// <b>Example:</b>
+        /// <para>InstanceId</para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The error code returned if the call failed.
+        /// <para>The error code returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InternalError</para>
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the call failed.
+        /// <para>The error message returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Value of Input Parameter %s is not valid.</para>
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2D3B4615-923F-49AA-AF21-6D8E3967****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The call was successful.
-        /// *   **false**: The call failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

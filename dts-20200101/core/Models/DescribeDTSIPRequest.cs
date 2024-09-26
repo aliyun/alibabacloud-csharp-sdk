@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDTSIPRequest : TeaModel {
         /// <summary>
-        /// The ID of the region where the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The ID of the region where the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <remarks>
+        /// <para> If the destination instance is a self-managed database with a public IP address, you can set the parameter to <b>cn-hangzhou</b> or the ID of the closest region.</para>
+        /// </remarks>
         /// 
-        /// >  If the destination instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("DestinationEndpointRegion")]
         [Validation(Required=false)]
@@ -27,11 +31,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the source instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The ID of the region where the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <remarks>
+        /// <para> If the source instance is a self-managed database with a public IP address, you can set the parameter to <b>cn-hangzhou</b> or the ID of the closest region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  If the source instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("SourceEndpointRegion")]
         [Validation(Required=false)]

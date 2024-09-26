@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDedicatedClusterRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dtsCluster****</para>
         /// </summary>
         [NameInMap("DedicatedClusterId")]
         [Validation(Required=false)]
@@ -23,7 +25,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance resides.
+        /// <para>The ID of the region in which the instance resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

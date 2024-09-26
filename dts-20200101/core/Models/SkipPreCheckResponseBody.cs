@@ -10,79 +10,113 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class SkipPreCheckResponseBody : TeaModel {
         /// <summary>
-        /// The error code. This parameter will be removed in the future.
+        /// <para>The error code. This parameter will be removed in the future.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
+        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <remarks>
+        /// <para> If the specified <b>JobId</b> parameter is invalid, <b>The Value of Input Parameter %s is not valid</b> is returned for <b>ErrMessage</b> and <b>JobId</b> is returned for <b>DynamicMessage</b>.</para>
+        /// </remarks>
         /// 
-        /// >  If the specified **JobId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **JobId** is returned for **DynamicMessage**.
+        /// <b>Example:</b>
+        /// <para>JobId</para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The error code returned if the call failed.
+        /// <para>The error code returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InternalError</para>
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the call failed.
+        /// <para>The error message returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Value of Input Parameter %s is not valid.</para>
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the DTS task on which the precheck is performed.
+        /// <para>The ID of the DTS task on which the precheck is performed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>kyri3z9w29a****</para>
         /// </summary>
         [NameInMap("MigrationJobId")]
         [Validation(Required=false)]
         public string MigrationJobId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8C498360-7892-433C-847A-BA71A850****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the precheck task.
+        /// <para>The ID of the precheck task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b4my3zg929a****</para>
         /// </summary>
         [NameInMap("ScheduleJobId")]
         [Validation(Required=false)]
         public string ScheduleJobId { get; set; }
 
         /// <summary>
-        /// The shortened name of the precheck item.
+        /// <para>The shortened name of the precheck item.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CHECK_SAME_OBJ</para>
         /// </summary>
         [NameInMap("SkipItems")]
         [Validation(Required=false)]
         public string SkipItems { get; set; }
 
         /// <summary>
-        /// The name of the precheck item.
+        /// <para>The name of the precheck item.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CHECK_SAME_OBJ_DETAIL</para>
         /// </summary>
         [NameInMap("SkipNames")]
         [Validation(Required=false)]
         public string SkipNames { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful.
+        /// <para>Indicates whether the call is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

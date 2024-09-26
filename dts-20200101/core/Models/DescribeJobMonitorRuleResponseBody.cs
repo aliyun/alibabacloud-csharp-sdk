@@ -10,61 +10,84 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeJobMonitorRuleResponseBody : TeaModel {
         /// <summary>
-        /// The error code. This parameter will be removed in the future.
+        /// <para>The error code. This parameter will be removed in the future.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The ID of the data migration, data synchronization, or change tracking task.
+        /// <para>The ID of the data migration, data synchronization, or change tracking task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ta7w132u12h****</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
+        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <remarks>
+        /// <para> If the specified <b>DtsJobId</b> parameter is invalid, <b>The Value of Input Parameter %s is not valid</b> is returned for <b>ErrMessage</b> and <b>DtsJobId</b> is returned for <b>DynamicMessage</b>.</para>
+        /// </remarks>
         /// 
-        /// >  If the specified **DtsJobId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **DtsJobId** is returned for **DynamicMessage**.
+        /// <b>Example:</b>
+        /// <para>DtsJobId</para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The error code returned if the call failed.
+        /// <para>The error code returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>403</para>
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the call failed.
+        /// <para>The error message returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The Value of Input Parameter %s is not valid.</para>
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The monitoring rules of the DTS task.
+        /// <para>The monitoring rules of the DTS task.</para>
         /// </summary>
         [NameInMap("MonitorRules")]
         [Validation(Required=false)]
         public List<DescribeJobMonitorRuleResponseBodyMonitorRules> MonitorRules { get; set; }
         public class DescribeJobMonitorRuleResponseBodyMonitorRules : TeaModel {
             /// <summary>
-            /// The threshold that triggers the alert.
+            /// <para>The threshold that triggers the alert.</para>
+            /// <list type="bullet">
+            /// <item><description>If the request parameter <b>Type</b> of the <a href="https://help.aliyun.com/document_detail/212332.html">CreateJobMonitorRule</a> operation is set to <b>delay</b>, the unit of DelayRuleTime is seconds.</description></item>
+            /// <item><description>If the request parameter <b>Type</b> of the <a href="https://help.aliyun.com/document_detail/212332.html">CreateJobMonitorRule</a> operation is set to <b>full_timeout</b>, the unit of DelayRuleTime is hours.</description></item>
+            /// </list>
             /// 
-            /// *   If the request parameter **Type** of the [CreateJobMonitorRule](https://help.aliyun.com/document_detail/212332.html) operation is set to **delay**, the unit of DelayRuleTime is seconds.
-            /// *   If the request parameter **Type** of the [CreateJobMonitorRule](https://help.aliyun.com/document_detail/212332.html) operation is set to **full_timeout**, the unit of DelayRuleTime is hours.
+            /// <b>Example:</b>
+            /// <para>11</para>
             /// </summary>
             [NameInMap("DelayRuleTime")]
             [Validation(Required=false)]
@@ -87,17 +110,24 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// The mobile phone numbers that receive alert notifications. Multiple mobile numbers are separated by commas (,).
+            /// <para>The mobile phone numbers that receive alert notifications. Multiple mobile numbers are separated by commas (,).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1361234****,1371234****</para>
             /// </summary>
             [NameInMap("Phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
 
             /// <summary>
-            /// Indicates whether the monitoring rule is enabled. Valid values:
+            /// <para>Indicates whether the monitoring rule is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Y</b>: The monitoring rule is enabled.</description></item>
+            /// <item><description><b>N</b>: The monitoring rule is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   **Y**: The monitoring rule is enabled.
-            /// *   **N**: The monitoring rule is disabled.
+            /// <b>Example:</b>
+            /// <para>Y</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -108,10 +138,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public int? Times { get; set; }
 
             /// <summary>
-            /// The type of the monitoring rule. Valid values:
+            /// <para>The type of the monitoring rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>delay</b>: If the task latency reaches the threshold, an alert is triggered.</description></item>
+            /// <item><description><b>error</b>: If an exception occurs, an alert is triggered.</description></item>
+            /// </list>
             /// 
-            /// *   **delay**: If the task latency reaches the threshold, an alert is triggered.
-            /// *   **error**: If an exception occurs, an alert is triggered.
+            /// <b>Example:</b>
+            /// <para>delay</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -120,24 +154,31 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0CA14388-DD89-4A7B-8CDD-884A10CE****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>:The call failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The call was successful.
-        /// *   **false**:The call failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The topics of all subtasks in the distributed change tracking task.
+        /// <para>The topics of all subtasks in the distributed change tracking task.</para>
         /// </summary>
         [NameInMap("Topics")]
         [Validation(Required=false)]

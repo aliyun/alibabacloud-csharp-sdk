@@ -10,23 +10,33 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class StartDtsJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the data migration, data synchronization, or change tracking instance.
+        /// <para>The ID of the data migration, data synchronization, or change tracking instance.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/208139.html">DescribeMigrationJobs</a>, <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a>, or <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeMigrationJobs](https://help.aliyun.com/document_detail/208139.html), [DescribeSubscriptionInstances](https://help.aliyun.com/document_detail/49442.html), or [DescribeSynchronizationJobs](https://help.aliyun.com/document_detail/49454.html) operation to query the instance ID
+        /// <b>Example:</b>
+        /// <para>dtsl3m1213ye7l****</para>
         /// </summary>
         [NameInMap("DtsInstanceId")]
         [Validation(Required=false)]
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the data migration, data synchronization, or change tracking task.
+        /// <para>The ID of the data migration, data synchronization, or change tracking task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>l3m1213ye7l****</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// The region ID of the Data Transmission Service (DTS) instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The region ID of the Data Transmission Service (DTS) instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,13 +47,19 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The synchronization direction. Default value: Forward. Valid values:
+        /// <para>The synchronization direction. Default value: Forward. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Forward</b>: Data is synchronized from the source database to the destination database.</para>
+        /// </description></item>
+        /// <item><description><para><b>Reverse</b>: Data is synchronized from the destination database to the source database.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You can set this parameter to <b>Reverse</b> to start the reverse synchronization task only if the topology is two-way synchronization.</para>
+        /// </remarks>
         /// 
-        /// *   **Forward**: Data is synchronized from the source database to the destination database.
-        /// 
-        /// *   **Reverse**: Data is synchronized from the destination database to the source database.
-        /// 
-        /// >You can set this parameter to **Reverse** to start the reverse synchronization task only if the topology is two-way synchronization.
+        /// <b>Example:</b>
+        /// <para>Forward</para>
         /// </summary>
         [NameInMap("SynchronizationDirection")]
         [Validation(Required=false)]

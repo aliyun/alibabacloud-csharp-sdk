@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class StartReverseWriterRequest : TeaModel {
         /// <summary>
-        /// The offset of the Incremental Write module. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. 
+        /// <para>The offset of the Incremental Write module. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. </para>
+        /// <remarks>
+        /// <para>The default value is the offset that is automatically saved by DTS when the task is paused.</para>
+        /// </remarks>
         /// 
-        /// > The default value is the offset that is automatically saved by DTS when the task is paused.
+        /// <b>Example:</b>
+        /// <para>1695613785</para>
         /// </summary>
         [NameInMap("CheckPoint")]
         [Validation(Required=false)]
         public string CheckPoint { get; set; }
 
         /// <summary>
-        /// The ID of the reverse task that was created by calling the CreateReverseDtsJob operation.
+        /// <para>The ID of the reverse task that was created by calling the CreateReverseDtsJob operation.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>n99m9jx822k****</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]

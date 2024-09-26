@@ -10,19 +10,27 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DeleteDtsJobsRequest : TeaModel {
         /// <summary>
-        /// The ID of the data migration, data synchronization, or change tracking task.
+        /// <para>The ID of the data migration, data synchronization, or change tracking task.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Separate multiple task IDs with commas (,).</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query task IDs.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > *   Separate multiple task IDs with commas (,).
-        /// > *   You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query task IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>l5o11f9029c****</para>
         /// </summary>
         [NameInMap("DtsJobIds")]
         [Validation(Required=false)]
         public string DtsJobIds { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

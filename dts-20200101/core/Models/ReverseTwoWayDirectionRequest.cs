@@ -9,16 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ReverseTwoWayDirectionRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dtsldy114cy24f****</para>
+        /// </summary>
         [NameInMap("DtsInstanceId")]
         [Validation(Required=false)]
         public string DtsInstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("IgnoreErrorSubJob")]
         [Validation(Required=false)]
         public bool? IgnoreErrorSubJob { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

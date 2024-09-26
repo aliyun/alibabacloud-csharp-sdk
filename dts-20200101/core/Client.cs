@@ -95,15 +95,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 配置DTS任务
-         *
-         * @description The name of the DTS instance.
-         *
-         * @param request ConfigureDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置DTS任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The name of the DTS instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureDtsJobResponse
+        /// </returns>
         public ConfigureDtsJobResponse ConfigureDtsJobWithOptions(ConfigureDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -373,15 +384,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureDtsJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 配置DTS任务
-         *
-         * @description The name of the DTS instance.
-         *
-         * @param request ConfigureDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置DTS任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The name of the DTS instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureDtsJobResponse
+        /// </returns>
         public async Task<ConfigureDtsJobResponse> ConfigureDtsJobWithOptionsAsync(ConfigureDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -651,28 +673,46 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureDtsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 配置DTS任务
-         *
-         * @description The name of the DTS instance.
-         *
-         * @param request ConfigureDtsJobRequest
-         * @return ConfigureDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置DTS任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The name of the DTS instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureDtsJobResponse
+        /// </returns>
         public ConfigureDtsJobResponse ConfigureDtsJob(ConfigureDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigureDtsJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 配置DTS任务
-         *
-         * @description The name of the DTS instance.
-         *
-         * @param request ConfigureDtsJobRequest
-         * @return ConfigureDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置DTS任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The name of the DTS instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureDtsJobResponse
+        /// </returns>
         public async Task<ConfigureDtsJobResponse> ConfigureDtsJobAsync(ConfigureDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -843,16 +883,27 @@ namespace AlibabaCloud.SDK.Dts20200101
             return configureDtsJobResp;
         }
 
-        /**
-         * @summary Configures a data migration task.
-         *
-         * @description After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to start the task.
-         * A data migration task may fail to be started due to precheck failures. You can call the [DescribeMigrationJobStatus](https://help.aliyun.com/document_detail/49433.html) operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the data migration task.
-         *
-         * @param request ConfigureMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureMigrationJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to start the task.
+        /// A data migration task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49433.html">DescribeMigrationJobStatus</a> operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the data migration task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureMigrationJobResponse
+        /// </returns>
         public ConfigureMigrationJobResponse ConfigureMigrationJobWithOptions(ConfigureMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -926,16 +977,27 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureMigrationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Configures a data migration task.
-         *
-         * @description After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to start the task.
-         * A data migration task may fail to be started due to precheck failures. You can call the [DescribeMigrationJobStatus](https://help.aliyun.com/document_detail/49433.html) operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the data migration task.
-         *
-         * @param request ConfigureMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureMigrationJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to start the task.
+        /// A data migration task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49433.html">DescribeMigrationJobStatus</a> operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the data migration task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureMigrationJobResponse
+        /// </returns>
         public async Task<ConfigureMigrationJobResponse> ConfigureMigrationJobWithOptionsAsync(ConfigureMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1009,41 +1071,64 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Configures a data migration task.
-         *
-         * @description After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to start the task.
-         * A data migration task may fail to be started due to precheck failures. You can call the [DescribeMigrationJobStatus](https://help.aliyun.com/document_detail/49433.html) operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the data migration task.
-         *
-         * @param request ConfigureMigrationJobRequest
-         * @return ConfigureMigrationJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to start the task.
+        /// A data migration task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49433.html">DescribeMigrationJobStatus</a> operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the data migration task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureMigrationJobResponse
+        /// </returns>
         public ConfigureMigrationJobResponse ConfigureMigrationJob(ConfigureMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigureMigrationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Configures a data migration task.
-         *
-         * @description After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to start the task.
-         * A data migration task may fail to be started due to precheck failures. You can call the [DescribeMigrationJobStatus](https://help.aliyun.com/document_detail/49433.html) operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the data migration task.
-         *
-         * @param request ConfigureMigrationJobRequest
-         * @return ConfigureMigrationJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to start the task.
+        /// A data migration task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49433.html">DescribeMigrationJobStatus</a> operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the data migration task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureMigrationJobResponse
+        /// </returns>
         public async Task<ConfigureMigrationJobResponse> ConfigureMigrationJobAsync(ConfigureMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigureMigrationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ConfigureMigrationJobAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureMigrationJobAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureMigrationJobAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureMigrationJobAlertResponse
+        /// </returns>
         public ConfigureMigrationJobAlertResponse ConfigureMigrationJobAlertWithOptions(ConfigureMigrationJobAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1107,11 +1192,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureMigrationJobAlertResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ConfigureMigrationJobAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureMigrationJobAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureMigrationJobAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureMigrationJobAlertResponse
+        /// </returns>
         public async Task<ConfigureMigrationJobAlertResponse> ConfigureMigrationJobAlertWithOptionsAsync(ConfigureMigrationJobAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1175,31 +1265,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureMigrationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ConfigureMigrationJobAlertRequest
-         * @return ConfigureMigrationJobAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureMigrationJobAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureMigrationJobAlertResponse
+        /// </returns>
         public ConfigureMigrationJobAlertResponse ConfigureMigrationJobAlert(ConfigureMigrationJobAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigureMigrationJobAlertWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ConfigureMigrationJobAlertRequest
-         * @return ConfigureMigrationJobAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureMigrationJobAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureMigrationJobAlertResponse
+        /// </returns>
         public async Task<ConfigureMigrationJobAlertResponse> ConfigureMigrationJobAlertAsync(ConfigureMigrationJobAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigureMigrationJobAlertWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ConfigureSubscriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSubscriptionResponse
-         */
+        /// <param name="request">
+        /// ConfigureSubscriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionResponse
+        /// </returns>
         public ConfigureSubscriptionResponse ConfigureSubscriptionWithOptions(ConfigureSubscriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1379,11 +1480,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSubscriptionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ConfigureSubscriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSubscriptionResponse
-         */
+        /// <param name="request">
+        /// ConfigureSubscriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionResponse
+        /// </returns>
         public async Task<ConfigureSubscriptionResponse> ConfigureSubscriptionWithOptionsAsync(ConfigureSubscriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1563,35 +1669,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ConfigureSubscriptionRequest
-         * @return ConfigureSubscriptionResponse
-         */
+        /// <param name="request">
+        /// ConfigureSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionResponse
+        /// </returns>
         public ConfigureSubscriptionResponse ConfigureSubscription(ConfigureSubscriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigureSubscriptionWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ConfigureSubscriptionRequest
-         * @return ConfigureSubscriptionResponse
-         */
+        /// <param name="request">
+        /// ConfigureSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionResponse
+        /// </returns>
         public async Task<ConfigureSubscriptionResponse> ConfigureSubscriptionAsync(ConfigureSubscriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigureSubscriptionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Before you call this operation, you must call the [CreateSubscriptionInstance](https://help.aliyun.com/document_detail/49436.html) operation to create a change tracking instance.
-         *
-         * @description The operation that you want to perform. Set the value to **ConfigureSubscriptionInstance**.
-         *
-         * @param request ConfigureSubscriptionInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSubscriptionInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation that you want to perform. Set the value to <b>ConfigureSubscriptionInstance</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSubscriptionInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionInstanceResponse
+        /// </returns>
         public ConfigureSubscriptionInstanceResponse ConfigureSubscriptionInstanceWithOptions(ConfigureSubscriptionInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1661,15 +1784,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Before you call this operation, you must call the [CreateSubscriptionInstance](https://help.aliyun.com/document_detail/49436.html) operation to create a change tracking instance.
-         *
-         * @description The operation that you want to perform. Set the value to **ConfigureSubscriptionInstance**.
-         *
-         * @param request ConfigureSubscriptionInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSubscriptionInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation that you want to perform. Set the value to <b>ConfigureSubscriptionInstance</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSubscriptionInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionInstanceResponse
+        /// </returns>
         public async Task<ConfigureSubscriptionInstanceResponse> ConfigureSubscriptionInstanceWithOptionsAsync(ConfigureSubscriptionInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1739,39 +1873,62 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Before you call this operation, you must call the [CreateSubscriptionInstance](https://help.aliyun.com/document_detail/49436.html) operation to create a change tracking instance.
-         *
-         * @description The operation that you want to perform. Set the value to **ConfigureSubscriptionInstance**.
-         *
-         * @param request ConfigureSubscriptionInstanceRequest
-         * @return ConfigureSubscriptionInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation that you want to perform. Set the value to <b>ConfigureSubscriptionInstance</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSubscriptionInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionInstanceResponse
+        /// </returns>
         public ConfigureSubscriptionInstanceResponse ConfigureSubscriptionInstance(ConfigureSubscriptionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigureSubscriptionInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Before you call this operation, you must call the [CreateSubscriptionInstance](https://help.aliyun.com/document_detail/49436.html) operation to create a change tracking instance.
-         *
-         * @description The operation that you want to perform. Set the value to **ConfigureSubscriptionInstance**.
-         *
-         * @param request ConfigureSubscriptionInstanceRequest
-         * @return ConfigureSubscriptionInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation that you want to perform. Set the value to <b>ConfigureSubscriptionInstance</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSubscriptionInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionInstanceResponse
+        /// </returns>
         public async Task<ConfigureSubscriptionInstanceResponse> ConfigureSubscriptionInstanceAsync(ConfigureSubscriptionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigureSubscriptionInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ConfigureSubscriptionInstanceAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSubscriptionInstanceAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureSubscriptionInstanceAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionInstanceAlertResponse
+        /// </returns>
         public ConfigureSubscriptionInstanceAlertResponse ConfigureSubscriptionInstanceAlertWithOptions(ConfigureSubscriptionInstanceAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1835,11 +1992,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSubscriptionInstanceAlertResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ConfigureSubscriptionInstanceAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSubscriptionInstanceAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureSubscriptionInstanceAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionInstanceAlertResponse
+        /// </returns>
         public async Task<ConfigureSubscriptionInstanceAlertResponse> ConfigureSubscriptionInstanceAlertWithOptionsAsync(ConfigureSubscriptionInstanceAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1903,36 +2065,53 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSubscriptionInstanceAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ConfigureSubscriptionInstanceAlertRequest
-         * @return ConfigureSubscriptionInstanceAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureSubscriptionInstanceAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionInstanceAlertResponse
+        /// </returns>
         public ConfigureSubscriptionInstanceAlertResponse ConfigureSubscriptionInstanceAlert(ConfigureSubscriptionInstanceAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigureSubscriptionInstanceAlertWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ConfigureSubscriptionInstanceAlertRequest
-         * @return ConfigureSubscriptionInstanceAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureSubscriptionInstanceAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSubscriptionInstanceAlertResponse
+        /// </returns>
         public async Task<ConfigureSubscriptionInstanceAlertResponse> ConfigureSubscriptionInstanceAlertAsync(ConfigureSubscriptionInstanceAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigureSubscriptionInstanceAlertWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, you must call the [CreateSynchronizationJob](https://help.aliyun.com/document_detail/49446.html) operation to create a data synchronization instance.
-         * > 
-         * *   After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to start the task.
-         * *   A data synchronization task may fail to be started due to precheck failures. You can call the [DescribeSynchronizationJobStatus](https://help.aliyun.com/document_detail/49453.html) operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to restart the data synchronization task.
-         *
-         * @param request ConfigureSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the task.</description></item>
+        /// <item><description>A data synchronization task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobResponse
+        /// </returns>
         public ConfigureSynchronizationJobResponse ConfigureSynchronizationJobWithOptions(ConfigureSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2018,16 +2197,27 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSynchronizationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, you must call the [CreateSynchronizationJob](https://help.aliyun.com/document_detail/49446.html) operation to create a data synchronization instance.
-         * > 
-         * *   After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to start the task.
-         * *   A data synchronization task may fail to be started due to precheck failures. You can call the [DescribeSynchronizationJobStatus](https://help.aliyun.com/document_detail/49453.html) operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to restart the data synchronization task.
-         *
-         * @param request ConfigureSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the task.</description></item>
+        /// <item><description>A data synchronization task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobResponse
+        /// </returns>
         public async Task<ConfigureSynchronizationJobResponse> ConfigureSynchronizationJobWithOptionsAsync(ConfigureSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2113,41 +2303,64 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, you must call the [CreateSynchronizationJob](https://help.aliyun.com/document_detail/49446.html) operation to create a data synchronization instance.
-         * > 
-         * *   After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to start the task.
-         * *   A data synchronization task may fail to be started due to precheck failures. You can call the [DescribeSynchronizationJobStatus](https://help.aliyun.com/document_detail/49453.html) operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to restart the data synchronization task.
-         *
-         * @param request ConfigureSynchronizationJobRequest
-         * @return ConfigureSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the task.</description></item>
+        /// <item><description>A data synchronization task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobResponse
+        /// </returns>
         public ConfigureSynchronizationJobResponse ConfigureSynchronizationJob(ConfigureSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigureSynchronizationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, you must call the [CreateSynchronizationJob](https://help.aliyun.com/document_detail/49446.html) operation to create a data synchronization instance.
-         * > 
-         * *   After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to start the task.
-         * *   A data synchronization task may fail to be started due to precheck failures. You can call the [DescribeSynchronizationJobStatus](https://help.aliyun.com/document_detail/49453.html) operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to restart the data synchronization task.
-         *
-         * @param request ConfigureSynchronizationJobRequest
-         * @return ConfigureSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the task.</description></item>
+        /// <item><description>A data synchronization task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobResponse
+        /// </returns>
         public async Task<ConfigureSynchronizationJobResponse> ConfigureSynchronizationJobAsync(ConfigureSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigureSynchronizationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ConfigureSynchronizationJobAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSynchronizationJobAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureSynchronizationJobAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobAlertResponse
+        /// </returns>
         public ConfigureSynchronizationJobAlertResponse ConfigureSynchronizationJobAlertWithOptions(ConfigureSynchronizationJobAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2215,11 +2428,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSynchronizationJobAlertResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ConfigureSynchronizationJobAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSynchronizationJobAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureSynchronizationJobAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobAlertResponse
+        /// </returns>
         public async Task<ConfigureSynchronizationJobAlertResponse> ConfigureSynchronizationJobAlertWithOptionsAsync(ConfigureSynchronizationJobAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2287,34 +2505,48 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSynchronizationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ConfigureSynchronizationJobAlertRequest
-         * @return ConfigureSynchronizationJobAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureSynchronizationJobAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobAlertResponse
+        /// </returns>
         public ConfigureSynchronizationJobAlertResponse ConfigureSynchronizationJobAlert(ConfigureSynchronizationJobAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigureSynchronizationJobAlertWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ConfigureSynchronizationJobAlertRequest
-         * @return ConfigureSynchronizationJobAlertResponse
-         */
+        /// <param name="request">
+        /// ConfigureSynchronizationJobAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobAlertResponse
+        /// </returns>
         public async Task<ConfigureSynchronizationJobAlertResponse> ConfigureSynchronizationJobAlertAsync(ConfigureSynchronizationJobAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigureSynchronizationJobAlertWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
-         * After you call this operation, you can call the [DescribeSynchronizationJobReplicatorCompare](https://help.aliyun.com/document_detail/199183.html) operation to verify whether image matching is enabled for the data synchronization instance.
-         *
-         * @param request ConfigureSynchronizationJobReplicatorCompareRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSynchronizationJobReplicatorCompareResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
+        /// After you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/199183.html">DescribeSynchronizationJobReplicatorCompare</a> operation to verify whether image matching is enabled for the data synchronization instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSynchronizationJobReplicatorCompareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobReplicatorCompareResponse
+        /// </returns>
         public ConfigureSynchronizationJobReplicatorCompareResponse ConfigureSynchronizationJobReplicatorCompareWithOptions(ConfigureSynchronizationJobReplicatorCompareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2370,14 +2602,22 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSynchronizationJobReplicatorCompareResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
-         * After you call this operation, you can call the [DescribeSynchronizationJobReplicatorCompare](https://help.aliyun.com/document_detail/199183.html) operation to verify whether image matching is enabled for the data synchronization instance.
-         *
-         * @param request ConfigureSynchronizationJobReplicatorCompareRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConfigureSynchronizationJobReplicatorCompareResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
+        /// After you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/199183.html">DescribeSynchronizationJobReplicatorCompare</a> operation to verify whether image matching is enabled for the data synchronization instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSynchronizationJobReplicatorCompareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobReplicatorCompareResponse
+        /// </returns>
         public async Task<ConfigureSynchronizationJobReplicatorCompareResponse> ConfigureSynchronizationJobReplicatorCompareWithOptionsAsync(ConfigureSynchronizationJobReplicatorCompareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2433,39 +2673,59 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ConfigureSynchronizationJobReplicatorCompareResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
-         * After you call this operation, you can call the [DescribeSynchronizationJobReplicatorCompare](https://help.aliyun.com/document_detail/199183.html) operation to verify whether image matching is enabled for the data synchronization instance.
-         *
-         * @param request ConfigureSynchronizationJobReplicatorCompareRequest
-         * @return ConfigureSynchronizationJobReplicatorCompareResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
+        /// After you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/199183.html">DescribeSynchronizationJobReplicatorCompare</a> operation to verify whether image matching is enabled for the data synchronization instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSynchronizationJobReplicatorCompareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobReplicatorCompareResponse
+        /// </returns>
         public ConfigureSynchronizationJobReplicatorCompareResponse ConfigureSynchronizationJobReplicatorCompare(ConfigureSynchronizationJobReplicatorCompareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigureSynchronizationJobReplicatorCompareWithOptions(request, runtime);
         }
 
-        /**
-         * @description When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
-         * After you call this operation, you can call the [DescribeSynchronizationJobReplicatorCompare](https://help.aliyun.com/document_detail/199183.html) operation to verify whether image matching is enabled for the data synchronization instance.
-         *
-         * @param request ConfigureSynchronizationJobReplicatorCompareRequest
-         * @return ConfigureSynchronizationJobReplicatorCompareResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
+        /// After you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/199183.html">DescribeSynchronizationJobReplicatorCompare</a> operation to verify whether image matching is enabled for the data synchronization instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigureSynchronizationJobReplicatorCompareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigureSynchronizationJobReplicatorCompareResponse
+        /// </returns>
         public async Task<ConfigureSynchronizationJobReplicatorCompareResponse> ConfigureSynchronizationJobReplicatorCompareAsync(ConfigureSynchronizationJobReplicatorCompareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigureSynchronizationJobReplicatorCompareWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询符合条件的任务数
-         *
-         * @param request CountJobByConditionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CountJobByConditionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询符合条件的任务数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CountJobByConditionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CountJobByConditionResponse
+        /// </returns>
         public CountJobByConditionResponse CountJobByConditionWithOptions(CountJobByConditionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2529,13 +2789,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CountJobByConditionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询符合条件的任务数
-         *
-         * @param request CountJobByConditionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CountJobByConditionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询符合条件的任务数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CountJobByConditionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CountJobByConditionResponse
+        /// </returns>
         public async Task<CountJobByConditionResponse> CountJobByConditionWithOptionsAsync(CountJobByConditionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2599,35 +2867,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CountJobByConditionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询符合条件的任务数
-         *
-         * @param request CountJobByConditionRequest
-         * @return CountJobByConditionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询符合条件的任务数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CountJobByConditionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CountJobByConditionResponse
+        /// </returns>
         public CountJobByConditionResponse CountJobByCondition(CountJobByConditionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CountJobByConditionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询符合条件的任务数
-         *
-         * @param request CountJobByConditionRequest
-         * @return CountJobByConditionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询符合条件的任务数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CountJobByConditionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CountJobByConditionResponse
+        /// </returns>
         public async Task<CountJobByConditionResponse> CountJobByConditionAsync(CountJobByConditionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CountJobByConditionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request CreateConsumerChannelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// CreateConsumerChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerChannelResponse
+        /// </returns>
         public CreateConsumerChannelResponse CreateConsumerChannelWithOptions(CreateConsumerChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2679,11 +2964,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateConsumerChannelResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateConsumerChannelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// CreateConsumerChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerChannelResponse
+        /// </returns>
         public async Task<CreateConsumerChannelResponse> CreateConsumerChannelWithOptionsAsync(CreateConsumerChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2735,31 +3025,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateConsumerChannelRequest
-         * @return CreateConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// CreateConsumerChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerChannelResponse
+        /// </returns>
         public CreateConsumerChannelResponse CreateConsumerChannel(CreateConsumerChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateConsumerChannelWithOptions(request, runtime);
         }
 
-        /**
-         * @param request CreateConsumerChannelRequest
-         * @return CreateConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// CreateConsumerChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerChannelResponse
+        /// </returns>
         public async Task<CreateConsumerChannelResponse> CreateConsumerChannelAsync(CreateConsumerChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateConsumerChannelWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request CreateConsumerGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConsumerGroupResponse
-         */
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public CreateConsumerGroupResponse CreateConsumerGroupWithOptions(CreateConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2815,11 +3116,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateConsumerGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateConsumerGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConsumerGroupResponse
-         */
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public async Task<CreateConsumerGroupResponse> CreateConsumerGroupWithOptionsAsync(CreateConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2875,33 +3181,47 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateConsumerGroupRequest
-         * @return CreateConsumerGroupResponse
-         */
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public CreateConsumerGroupResponse CreateConsumerGroup(CreateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateConsumerGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @param request CreateConsumerGroupRequest
-         * @return CreateConsumerGroupResponse
-         */
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public async Task<CreateConsumerGroupResponse> CreateConsumerGroupAsync(CreateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateConsumerGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an alert rule.
-         *
-         * @param request CreateDedicatedClusterMonitorRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDedicatedClusterMonitorRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alert rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDedicatedClusterMonitorRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDedicatedClusterMonitorRuleResponse
+        /// </returns>
         public CreateDedicatedClusterMonitorRuleResponse CreateDedicatedClusterMonitorRuleWithOptions(CreateDedicatedClusterMonitorRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2969,13 +3289,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateDedicatedClusterMonitorRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an alert rule.
-         *
-         * @param request CreateDedicatedClusterMonitorRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDedicatedClusterMonitorRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alert rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDedicatedClusterMonitorRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDedicatedClusterMonitorRuleResponse
+        /// </returns>
         public async Task<CreateDedicatedClusterMonitorRuleResponse> CreateDedicatedClusterMonitorRuleWithOptionsAsync(CreateDedicatedClusterMonitorRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3043,38 +3371,60 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateDedicatedClusterMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an alert rule.
-         *
-         * @param request CreateDedicatedClusterMonitorRuleRequest
-         * @return CreateDedicatedClusterMonitorRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alert rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDedicatedClusterMonitorRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDedicatedClusterMonitorRuleResponse
+        /// </returns>
         public CreateDedicatedClusterMonitorRuleResponse CreateDedicatedClusterMonitorRule(CreateDedicatedClusterMonitorRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDedicatedClusterMonitorRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an alert rule.
-         *
-         * @param request CreateDedicatedClusterMonitorRuleRequest
-         * @return CreateDedicatedClusterMonitorRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alert rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDedicatedClusterMonitorRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDedicatedClusterMonitorRuleResponse
+        /// </returns>
         public async Task<CreateDedicatedClusterMonitorRuleResponse> CreateDedicatedClusterMonitorRuleAsync(CreateDedicatedClusterMonitorRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDedicatedClusterMonitorRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description *   Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of DTS.
-         * *   If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation to configure a DTS task.
-         *
-         * @param request CreateDtsInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDtsInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
+        /// <list type="bullet">
+        /// <item><description>If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a DTS task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDtsInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDtsInstanceResponse
+        /// </returns>
         public CreateDtsInstanceResponse CreateDtsInstanceWithOptions(CreateDtsInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3190,14 +3540,24 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateDtsInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description *   Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of DTS.
-         * *   If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation to configure a DTS task.
-         *
-         * @param request CreateDtsInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDtsInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
+        /// <list type="bullet">
+        /// <item><description>If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a DTS task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDtsInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDtsInstanceResponse
+        /// </returns>
         public async Task<CreateDtsInstanceResponse> CreateDtsInstanceWithOptionsAsync(CreateDtsInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3313,42 +3673,68 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateDtsInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description *   Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of DTS.
-         * *   If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation to configure a DTS task.
-         *
-         * @param request CreateDtsInstanceRequest
-         * @return CreateDtsInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
+        /// <list type="bullet">
+        /// <item><description>If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a DTS task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDtsInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDtsInstanceResponse
+        /// </returns>
         public CreateDtsInstanceResponse CreateDtsInstance(CreateDtsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDtsInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @description *   Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of DTS.
-         * *   If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation to configure a DTS task.
-         *
-         * @param request CreateDtsInstanceRequest
-         * @return CreateDtsInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
+        /// <list type="bullet">
+        /// <item><description>If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a DTS task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDtsInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDtsInstanceResponse
+        /// </returns>
         public async Task<CreateDtsInstanceResponse> CreateDtsInstanceAsync(CreateDtsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDtsInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description DTS provides the following metrics for DTS tasks:************
-         * *   **Latency**: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.
-         * *   **Status**: DTS monitors the status of a DTS task. If the state of the task changes to **Error** or **Restore**, an alert is triggered.
-         * *   **Full Timeout**: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.
-         *
-         * @param request CreateJobMonitorRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateJobMonitorRuleResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DTS provides the following metrics for DTS tasks:************</para>
+        /// <list type="bullet">
+        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.</description></item>
+        /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
+        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateJobMonitorRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobMonitorRuleResponse
+        /// </returns>
         public CreateJobMonitorRuleResponse CreateJobMonitorRuleWithOptions(CreateJobMonitorRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3412,16 +3798,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateJobMonitorRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description DTS provides the following metrics for DTS tasks:************
-         * *   **Latency**: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.
-         * *   **Status**: DTS monitors the status of a DTS task. If the state of the task changes to **Error** or **Restore**, an alert is triggered.
-         * *   **Full Timeout**: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.
-         *
-         * @param request CreateJobMonitorRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateJobMonitorRuleResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DTS provides the following metrics for DTS tasks:************</para>
+        /// <list type="bullet">
+        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.</description></item>
+        /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
+        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateJobMonitorRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobMonitorRuleResponse
+        /// </returns>
         public async Task<CreateJobMonitorRuleResponse> CreateJobMonitorRuleWithOptionsAsync(CreateJobMonitorRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3485,45 +3881,71 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateJobMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description DTS provides the following metrics for DTS tasks:************
-         * *   **Latency**: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.
-         * *   **Status**: DTS monitors the status of a DTS task. If the state of the task changes to **Error** or **Restore**, an alert is triggered.
-         * *   **Full Timeout**: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.
-         *
-         * @param request CreateJobMonitorRuleRequest
-         * @return CreateJobMonitorRuleResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DTS provides the following metrics for DTS tasks:************</para>
+        /// <list type="bullet">
+        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.</description></item>
+        /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
+        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateJobMonitorRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobMonitorRuleResponse
+        /// </returns>
         public CreateJobMonitorRuleResponse CreateJobMonitorRule(CreateJobMonitorRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateJobMonitorRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @description DTS provides the following metrics for DTS tasks:************
-         * *   **Latency**: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.
-         * *   **Status**: DTS monitors the status of a DTS task. If the state of the task changes to **Error** or **Restore**, an alert is triggered.
-         * *   **Full Timeout**: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.
-         *
-         * @param request CreateJobMonitorRuleRequest
-         * @return CreateJobMonitorRuleResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DTS provides the following metrics for DTS tasks:************</para>
+        /// <list type="bullet">
+        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.</description></item>
+        /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
+        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateJobMonitorRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobMonitorRuleResponse
+        /// </returns>
         public async Task<CreateJobMonitorRuleResponse> CreateJobMonitorRuleAsync(CreateJobMonitorRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateJobMonitorRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description >  This API operation is outdated. We recommend that you use the new version. For more information, see [CreateDtsInstance](https://help.aliyun.com/document_detail/208270.html).
-         * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         * After you purchase a data migration instance, you must call the [ConfigureMigrationJob](https://help.aliyun.com/document_detail/324260.html) operation to configure a data migration task.
-         *
-         * @param request CreateMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This API operation is outdated. We recommend that you use the new version. For more information, see <a href="https://help.aliyun.com/document_detail/208270.html">CreateDtsInstance</a>.
+        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
+        /// After you purchase a data migration instance, you must call the <a href="https://help.aliyun.com/document_detail/324260.html">ConfigureMigrationJob</a> operation to configure a data migration task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMigrationJobResponse
+        /// </returns>
         public CreateMigrationJobResponse CreateMigrationJobWithOptions(CreateMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3575,15 +3997,25 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateMigrationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description >  This API operation is outdated. We recommend that you use the new version. For more information, see [CreateDtsInstance](https://help.aliyun.com/document_detail/208270.html).
-         * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         * After you purchase a data migration instance, you must call the [ConfigureMigrationJob](https://help.aliyun.com/document_detail/324260.html) operation to configure a data migration task.
-         *
-         * @param request CreateMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This API operation is outdated. We recommend that you use the new version. For more information, see <a href="https://help.aliyun.com/document_detail/208270.html">CreateDtsInstance</a>.
+        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
+        /// After you purchase a data migration instance, you must call the <a href="https://help.aliyun.com/document_detail/324260.html">ConfigureMigrationJob</a> operation to configure a data migration task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMigrationJobResponse
+        /// </returns>
         public async Task<CreateMigrationJobResponse> CreateMigrationJobWithOptionsAsync(CreateMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3635,41 +4067,65 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description >  This API operation is outdated. We recommend that you use the new version. For more information, see [CreateDtsInstance](https://help.aliyun.com/document_detail/208270.html).
-         * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         * After you purchase a data migration instance, you must call the [ConfigureMigrationJob](https://help.aliyun.com/document_detail/324260.html) operation to configure a data migration task.
-         *
-         * @param request CreateMigrationJobRequest
-         * @return CreateMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This API operation is outdated. We recommend that you use the new version. For more information, see <a href="https://help.aliyun.com/document_detail/208270.html">CreateDtsInstance</a>.
+        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
+        /// After you purchase a data migration instance, you must call the <a href="https://help.aliyun.com/document_detail/324260.html">ConfigureMigrationJob</a> operation to configure a data migration task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMigrationJobResponse
+        /// </returns>
         public CreateMigrationJobResponse CreateMigrationJob(CreateMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateMigrationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description >  This API operation is outdated. We recommend that you use the new version. For more information, see [CreateDtsInstance](https://help.aliyun.com/document_detail/208270.html).
-         * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         * After you purchase a data migration instance, you must call the [ConfigureMigrationJob](https://help.aliyun.com/document_detail/324260.html) operation to configure a data migration task.
-         *
-         * @param request CreateMigrationJobRequest
-         * @return CreateMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This API operation is outdated. We recommend that you use the new version. For more information, see <a href="https://help.aliyun.com/document_detail/208270.html">CreateDtsInstance</a>.
+        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
+        /// After you purchase a data migration instance, you must call the <a href="https://help.aliyun.com/document_detail/324260.html">ConfigureMigrationJob</a> operation to configure a data migration task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMigrationJobResponse
+        /// </returns>
         public async Task<CreateMigrationJobResponse> CreateMigrationJobAsync(CreateMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateMigrationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建DTS反向增量同步任务
-         *
-         * @param request CreateReverseDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateReverseDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建DTS反向增量同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReverseDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReverseDtsJobResponse
+        /// </returns>
         public CreateReverseDtsJobResponse CreateReverseDtsJobWithOptions(CreateReverseDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3709,13 +4165,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateReverseDtsJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建DTS反向增量同步任务
-         *
-         * @param request CreateReverseDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateReverseDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建DTS反向增量同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReverseDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReverseDtsJobResponse
+        /// </returns>
         public async Task<CreateReverseDtsJobResponse> CreateReverseDtsJobWithOptionsAsync(CreateReverseDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3755,37 +4219,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateReverseDtsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建DTS反向增量同步任务
-         *
-         * @param request CreateReverseDtsJobRequest
-         * @return CreateReverseDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建DTS反向增量同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReverseDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReverseDtsJobResponse
+        /// </returns>
         public CreateReverseDtsJobResponse CreateReverseDtsJob(CreateReverseDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateReverseDtsJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建DTS反向增量同步任务
-         *
-         * @param request CreateReverseDtsJobRequest
-         * @return CreateReverseDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建DTS反向增量同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReverseDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReverseDtsJobResponse
+        /// </returns>
         public async Task<CreateReverseDtsJobResponse> CreateReverseDtsJobAsync(CreateReverseDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateReverseDtsJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         *
-         * @param request CreateSubscriptionInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionInstanceResponse
+        /// </returns>
         public CreateSubscriptionInstanceResponse CreateSubscriptionInstanceWithOptions(CreateSubscriptionInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3849,13 +4333,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         *
-         * @param request CreateSubscriptionInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionInstanceResponse
+        /// </returns>
         public async Task<CreateSubscriptionInstanceResponse> CreateSubscriptionInstanceWithOptionsAsync(CreateSubscriptionInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3919,38 +4411,58 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         *
-         * @param request CreateSubscriptionInstanceRequest
-         * @return CreateSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionInstanceResponse
+        /// </returns>
         public CreateSubscriptionInstanceResponse CreateSubscriptionInstance(CreateSubscriptionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSubscriptionInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         *
-         * @param request CreateSubscriptionInstanceRequest
-         * @return CreateSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionInstanceResponse
+        /// </returns>
         public async Task<CreateSubscriptionInstanceResponse> CreateSubscriptionInstanceAsync(CreateSubscriptionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSubscriptionInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         * After you purchase a data synchronization instance, you must call the [ConfigureSynchronizationJob](https://help.aliyun.com/document_detail/49447.html) operation to configure a data synchronization task. Then, the task is automatically started.
-         *
-         * @param request CreateSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
+        /// After you purchase a data synchronization instance, you must call the <a href="https://help.aliyun.com/document_detail/49447.html">ConfigureSynchronizationJob</a> operation to configure a data synchronization task. Then, the task is automatically started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSynchronizationJobResponse
+        /// </returns>
         public CreateSynchronizationJobResponse CreateSynchronizationJobWithOptions(CreateSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4038,14 +4550,22 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateSynchronizationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         * After you purchase a data synchronization instance, you must call the [ConfigureSynchronizationJob](https://help.aliyun.com/document_detail/49447.html) operation to configure a data synchronization task. Then, the task is automatically started.
-         *
-         * @param request CreateSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
+        /// After you purchase a data synchronization instance, you must call the <a href="https://help.aliyun.com/document_detail/49447.html">ConfigureSynchronizationJob</a> operation to configure a data synchronization task. Then, the task is automatically started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSynchronizationJobResponse
+        /// </returns>
         public async Task<CreateSynchronizationJobResponse> CreateSynchronizationJobWithOptionsAsync(CreateSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4133,37 +4653,54 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<CreateSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         * After you purchase a data synchronization instance, you must call the [ConfigureSynchronizationJob](https://help.aliyun.com/document_detail/49447.html) operation to configure a data synchronization task. Then, the task is automatically started.
-         *
-         * @param request CreateSynchronizationJobRequest
-         * @return CreateSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
+        /// After you purchase a data synchronization instance, you must call the <a href="https://help.aliyun.com/document_detail/49447.html">ConfigureSynchronizationJob</a> operation to configure a data synchronization task. Then, the task is automatically started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSynchronizationJobResponse
+        /// </returns>
         public CreateSynchronizationJobResponse CreateSynchronizationJob(CreateSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSynchronizationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-         * After you purchase a data synchronization instance, you must call the [ConfigureSynchronizationJob](https://help.aliyun.com/document_detail/49447.html) operation to configure a data synchronization task. Then, the task is automatically started.
-         *
-         * @param request CreateSynchronizationJobRequest
-         * @return CreateSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
+        /// After you purchase a data synchronization instance, you must call the <a href="https://help.aliyun.com/document_detail/49447.html">ConfigureSynchronizationJob</a> operation to configure a data synchronization task. Then, the task is automatically started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSynchronizationJobResponse
+        /// </returns>
         public async Task<CreateSynchronizationJobResponse> CreateSynchronizationJobAsync(CreateSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSynchronizationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DeleteConsumerChannelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// DeleteConsumerChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerChannelResponse
+        /// </returns>
         public DeleteConsumerChannelResponse DeleteConsumerChannelWithOptions(DeleteConsumerChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4207,11 +4744,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteConsumerChannelResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteConsumerChannelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// DeleteConsumerChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerChannelResponse
+        /// </returns>
         public async Task<DeleteConsumerChannelResponse> DeleteConsumerChannelWithOptionsAsync(DeleteConsumerChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4255,31 +4797,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteConsumerChannelRequest
-         * @return DeleteConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// DeleteConsumerChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerChannelResponse
+        /// </returns>
         public DeleteConsumerChannelResponse DeleteConsumerChannel(DeleteConsumerChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteConsumerChannelWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DeleteConsumerChannelRequest
-         * @return DeleteConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// DeleteConsumerChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerChannelResponse
+        /// </returns>
         public async Task<DeleteConsumerChannelResponse> DeleteConsumerChannelAsync(DeleteConsumerChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteConsumerChannelWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DeleteConsumerGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <param name="request">
+        /// DeleteConsumerGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public DeleteConsumerGroupResponse DeleteConsumerGroupWithOptions(DeleteConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4327,11 +4880,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteConsumerGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <param name="request">
+        /// DeleteConsumerGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroupWithOptionsAsync(DeleteConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4379,33 +4937,47 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteConsumerGroupRequest
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <param name="request">
+        /// DeleteConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public DeleteConsumerGroupResponse DeleteConsumerGroup(DeleteConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteConsumerGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DeleteConsumerGroupRequest
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <param name="request">
+        /// DeleteConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroupAsync(DeleteConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteConsumerGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The HTTP status code.
-         *
-         * @param request DeleteDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDtsJobResponse
+        /// </returns>
         public DeleteDtsJobResponse DeleteDtsJobWithOptions(DeleteDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4457,13 +5029,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteDtsJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The HTTP status code.
-         *
-         * @param request DeleteDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDtsJobResponse
+        /// </returns>
         public async Task<DeleteDtsJobResponse> DeleteDtsJobWithOptionsAsync(DeleteDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4515,37 +5095,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteDtsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The HTTP status code.
-         *
-         * @param request DeleteDtsJobRequest
-         * @return DeleteDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDtsJobResponse
+        /// </returns>
         public DeleteDtsJobResponse DeleteDtsJob(DeleteDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDtsJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The HTTP status code.
-         *
-         * @param request DeleteDtsJobRequest
-         * @return DeleteDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDtsJobResponse
+        /// </returns>
         public async Task<DeleteDtsJobResponse> DeleteDtsJobAsync(DeleteDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDtsJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes multiple data migration, data synchronization, or change tracking tasks.
-         *
-         * @param request DeleteDtsJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDtsJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple data migration, data synchronization, or change tracking tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDtsJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDtsJobsResponse
+        /// </returns>
         public DeleteDtsJobsResponse DeleteDtsJobsWithOptions(DeleteDtsJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4585,13 +5185,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteDtsJobsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes multiple data migration, data synchronization, or change tracking tasks.
-         *
-         * @param request DeleteDtsJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDtsJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple data migration, data synchronization, or change tracking tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDtsJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDtsJobsResponse
+        /// </returns>
         public async Task<DeleteDtsJobsResponse> DeleteDtsJobsWithOptionsAsync(DeleteDtsJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4631,37 +5239,59 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes multiple data migration, data synchronization, or change tracking tasks.
-         *
-         * @param request DeleteDtsJobsRequest
-         * @return DeleteDtsJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple data migration, data synchronization, or change tracking tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDtsJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDtsJobsResponse
+        /// </returns>
         public DeleteDtsJobsResponse DeleteDtsJobs(DeleteDtsJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDtsJobsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes multiple data migration, data synchronization, or change tracking tasks.
-         *
-         * @param request DeleteDtsJobsRequest
-         * @return DeleteDtsJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple data migration, data synchronization, or change tracking tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDtsJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDtsJobsResponse
+        /// </returns>
         public async Task<DeleteDtsJobsResponse> DeleteDtsJobsAsync(DeleteDtsJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDtsJobsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description >  After a data migration instance is released, it cannot be recovered.
-         *
-         * @param request DeleteMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a data migration instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMigrationJobResponse
+        /// </returns>
         public DeleteMigrationJobResponse DeleteMigrationJobWithOptions(DeleteMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4705,13 +5335,23 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteMigrationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description >  After a data migration instance is released, it cannot be recovered.
-         *
-         * @param request DeleteMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a data migration instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMigrationJobResponse
+        /// </returns>
         public async Task<DeleteMigrationJobResponse> DeleteMigrationJobWithOptionsAsync(DeleteMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4755,37 +5395,63 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description >  After a data migration instance is released, it cannot be recovered.
-         *
-         * @param request DeleteMigrationJobRequest
-         * @return DeleteMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a data migration instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMigrationJobResponse
+        /// </returns>
         public DeleteMigrationJobResponse DeleteMigrationJob(DeleteMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteMigrationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description >  After a data migration instance is released, it cannot be recovered.
-         *
-         * @param request DeleteMigrationJobRequest
-         * @return DeleteMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a data migration instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMigrationJobResponse
+        /// </returns>
         public async Task<DeleteMigrationJobResponse> DeleteMigrationJobAsync(DeleteMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteMigrationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description >  After a change tracking instance is released, it cannot be recovered.
-         *
-         * @param request DeleteSubscriptionInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a change tracking instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionInstanceResponse
+        /// </returns>
         public DeleteSubscriptionInstanceResponse DeleteSubscriptionInstanceWithOptions(DeleteSubscriptionInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4829,13 +5495,23 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description >  After a change tracking instance is released, it cannot be recovered.
-         *
-         * @param request DeleteSubscriptionInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a change tracking instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionInstanceResponse
+        /// </returns>
         public async Task<DeleteSubscriptionInstanceResponse> DeleteSubscriptionInstanceWithOptionsAsync(DeleteSubscriptionInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4879,37 +5555,63 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description >  After a change tracking instance is released, it cannot be recovered.
-         *
-         * @param request DeleteSubscriptionInstanceRequest
-         * @return DeleteSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a change tracking instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionInstanceResponse
+        /// </returns>
         public DeleteSubscriptionInstanceResponse DeleteSubscriptionInstance(DeleteSubscriptionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSubscriptionInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @description >  After a change tracking instance is released, it cannot be recovered.
-         *
-         * @param request DeleteSubscriptionInstanceRequest
-         * @return DeleteSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a change tracking instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionInstanceResponse
+        /// </returns>
         public async Task<DeleteSubscriptionInstanceResponse> DeleteSubscriptionInstanceAsync(DeleteSubscriptionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSubscriptionInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description >  After a data synchronization instance is released, it cannot be recovered.
-         *
-         * @param request DeleteSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a data synchronization instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSynchronizationJobResponse
+        /// </returns>
         public DeleteSynchronizationJobResponse DeleteSynchronizationJobWithOptions(DeleteSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4953,13 +5655,23 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteSynchronizationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description >  After a data synchronization instance is released, it cannot be recovered.
-         *
-         * @param request DeleteSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a data synchronization instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSynchronizationJobResponse
+        /// </returns>
         public async Task<DeleteSynchronizationJobResponse> DeleteSynchronizationJobWithOptionsAsync(DeleteSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5003,37 +5715,61 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DeleteSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description >  After a data synchronization instance is released, it cannot be recovered.
-         *
-         * @param request DeleteSynchronizationJobRequest
-         * @return DeleteSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a data synchronization instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSynchronizationJobResponse
+        /// </returns>
         public DeleteSynchronizationJobResponse DeleteSynchronizationJob(DeleteSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSynchronizationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description >  After a data synchronization instance is released, it cannot be recovered.
-         *
-         * @param request DeleteSynchronizationJobRequest
-         * @return DeleteSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After a data synchronization instance is released, it cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSynchronizationJobResponse
+        /// </returns>
         public async Task<DeleteSynchronizationJobResponse> DeleteSynchronizationJobAsync(DeleteSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSynchronizationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询数据投递链路store账号
-         *
-         * @param request DescribeChannelAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeChannelAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据投递链路store账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeChannelAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeChannelAccountResponse
+        /// </returns>
         public DescribeChannelAccountResponse DescribeChannelAccountWithOptions(DescribeChannelAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5085,13 +5821,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeChannelAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据投递链路store账号
-         *
-         * @param request DescribeChannelAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeChannelAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据投递链路store账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeChannelAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeChannelAccountResponse
+        /// </returns>
         public async Task<DescribeChannelAccountResponse> DescribeChannelAccountWithOptionsAsync(DescribeChannelAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5143,37 +5887,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeChannelAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据投递链路store账号
-         *
-         * @param request DescribeChannelAccountRequest
-         * @return DescribeChannelAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据投递链路store账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeChannelAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeChannelAccountResponse
+        /// </returns>
         public DescribeChannelAccountResponse DescribeChannelAccount(DescribeChannelAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeChannelAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询数据投递链路store账号
-         *
-         * @param request DescribeChannelAccountRequest
-         * @return DescribeChannelAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据投递链路store账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeChannelAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeChannelAccountResponse
+        /// </returns>
         public async Task<DescribeChannelAccountResponse> DescribeChannelAccountAsync(DescribeChannelAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeChannelAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 请求所有数据校验任务数据
-         *
-         * @param request DescribeCheckJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCheckJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>请求所有数据校验任务数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCheckJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCheckJobsResponse
+        /// </returns>
         public DescribeCheckJobsResponse DescribeCheckJobsWithOptions(DescribeCheckJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5225,13 +5989,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeCheckJobsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 请求所有数据校验任务数据
-         *
-         * @param request DescribeCheckJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCheckJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>请求所有数据校验任务数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCheckJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCheckJobsResponse
+        /// </returns>
         public async Task<DescribeCheckJobsResponse> DescribeCheckJobsWithOptionsAsync(DescribeCheckJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5283,37 +6055,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeCheckJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 请求所有数据校验任务数据
-         *
-         * @param request DescribeCheckJobsRequest
-         * @return DescribeCheckJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>请求所有数据校验任务数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCheckJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCheckJobsResponse
+        /// </returns>
         public DescribeCheckJobsResponse DescribeCheckJobs(DescribeCheckJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCheckJobsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 请求所有数据校验任务数据
-         *
-         * @param request DescribeCheckJobsRequest
-         * @return DescribeCheckJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>请求所有数据校验任务数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCheckJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCheckJobsResponse
+        /// </returns>
         public async Task<DescribeCheckJobsResponse> DescribeCheckJobsAsync(DescribeCheckJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCheckJobsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.
-         *
-         * @param request DescribeClusterOperateLogsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeClusterOperateLogsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterOperateLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterOperateLogsResponse
+        /// </returns>
         public DescribeClusterOperateLogsResponse DescribeClusterOperateLogsWithOptions(DescribeClusterOperateLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5379,13 +6171,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeClusterOperateLogsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.
-         *
-         * @param request DescribeClusterOperateLogsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeClusterOperateLogsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterOperateLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterOperateLogsResponse
+        /// </returns>
         public async Task<DescribeClusterOperateLogsResponse> DescribeClusterOperateLogsWithOptionsAsync(DescribeClusterOperateLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5451,37 +6251,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeClusterOperateLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.
-         *
-         * @param request DescribeClusterOperateLogsRequest
-         * @return DescribeClusterOperateLogsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterOperateLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterOperateLogsResponse
+        /// </returns>
         public DescribeClusterOperateLogsResponse DescribeClusterOperateLogs(DescribeClusterOperateLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClusterOperateLogsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.
-         *
-         * @param request DescribeClusterOperateLogsRequest
-         * @return DescribeClusterOperateLogsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterOperateLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterOperateLogsResponse
+        /// </returns>
         public async Task<DescribeClusterOperateLogsResponse> DescribeClusterOperateLogsAsync(DescribeClusterOperateLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClusterOperateLogsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the resource usage of a cluster.
-         *
-         * @param request DescribeClusterUsedUtilizationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeClusterUsedUtilizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource usage of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterUsedUtilizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterUsedUtilizationResponse
+        /// </returns>
         public DescribeClusterUsedUtilizationResponse DescribeClusterUsedUtilizationWithOptions(DescribeClusterUsedUtilizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5547,13 +6367,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeClusterUsedUtilizationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the resource usage of a cluster.
-         *
-         * @param request DescribeClusterUsedUtilizationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeClusterUsedUtilizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource usage of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterUsedUtilizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterUsedUtilizationResponse
+        /// </returns>
         public async Task<DescribeClusterUsedUtilizationResponse> DescribeClusterUsedUtilizationWithOptionsAsync(DescribeClusterUsedUtilizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5619,35 +6447,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeClusterUsedUtilizationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the resource usage of a cluster.
-         *
-         * @param request DescribeClusterUsedUtilizationRequest
-         * @return DescribeClusterUsedUtilizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource usage of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterUsedUtilizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterUsedUtilizationResponse
+        /// </returns>
         public DescribeClusterUsedUtilizationResponse DescribeClusterUsedUtilization(DescribeClusterUsedUtilizationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClusterUsedUtilizationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the resource usage of a cluster.
-         *
-         * @param request DescribeClusterUsedUtilizationRequest
-         * @return DescribeClusterUsedUtilizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource usage of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterUsedUtilizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterUsedUtilizationResponse
+        /// </returns>
         public async Task<DescribeClusterUsedUtilizationResponse> DescribeClusterUsedUtilizationAsync(DescribeClusterUsedUtilizationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClusterUsedUtilizationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeConnectionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeConnectionStatusResponse
-         */
+        /// <param name="request">
+        /// DescribeConnectionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConnectionStatusResponse
+        /// </returns>
         public DescribeConnectionStatusResponse DescribeConnectionStatusWithOptions(DescribeConnectionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5767,11 +6612,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeConnectionStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeConnectionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeConnectionStatusResponse
-         */
+        /// <param name="request">
+        /// DescribeConnectionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConnectionStatusResponse
+        /// </returns>
         public async Task<DescribeConnectionStatusResponse> DescribeConnectionStatusWithOptionsAsync(DescribeConnectionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5891,31 +6741,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeConnectionStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeConnectionStatusRequest
-         * @return DescribeConnectionStatusResponse
-         */
+        /// <param name="request">
+        /// DescribeConnectionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConnectionStatusResponse
+        /// </returns>
         public DescribeConnectionStatusResponse DescribeConnectionStatus(DescribeConnectionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeConnectionStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeConnectionStatusRequest
-         * @return DescribeConnectionStatusResponse
-         */
+        /// <param name="request">
+        /// DescribeConnectionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConnectionStatusResponse
+        /// </returns>
         public async Task<DescribeConnectionStatusResponse> DescribeConnectionStatusAsync(DescribeConnectionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeConnectionStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeConsumerChannelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// DescribeConsumerChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConsumerChannelResponse
+        /// </returns>
         public DescribeConsumerChannelResponse DescribeConsumerChannelWithOptions(DescribeConsumerChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5967,11 +6828,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeConsumerChannelResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeConsumerChannelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// DescribeConsumerChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConsumerChannelResponse
+        /// </returns>
         public async Task<DescribeConsumerChannelResponse> DescribeConsumerChannelWithOptionsAsync(DescribeConsumerChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6023,33 +6889,47 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeConsumerChannelRequest
-         * @return DescribeConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// DescribeConsumerChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConsumerChannelResponse
+        /// </returns>
         public DescribeConsumerChannelResponse DescribeConsumerChannel(DescribeConsumerChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeConsumerChannelWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeConsumerChannelRequest
-         * @return DescribeConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// DescribeConsumerChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConsumerChannelResponse
+        /// </returns>
         public async Task<DescribeConsumerChannelResponse> DescribeConsumerChannelAsync(DescribeConsumerChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeConsumerChannelWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of consumer groups in a change tracking instance.
-         *
-         * @param request DescribeConsumerGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of consumer groups in a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeConsumerGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConsumerGroupResponse
+        /// </returns>
         public DescribeConsumerGroupResponse DescribeConsumerGroupWithOptions(DescribeConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6101,13 +6981,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeConsumerGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of consumer groups in a change tracking instance.
-         *
-         * @param request DescribeConsumerGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of consumer groups in a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeConsumerGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConsumerGroupResponse
+        /// </returns>
         public async Task<DescribeConsumerGroupResponse> DescribeConsumerGroupWithOptionsAsync(DescribeConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6159,38 +7047,60 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of consumer groups in a change tracking instance.
-         *
-         * @param request DescribeConsumerGroupRequest
-         * @return DescribeConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of consumer groups in a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConsumerGroupResponse
+        /// </returns>
         public DescribeConsumerGroupResponse DescribeConsumerGroup(DescribeConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeConsumerGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of consumer groups in a change tracking instance.
-         *
-         * @param request DescribeConsumerGroupRequest
-         * @return DescribeConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of consumer groups in a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConsumerGroupResponse
+        /// </returns>
         public async Task<DescribeConsumerGroupResponse> DescribeConsumerGroupAsync(DescribeConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeConsumerGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description If the **source or destination instance** is an **on-premises database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
-         * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on ECS**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.
-         *
-         * @param request DescribeDTSIPRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDTSIPResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the <b>source or destination instance</b> is an <b>on-premises database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
+        /// <remarks>
+        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on ECS</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDTSIPRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDTSIPResponse
+        /// </returns>
         public DescribeDTSIPResponse DescribeDTSIPWithOptions(DescribeDTSIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6230,14 +7140,24 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDTSIPResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description If the **source or destination instance** is an **on-premises database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
-         * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on ECS**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.
-         *
-         * @param request DescribeDTSIPRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDTSIPResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the <b>source or destination instance</b> is an <b>on-premises database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
+        /// <remarks>
+        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on ECS</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDTSIPRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDTSIPResponse
+        /// </returns>
         public async Task<DescribeDTSIPResponse> DescribeDTSIPWithOptionsAsync(DescribeDTSIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6277,39 +7197,63 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDTSIPResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description If the **source or destination instance** is an **on-premises database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
-         * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on ECS**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.
-         *
-         * @param request DescribeDTSIPRequest
-         * @return DescribeDTSIPResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the <b>source or destination instance</b> is an <b>on-premises database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
+        /// <remarks>
+        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on ECS</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDTSIPRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDTSIPResponse
+        /// </returns>
         public DescribeDTSIPResponse DescribeDTSIP(DescribeDTSIPRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDTSIPWithOptions(request, runtime);
         }
 
-        /**
-         * @description If the **source or destination instance** is an **on-premises database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
-         * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on ECS**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.
-         *
-         * @param request DescribeDTSIPRequest
-         * @return DescribeDTSIPResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the <b>source or destination instance</b> is an <b>on-premises database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
+        /// <remarks>
+        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on ECS</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDTSIPRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDTSIPResponse
+        /// </returns>
         public async Task<DescribeDTSIPResponse> DescribeDTSIPAsync(DescribeDTSIPRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDTSIPWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the download URL of the data consistency verification report.
-         *
-         * @param request DescribeDataCheckReportUrlRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataCheckReportUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the download URL of the data consistency verification report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataCheckReportUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckReportUrlResponse
+        /// </returns>
         public DescribeDataCheckReportUrlResponse DescribeDataCheckReportUrlWithOptions(DescribeDataCheckReportUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6353,13 +7297,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDataCheckReportUrlResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the download URL of the data consistency verification report.
-         *
-         * @param request DescribeDataCheckReportUrlRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataCheckReportUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the download URL of the data consistency verification report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataCheckReportUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckReportUrlResponse
+        /// </returns>
         public async Task<DescribeDataCheckReportUrlResponse> DescribeDataCheckReportUrlWithOptionsAsync(DescribeDataCheckReportUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6403,37 +7355,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDataCheckReportUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the download URL of the data consistency verification report.
-         *
-         * @param request DescribeDataCheckReportUrlRequest
-         * @return DescribeDataCheckReportUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the download URL of the data consistency verification report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataCheckReportUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckReportUrlResponse
+        /// </returns>
         public DescribeDataCheckReportUrlResponse DescribeDataCheckReportUrl(DescribeDataCheckReportUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataCheckReportUrlWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the download URL of the data consistency verification report.
-         *
-         * @param request DescribeDataCheckReportUrlRequest
-         * @return DescribeDataCheckReportUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the download URL of the data consistency verification report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataCheckReportUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckReportUrlResponse
+        /// </returns>
         public async Task<DescribeDataCheckReportUrlResponse> DescribeDataCheckReportUrlAsync(DescribeDataCheckReportUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataCheckReportUrlWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a data verification task.
-         *
-         * @param request DescribeDataCheckTableDetailsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataCheckTableDetailsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data verification task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataCheckTableDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckTableDetailsResponse
+        /// </returns>
         public DescribeDataCheckTableDetailsResponse DescribeDataCheckTableDetailsWithOptions(DescribeDataCheckTableDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6489,13 +7461,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDataCheckTableDetailsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a data verification task.
-         *
-         * @param request DescribeDataCheckTableDetailsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataCheckTableDetailsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data verification task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataCheckTableDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckTableDetailsResponse
+        /// </returns>
         public async Task<DescribeDataCheckTableDetailsResponse> DescribeDataCheckTableDetailsWithOptionsAsync(DescribeDataCheckTableDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6551,35 +7531,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDataCheckTableDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a data verification task.
-         *
-         * @param request DescribeDataCheckTableDetailsRequest
-         * @return DescribeDataCheckTableDetailsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data verification task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataCheckTableDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckTableDetailsResponse
+        /// </returns>
         public DescribeDataCheckTableDetailsResponse DescribeDataCheckTableDetails(DescribeDataCheckTableDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataCheckTableDetailsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a data verification task.
-         *
-         * @param request DescribeDataCheckTableDetailsRequest
-         * @return DescribeDataCheckTableDetailsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data verification task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataCheckTableDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckTableDetailsResponse
+        /// </returns>
         public async Task<DescribeDataCheckTableDetailsResponse> DescribeDataCheckTableDetailsAsync(DescribeDataCheckTableDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataCheckTableDetailsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDataCheckTableDiffDetailsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataCheckTableDiffDetailsResponse
-         */
+        /// <param name="request">
+        /// DescribeDataCheckTableDiffDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckTableDiffDetailsResponse
+        /// </returns>
         public DescribeDataCheckTableDiffDetailsResponse DescribeDataCheckTableDiffDetailsWithOptions(DescribeDataCheckTableDiffDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6631,11 +7628,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDataCheckTableDiffDetailsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDataCheckTableDiffDetailsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataCheckTableDiffDetailsResponse
-         */
+        /// <param name="request">
+        /// DescribeDataCheckTableDiffDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckTableDiffDetailsResponse
+        /// </returns>
         public async Task<DescribeDataCheckTableDiffDetailsResponse> DescribeDataCheckTableDiffDetailsWithOptionsAsync(DescribeDataCheckTableDiffDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6687,33 +7689,47 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDataCheckTableDiffDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDataCheckTableDiffDetailsRequest
-         * @return DescribeDataCheckTableDiffDetailsResponse
-         */
+        /// <param name="request">
+        /// DescribeDataCheckTableDiffDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckTableDiffDetailsResponse
+        /// </returns>
         public DescribeDataCheckTableDiffDetailsResponse DescribeDataCheckTableDiffDetails(DescribeDataCheckTableDiffDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataCheckTableDiffDetailsWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDataCheckTableDiffDetailsRequest
-         * @return DescribeDataCheckTableDiffDetailsResponse
-         */
+        /// <param name="request">
+        /// DescribeDataCheckTableDiffDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataCheckTableDiffDetailsResponse
+        /// </returns>
         public async Task<DescribeDataCheckTableDiffDetailsResponse> DescribeDataCheckTableDiffDetailsAsync(DescribeDataCheckTableDiffDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataCheckTableDiffDetailsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about a dedicated cluster.
-         *
-         * @param request DescribeDedicatedClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a dedicated cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDedicatedClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDedicatedClusterResponse
+        /// </returns>
         public DescribeDedicatedClusterResponse DescribeDedicatedClusterWithOptions(DescribeDedicatedClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6753,13 +7769,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDedicatedClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about a dedicated cluster.
-         *
-         * @param request DescribeDedicatedClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a dedicated cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDedicatedClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDedicatedClusterResponse
+        /// </returns>
         public async Task<DescribeDedicatedClusterResponse> DescribeDedicatedClusterWithOptionsAsync(DescribeDedicatedClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6799,37 +7823,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about a dedicated cluster.
-         *
-         * @param request DescribeDedicatedClusterRequest
-         * @return DescribeDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a dedicated cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDedicatedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDedicatedClusterResponse
+        /// </returns>
         public DescribeDedicatedClusterResponse DescribeDedicatedCluster(DescribeDedicatedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDedicatedClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about a dedicated cluster.
-         *
-         * @param request DescribeDedicatedClusterRequest
-         * @return DescribeDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a dedicated cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDedicatedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDedicatedClusterResponse
+        /// </returns>
         public async Task<DescribeDedicatedClusterResponse> DescribeDedicatedClusterAsync(DescribeDedicatedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDedicatedClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).
-         *
-         * @param request DescribeDedicatedClusterMonitorRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDedicatedClusterMonitorRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDedicatedClusterMonitorRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDedicatedClusterMonitorRuleResponse
+        /// </returns>
         public DescribeDedicatedClusterMonitorRuleResponse DescribeDedicatedClusterMonitorRuleWithOptions(DescribeDedicatedClusterMonitorRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6869,13 +7913,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDedicatedClusterMonitorRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).
-         *
-         * @param request DescribeDedicatedClusterMonitorRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDedicatedClusterMonitorRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDedicatedClusterMonitorRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDedicatedClusterMonitorRuleResponse
+        /// </returns>
         public async Task<DescribeDedicatedClusterMonitorRuleResponse> DescribeDedicatedClusterMonitorRuleWithOptionsAsync(DescribeDedicatedClusterMonitorRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6915,37 +7967,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDedicatedClusterMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).
-         *
-         * @param request DescribeDedicatedClusterMonitorRuleRequest
-         * @return DescribeDedicatedClusterMonitorRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDedicatedClusterMonitorRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDedicatedClusterMonitorRuleResponse
+        /// </returns>
         public DescribeDedicatedClusterMonitorRuleResponse DescribeDedicatedClusterMonitorRule(DescribeDedicatedClusterMonitorRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDedicatedClusterMonitorRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).
-         *
-         * @param request DescribeDedicatedClusterMonitorRuleRequest
-         * @return DescribeDedicatedClusterMonitorRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDedicatedClusterMonitorRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDedicatedClusterMonitorRuleResponse
+        /// </returns>
         public async Task<DescribeDedicatedClusterMonitorRuleResponse> DescribeDedicatedClusterMonitorRuleAsync(DescribeDedicatedClusterMonitorRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDedicatedClusterMonitorRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询ETL任务版本信息
-         *
-         * @param request DescribeDtsEtlJobVersionInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDtsEtlJobVersionInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ETL任务版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsEtlJobVersionInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsEtlJobVersionInfoResponse
+        /// </returns>
         public DescribeDtsEtlJobVersionInfoResponse DescribeDtsEtlJobVersionInfoWithOptions(DescribeDtsEtlJobVersionInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6993,13 +8065,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDtsEtlJobVersionInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询ETL任务版本信息
-         *
-         * @param request DescribeDtsEtlJobVersionInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDtsEtlJobVersionInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ETL任务版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsEtlJobVersionInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsEtlJobVersionInfoResponse
+        /// </returns>
         public async Task<DescribeDtsEtlJobVersionInfoResponse> DescribeDtsEtlJobVersionInfoWithOptionsAsync(DescribeDtsEtlJobVersionInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7047,37 +8127,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDtsEtlJobVersionInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询ETL任务版本信息
-         *
-         * @param request DescribeDtsEtlJobVersionInfoRequest
-         * @return DescribeDtsEtlJobVersionInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ETL任务版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsEtlJobVersionInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsEtlJobVersionInfoResponse
+        /// </returns>
         public DescribeDtsEtlJobVersionInfoResponse DescribeDtsEtlJobVersionInfo(DescribeDtsEtlJobVersionInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDtsEtlJobVersionInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询ETL任务版本信息
-         *
-         * @param request DescribeDtsEtlJobVersionInfoRequest
-         * @return DescribeDtsEtlJobVersionInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ETL任务版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsEtlJobVersionInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsEtlJobVersionInfoResponse
+        /// </returns>
         public async Task<DescribeDtsEtlJobVersionInfoResponse> DescribeDtsEtlJobVersionInfoAsync(DescribeDtsEtlJobVersionInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDtsEtlJobVersionInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询DTS任务配置
-         *
-         * @param request DescribeDtsJobConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDtsJobConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询DTS任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobConfigResponse
+        /// </returns>
         public DescribeDtsJobConfigResponse DescribeDtsJobConfigWithOptions(DescribeDtsJobConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7125,13 +8225,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDtsJobConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询DTS任务配置
-         *
-         * @param request DescribeDtsJobConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDtsJobConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询DTS任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobConfigResponse
+        /// </returns>
         public async Task<DescribeDtsJobConfigResponse> DescribeDtsJobConfigWithOptionsAsync(DescribeDtsJobConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7179,38 +8287,60 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDtsJobConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询DTS任务配置
-         *
-         * @param request DescribeDtsJobConfigRequest
-         * @return DescribeDtsJobConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询DTS任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobConfigResponse
+        /// </returns>
         public DescribeDtsJobConfigResponse DescribeDtsJobConfig(DescribeDtsJobConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDtsJobConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询DTS任务配置
-         *
-         * @param request DescribeDtsJobConfigRequest
-         * @return DescribeDtsJobConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询DTS任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobConfigResponse
+        /// </returns>
         public async Task<DescribeDtsJobConfigResponse> DescribeDtsJobConfigAsync(DescribeDtsJobConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDtsJobConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The latency of incremental data migration or synchronization.
-         * >  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.
-         *
-         * @param request DescribeDtsJobDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDtsJobDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The latency of incremental data migration or synchronization.</para>
+        /// <remarks>
+        /// <para> If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// </remarks>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobDetailResponse
+        /// </returns>
         public DescribeDtsJobDetailResponse DescribeDtsJobDetailWithOptions(DescribeDtsJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7262,14 +8392,24 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDtsJobDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The latency of incremental data migration or synchronization.
-         * >  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.
-         *
-         * @param request DescribeDtsJobDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDtsJobDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The latency of incremental data migration or synchronization.</para>
+        /// <remarks>
+        /// <para> If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// </remarks>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobDetailResponse
+        /// </returns>
         public async Task<DescribeDtsJobDetailResponse> DescribeDtsJobDetailWithOptionsAsync(DescribeDtsJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7321,42 +8461,69 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDtsJobDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The latency of incremental data migration or synchronization.
-         * >  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.
-         *
-         * @param request DescribeDtsJobDetailRequest
-         * @return DescribeDtsJobDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The latency of incremental data migration or synchronization.</para>
+        /// <remarks>
+        /// <para> If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// </remarks>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobDetailResponse
+        /// </returns>
         public DescribeDtsJobDetailResponse DescribeDtsJobDetail(DescribeDtsJobDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDtsJobDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The latency of incremental data migration or synchronization.
-         * >  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.
-         *
-         * @param request DescribeDtsJobDetailRequest
-         * @return DescribeDtsJobDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The latency of incremental data migration or synchronization.</para>
+        /// <remarks>
+        /// <para> If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// </remarks>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobDetailResponse
+        /// </returns>
         public async Task<DescribeDtsJobDetailResponse> DescribeDtsJobDetailAsync(DescribeDtsJobDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDtsJobDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the list of Data Transmission Service (DTS) tasks and the details of each task.
-         *
-         * @description ## Debugging
-         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Dts\\&api=DescribeDtsJobs\\&type=RPC\\&version=2020-01-01)
-         *
-         * @param request DescribeDtsJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDtsJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Data Transmission Service (DTS) tasks and the details of each task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=Dts%5C&api=DescribeDtsJobs%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobsResponse
+        /// </returns>
         public DescribeDtsJobsResponse DescribeDtsJobsWithOptions(DescribeDtsJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7476,16 +8643,27 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDtsJobsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of Data Transmission Service (DTS) tasks and the details of each task.
-         *
-         * @description ## Debugging
-         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Dts\\&api=DescribeDtsJobs\\&type=RPC\\&version=2020-01-01)
-         *
-         * @param request DescribeDtsJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDtsJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Data Transmission Service (DTS) tasks and the details of each task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=Dts%5C&api=DescribeDtsJobs%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobsResponse
+        /// </returns>
         public async Task<DescribeDtsJobsResponse> DescribeDtsJobsWithOptionsAsync(DescribeDtsJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7605,43 +8783,69 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of Data Transmission Service (DTS) tasks and the details of each task.
-         *
-         * @description ## Debugging
-         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Dts\\&api=DescribeDtsJobs\\&type=RPC\\&version=2020-01-01)
-         *
-         * @param request DescribeDtsJobsRequest
-         * @return DescribeDtsJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Data Transmission Service (DTS) tasks and the details of each task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=Dts%5C&api=DescribeDtsJobs%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobsResponse
+        /// </returns>
         public DescribeDtsJobsResponse DescribeDtsJobs(DescribeDtsJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDtsJobsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the list of Data Transmission Service (DTS) tasks and the details of each task.
-         *
-         * @description ## Debugging
-         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Dts\\&api=DescribeDtsJobs\\&type=RPC\\&version=2020-01-01)
-         *
-         * @param request DescribeDtsJobsRequest
-         * @return DescribeDtsJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Data Transmission Service (DTS) tasks and the details of each task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=Dts%5C&api=DescribeDtsJobs%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsJobsResponse
+        /// </returns>
         public async Task<DescribeDtsJobsResponse> DescribeDtsJobsAsync(DescribeDtsJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDtsJobsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the logs of a data migration or synchronization task.
-         *
-         * @param request DescribeDtsServiceLogRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDtsServiceLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a data migration or synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsServiceLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsServiceLogResponse
+        /// </returns>
         public DescribeDtsServiceLogResponse DescribeDtsServiceLogWithOptions(DescribeDtsServiceLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7709,13 +8913,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDtsServiceLogResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the logs of a data migration or synchronization task.
-         *
-         * @param request DescribeDtsServiceLogRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDtsServiceLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a data migration or synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsServiceLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsServiceLogResponse
+        /// </returns>
         public async Task<DescribeDtsServiceLogResponse> DescribeDtsServiceLogWithOptionsAsync(DescribeDtsServiceLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7783,37 +8995,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeDtsServiceLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the logs of a data migration or synchronization task.
-         *
-         * @param request DescribeDtsServiceLogRequest
-         * @return DescribeDtsServiceLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a data migration or synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsServiceLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsServiceLogResponse
+        /// </returns>
         public DescribeDtsServiceLogResponse DescribeDtsServiceLog(DescribeDtsServiceLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDtsServiceLogWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the logs of a data migration or synchronization task.
-         *
-         * @param request DescribeDtsServiceLogRequest
-         * @return DescribeDtsServiceLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a data migration or synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDtsServiceLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDtsServiceLogResponse
+        /// </returns>
         public async Task<DescribeDtsServiceLogResponse> DescribeDtsServiceLogAsync(DescribeDtsServiceLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDtsServiceLogWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, you must call the [SwitchSynchronizationEndpoint](https://help.aliyun.com/document_detail/201858.html) operation to change the database connection settings.
-         *
-         * @param request DescribeEndpointSwitchStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeEndpointSwitchStatusResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/201858.html">SwitchSynchronizationEndpoint</a> operation to change the database connection settings.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeEndpointSwitchStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEndpointSwitchStatusResponse
+        /// </returns>
         public DescribeEndpointSwitchStatusResponse DescribeEndpointSwitchStatusWithOptions(DescribeEndpointSwitchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7861,13 +9093,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeEndpointSwitchStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, you must call the [SwitchSynchronizationEndpoint](https://help.aliyun.com/document_detail/201858.html) operation to change the database connection settings.
-         *
-         * @param request DescribeEndpointSwitchStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeEndpointSwitchStatusResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/201858.html">SwitchSynchronizationEndpoint</a> operation to change the database connection settings.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeEndpointSwitchStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEndpointSwitchStatusResponse
+        /// </returns>
         public async Task<DescribeEndpointSwitchStatusResponse> DescribeEndpointSwitchStatusWithOptionsAsync(DescribeEndpointSwitchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7915,35 +9155,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeEndpointSwitchStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, you must call the [SwitchSynchronizationEndpoint](https://help.aliyun.com/document_detail/201858.html) operation to change the database connection settings.
-         *
-         * @param request DescribeEndpointSwitchStatusRequest
-         * @return DescribeEndpointSwitchStatusResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/201858.html">SwitchSynchronizationEndpoint</a> operation to change the database connection settings.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeEndpointSwitchStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEndpointSwitchStatusResponse
+        /// </returns>
         public DescribeEndpointSwitchStatusResponse DescribeEndpointSwitchStatus(DescribeEndpointSwitchStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeEndpointSwitchStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, you must call the [SwitchSynchronizationEndpoint](https://help.aliyun.com/document_detail/201858.html) operation to change the database connection settings.
-         *
-         * @param request DescribeEndpointSwitchStatusRequest
-         * @return DescribeEndpointSwitchStatusResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/201858.html">SwitchSynchronizationEndpoint</a> operation to change the database connection settings.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeEndpointSwitchStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEndpointSwitchStatusResponse
+        /// </returns>
         public async Task<DescribeEndpointSwitchStatusResponse> DescribeEndpointSwitchStatusAsync(DescribeEndpointSwitchStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeEndpointSwitchStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeEtlJobLogsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeEtlJobLogsResponse
-         */
+        /// <param name="request">
+        /// DescribeEtlJobLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEtlJobLogsResponse
+        /// </returns>
         public DescribeEtlJobLogsResponse DescribeEtlJobLogsWithOptions(DescribeEtlJobLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7979,11 +9236,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeEtlJobLogsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeEtlJobLogsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeEtlJobLogsResponse
-         */
+        /// <param name="request">
+        /// DescribeEtlJobLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEtlJobLogsResponse
+        /// </returns>
         public async Task<DescribeEtlJobLogsResponse> DescribeEtlJobLogsWithOptionsAsync(DescribeEtlJobLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8019,31 +9281,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeEtlJobLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeEtlJobLogsRequest
-         * @return DescribeEtlJobLogsResponse
-         */
+        /// <param name="request">
+        /// DescribeEtlJobLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEtlJobLogsResponse
+        /// </returns>
         public DescribeEtlJobLogsResponse DescribeEtlJobLogs(DescribeEtlJobLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeEtlJobLogsWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeEtlJobLogsRequest
-         * @return DescribeEtlJobLogsResponse
-         */
+        /// <param name="request">
+        /// DescribeEtlJobLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEtlJobLogsResponse
+        /// </returns>
         public async Task<DescribeEtlJobLogsResponse> DescribeEtlJobLogsAsync(DescribeEtlJobLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeEtlJobLogsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeInitializationStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInitializationStatusResponse
-         */
+        /// <param name="request">
+        /// DescribeInitializationStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInitializationStatusResponse
+        /// </returns>
         public DescribeInitializationStatusResponse DescribeInitializationStatusWithOptions(DescribeInitializationStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8095,11 +9368,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeInitializationStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeInitializationStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInitializationStatusResponse
-         */
+        /// <param name="request">
+        /// DescribeInitializationStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInitializationStatusResponse
+        /// </returns>
         public async Task<DescribeInitializationStatusResponse> DescribeInitializationStatusWithOptionsAsync(DescribeInitializationStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8151,31 +9429,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeInitializationStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeInitializationStatusRequest
-         * @return DescribeInitializationStatusResponse
-         */
+        /// <param name="request">
+        /// DescribeInitializationStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInitializationStatusResponse
+        /// </returns>
         public DescribeInitializationStatusResponse DescribeInitializationStatus(DescribeInitializationStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInitializationStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeInitializationStatusRequest
-         * @return DescribeInitializationStatusResponse
-         */
+        /// <param name="request">
+        /// DescribeInitializationStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInitializationStatusResponse
+        /// </returns>
         public async Task<DescribeInitializationStatusResponse> DescribeInitializationStatusAsync(DescribeInitializationStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInitializationStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeJobMonitorRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeJobMonitorRuleResponse
-         */
+        /// <param name="request">
+        /// DescribeJobMonitorRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeJobMonitorRuleResponse
+        /// </returns>
         public DescribeJobMonitorRuleResponse DescribeJobMonitorRuleWithOptions(DescribeJobMonitorRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8211,11 +9500,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeJobMonitorRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeJobMonitorRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeJobMonitorRuleResponse
-         */
+        /// <param name="request">
+        /// DescribeJobMonitorRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeJobMonitorRuleResponse
+        /// </returns>
         public async Task<DescribeJobMonitorRuleResponse> DescribeJobMonitorRuleWithOptionsAsync(DescribeJobMonitorRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8251,33 +9545,47 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeJobMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeJobMonitorRuleRequest
-         * @return DescribeJobMonitorRuleResponse
-         */
+        /// <param name="request">
+        /// DescribeJobMonitorRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeJobMonitorRuleResponse
+        /// </returns>
         public DescribeJobMonitorRuleResponse DescribeJobMonitorRule(DescribeJobMonitorRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeJobMonitorRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeJobMonitorRuleRequest
-         * @return DescribeJobMonitorRuleResponse
-         */
+        /// <param name="request">
+        /// DescribeJobMonitorRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeJobMonitorRuleResponse
+        /// </returns>
         public async Task<DescribeJobMonitorRuleResponse> DescribeJobMonitorRuleAsync(DescribeJobMonitorRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeJobMonitorRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the metrics of a cluster.
-         *
-         * @param request DescribeMetricListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMetricListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metrics of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMetricListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMetricListResponse
+        /// </returns>
         public DescribeMetricListResponse DescribeMetricListWithOptions(DescribeMetricListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8351,13 +9659,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeMetricListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the metrics of a cluster.
-         *
-         * @param request DescribeMetricListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMetricListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metrics of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMetricListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMetricListResponse
+        /// </returns>
         public async Task<DescribeMetricListResponse> DescribeMetricListWithOptionsAsync(DescribeMetricListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8431,35 +9747,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeMetricListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the metrics of a cluster.
-         *
-         * @param request DescribeMetricListRequest
-         * @return DescribeMetricListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metrics of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMetricListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMetricListResponse
+        /// </returns>
         public DescribeMetricListResponse DescribeMetricList(DescribeMetricListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMetricListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the metrics of a cluster.
-         *
-         * @param request DescribeMetricListRequest
-         * @return DescribeMetricListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metrics of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMetricListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMetricListResponse
+        /// </returns>
         public async Task<DescribeMetricListResponse> DescribeMetricListAsync(DescribeMetricListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMetricListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeMigrationJobAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMigrationJobAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeMigrationJobAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobAlertResponse
+        /// </returns>
         public DescribeMigrationJobAlertResponse DescribeMigrationJobAlertWithOptions(DescribeMigrationJobAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8507,11 +9840,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeMigrationJobAlertResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeMigrationJobAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMigrationJobAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeMigrationJobAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobAlertResponse
+        /// </returns>
         public async Task<DescribeMigrationJobAlertResponse> DescribeMigrationJobAlertWithOptionsAsync(DescribeMigrationJobAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8559,35 +9897,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeMigrationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeMigrationJobAlertRequest
-         * @return DescribeMigrationJobAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeMigrationJobAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobAlertResponse
+        /// </returns>
         public DescribeMigrationJobAlertResponse DescribeMigrationJobAlert(DescribeMigrationJobAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMigrationJobAlertWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeMigrationJobAlertRequest
-         * @return DescribeMigrationJobAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeMigrationJobAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobAlertResponse
+        /// </returns>
         public async Task<DescribeMigrationJobAlertResponse> DescribeMigrationJobAlertAsync(DescribeMigrationJobAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMigrationJobAlertWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a data migration task.
-         *
-         * @description When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.
-         *
-         * @param request DescribeMigrationJobDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMigrationJobDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobDetailResponse
+        /// </returns>
         public DescribeMigrationJobDetailResponse DescribeMigrationJobDetailWithOptions(DescribeMigrationJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8647,15 +10002,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeMigrationJobDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a data migration task.
-         *
-         * @description When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.
-         *
-         * @param request DescribeMigrationJobDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMigrationJobDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobDetailResponse
+        /// </returns>
         public async Task<DescribeMigrationJobDetailResponse> DescribeMigrationJobDetailWithOptionsAsync(DescribeMigrationJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8715,41 +10081,67 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeMigrationJobDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a data migration task.
-         *
-         * @description When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.
-         *
-         * @param request DescribeMigrationJobDetailRequest
-         * @return DescribeMigrationJobDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobDetailResponse
+        /// </returns>
         public DescribeMigrationJobDetailResponse DescribeMigrationJobDetail(DescribeMigrationJobDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMigrationJobDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a data migration task.
-         *
-         * @description When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.
-         *
-         * @param request DescribeMigrationJobDetailRequest
-         * @return DescribeMigrationJobDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobDetailResponse
+        /// </returns>
         public async Task<DescribeMigrationJobDetailResponse> DescribeMigrationJobDetailAsync(DescribeMigrationJobDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMigrationJobDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the status of a data migration task.
-         *
-         * @param request DescribeMigrationJobStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMigrationJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobStatusResponse
+        /// </returns>
         public DescribeMigrationJobStatusResponse DescribeMigrationJobStatusWithOptions(DescribeMigrationJobStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8797,13 +10189,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeMigrationJobStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of a data migration task.
-         *
-         * @param request DescribeMigrationJobStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMigrationJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobStatusResponse
+        /// </returns>
         public async Task<DescribeMigrationJobStatusResponse> DescribeMigrationJobStatusWithOptionsAsync(DescribeMigrationJobStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8851,37 +10251,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeMigrationJobStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of a data migration task.
-         *
-         * @param request DescribeMigrationJobStatusRequest
-         * @return DescribeMigrationJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobStatusResponse
+        /// </returns>
         public DescribeMigrationJobStatusResponse DescribeMigrationJobStatus(DescribeMigrationJobStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMigrationJobStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the status of a data migration task.
-         *
-         * @param request DescribeMigrationJobStatusRequest
-         * @return DescribeMigrationJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a data migration task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobStatusResponse
+        /// </returns>
         public async Task<DescribeMigrationJobStatusResponse> DescribeMigrationJobStatusAsync(DescribeMigrationJobStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMigrationJobStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the list of data migration instances and the details of each instance.
-         *
-         * @param request DescribeMigrationJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMigrationJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of data migration instances and the details of each instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobsResponse
+        /// </returns>
         public DescribeMigrationJobsResponse DescribeMigrationJobsWithOptions(DescribeMigrationJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8937,13 +10357,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeMigrationJobsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of data migration instances and the details of each instance.
-         *
-         * @param request DescribeMigrationJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMigrationJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of data migration instances and the details of each instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobsResponse
+        /// </returns>
         public async Task<DescribeMigrationJobsResponse> DescribeMigrationJobsWithOptionsAsync(DescribeMigrationJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8999,35 +10427,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeMigrationJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of data migration instances and the details of each instance.
-         *
-         * @param request DescribeMigrationJobsRequest
-         * @return DescribeMigrationJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of data migration instances and the details of each instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobsResponse
+        /// </returns>
         public DescribeMigrationJobsResponse DescribeMigrationJobs(DescribeMigrationJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMigrationJobsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the list of data migration instances and the details of each instance.
-         *
-         * @param request DescribeMigrationJobsRequest
-         * @return DescribeMigrationJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of data migration instances and the details of each instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMigrationJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMigrationJobsResponse
+        /// </returns>
         public async Task<DescribeMigrationJobsResponse> DescribeMigrationJobsAsync(DescribeMigrationJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMigrationJobsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribePreCheckStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePreCheckStatusResponse
-         */
+        /// <param name="request">
+        /// DescribePreCheckStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePreCheckStatusResponse
+        /// </returns>
         public DescribePreCheckStatusResponse DescribePreCheckStatusWithOptions(DescribePreCheckStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9091,11 +10536,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribePreCheckStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribePreCheckStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePreCheckStatusResponse
-         */
+        /// <param name="request">
+        /// DescribePreCheckStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePreCheckStatusResponse
+        /// </returns>
         public async Task<DescribePreCheckStatusResponse> DescribePreCheckStatusWithOptionsAsync(DescribePreCheckStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9159,31 +10609,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribePreCheckStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribePreCheckStatusRequest
-         * @return DescribePreCheckStatusResponse
-         */
+        /// <param name="request">
+        /// DescribePreCheckStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePreCheckStatusResponse
+        /// </returns>
         public DescribePreCheckStatusResponse DescribePreCheckStatus(DescribePreCheckStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePreCheckStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribePreCheckStatusRequest
-         * @return DescribePreCheckStatusResponse
-         */
+        /// <param name="request">
+        /// DescribePreCheckStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePreCheckStatusResponse
+        /// </returns>
         public async Task<DescribePreCheckStatusResponse> DescribePreCheckStatusAsync(DescribePreCheckStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePreCheckStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeSubscriptionInstanceAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSubscriptionInstanceAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeSubscriptionInstanceAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstanceAlertResponse
+        /// </returns>
         public DescribeSubscriptionInstanceAlertResponse DescribeSubscriptionInstanceAlertWithOptions(DescribeSubscriptionInstanceAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9231,11 +10692,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSubscriptionInstanceAlertResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeSubscriptionInstanceAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSubscriptionInstanceAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeSubscriptionInstanceAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstanceAlertResponse
+        /// </returns>
         public async Task<DescribeSubscriptionInstanceAlertResponse> DescribeSubscriptionInstanceAlertWithOptionsAsync(DescribeSubscriptionInstanceAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9283,33 +10749,47 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSubscriptionInstanceAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeSubscriptionInstanceAlertRequest
-         * @return DescribeSubscriptionInstanceAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeSubscriptionInstanceAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstanceAlertResponse
+        /// </returns>
         public DescribeSubscriptionInstanceAlertResponse DescribeSubscriptionInstanceAlert(DescribeSubscriptionInstanceAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSubscriptionInstanceAlertWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeSubscriptionInstanceAlertRequest
-         * @return DescribeSubscriptionInstanceAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeSubscriptionInstanceAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstanceAlertResponse
+        /// </returns>
         public async Task<DescribeSubscriptionInstanceAlertResponse> DescribeSubscriptionInstanceAlertAsync(DescribeSubscriptionInstanceAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSubscriptionInstanceAlertWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the status of a change tracking instance.
-         *
-         * @param request DescribeSubscriptionInstanceStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSubscriptionInstanceStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSubscriptionInstanceStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstanceStatusResponse
+        /// </returns>
         public DescribeSubscriptionInstanceStatusResponse DescribeSubscriptionInstanceStatusWithOptions(DescribeSubscriptionInstanceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9353,13 +10833,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSubscriptionInstanceStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of a change tracking instance.
-         *
-         * @param request DescribeSubscriptionInstanceStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSubscriptionInstanceStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSubscriptionInstanceStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstanceStatusResponse
+        /// </returns>
         public async Task<DescribeSubscriptionInstanceStatusResponse> DescribeSubscriptionInstanceStatusWithOptionsAsync(DescribeSubscriptionInstanceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9403,37 +10891,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSubscriptionInstanceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of a change tracking instance.
-         *
-         * @param request DescribeSubscriptionInstanceStatusRequest
-         * @return DescribeSubscriptionInstanceStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSubscriptionInstanceStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstanceStatusResponse
+        /// </returns>
         public DescribeSubscriptionInstanceStatusResponse DescribeSubscriptionInstanceStatus(DescribeSubscriptionInstanceStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSubscriptionInstanceStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the status of a change tracking instance.
-         *
-         * @param request DescribeSubscriptionInstanceStatusRequest
-         * @return DescribeSubscriptionInstanceStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a change tracking instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSubscriptionInstanceStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstanceStatusResponse
+        /// </returns>
         public async Task<DescribeSubscriptionInstanceStatusResponse> DescribeSubscriptionInstanceStatusAsync(DescribeSubscriptionInstanceStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSubscriptionInstanceStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the list of change tracking instances and the details of each instance.
-         *
-         * @param request DescribeSubscriptionInstancesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSubscriptionInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of change tracking instances and the details of each instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSubscriptionInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstancesResponse
+        /// </returns>
         public DescribeSubscriptionInstancesResponse DescribeSubscriptionInstancesWithOptions(DescribeSubscriptionInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9493,13 +11001,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSubscriptionInstancesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of change tracking instances and the details of each instance.
-         *
-         * @param request DescribeSubscriptionInstancesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSubscriptionInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of change tracking instances and the details of each instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSubscriptionInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstancesResponse
+        /// </returns>
         public async Task<DescribeSubscriptionInstancesResponse> DescribeSubscriptionInstancesWithOptionsAsync(DescribeSubscriptionInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9559,38 +11075,60 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSubscriptionInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of change tracking instances and the details of each instance.
-         *
-         * @param request DescribeSubscriptionInstancesRequest
-         * @return DescribeSubscriptionInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of change tracking instances and the details of each instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSubscriptionInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstancesResponse
+        /// </returns>
         public DescribeSubscriptionInstancesResponse DescribeSubscriptionInstances(DescribeSubscriptionInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSubscriptionInstancesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the list of change tracking instances and the details of each instance.
-         *
-         * @param request DescribeSubscriptionInstancesRequest
-         * @return DescribeSubscriptionInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of change tracking instances and the details of each instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSubscriptionInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionInstancesResponse
+        /// </returns>
         public async Task<DescribeSubscriptionInstancesResponse> DescribeSubscriptionInstancesAsync(DescribeSubscriptionInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSubscriptionInstancesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description *   When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.
-         * *   You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the ID of the change tracking instance and the ID of the consumer group.
-         *
-         * @param tmpReq DescribeSubscriptionMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSubscriptionMetaResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the change tracking instance and the ID of the consumer group.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeSubscriptionMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionMetaResponse
+        /// </returns>
         public DescribeSubscriptionMetaResponse DescribeSubscriptionMetaWithOptions(DescribeSubscriptionMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9648,14 +11186,24 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSubscriptionMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description *   When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.
-         * *   You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the ID of the change tracking instance and the ID of the consumer group.
-         *
-         * @param tmpReq DescribeSubscriptionMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSubscriptionMetaResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the change tracking instance and the ID of the consumer group.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeSubscriptionMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionMetaResponse
+        /// </returns>
         public async Task<DescribeSubscriptionMetaResponse> DescribeSubscriptionMetaWithOptionsAsync(DescribeSubscriptionMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9713,39 +11261,63 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSubscriptionMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description *   When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.
-         * *   You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the ID of the change tracking instance and the ID of the consumer group.
-         *
-         * @param request DescribeSubscriptionMetaRequest
-         * @return DescribeSubscriptionMetaResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the change tracking instance and the ID of the consumer group.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSubscriptionMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionMetaResponse
+        /// </returns>
         public DescribeSubscriptionMetaResponse DescribeSubscriptionMeta(DescribeSubscriptionMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSubscriptionMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @description *   When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.
-         * *   You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the ID of the change tracking instance and the ID of the consumer group.
-         *
-         * @param request DescribeSubscriptionMetaRequest
-         * @return DescribeSubscriptionMetaResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the change tracking instance and the ID of the consumer group.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSubscriptionMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSubscriptionMetaResponse
+        /// </returns>
         public async Task<DescribeSubscriptionMetaResponse> DescribeSubscriptionMetaAsync(DescribeSubscriptionMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSubscriptionMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查看同步和迁移任务的增量写入延迟信息
-         *
-         * @param request DescribeSyncStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSyncStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看同步和迁移任务的增量写入延迟信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSyncStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSyncStatusResponse
+        /// </returns>
         public DescribeSyncStatusResponse DescribeSyncStatusWithOptions(DescribeSyncStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9789,13 +11361,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSyncStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查看同步和迁移任务的增量写入延迟信息
-         *
-         * @param request DescribeSyncStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSyncStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看同步和迁移任务的增量写入延迟信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSyncStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSyncStatusResponse
+        /// </returns>
         public async Task<DescribeSyncStatusResponse> DescribeSyncStatusWithOptionsAsync(DescribeSyncStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9839,35 +11419,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSyncStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查看同步和迁移任务的增量写入延迟信息
-         *
-         * @param request DescribeSyncStatusRequest
-         * @return DescribeSyncStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看同步和迁移任务的增量写入延迟信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSyncStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSyncStatusResponse
+        /// </returns>
         public DescribeSyncStatusResponse DescribeSyncStatus(DescribeSyncStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSyncStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查看同步和迁移任务的增量写入延迟信息
-         *
-         * @param request DescribeSyncStatusRequest
-         * @return DescribeSyncStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看同步和迁移任务的增量写入延迟信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSyncStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSyncStatusResponse
+        /// </returns>
         public async Task<DescribeSyncStatusResponse> DescribeSyncStatusAsync(DescribeSyncStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSyncStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeSynchronizationJobAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationJobAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobAlertResponse
+        /// </returns>
         public DescribeSynchronizationJobAlertResponse DescribeSynchronizationJobAlertWithOptions(DescribeSynchronizationJobAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9919,11 +11516,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationJobAlertResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeSynchronizationJobAlertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationJobAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobAlertResponse
+        /// </returns>
         public async Task<DescribeSynchronizationJobAlertResponse> DescribeSynchronizationJobAlertWithOptionsAsync(DescribeSynchronizationJobAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9975,31 +11577,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeSynchronizationJobAlertRequest
-         * @return DescribeSynchronizationJobAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobAlertResponse
+        /// </returns>
         public DescribeSynchronizationJobAlertResponse DescribeSynchronizationJobAlert(DescribeSynchronizationJobAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSynchronizationJobAlertWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeSynchronizationJobAlertRequest
-         * @return DescribeSynchronizationJobAlertResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobAlertResponse
+        /// </returns>
         public async Task<DescribeSynchronizationJobAlertResponse> DescribeSynchronizationJobAlertAsync(DescribeSynchronizationJobAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSynchronizationJobAlertWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeSynchronizationJobReplicatorCompareRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationJobReplicatorCompareResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobReplicatorCompareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobReplicatorCompareResponse
+        /// </returns>
         public DescribeSynchronizationJobReplicatorCompareResponse DescribeSynchronizationJobReplicatorCompareWithOptions(DescribeSynchronizationJobReplicatorCompareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10051,11 +11664,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationJobReplicatorCompareResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeSynchronizationJobReplicatorCompareRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationJobReplicatorCompareResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobReplicatorCompareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobReplicatorCompareResponse
+        /// </returns>
         public async Task<DescribeSynchronizationJobReplicatorCompareResponse> DescribeSynchronizationJobReplicatorCompareWithOptionsAsync(DescribeSynchronizationJobReplicatorCompareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10107,33 +11725,47 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationJobReplicatorCompareResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeSynchronizationJobReplicatorCompareRequest
-         * @return DescribeSynchronizationJobReplicatorCompareResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobReplicatorCompareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobReplicatorCompareResponse
+        /// </returns>
         public DescribeSynchronizationJobReplicatorCompareResponse DescribeSynchronizationJobReplicatorCompare(DescribeSynchronizationJobReplicatorCompareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSynchronizationJobReplicatorCompareWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeSynchronizationJobReplicatorCompareRequest
-         * @return DescribeSynchronizationJobReplicatorCompareResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobReplicatorCompareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobReplicatorCompareResponse
+        /// </returns>
         public async Task<DescribeSynchronizationJobReplicatorCompareResponse> DescribeSynchronizationJobReplicatorCompareAsync(DescribeSynchronizationJobReplicatorCompareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSynchronizationJobReplicatorCompareWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the status of a data synchronization instance.
-         *
-         * @param request DescribeSynchronizationJobStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a data synchronization instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationJobStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobStatusResponse
+        /// </returns>
         public DescribeSynchronizationJobStatusResponse DescribeSynchronizationJobStatusWithOptions(DescribeSynchronizationJobStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10185,13 +11817,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationJobStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of a data synchronization instance.
-         *
-         * @param request DescribeSynchronizationJobStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a data synchronization instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationJobStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobStatusResponse
+        /// </returns>
         public async Task<DescribeSynchronizationJobStatusResponse> DescribeSynchronizationJobStatusWithOptionsAsync(DescribeSynchronizationJobStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10243,35 +11883,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationJobStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of a data synchronization instance.
-         *
-         * @param request DescribeSynchronizationJobStatusRequest
-         * @return DescribeSynchronizationJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a data synchronization instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationJobStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobStatusResponse
+        /// </returns>
         public DescribeSynchronizationJobStatusResponse DescribeSynchronizationJobStatus(DescribeSynchronizationJobStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSynchronizationJobStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the status of a data synchronization instance.
-         *
-         * @param request DescribeSynchronizationJobStatusRequest
-         * @return DescribeSynchronizationJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a data synchronization instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationJobStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobStatusResponse
+        /// </returns>
         public async Task<DescribeSynchronizationJobStatusResponse> DescribeSynchronizationJobStatusAsync(DescribeSynchronizationJobStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSynchronizationJobStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeSynchronizationJobStatusListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationJobStatusListResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobStatusListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobStatusListResponse
+        /// </returns>
         public DescribeSynchronizationJobStatusListResponse DescribeSynchronizationJobStatusListWithOptions(DescribeSynchronizationJobStatusListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10319,11 +11976,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationJobStatusListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeSynchronizationJobStatusListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationJobStatusListResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobStatusListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobStatusListResponse
+        /// </returns>
         public async Task<DescribeSynchronizationJobStatusListResponse> DescribeSynchronizationJobStatusListWithOptionsAsync(DescribeSynchronizationJobStatusListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10371,33 +12033,47 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationJobStatusListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeSynchronizationJobStatusListRequest
-         * @return DescribeSynchronizationJobStatusListResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobStatusListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobStatusListResponse
+        /// </returns>
         public DescribeSynchronizationJobStatusListResponse DescribeSynchronizationJobStatusList(DescribeSynchronizationJobStatusListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSynchronizationJobStatusListWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeSynchronizationJobStatusListRequest
-         * @return DescribeSynchronizationJobStatusListResponse
-         */
+        /// <param name="request">
+        /// DescribeSynchronizationJobStatusListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobStatusListResponse
+        /// </returns>
         public async Task<DescribeSynchronizationJobStatusListResponse> DescribeSynchronizationJobStatusListAsync(DescribeSynchronizationJobStatusListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSynchronizationJobStatusListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
-         *
-         * @param request DescribeSynchronizationJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobsResponse
+        /// </returns>
         public DescribeSynchronizationJobsResponse DescribeSynchronizationJobsWithOptions(DescribeSynchronizationJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10457,13 +12133,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationJobsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
-         *
-         * @param request DescribeSynchronizationJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobsResponse
+        /// </returns>
         public async Task<DescribeSynchronizationJobsResponse> DescribeSynchronizationJobsWithOptionsAsync(DescribeSynchronizationJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10523,37 +12207,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
-         *
-         * @param request DescribeSynchronizationJobsRequest
-         * @return DescribeSynchronizationJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobsResponse
+        /// </returns>
         public DescribeSynchronizationJobsResponse DescribeSynchronizationJobs(DescribeSynchronizationJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSynchronizationJobsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
-         *
-         * @param request DescribeSynchronizationJobsRequest
-         * @return DescribeSynchronizationJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationJobsResponse
+        /// </returns>
         public async Task<DescribeSynchronizationJobsResponse> DescribeSynchronizationJobsAsync(DescribeSynchronizationJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSynchronizationJobsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, you must call the [ModifySynchronizationObject](https://help.aliyun.com/document_detail/49451.html) operation to obtain the task ID.
-         *
-         * @param request DescribeSynchronizationObjectModifyStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationObjectModifyStatusResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49451.html">ModifySynchronizationObject</a> operation to obtain the task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationObjectModifyStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationObjectModifyStatusResponse
+        /// </returns>
         public DescribeSynchronizationObjectModifyStatusResponse DescribeSynchronizationObjectModifyStatusWithOptions(DescribeSynchronizationObjectModifyStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10601,13 +12305,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationObjectModifyStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, you must call the [ModifySynchronizationObject](https://help.aliyun.com/document_detail/49451.html) operation to obtain the task ID.
-         *
-         * @param request DescribeSynchronizationObjectModifyStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSynchronizationObjectModifyStatusResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49451.html">ModifySynchronizationObject</a> operation to obtain the task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationObjectModifyStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationObjectModifyStatusResponse
+        /// </returns>
         public async Task<DescribeSynchronizationObjectModifyStatusResponse> DescribeSynchronizationObjectModifyStatusWithOptionsAsync(DescribeSynchronizationObjectModifyStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10655,35 +12367,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeSynchronizationObjectModifyStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, you must call the [ModifySynchronizationObject](https://help.aliyun.com/document_detail/49451.html) operation to obtain the task ID.
-         *
-         * @param request DescribeSynchronizationObjectModifyStatusRequest
-         * @return DescribeSynchronizationObjectModifyStatusResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49451.html">ModifySynchronizationObject</a> operation to obtain the task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationObjectModifyStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationObjectModifyStatusResponse
+        /// </returns>
         public DescribeSynchronizationObjectModifyStatusResponse DescribeSynchronizationObjectModifyStatus(DescribeSynchronizationObjectModifyStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSynchronizationObjectModifyStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, you must call the [ModifySynchronizationObject](https://help.aliyun.com/document_detail/49451.html) operation to obtain the task ID.
-         *
-         * @param request DescribeSynchronizationObjectModifyStatusRequest
-         * @return DescribeSynchronizationObjectModifyStatusResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49451.html">ModifySynchronizationObject</a> operation to obtain the task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSynchronizationObjectModifyStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSynchronizationObjectModifyStatusResponse
+        /// </returns>
         public async Task<DescribeSynchronizationObjectModifyStatusResponse> DescribeSynchronizationObjectModifyStatusAsync(DescribeSynchronizationObjectModifyStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSynchronizationObjectModifyStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeTagKeysRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTagKeysResponse
-         */
+        /// <param name="request">
+        /// DescribeTagKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagKeysResponse
+        /// </returns>
         public DescribeTagKeysResponse DescribeTagKeysWithOptions(DescribeTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10735,11 +12464,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeTagKeysResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeTagKeysRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTagKeysResponse
-         */
+        /// <param name="request">
+        /// DescribeTagKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagKeysResponse
+        /// </returns>
         public async Task<DescribeTagKeysResponse> DescribeTagKeysWithOptionsAsync(DescribeTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10791,31 +12525,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeTagKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeTagKeysRequest
-         * @return DescribeTagKeysResponse
-         */
+        /// <param name="request">
+        /// DescribeTagKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagKeysResponse
+        /// </returns>
         public DescribeTagKeysResponse DescribeTagKeys(DescribeTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTagKeysWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeTagKeysRequest
-         * @return DescribeTagKeysResponse
-         */
+        /// <param name="request">
+        /// DescribeTagKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagKeysResponse
+        /// </returns>
         public async Task<DescribeTagKeysResponse> DescribeTagKeysAsync(DescribeTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTagKeysWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeTagValuesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTagValuesResponse
-         */
+        /// <param name="request">
+        /// DescribeTagValuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagValuesResponse
+        /// </returns>
         public DescribeTagValuesResponse DescribeTagValuesWithOptions(DescribeTagValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10871,11 +12616,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeTagValuesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeTagValuesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTagValuesResponse
-         */
+        /// <param name="request">
+        /// DescribeTagValuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagValuesResponse
+        /// </returns>
         public async Task<DescribeTagValuesResponse> DescribeTagValuesWithOptionsAsync(DescribeTagValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10931,36 +12681,55 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<DescribeTagValuesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeTagValuesRequest
-         * @return DescribeTagValuesResponse
-         */
+        /// <param name="request">
+        /// DescribeTagValuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagValuesResponse
+        /// </returns>
         public DescribeTagValuesResponse DescribeTagValues(DescribeTagValuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTagValuesWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeTagValuesRequest
-         * @return DescribeTagValuesResponse
-         */
+        /// <param name="request">
+        /// DescribeTagValuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagValuesResponse
+        /// </returns>
         public async Task<DescribeTagValuesResponse> DescribeTagValuesAsync(DescribeTagValuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTagValuesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.
-         *
-         * @description *   The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).
-         * *   This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.
-         *
-         * @param request InitDtsRdsInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return InitDtsRdsInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InitDtsRdsInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitDtsRdsInstanceResponse
+        /// </returns>
         public InitDtsRdsInstanceResponse InitDtsRdsInstanceWithOptions(InitDtsRdsInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11012,16 +12781,29 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<InitDtsRdsInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.
-         *
-         * @description *   The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).
-         * *   This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.
-         *
-         * @param request InitDtsRdsInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return InitDtsRdsInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InitDtsRdsInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitDtsRdsInstanceResponse
+        /// </returns>
         public async Task<InitDtsRdsInstanceResponse> InitDtsRdsInstanceWithOptionsAsync(InitDtsRdsInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11073,43 +12855,73 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<InitDtsRdsInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.
-         *
-         * @description *   The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).
-         * *   This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.
-         *
-         * @param request InitDtsRdsInstanceRequest
-         * @return InitDtsRdsInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InitDtsRdsInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitDtsRdsInstanceResponse
+        /// </returns>
         public InitDtsRdsInstanceResponse InitDtsRdsInstance(InitDtsRdsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InitDtsRdsInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.
-         *
-         * @description *   The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).
-         * *   This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.
-         *
-         * @param request InitDtsRdsInstanceRequest
-         * @return InitDtsRdsInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InitDtsRdsInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitDtsRdsInstanceResponse
+        /// </returns>
         public async Task<InitDtsRdsInstanceResponse> InitDtsRdsInstanceAsync(InitDtsRdsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InitDtsRdsInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.
-         *
-         * @param request ListDedicatedClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDedicatedClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDedicatedClusterResponse
+        /// </returns>
         public ListDedicatedClusterResponse ListDedicatedClusterWithOptions(ListDedicatedClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11173,13 +12985,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ListDedicatedClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.
-         *
-         * @param request ListDedicatedClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDedicatedClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDedicatedClusterResponse
+        /// </returns>
         public async Task<ListDedicatedClusterResponse> ListDedicatedClusterWithOptionsAsync(ListDedicatedClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11243,37 +13063,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ListDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.
-         *
-         * @param request ListDedicatedClusterRequest
-         * @return ListDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDedicatedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDedicatedClusterResponse
+        /// </returns>
         public ListDedicatedClusterResponse ListDedicatedCluster(ListDedicatedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDedicatedClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.
-         *
-         * @param request ListDedicatedClusterRequest
-         * @return ListDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDedicatedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDedicatedClusterResponse
+        /// </returns>
         public async Task<ListDedicatedClusterResponse> ListDedicatedClusterAsync(ListDedicatedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDedicatedClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description ****
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11321,13 +13161,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description ****
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11375,35 +13223,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description ****
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @description ****
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifyConsumerChannelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// ModifyConsumerChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumerChannelResponse
+        /// </returns>
         public ModifyConsumerChannelResponse ModifyConsumerChannelWithOptions(ModifyConsumerChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11459,11 +13324,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyConsumerChannelResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyConsumerChannelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// ModifyConsumerChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumerChannelResponse
+        /// </returns>
         public async Task<ModifyConsumerChannelResponse> ModifyConsumerChannelWithOptionsAsync(ModifyConsumerChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11519,35 +13389,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyConsumerChannelRequest
-         * @return ModifyConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// ModifyConsumerChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumerChannelResponse
+        /// </returns>
         public ModifyConsumerChannelResponse ModifyConsumerChannel(ModifyConsumerChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyConsumerChannelWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifyConsumerChannelRequest
-         * @return ModifyConsumerChannelResponse
-         */
+        /// <param name="request">
+        /// ModifyConsumerChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumerChannelResponse
+        /// </returns>
         public async Task<ModifyConsumerChannelResponse> ModifyConsumerChannelAsync(ModifyConsumerChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyConsumerChannelWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description > 
-         * *   This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-         * *   When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.
-         *
-         * @param request ModifyConsumerGroupPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyConsumerGroupPasswordResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
+        /// <item><description>When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyConsumerGroupPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumerGroupPasswordResponse
+        /// </returns>
         public ModifyConsumerGroupPasswordResponse ModifyConsumerGroupPasswordWithOptions(ModifyConsumerGroupPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11611,15 +13498,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyConsumerGroupPasswordResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description > 
-         * *   This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-         * *   When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.
-         *
-         * @param request ModifyConsumerGroupPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyConsumerGroupPasswordResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
+        /// <item><description>When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyConsumerGroupPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumerGroupPasswordResponse
+        /// </returns>
         public async Task<ModifyConsumerGroupPasswordResponse> ModifyConsumerGroupPasswordWithOptionsAsync(ModifyConsumerGroupPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11683,44 +13581,73 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyConsumerGroupPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description > 
-         * *   This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-         * *   When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.
-         *
-         * @param request ModifyConsumerGroupPasswordRequest
-         * @return ModifyConsumerGroupPasswordResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
+        /// <item><description>When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyConsumerGroupPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumerGroupPasswordResponse
+        /// </returns>
         public ModifyConsumerGroupPasswordResponse ModifyConsumerGroupPassword(ModifyConsumerGroupPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyConsumerGroupPasswordWithOptions(request, runtime);
         }
 
-        /**
-         * @description > 
-         * *   This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-         * *   When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.
-         *
-         * @param request ModifyConsumerGroupPasswordRequest
-         * @return ModifyConsumerGroupPasswordResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
+        /// <item><description>When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyConsumerGroupPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumerGroupPasswordResponse
+        /// </returns>
         public async Task<ModifyConsumerGroupPasswordResponse> ModifyConsumerGroupPasswordAsync(ModifyConsumerGroupPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyConsumerGroupPasswordWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description > 
-         * *   This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the [ConfigureSubscriptionInstance](https://help.aliyun.com/document_detail/49437.html) operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-         * *   If you use the new version, you need to set the consumption checkpoint on the change tracking client.
-         * *   When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.
-         *
-         * @param request ModifyConsumptionTimestampRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyConsumptionTimestampResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the <a href="https://help.aliyun.com/document_detail/49437.html">ConfigureSubscriptionInstance</a> operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
+        /// <item><description>If you use the new version, you need to set the consumption checkpoint on the change tracking client.</description></item>
+        /// <item><description>When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyConsumptionTimestampRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumptionTimestampResponse
+        /// </returns>
         public ModifyConsumptionTimestampResponse ModifyConsumptionTimestampWithOptions(ModifyConsumptionTimestampRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11768,16 +13695,27 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyConsumptionTimestampResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description > 
-         * *   This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the [ConfigureSubscriptionInstance](https://help.aliyun.com/document_detail/49437.html) operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-         * *   If you use the new version, you need to set the consumption checkpoint on the change tracking client.
-         * *   When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.
-         *
-         * @param request ModifyConsumptionTimestampRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyConsumptionTimestampResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the <a href="https://help.aliyun.com/document_detail/49437.html">ConfigureSubscriptionInstance</a> operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
+        /// <item><description>If you use the new version, you need to set the consumption checkpoint on the change tracking client.</description></item>
+        /// <item><description>When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyConsumptionTimestampRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumptionTimestampResponse
+        /// </returns>
         public async Task<ModifyConsumptionTimestampResponse> ModifyConsumptionTimestampWithOptionsAsync(ModifyConsumptionTimestampRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11825,45 +13763,74 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyConsumptionTimestampResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description > 
-         * *   This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the [ConfigureSubscriptionInstance](https://help.aliyun.com/document_detail/49437.html) operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-         * *   If you use the new version, you need to set the consumption checkpoint on the change tracking client.
-         * *   When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.
-         *
-         * @param request ModifyConsumptionTimestampRequest
-         * @return ModifyConsumptionTimestampResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the <a href="https://help.aliyun.com/document_detail/49437.html">ConfigureSubscriptionInstance</a> operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
+        /// <item><description>If you use the new version, you need to set the consumption checkpoint on the change tracking client.</description></item>
+        /// <item><description>When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyConsumptionTimestampRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumptionTimestampResponse
+        /// </returns>
         public ModifyConsumptionTimestampResponse ModifyConsumptionTimestamp(ModifyConsumptionTimestampRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyConsumptionTimestampWithOptions(request, runtime);
         }
 
-        /**
-         * @description > 
-         * *   This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the [ConfigureSubscriptionInstance](https://help.aliyun.com/document_detail/49437.html) operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-         * *   If you use the new version, you need to set the consumption checkpoint on the change tracking client.
-         * *   When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.
-         *
-         * @param request ModifyConsumptionTimestampRequest
-         * @return ModifyConsumptionTimestampResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the <a href="https://help.aliyun.com/document_detail/49437.html">ConfigureSubscriptionInstance</a> operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
+        /// <item><description>If you use the new version, you need to set the consumption checkpoint on the change tracking client.</description></item>
+        /// <item><description>When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyConsumptionTimestampRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyConsumptionTimestampResponse
+        /// </returns>
         public async Task<ModifyConsumptionTimestampResponse> ModifyConsumptionTimestampAsync(ModifyConsumptionTimestampRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyConsumptionTimestampWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configuration of a cluster.
-         *
-         * @description You can modify only the overcommit ratio.
-         *
-         * @param request ModifyDedicatedClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify only the overcommit ratio.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDedicatedClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDedicatedClusterResponse
+        /// </returns>
         public ModifyDedicatedClusterResponse ModifyDedicatedClusterWithOptions(ModifyDedicatedClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11915,15 +13882,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDedicatedClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configuration of a cluster.
-         *
-         * @description You can modify only the overcommit ratio.
-         *
-         * @param request ModifyDedicatedClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify only the overcommit ratio.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDedicatedClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDedicatedClusterResponse
+        /// </returns>
         public async Task<ModifyDedicatedClusterResponse> ModifyDedicatedClusterWithOptionsAsync(ModifyDedicatedClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11975,43 +13953,72 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configuration of a cluster.
-         *
-         * @description You can modify only the overcommit ratio.
-         *
-         * @param request ModifyDedicatedClusterRequest
-         * @return ModifyDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify only the overcommit ratio.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDedicatedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDedicatedClusterResponse
+        /// </returns>
         public ModifyDedicatedClusterResponse ModifyDedicatedCluster(ModifyDedicatedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDedicatedClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configuration of a cluster.
-         *
-         * @description You can modify only the overcommit ratio.
-         *
-         * @param request ModifyDedicatedClusterRequest
-         * @return ModifyDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify only the overcommit ratio.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDedicatedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDedicatedClusterResponse
+        /// </returns>
         public async Task<ModifyDedicatedClusterResponse> ModifyDedicatedClusterAsync(ModifyDedicatedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDedicatedClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a data synchronization task.
-         *
-         * @description When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
-         *
-         * @param tmpReq ModifyDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a data synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over <b>Next: Save Task Settings and Precheck</b> in the <b>Advanced Settings</b> step and click <b>Preview OpenAPI parameters</b> to view the parameters that are used to configure the task by calling an API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobResponse
+        /// </returns>
         public ModifyDtsJobResponse ModifyDtsJobWithOptions(ModifyDtsJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12107,15 +14114,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a data synchronization task.
-         *
-         * @description When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
-         *
-         * @param tmpReq ModifyDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a data synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over <b>Next: Save Task Settings and Precheck</b> in the <b>Advanced Settings</b> step and click <b>Preview OpenAPI parameters</b> to view the parameters that are used to configure the task by calling an API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobResponse
+        /// </returns>
         public async Task<ModifyDtsJobResponse> ModifyDtsJobWithOptionsAsync(ModifyDtsJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12211,28 +14229,46 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a data synchronization task.
-         *
-         * @description When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
-         *
-         * @param request ModifyDtsJobRequest
-         * @return ModifyDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a data synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over <b>Next: Save Task Settings and Precheck</b> in the <b>Advanced Settings</b> step and click <b>Preview OpenAPI parameters</b> to view the parameters that are used to configure the task by calling an API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobResponse
+        /// </returns>
         public ModifyDtsJobResponse ModifyDtsJob(ModifyDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDtsJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a data synchronization task.
-         *
-         * @description When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
-         *
-         * @param request ModifyDtsJobRequest
-         * @return ModifyDtsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a data synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over <b>Next: Save Task Settings and Precheck</b> in the <b>Advanced Settings</b> step and click <b>Preview OpenAPI parameters</b> to view the parameters that are used to configure the task by calling an API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobResponse
+        /// </returns>
         public async Task<ModifyDtsJobResponse> ModifyDtsJobAsync(ModifyDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12403,13 +14439,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return modifyDtsJobResp;
         }
 
-        /**
-         * @summary 修改DTS任务配置
-         *
-         * @param request ModifyDtsJobConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改DTS任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobConfigResponse
+        /// </returns>
         public ModifyDtsJobConfigResponse ModifyDtsJobConfigWithOptions(ModifyDtsJobConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12453,13 +14497,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改DTS任务配置
-         *
-         * @param request ModifyDtsJobConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改DTS任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobConfigResponse
+        /// </returns>
         public async Task<ModifyDtsJobConfigResponse> ModifyDtsJobConfigWithOptionsAsync(ModifyDtsJobConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12503,37 +14555,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改DTS任务配置
-         *
-         * @param request ModifyDtsJobConfigRequest
-         * @return ModifyDtsJobConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改DTS任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobConfigResponse
+        /// </returns>
         public ModifyDtsJobConfigResponse ModifyDtsJobConfig(ModifyDtsJobConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDtsJobConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改DTS任务配置
-         *
-         * @param request ModifyDtsJobConfigRequest
-         * @return ModifyDtsJobConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改DTS任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobConfigResponse
+        /// </returns>
         public async Task<ModifyDtsJobConfigResponse> ModifyDtsJobConfigAsync(ModifyDtsJobConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDtsJobConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 迁移专属集群任务
-         *
-         * @param request ModifyDtsJobDedicatedClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>迁移专属集群任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobDedicatedClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobDedicatedClusterResponse
+        /// </returns>
         public ModifyDtsJobDedicatedClusterResponse ModifyDtsJobDedicatedClusterWithOptions(ModifyDtsJobDedicatedClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12577,13 +14649,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobDedicatedClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 迁移专属集群任务
-         *
-         * @param request ModifyDtsJobDedicatedClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>迁移专属集群任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobDedicatedClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobDedicatedClusterResponse
+        /// </returns>
         public async Task<ModifyDtsJobDedicatedClusterResponse> ModifyDtsJobDedicatedClusterWithOptionsAsync(ModifyDtsJobDedicatedClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12627,40 +14707,65 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 迁移专属集群任务
-         *
-         * @param request ModifyDtsJobDedicatedClusterRequest
-         * @return ModifyDtsJobDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>迁移专属集群任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobDedicatedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobDedicatedClusterResponse
+        /// </returns>
         public ModifyDtsJobDedicatedClusterResponse ModifyDtsJobDedicatedCluster(ModifyDtsJobDedicatedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDtsJobDedicatedClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 迁移专属集群任务
-         *
-         * @param request ModifyDtsJobDedicatedClusterRequest
-         * @return ModifyDtsJobDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>迁移专属集群任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobDedicatedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobDedicatedClusterResponse
+        /// </returns>
         public async Task<ModifyDtsJobDedicatedClusterResponse> ModifyDtsJobDedicatedClusterAsync(ModifyDtsJobDedicatedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDtsJobDedicatedClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.
-         *
-         * @description *   DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.
-         * *   Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.
-         *
-         * @param request ModifyDtsJobDuLimitRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobDuLimitResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobDuLimitRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobDuLimitResponse
+        /// </returns>
         public ModifyDtsJobDuLimitResponse ModifyDtsJobDuLimitWithOptions(ModifyDtsJobDuLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12704,16 +14809,29 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobDuLimitResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.
-         *
-         * @description *   DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.
-         * *   Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.
-         *
-         * @param request ModifyDtsJobDuLimitRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobDuLimitResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobDuLimitRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobDuLimitResponse
+        /// </returns>
         public async Task<ModifyDtsJobDuLimitResponse> ModifyDtsJobDuLimitWithOptionsAsync(ModifyDtsJobDuLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12757,43 +14875,73 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobDuLimitResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.
-         *
-         * @description *   DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.
-         * *   Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.
-         *
-         * @param request ModifyDtsJobDuLimitRequest
-         * @return ModifyDtsJobDuLimitResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobDuLimitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobDuLimitResponse
+        /// </returns>
         public ModifyDtsJobDuLimitResponse ModifyDtsJobDuLimit(ModifyDtsJobDuLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDtsJobDuLimitWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.
-         *
-         * @description *   DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.
-         * *   Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.
-         *
-         * @param request ModifyDtsJobDuLimitRequest
-         * @return ModifyDtsJobDuLimitResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobDuLimitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobDuLimitResponse
+        /// </returns>
         public async Task<ModifyDtsJobDuLimitResponse> ModifyDtsJobDuLimitAsync(ModifyDtsJobDuLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDtsJobDuLimitWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 替换源端或目标端实例
-         *
-         * @param request ModifyDtsJobEndpointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>替换源端或目标端实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobEndpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobEndpointResponse
+        /// </returns>
         public ModifyDtsJobEndpointResponse ModifyDtsJobEndpointWithOptions(ModifyDtsJobEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12897,13 +15045,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobEndpointResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 替换源端或目标端实例
-         *
-         * @param request ModifyDtsJobEndpointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>替换源端或目标端实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobEndpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobEndpointResponse
+        /// </returns>
         public async Task<ModifyDtsJobEndpointResponse> ModifyDtsJobEndpointWithOptionsAsync(ModifyDtsJobEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13007,35 +15163,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 替换源端或目标端实例
-         *
-         * @param request ModifyDtsJobEndpointRequest
-         * @return ModifyDtsJobEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>替换源端或目标端实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobEndpointResponse
+        /// </returns>
         public ModifyDtsJobEndpointResponse ModifyDtsJobEndpoint(ModifyDtsJobEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDtsJobEndpointWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 替换源端或目标端实例
-         *
-         * @param request ModifyDtsJobEndpointRequest
-         * @return ModifyDtsJobEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>替换源端或目标端实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDtsJobEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobEndpointResponse
+        /// </returns>
         public async Task<ModifyDtsJobEndpointResponse> ModifyDtsJobEndpointAsync(ModifyDtsJobEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDtsJobEndpointWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifyDtsJobNameRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobNameResponse
-         */
+        /// <param name="request">
+        /// ModifyDtsJobNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobNameResponse
+        /// </returns>
         public ModifyDtsJobNameResponse ModifyDtsJobNameWithOptions(ModifyDtsJobNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13079,11 +15252,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobNameResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDtsJobNameRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobNameResponse
-         */
+        /// <param name="request">
+        /// ModifyDtsJobNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobNameResponse
+        /// </returns>
         public async Task<ModifyDtsJobNameResponse> ModifyDtsJobNameWithOptionsAsync(ModifyDtsJobNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13127,35 +15305,50 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDtsJobNameRequest
-         * @return ModifyDtsJobNameResponse
-         */
+        /// <param name="request">
+        /// ModifyDtsJobNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobNameResponse
+        /// </returns>
         public ModifyDtsJobNameResponse ModifyDtsJobName(ModifyDtsJobNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDtsJobNameWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifyDtsJobNameRequest
-         * @return ModifyDtsJobNameResponse
-         */
+        /// <param name="request">
+        /// ModifyDtsJobNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobNameResponse
+        /// </returns>
         public async Task<ModifyDtsJobNameResponse> ModifyDtsJobNameAsync(ModifyDtsJobNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDtsJobNameWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifyDtsJobPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobPasswordResponse
-         */
+        /// <param name="request">
+        /// ModifyDtsJobPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobPasswordResponse
+        /// </returns>
         public ModifyDtsJobPasswordResponse ModifyDtsJobPasswordWithOptions(ModifyDtsJobPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsInstanceId))
+            {
+                query["DtsInstanceId"] = request.DtsInstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
             {
                 query["DtsJobId"] = request.DtsJobId;
@@ -13175,6 +15368,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynchronizationDirection))
+            {
+                query["SynchronizationDirection"] = request.SynchronizationDirection;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
@@ -13203,15 +15400,24 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobPasswordResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDtsJobPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDtsJobPasswordResponse
-         */
+        /// <param name="request">
+        /// ModifyDtsJobPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobPasswordResponse
+        /// </returns>
         public async Task<ModifyDtsJobPasswordResponse> ModifyDtsJobPasswordWithOptionsAsync(ModifyDtsJobPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsInstanceId))
+            {
+                query["DtsInstanceId"] = request.DtsInstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
             {
                 query["DtsJobId"] = request.DtsJobId;
@@ -13231,6 +15437,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynchronizationDirection))
+            {
+                query["SynchronizationDirection"] = request.SynchronizationDirection;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
@@ -13259,31 +15469,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDtsJobPasswordRequest
-         * @return ModifyDtsJobPasswordResponse
-         */
+        /// <param name="request">
+        /// ModifyDtsJobPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobPasswordResponse
+        /// </returns>
         public ModifyDtsJobPasswordResponse ModifyDtsJobPassword(ModifyDtsJobPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDtsJobPasswordWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifyDtsJobPasswordRequest
-         * @return ModifyDtsJobPasswordResponse
-         */
+        /// <param name="request">
+        /// ModifyDtsJobPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDtsJobPasswordResponse
+        /// </returns>
         public async Task<ModifyDtsJobPasswordResponse> ModifyDtsJobPasswordAsync(ModifyDtsJobPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDtsJobPasswordWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifyDynamicConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDynamicConfigResponse
-         */
+        /// <param name="request">
+        /// ModifyDynamicConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDynamicConfigResponse
+        /// </returns>
         public ModifyDynamicConfigResponse ModifyDynamicConfigWithOptions(ModifyDynamicConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13331,11 +15552,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDynamicConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDynamicConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDynamicConfigResponse
-         */
+        /// <param name="request">
+        /// ModifyDynamicConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDynamicConfigResponse
+        /// </returns>
         public async Task<ModifyDynamicConfigResponse> ModifyDynamicConfigWithOptionsAsync(ModifyDynamicConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13383,31 +15609,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDynamicConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDynamicConfigRequest
-         * @return ModifyDynamicConfigResponse
-         */
+        /// <param name="request">
+        /// ModifyDynamicConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDynamicConfigResponse
+        /// </returns>
         public ModifyDynamicConfigResponse ModifyDynamicConfig(ModifyDynamicConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDynamicConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifyDynamicConfigRequest
-         * @return ModifyDynamicConfigResponse
-         */
+        /// <param name="request">
+        /// ModifyDynamicConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDynamicConfigResponse
+        /// </returns>
         public async Task<ModifyDynamicConfigResponse> ModifyDynamicConfigAsync(ModifyDynamicConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDynamicConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifySubscriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySubscriptionResponse
-         */
+        /// <param name="request">
+        /// ModifySubscriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySubscriptionResponse
+        /// </returns>
         public ModifySubscriptionResponse ModifySubscriptionWithOptions(ModifySubscriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13459,11 +15696,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifySubscriptionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifySubscriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySubscriptionResponse
-         */
+        /// <param name="request">
+        /// ModifySubscriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySubscriptionResponse
+        /// </returns>
         public async Task<ModifySubscriptionResponse> ModifySubscriptionWithOptionsAsync(ModifySubscriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13515,36 +15757,53 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifySubscriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifySubscriptionRequest
-         * @return ModifySubscriptionResponse
-         */
+        /// <param name="request">
+        /// ModifySubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySubscriptionResponse
+        /// </returns>
         public ModifySubscriptionResponse ModifySubscription(ModifySubscriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySubscriptionWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifySubscriptionRequest
-         * @return ModifySubscriptionResponse
-         */
+        /// <param name="request">
+        /// ModifySubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySubscriptionResponse
+        /// </returns>
         public async Task<ModifySubscriptionResponse> ModifySubscriptionAsync(ModifySubscriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySubscriptionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.
-         * > 
-         * *   If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
-         * *   If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
-         *
-         * @param request ModifySubscriptionObjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySubscriptionObjectResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
+        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySubscriptionObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySubscriptionObjectResponse
+        /// </returns>
         public ModifySubscriptionObjectResponse ModifySubscriptionObjectWithOptions(ModifySubscriptionObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13592,16 +15851,27 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifySubscriptionObjectResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.
-         * > 
-         * *   If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
-         * *   If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
-         *
-         * @param request ModifySubscriptionObjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySubscriptionObjectResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
+        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySubscriptionObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySubscriptionObjectResponse
+        /// </returns>
         public async Task<ModifySubscriptionObjectResponse> ModifySubscriptionObjectWithOptionsAsync(ModifySubscriptionObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13649,43 +15919,71 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifySubscriptionObjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.
-         * > 
-         * *   If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
-         * *   If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
-         *
-         * @param request ModifySubscriptionObjectRequest
-         * @return ModifySubscriptionObjectResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
+        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySubscriptionObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySubscriptionObjectResponse
+        /// </returns>
         public ModifySubscriptionObjectResponse ModifySubscriptionObject(ModifySubscriptionObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySubscriptionObjectWithOptions(request, runtime);
         }
 
-        /**
-         * @description When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.
-         * > 
-         * *   If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
-         * *   If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
-         *
-         * @param request ModifySubscriptionObjectRequest
-         * @return ModifySubscriptionObjectResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
+        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySubscriptionObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySubscriptionObjectResponse
+        /// </returns>
         public async Task<ModifySubscriptionObjectResponse> ModifySubscriptionObjectAsync(ModifySubscriptionObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySubscriptionObjectWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description >  When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.
-         *
-         * @param request ModifySynchronizationObjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySynchronizationObjectResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySynchronizationObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySynchronizationObjectResponse
+        /// </returns>
         public ModifySynchronizationObjectResponse ModifySynchronizationObjectWithOptions(ModifySynchronizationObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13739,13 +16037,23 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifySynchronizationObjectResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description >  When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.
-         *
-         * @param request ModifySynchronizationObjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySynchronizationObjectResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySynchronizationObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySynchronizationObjectResponse
+        /// </returns>
         public async Task<ModifySynchronizationObjectResponse> ModifySynchronizationObjectWithOptionsAsync(ModifySynchronizationObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13799,35 +16107,56 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifySynchronizationObjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description >  When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.
-         *
-         * @param request ModifySynchronizationObjectRequest
-         * @return ModifySynchronizationObjectResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySynchronizationObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySynchronizationObjectResponse
+        /// </returns>
         public ModifySynchronizationObjectResponse ModifySynchronizationObject(ModifySynchronizationObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySynchronizationObjectWithOptions(request, runtime);
         }
 
-        /**
-         * @description >  When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.
-         *
-         * @param request ModifySynchronizationObjectRequest
-         * @return ModifySynchronizationObjectResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySynchronizationObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySynchronizationObjectResponse
+        /// </returns>
         public async Task<ModifySynchronizationObjectResponse> ModifySynchronizationObjectAsync(ModifySynchronizationObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySynchronizationObjectWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request RenewInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RenewInstanceResponse
-         */
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public RenewInstanceResponse RenewInstanceWithOptions(RenewInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13875,11 +16204,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request RenewInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RenewInstanceResponse
-         */
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public async Task<RenewInstanceResponse> RenewInstanceWithOptionsAsync(RenewInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13927,33 +16261,49 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request RenewInstanceRequest
-         * @return RenewInstanceResponse
-         */
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public RenewInstanceResponse RenewInstance(RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenewInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @param request RenewInstanceRequest
-         * @return RenewInstanceResponse
-         */
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public async Task<RenewInstanceResponse> RenewInstanceAsync(RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RenewInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description >  If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation reconfigure the task.
-         *
-         * @param request ResetDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetDtsJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation reconfigure the task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetDtsJobResponse
+        /// </returns>
         public ResetDtsJobResponse ResetDtsJobWithOptions(ResetDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13997,13 +16347,23 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ResetDtsJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description >  If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation reconfigure the task.
-         *
-         * @param request ResetDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetDtsJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation reconfigure the task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetDtsJobResponse
+        /// </returns>
         public async Task<ResetDtsJobResponse> ResetDtsJobWithOptionsAsync(ResetDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14047,37 +16407,63 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ResetDtsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description >  If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation reconfigure the task.
-         *
-         * @param request ResetDtsJobRequest
-         * @return ResetDtsJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation reconfigure the task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetDtsJobResponse
+        /// </returns>
         public ResetDtsJobResponse ResetDtsJob(ResetDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetDtsJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description >  If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation reconfigure the task.
-         *
-         * @param request ResetDtsJobRequest
-         * @return ResetDtsJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation reconfigure the task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetDtsJobResponse
+        /// </returns>
         public async Task<ResetDtsJobResponse> ResetDtsJobAsync(ResetDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetDtsJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description >  If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the **ConfigureSynchronizationJob** operation to reconfigure the task.
-         *
-         * @param request ResetSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSynchronizationJobResponse
+        /// </returns>
         public ResetSynchronizationJobResponse ResetSynchronizationJobWithOptions(ResetSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14125,13 +16511,23 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ResetSynchronizationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description >  If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the **ConfigureSynchronizationJob** operation to reconfigure the task.
-         *
-         * @param request ResetSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSynchronizationJobResponse
+        /// </returns>
         public async Task<ResetSynchronizationJobResponse> ResetSynchronizationJobWithOptionsAsync(ResetSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14179,37 +16575,61 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ResetSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description >  If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the **ConfigureSynchronizationJob** operation to reconfigure the task.
-         *
-         * @param request ResetSynchronizationJobRequest
-         * @return ResetSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSynchronizationJobResponse
+        /// </returns>
         public ResetSynchronizationJobResponse ResetSynchronizationJob(ResetSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetSynchronizationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description >  If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the **ConfigureSynchronizationJob** operation to reconfigure the task.
-         *
-         * @param request ResetSynchronizationJobRequest
-         * @return ResetSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSynchronizationJobResponse
+        /// </returns>
         public async Task<ResetSynchronizationJobResponse> ResetSynchronizationJobAsync(ResetSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetSynchronizationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 调转双向任务的方向
-         *
-         * @param request ReverseTwoWayDirectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReverseTwoWayDirectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调转双向任务的方向</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReverseTwoWayDirectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReverseTwoWayDirectionResponse
+        /// </returns>
         public ReverseTwoWayDirectionResponse ReverseTwoWayDirectionWithOptions(ReverseTwoWayDirectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14249,13 +16669,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ReverseTwoWayDirectionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调转双向任务的方向
-         *
-         * @param request ReverseTwoWayDirectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReverseTwoWayDirectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调转双向任务的方向</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReverseTwoWayDirectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReverseTwoWayDirectionResponse
+        /// </returns>
         public async Task<ReverseTwoWayDirectionResponse> ReverseTwoWayDirectionWithOptionsAsync(ReverseTwoWayDirectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14295,39 +16723,62 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ReverseTwoWayDirectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调转双向任务的方向
-         *
-         * @param request ReverseTwoWayDirectionRequest
-         * @return ReverseTwoWayDirectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调转双向任务的方向</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReverseTwoWayDirectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReverseTwoWayDirectionResponse
+        /// </returns>
         public ReverseTwoWayDirectionResponse ReverseTwoWayDirection(ReverseTwoWayDirectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReverseTwoWayDirectionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 调转双向任务的方向
-         *
-         * @param request ReverseTwoWayDirectionRequest
-         * @return ReverseTwoWayDirectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调转双向任务的方向</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReverseTwoWayDirectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReverseTwoWayDirectionResponse
+        /// </returns>
         public async Task<ReverseTwoWayDirectionResponse> ReverseTwoWayDirectionAsync(ReverseTwoWayDirectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReverseTwoWayDirectionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Ignores the precheck items that a data migration or synchronization task may fail to pass.
-         *
-         * @description If you call this operation to ignore all precheck items, you must call the [StartMigrationJob](https://www.alibabacloud.com/help/zh/doc-detail/49429.htm) or [StartSynchronizationJob](https://www.alibabacloud.com/help/zh/doc-detail/49448.htm) operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.
-         *
-         * @param request ShieldPrecheckRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ShieldPrecheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to ignore all precheck items, you must call the <a href="https://www.alibabacloud.com/help/zh/doc-detail/49429.htm">StartMigrationJob</a> or <a href="https://www.alibabacloud.com/help/zh/doc-detail/49448.htm">StartSynchronizationJob</a> operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ShieldPrecheckRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShieldPrecheckResponse
+        /// </returns>
         public ShieldPrecheckResponse ShieldPrecheckWithOptions(ShieldPrecheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14367,15 +16818,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ShieldPrecheckResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Ignores the precheck items that a data migration or synchronization task may fail to pass.
-         *
-         * @description If you call this operation to ignore all precheck items, you must call the [StartMigrationJob](https://www.alibabacloud.com/help/zh/doc-detail/49429.htm) or [StartSynchronizationJob](https://www.alibabacloud.com/help/zh/doc-detail/49448.htm) operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.
-         *
-         * @param request ShieldPrecheckRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ShieldPrecheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to ignore all precheck items, you must call the <a href="https://www.alibabacloud.com/help/zh/doc-detail/49429.htm">StartMigrationJob</a> or <a href="https://www.alibabacloud.com/help/zh/doc-detail/49448.htm">StartSynchronizationJob</a> operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ShieldPrecheckRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShieldPrecheckResponse
+        /// </returns>
         public async Task<ShieldPrecheckResponse> ShieldPrecheckWithOptionsAsync(ShieldPrecheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14415,41 +16877,67 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ShieldPrecheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Ignores the precheck items that a data migration or synchronization task may fail to pass.
-         *
-         * @description If you call this operation to ignore all precheck items, you must call the [StartMigrationJob](https://www.alibabacloud.com/help/zh/doc-detail/49429.htm) or [StartSynchronizationJob](https://www.alibabacloud.com/help/zh/doc-detail/49448.htm) operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.
-         *
-         * @param request ShieldPrecheckRequest
-         * @return ShieldPrecheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to ignore all precheck items, you must call the <a href="https://www.alibabacloud.com/help/zh/doc-detail/49429.htm">StartMigrationJob</a> or <a href="https://www.alibabacloud.com/help/zh/doc-detail/49448.htm">StartSynchronizationJob</a> operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ShieldPrecheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShieldPrecheckResponse
+        /// </returns>
         public ShieldPrecheckResponse ShieldPrecheck(ShieldPrecheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ShieldPrecheckWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Ignores the precheck items that a data migration or synchronization task may fail to pass.
-         *
-         * @description If you call this operation to ignore all precheck items, you must call the [StartMigrationJob](https://www.alibabacloud.com/help/zh/doc-detail/49429.htm) or [StartSynchronizationJob](https://www.alibabacloud.com/help/zh/doc-detail/49448.htm) operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.
-         *
-         * @param request ShieldPrecheckRequest
-         * @return ShieldPrecheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to ignore all precheck items, you must call the <a href="https://www.alibabacloud.com/help/zh/doc-detail/49429.htm">StartMigrationJob</a> or <a href="https://www.alibabacloud.com/help/zh/doc-detail/49448.htm">StartSynchronizationJob</a> operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ShieldPrecheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShieldPrecheckResponse
+        /// </returns>
         public async Task<ShieldPrecheckResponse> ShieldPrecheckAsync(ShieldPrecheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ShieldPrecheckWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Skips one or more precheck items.
-         *
-         * @param request SkipPreCheckRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SkipPreCheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Skips one or more precheck items.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkipPreCheckRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkipPreCheckResponse
+        /// </returns>
         public SkipPreCheckResponse SkipPreCheckWithOptions(SkipPreCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14501,13 +16989,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SkipPreCheckResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Skips one or more precheck items.
-         *
-         * @param request SkipPreCheckRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SkipPreCheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Skips one or more precheck items.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkipPreCheckRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkipPreCheckResponse
+        /// </returns>
         public async Task<SkipPreCheckResponse> SkipPreCheckWithOptionsAsync(SkipPreCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14559,35 +17055,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SkipPreCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Skips one or more precheck items.
-         *
-         * @param request SkipPreCheckRequest
-         * @return SkipPreCheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Skips one or more precheck items.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkipPreCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkipPreCheckResponse
+        /// </returns>
         public SkipPreCheckResponse SkipPreCheck(SkipPreCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SkipPreCheckWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Skips one or more precheck items.
-         *
-         * @param request SkipPreCheckRequest
-         * @return SkipPreCheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Skips one or more precheck items.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkipPreCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkipPreCheckResponse
+        /// </returns>
         public async Task<SkipPreCheckResponse> SkipPreCheckAsync(SkipPreCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SkipPreCheckWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request StartDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartDtsJobResponse
-         */
+        /// <param name="request">
+        /// StartDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDtsJobResponse
+        /// </returns>
         public StartDtsJobResponse StartDtsJobWithOptions(StartDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14635,11 +17148,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartDtsJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request StartDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartDtsJobResponse
-         */
+        /// <param name="request">
+        /// StartDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDtsJobResponse
+        /// </returns>
         public async Task<StartDtsJobResponse> StartDtsJobWithOptionsAsync(StartDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14687,31 +17205,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartDtsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request StartDtsJobRequest
-         * @return StartDtsJobResponse
-         */
+        /// <param name="request">
+        /// StartDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDtsJobResponse
+        /// </returns>
         public StartDtsJobResponse StartDtsJob(StartDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartDtsJobWithOptions(request, runtime);
         }
 
-        /**
-         * @param request StartDtsJobRequest
-         * @return StartDtsJobResponse
-         */
+        /// <param name="request">
+        /// StartDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDtsJobResponse
+        /// </returns>
         public async Task<StartDtsJobResponse> StartDtsJobAsync(StartDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartDtsJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request StartDtsJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartDtsJobsResponse
-         */
+        /// <param name="request">
+        /// StartDtsJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDtsJobsResponse
+        /// </returns>
         public StartDtsJobsResponse StartDtsJobsWithOptions(StartDtsJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14751,11 +17280,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartDtsJobsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request StartDtsJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartDtsJobsResponse
-         */
+        /// <param name="request">
+        /// StartDtsJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDtsJobsResponse
+        /// </returns>
         public async Task<StartDtsJobsResponse> StartDtsJobsWithOptionsAsync(StartDtsJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14795,33 +17329,49 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request StartDtsJobsRequest
-         * @return StartDtsJobsResponse
-         */
+        /// <param name="request">
+        /// StartDtsJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDtsJobsResponse
+        /// </returns>
         public StartDtsJobsResponse StartDtsJobs(StartDtsJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartDtsJobsWithOptions(request, runtime);
         }
 
-        /**
-         * @param request StartDtsJobsRequest
-         * @return StartDtsJobsResponse
-         */
+        /// <param name="request">
+        /// StartDtsJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDtsJobsResponse
+        /// </returns>
         public async Task<StartDtsJobsResponse> StartDtsJobsAsync(StartDtsJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartDtsJobsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description >  When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.
-         *
-         * @param request StartMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartMigrationJobResponse
+        /// </returns>
         public StartMigrationJobResponse StartMigrationJobWithOptions(StartMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14865,13 +17415,23 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartMigrationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description >  When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.
-         *
-         * @param request StartMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartMigrationJobResponse
+        /// </returns>
         public async Task<StartMigrationJobResponse> StartMigrationJobWithOptionsAsync(StartMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14915,39 +17475,66 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description >  When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.
-         *
-         * @param request StartMigrationJobRequest
-         * @return StartMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartMigrationJobResponse
+        /// </returns>
         public StartMigrationJobResponse StartMigrationJob(StartMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartMigrationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description >  When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.
-         *
-         * @param request StartMigrationJobRequest
-         * @return StartMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartMigrationJobResponse
+        /// </returns>
         public async Task<StartMigrationJobResponse> StartMigrationJobAsync(StartMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartMigrationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Starts the reverse task that is created by calling the CreateReverseDtsJob operation.
-         *
-         * @description Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation.
-         *
-         * @param request StartReverseWriterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartReverseWriterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts the reverse task that is created by calling the CreateReverseDtsJob operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartReverseWriterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartReverseWriterResponse
+        /// </returns>
         public StartReverseWriterResponse StartReverseWriterWithOptions(StartReverseWriterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14983,15 +17570,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartReverseWriterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Starts the reverse task that is created by calling the CreateReverseDtsJob operation.
-         *
-         * @description Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation.
-         *
-         * @param request StartReverseWriterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartReverseWriterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts the reverse task that is created by calling the CreateReverseDtsJob operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartReverseWriterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartReverseWriterResponse
+        /// </returns>
         public async Task<StartReverseWriterResponse> StartReverseWriterWithOptionsAsync(StartReverseWriterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15027,41 +17625,67 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartReverseWriterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Starts the reverse task that is created by calling the CreateReverseDtsJob operation.
-         *
-         * @description Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation.
-         *
-         * @param request StartReverseWriterRequest
-         * @return StartReverseWriterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts the reverse task that is created by calling the CreateReverseDtsJob operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartReverseWriterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartReverseWriterResponse
+        /// </returns>
         public StartReverseWriterResponse StartReverseWriter(StartReverseWriterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartReverseWriterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Starts the reverse task that is created by calling the CreateReverseDtsJob operation.
-         *
-         * @description Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation.
-         *
-         * @param request StartReverseWriterRequest
-         * @return StartReverseWriterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts the reverse task that is created by calling the CreateReverseDtsJob operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartReverseWriterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartReverseWriterResponse
+        /// </returns>
         public async Task<StartReverseWriterResponse> StartReverseWriterAsync(StartReverseWriterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartReverseWriterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description When you call this operation, the change tracking task must be in the NotStarted or Failed state.
-         *
-         * @param request StartSubscriptionInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the change tracking task must be in the NotStarted or Failed state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartSubscriptionInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSubscriptionInstanceResponse
+        /// </returns>
         public StartSubscriptionInstanceResponse StartSubscriptionInstanceWithOptions(StartSubscriptionInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15105,13 +17729,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description When you call this operation, the change tracking task must be in the NotStarted or Failed state.
-         *
-         * @param request StartSubscriptionInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the change tracking task must be in the NotStarted or Failed state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartSubscriptionInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSubscriptionInstanceResponse
+        /// </returns>
         public async Task<StartSubscriptionInstanceResponse> StartSubscriptionInstanceWithOptionsAsync(StartSubscriptionInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15155,37 +17787,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description When you call this operation, the change tracking task must be in the NotStarted or Failed state.
-         *
-         * @param request StartSubscriptionInstanceRequest
-         * @return StartSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the change tracking task must be in the NotStarted or Failed state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartSubscriptionInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSubscriptionInstanceResponse
+        /// </returns>
         public StartSubscriptionInstanceResponse StartSubscriptionInstance(StartSubscriptionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartSubscriptionInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @description When you call this operation, the change tracking task must be in the NotStarted or Failed state.
-         *
-         * @param request StartSubscriptionInstanceRequest
-         * @return StartSubscriptionInstanceResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the change tracking task must be in the NotStarted or Failed state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartSubscriptionInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSubscriptionInstanceResponse
+        /// </returns>
         public async Task<StartSubscriptionInstanceResponse> StartSubscriptionInstanceAsync(StartSubscriptionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartSubscriptionInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Starts a data synchronization task.
-         *
-         * @param request StartSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartSynchronizationJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSynchronizationJobResponse
+        /// </returns>
         public StartSynchronizationJobResponse StartSynchronizationJobWithOptions(StartSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15233,13 +17885,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartSynchronizationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Starts a data synchronization task.
-         *
-         * @param request StartSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartSynchronizationJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSynchronizationJobResponse
+        /// </returns>
         public async Task<StartSynchronizationJobResponse> StartSynchronizationJobWithOptionsAsync(StartSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15287,37 +17947,57 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Starts a data synchronization task.
-         *
-         * @param request StartSynchronizationJobRequest
-         * @return StartSynchronizationJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSynchronizationJobResponse
+        /// </returns>
         public StartSynchronizationJobResponse StartSynchronizationJob(StartSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartSynchronizationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Starts a data synchronization task.
-         *
-         * @param request StartSynchronizationJobRequest
-         * @return StartSynchronizationJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSynchronizationJobResponse
+        /// </returns>
         public async Task<StartSynchronizationJobResponse> StartSynchronizationJobAsync(StartSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartSynchronizationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Releases a cluster.
-         *
-         * @param request StopDedicatedClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopDedicatedClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDedicatedClusterResponse
+        /// </returns>
         public StopDedicatedClusterResponse StopDedicatedClusterWithOptions(StopDedicatedClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15365,13 +18045,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StopDedicatedClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases a cluster.
-         *
-         * @param request StopDedicatedClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopDedicatedClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDedicatedClusterResponse
+        /// </returns>
         public async Task<StopDedicatedClusterResponse> StopDedicatedClusterWithOptionsAsync(StopDedicatedClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15419,35 +18107,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StopDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases a cluster.
-         *
-         * @param request StopDedicatedClusterRequest
-         * @return StopDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopDedicatedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDedicatedClusterResponse
+        /// </returns>
         public StopDedicatedClusterResponse StopDedicatedCluster(StopDedicatedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopDedicatedClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Releases a cluster.
-         *
-         * @param request StopDedicatedClusterRequest
-         * @return StopDedicatedClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopDedicatedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDedicatedClusterResponse
+        /// </returns>
         public async Task<StopDedicatedClusterResponse> StopDedicatedClusterAsync(StopDedicatedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDedicatedClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request StopDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopDtsJobResponse
-         */
+        /// <param name="request">
+        /// StopDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDtsJobResponse
+        /// </returns>
         public StopDtsJobResponse StopDtsJobWithOptions(StopDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15495,11 +18200,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StopDtsJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request StopDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopDtsJobResponse
-         */
+        /// <param name="request">
+        /// StopDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDtsJobResponse
+        /// </returns>
         public async Task<StopDtsJobResponse> StopDtsJobWithOptionsAsync(StopDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15547,31 +18257,42 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StopDtsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request StopDtsJobRequest
-         * @return StopDtsJobResponse
-         */
+        /// <param name="request">
+        /// StopDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDtsJobResponse
+        /// </returns>
         public StopDtsJobResponse StopDtsJob(StopDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopDtsJobWithOptions(request, runtime);
         }
 
-        /**
-         * @param request StopDtsJobRequest
-         * @return StopDtsJobResponse
-         */
+        /// <param name="request">
+        /// StopDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDtsJobResponse
+        /// </returns>
         public async Task<StopDtsJobResponse> StopDtsJobAsync(StopDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDtsJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request StopDtsJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopDtsJobsResponse
-         */
+        /// <param name="request">
+        /// StopDtsJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDtsJobsResponse
+        /// </returns>
         public StopDtsJobsResponse StopDtsJobsWithOptions(StopDtsJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15611,11 +18332,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StopDtsJobsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request StopDtsJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopDtsJobsResponse
-         */
+        /// <param name="request">
+        /// StopDtsJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDtsJobsResponse
+        /// </returns>
         public async Task<StopDtsJobsResponse> StopDtsJobsWithOptionsAsync(StopDtsJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15655,33 +18381,49 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StopDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request StopDtsJobsRequest
-         * @return StopDtsJobsResponse
-         */
+        /// <param name="request">
+        /// StopDtsJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDtsJobsResponse
+        /// </returns>
         public StopDtsJobsResponse StopDtsJobs(StopDtsJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopDtsJobsWithOptions(request, runtime);
         }
 
-        /**
-         * @param request StopDtsJobsRequest
-         * @return StopDtsJobsResponse
-         */
+        /// <param name="request">
+        /// StopDtsJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDtsJobsResponse
+        /// </returns>
         public async Task<StopDtsJobsResponse> StopDtsJobsAsync(StopDtsJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDtsJobsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description >  After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation.
-         *
-         * @param request StopMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopMigrationJobResponse
+        /// </returns>
         public StopMigrationJobResponse StopMigrationJobWithOptions(StopMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15729,13 +18471,23 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StopMigrationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description >  After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation.
-         *
-         * @param request StopMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopMigrationJobResponse
+        /// </returns>
         public async Task<StopMigrationJobResponse> StopMigrationJobWithOptionsAsync(StopMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15783,35 +18535,56 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StopMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description >  After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation.
-         *
-         * @param request StopMigrationJobRequest
-         * @return StopMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopMigrationJobResponse
+        /// </returns>
         public StopMigrationJobResponse StopMigrationJob(StopMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopMigrationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description >  After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation.
-         *
-         * @param request StopMigrationJobRequest
-         * @return StopMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopMigrationJobResponse
+        /// </returns>
         public async Task<StopMigrationJobResponse> StopMigrationJobAsync(StopMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopMigrationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request SummaryJobDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SummaryJobDetailResponse
-         */
+        /// <param name="request">
+        /// SummaryJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SummaryJobDetailResponse
+        /// </returns>
         public SummaryJobDetailResponse SummaryJobDetailWithOptions(SummaryJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15867,11 +18640,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SummaryJobDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request SummaryJobDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SummaryJobDetailResponse
-         */
+        /// <param name="request">
+        /// SummaryJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SummaryJobDetailResponse
+        /// </returns>
         public async Task<SummaryJobDetailResponse> SummaryJobDetailWithOptionsAsync(SummaryJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15927,33 +18705,47 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SummaryJobDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request SummaryJobDetailRequest
-         * @return SummaryJobDetailResponse
-         */
+        /// <param name="request">
+        /// SummaryJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SummaryJobDetailResponse
+        /// </returns>
         public SummaryJobDetailResponse SummaryJobDetail(SummaryJobDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SummaryJobDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @param request SummaryJobDetailRequest
-         * @return SummaryJobDetailResponse
-         */
+        /// <param name="request">
+        /// SummaryJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SummaryJobDetailResponse
+        /// </returns>
         public async Task<SummaryJobDetailResponse> SummaryJobDetailAsync(SummaryJobDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SummaryJobDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description ****
-         *
-         * @param request SuspendDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendDtsJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendDtsJobResponse
+        /// </returns>
         public SuspendDtsJobResponse SuspendDtsJobWithOptions(SuspendDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16001,13 +18793,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SuspendDtsJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description ****
-         *
-         * @param request SuspendDtsJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendDtsJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendDtsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendDtsJobResponse
+        /// </returns>
         public async Task<SuspendDtsJobResponse> SuspendDtsJobWithOptionsAsync(SuspendDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16055,35 +18855,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SuspendDtsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description ****
-         *
-         * @param request SuspendDtsJobRequest
-         * @return SuspendDtsJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendDtsJobResponse
+        /// </returns>
         public SuspendDtsJobResponse SuspendDtsJob(SuspendDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SuspendDtsJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description ****
-         *
-         * @param request SuspendDtsJobRequest
-         * @return SuspendDtsJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendDtsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendDtsJobResponse
+        /// </returns>
         public async Task<SuspendDtsJobResponse> SuspendDtsJobAsync(SuspendDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SuspendDtsJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request SuspendDtsJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendDtsJobsResponse
-         */
+        /// <param name="request">
+        /// SuspendDtsJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendDtsJobsResponse
+        /// </returns>
         public SuspendDtsJobsResponse SuspendDtsJobsWithOptions(SuspendDtsJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16123,11 +18940,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SuspendDtsJobsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request SuspendDtsJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendDtsJobsResponse
-         */
+        /// <param name="request">
+        /// SuspendDtsJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendDtsJobsResponse
+        /// </returns>
         public async Task<SuspendDtsJobsResponse> SuspendDtsJobsWithOptionsAsync(SuspendDtsJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16167,35 +18989,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SuspendDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request SuspendDtsJobsRequest
-         * @return SuspendDtsJobsResponse
-         */
+        /// <param name="request">
+        /// SuspendDtsJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendDtsJobsResponse
+        /// </returns>
         public SuspendDtsJobsResponse SuspendDtsJobs(SuspendDtsJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SuspendDtsJobsWithOptions(request, runtime);
         }
 
-        /**
-         * @param request SuspendDtsJobsRequest
-         * @return SuspendDtsJobsResponse
-         */
+        /// <param name="request">
+        /// SuspendDtsJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendDtsJobsResponse
+        /// </returns>
         public async Task<SuspendDtsJobsResponse> SuspendDtsJobsAsync(SuspendDtsJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SuspendDtsJobsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description > 
-         * *   If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the task.
-         * *   If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.
-         *
-         * @param request SuspendMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the task.</description></item>
+        /// <item><description>If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendMigrationJobResponse
+        /// </returns>
         public SuspendMigrationJobResponse SuspendMigrationJobWithOptions(SuspendMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16243,15 +19082,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SuspendMigrationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description > 
-         * *   If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the task.
-         * *   If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.
-         *
-         * @param request SuspendMigrationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the task.</description></item>
+        /// <item><description>If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendMigrationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendMigrationJobResponse
+        /// </returns>
         public async Task<SuspendMigrationJobResponse> SuspendMigrationJobWithOptionsAsync(SuspendMigrationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16299,44 +19149,73 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SuspendMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description > 
-         * *   If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the task.
-         * *   If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.
-         *
-         * @param request SuspendMigrationJobRequest
-         * @return SuspendMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the task.</description></item>
+        /// <item><description>If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendMigrationJobResponse
+        /// </returns>
         public SuspendMigrationJobResponse SuspendMigrationJob(SuspendMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SuspendMigrationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description > 
-         * *   If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the task.
-         * *   If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.
-         *
-         * @param request SuspendMigrationJobRequest
-         * @return SuspendMigrationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the task.</description></item>
+        /// <item><description>If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendMigrationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendMigrationJobResponse
+        /// </returns>
         public async Task<SuspendMigrationJobResponse> SuspendMigrationJobAsync(SuspendMigrationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SuspendMigrationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description > 
-         * *   When you call this operation, the data synchronization task must be in the Synchronizing state.
-         * *   We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.
-         * *   If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.
-         *
-         * @param request SuspendSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, the data synchronization task must be in the Synchronizing state.</description></item>
+        /// <item><description>We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.</description></item>
+        /// <item><description>If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendSynchronizationJobResponse
+        /// </returns>
         public SuspendSynchronizationJobResponse SuspendSynchronizationJobWithOptions(SuspendSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16384,16 +19263,27 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SuspendSynchronizationJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description > 
-         * *   When you call this operation, the data synchronization task must be in the Synchronizing state.
-         * *   We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.
-         * *   If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.
-         *
-         * @param request SuspendSynchronizationJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, the data synchronization task must be in the Synchronizing state.</description></item>
+        /// <item><description>We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.</description></item>
+        /// <item><description>If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendSynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendSynchronizationJobResponse
+        /// </returns>
         public async Task<SuspendSynchronizationJobResponse> SuspendSynchronizationJobWithOptionsAsync(SuspendSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16441,43 +19331,69 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SuspendSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description > 
-         * *   When you call this operation, the data synchronization task must be in the Synchronizing state.
-         * *   We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.
-         * *   If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.
-         *
-         * @param request SuspendSynchronizationJobRequest
-         * @return SuspendSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, the data synchronization task must be in the Synchronizing state.</description></item>
+        /// <item><description>We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.</description></item>
+        /// <item><description>If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendSynchronizationJobResponse
+        /// </returns>
         public SuspendSynchronizationJobResponse SuspendSynchronizationJob(SuspendSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SuspendSynchronizationJobWithOptions(request, runtime);
         }
 
-        /**
-         * @description > 
-         * *   When you call this operation, the data synchronization task must be in the Synchronizing state.
-         * *   We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.
-         * *   If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.
-         *
-         * @param request SuspendSynchronizationJobRequest
-         * @return SuspendSynchronizationJobResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, the data synchronization task must be in the Synchronizing state.</description></item>
+        /// <item><description>We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.</description></item>
+        /// <item><description>If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendSynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendSynchronizationJobResponse
+        /// </returns>
         public async Task<SuspendSynchronizationJobResponse> SuspendSynchronizationJobAsync(SuspendSynchronizationJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SuspendSynchronizationJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 物理迁移任务切换上云
-         *
-         * @param request SwitchPhysicalDtsJobToCloudRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SwitchPhysicalDtsJobToCloudResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>物理迁移任务切换上云</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchPhysicalDtsJobToCloudRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchPhysicalDtsJobToCloudResponse
+        /// </returns>
         public SwitchPhysicalDtsJobToCloudResponse SwitchPhysicalDtsJobToCloudWithOptions(SwitchPhysicalDtsJobToCloudRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16521,13 +19437,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SwitchPhysicalDtsJobToCloudResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 物理迁移任务切换上云
-         *
-         * @param request SwitchPhysicalDtsJobToCloudRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SwitchPhysicalDtsJobToCloudResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>物理迁移任务切换上云</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchPhysicalDtsJobToCloudRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchPhysicalDtsJobToCloudResponse
+        /// </returns>
         public async Task<SwitchPhysicalDtsJobToCloudResponse> SwitchPhysicalDtsJobToCloudWithOptionsAsync(SwitchPhysicalDtsJobToCloudRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16571,40 +19495,66 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SwitchPhysicalDtsJobToCloudResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 物理迁移任务切换上云
-         *
-         * @param request SwitchPhysicalDtsJobToCloudRequest
-         * @return SwitchPhysicalDtsJobToCloudResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>物理迁移任务切换上云</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchPhysicalDtsJobToCloudRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchPhysicalDtsJobToCloudResponse
+        /// </returns>
         public SwitchPhysicalDtsJobToCloudResponse SwitchPhysicalDtsJobToCloud(SwitchPhysicalDtsJobToCloudRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchPhysicalDtsJobToCloudWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 物理迁移任务切换上云
-         *
-         * @param request SwitchPhysicalDtsJobToCloudRequest
-         * @return SwitchPhysicalDtsJobToCloudResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>物理迁移任务切换上云</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchPhysicalDtsJobToCloudRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchPhysicalDtsJobToCloudResponse
+        /// </returns>
         public async Task<SwitchPhysicalDtsJobToCloudResponse> SwitchPhysicalDtsJobToCloudAsync(SwitchPhysicalDtsJobToCloudRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchPhysicalDtsJobToCloudWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description *   If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.
-         * *   If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.
-         * > *   For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
-         *         For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the **SynchronizationDirection** parameter to **Forward**, set the **Endpoint.Type **parameter to **Destination**, and configure the connection settings. In the second call, set the **SynchronizationDirection** parameter to **Reverse**, set the **Endpoint.Type **parameter to **Source**, and configure the connection settings.
-         *
-         * @param request SwitchSynchronizationEndpointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SwitchSynchronizationEndpointResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.</para>
+        /// <list type="bullet">
+        /// <item><description>If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.<remarks>
+        /// <list type="bullet">
+        /// <item><description>For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
+        /// For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the <b>SynchronizationDirection</b> parameter to <b>Forward</b>, set the **Endpoint.Type **parameter to <b>Destination</b>, and configure the connection settings. In the second call, set the <b>SynchronizationDirection</b> parameter to <b>Reverse</b>, set the **Endpoint.Type **parameter to <b>Source</b>, and configure the connection settings.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchSynchronizationEndpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchSynchronizationEndpointResponse
+        /// </returns>
         public SwitchSynchronizationEndpointResponse SwitchSynchronizationEndpointWithOptions(SwitchSynchronizationEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16660,16 +19610,30 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SwitchSynchronizationEndpointResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description *   If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.
-         * *   If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.
-         * > *   For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
-         *         For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the **SynchronizationDirection** parameter to **Forward**, set the **Endpoint.Type **parameter to **Destination**, and configure the connection settings. In the second call, set the **SynchronizationDirection** parameter to **Reverse**, set the **Endpoint.Type **parameter to **Source**, and configure the connection settings.
-         *
-         * @param request SwitchSynchronizationEndpointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SwitchSynchronizationEndpointResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.</para>
+        /// <list type="bullet">
+        /// <item><description>If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.<remarks>
+        /// <list type="bullet">
+        /// <item><description>For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
+        /// For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the <b>SynchronizationDirection</b> parameter to <b>Forward</b>, set the **Endpoint.Type **parameter to <b>Destination</b>, and configure the connection settings. In the second call, set the <b>SynchronizationDirection</b> parameter to <b>Reverse</b>, set the **Endpoint.Type **parameter to <b>Source</b>, and configure the connection settings.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchSynchronizationEndpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchSynchronizationEndpointResponse
+        /// </returns>
         public async Task<SwitchSynchronizationEndpointResponse> SwitchSynchronizationEndpointWithOptionsAsync(SwitchSynchronizationEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16725,48 +19689,82 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<SwitchSynchronizationEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description *   If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.
-         * *   If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.
-         * > *   For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
-         *         For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the **SynchronizationDirection** parameter to **Forward**, set the **Endpoint.Type **parameter to **Destination**, and configure the connection settings. In the second call, set the **SynchronizationDirection** parameter to **Reverse**, set the **Endpoint.Type **parameter to **Source**, and configure the connection settings.
-         *
-         * @param request SwitchSynchronizationEndpointRequest
-         * @return SwitchSynchronizationEndpointResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.</para>
+        /// <list type="bullet">
+        /// <item><description>If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.<remarks>
+        /// <list type="bullet">
+        /// <item><description>For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
+        /// For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the <b>SynchronizationDirection</b> parameter to <b>Forward</b>, set the **Endpoint.Type **parameter to <b>Destination</b>, and configure the connection settings. In the second call, set the <b>SynchronizationDirection</b> parameter to <b>Reverse</b>, set the **Endpoint.Type **parameter to <b>Source</b>, and configure the connection settings.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchSynchronizationEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchSynchronizationEndpointResponse
+        /// </returns>
         public SwitchSynchronizationEndpointResponse SwitchSynchronizationEndpoint(SwitchSynchronizationEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchSynchronizationEndpointWithOptions(request, runtime);
         }
 
-        /**
-         * @description *   If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.
-         * *   If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.
-         * > *   For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
-         *         For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the **SynchronizationDirection** parameter to **Forward**, set the **Endpoint.Type **parameter to **Destination**, and configure the connection settings. In the second call, set the **SynchronizationDirection** parameter to **Reverse**, set the **Endpoint.Type **parameter to **Source**, and configure the connection settings.
-         *
-         * @param request SwitchSynchronizationEndpointRequest
-         * @return SwitchSynchronizationEndpointResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.</para>
+        /// <list type="bullet">
+        /// <item><description>If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.<remarks>
+        /// <list type="bullet">
+        /// <item><description>For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
+        /// For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the <b>SynchronizationDirection</b> parameter to <b>Forward</b>, set the **Endpoint.Type **parameter to <b>Destination</b>, and configure the connection settings. In the second call, set the <b>SynchronizationDirection</b> parameter to <b>Reverse</b>, set the **Endpoint.Type **parameter to <b>Source</b>, and configure the connection settings.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchSynchronizationEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchSynchronizationEndpointResponse
+        /// </returns>
         public async Task<SwitchSynchronizationEndpointResponse> SwitchSynchronizationEndpointAsync(SwitchSynchronizationEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchSynchronizationEndpointWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.
-         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-         * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
-         * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
-         * *   You can bind up to 20 tags to each instance.
-         * *   You can bind tags to up to 50 instances in each call.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.</para>
+        /// <list type="bullet">
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
+        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
+        /// <item><description>You can bind tags to up to 50 instances in each call.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16810,18 +19808,28 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.
-         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-         * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
-         * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
-         * *   You can bind up to 20 tags to each instance.
-         * *   You can bind tags to up to 50 instances in each call.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.</para>
+        /// <list type="bullet">
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
+        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
+        /// <item><description>You can bind tags to up to 50 instances in each call.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16865,45 +19873,66 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.
-         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-         * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
-         * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
-         * *   You can bind up to 20 tags to each instance.
-         * *   You can bind tags to up to 50 instances in each call.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.</para>
+        /// <list type="bullet">
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
+        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
+        /// <item><description>You can bind tags to up to 50 instances in each call.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @description If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.
-         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-         * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
-         * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
-         * *   You can bind up to 20 tags to each instance.
-         * *   You can bind tags to up to 50 instances in each call.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.</para>
+        /// <list type="bullet">
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
+        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
+        /// <item><description>You can bind tags to up to 50 instances in each call.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request TransferInstanceClassRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransferInstanceClassResponse
-         */
+        /// <param name="request">
+        /// TransferInstanceClassRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferInstanceClassResponse
+        /// </returns>
         public TransferInstanceClassResponse TransferInstanceClassWithOptions(TransferInstanceClassRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16947,11 +19976,16 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<TransferInstanceClassResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request TransferInstanceClassRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransferInstanceClassResponse
-         */
+        /// <param name="request">
+        /// TransferInstanceClassRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferInstanceClassResponse
+        /// </returns>
         public async Task<TransferInstanceClassResponse> TransferInstanceClassWithOptionsAsync(TransferInstanceClassRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16995,36 +20029,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<TransferInstanceClassResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request TransferInstanceClassRequest
-         * @return TransferInstanceClassResponse
-         */
+        /// <param name="request">
+        /// TransferInstanceClassRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferInstanceClassResponse
+        /// </returns>
         public TransferInstanceClassResponse TransferInstanceClass(TransferInstanceClassRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TransferInstanceClassWithOptions(request, runtime);
         }
 
-        /**
-         * @param request TransferInstanceClassRequest
-         * @return TransferInstanceClassResponse
-         */
+        /// <param name="request">
+        /// TransferInstanceClassRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferInstanceClassResponse
+        /// </returns>
         public async Task<TransferInstanceClassResponse> TransferInstanceClassAsync(TransferInstanceClassRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TransferInstanceClassWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of DTS.
-         * *   The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.
-         * *   Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.
-         * *   After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.
-         *
-         * @param request TransferPayTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransferPayTypeResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of DTS.</para>
+        /// <list type="bullet">
+        /// <item><description>The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</description></item>
+        /// <item><description>Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.</description></item>
+        /// <item><description>After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransferPayTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferPayTypeResponse
+        /// </returns>
         public TransferPayTypeResponse TransferPayTypeWithOptions(TransferPayTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17084,16 +20134,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<TransferPayTypeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of DTS.
-         * *   The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.
-         * *   Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.
-         * *   After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.
-         *
-         * @param request TransferPayTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransferPayTypeResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of DTS.</para>
+        /// <list type="bullet">
+        /// <item><description>The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</description></item>
+        /// <item><description>Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.</description></item>
+        /// <item><description>After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransferPayTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferPayTypeResponse
+        /// </returns>
         public async Task<TransferPayTypeResponse> TransferPayTypeWithOptionsAsync(TransferPayTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17153,43 +20213,69 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<TransferPayTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of DTS.
-         * *   The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.
-         * *   Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.
-         * *   After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.
-         *
-         * @param request TransferPayTypeRequest
-         * @return TransferPayTypeResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of DTS.</para>
+        /// <list type="bullet">
+        /// <item><description>The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</description></item>
+        /// <item><description>Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.</description></item>
+        /// <item><description>After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransferPayTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferPayTypeResponse
+        /// </returns>
         public TransferPayTypeResponse TransferPayType(TransferPayTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TransferPayTypeWithOptions(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of DTS.
-         * *   The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.
-         * *   Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.
-         * *   After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.
-         *
-         * @param request TransferPayTypeRequest
-         * @return TransferPayTypeResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of DTS.</para>
+        /// <list type="bullet">
+        /// <item><description>The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</description></item>
+        /// <item><description>Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.</description></item>
+        /// <item><description>After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransferPayTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferPayTypeResponse
+        /// </returns>
         public async Task<TransferPayTypeResponse> TransferPayTypeAsync(TransferPayTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TransferPayTypeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description >  If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17237,13 +20323,23 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description >  If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17291,42 +20387,68 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description >  If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @description >  If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS)
-         * When you call this operation, take note of the following information:
-         * *   The source and destination databases of the data synchronization task are both **MySQL** databases.
-         * *   The synchronization topology of the data synchronization task is **one-way synchronization**.
-         * *   The data synchronization task is in the **Synchronizing** state.
-         * *   The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.
-         *
-         * @param request UpgradeTwoWayRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeTwoWayResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
+        /// When you call this operation, take note of the following information:</para>
+        /// <list type="bullet">
+        /// <item><description>The source and destination databases of the data synchronization task are both <b>MySQL</b> databases.</description></item>
+        /// <item><description>The synchronization topology of the data synchronization task is <b>one-way synchronization</b>.</description></item>
+        /// <item><description>The data synchronization task is in the <b>Synchronizing</b> state.</description></item>
+        /// <item><description>The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeTwoWayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeTwoWayResponse
+        /// </returns>
         public UpgradeTwoWayResponse UpgradeTwoWayWithOptions(UpgradeTwoWayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17366,18 +20488,28 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<UpgradeTwoWayResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS)
-         * When you call this operation, take note of the following information:
-         * *   The source and destination databases of the data synchronization task are both **MySQL** databases.
-         * *   The synchronization topology of the data synchronization task is **one-way synchronization**.
-         * *   The data synchronization task is in the **Synchronizing** state.
-         * *   The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.
-         *
-         * @param request UpgradeTwoWayRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeTwoWayResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
+        /// When you call this operation, take note of the following information:</para>
+        /// <list type="bullet">
+        /// <item><description>The source and destination databases of the data synchronization task are both <b>MySQL</b> databases.</description></item>
+        /// <item><description>The synchronization topology of the data synchronization task is <b>one-way synchronization</b>.</description></item>
+        /// <item><description>The data synchronization task is in the <b>Synchronizing</b> state.</description></item>
+        /// <item><description>The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeTwoWayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeTwoWayResponse
+        /// </returns>
         public async Task<UpgradeTwoWayResponse> UpgradeTwoWayWithOptionsAsync(UpgradeTwoWayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17417,50 +20549,79 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<UpgradeTwoWayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS)
-         * When you call this operation, take note of the following information:
-         * *   The source and destination databases of the data synchronization task are both **MySQL** databases.
-         * *   The synchronization topology of the data synchronization task is **one-way synchronization**.
-         * *   The data synchronization task is in the **Synchronizing** state.
-         * *   The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.
-         *
-         * @param request UpgradeTwoWayRequest
-         * @return UpgradeTwoWayResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
+        /// When you call this operation, take note of the following information:</para>
+        /// <list type="bullet">
+        /// <item><description>The source and destination databases of the data synchronization task are both <b>MySQL</b> databases.</description></item>
+        /// <item><description>The synchronization topology of the data synchronization task is <b>one-way synchronization</b>.</description></item>
+        /// <item><description>The data synchronization task is in the <b>Synchronizing</b> state.</description></item>
+        /// <item><description>The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeTwoWayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeTwoWayResponse
+        /// </returns>
         public UpgradeTwoWayResponse UpgradeTwoWay(UpgradeTwoWayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeTwoWayWithOptions(request, runtime);
         }
 
-        /**
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS)
-         * When you call this operation, take note of the following information:
-         * *   The source and destination databases of the data synchronization task are both **MySQL** databases.
-         * *   The synchronization topology of the data synchronization task is **one-way synchronization**.
-         * *   The data synchronization task is in the **Synchronizing** state.
-         * *   The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.
-         *
-         * @param request UpgradeTwoWayRequest
-         * @return UpgradeTwoWayResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
+        /// When you call this operation, take note of the following information:</para>
+        /// <list type="bullet">
+        /// <item><description>The source and destination databases of the data synchronization task are both <b>MySQL</b> databases.</description></item>
+        /// <item><description>The synchronization topology of the data synchronization task is <b>one-way synchronization</b>.</description></item>
+        /// <item><description>The data synchronization task is in the <b>Synchronizing</b> state.</description></item>
+        /// <item><description>The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeTwoWayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeTwoWayResponse
+        /// </returns>
         public async Task<UpgradeTwoWayResponse> UpgradeTwoWayAsync(UpgradeTwoWayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeTwoWayWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary If the **source or destination instance** is a **self-managed database** or a **third-party cloud database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
-         * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on Elastic Compute Service (ECS)**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.
-         *
-         * @description The operation that you want to perform. Set the value to **WhiteIpList**.
-         *
-         * @param request WhiteIpListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return WhiteIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party cloud database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
+        /// <remarks>
+        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on Elastic Compute Service (ECS)</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// </remarks>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation that you want to perform. Set the value to <b>WhiteIpList</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// WhiteIpListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WhiteIpListResponse
+        /// </returns>
         public WhiteIpListResponse WhiteIpListWithOptions(WhiteIpListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17508,16 +20669,29 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<WhiteIpListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary If the **source or destination instance** is a **self-managed database** or a **third-party cloud database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
-         * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on Elastic Compute Service (ECS)**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.
-         *
-         * @description The operation that you want to perform. Set the value to **WhiteIpList**.
-         *
-         * @param request WhiteIpListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return WhiteIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party cloud database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
+        /// <remarks>
+        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on Elastic Compute Service (ECS)</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// </remarks>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation that you want to perform. Set the value to <b>WhiteIpList</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// WhiteIpListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WhiteIpListResponse
+        /// </returns>
         public async Task<WhiteIpListResponse> WhiteIpListWithOptionsAsync(WhiteIpListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17565,30 +20739,52 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<WhiteIpListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary If the **source or destination instance** is a **self-managed database** or a **third-party cloud database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
-         * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on Elastic Compute Service (ECS)**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.
-         *
-         * @description The operation that you want to perform. Set the value to **WhiteIpList**.
-         *
-         * @param request WhiteIpListRequest
-         * @return WhiteIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party cloud database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
+        /// <remarks>
+        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on Elastic Compute Service (ECS)</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// </remarks>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation that you want to perform. Set the value to <b>WhiteIpList</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// WhiteIpListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WhiteIpListResponse
+        /// </returns>
         public WhiteIpListResponse WhiteIpList(WhiteIpListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return WhiteIpListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary If the **source or destination instance** is a **self-managed database** or a **third-party cloud database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
-         * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on Elastic Compute Service (ECS)**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.
-         *
-         * @description The operation that you want to perform. Set the value to **WhiteIpList**.
-         *
-         * @param request WhiteIpListRequest
-         * @return WhiteIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party cloud database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
+        /// <remarks>
+        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on Elastic Compute Service (ECS)</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// </remarks>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation that you want to perform. Set the value to <b>WhiteIpList</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// WhiteIpListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WhiteIpListResponse
+        /// </returns>
         public async Task<WhiteIpListResponse> WhiteIpListAsync(WhiteIpListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

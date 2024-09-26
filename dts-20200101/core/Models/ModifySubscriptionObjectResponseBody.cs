@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifySubscriptionObjectResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the call failed.
+        /// <para>The error code returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InternalError</para>
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the call failed.
+        /// <para>The error message returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request processing has failed due to some unknown error.</para>
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABBACEFC-CBA9-4F80-A337-42F202F5****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful.
+        /// <para>Indicates whether the call was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

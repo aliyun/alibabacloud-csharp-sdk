@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class StartSynchronizationJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12323344****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
@@ -29,23 +32,31 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The synchronization direction. Valid values:
+        /// <para>The synchronization direction. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Forward</b></description></item>
+        /// <item><description><b>Reverse</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>Forward</b>.</description></item>
+        /// <item><description>You can set this parameter to <b>Reverse</b> to start the reverse synchronization task only when the topology is two-way synchronization.</description></item>
+        /// </list>
         /// 
-        /// *   **Forward**
-        /// *   **Reverse**
-        /// 
-        /// > 
-        /// *   Default value: **Forward**.
-        /// *   You can set this parameter to **Reverse** to start the reverse synchronization task only when the topology is two-way synchronization.
+        /// <b>Example:</b>
+        /// <para>Forward</para>
         /// </summary>
         [NameInMap("SynchronizationDirection")]
         [Validation(Required=false)]
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// The ID of the data synchronization instance. You can call the **DescribeSynchronizationJobs** operation to query the instance ID.
+        /// <para>The ID of the data synchronization instance. You can call the <b>DescribeSynchronizationJobs</b> operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dtsf19100l2186****</para>
         /// </summary>
         [NameInMap("SynchronizationJobId")]
         [Validation(Required=false)]

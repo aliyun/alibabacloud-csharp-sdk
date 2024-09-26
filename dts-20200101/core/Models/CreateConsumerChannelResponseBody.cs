@@ -10,42 +10,60 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class CreateConsumerChannelResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the consumer group. You can specify this parameter on a downstream client when you consume tracked data.
+        /// <para>The ID of the consumer group. You can specify this parameter on a downstream client when you consume tracked data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dtsor2y66j4219****</para>
         /// </summary>
         [NameInMap("ConsumerGroupID")]
         [Validation(Required=false)]
         public string ConsumerGroupID { get; set; }
 
         /// <summary>
-        /// The error code returned if the call failed.
+        /// <para>The error code returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InternalError</para>
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the call failed.
+        /// <para>The error message returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request processing has failed due to some unknown error.</para>
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5F566C5B-E5B0-4020-A531-FC6F5005****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful.
+        /// <para>Indicates whether the call was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

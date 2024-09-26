@@ -10,80 +10,110 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ConfigureDtsJobAdvanceRequest : TeaModel {
         /// <summary>
-        /// The type of the task. Valid values:
+        /// <para>The type of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MIGRATION</b>: data migration task</description></item>
+        /// <item><description><b>SYNC</b>: data synchronization task</description></item>
+        /// </list>
         /// 
-        /// *   **MIGRATION**: data migration task
-        /// *   **SYNC**: data synchronization task
+        /// <b>Example:</b>
+        /// <para>1610540493</para>
         /// </summary>
         [NameInMap("Checkpoint")]
         [Validation(Required=false)]
         public string Checkpoint { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;fullCheckModel&quot;:1,&quot;fullCheckRatio&quot;:20,&quot;checkMaximumHourEnable&quot;:1,&quot;checkMaximumHour&quot;:1,&quot;fullCheckErrorNotice&quot;:true,&quot;fullCheckValidFailNotice&quot;:true,&quot;fullCheckNoticeValue&quot;:8,&quot;incrementalCheckErrorNotice&quot;:true,&quot;incrementalCheckValidFailNotice&quot;:true,&quot;incrementalCheckValidFailNoticeTimes&quot;:2,&quot;incrementalCheckValidFailNoticePeriod&quot;:1,&quot;incrementalCheckValidFailNoticeValue&quot;:1,&quot;incrementalCheckDelayNotice&quot;:true,&quot;incrementalCheckDelayNoticeTimes&quot;:2,&quot;incrementalCheckDelayNoticePeriod&quot;:1,&quot;incrementalCheckDelayNoticeValue&quot;:60,&quot;fullDataCheck&quot;:true,&quot;incrementalDataCheck&quot;:true,&quot;dataCheckNoticePhone&quot;:&quot;13126800****&quot;,&quot;dataCheckDbList&quot;:&quot;{&quot;dts&quot;:{&quot;name&quot;:&quot;dts&quot;,&quot;all&quot;:true}}&quot;}</para>
         /// </summary>
         [NameInMap("DataCheckConfigure")]
         [Validation(Required=false)]
         public string DataCheckConfigure { get; set; }
 
         /// <summary>
-        /// The objects that you want to migrate or synchronize. The value is a JSON string. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).
+        /// <para>The objects that you want to migrate or synchronize. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DataInitialization")]
         [Validation(Required=false)]
         public bool? DataInitialization { get; set; }
 
         /// <summary>
-        /// The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to add more configurations of the source or destination instance to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance. For more information, see [Reserve](https://help.aliyun.com/document_detail/273111.html).
+        /// <para>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to add more configurations of the source or destination instance to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DataSynchronization")]
         [Validation(Required=false)]
         public bool? DataSynchronization { get; set; }
 
         /// <summary>
-        /// The start offset of incremental data migration or synchronization. The value is a UNIX timestamp. Unit: seconds.
+        /// <para>The start offset of incremental data migration or synchronization. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;dtstest&quot;:{&quot;name&quot;:&quot;dtstest&quot;,&quot;all&quot;:true}}</para>
         /// </summary>
         [NameInMap("DbList")]
         [Validation(Required=false)]
         public string DbList { get; set; }
 
         /// <summary>
-        /// The data verification task for a data migration or synchronization instance. The value is a JSON string that indicates parameter limits or alert configurations. For more information, see [DataCheckConfigure](https://help.aliyun.com/document_detail/459023.html).
+        /// <para>The data verification task for a data migration or synchronization instance. The value is a JSON string that indicates parameter limits or alert configurations. For more information, see <a href="https://help.aliyun.com/document_detail/459023.html">DataCheckConfigure</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dtscluster_atyl3b5214uk***</para>
         /// </summary>
         [NameInMap("DedicatedClusterId")]
         [Validation(Required=false)]
         public string DedicatedClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to monitor the task status. Valid values:
+        /// <para>Specifies whether to monitor the task status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: monitors the task status.</description></item>
+        /// <item><description><b>false</b>: does not monitor the task status.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: monitors the task status.
-        /// *   **false**: does not monitor the task status.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DelayNotice")]
         [Validation(Required=false)]
         public bool? DelayNotice { get; set; }
 
         /// <summary>
-        /// Specifies whether to monitor the task latency. Valid values:
+        /// <para>Specifies whether to monitor the task latency. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: monitors the task latency.</description></item>
+        /// <item><description><b>false</b>: does not monitor the task latency.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: monitors the task latency.
-        /// *   **false**: does not monitor the task latency.
+        /// <b>Example:</b>
+        /// <para>1361234****,1371234****</para>
         /// </summary>
         [NameInMap("DelayPhone")]
         [Validation(Required=false)]
         public string DelayPhone { get; set; }
 
         /// <summary>
-        /// The mobile numbers that receive status-related alerts. Separate multiple mobile numbers with commas (,).
+        /// <para>The mobile numbers that receive status-related alerts. Separate multiple mobile numbers with commas (,).</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is available only for China site (aliyun.com) users. Only mobile numbers in the Chinese mainland are supported. Up to 10 mobile numbers can be specified.</description></item>
+        /// <item><description>International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks in the CloudMonitor console</a>.</description></item>
+        /// </list>
         /// 
-        /// > 
-        /// *   This parameter is available only for China site (aliyun.com) users. Only mobile numbers in the Chinese mainland are supported. Up to 10 mobile numbers can be specified.
-        /// *   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the CloudMonitor console](https://help.aliyun.com/document_detail/175876.html).
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("DelayRuleTime")]
         [Validation(Required=false)]
@@ -110,82 +140,108 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestClientPassword { get; set; }
 
         /// <summary>
-        /// The password of the destination database account.
+        /// <para>The password of the destination database account.</para>
+        /// <remarks>
+        /// <para> If the destination database is a MaxCompute project, you must specify the AccessKey secret of your Alibaba Cloud account. For information about how to obtain your AccessKey pair, see <a href="https://help.aliyun.com/document_detail/116401.html">Create an AccessKey pair</a>.</para>
+        /// </remarks>
         /// 
-        /// >  If the destination database is a MaxCompute project, you must specify the AccessKey secret of your Alibaba Cloud account. For information about how to obtain your AccessKey pair, see [Create an AccessKey pair](https://help.aliyun.com/document_detail/116401.html).
+        /// <b>Example:</b>
+        /// <para>dtstestdata</para>
         /// </summary>
         [NameInMap("DestinationEndpointDataBaseName")]
         [Validation(Required=false)]
         public string DestinationEndpointDataBaseName { get; set; }
 
         /// <summary>
-        /// The IP address of the destination instance.
+        /// <para>The IP address of the destination instance.</para>
+        /// <remarks>
+        /// <para> If the <b>DestinationEndpointInstanceType</b> parameter is set to <b>OTHER</b>, <b>EXPRESS</b>, <b>DG</b>, or <b>CEN</b>, this parameter is available and required.</para>
+        /// </remarks>
         /// 
-        /// >  If the **DestinationEndpointInstanceType** parameter is set to **OTHER**, **EXPRESS**, **DG**, or **CEN**, this parameter is available and required.
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
         /// </summary>
         [NameInMap("DestinationEndpointEngineName")]
         [Validation(Required=false)]
         public string DestinationEndpointEngineName { get; set; }
 
         /// <summary>
-        /// The name of the database to which the objects migrated to the destination instance belong.
+        /// <para>The name of the database to which the objects migrated to the destination instance belong.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the destination instance is a PolarDB for Oracle cluster, an AnalyticDB for PostgreSQL instance, a PostgreSQL database, a MaxCompute project, or a MongoDB database, this parameter is available and required.</description></item>
+        /// <item><description>If the destination instance is a MaxCompute project, you must specify the ID of the MaxCompute project.</description></item>
+        /// </list>
         /// 
-        /// > 
-        /// *   If the destination instance is a PolarDB for Oracle cluster, an AnalyticDB for PostgreSQL instance, a PostgreSQL database, a MaxCompute project, or a MongoDB database, this parameter is available and required.
-        /// *   If the destination instance is a MaxCompute project, you must specify the ID of the MaxCompute project.
+        /// <b>Example:</b>
+        /// <para>172.16.**.***</para>
         /// </summary>
         [NameInMap("DestinationEndpointIP")]
         [Validation(Required=false)]
         public string DestinationEndpointIP { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <remarks>
+        /// <para> If the destination instance is an Alibaba Cloud database instance, this parameter is required.</para>
+        /// </remarks>
         /// 
-        /// >  If the destination instance is an Alibaba Cloud database instance, this parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-bp1opxu1zkhn00gzv****</para>
         /// </summary>
         [NameInMap("DestinationEndpointInstanceID")]
         [Validation(Required=false)]
         public string DestinationEndpointInstanceID { get; set; }
 
         /// <summary>
-        /// The database engine of the destination instance. Valid values:
+        /// <para>The database engine of the destination instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MySQL</b>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</description></item>
+        /// <item><description><b>MARIADB</b>: ApsaraDB RDS for MariaDB instance</description></item>
+        /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster</description></item>
+        /// <item><description><b>POLARDB_O</b>: PolarDB for Oracle cluster</description></item>
+        /// <item><description><b>POLARDBX10</b>: PolarDB-X 1.0 instance</description></item>
+        /// <item><description><b>POLARDBX20</b>: PolarDB-X 2.0 instance</description></item>
+        /// <item><description><b>ORACLE</b>: self-managed Oracle database</description></item>
+        /// <item><description><b>POSTGRESQL</b>: ApsaraDB RDS for PostgreSQL instance or self-managed PostgreSQL database</description></item>
+        /// <item><description><b>MSSQL</b>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database</description></item>
+        /// <item><description><b>ADS</b>: AnalyticDB for MySQL V2.0 cluster</description></item>
+        /// <item><description><b>ADB30</b>: AnalyticDB for MySQL V3.0 cluster</description></item>
+        /// <item><description><b>MONGODB</b>: ApsaraDB for MongoDB instance or self-managed MongoDB database</description></item>
+        /// <item><description><b>GREENPLUM</b>: AnalyticDB for PostgreSQL instance</description></item>
+        /// <item><description><b>KAFKA</b>: Message Queue for Apache Kafka instance or self-managed Kafka cluster</description></item>
+        /// <item><description><b>DATAHUB</b>: DataHub project</description></item>
+        /// <item><description><b>DB2</b>: self-managed Db2 for LUW database</description></item>
+        /// <item><description><b>AS400</b>: self-managed Db2 for i database</description></item>
+        /// <item><description><b>ODPS</b>: MaxCompute project</description></item>
+        /// <item><description><b>Tablestore</b>: Tablestore instance</description></item>
+        /// <item><description><b>ELK</b>: Elasticsearch cluster</description></item>
+        /// <item><description><b>REDIS</b>: ApsaraDB for Redis instance or self-managed Redis database</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>MYSQL</b>.</description></item>
+        /// <item><description>If the DestinationEndpointEngineName parameter is set to <b>KAFKA</b>, <b>MONGODB</b>, or <b>PolarDB</b>, you must also specify the database information in the Reserve parameter. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve</a>.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **MySQL**: ApsaraDB RDS for MySQL instance or self-managed MySQL database
-        /// *   **MARIADB**: ApsaraDB RDS for MariaDB instance
-        /// *   **PolarDB**: PolarDB for MySQL cluster
-        /// *   **POLARDB_O**: PolarDB for Oracle cluster
-        /// *   **POLARDBX10**: PolarDB-X 1.0 instance
-        /// *   **POLARDBX20**: PolarDB-X 2.0 instance
-        /// *   **ORACLE**: self-managed Oracle database
-        /// *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL instance or self-managed PostgreSQL database
-        /// *   **MSSQL**: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database
-        /// *   **ADS**: AnalyticDB for MySQL V2.0 cluster
-        /// *   **ADB30**: AnalyticDB for MySQL V3.0 cluster
-        /// *   **MONGODB**: ApsaraDB for MongoDB instance or self-managed MongoDB database
-        /// *   **GREENPLUM**: AnalyticDB for PostgreSQL instance
-        /// *   **KAFKA**: Message Queue for Apache Kafka instance or self-managed Kafka cluster
-        /// *   **DATAHUB**: DataHub project
-        /// *   **DB2**: self-managed Db2 for LUW database
-        /// *   **AS400**: self-managed Db2 for i database
-        /// *   **ODPS**: MaxCompute project
-        /// *   **Tablestore**: Tablestore instance
-        /// *   **ELK**: Elasticsearch cluster
-        /// *   **REDIS**: ApsaraDB for Redis instance or self-managed Redis database
-        /// 
-        /// > 
-        /// *   Default value: **MYSQL**.
-        /// *   If the DestinationEndpointEngineName parameter is set to **KAFKA**, **MONGODB**, or **PolarDB**, you must also specify the database information in the Reserve parameter. For more information, see [Reserve](https://help.aliyun.com/document_detail/273111.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>EXPRESS</para>
         /// </summary>
         [NameInMap("DestinationEndpointInstanceType")]
         [Validation(Required=false)]
         public string DestinationEndpointInstanceType { get; set; }
 
         /// <summary>
-        /// The ID of the data migration or synchronization task.
+        /// <para>The ID of the data migration or synchronization task.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the DtsJobId and <b>DtsInstanceId</b> parameters. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify at least one of the DtsJobId and **DtsInstanceId** parameters. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
+        /// <b>Example:</b>
+        /// <para>testsid</para>
         /// </summary>
         [NameInMap("DestinationEndpointOracleSID")]
         [Validation(Required=false)]
@@ -196,31 +252,44 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointOwnerID { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform full data migration or synchronization. Default value: true. Valid values:
+        /// <para>Specifies whether to perform full data migration or synchronization. Default value: true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs full data migration or synchronization.</description></item>
+        /// <item><description><b>false</b>: does not perform full data migration or synchronization.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs full data migration or synchronization.
-        /// *   **false**: does not perform full data migration or synchronization.
+        /// <b>Example:</b>
+        /// <para>Test123456</para>
         /// </summary>
         [NameInMap("DestinationEndpointPassword")]
         [Validation(Required=false)]
         public string DestinationEndpointPassword { get; set; }
 
         /// <summary>
-        /// The database account of the destination database.
+        /// <para>The database account of the destination database.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>In most cases, this parameter is required.</description></item>
+        /// <item><description>The permissions that are required for the database account vary with the migration or synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/175878.html">Prepare the database accounts for data migration</a> or <a href="https://help.aliyun.com/document_detail/213152.html">Prepare the database accounts for data synchronization</a>.</description></item>
+        /// <item><description>If the destination database is a MaxCompute project, you must specify the AccessKey ID of your Alibaba Cloud account. For information about how to obtain your AccessKey pair, see <a href="https://help.aliyun.com/document_detail/116401.html">Create an AccessKey pair</a>.</description></item>
+        /// </list>
         /// 
-        /// > 
-        /// *   In most cases, this parameter is required.
-        /// *   The permissions that are required for the database account vary with the migration or synchronization scenario. For more information, see [Prepare the database accounts for data migration](https://help.aliyun.com/document_detail/175878.html) or [Prepare the database accounts for data synchronization](https://help.aliyun.com/document_detail/213152.html).
-        /// *   If the destination database is a MaxCompute project, you must specify the AccessKey ID of your Alibaba Cloud account. For information about how to obtain your AccessKey pair, see [Create an AccessKey pair](https://help.aliyun.com/document_detail/116401.html).
+        /// <b>Example:</b>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("DestinationEndpointPort")]
         [Validation(Required=false)]
         public string DestinationEndpointPort { get; set; }
 
         /// <summary>
-        /// The database service port of the destination instance.
+        /// <para>The database service port of the destination instance.</para>
+        /// <remarks>
+        /// <para> If the destination instance is a self-managed database, this parameter is available and required.</para>
+        /// </remarks>
         /// 
-        /// >  If the destination instance is a self-managed database, this parameter is available and required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("DestinationEndpointRegion")]
         [Validation(Required=false)]
@@ -231,17 +300,24 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointRole { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform schema migration or synchronization. Default value: true. Valid values:
+        /// <para>Specifies whether to perform schema migration or synchronization. Default value: true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs schema migration or synchronization.</description></item>
+        /// <item><description><b>false</b>: does not perform schema migration or synchronization.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs schema migration or synchronization.
-        /// *   **false**: does not perform schema migration or synchronization.
+        /// <b>Example:</b>
+        /// <para>dtstest</para>
         /// </summary>
         [NameInMap("DestinationEndpointUserName")]
         [Validation(Required=false)]
         public string DestinationEndpointUserName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DisasterRecoveryJob")]
         [Validation(Required=false)]
@@ -252,81 +328,108 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsBisLabel { get; set; }
 
         /// <summary>
-        /// The threshold for triggering latency-related alerts. Unit: seconds. The value must be an integer. You can set the threshold based on your business needs. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.
+        /// <para>The threshold for triggering latency-related alerts. Unit: seconds. The value must be an integer. You can set the threshold based on your business needs. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.</para>
+        /// <remarks>
+        /// <para> If the <b>DelayNotice</b> parameter is set to <b>true</b>, this parameter is required.</para>
+        /// </remarks>
         /// 
-        /// >  If the **DelayNotice** parameter is set to **true**, this parameter is required.
+        /// <b>Example:</b>
+        /// <para>dtsk2gm967v16f****</para>
         /// </summary>
         [NameInMap("DtsInstanceId")]
         [Validation(Required=false)]
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// The mobile numbers that receive latency-related alerts. Separate multiple mobile numbers with commas (,).
+        /// <para>The mobile numbers that receive latency-related alerts. Separate multiple mobile numbers with commas (,).</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is available only for China site (aliyun.com) users. Only mobile numbers in the Chinese mainland are supported. Up to 10 mobile numbers can be specified.</description></item>
+        /// <item><description>International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks in the CloudMonitor console</a>.</description></item>
+        /// </list>
         /// 
-        /// > 
-        /// *   This parameter is available only for China site (aliyun.com) users. Only mobile numbers in the Chinese mainland are supported. Up to 10 mobile numbers can be specified.
-        /// *   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the CloudMonitor console](https://help.aliyun.com/document_detail/175876.html).
+        /// <b>Example:</b>
+        /// <para>k2gm967v16f****</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// The ID of the source instance.
+        /// <para>The ID of the source instance.</para>
+        /// <para>If the source instance is an Alibaba Cloud database instance, you must specify the ID of the database instance. For example, if the source instance is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>If the source instance is a self-managed database, the value of this parameter varies with the value of the <b>SourceEndpointInstanceType</b> parameter.****</para>
+        /// <list type="bullet">
+        /// <item><description>If the SourceEndpointInstanceType parameter is set to <b>ECS</b>, you must specify the ID of the ECS instance.</description></item>
+        /// <item><description>If the SourceEndpointInstanceType parameter is set to <b>DG</b>, you must specify the ID of the database gateway.</description></item>
+        /// <item><description>If the SourceEndpointInstanceType parameter is set to <b>EXPRESS</b> or <b>CEN</b>, you must specify the ID of the VPC that is connected to the source instance.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If the SourceEndpointInstanceType parameter is set to <b>CEN</b>, you must also specify the ID of the CEN instance in the Reserve parameter. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve</a>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// If the source instance is an Alibaba Cloud database instance, you must specify the ID of the database instance. For example, if the source instance is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.
-        /// 
-        /// If the source instance is a self-managed database, the value of this parameter varies with the value of the **SourceEndpointInstanceType** parameter.****
-        /// 
-        /// *   If the SourceEndpointInstanceType parameter is set to **ECS**, you must specify the ID of the ECS instance.
-        /// *   If the SourceEndpointInstanceType parameter is set to **DG**, you must specify the ID of the database gateway.
-        /// *   If the SourceEndpointInstanceType parameter is set to **EXPRESS** or **CEN**, you must specify the ID of the VPC that is connected to the source instance.
-        /// 
-        /// >  If the SourceEndpointInstanceType parameter is set to **CEN**, you must also specify the ID of the CEN instance in the Reserve parameter. For more information, see [Reserve](https://help.aliyun.com/document_detail/273111.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rdsmysql_to_mysql</para>
         /// </summary>
         [NameInMap("DtsJobName")]
         [Validation(Required=false)]
         public string DtsJobName { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ErrorNotice")]
         [Validation(Required=false)]
         public bool? ErrorNotice { get; set; }
 
         /// <summary>
-        /// The synchronization direction. Valid values:
+        /// <para>The synchronization direction. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Forward</b>: Data is synchronized from the source database to the destination database.</description></item>
+        /// <item><description><b>Reverse</b>: Data is synchronized from the destination database to the source database.</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>Forward</b>.</description></item>
+        /// <item><description>The value <b>Reverse</b> takes effect only if the topology of the data synchronization task is two-way synchronization.</description></item>
+        /// </list>
         /// 
-        /// *   **Forward**: Data is synchronized from the source database to the destination database.
-        /// *   **Reverse**: Data is synchronized from the destination database to the source database.
-        /// 
-        /// > 
-        /// *   Default value: **Forward**.
-        /// *   The value **Reverse** takes effect only if the topology of the data synchronization task is two-way synchronization.
+        /// <b>Example:</b>
+        /// <para>1361234****,1371234****</para>
         /// </summary>
         [NameInMap("ErrorPhone")]
         [Validation(Required=false)]
         public string ErrorPhone { get; set; }
 
         /// <summary>
-        /// Specifies whether the instance is a disaster recovery instance.
+        /// <para>Specifies whether the instance is a disaster recovery instance.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The instance is a disaster recovery instance.</description></item>
+        /// <item><description><b>false</b>: The instance is not a disaster recovery instance.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The instance is a disaster recovery instance.
-        /// *   **false**: The instance is not a disaster recovery instance.
+        /// <b>Example:</b>
+        /// <para><a href="http://db-list-os-file.oss-cn-shanghai.aliyuncs.com/8e42_121852**********_79dd3aeabe2f43cdb">http://db-list-os-file.oss-cn-shanghai.aliyuncs.com/8e42_121852**********_79dd3aeabe2f43cdb</a>**************</para>
         /// </summary>
         [NameInMap("FileOssUrl")]
         [Validation(Required=false)]
         public Stream FileOssUrlObject { get; set; }
 
         /// <summary>
-        /// The ID of the data migration or synchronization instance.
+        /// <para>The ID of the data migration or synchronization instance.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the <b>DtsJobId</b> and DtsInstanceId parameters. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You must specify at least one of the **DtsJobId** and DtsInstanceId parameters. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SYNC</para>
         /// </summary>
         [NameInMap("JobType")]
         [Validation(Required=false)]
@@ -345,16 +448,23 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The URL of the Object Storage Service (OSS) bucket that stores the files related to the DTS task.
+        /// <para>The URL of the Object Storage Service (OSS) bucket that stores the files related to the DTS task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The SID of the Oracle database.
+        /// <para>The SID of the Oracle database.</para>
+        /// <remarks>
+        /// <para> If the <b>DestinationEndpointEngineName</b> parameter is set to <b>ORACLE</b> and the <b>Oracle</b> database is deployed in a non-RAC architecture, this parameter is available and required.</para>
+        /// </remarks>
         /// 
-        /// >  If the **DestinationEndpointEngineName** parameter is set to **ORACLE** and the **Oracle** database is deployed in a non-RAC architecture, this parameter is available and required.
+        /// <b>Example:</b>
+        /// <para>{      &quot;srcInstanceId&quot;: &quot;cen-9kqshqum*******&quot;  }</para>
         /// </summary>
         [NameInMap("Reserve")]
         [Validation(Required=false)]
@@ -365,172 +475,221 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The password of the source database account.
+        /// <para>The password of the source database account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dtstestdatabase</para>
         /// </summary>
         [NameInMap("SourceEndpointDatabaseName")]
         [Validation(Required=false)]
         public string SourceEndpointDatabaseName { get; set; }
 
         /// <summary>
-        /// The IP address of the source instance.
+        /// <para>The IP address of the source instance.</para>
+        /// <remarks>
+        /// <para> If the <b>SourceEndpointInstanceType</b> parameter is set to <b>OTHER</b>, <b>EXPRESS</b>, <b>DG</b>, or <b>CEN</b>, this parameter is available and required.</para>
+        /// </remarks>
         /// 
-        /// >  If the **SourceEndpointInstanceType** parameter is set to **OTHER**, **EXPRESS**, **DG**, or **CEN**, this parameter is available and required.
+        /// <b>Example:</b>
+        /// <para>MYSQL</para>
         /// </summary>
         [NameInMap("SourceEndpointEngineName")]
         [Validation(Required=false)]
         public string SourceEndpointEngineName { get; set; }
 
         /// <summary>
-        /// The system ID (SID) of the Oracle database.
+        /// <para>The system ID (SID) of the Oracle database.</para>
+        /// <remarks>
+        /// <para> If the <b>SourceEndpointEngineName</b> parameter is set to <b>ORACLE</b> and the <b>Oracle</b> database is deployed in an architecture that is not a Real Application Cluster (RAC), this parameter is available and required.</para>
+        /// </remarks>
         /// 
-        /// >  If the **SourceEndpointEngineName** parameter is set to **ORACLE** and the **Oracle** database is deployed in an architecture that is not a Real Application Cluster (RAC), this parameter is available and required.
+        /// <b>Example:</b>
+        /// <para>172.16.**.***</para>
         /// </summary>
         [NameInMap("SourceEndpointIP")]
         [Validation(Required=false)]
         public string SourceEndpointIP { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the source instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <remarks>
+        /// <para> If the source instance is an Alibaba Cloud database instance, this parameter is required.</para>
+        /// </remarks>
         /// 
-        /// >  If the source instance is an Alibaba Cloud database instance, this parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-bp1imrtn6fq7h****</para>
         /// </summary>
         [NameInMap("SourceEndpointInstanceID")]
         [Validation(Required=false)]
         public string SourceEndpointInstanceID { get; set; }
 
         /// <summary>
-        /// The database engine of the source instance. Valid values:
+        /// <para>The database engine of the source instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MYSQL</b>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</description></item>
+        /// <item><description><b>MARIADB</b>: ApsaraDB RDS for MariaDB instance</description></item>
+        /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster</description></item>
+        /// <item><description><b>POLARDB_O</b>: PolarDB for Oracle cluster</description></item>
+        /// <item><description><b>POLARDBX10</b>: PolarDB-X 1.0 instance</description></item>
+        /// <item><description><b>POLARDBX20</b>: PolarDB-X 2.0 instance</description></item>
+        /// <item><description><b>ORACLE</b>: self-managed Oracle database</description></item>
+        /// <item><description><b>POSTGRESQL</b>: ApsaraDB RDS for PostgreSQL instance or self-managed PostgreSQL database</description></item>
+        /// <item><description><b>MSSQL</b>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database</description></item>
+        /// <item><description><b>MONGODB</b>: ApsaraDB for MongoDB instance or self-managed MongoDB database</description></item>
+        /// <item><description><b>DB2</b>: self-managed Db2 for LUW database</description></item>
+        /// <item><description><b>AS400</b>: self-managed Db2 for i database</description></item>
+        /// <item><description><b>DMSPOLARDB</b>: DMS logical database</description></item>
+        /// <item><description><b>HBASE</b>: self-managed HBase database</description></item>
+        /// <item><description><b>TERADATA</b>: Teradata database</description></item>
+        /// <item><description><b>TiDB</b>: TiDB database</description></item>
+        /// <item><description><b>REDIS</b>: ApsaraDB for Redis instance or self-managed Redis database</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>MYSQL</b>.</description></item>
+        /// <item><description>If the SourceEndpointEngineName parameter is set to <b>MONGODB</b>, you must also specify the architecture type of the MongoDB database in the Reserve parameter. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve</a>.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **MYSQL**: ApsaraDB RDS for MySQL instance or self-managed MySQL database
-        /// *   **MARIADB**: ApsaraDB RDS for MariaDB instance
-        /// *   **PolarDB**: PolarDB for MySQL cluster
-        /// *   **POLARDB_O**: PolarDB for Oracle cluster
-        /// *   **POLARDBX10**: PolarDB-X 1.0 instance
-        /// *   **POLARDBX20**: PolarDB-X 2.0 instance
-        /// *   **ORACLE**: self-managed Oracle database
-        /// *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL instance or self-managed PostgreSQL database
-        /// *   **MSSQL**: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database
-        /// *   **MONGODB**: ApsaraDB for MongoDB instance or self-managed MongoDB database
-        /// *   **DB2**: self-managed Db2 for LUW database
-        /// *   **AS400**: self-managed Db2 for i database
-        /// *   **DMSPOLARDB**: DMS logical database
-        /// *   **HBASE**: self-managed HBase database
-        /// *   **TERADATA**: Teradata database
-        /// *   **TiDB**: TiDB database
-        /// *   **REDIS**: ApsaraDB for Redis instance or self-managed Redis database
-        /// 
-        /// > 
-        /// *   Default value: **MYSQL**.
-        /// *   If the SourceEndpointEngineName parameter is set to **MONGODB**, you must also specify the architecture type of the MongoDB database in the Reserve parameter. For more information, see [Reserve](https://help.aliyun.com/document_detail/273111.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>RDS</para>
         /// </summary>
         [NameInMap("SourceEndpointInstanceType")]
         [Validation(Required=false)]
         public string SourceEndpointInstanceType { get; set; }
 
         /// <summary>
-        /// The database account of the source database.
+        /// <para>The database account of the source database.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>In most cases, this parameter is required.</description></item>
+        /// <item><description>The permissions that are required for the database account vary with the migration or synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/175878.html">Prepare the database accounts for data migration</a> or <a href="https://help.aliyun.com/document_detail/213152.html">Prepare the database accounts for data synchronization</a>.</description></item>
+        /// </list>
         /// 
-        /// > 
-        /// *   In most cases, this parameter is required.
-        /// *   The permissions that are required for the database account vary with the migration or synchronization scenario. For more information, see [Prepare the database accounts for data migration](https://help.aliyun.com/document_detail/175878.html) or [Prepare the database accounts for data synchronization](https://help.aliyun.com/document_detail/213152.html).
+        /// <b>Example:</b>
+        /// <para>testsid</para>
         /// </summary>
         [NameInMap("SourceEndpointOracleSID")]
         [Validation(Required=false)]
         public string SourceEndpointOracleSID { get; set; }
 
         /// <summary>
-        /// The type of the destination instance. Valid values:
+        /// <para>The type of the destination instance. Valid values:</para>
+        /// <para><b>Alibaba Cloud database instances</b></para>
+        /// <list type="bullet">
+        /// <item><description><b>RDS</b>: ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, or ApsaraDB RDS for MariaDB instance</description></item>
+        /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster</description></item>
+        /// <item><description><b>POLARDBX10</b>: PolarDB-X 1.0 instance</description></item>
+        /// <item><description><b>POLARDBX20</b>: PolarDB-X 2.0 instance</description></item>
+        /// <item><description><b>REDIS</b>: ApsaraDB for Redis instance</description></item>
+        /// <item><description><b>ADS</b>: AnalyticDB for MySQL V2.0 cluster or AnalyticDB for MySQL V3.0 cluster</description></item>
+        /// <item><description><b>MONGODB</b>: ApsaraDB for MongoDB instance</description></item>
+        /// <item><description><b>GREENPLUM</b>: AnalyticDB for PostgreSQL instance</description></item>
+        /// <item><description><b>DATAHUB</b>: DataHub project</description></item>
+        /// <item><description><b>ELK</b>: Elasticsearch cluster</description></item>
+        /// <item><description><b>Tablestore</b>: Tablestore instance</description></item>
+        /// <item><description><b>ODPS</b>: MaxCompute project</description></item>
+        /// </list>
+        /// <para><b>Self-managed databases</b></para>
+        /// <list type="bullet">
+        /// <item><description><b>OTHER</b>: self-managed database with a public IP address</description></item>
+        /// <item><description><b>ECS</b>: self-managed database hosted on an ECS instance</description></item>
+        /// <item><description><b>EXPRESS</b>: self-managed database connected over Express Connect</description></item>
+        /// <item><description><b>CEN</b>: self-managed database connected over CEN</description></item>
+        /// <item><description><b>DG</b>: self-managed database connected over Database Gateway</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the destination instance is a PolarDB for Oracle cluster, you must set this parameter to <b>OTHER</b> or <b>EXPRESS</b> because you can use a PolarDB for Oracle cluster only as a self-managed database connected over the Internet or Express Connect.</description></item>
+        /// <item><description>If the destination instance is a Message Queue for Apache Kafka instance, you must set this parameter to <b>ECS</b> or <b>EXPRESS</b> because you can use a Message Queue for Apache Kafka instance only as a self-managed database connected over ECS or Express Connect.</description></item>
+        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/176064.html">Supported databases</a>.</description></item>
+        /// <item><description>If the destination instance is a self-managed database, you must deploy the network environment for the database. For more information, see <a href="https://help.aliyun.com/document_detail/146958.html">Preparation overview</a>.</description></item>
+        /// </list>
         /// 
-        /// **Alibaba Cloud database instances**
-        /// 
-        /// *   **RDS**: ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, or ApsaraDB RDS for MariaDB instance
-        /// *   **PolarDB**: PolarDB for MySQL cluster
-        /// *   **POLARDBX10**: PolarDB-X 1.0 instance
-        /// *   **POLARDBX20**: PolarDB-X 2.0 instance
-        /// *   **REDIS**: ApsaraDB for Redis instance
-        /// *   **ADS**: AnalyticDB for MySQL V2.0 cluster or AnalyticDB for MySQL V3.0 cluster
-        /// *   **MONGODB**: ApsaraDB for MongoDB instance
-        /// *   **GREENPLUM**: AnalyticDB for PostgreSQL instance
-        /// *   **DATAHUB**: DataHub project
-        /// *   **ELK**: Elasticsearch cluster
-        /// *   **Tablestore**: Tablestore instance
-        /// *   **ODPS**: MaxCompute project
-        /// 
-        /// **Self-managed databases**
-        /// 
-        /// *   **OTHER**: self-managed database with a public IP address
-        /// *   **ECS**: self-managed database hosted on an ECS instance
-        /// *   **EXPRESS**: self-managed database connected over Express Connect
-        /// *   **CEN**: self-managed database connected over CEN
-        /// *   **DG**: self-managed database connected over Database Gateway
-        /// 
-        /// > 
-        /// *   If the destination instance is a PolarDB for Oracle cluster, you must set this parameter to **OTHER** or **EXPRESS** because you can use a PolarDB for Oracle cluster only as a self-managed database connected over the Internet or Express Connect.
-        /// *   If the destination instance is a Message Queue for Apache Kafka instance, you must set this parameter to **ECS** or **EXPRESS** because you can use a Message Queue for Apache Kafka instance only as a self-managed database connected over ECS or Express Connect.
-        /// *   For more information, see [Supported databases](https://help.aliyun.com/document_detail/176064.html).
-        /// *   If the destination instance is a self-managed database, you must deploy the network environment for the database. For more information, see [Preparation overview](https://help.aliyun.com/document_detail/146958.html).
+        /// <b>Example:</b>
+        /// <para>140692647406****</para>
         /// </summary>
         [NameInMap("SourceEndpointOwnerID")]
         [Validation(Required=false)]
         public string SourceEndpointOwnerID { get; set; }
 
         /// <summary>
-        /// The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
+        /// <para>The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.</para>
+        /// <remarks>
+        /// <para> This parameter is required when you migrate or synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required when you migrate or synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).
+        /// <b>Example:</b>
+        /// <para>Test123456</para>
         /// </summary>
         [NameInMap("SourceEndpointPassword")]
         [Validation(Required=false)]
         public string SourceEndpointPassword { get; set; }
 
         /// <summary>
-        /// The name of the database to which the objects to be migrated in the source instance belong.
+        /// <para>The name of the database to which the objects to be migrated in the source instance belong.</para>
+        /// <remarks>
+        /// <para> If the source instance is a PolarDB for Oracle cluster, a PostgreSQL database, or a MongoDB database, this parameter is available and required.</para>
+        /// </remarks>
         /// 
-        /// >  If the source instance is a PolarDB for Oracle cluster, a PostgreSQL database, or a MongoDB database, this parameter is available and required.
+        /// <b>Example:</b>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("SourceEndpointPort")]
         [Validation(Required=false)]
         public string SourceEndpointPort { get; set; }
 
         /// <summary>
-        /// The database service port of the source instance.
+        /// <para>The database service port of the source instance.</para>
+        /// <remarks>
+        /// <para> If the source instance is a self-managed database, this parameter is available and required.</para>
+        /// </remarks>
         /// 
-        /// >  If the source instance is a self-managed database, this parameter is available and required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("SourceEndpointRegion")]
         [Validation(Required=false)]
         public string SourceEndpointRegion { get; set; }
 
         /// <summary>
-        /// The ID of the destination instance.
+        /// <para>The ID of the destination instance.</para>
+        /// <para>If the destination instance is an Alibaba Cloud database instance, you must specify the ID of the database instance. For example, if the destination instance is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>If the destination instance is a self-managed database, the value of this parameter varies with the value of the <b>DestinationEndpointInstanceType</b> parameter.****</para>
+        /// <list type="bullet">
+        /// <item><description>If the DestinationEndpointInstanceType parameter is set to <b>ECS</b>, you must specify the ID of the ECS instance.</description></item>
+        /// <item><description>If the DestinationEndpointInstanceType parameter is set to <b>DG</b>, you must specify the ID of the database gateway.</description></item>
+        /// <item><description>If the DestinationEndpointInstanceType parameter is set to <b>EXPRESS</b> or <b>CEN</b>, you must specify the ID of the VPC that is connected to the source instance.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If the DestinationEndpointInstanceType parameter is set to <b>CEN</b>, you must also specify the ID of the CEN instance in the Reserve parameter. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve</a>.</para>
+        /// </remarks>
         /// 
-        /// If the destination instance is an Alibaba Cloud database instance, you must specify the ID of the database instance. For example, if the destination instance is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.
-        /// 
-        /// If the destination instance is a self-managed database, the value of this parameter varies with the value of the **DestinationEndpointInstanceType** parameter.****
-        /// 
-        /// *   If the DestinationEndpointInstanceType parameter is set to **ECS**, you must specify the ID of the ECS instance.
-        /// *   If the DestinationEndpointInstanceType parameter is set to **DG**, you must specify the ID of the database gateway.
-        /// *   If the DestinationEndpointInstanceType parameter is set to **EXPRESS** or **CEN**, you must specify the ID of the VPC that is connected to the source instance.
-        /// 
-        /// >  If the DestinationEndpointInstanceType parameter is set to **CEN**, you must also specify the ID of the CEN instance in the Reserve parameter. For more information, see [Reserve](https://help.aliyun.com/document_detail/273111.html).
+        /// <b>Example:</b>
+        /// <para>ram-for-dts</para>
         /// </summary>
         [NameInMap("SourceEndpointRole")]
         [Validation(Required=false)]
         public string SourceEndpointRole { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the source instance belongs.
+        /// <para>The ID of the Alibaba Cloud account to which the source instance belongs.</para>
+        /// <remarks>
+        /// <para> You can specify this parameter to migrate or synchronize data across different Alibaba Cloud accounts. In this case, you must specify the <b>SourceEndpointRole</b> parameter.</para>
+        /// </remarks>
         /// 
-        /// >  You can specify this parameter to migrate or synchronize data across different Alibaba Cloud accounts. In this case, you must specify the **SourceEndpointRole** parameter.
+        /// <b>Example:</b>
+        /// <para>dtstest</para>
         /// </summary>
         [NameInMap("SourceEndpointUserName")]
         [Validation(Required=false)]
         public string SourceEndpointUserName { get; set; }
 
         /// <summary>
-        /// 数据投递链路交换机实例id
+        /// <para>数据投递链路交换机实例id</para>
         /// </summary>
         [NameInMap("SourceEndpointVSwitchID")]
         [Validation(Required=false)]
@@ -557,21 +716,28 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcClientPassword { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform incremental data migration or synchronization. Default value: false. Valid values:
+        /// <para>Specifies whether to perform incremental data migration or synchronization. Default value: false. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: does not perform incremental data migration or synchronization.</description></item>
+        /// <item><description><b>true</b>: performs incremental data migration or synchronization.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **false**: does not perform incremental data migration or synchronization.
-        /// *   **true**: performs incremental data migration or synchronization.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("StructureInitialization")]
         [Validation(Required=false)]
         public bool? StructureInitialization { get; set; }
 
         /// <summary>
-        /// The ID of the DTS dedicated cluster on which the task runs.
+        /// <para>The ID of the DTS dedicated cluster on which the task runs.</para>
+        /// <remarks>
+        /// <para> If this parameter is specified, the task is scheduled to the specified DTS dedicated cluster.</para>
+        /// </remarks>
         /// 
-        /// >  If this parameter is specified, the task is scheduled to the specified DTS dedicated cluster.
+        /// <b>Example:</b>
+        /// <para>Forward</para>
         /// </summary>
         [NameInMap("SynchronizationDirection")]
         [Validation(Required=false)]

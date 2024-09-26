@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeMigrationJobDetailResponseBody : TeaModel {
         /// <summary>
-        /// The details of full data migration.
+        /// <para>The details of full data migration.</para>
         /// </summary>
         [NameInMap("DataInitializationDetailList")]
         [Validation(Required=false)]
@@ -21,61 +21,86 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public List<DescribeMigrationJobDetailResponseBodyDataInitializationDetailListDataInitializationDetail> DataInitializationDetail { get; set; }
             public class DescribeMigrationJobDetailResponseBodyDataInitializationDetailListDataInitializationDetail : TeaModel {
                 /// <summary>
-                /// The name of the database to which the migration object in the destination instance belongs.
+                /// <para>The name of the database to which the migration object in the destination instance belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dtstestdata</para>
                 /// </summary>
                 [NameInMap("DestinationOwnerDBName")]
                 [Validation(Required=false)]
                 public string DestinationOwnerDBName { get; set; }
 
                 /// <summary>
-                /// The error message returned if full data migration failed.
+                /// <para>The error message returned if full data migration failed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>java.lang.NumberFormatException: For input string: &quot;&quot;</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// The number of records that have been migrated.
+                /// <para>The number of records that have been migrated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>200001</para>
                 /// </summary>
                 [NameInMap("FinishRowNum")]
                 [Validation(Required=false)]
                 public string FinishRowNum { get; set; }
 
                 /// <summary>
-                /// The time taken by full data migration.
+                /// <para>The time taken by full data migration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0</para>
                 /// </summary>
                 [NameInMap("MigrationTime")]
                 [Validation(Required=false)]
                 public string MigrationTime { get; set; }
 
                 /// <summary>
-                /// The name of the database to which the migration object in the source instance belongs.
+                /// <para>The name of the database to which the migration object in the source instance belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dtstestdata</para>
                 /// </summary>
                 [NameInMap("SourceOwnerDBName")]
                 [Validation(Required=false)]
                 public string SourceOwnerDBName { get; set; }
 
                 /// <summary>
-                /// The status of full data migration. Valid values:
+                /// <para>The status of full data migration. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>NotStarted</b>: Full data migration is not started.</description></item>
+                /// <item><description><b>Migrating</b>: Full data migration is in progress.</description></item>
+                /// <item><description><b>Failed</b>: Full data migration failed.</description></item>
+                /// <item><description><b>Finished</b>: Full data migration is completed.</description></item>
+                /// </list>
                 /// 
-                /// - **NotStarted**: Full data migration is not started.
-                /// - **Migrating**: Full data migration is in progress.
-                /// - **Failed**: Full data migration failed.
-                /// - **Finished**: Full data migration is completed.
+                /// <b>Example:</b>
+                /// <para>Finished</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The table name.
+                /// <para>The table name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>customer</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// The total number of records that are supposed to be migrated by the task.
+                /// <para>The total number of records that are supposed to be migrated by the task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>201477</para>
                 /// </summary>
                 [NameInMap("TotalRowNum")]
                 [Validation(Required=false)]
@@ -86,7 +111,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// The details of incremental data migration.
+        /// <para>The details of incremental data migration.</para>
         /// </summary>
         [NameInMap("DataSynchronizationDetailList")]
         [Validation(Required=false)]
@@ -97,40 +122,53 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public List<DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail> DataSynchronizationDetail { get; set; }
             public class DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail : TeaModel {
                 /// <summary>
-                /// The name of the database to which the migration object in the destination instance belongs.
+                /// <para>The name of the database to which the migration object in the destination instance belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dtstestdata</para>
                 /// </summary>
                 [NameInMap("DestinationOwnerDBName")]
                 [Validation(Required=false)]
                 public string DestinationOwnerDBName { get; set; }
 
                 /// <summary>
-                /// The error message returned if incremental data migration failed.
+                /// <para>The error message returned if incremental data migration failed.</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// The name of the database to which the migration object in the source instance belongs.
+                /// <para>The name of the database to which the migration object in the source instance belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dtstestdata</para>
                 /// </summary>
                 [NameInMap("SourceOwnerDBName")]
                 [Validation(Required=false)]
                 public string SourceOwnerDBName { get; set; }
 
                 /// <summary>
-                /// The status of incremental data migration. Valid values:
+                /// <para>The status of incremental data migration. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>NotStarted</b>: Incremental data migration is not started.</description></item>
+                /// <item><description><b>Migrating</b>: Incremental data migration is in progress.</description></item>
+                /// <item><description><b>Failed</b>: Incremental data migration failed.</description></item>
+                /// <item><description><b>Finished</b>: Incremental data migration is completed.</description></item>
+                /// </list>
                 /// 
-                /// *   **NotStarted**: Incremental data migration is not started.
-                /// *   **Migrating**: Incremental data migration is in progress.
-                /// *   **Failed**: Incremental data migration failed.
-                /// *   **Finished**: Incremental data migration is completed.
+                /// <b>Example:</b>
+                /// <para>Migrating</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The table name.
+                /// <para>The table name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>customer</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
@@ -141,42 +179,57 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// The error code returned if the call failed.
+        /// <para>The error code returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InternalError</para>
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the call failed.
+        /// <para>The error message returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request processing has failed due to some unknown error.</para>
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The maximum number of data migration instances that can be displayed on one page.
+        /// <para>The maximum number of data migration instances that can be displayed on one page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0AE3CD0B-4148-426F-A90E-952467CC****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of schema migration.
+        /// <para>The details of schema migration.</para>
         /// </summary>
         [NameInMap("StructureInitializationDetailList")]
         [Validation(Required=false)]
@@ -187,9 +240,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public List<DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetail> StructureInitializationDetail { get; set; }
             public class DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetail : TeaModel {
                 /// <summary>
-                /// The constraints of the migration object, such as indexes and foreign keys. 
-                /// 
-                /// >  This parameter is returned only if the **ObjectType** parameter is set to **Table** and the migration object has constraints.
+                /// <para>The constraints of the migration object, such as indexes and foreign keys. </para>
+                /// <remarks>
+                /// <para> This parameter is returned only if the <b>ObjectType</b> parameter is set to <b>Table</b> and the migration object has constraints.</para>
+                /// </remarks>
                 /// </summary>
                 [NameInMap("ConstraintList")]
                 [Validation(Required=false)]
@@ -200,54 +254,76 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                     public List<DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintListStructureInitializationDetail> StructureInitializationDetail { get; set; }
                     public class DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintListStructureInitializationDetail : TeaModel {
                         /// <summary>
-                        /// The name of the database to which the migration object in the destination instance belongs.
+                        /// <para>The name of the database to which the migration object in the destination instance belongs.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>dtstestdata</para>
                         /// </summary>
                         [NameInMap("DestinationOwnerDBName")]
                         [Validation(Required=false)]
                         public string DestinationOwnerDBName { get; set; }
 
                         /// <summary>
-                        /// The error message returned if constraints failed to be created.
+                        /// <para>The error message returned if constraints failed to be created.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist；</para>
                         /// </summary>
                         [NameInMap("ErrorMessage")]
                         [Validation(Required=false)]
                         public string ErrorMessage { get; set; }
 
                         /// <summary>
-                        /// The syntax to create constraints.
+                        /// <para>The syntax to create constraints.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>CREATE SEQUENCE &quot;public&quot;.&quot;collections_id_seq&quot;   MINVALUE 1   MAXVALUE 9223372036854775807   START 249   INCREMENT BY 1 ;</para>
                         /// </summary>
                         [NameInMap("ObjectDefinition")]
                         [Validation(Required=false)]
                         public string ObjectDefinition { get; set; }
 
                         /// <summary>
-                        /// The name of migration object.
+                        /// <para>The name of migration object.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>customer</para>
                         /// </summary>
                         [NameInMap("ObjectName")]
                         [Validation(Required=false)]
                         public string ObjectName { get; set; }
 
                         /// <summary>
-                        /// The type of the migration object. The value is **Table**.
+                        /// <para>The type of the migration object. The value is <b>Table</b>.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Table</para>
                         /// </summary>
                         [NameInMap("ObjectType")]
                         [Validation(Required=false)]
                         public string ObjectType { get; set; }
 
                         /// <summary>
-                        /// The name of the database to which the migration object in the source instance belongs.
+                        /// <para>The name of the database to which the migration object in the source instance belongs.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>dtstestdata</para>
                         /// </summary>
                         [NameInMap("SourceOwnerDBName")]
                         [Validation(Required=false)]
                         public string SourceOwnerDBName { get; set; }
 
                         /// <summary>
-                        /// The status of constraint creation. Valid values:
+                        /// <para>The status of constraint creation. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>NotStarted</b></description></item>
+                        /// <item><description><b>Migrating</b></description></item>
+                        /// <item><description><b>Failed</b></description></item>
+                        /// <item><description><b>Finished</b></description></item>
+                        /// </list>
                         /// 
-                        /// - **NotStarted**
-                        /// - **Migrating**
-                        /// - **Failed**
-                        /// - **Finished**
+                        /// <b>Example:</b>
+                        /// <para>Finished</para>
                         /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
@@ -258,54 +334,76 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 }
 
                 /// <summary>
-                /// The name of the database to which the migration object in the destination instance belongs.
+                /// <para>The name of the database to which the migration object in the destination instance belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dtstestdata</para>
                 /// </summary>
                 [NameInMap("DestinationOwnerDBName")]
                 [Validation(Required=false)]
                 public string DestinationOwnerDBName { get; set; }
 
                 /// <summary>
-                /// The error message returned if schema migration failed.
+                /// <para>The error message returned if schema migration failed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DTS-1020042 Execute sql error sql: DTS-1020042 Execute sql error sql: ERROR: column \&quot;id\&quot; named in key does not exist</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// The schema of the migration object.
+                /// <para>The schema of the migration object.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CREATE TABLE <c>dtstestdata</c>.<c>customer</c> (\n<c>runoob_id</c>  int(10) unsigned   auto_increment  COMMENT \&quot;\&quot;   NOT NULL   , \n<c>runoob_title</c>  varchar(100)  CHARSET <c>utf8</c> COLLATE <c>utf8_general_ci</c>    COMMENT \&quot;\&quot;   NOT NULL   , \n<c>runoob_author1216</c>  varchar(40)  CHARSET <c>utf8</c> COLLATE <c>utf8_general_ci</c>    COMMENT \&quot;\&quot;   NOT NULL   , \n<c>submission_date1216</c>  date     COMMENT \&quot;\&quot;   NULL   \n, PRIMARY KEY (<c>runoob_id</c>)) engine=InnoDB AUTO_INCREMENT=200001 DEFAULT CHARSET=<c>utf8</c> DEFAULT COLLATE <c>utf8_general_ci</c> ROW_FORMAT= Dynamic comment = \&quot;\&quot; ;\n</para>
                 /// </summary>
                 [NameInMap("ObjectDefinition")]
                 [Validation(Required=false)]
                 public string ObjectDefinition { get; set; }
 
                 /// <summary>
-                /// The name of migration object.
+                /// <para>The name of migration object.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>customer</para>
                 /// </summary>
                 [NameInMap("ObjectName")]
                 [Validation(Required=false)]
                 public string ObjectName { get; set; }
 
                 /// <summary>
-                /// The type of the migration object. Valid values: **Table**, **Constraint**, **Index**, **View**, **Materialize View**, **Type**, **Synonym**, **Trigger**, **Function**, **Procedure**, **Package**, **Default**, **Rule**, **PlanGuide**, and **Sequence**.
+                /// <para>The type of the migration object. Valid values: <b>Table</b>, <b>Constraint</b>, <b>Index</b>, <b>View</b>, <b>Materialize View</b>, <b>Type</b>, <b>Synonym</b>, <b>Trigger</b>, <b>Function</b>, <b>Procedure</b>, <b>Package</b>, <b>Default</b>, <b>Rule</b>, <b>PlanGuide</b>, and <b>Sequence</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Table</para>
                 /// </summary>
                 [NameInMap("ObjectType")]
                 [Validation(Required=false)]
                 public string ObjectType { get; set; }
 
                 /// <summary>
-                /// The name of the database to which the migration object in the source instance belongs.
+                /// <para>The name of the database to which the migration object in the source instance belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dtstestdata</para>
                 /// </summary>
                 [NameInMap("SourceOwnerDBName")]
                 [Validation(Required=false)]
                 public string SourceOwnerDBName { get; set; }
 
                 /// <summary>
-                /// The status of schema migration. Valid values:
+                /// <para>The status of schema migration. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>NotStarted</b>: Schema migration is not started.</description></item>
+                /// <item><description><b>Migrating</b>: Schema migration is in progress.</description></item>
+                /// <item><description><b>Failed</b>: Schema migration failed.</description></item>
+                /// <item><description><b>Finished</b>: Schema migration is completed.</description></item>
+                /// </list>
                 /// 
-                /// - **NotStarted**: Schema migration is not started.
-                /// - **Migrating**: Schema migration is in progress.
-                /// - **Failed**: Schema migration failed.
-                /// - **Finished**: Schema migration is completed.
+                /// <b>Example:</b>
+                /// <para>Finished</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -316,14 +414,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// Indicates whether the call was successful.
+        /// <para>Indicates whether the call was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// The total number of entries that are returned.
+        /// <para>The total number of entries that are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

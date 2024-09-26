@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDataCheckReportUrlRequest : TeaModel {
         /// <summary>
-        /// The data verification method. Valid values:
+        /// <para>The data verification method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: full data verification.</description></item>
+        /// <item><description><b>2</b>: incremental data verification.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1**: full data verification.
-        /// *   **2**: incremental data verification.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CheckType")]
         [Validation(Required=false)]
         public int? CheckType { get; set; }
 
         /// <summary>
-        /// The name of the verified source database.
+        /// <para>The name of the verified source database.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dtsdb</para>
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
         /// <summary>
-        /// The ID of the Data Transmission Service (DTS) task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
+        /// <para>The ID of the Data Transmission Service (DTS) task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>f4612nr2182****</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
@@ -44,9 +51,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The name of the table verified in the source database.
+        /// <para>The name of the table verified in the source database.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>student</para>
         /// </summary>
         [NameInMap("TbName")]
         [Validation(Required=false)]

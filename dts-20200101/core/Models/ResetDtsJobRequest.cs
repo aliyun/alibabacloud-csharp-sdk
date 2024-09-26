@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ResetDtsJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the data synchronization or change tracking instance.
+        /// <para>The ID of the data synchronization or change tracking instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dtsl3m1213ye7l****</para>
         /// </summary>
         [NameInMap("DtsInstanceId")]
         [Validation(Required=false)]
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the data synchronization or change tracking task.
+        /// <para>The ID of the data synchronization or change tracking task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>l3m1213ye7l****</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
@@ -32,14 +38,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The synchronization direction. Valid values:
+        /// <para>The synchronization direction. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Forward</b></description></item>
+        /// <item><description><b>Reverse</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>Forward</b>.</description></item>
+        /// <item><description>You can set this parameter to <b>Reverse</b> to reset the reverse synchronization task only when the topology is two-way synchronization.</description></item>
+        /// </list>
         /// 
-        /// *   **Forward**
-        /// *   **Reverse**
-        /// 
-        /// > 
-        /// *   Default value: **Forward**.
-        /// *   You can set this parameter to **Reverse** to reset the reverse synchronization task only when the topology is two-way synchronization.
+        /// <b>Example:</b>
+        /// <para>Forward</para>
         /// </summary>
         [NameInMap("SynchronizationDirection")]
         [Validation(Required=false)]

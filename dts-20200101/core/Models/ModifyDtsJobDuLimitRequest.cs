@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyDtsJobDuLimitRequest : TeaModel {
         /// <summary>
-        /// The ID of the data migration, data synchronization, or change tracking task.
+        /// <para>The ID of the data migration, data synchronization, or change tracking task.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dtsxxx</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// The upper limit of DUs for the DTS task.
+        /// <para>The upper limit of DUs for the DTS task.</para>
+        /// <remarks>
+        /// <para> Minimum value: <b>1</b>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  Minimum value: **1**.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("DuLimit")]
         [Validation(Required=false)]
@@ -34,7 +39,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the DTS instance resides.
+        /// <para>The ID of the region in which the DTS instance resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

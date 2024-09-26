@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeTagValuesResponseBody : TeaModel {
         /// <summary>
-        /// The type of the tag key.
+        /// <para>The type of the tag key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The start page of the returned pages.
+        /// <para>The start page of the returned pages.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of tag values returned on each page.
+        /// <para>The number of tag values returned on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AD110813-9AD6-5F07-BFC8-4C841309****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tag values that are associated with the tag key.
+        /// <para>The tag values that are associated with the tag key.</para>
         /// </summary>
         [NameInMap("TagValues")]
         [Validation(Required=false)]
         public List<string> TagValues { get; set; }
 
         /// <summary>
-        /// The total number of tag values that are associated with the tag key.
+        /// <para>The total number of tag values that are associated with the tag key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>13</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

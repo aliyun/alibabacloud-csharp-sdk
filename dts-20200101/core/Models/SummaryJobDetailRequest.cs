@@ -10,39 +10,52 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class SummaryJobDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the data migration or data synchronization instance.
+        /// <para>The ID of the data migration or data synchronization instance.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the DtsJobId and DtsInstanceId parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify at least one of the DtsJobId and DtsInstanceId parameters.
+        /// <b>Example:</b>
+        /// <para>dtsl3m1213ye7l****</para>
         /// </summary>
         [NameInMap("DtsInstanceId")]
         [Validation(Required=false)]
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the data migration or data synchronization task.
+        /// <para>The ID of the data migration or data synchronization task.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the DtsJobId and DtsInstanceId parameters.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You must specify at least one of the DtsJobId and DtsInstanceId parameters.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>l3m1213ye7l****</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// The phase of the data migration task. Valid values:
+        /// <para>The phase of the data migration task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>02</b>: The task is in the schema migration phase.</description></item>
+        /// <item><description><b>03</b>: The task is in the incremental migration phase.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **02**: The task is in the schema migration phase.
-        /// *   **03**: The task is in the incremental migration phase.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>02</para>
         /// </summary>
         [NameInMap("JobCode")]
         [Validation(Required=false)]
         public string JobCode { get; set; }
 
         /// <summary>
-        /// The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -53,24 +66,34 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The type of schema definition. Valid values:
+        /// <para>The type of schema definition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>before</b>: schema migration or initial schema synchronization</description></item>
+        /// <item><description><b>after</b>: DDL operations performed during incremental data migration or synchronization</description></item>
+        /// </list>
         /// 
-        /// *   **before**: schema migration or initial schema synchronization
-        /// *   **after**: DDL operations performed during incremental data migration or synchronization
+        /// <b>Example:</b>
+        /// <para>before</para>
         /// </summary>
         [NameInMap("StructType")]
         [Validation(Required=false)]
         public string StructType { get; set; }
 
         /// <summary>
-        /// The synchronization direction of the data synchronization task. Valid values:
+        /// <para>The synchronization direction of the data synchronization task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Forward</b>: Data is synchronized from the source database to the destination database.</description></item>
+        /// <item><description><b>Reverse</b>: Data is synchronized from the destination database to the source database.</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>Forward</b>.</description></item>
+        /// <item><description>You can set this parameter to <b>Reverse</b> to delete the reverse synchronization task only if the topology is two-way synchronization.</description></item>
+        /// </list>
         /// 
-        /// *   **Forward**: Data is synchronized from the source database to the destination database.
-        /// *   **Reverse**: Data is synchronized from the destination database to the source database.
-        /// 
-        /// > 
-        /// *   Default value: **Forward**.
-        /// *   You can set this parameter to **Reverse** to delete the reverse synchronization task only if the topology is two-way synchronization.
+        /// <b>Example:</b>
+        /// <para>Forward</para>
         /// </summary>
         [NameInMap("SynchronizationDirection")]
         [Validation(Required=false)]

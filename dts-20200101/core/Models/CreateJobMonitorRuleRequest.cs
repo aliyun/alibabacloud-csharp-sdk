@@ -10,55 +10,77 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class CreateJobMonitorRuleRequest : TeaModel {
         /// <summary>
-        /// The threshold for triggering latency alerts.
+        /// <para>The threshold for triggering latency alerts.</para>
+        /// <list type="bullet">
+        /// <item><description>If the <b>Type</b> parameter is set to <b>delay</b>, the threshold must be an integer. You can set the threshold based on your requirements. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds. Unit: seconds.</description></item>
+        /// <item><description>If the <b>Type</b> parameter is set to <b>full_timeout</b>, the threshold must be an integer. Unit: hours.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is required if the <b>Type</b> parameter is set to <b>delay</b> or <b>full_timeout</b> and the <b>State</b> parameter is set to <b>Y</b>.</para>
+        /// </remarks>
         /// 
-        /// *   If the **Type** parameter is set to **delay**, the threshold must be an integer. You can set the threshold based on your requirements. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds. Unit: seconds.
-        /// *   If the **Type** parameter is set to **full_timeout**, the threshold must be an integer. Unit: hours.
-        /// 
-        /// >  This parameter is required if the **Type** parameter is set to **delay** or **full_timeout** and the **State** parameter is set to **Y**.
+        /// <b>Example:</b>
+        /// <para>11</para>
         /// </summary>
         [NameInMap("DelayRuleTime")]
         [Validation(Required=false)]
         public long? DelayRuleTime { get; set; }
 
         /// <summary>
-        /// The ID of the data migration, data synchronization, or change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
+        /// <para>The ID of the data migration, data synchronization, or change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i03e3zty16i****</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// The alert threshold.
+        /// <para>The alert threshold.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("NoticeValue")]
         [Validation(Required=false)]
         public int? NoticeValue { get; set; }
 
         /// <summary>
-        /// The statistical period of the incremental data verification task. Unit: minutes.
+        /// <para>The statistical period of the incremental data verification task. Unit: minutes.</para>
+        /// <remarks>
+        /// <para> Valid values: 1, 3, 5, and 30.</para>
+        /// </remarks>
         /// 
-        /// >  Valid values: 1, 3, 5, and 30.
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The mobile numbers that receive alert notifications. Separate multiple mobile numbers with commas (,).
+        /// <para>The mobile numbers that receive alert notifications. Separate multiple mobile numbers with commas (,).</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</description></item>
+        /// <item><description>Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in the CloudMonitor console</a>.</description></item>
+        /// </list>
         /// 
-        /// > 
-        /// *   This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.
-        /// *   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](https://help.aliyun.com/document_detail/175876.html).
+        /// <b>Example:</b>
+        /// <para>1361234****,1371234****</para>
         /// </summary>
         [NameInMap("Phone")]
         [Validation(Required=false)]
         public string Phone { get; set; }
 
         /// <summary>
-        /// The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -69,32 +91,41 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the alert rule. Valid values:
+        /// <para>Specifies whether to enable the alert rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Y</b>: enables the alert rule.</description></item>
+        /// <item><description><b>N</b>: disables the alert rule.</description></item>
+        /// </list>
+        /// <para>Default value: <b>Y</b>.</para>
         /// 
-        /// *   **Y**: enables the alert rule.
-        /// *   **N**: disables the alert rule.
-        /// 
-        /// Default value: **Y**.
+        /// <b>Example:</b>
+        /// <para>Y</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
 
         /// <summary>
-        /// The number of statistical periods of the incremental data verification task.
+        /// <para>The number of statistical periods of the incremental data verification task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Times")]
         [Validation(Required=false)]
         public int? Times { get; set; }
 
         /// <summary>
-        /// The metric that is used to monitor the task. Valid values:
+        /// <para>The metric that is used to monitor the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>delay</b>: the <b>Latency</b> metric.</description></item>
+        /// <item><description><b>error</b>: the <b>Status</b> metric.</description></item>
+        /// <item><description><b>full_timeout</b>: the <b>Full Timeout</b> metric.</description></item>
+        /// </list>
+        /// <para>Default value: <b>error</b>. You must manually set this value.</para>
         /// 
-        /// *   **delay**: the **Latency** metric.
-        /// *   **error**: the **Status** metric.
-        /// *   **full_timeout**: the **Full Timeout** metric.
-        /// 
-        /// Default value: **error**. You must manually set this value.
+        /// <b>Example:</b>
+        /// <para>delay</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

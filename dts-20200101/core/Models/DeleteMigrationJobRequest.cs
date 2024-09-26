@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DeleteMigrationJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12323344****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query all data migration instances.
+        /// <para>The ID of the data migration instance. You can call the <b>DescribeMigrationJobs</b> operation to query all data migration instances.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dtsyiwe9b0gp2p****</para>
         /// </summary>
         [NameInMap("MigrationJobId")]
         [Validation(Required=false)]

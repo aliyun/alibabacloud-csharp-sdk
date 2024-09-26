@@ -14,9 +14,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public CreateSubscriptionInstanceRequestSourceEndpoint SourceEndpoint { get; set; }
         public class CreateSubscriptionInstanceRequestSourceEndpoint : TeaModel {
             /// <summary>
-            /// The type of the source instance. Valid values: **MySQL**, **PolarDB**, **DRDS**, and **Oracle**.
+            /// <para>The type of the source instance. Valid values: <b>MySQL</b>, <b>PolarDB</b>, <b>DRDS</b>, and <b>Oracle</b>.</para>
+            /// <remarks>
+            /// <para> Default value: <b>MySQL</b>.</para>
+            /// </remarks>
             /// 
-            /// >  Default value: **MySQL**.
+            /// <b>Example:</b>
+            /// <para>MySQL</para>
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -25,14 +29,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12323344****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <b>ClientToken</b> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0c593ea1-3bea-11e9-b96b-88e9fe63****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -43,31 +53,42 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The billing method of the change tracking instance.
+        /// <para>The billing method of the change tracking instance.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>Prepaid</b>: subscription</description></item>
+        /// </list>
         /// 
-        /// *   **Postpaid**: pay-as-you-go
-        /// *   **Prepaid**: subscription
+        /// <b>Example:</b>
+        /// <para>Prepaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// The billing cycle of the subscription instance. Valid values:
+        /// <para>The billing cycle of the subscription instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Year</b></description></item>
+        /// <item><description><b>Month</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You must specify this parameter only if you set the PayType parameter to <b>Prepaid</b>.</para>
+        /// </remarks>
         /// 
-        /// *   **Year**
-        /// *   **Month**
-        /// 
-        /// >  You must specify this parameter only if you set the PayType parameter to **Prepaid**.
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
 
         /// <summary>
-        /// The region ID of the change tracking instance. The region ID is the same as that of the source instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The region ID of the change tracking instance. The region ID is the same as that of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -82,12 +103,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The subscription length.
+        /// <para>The subscription length.</para>
+        /// <list type="bullet">
+        /// <item><description>If the billing cycle is <b>Year</b>, the value range is <b>1 to 5</b>.</description></item>
+        /// <item><description>If the billing cycle is <b>Month</b>, the value range is <b>1 to 60</b>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You must specify this parameter only if you set the PayType parameter to <b>Prepaid</b>.</para>
+        /// </remarks>
         /// 
-        /// *   If the billing cycle is **Year**, the value range is **1 to 5**.
-        /// *   If the billing cycle is **Month**, the value range is **1 to 60**.
-        /// 
-        /// >  You must specify this parameter only if you set the PayType parameter to **Prepaid**.
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]

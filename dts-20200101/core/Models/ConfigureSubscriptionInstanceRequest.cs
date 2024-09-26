@@ -14,94 +14,133 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public ConfigureSubscriptionInstanceRequestSourceEndpoint SourceEndpoint { get; set; }
         public class ConfigureSubscriptionInstanceRequestSourceEndpoint : TeaModel {
             /// <summary>
-            /// The name of the source database.
+            /// <para>The name of the source database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dtstestdata</para>
             /// </summary>
             [NameInMap("DatabaseName")]
             [Validation(Required=false)]
             public string DatabaseName { get; set; }
 
             /// <summary>
-            /// The IP address of the source database.
+            /// <para>The IP address of the source database.</para>
+            /// <remarks>
+            /// <para> This parameter is required only when the source database is a self-managed database.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is required only when the source database is a self-managed database.
+            /// <b>Example:</b>
+            /// <para>172.16.88.***</para>
             /// </summary>
             [NameInMap("IP")]
             [Validation(Required=false)]
             public string IP { get; set; }
 
             /// <summary>
-            /// The ID of the source database.
+            /// <para>The ID of the source database.</para>
+            /// <remarks>
+            /// <para> This parameter is required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.
+            /// <b>Example:</b>
+            /// <para>rm-bp1zc3iyqe3qw****</para>
             /// </summary>
             [NameInMap("InstanceID")]
             [Validation(Required=false)]
             public string InstanceID { get; set; }
 
             /// <summary>
-            /// The type of the source database. Valid values:
+            /// <para>The type of the source database. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>RDS</b>: ApsaraDB RDS for MySQL instance</description></item>
+            /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster</description></item>
+            /// <item><description><b>LocalInstance</b>: self-managed database with a public IP address</description></item>
+            /// <item><description><b>ECS</b>: self-managed database hosted on an Elastic Compute Service (ECS) instance</description></item>
+            /// <item><description><b>Express</b>: self-managed database connected over Express Connect</description></item>
+            /// <item><description><b>CEN</b>: self-managed database connected over Cloud Enterprise Network (CEN)</description></item>
+            /// <item><description><b>dg</b>: self-managed database connected over Database Gateway</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation.</para>
+            /// </remarks>
             /// 
-            /// *   **RDS**: ApsaraDB RDS for MySQL instance
-            /// *   **PolarDB**: PolarDB for MySQL cluster
-            /// *   **LocalInstance**: self-managed database with a public IP address
-            /// *   **ECS**: self-managed database hosted on an Elastic Compute Service (ECS) instance
-            /// *   **Express**: self-managed database connected over Express Connect
-            /// *   **CEN**: self-managed database connected over Cloud Enterprise Network (CEN)
-            /// *   **dg**: self-managed database connected over Database Gateway
-            /// 
-            /// >  The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the [CreateSubscriptionInstance](https://help.aliyun.com/document_detail/49436.html) operation.
+            /// <b>Example:</b>
+            /// <para>RDS</para>
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// The system ID (SID) of the Oracle database.
+            /// <para>The system ID (SID) of the Oracle database.</para>
+            /// <remarks>
+            /// <para> This parameter is required only when the source database is a self-managed Oracle database and is not deployed in the Real Application Clusters (RAC) architecture.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is required only when the source database is a self-managed Oracle database and is not deployed in the Real Application Clusters (RAC) architecture.
+            /// <b>Example:</b>
+            /// <para>testsid</para>
             /// </summary>
             [NameInMap("OracleSID")]
             [Validation(Required=false)]
             public string OracleSID { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account to which the source database belongs.
+            /// <para>The ID of the Alibaba Cloud account to which the source database belongs.</para>
+            /// <remarks>
+            /// <para> This parameter is required only when you track data changes across different Alibaba Cloud accounts.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is required only when you track data changes across different Alibaba Cloud accounts.
+            /// <b>Example:</b>
+            /// <para>140692647406****</para>
             /// </summary>
             [NameInMap("OwnerID")]
             [Validation(Required=false)]
             public string OwnerID { get; set; }
 
             /// <summary>
-            /// The password of the account that is used to connect to the source database.
+            /// <para>The password of the account that is used to connect to the source database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test123456</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
 
             /// <summary>
-            /// The service port number of the source database.
+            /// <para>The service port number of the source database.</para>
+            /// <remarks>
+            /// <para> This parameter is required only when the source database is a self-managed database.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is required only when the source database is a self-managed database.
+            /// <b>Example:</b>
+            /// <para>3306</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public string Port { get; set; }
 
             /// <summary>
-            /// The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking instance. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.
+            /// <para>The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking instance. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.</para>
+            /// <remarks>
+            /// <para> For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</para>
+            /// </remarks>
             /// 
-            /// >  For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).
+            /// <b>Example:</b>
+            /// <para>ram-for-dts</para>
             /// </summary>
             [NameInMap("Role")]
             [Validation(Required=false)]
             public string Role { get; set; }
 
             /// <summary>
-            /// The username of the account that is used to connect to the source database.
+            /// <para>The username of the account that is used to connect to the source database.</para>
+            /// <remarks>
+            /// <para> The permissions that are required for the database account vary with the change tracking scenario. For more information, see <a href="https://help.aliyun.com/document_detail/145715.html">Overview of change tracking scenarios</a>.</para>
+            /// </remarks>
             /// 
-            /// >  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Overview of change tracking scenarios](https://help.aliyun.com/document_detail/145715.html).
+            /// <b>Example:</b>
+            /// <para>dtstestaccount</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -114,24 +153,30 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public ConfigureSubscriptionInstanceRequestSubscriptionDataType SubscriptionDataType { get; set; }
         public class ConfigureSubscriptionInstanceRequestSubscriptionDataType : TeaModel {
             /// <summary>
-            /// Specifies whether to track DDL statements. Default value: true. Valid values:
+            /// <para>Specifies whether to track DDL statements. Default value: true. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: tracks DDL statements.</description></item>
+            /// <item><description><b>false</b>: does not track DDL statements.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   **true**: tracks DDL statements.
-            /// *   **false**: does not track DDL statements.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("DDL")]
             [Validation(Required=false)]
             public bool? DDL { get; set; }
 
             /// <summary>
-            /// Specifies whether to track DML statements. Default value: true. Valid values:
+            /// <para>Specifies whether to track DML statements. Default value: true. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: tracks DML statements.</description></item>
+            /// <item><description><b>false</b>: does not tack DML statements.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   **true**: tracks DML statements.
-            /// *   **false**: does not tack DML statements.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("DML")]
             [Validation(Required=false)]
@@ -144,18 +189,26 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public ConfigureSubscriptionInstanceRequestSubscriptionInstance SubscriptionInstance { get; set; }
         public class ConfigureSubscriptionInstanceRequestSubscriptionInstance : TeaModel {
             /// <summary>
-            /// The ID of the VPC in which the change tracking instance is deployed.
+            /// <para>The ID of the VPC in which the change tracking instance is deployed.</para>
+            /// <remarks>
+            /// <para> This parameter is required only when the <b>SubscriptionInstanceNetworkType</b> parameter is set to <b>vpc</b>.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is required only when the **SubscriptionInstanceNetworkType** parameter is set to **vpc**.
+            /// <b>Example:</b>
+            /// <para>vpc-bp1vwnn14rqpyiczj****</para>
             /// </summary>
             [NameInMap("VPCId")]
             [Validation(Required=false)]
             public string VPCId { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch in the specified VPC.
+            /// <para>The ID of the vSwitch in the specified VPC.</para>
+            /// <remarks>
+            /// <para> This parameter is required only when the <b>SubscriptionInstanceNetworkType</b> parameter is set to <b>vpc</b>.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is required only when the **SubscriptionInstanceNetworkType** parameter is set to **vpc**.
+            /// <b>Example:</b>
+            /// <para>vsw-bp10df3mxae6lpmku****</para>
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
@@ -164,7 +217,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is discontinued.
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is discontinued.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12323344****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
@@ -183,36 +239,51 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The ID of the region in which the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dtshp8n2ze4r5x****</para>
         /// </summary>
         [NameInMap("SubscriptionInstanceId")]
         [Validation(Required=false)]
         public string SubscriptionInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](https://help.aliyun.com/document_detail/49442.html) operation to query the instance ID.
+        /// <para>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a> operation to query the instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The name of the change tracking instance.</para>
+        /// <remarks>
+        /// <para> We recommend that you specify an informative name for easy identification. You do not need to use a unique name.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("SubscriptionInstanceName")]
         [Validation(Required=false)]
         public string SubscriptionInstanceName { get; set; }
 
         /// <summary>
-        /// The network type of the change tracking instance. Set the value to **vpc**. A value of vpc indicates the Virtual Private Cloud (VPC) network type.
+        /// <para>The network type of the change tracking instance. Set the value to <b>vpc</b>. A value of vpc indicates the Virtual Private Cloud (VPC) network type.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the <b>SubscriptionInstance.VPCId</b> and <b>SubscriptionInstance.VSwitchID</b> parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.</description></item>
+        /// <item><description>The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</description></item>
+        /// </list>
         /// 
-        /// > 
-        /// *   To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the **SubscriptionInstance.VPCId** and **SubscriptionInstance.VSwitchID** parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.
-        /// *   The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.
+        /// <b>Example:</b>
+        /// <para>vpc</para>
         /// </summary>
         [NameInMap("SubscriptionInstanceNetworkType")]
         [Validation(Required=false)]
         public string SubscriptionInstanceNetworkType { get; set; }
 
         /// <summary>
-        /// The objects for which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](https://help.aliyun.com/document_detail/141902.html).
+        /// <para>The objects for which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141902.html">SubscriptionObjects</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{     &quot;DBName&quot;: &quot;dtstestdata&quot; }]</para>
         /// </summary>
         [NameInMap("SubscriptionObject")]
         [Validation(Required=false)]

@@ -10,23 +10,33 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class SuspendDtsJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the data migration, data synchronization, or change tracking instance.
+        /// <para>The ID of the data migration, data synchronization, or change tracking instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dtsl3m1213ye7l****</para>
         /// </summary>
         [NameInMap("DtsInstanceId")]
         [Validation(Required=false)]
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the data migration, data synchronization, or change tracking task.
+        /// <para>The ID of the data migration, data synchronization, or change tracking task.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to obtain the task ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to obtain the task ID.
+        /// <b>Example:</b>
+        /// <para>l3m1213ye7l****</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,14 +47,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The synchronization direction. Valid values:
+        /// <para>The synchronization direction. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Forward</b>: Data is synchronized from the source database to the destination database.</description></item>
+        /// <item><description><b>Reverse</b>: Data is synchronized from the destination database to the source database.</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>Forward</b>.</description></item>
+        /// <item><description>You can set this parameter to <b>Reverse</b> to pause the reverse synchronization task only if the topology is two-way synchronization.</description></item>
+        /// </list>
         /// 
-        /// *   **Forward**: Data is synchronized from the source database to the destination database.
-        /// *   **Reverse**: Data is synchronized from the destination database to the source database.
-        /// 
-        /// > 
-        /// *   Default value: **Forward**.
-        /// *   You can set this parameter to **Reverse** to pause the reverse synchronization task only if the topology is two-way synchronization.
+        /// <b>Example:</b>
+        /// <para>Forward</para>
         /// </summary>
         [NameInMap("SynchronizationDirection")]
         [Validation(Required=false)]

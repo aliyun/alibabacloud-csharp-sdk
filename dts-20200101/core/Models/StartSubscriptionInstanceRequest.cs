@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class StartSubscriptionInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12323344****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
@@ -29,9 +32,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.
+        /// <para>The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dtso6m11cxt26q****</para>
         /// </summary>
         [NameInMap("SubscriptionInstanceId")]
         [Validation(Required=false)]

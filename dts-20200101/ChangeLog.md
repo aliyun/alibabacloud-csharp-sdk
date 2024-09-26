@@ -1,3 +1,10 @@
+2024-09-26 Version: 1.5.4
+- Update API DescribeDtsJobs: update param RegionId.
+- Update API ModifyDtsJobPassword: add param DtsInstanceId.
+- Update API ModifyDtsJobPassword: add param SynchronizationDirection.
+- Update API ModifyDtsJobPassword: update param DtsJobId.
+
+
 2024-08-20 Version: 1.5.3
 - Update API CreateDtsInstance: add param DtsRegion.
 - Update API DescribeDtsJobs: update param RegionId.

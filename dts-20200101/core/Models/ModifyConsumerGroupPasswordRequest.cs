@@ -10,41 +10,50 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyConsumerGroupPasswordRequest : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12323344****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// The ID of the consumer group.
+        /// <para>The ID of the consumer group.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/122886.html">DescribeConsumerGroup</a> operation to query the consumer group ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the consumer group ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dtswc411cg617p****</para>
         /// </summary>
         [NameInMap("ConsumerGroupID")]
         [Validation(Required=false)]
         public string ConsumerGroupID { get; set; }
 
         /// <summary>
-        /// The name of the consumer group. You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the consumer group name.
+        /// <para>The name of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/122886.html">DescribeConsumerGroup</a> operation to query the consumer group name.</para>
         /// </summary>
         [NameInMap("ConsumerGroupName")]
         [Validation(Required=false)]
         public string ConsumerGroupName { get; set; }
 
         /// <summary>
-        /// The current password of the consumer group.
+        /// <para>The current password of the consumer group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Test123456</para>
         /// </summary>
         [NameInMap("ConsumerGroupPassword")]
         [Validation(Required=false)]
         public string ConsumerGroupPassword { get; set; }
 
         /// <summary>
-        /// The username of the consumer group. You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the username.
+        /// <para>The username of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/122886.html">DescribeConsumerGroup</a> operation to query the username.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dtstest</para>
         /// </summary>
         [NameInMap("ConsumerGroupUserName")]
         [Validation(Required=false)]
@@ -63,21 +72,26 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.
+        /// <para>The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dtsg2m10r1x15a****</para>
         /// </summary>
         [NameInMap("SubscriptionInstanceId")]
         [Validation(Required=false)]
         public string SubscriptionInstanceId { get; set; }
 
         /// <summary>
-        /// The new password of the consumer group.
+        /// <para>The new password of the consumer group.</para>
+        /// <list type="bullet">
+        /// <item><description>A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>A password must be 8 to 32 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.
-        /// *   A password must be 8 to 32 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Test654321</para>
         /// </summary>
         [NameInMap("consumerGroupNewPassword")]
         [Validation(Required=false)]

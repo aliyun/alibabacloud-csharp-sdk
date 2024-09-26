@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class TransferInstanceClassRequest : TeaModel {
         /// <summary>
-        /// The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
+        /// <para>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r4yr723m199****</para>
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// The new instance class of the DTS instance. You can call the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation to query the original instance class of the DTS instance.
+        /// <para>The new instance class of the DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation to query the original instance class of the DTS instance.</para>
+        /// <list type="bullet">
+        /// <item><description>DTS supports the following instance classes for a data migration instance: <b>xxlarge</b>, <b>xlarge</b>, <b>large</b>, <b>medium</b>, and <b>small</b>.</description></item>
+        /// <item><description>DTS supports the following instance classes for a data synchronization instance: <b>large</b>, <b>medium</b>, <b>small</b>, and <b>micro</b>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   DTS supports the following instance classes for a data migration instance: **xxlarge**, **xlarge**, **large**, **medium**, and **small**.
-        /// *   DTS supports the following instance classes for a data synchronization instance: **large**, **medium**, **small**, and **micro**.
-        /// 
-        /// >  For more information about the test performance of each instance class, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html) and [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>large</para>
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// Specifies whether to upgrade or downgrade the DTS instance. Valid values:
+        /// <para>Specifies whether to upgrade or downgrade the DTS instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>UPGRADE</b></description></item>
+        /// <item><description><b>DOWNGRADE</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **UPGRADE**
-        /// *   **DOWNGRADE**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>UPGRADE</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
         /// <summary>
-        /// The ID of the region where the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// <para>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

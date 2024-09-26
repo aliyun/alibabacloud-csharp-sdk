@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeMigrationJobsResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the call failed.
+        /// <para>The error code returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InternalError</para>
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the call failed.
+        /// <para>The error message returned if the call failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request processing has failed due to some unknown error.</para>
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The list of data migration instances and the details of each instance.
+        /// <para>The list of data migration instances and the details of each instance.</para>
         /// </summary>
         [NameInMap("MigrationJobs")]
         [Validation(Required=false)]
@@ -35,40 +41,53 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public List<DescribeMigrationJobsResponseBodyMigrationJobsMigrationJob> MigrationJob { get; set; }
             public class DescribeMigrationJobsResponseBodyMigrationJobsMigrationJob : TeaModel {
                 /// <summary>
-                /// The details of full data migration.
+                /// <para>The details of full data migration.</para>
                 /// </summary>
                 [NameInMap("DataInitialization")]
                 [Validation(Required=false)]
                 public DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobDataInitialization DataInitialization { get; set; }
                 public class DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobDataInitialization : TeaModel {
                     /// <summary>
-                    /// The error message returned if full data migration failed.
+                    /// <para>The error message returned if full data migration failed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>java.lang.NumberFormatException: For input string: &quot;&quot;</para>
                     /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
                     /// <summary>
-                    /// The migration progress. Unit: %.
+                    /// <para>The migration progress. Unit: %.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
                     /// </summary>
                     [NameInMap("Percent")]
                     [Validation(Required=false)]
                     public string Percent { get; set; }
 
                     /// <summary>
-                    /// The number of records that have been migrated during full data migration.
+                    /// <para>The number of records that have been migrated during full data migration.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>200001</para>
                     /// </summary>
                     [NameInMap("Progress")]
                     [Validation(Required=false)]
                     public string Progress { get; set; }
 
                     /// <summary>
-                    /// The status of full data migration. Valid values:
+                    /// <para>The status of full data migration. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>NotStarted</b>: Full data migration is not started.</description></item>
+                    /// <item><description><b>Migrating</b>: Full data migration is in progress.</description></item>
+                    /// <item><description><b>Failed</b>: Full data migration failed.</description></item>
+                    /// <item><description><b>Finished</b>: Full data migration is completed.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **NotStarted**: Full data migration is not started.
-                    /// *   **Migrating**: Full data migration is in progress.
-                    /// *   **Failed**: Full data migration failed.
-                    /// *   **Finished**: Full data migration is completed.
+                    /// <b>Example:</b>
+                    /// <para>Finished</para>
                     /// </summary>
                     [NameInMap("status")]
                     [Validation(Required=false)]
@@ -77,41 +96,51 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 }
 
                 /// <summary>
-                /// The details of incremental data migration.
+                /// <para>The details of incremental data migration.</para>
                 /// </summary>
                 [NameInMap("DataSynchronization")]
                 [Validation(Required=false)]
                 public DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobDataSynchronization DataSynchronization { get; set; }
                 public class DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobDataSynchronization : TeaModel {
                     /// <summary>
-                    /// The latency of incremental data migration. Unit: seconds.
+                    /// <para>The latency of incremental data migration. Unit: seconds.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("Delay")]
                     [Validation(Required=false)]
                     public string Delay { get; set; }
 
                     /// <summary>
-                    /// The error message returned if incremental data migration failed.
+                    /// <para>The error message returned if incremental data migration failed.</para>
                     /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
                     /// <summary>
-                    /// The progress of incremental data migration. Unit: %.
+                    /// <para>The progress of incremental data migration. Unit: %.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>95</para>
                     /// </summary>
                     [NameInMap("Percent")]
                     [Validation(Required=false)]
                     public string Percent { get; set; }
 
                     /// <summary>
-                    /// The status of incremental data migration. Valid values:
+                    /// <para>The status of incremental data migration. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>NotStarted</b>: Incremental data migration is not started.</description></item>
+                    /// <item><description><b>Migrating</b>: Incremental data migration is in progress.</description></item>
+                    /// <item><description><b>Failed</b>: Incremental data migration failed.</description></item>
+                    /// <item><description><b>Finished</b>: Incremental data migration is completed.</description></item>
+                    /// <item><description><b>Catched</b>: Incremental data migration is not delayed.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **NotStarted**: Incremental data migration is not started.
-                    /// *   **Migrating**: Incremental data migration is in progress.
-                    /// *   **Failed**: Incremental data migration failed.
-                    /// *   **Finished**: Incremental data migration is completed.
-                    /// *   **Catched**: Incremental data migration is not delayed.
+                    /// <b>Example:</b>
+                    /// <para>Catched</para>
                     /// </summary>
                     [NameInMap("status")]
                     [Validation(Required=false)]
@@ -120,63 +149,87 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 }
 
                 /// <summary>
-                /// The connection settings of the destination instance.
+                /// <para>The connection settings of the destination instance.</para>
                 /// </summary>
                 [NameInMap("DestinationEndpoint")]
                 [Validation(Required=false)]
                 public DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobDestinationEndpoint DestinationEndpoint { get; set; }
                 public class DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobDestinationEndpoint : TeaModel {
                     /// <summary>
-                    /// The name of the database to which the migration object in the destination instance belongs.
+                    /// <para>The name of the database to which the migration object in the destination instance belongs.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>dtstestdata</para>
                     /// </summary>
                     [NameInMap("DatabaseName")]
                     [Validation(Required=false)]
                     public string DatabaseName { get; set; }
 
                     /// <summary>
-                    /// The database type of the destination instance.
+                    /// <para>The database type of the destination instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>MySQL</para>
                     /// </summary>
                     [NameInMap("EngineName")]
                     [Validation(Required=false)]
                     public string EngineName { get; set; }
 
                     /// <summary>
-                    /// The endpoint of the destination instance.
+                    /// <para>The endpoint of the destination instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>172.16.88.***</para>
                     /// </summary>
                     [NameInMap("IP")]
                     [Validation(Required=false)]
                     public string IP { get; set; }
 
                     /// <summary>
-                    /// The ID of the destination instance.
+                    /// <para>The ID of the destination instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>rm-bp1zc3iyqe3qw****</para>
                     /// </summary>
                     [NameInMap("InstanceID")]
                     [Validation(Required=false)]
                     public string InstanceID { get; set; }
 
                     /// <summary>
-                    /// The type of the destination instance.
+                    /// <para>The type of the destination instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>RDS</para>
                     /// </summary>
                     [NameInMap("InstanceType")]
                     [Validation(Required=false)]
                     public string InstanceType { get; set; }
 
                     /// <summary>
-                    /// This parameter is returned only if the database type of the destination instance is **Oracle**.
+                    /// <para>This parameter is returned only if the database type of the destination instance is <b>Oracle</b>.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testsid</para>
                     /// </summary>
                     [NameInMap("OracleSID")]
                     [Validation(Required=false)]
                     public string OracleSID { get; set; }
 
                     /// <summary>
-                    /// The database service port of the destination instance.
+                    /// <para>The database service port of the destination instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3306</para>
                     /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public string Port { get; set; }
 
                     /// <summary>
-                    /// The database account of the destination instance.
+                    /// <para>The database account of the destination instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>dtstest</para>
                     /// </summary>
                     [NameInMap("UserName")]
                     [Validation(Required=false)]
@@ -185,87 +238,115 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 }
 
                 /// <summary>
-                /// The time when the data migration instance was created. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.
+                /// <para>The time when the data migration instance was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-06-22T09:02:13Z</para>
                 /// </summary>
                 [NameInMap("InstanceCreateTime")]
                 [Validation(Required=false)]
                 public string InstanceCreateTime { get; set; }
 
                 /// <summary>
-                /// The time when the data migration task was created. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.
+                /// <para>The time when the data migration task was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-06-22T08:53:55Z</para>
                 /// </summary>
                 [NameInMap("JobCreateTime")]
                 [Validation(Required=false)]
                 public string JobCreateTime { get; set; }
 
                 /// <summary>
-                /// The specification of the data migration instance. Valid values: **small**, **medium**, **large**, **xlarge**, and **2xlarge**. For more information, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html).
+                /// <para>The specification of the data migration instance. Valid values: <b>small</b>, <b>medium</b>, <b>large</b>, <b>xlarge</b>, and <b>2xlarge</b>. For more information, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2xlarge</para>
                 /// </summary>
                 [NameInMap("MigrationJobClass")]
                 [Validation(Required=false)]
                 public string MigrationJobClass { get; set; }
 
                 /// <summary>
-                /// The ID of the data migration instance.
+                /// <para>The ID of the data migration instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dtson2z28evm33****</para>
                 /// </summary>
                 [NameInMap("MigrationJobID")]
                 [Validation(Required=false)]
                 public string MigrationJobID { get; set; }
 
                 /// <summary>
-                /// The name of the data migration task.
+                /// <para>The name of the data migration task.</para>
                 /// </summary>
                 [NameInMap("MigrationJobName")]
                 [Validation(Required=false)]
                 public string MigrationJobName { get; set; }
 
                 /// <summary>
-                /// The status of the data migration task. Valid values:
+                /// <para>The status of the data migration task. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>NotStarted</b>: The task is not started.</description></item>
+                /// <item><description><b>Prechecking</b>: The task is being prechecked.</description></item>
+                /// <item><description><b>PrecheckFailed</b>: The task failed to pass the precheck.</description></item>
+                /// <item><description><b>Migrating</b>: The task is migrating data.</description></item>
+                /// <item><description><b>Suspending</b>: The task is paused.</description></item>
+                /// <item><description><b>MigrationFailed</b>: The task failed to migrate data.</description></item>
+                /// <item><description><b>Finished</b>: The task is completed.</description></item>
+                /// </list>
                 /// 
-                /// *   **NotStarted**: The task is not started.
-                /// *   **Prechecking**: The task is being prechecked.
-                /// *   **PrecheckFailed**: The task failed to pass the precheck.
-                /// *   **Migrating**: The task is migrating data.
-                /// *   **Suspending**: The task is paused.
-                /// *   **MigrationFailed**: The task failed to migrate data.
-                /// *   **Finished**: The task is completed.
+                /// <b>Example:</b>
+                /// <para>Migrating</para>
                 /// </summary>
                 [NameInMap("MigrationJobStatus")]
                 [Validation(Required=false)]
                 public string MigrationJobStatus { get; set; }
 
                 /// <summary>
-                /// The migration types.
+                /// <para>The migration types.</para>
                 /// </summary>
                 [NameInMap("MigrationMode")]
                 [Validation(Required=false)]
                 public DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobMigrationMode MigrationMode { get; set; }
                 public class DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobMigrationMode : TeaModel {
                     /// <summary>
-                    /// Indicates whether full data migration is performed. Valid values:
+                    /// <para>Indicates whether full data migration is performed. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>true</b>: yes</description></item>
+                    /// <item><description><b>false</b>: no</description></item>
+                    /// </list>
                     /// 
-                    /// *   **true**: yes
-                    /// *   **false**: no
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("DataInitialization")]
                     [Validation(Required=false)]
                     public bool? DataInitialization { get; set; }
 
                     /// <summary>
-                    /// Indicates whether incremental data migration is performed. Valid values:
+                    /// <para>Indicates whether incremental data migration is performed. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>true</b>: yes</description></item>
+                    /// <item><description><b>false</b>: no</description></item>
+                    /// </list>
                     /// 
-                    /// *   **true**: yes
-                    /// *   **false**: no
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("DataSynchronization")]
                     [Validation(Required=false)]
                     public bool? DataSynchronization { get; set; }
 
                     /// <summary>
-                    /// Indicates whether schema migration is performed. Valid values:
+                    /// <para>Indicates whether schema migration is performed. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>true</b>: yes</description></item>
+                    /// <item><description><b>false</b>: no</description></item>
+                    /// </list>
                     /// 
-                    /// *   **true**: yes
-                    /// *   **false**: no
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("StructureInitialization")]
                     [Validation(Required=false)]
@@ -274,7 +355,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 }
 
                 /// <summary>
-                /// The objects that are migrated by the task.
+                /// <para>The objects that are migrated by the task.</para>
                 /// </summary>
                 [NameInMap("MigrationObject")]
                 [Validation(Required=false)]
@@ -285,14 +366,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                     public List<DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobMigrationObjectSynchronousObject> SynchronousObject { get; set; }
                     public class DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobMigrationObjectSynchronousObject : TeaModel {
                         /// <summary>
-                        /// The name of the database to which the migration object in the source instance belongs.
+                        /// <para>The name of the database to which the migration object in the source instance belongs.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>dtstestdata</para>
                         /// </summary>
                         [NameInMap("DatabaseName")]
                         [Validation(Required=false)]
                         public string DatabaseName { get; set; }
 
                         /// <summary>
-                        /// The names of the migrated tables.
+                        /// <para>The names of the migrated tables.</para>
                         /// </summary>
                         [NameInMap("TableList")]
                         [Validation(Required=false)]
@@ -305,10 +389,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                         }
 
                         /// <summary>
-                        /// Indicates whether an entire database is migrated. Valid values:
+                        /// <para>Indicates whether an entire database is migrated. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b>: yes</description></item>
+                        /// <item><description><b>false</b>: no</description></item>
+                        /// </list>
                         /// 
-                        /// *   **true**: yes
-                        /// *   **false**: no
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("WholeDatabase")]
                         [Validation(Required=false)]
@@ -319,31 +407,41 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 }
 
                 /// <summary>
-                /// The billing method of the data migration instance. The value is **PostPaid** (pay-as-you-go).
+                /// <para>The billing method of the data migration instance. The value is <b>PostPaid</b> (pay-as-you-go).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PostPaid</para>
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// The precheck details.
+                /// <para>The precheck details.</para>
                 /// </summary>
                 [NameInMap("Precheck")]
                 [Validation(Required=false)]
                 public DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobPrecheck Precheck { get; set; }
                 public class DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobPrecheck : TeaModel {
                     /// <summary>
-                    /// The precheck progress. Unit: %.
+                    /// <para>The precheck progress. Unit: %.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
                     /// </summary>
                     [NameInMap("Percent")]
                     [Validation(Required=false)]
                     public string Percent { get; set; }
 
                     /// <summary>
-                    /// The precheck result. Valid values:
+                    /// <para>The precheck result. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>Success</b>: The task passed the precheck.</description></item>
+                    /// <item><description><b>Failed</b>: The task failed to pass the precheck.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **Success**: The task passed the precheck.
-                    /// *   **Failed**: The task failed to pass the precheck.
+                    /// <b>Example:</b>
+                    /// <para>Success</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -352,63 +450,87 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 }
 
                 /// <summary>
-                /// The connection settings of the source instance.
+                /// <para>The connection settings of the source instance.</para>
                 /// </summary>
                 [NameInMap("SourceEndpoint")]
                 [Validation(Required=false)]
                 public DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobSourceEndpoint SourceEndpoint { get; set; }
                 public class DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobSourceEndpoint : TeaModel {
                     /// <summary>
-                    /// The name of the database to which the migration object in the source instance belongs.
+                    /// <para>The name of the database to which the migration object in the source instance belongs.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>dtstestdata</para>
                     /// </summary>
                     [NameInMap("DatabaseName")]
                     [Validation(Required=false)]
                     public string DatabaseName { get; set; }
 
                     /// <summary>
-                    /// The database type of the source instance.
+                    /// <para>The database type of the source instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>MySQL</para>
                     /// </summary>
                     [NameInMap("EngineName")]
                     [Validation(Required=false)]
                     public string EngineName { get; set; }
 
                     /// <summary>
-                    /// The endpoint of the source instance.
+                    /// <para>The endpoint of the source instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>172.16.88.***</para>
                     /// </summary>
                     [NameInMap("IP")]
                     [Validation(Required=false)]
                     public string IP { get; set; }
 
                     /// <summary>
-                    /// The ID of the source instance.
+                    /// <para>The ID of the source instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>rm-bp1i99e8l7913****</para>
                     /// </summary>
                     [NameInMap("InstanceID")]
                     [Validation(Required=false)]
                     public string InstanceID { get; set; }
 
                     /// <summary>
-                    /// The type of the source instance.
+                    /// <para>The type of the source instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>RDS</para>
                     /// </summary>
                     [NameInMap("InstanceType")]
                     [Validation(Required=false)]
                     public string InstanceType { get; set; }
 
                     /// <summary>
-                    /// This parameter is returned only if the database type of the source instance is **Oracle**.
+                    /// <para>This parameter is returned only if the database type of the source instance is <b>Oracle</b>.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testsid</para>
                     /// </summary>
                     [NameInMap("OracleSID")]
                     [Validation(Required=false)]
                     public string OracleSID { get; set; }
 
                     /// <summary>
-                    /// The database service port of the source instance.
+                    /// <para>The database service port of the source instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3306</para>
                     /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public string Port { get; set; }
 
                     /// <summary>
-                    /// The database account of the source instance.
+                    /// <para>The database account of the source instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>dtstest</para>
                     /// </summary>
                     [NameInMap("UserName")]
                     [Validation(Required=false)]
@@ -417,40 +539,53 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 }
 
                 /// <summary>
-                /// The details of schema migration.
+                /// <para>The details of schema migration.</para>
                 /// </summary>
                 [NameInMap("StructureInitialization")]
                 [Validation(Required=false)]
                 public DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobStructureInitialization StructureInitialization { get; set; }
                 public class DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobStructureInitialization : TeaModel {
                     /// <summary>
-                    /// The error message returned if schema migration failed.
+                    /// <para>The error message returned if schema migration failed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</para>
                     /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
                     /// <summary>
-                    /// The progress of schema migration. Unit: %.
+                    /// <para>The progress of schema migration. Unit: %.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
                     /// </summary>
                     [NameInMap("Percent")]
                     [Validation(Required=false)]
                     public string Percent { get; set; }
 
                     /// <summary>
-                    /// The number of tables whose schemas have been migrated.
+                    /// <para>The number of tables whose schemas have been migrated.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Progress")]
                     [Validation(Required=false)]
                     public string Progress { get; set; }
 
                     /// <summary>
-                    /// The status of schema migration. Valid values:
+                    /// <para>The status of schema migration. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>NotStarted</b>: Schema migration is not started.</description></item>
+                    /// <item><description><b>Migrating</b>: Schema migration is in progress.</description></item>
+                    /// <item><description><b>Failed</b>: Schema migration failed.</description></item>
+                    /// <item><description><b>Finished</b>: Schema migration is completed.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **NotStarted**: Schema migration is not started.
-                    /// *   **Migrating**: Schema migration is in progress.
-                    /// *   **Failed**: Schema migration failed.
-                    /// *   **Finished**: Schema migration is completed.
+                    /// <b>Example:</b>
+                    /// <para>Finished</para>
                     /// </summary>
                     [NameInMap("status")]
                     [Validation(Required=false)]
@@ -459,7 +594,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 }
 
                 /// <summary>
-                /// The collection of tags.
+                /// <para>The collection of tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -470,14 +605,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                     public List<DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobTagsTag> Tag { get; set; }
                     public class DescribeMigrationJobsResponseBodyMigrationJobsMigrationJobTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// <para>The tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>testkey1</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value that corresponds to the tag key.
+                        /// <para>The tag value that corresponds to the tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>testvalue1</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -492,35 +633,50 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The maximum number of entries that can be displayed on the current page.
+        /// <para>The maximum number of entries that can be displayed on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0ED4846D-ED60-435D-88C0-7EC0CE4D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful.
+        /// <para>Indicates whether the call was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// The total number of data migration instances that belong to your Alibaba Cloud account.
+        /// <para>The total number of data migration instances that belong to your Alibaba Cloud account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
