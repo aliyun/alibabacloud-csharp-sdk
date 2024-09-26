@@ -1,3 +1,7 @@
+2024-09-26 Version: 2.0.8
+- Update API DescribeClusterAccessWhiteList: add param RegionId.
+
+
 2024-09-24 Version: 2.0.7
 - Update API CreateDBCluster: add param CloneSourceRegionId.
 - Update API CreateDBCluster: update param ProductForm.
