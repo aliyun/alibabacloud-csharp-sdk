@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("EnableAutomaticRotation")]
+        [Validation(Required=false)]
+        public string EnableAutomaticRotation { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable automatic encryption for new tables. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ON</b></description></item>

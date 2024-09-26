@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string AllowShutDown { get; set; }
 
+        [NameInMap("CrontabJobId")]
+        [Validation(Required=false)]
+        public string CrontabJobId { get; set; }
+
         /// <summary>
         /// <para>The ID of the serverless cluster.</para>
         /// <para>This parameter is required.</para>
@@ -177,6 +181,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ServerlessRuleMode")]
         [Validation(Required=false)]
         public string ServerlessRuleMode { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterTDEResponseBody : TeaModel {
+        [NameInMap("AutomaticRotation")]
+        [Validation(Required=false)]
+        public string AutomaticRotation { get; set; }
+
         /// <summary>
         /// <para>The ID of the cluster.</para>
         /// 
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("RotationInterval")]
+        [Validation(Required=false)]
+        public string RotationInterval { get; set; }
 
         /// <summary>
         /// <para>The region where the TDE key resides.</para>

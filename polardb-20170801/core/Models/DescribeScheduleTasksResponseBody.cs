@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string Action { get; set; }
 
+                [NameInMap("CrontabJobId")]
+                [Validation(Required=false)]
+                public string CrontabJobId { get; set; }
+
                 /// <summary>
                 /// <para>The cluster ID.</para>
                 /// 
