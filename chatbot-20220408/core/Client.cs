@@ -37,13 +37,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 申请流式网关AccessToken
-         *
-         * @param request ApplyForStreamAccessTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApplyForStreamAccessTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>申请流式网关AccessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyForStreamAccessTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyForStreamAccessTokenResponse
+        /// </returns>
         public ApplyForStreamAccessTokenResponse ApplyForStreamAccessTokenWithOptions(ApplyForStreamAccessTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -71,13 +79,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ApplyForStreamAccessTokenResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 申请流式网关AccessToken
-         *
-         * @param request ApplyForStreamAccessTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApplyForStreamAccessTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>申请流式网关AccessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyForStreamAccessTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyForStreamAccessTokenResponse
+        /// </returns>
         public async Task<ApplyForStreamAccessTokenResponse> ApplyForStreamAccessTokenWithOptionsAsync(ApplyForStreamAccessTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -105,37 +121,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ApplyForStreamAccessTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 申请流式网关AccessToken
-         *
-         * @param request ApplyForStreamAccessTokenRequest
-         * @return ApplyForStreamAccessTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>申请流式网关AccessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyForStreamAccessTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyForStreamAccessTokenResponse
+        /// </returns>
         public ApplyForStreamAccessTokenResponse ApplyForStreamAccessToken(ApplyForStreamAccessTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ApplyForStreamAccessTokenWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 申请流式网关AccessToken
-         *
-         * @param request ApplyForStreamAccessTokenRequest
-         * @return ApplyForStreamAccessTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>申请流式网关AccessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyForStreamAccessTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyForStreamAccessTokenResponse
+        /// </returns>
         public async Task<ApplyForStreamAccessTokenResponse> ApplyForStreamAccessTokenAsync(ApplyForStreamAccessTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ApplyForStreamAccessTokenWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 会话-联想API
-         *
-         * @param tmpReq AssociateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AssociateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>会话-联想API</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AssociateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateResponse
+        /// </returns>
         public AssociateResponse AssociateWithOptions(AssociateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -189,13 +225,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<AssociateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 会话-联想API
-         *
-         * @param tmpReq AssociateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AssociateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>会话-联想API</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AssociateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateResponse
+        /// </returns>
         public async Task<AssociateResponse> AssociateWithOptionsAsync(AssociateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -249,37 +293,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<AssociateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 会话-联想API
-         *
-         * @param request AssociateRequest
-         * @return AssociateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>会话-联想API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateResponse
+        /// </returns>
         public AssociateResponse Associate(AssociateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 会话-联想API
-         *
-         * @param request AssociateRequest
-         * @return AssociateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>会话-联想API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateResponse
+        /// </returns>
         public async Task<AssociateResponse> AssociateAsync(AssociateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取欢迎语
-         *
-         * @param request BeginSessionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BeginSessionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取欢迎语</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BeginSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginSessionResponse
+        /// </returns>
         public BeginSessionResponse BeginSessionWithOptions(BeginSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -311,13 +375,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<BeginSessionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取欢迎语
-         *
-         * @param request BeginSessionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BeginSessionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取欢迎语</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BeginSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginSessionResponse
+        /// </returns>
         public async Task<BeginSessionResponse> BeginSessionWithOptionsAsync(BeginSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -349,37 +421,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<BeginSessionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取欢迎语
-         *
-         * @param request BeginSessionRequest
-         * @return BeginSessionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取欢迎语</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BeginSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginSessionResponse
+        /// </returns>
         public BeginSessionResponse BeginSession(BeginSessionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BeginSessionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取欢迎语
-         *
-         * @param request BeginSessionRequest
-         * @return BeginSessionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取欢迎语</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BeginSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginSessionResponse
+        /// </returns>
         public async Task<BeginSessionResponse> BeginSessionAsync(BeginSessionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BeginSessionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 取消机器人发布
-         *
-         * @param request CancelInstancePublishTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消机器人发布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelInstancePublishTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelInstancePublishTaskResponse
+        /// </returns>
         public CancelInstancePublishTaskResponse CancelInstancePublishTaskWithOptions(CancelInstancePublishTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -415,13 +507,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CancelInstancePublishTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消机器人发布
-         *
-         * @param request CancelInstancePublishTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消机器人发布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelInstancePublishTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelInstancePublishTaskResponse
+        /// </returns>
         public async Task<CancelInstancePublishTaskResponse> CancelInstancePublishTaskWithOptionsAsync(CancelInstancePublishTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -457,37 +557,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CancelInstancePublishTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消机器人发布
-         *
-         * @param request CancelInstancePublishTaskRequest
-         * @return CancelInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消机器人发布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelInstancePublishTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelInstancePublishTaskResponse
+        /// </returns>
         public CancelInstancePublishTaskResponse CancelInstancePublishTask(CancelInstancePublishTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelInstancePublishTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 取消机器人发布
-         *
-         * @param request CancelInstancePublishTaskRequest
-         * @return CancelInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消机器人发布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelInstancePublishTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelInstancePublishTaskResponse
+        /// </returns>
         public async Task<CancelInstancePublishTaskResponse> CancelInstancePublishTaskAsync(CancelInstancePublishTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelInstancePublishTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 取消发布任务
-         *
-         * @param request CancelPublishTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelPublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelPublishTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelPublishTaskResponse
+        /// </returns>
         public CancelPublishTaskResponse CancelPublishTaskWithOptions(CancelPublishTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -519,13 +639,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CancelPublishTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消发布任务
-         *
-         * @param request CancelPublishTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelPublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelPublishTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelPublishTaskResponse
+        /// </returns>
         public async Task<CancelPublishTaskResponse> CancelPublishTaskWithOptionsAsync(CancelPublishTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -557,37 +685,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CancelPublishTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消发布任务
-         *
-         * @param request CancelPublishTaskRequest
-         * @return CancelPublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelPublishTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelPublishTaskResponse
+        /// </returns>
         public CancelPublishTaskResponse CancelPublishTask(CancelPublishTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelPublishTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 取消发布任务
-         *
-         * @param request CancelPublishTaskRequest
-         * @return CancelPublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelPublishTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelPublishTaskResponse
+        /// </returns>
         public async Task<CancelPublishTaskResponse> CancelPublishTaskAsync(CancelPublishTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelPublishTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 会话API
-         *
-         * @param tmpReq ChatRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChatResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>会话API</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ChatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatResponse
+        /// </returns>
         public ChatResponse ChatWithOptions(ChatRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -661,13 +809,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ChatResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 会话API
-         *
-         * @param tmpReq ChatRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChatResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>会话API</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ChatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatResponse
+        /// </returns>
         public async Task<ChatResponse> ChatWithOptionsAsync(ChatRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -741,37 +897,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ChatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 会话API
-         *
-         * @param request ChatRequest
-         * @return ChatResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>会话API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatResponse
+        /// </returns>
         public ChatResponse Chat(ChatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChatWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 会话API
-         *
-         * @param request ChatRequest
-         * @return ChatResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>会话API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatResponse
+        /// </returns>
         public async Task<ChatResponse> ChatAsync(ChatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChatWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 继续机器人发布
-         *
-         * @param request ContinueInstancePublishTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ContinueInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>继续机器人发布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContinueInstancePublishTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContinueInstancePublishTaskResponse
+        /// </returns>
         public ContinueInstancePublishTaskResponse ContinueInstancePublishTaskWithOptions(ContinueInstancePublishTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -807,13 +983,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ContinueInstancePublishTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 继续机器人发布
-         *
-         * @param request ContinueInstancePublishTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ContinueInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>继续机器人发布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContinueInstancePublishTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContinueInstancePublishTaskResponse
+        /// </returns>
         public async Task<ContinueInstancePublishTaskResponse> ContinueInstancePublishTaskWithOptionsAsync(ContinueInstancePublishTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -849,37 +1033,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ContinueInstancePublishTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 继续机器人发布
-         *
-         * @param request ContinueInstancePublishTaskRequest
-         * @return ContinueInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>继续机器人发布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContinueInstancePublishTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContinueInstancePublishTaskResponse
+        /// </returns>
         public ContinueInstancePublishTaskResponse ContinueInstancePublishTask(ContinueInstancePublishTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ContinueInstancePublishTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 继续机器人发布
-         *
-         * @param request ContinueInstancePublishTaskRequest
-         * @return ContinueInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>继续机器人发布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContinueInstancePublishTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContinueInstancePublishTaskResponse
+        /// </returns>
         public async Task<ContinueInstancePublishTaskResponse> ContinueInstancePublishTaskAsync(ContinueInstancePublishTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ContinueInstancePublishTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 新增类目
-         *
-         * @param request CreateCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCategoryResponse
+        /// </returns>
         public CreateCategoryResponse CreateCategoryWithOptions(CreateCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -925,13 +1129,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateCategoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 新增类目
-         *
-         * @param request CreateCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCategoryResponse
+        /// </returns>
         public async Task<CreateCategoryResponse> CreateCategoryWithOptionsAsync(CreateCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -977,37 +1189,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateCategoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 新增类目
-         *
-         * @param request CreateCategoryRequest
-         * @return CreateCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCategoryResponse
+        /// </returns>
         public CreateCategoryResponse CreateCategory(CreateCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCategoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 新增类目
-         *
-         * @param request CreateCategoryRequest
-         * @return CreateCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCategoryResponse
+        /// </returns>
         public async Task<CreateCategoryResponse> CreateCategoryAsync(CreateCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCategoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 新建FAQ关联问
-         *
-         * @param request CreateConnQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConnQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnQuestionResponse
+        /// </returns>
         public CreateConnQuestionResponse CreateConnQuestionWithOptions(CreateConnQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1045,13 +1277,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateConnQuestionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 新建FAQ关联问
-         *
-         * @param request CreateConnQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConnQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnQuestionResponse
+        /// </returns>
         public async Task<CreateConnQuestionResponse> CreateConnQuestionWithOptionsAsync(CreateConnQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1089,37 +1329,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateConnQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 新建FAQ关联问
-         *
-         * @param request CreateConnQuestionRequest
-         * @return CreateConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConnQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnQuestionResponse
+        /// </returns>
         public CreateConnQuestionResponse CreateConnQuestion(CreateConnQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateConnQuestionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 新建FAQ关联问
-         *
-         * @param request CreateConnQuestionRequest
-         * @return CreateConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConnQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnQuestionResponse
+        /// </returns>
         public async Task<CreateConnQuestionResponse> CreateConnQuestionAsync(CreateConnQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateConnQuestionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 实体-创建
-         *
-         * @param request CreateDSEntityRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDSEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDSEntityResponse
+        /// </returns>
         public CreateDSEntityResponse CreateDSEntityWithOptions(CreateDSEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1159,13 +1419,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateDSEntityResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体-创建
-         *
-         * @param request CreateDSEntityRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDSEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDSEntityResponse
+        /// </returns>
         public async Task<CreateDSEntityResponse> CreateDSEntityWithOptionsAsync(CreateDSEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1205,37 +1473,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateDSEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体-创建
-         *
-         * @param request CreateDSEntityRequest
-         * @return CreateDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDSEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDSEntityResponse
+        /// </returns>
         public CreateDSEntityResponse CreateDSEntity(CreateDSEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDSEntityWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 实体-创建
-         *
-         * @param request CreateDSEntityRequest
-         * @return CreateDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDSEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDSEntityResponse
+        /// </returns>
         public async Task<CreateDSEntityResponse> CreateDSEntityAsync(CreateDSEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDSEntityWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 实体成员-创建
-         *
-         * @param tmpReq CreateDSEntityValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDSEntityValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDSEntityValueResponse
+        /// </returns>
         public CreateDSEntityValueResponse CreateDSEntityValueWithOptions(CreateDSEntityValueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1287,13 +1575,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateDSEntityValueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体成员-创建
-         *
-         * @param tmpReq CreateDSEntityValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDSEntityValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDSEntityValueResponse
+        /// </returns>
         public async Task<CreateDSEntityValueResponse> CreateDSEntityValueWithOptionsAsync(CreateDSEntityValueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1345,42 +1641,66 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateDSEntityValueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体成员-创建
-         *
-         * @param request CreateDSEntityValueRequest
-         * @return CreateDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDSEntityValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDSEntityValueResponse
+        /// </returns>
         public CreateDSEntityValueResponse CreateDSEntityValue(CreateDSEntityValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDSEntityValueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 实体成员-创建
-         *
-         * @param request CreateDSEntityValueRequest
-         * @return CreateDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDSEntityValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDSEntityValueResponse
+        /// </returns>
         public async Task<CreateDSEntityValueResponse> CreateDSEntityValueAsync(CreateDSEntityValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDSEntityValueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建文档
-         *
-         * @param tmpReq CreateDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建文档</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocResponse
+        /// </returns>
         public CreateDocResponse CreateDocWithOptions(CreateDocRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDocShrinkRequest request = new CreateDocShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocMetadata))
+            {
+                request.DocMetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocMetadata, "DocMetadata", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
             {
                 request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
@@ -1401,6 +1721,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocMetadataShrink))
+            {
+                query["DocMetadata"] = request.DocMetadataShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
             {
@@ -1445,18 +1769,30 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateDocResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建文档
-         *
-         * @param tmpReq CreateDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建文档</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocResponse
+        /// </returns>
         public async Task<CreateDocResponse> CreateDocWithOptionsAsync(CreateDocRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDocShrinkRequest request = new CreateDocShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocMetadata))
+            {
+                request.DocMetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocMetadata, "DocMetadata", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
             {
                 request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
@@ -1477,6 +1813,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocMetadataShrink))
+            {
+                query["DocMetadata"] = request.DocMetadataShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
             {
@@ -1521,37 +1861,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateDocResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建文档
-         *
-         * @param request CreateDocRequest
-         * @return CreateDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建文档</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocResponse
+        /// </returns>
         public CreateDocResponse CreateDoc(CreateDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDocWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建文档
-         *
-         * @param request CreateDocRequest
-         * @return CreateDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建文档</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocResponse
+        /// </returns>
         public async Task<CreateDocResponse> CreateDocAsync(CreateDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDocWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 新建FAQ
-         *
-         * @param request CreateFaqRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFaqRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFaqResponse
+        /// </returns>
         public CreateFaqResponse CreateFaqWithOptions(CreateFaqRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1605,13 +1965,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateFaqResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 新建FAQ
-         *
-         * @param request CreateFaqRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFaqRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFaqResponse
+        /// </returns>
         public async Task<CreateFaqResponse> CreateFaqWithOptionsAsync(CreateFaqRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1665,37 +2033,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateFaqResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 新建FAQ
-         *
-         * @param request CreateFaqRequest
-         * @return CreateFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFaqRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFaqResponse
+        /// </returns>
         public CreateFaqResponse CreateFaq(CreateFaqRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFaqWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 新建FAQ
-         *
-         * @param request CreateFaqRequest
-         * @return CreateFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFaqRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFaqResponse
+        /// </returns>
         public async Task<CreateFaqResponse> CreateFaqAsync(CreateFaqRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFaqWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 机器人-创建
-         *
-         * @param request CreateInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1739,13 +2127,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-创建
-         *
-         * @param request CreateInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1789,37 +2185,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-创建
-         *
-         * @param request CreateInstanceRequest
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstance(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 机器人-创建
-         *
-         * @param request CreateInstanceRequest
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceAsync(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建机器人发布任务
-         *
-         * @param request CreateInstancePublishTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建机器人发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstancePublishTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstancePublishTaskResponse
+        /// </returns>
         public CreateInstancePublishTaskResponse CreateInstancePublishTaskWithOptions(CreateInstancePublishTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1851,13 +2267,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateInstancePublishTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建机器人发布任务
-         *
-         * @param request CreateInstancePublishTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建机器人发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstancePublishTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstancePublishTaskResponse
+        /// </returns>
         public async Task<CreateInstancePublishTaskResponse> CreateInstancePublishTaskWithOptionsAsync(CreateInstancePublishTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1889,37 +2313,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateInstancePublishTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建机器人发布任务
-         *
-         * @param request CreateInstancePublishTaskRequest
-         * @return CreateInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建机器人发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstancePublishTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstancePublishTaskResponse
+        /// </returns>
         public CreateInstancePublishTaskResponse CreateInstancePublishTask(CreateInstancePublishTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateInstancePublishTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建机器人发布任务
-         *
-         * @param request CreateInstancePublishTaskRequest
-         * @return CreateInstancePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建机器人发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstancePublishTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstancePublishTaskResponse
+        /// </returns>
         public async Task<CreateInstancePublishTaskResponse> CreateInstancePublishTaskAsync(CreateInstancePublishTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateInstancePublishTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-创建
-         *
-         * @param tmpReq CreateIntentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateIntentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIntentResponse
+        /// </returns>
         public CreateIntentResponse CreateIntentWithOptions(CreateIntentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1961,13 +2405,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateIntentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-创建
-         *
-         * @param tmpReq CreateIntentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateIntentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIntentResponse
+        /// </returns>
         public async Task<CreateIntentResponse> CreateIntentWithOptionsAsync(CreateIntentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2009,37 +2461,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateIntentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-创建
-         *
-         * @param request CreateIntentRequest
-         * @return CreateIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIntentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIntentResponse
+        /// </returns>
         public CreateIntentResponse CreateIntent(CreateIntentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateIntentWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-创建
-         *
-         * @param request CreateIntentRequest
-         * @return CreateIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIntentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIntentResponse
+        /// </returns>
         public async Task<CreateIntentResponse> CreateIntentAsync(CreateIntentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateIntentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-LGF-创建
-         *
-         * @param tmpReq CreateLgfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateLgfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLgfResponse
+        /// </returns>
         public CreateLgfResponse CreateLgfWithOptions(CreateLgfRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2081,13 +2553,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateLgfResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-LGF-创建
-         *
-         * @param tmpReq CreateLgfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateLgfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLgfResponse
+        /// </returns>
         public async Task<CreateLgfResponse> CreateLgfWithOptionsAsync(CreateLgfRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2129,37 +2609,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateLgfResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-LGF-创建
-         *
-         * @param request CreateLgfRequest
-         * @return CreateLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLgfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLgfResponse
+        /// </returns>
         public CreateLgfResponse CreateLgf(CreateLgfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateLgfWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-LGF-创建
-         *
-         * @param request CreateLgfRequest
-         * @return CreateLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLgfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLgfResponse
+        /// </returns>
         public async Task<CreateLgfResponse> CreateLgfAsync(CreateLgfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateLgfWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 视角-创建
-         *
-         * @param request CreatePerspectiveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePerspectiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePerspectiveResponse
+        /// </returns>
         public CreatePerspectiveResponse CreatePerspectiveWithOptions(CreatePerspectiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2195,13 +2695,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreatePerspectiveResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 视角-创建
-         *
-         * @param request CreatePerspectiveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePerspectiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePerspectiveResponse
+        /// </returns>
         public async Task<CreatePerspectiveResponse> CreatePerspectiveWithOptionsAsync(CreatePerspectiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2237,37 +2745,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreatePerspectiveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 视角-创建
-         *
-         * @param request CreatePerspectiveRequest
-         * @return CreatePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePerspectiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePerspectiveResponse
+        /// </returns>
         public CreatePerspectiveResponse CreatePerspective(CreatePerspectiveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreatePerspectiveWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 视角-创建
-         *
-         * @param request CreatePerspectiveRequest
-         * @return CreatePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePerspectiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePerspectiveResponse
+        /// </returns>
         public async Task<CreatePerspectiveResponse> CreatePerspectiveAsync(CreatePerspectiveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePerspectiveWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建发布任务
-         *
-         * @param tmpReq CreatePublishTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePublishTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePublishTaskResponse
+        /// </returns>
         public CreatePublishTaskResponse CreatePublishTaskWithOptions(CreatePublishTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2309,13 +2837,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreatePublishTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建发布任务
-         *
-         * @param tmpReq CreatePublishTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePublishTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePublishTaskResponse
+        /// </returns>
         public async Task<CreatePublishTaskResponse> CreatePublishTaskWithOptionsAsync(CreatePublishTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2357,37 +2893,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreatePublishTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建发布任务
-         *
-         * @param request CreatePublishTaskRequest
-         * @return CreatePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePublishTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePublishTaskResponse
+        /// </returns>
         public CreatePublishTaskResponse CreatePublishTask(CreatePublishTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreatePublishTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建发布任务
-         *
-         * @param request CreatePublishTaskRequest
-         * @return CreatePublishTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePublishTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePublishTaskResponse
+        /// </returns>
         public async Task<CreatePublishTaskResponse> CreatePublishTaskAsync(CreatePublishTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePublishTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 新建FAQ相似问
-         *
-         * @param request CreateSimQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSimQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSimQuestionResponse
+        /// </returns>
         public CreateSimQuestionResponse CreateSimQuestionWithOptions(CreateSimQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2425,13 +2981,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateSimQuestionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 新建FAQ相似问
-         *
-         * @param request CreateSimQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSimQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSimQuestionResponse
+        /// </returns>
         public async Task<CreateSimQuestionResponse> CreateSimQuestionWithOptionsAsync(CreateSimQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2469,37 +3033,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateSimQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 新建FAQ相似问
-         *
-         * @param request CreateSimQuestionRequest
-         * @return CreateSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSimQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSimQuestionResponse
+        /// </returns>
         public CreateSimQuestionResponse CreateSimQuestion(CreateSimQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSimQuestionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 新建FAQ相似问
-         *
-         * @param request CreateSimQuestionRequest
-         * @return CreateSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSimQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSimQuestionResponse
+        /// </returns>
         public async Task<CreateSimQuestionResponse> CreateSimQuestionAsync(CreateSimQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSimQuestionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 新建FAQ答案
-         *
-         * @param request CreateSolutionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSolutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSolutionResponse
+        /// </returns>
         public CreateSolutionResponse CreateSolutionWithOptions(CreateSolutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2543,13 +3127,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateSolutionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 新建FAQ答案
-         *
-         * @param request CreateSolutionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSolutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSolutionResponse
+        /// </returns>
         public async Task<CreateSolutionResponse> CreateSolutionWithOptionsAsync(CreateSolutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2593,37 +3185,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateSolutionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 新建FAQ答案
-         *
-         * @param request CreateSolutionRequest
-         * @return CreateSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSolutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSolutionResponse
+        /// </returns>
         public CreateSolutionResponse CreateSolution(CreateSolutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSolutionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 新建FAQ答案
-         *
-         * @param request CreateSolutionRequest
-         * @return CreateSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSolutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSolutionResponse
+        /// </returns>
         public async Task<CreateSolutionResponse> CreateSolutionAsync(CreateSolutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSolutionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-话术-创建
-         *
-         * @param tmpReq CreateUserSayRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-话术-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateUserSayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserSayResponse
+        /// </returns>
         public CreateUserSayResponse CreateUserSayWithOptions(CreateUserSayRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2665,13 +3277,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateUserSayResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-话术-创建
-         *
-         * @param tmpReq CreateUserSayRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-话术-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateUserSayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserSayResponse
+        /// </returns>
         public async Task<CreateUserSayResponse> CreateUserSayWithOptionsAsync(CreateUserSayRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2713,37 +3333,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateUserSayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-话术-创建
-         *
-         * @param request CreateUserSayRequest
-         * @return CreateUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-话术-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserSayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserSayResponse
+        /// </returns>
         public CreateUserSayResponse CreateUserSay(CreateUserSayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateUserSayWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-话术-创建
-         *
-         * @param request CreateUserSayRequest
-         * @return CreateUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-话术-创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserSayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserSayResponse
+        /// </returns>
         public async Task<CreateUserSayResponse> CreateUserSayAsync(CreateUserSayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUserSayWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除类目
-         *
-         * @param request DeleteCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCategoryResponse
+        /// </returns>
         public DeleteCategoryResponse DeleteCategoryWithOptions(DeleteCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2777,13 +3417,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteCategoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除类目
-         *
-         * @param request DeleteCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCategoryResponse
+        /// </returns>
         public async Task<DeleteCategoryResponse> DeleteCategoryWithOptionsAsync(DeleteCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2817,37 +3465,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteCategoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除类目
-         *
-         * @param request DeleteCategoryRequest
-         * @return DeleteCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCategoryResponse
+        /// </returns>
         public DeleteCategoryResponse DeleteCategory(DeleteCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCategoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除类目
-         *
-         * @param request DeleteCategoryRequest
-         * @return DeleteCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCategoryResponse
+        /// </returns>
         public async Task<DeleteCategoryResponse> DeleteCategoryAsync(DeleteCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCategoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除FAQ关联问
-         *
-         * @param request DeleteConnQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConnQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnQuestionResponse
+        /// </returns>
         public DeleteConnQuestionResponse DeleteConnQuestionWithOptions(DeleteConnQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2881,13 +3549,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteConnQuestionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除FAQ关联问
-         *
-         * @param request DeleteConnQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConnQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnQuestionResponse
+        /// </returns>
         public async Task<DeleteConnQuestionResponse> DeleteConnQuestionWithOptionsAsync(DeleteConnQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2921,37 +3597,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteConnQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除FAQ关联问
-         *
-         * @param request DeleteConnQuestionRequest
-         * @return DeleteConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConnQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnQuestionResponse
+        /// </returns>
         public DeleteConnQuestionResponse DeleteConnQuestion(DeleteConnQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteConnQuestionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除FAQ关联问
-         *
-         * @param request DeleteConnQuestionRequest
-         * @return DeleteConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConnQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnQuestionResponse
+        /// </returns>
         public async Task<DeleteConnQuestionResponse> DeleteConnQuestionAsync(DeleteConnQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteConnQuestionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 实体-删除
-         *
-         * @param request DeleteDSEntityRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDSEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDSEntityResponse
+        /// </returns>
         public DeleteDSEntityResponse DeleteDSEntityWithOptions(DeleteDSEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2987,13 +3683,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteDSEntityResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体-删除
-         *
-         * @param request DeleteDSEntityRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDSEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDSEntityResponse
+        /// </returns>
         public async Task<DeleteDSEntityResponse> DeleteDSEntityWithOptionsAsync(DeleteDSEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3029,37 +3733,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteDSEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体-删除
-         *
-         * @param request DeleteDSEntityRequest
-         * @return DeleteDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDSEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDSEntityResponse
+        /// </returns>
         public DeleteDSEntityResponse DeleteDSEntity(DeleteDSEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDSEntityWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 实体-删除
-         *
-         * @param request DeleteDSEntityRequest
-         * @return DeleteDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDSEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDSEntityResponse
+        /// </returns>
         public async Task<DeleteDSEntityResponse> DeleteDSEntityAsync(DeleteDSEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDSEntityWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 实体成员-删除
-         *
-         * @param request DeleteDSEntityValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDSEntityValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDSEntityValueResponse
+        /// </returns>
         public DeleteDSEntityValueResponse DeleteDSEntityValueWithOptions(DeleteDSEntityValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3099,13 +3823,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteDSEntityValueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体成员-删除
-         *
-         * @param request DeleteDSEntityValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDSEntityValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDSEntityValueResponse
+        /// </returns>
         public async Task<DeleteDSEntityValueResponse> DeleteDSEntityValueWithOptionsAsync(DeleteDSEntityValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3145,37 +3877,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteDSEntityValueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体成员-删除
-         *
-         * @param request DeleteDSEntityValueRequest
-         * @return DeleteDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDSEntityValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDSEntityValueResponse
+        /// </returns>
         public DeleteDSEntityValueResponse DeleteDSEntityValue(DeleteDSEntityValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDSEntityValueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 实体成员-删除
-         *
-         * @param request DeleteDSEntityValueRequest
-         * @return DeleteDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDSEntityValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDSEntityValueResponse
+        /// </returns>
         public async Task<DeleteDSEntityValueResponse> DeleteDSEntityValueAsync(DeleteDSEntityValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDSEntityValueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 文档删除
-         *
-         * @param request DeleteDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDocResponse
+        /// </returns>
         public DeleteDocResponse DeleteDocWithOptions(DeleteDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3207,13 +3959,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteDocResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档删除
-         *
-         * @param request DeleteDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDocResponse
+        /// </returns>
         public async Task<DeleteDocResponse> DeleteDocWithOptionsAsync(DeleteDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3245,37 +4005,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteDocResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档删除
-         *
-         * @param request DeleteDocRequest
-         * @return DeleteDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDocResponse
+        /// </returns>
         public DeleteDocResponse DeleteDoc(DeleteDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDocWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档删除
-         *
-         * @param request DeleteDocRequest
-         * @return DeleteDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDocResponse
+        /// </returns>
         public async Task<DeleteDocResponse> DeleteDocAsync(DeleteDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDocWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除FAQ，如果是已发布的知识，删除之后，变成已删除未发布，需要发布才能真正删除
-         *
-         * @param request DeleteFaqRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ，如果是已发布的知识，删除之后，变成已删除未发布，需要发布才能真正删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaqRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaqResponse
+        /// </returns>
         public DeleteFaqResponse DeleteFaqWithOptions(DeleteFaqRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3309,13 +4089,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteFaqResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除FAQ，如果是已发布的知识，删除之后，变成已删除未发布，需要发布才能真正删除
-         *
-         * @param request DeleteFaqRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ，如果是已发布的知识，删除之后，变成已删除未发布，需要发布才能真正删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaqRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaqResponse
+        /// </returns>
         public async Task<DeleteFaqResponse> DeleteFaqWithOptionsAsync(DeleteFaqRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3349,37 +4137,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteFaqResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除FAQ，如果是已发布的知识，删除之后，变成已删除未发布，需要发布才能真正删除
-         *
-         * @param request DeleteFaqRequest
-         * @return DeleteFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ，如果是已发布的知识，删除之后，变成已删除未发布，需要发布才能真正删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaqRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaqResponse
+        /// </returns>
         public DeleteFaqResponse DeleteFaq(DeleteFaqRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFaqWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除FAQ，如果是已发布的知识，删除之后，变成已删除未发布，需要发布才能真正删除
-         *
-         * @param request DeleteFaqRequest
-         * @return DeleteFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ，如果是已发布的知识，删除之后，变成已删除未发布，需要发布才能真正删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaqRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaqResponse
+        /// </returns>
         public async Task<DeleteFaqResponse> DeleteFaqAsync(DeleteFaqRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFaqWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 机器人-删除
-         *
-         * @param request DeleteInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstanceWithOptions(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3411,13 +4219,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-删除
-         *
-         * @param request DeleteInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3449,37 +4265,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-删除
-         *
-         * @param request DeleteInstanceRequest
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 机器人-删除
-         *
-         * @param request DeleteInstanceRequest
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceAsync(DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-删除
-         *
-         * @param request DeleteIntentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIntentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIntentResponse
+        /// </returns>
         public DeleteIntentResponse DeleteIntentWithOptions(DeleteIntentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3515,13 +4351,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteIntentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-删除
-         *
-         * @param request DeleteIntentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIntentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIntentResponse
+        /// </returns>
         public async Task<DeleteIntentResponse> DeleteIntentWithOptionsAsync(DeleteIntentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3557,37 +4401,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteIntentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-删除
-         *
-         * @param request DeleteIntentRequest
-         * @return DeleteIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIntentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIntentResponse
+        /// </returns>
         public DeleteIntentResponse DeleteIntent(DeleteIntentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteIntentWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-删除
-         *
-         * @param request DeleteIntentRequest
-         * @return DeleteIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIntentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIntentResponse
+        /// </returns>
         public async Task<DeleteIntentResponse> DeleteIntentAsync(DeleteIntentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteIntentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-LGF-删除
-         *
-         * @param request DeleteLgfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLgfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLgfResponse
+        /// </returns>
         public DeleteLgfResponse DeleteLgfWithOptions(DeleteLgfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3627,13 +4491,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteLgfResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-LGF-删除
-         *
-         * @param request DeleteLgfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLgfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLgfResponse
+        /// </returns>
         public async Task<DeleteLgfResponse> DeleteLgfWithOptionsAsync(DeleteLgfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3673,37 +4545,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteLgfResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-LGF-删除
-         *
-         * @param request DeleteLgfRequest
-         * @return DeleteLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLgfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLgfResponse
+        /// </returns>
         public DeleteLgfResponse DeleteLgf(DeleteLgfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteLgfWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-LGF-删除
-         *
-         * @param request DeleteLgfRequest
-         * @return DeleteLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLgfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLgfResponse
+        /// </returns>
         public async Task<DeleteLgfResponse> DeleteLgfAsync(DeleteLgfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteLgfWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 视角-删除
-         *
-         * @param request DeletePerspectiveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeletePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePerspectiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePerspectiveResponse
+        /// </returns>
         public DeletePerspectiveResponse DeletePerspectiveWithOptions(DeletePerspectiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3735,13 +4627,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeletePerspectiveResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 视角-删除
-         *
-         * @param request DeletePerspectiveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeletePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePerspectiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePerspectiveResponse
+        /// </returns>
         public async Task<DeletePerspectiveResponse> DeletePerspectiveWithOptionsAsync(DeletePerspectiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3773,37 +4673,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeletePerspectiveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 视角-删除
-         *
-         * @param request DeletePerspectiveRequest
-         * @return DeletePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePerspectiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePerspectiveResponse
+        /// </returns>
         public DeletePerspectiveResponse DeletePerspective(DeletePerspectiveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeletePerspectiveWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 视角-删除
-         *
-         * @param request DeletePerspectiveRequest
-         * @return DeletePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePerspectiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePerspectiveResponse
+        /// </returns>
         public async Task<DeletePerspectiveResponse> DeletePerspectiveAsync(DeletePerspectiveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeletePerspectiveWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除FAQ相似问
-         *
-         * @param request DeleteSimQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSimQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSimQuestionResponse
+        /// </returns>
         public DeleteSimQuestionResponse DeleteSimQuestionWithOptions(DeleteSimQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3837,13 +4757,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteSimQuestionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除FAQ相似问
-         *
-         * @param request DeleteSimQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSimQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSimQuestionResponse
+        /// </returns>
         public async Task<DeleteSimQuestionResponse> DeleteSimQuestionWithOptionsAsync(DeleteSimQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3877,37 +4805,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteSimQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除FAQ相似问
-         *
-         * @param request DeleteSimQuestionRequest
-         * @return DeleteSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSimQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSimQuestionResponse
+        /// </returns>
         public DeleteSimQuestionResponse DeleteSimQuestion(DeleteSimQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSimQuestionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除FAQ相似问
-         *
-         * @param request DeleteSimQuestionRequest
-         * @return DeleteSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSimQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSimQuestionResponse
+        /// </returns>
         public async Task<DeleteSimQuestionResponse> DeleteSimQuestionAsync(DeleteSimQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSimQuestionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除FAQ答案
-         *
-         * @param request DeleteSolutionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSolutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSolutionResponse
+        /// </returns>
         public DeleteSolutionResponse DeleteSolutionWithOptions(DeleteSolutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3941,13 +4889,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteSolutionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除FAQ答案
-         *
-         * @param request DeleteSolutionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSolutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSolutionResponse
+        /// </returns>
         public async Task<DeleteSolutionResponse> DeleteSolutionWithOptionsAsync(DeleteSolutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3981,37 +4937,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteSolutionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除FAQ答案
-         *
-         * @param request DeleteSolutionRequest
-         * @return DeleteSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSolutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSolutionResponse
+        /// </returns>
         public DeleteSolutionResponse DeleteSolution(DeleteSolutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSolutionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除FAQ答案
-         *
-         * @param request DeleteSolutionRequest
-         * @return DeleteSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSolutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSolutionResponse
+        /// </returns>
         public async Task<DeleteSolutionResponse> DeleteSolutionAsync(DeleteSolutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSolutionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-用户话术-删除
-         *
-         * @param request DeleteUserSayRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-用户话术-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserSayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserSayResponse
+        /// </returns>
         public DeleteUserSayResponse DeleteUserSayWithOptions(DeleteUserSayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4051,13 +5027,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteUserSayResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-用户话术-删除
-         *
-         * @param request DeleteUserSayRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-用户话术-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserSayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserSayResponse
+        /// </returns>
         public async Task<DeleteUserSayResponse> DeleteUserSayWithOptionsAsync(DeleteUserSayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4097,37 +5081,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DeleteUserSayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-用户话术-删除
-         *
-         * @param request DeleteUserSayRequest
-         * @return DeleteUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-用户话术-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserSayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserSayResponse
+        /// </returns>
         public DeleteUserSayResponse DeleteUserSay(DeleteUserSayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserSayWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-用户话术-删除
-         *
-         * @param request DeleteUserSayRequest
-         * @return DeleteUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-用户话术-删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserSayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserSayResponse
+        /// </returns>
         public async Task<DeleteUserSayResponse> DeleteUserSayAsync(DeleteUserSayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserSayWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查看单个类目信息
-         *
-         * @param request DescribeCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看单个类目信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCategoryResponse
+        /// </returns>
         public DescribeCategoryResponse DescribeCategoryWithOptions(DescribeCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4161,13 +5165,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeCategoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查看单个类目信息
-         *
-         * @param request DescribeCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看单个类目信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCategoryResponse
+        /// </returns>
         public async Task<DescribeCategoryResponse> DescribeCategoryWithOptionsAsync(DescribeCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4201,37 +5213,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeCategoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查看单个类目信息
-         *
-         * @param request DescribeCategoryRequest
-         * @return DescribeCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看单个类目信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCategoryResponse
+        /// </returns>
         public DescribeCategoryResponse DescribeCategory(DescribeCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCategoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查看单个类目信息
-         *
-         * @param request DescribeCategoryRequest
-         * @return DescribeCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看单个类目信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCategoryResponse
+        /// </returns>
         public async Task<DescribeCategoryResponse> DescribeCategoryAsync(DescribeCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCategoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 实体-详情
-         *
-         * @param request DescribeDSEntityRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDSEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDSEntityResponse
+        /// </returns>
         public DescribeDSEntityResponse DescribeDSEntityWithOptions(DescribeDSEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4267,13 +5299,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeDSEntityResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体-详情
-         *
-         * @param request DescribeDSEntityRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDSEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDSEntityResponse
+        /// </returns>
         public async Task<DescribeDSEntityResponse> DescribeDSEntityWithOptionsAsync(DescribeDSEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4309,37 +5349,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeDSEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体-详情
-         *
-         * @param request DescribeDSEntityRequest
-         * @return DescribeDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDSEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDSEntityResponse
+        /// </returns>
         public DescribeDSEntityResponse DescribeDSEntity(DescribeDSEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDSEntityWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 实体-详情
-         *
-         * @param request DescribeDSEntityRequest
-         * @return DescribeDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDSEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDSEntityResponse
+        /// </returns>
         public async Task<DescribeDSEntityResponse> DescribeDSEntityAsync(DescribeDSEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDSEntityWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 文档详情
-         *
-         * @param request DescribeDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDocResponse
+        /// </returns>
         public DescribeDocResponse DescribeDocWithOptions(DescribeDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4375,13 +5435,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeDocResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档详情
-         *
-         * @param request DescribeDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDocResponse
+        /// </returns>
         public async Task<DescribeDocResponse> DescribeDocWithOptionsAsync(DescribeDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4417,37 +5485,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeDocResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档详情
-         *
-         * @param request DescribeDocRequest
-         * @return DescribeDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDocResponse
+        /// </returns>
         public DescribeDocResponse DescribeDoc(DescribeDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDocWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档详情
-         *
-         * @param request DescribeDocRequest
-         * @return DescribeDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDocResponse
+        /// </returns>
         public async Task<DescribeDocResponse> DescribeDocAsync(DescribeDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDocWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 知识详情
-         *
-         * @param request DescribeFaqRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFaqRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaqResponse
+        /// </returns>
         public DescribeFaqResponse DescribeFaqWithOptions(DescribeFaqRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4481,13 +5569,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeFaqResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 知识详情
-         *
-         * @param request DescribeFaqRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFaqRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaqResponse
+        /// </returns>
         public async Task<DescribeFaqResponse> DescribeFaqWithOptionsAsync(DescribeFaqRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4521,37 +5617,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeFaqResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 知识详情
-         *
-         * @param request DescribeFaqRequest
-         * @return DescribeFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFaqRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaqResponse
+        /// </returns>
         public DescribeFaqResponse DescribeFaq(DescribeFaqRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFaqWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 知识详情
-         *
-         * @param request DescribeFaqRequest
-         * @return DescribeFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFaqRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaqResponse
+        /// </returns>
         public async Task<DescribeFaqResponse> DescribeFaqAsync(DescribeFaqRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFaqWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 机器人-详情
-         *
-         * @param request DescribeInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public DescribeInstanceResponse DescribeInstanceWithOptions(DescribeInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4583,13 +5699,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-详情
-         *
-         * @param request DescribeInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public async Task<DescribeInstanceResponse> DescribeInstanceWithOptionsAsync(DescribeInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4621,37 +5745,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-详情
-         *
-         * @param request DescribeInstanceRequest
-         * @return DescribeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public DescribeInstanceResponse DescribeInstance(DescribeInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 机器人-详情
-         *
-         * @param request DescribeInstanceRequest
-         * @return DescribeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public async Task<DescribeInstanceResponse> DescribeInstanceAsync(DescribeInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-详情
-         *
-         * @param request DescribeIntentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIntentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIntentResponse
+        /// </returns>
         public DescribeIntentResponse DescribeIntentWithOptions(DescribeIntentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4689,13 +5833,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeIntentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-详情
-         *
-         * @param request DescribeIntentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIntentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIntentResponse
+        /// </returns>
         public async Task<DescribeIntentResponse> DescribeIntentWithOptionsAsync(DescribeIntentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4733,37 +5885,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribeIntentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-详情
-         *
-         * @param request DescribeIntentRequest
-         * @return DescribeIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIntentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIntentResponse
+        /// </returns>
         public DescribeIntentResponse DescribeIntent(DescribeIntentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeIntentWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-详情
-         *
-         * @param request DescribeIntentRequest
-         * @return DescribeIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIntentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIntentResponse
+        /// </returns>
         public async Task<DescribeIntentResponse> DescribeIntentAsync(DescribeIntentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeIntentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 视角-详情
-         *
-         * @param request DescribePerspectiveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePerspectiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePerspectiveResponse
+        /// </returns>
         public DescribePerspectiveResponse DescribePerspectiveWithOptions(DescribePerspectiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4795,13 +5967,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribePerspectiveResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 视角-详情
-         *
-         * @param request DescribePerspectiveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePerspectiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePerspectiveResponse
+        /// </returns>
         public async Task<DescribePerspectiveResponse> DescribePerspectiveWithOptionsAsync(DescribePerspectiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4833,37 +6013,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<DescribePerspectiveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 视角-详情
-         *
-         * @param request DescribePerspectiveRequest
-         * @return DescribePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePerspectiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePerspectiveResponse
+        /// </returns>
         public DescribePerspectiveResponse DescribePerspective(DescribePerspectiveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePerspectiveWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 视角-详情
-         *
-         * @param request DescribePerspectiveRequest
-         * @return DescribePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePerspectiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePerspectiveResponse
+        /// </returns>
         public async Task<DescribePerspectiveResponse> DescribePerspectiveAsync(DescribePerspectiveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePerspectiveWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 问答点赞、点踩API
-         *
-         * @param request FeedbackRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FeedbackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>问答点赞、点踩API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FeedbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FeedbackResponse
+        /// </returns>
         public FeedbackResponse FeedbackWithOptions(FeedbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4911,13 +6111,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<FeedbackResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 问答点赞、点踩API
-         *
-         * @param request FeedbackRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FeedbackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>问答点赞、点踩API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FeedbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FeedbackResponse
+        /// </returns>
         public async Task<FeedbackResponse> FeedbackWithOptionsAsync(FeedbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4965,37 +6173,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<FeedbackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 问答点赞、点踩API
-         *
-         * @param request FeedbackRequest
-         * @return FeedbackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>问答点赞、点踩API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FeedbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FeedbackResponse
+        /// </returns>
         public FeedbackResponse Feedback(FeedbackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FeedbackWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 问答点赞、点踩API
-         *
-         * @param request FeedbackRequest
-         * @return FeedbackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>问答点赞、点踩API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FeedbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FeedbackResponse
+        /// </returns>
         public async Task<FeedbackResponse> FeedbackAsync(FeedbackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FeedbackWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 生成用户免登Token
-         *
-         * @param request GenerateUserAccessTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GenerateUserAccessTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成用户免登Token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateUserAccessTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateUserAccessTokenResponse
+        /// </returns>
         public GenerateUserAccessTokenResponse GenerateUserAccessTokenWithOptions(GenerateUserAccessTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5047,13 +6275,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GenerateUserAccessTokenResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 生成用户免登Token
-         *
-         * @param request GenerateUserAccessTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GenerateUserAccessTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成用户免登Token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateUserAccessTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateUserAccessTokenResponse
+        /// </returns>
         public async Task<GenerateUserAccessTokenResponse> GenerateUserAccessTokenWithOptionsAsync(GenerateUserAccessTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5105,37 +6341,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GenerateUserAccessTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 生成用户免登Token
-         *
-         * @param request GenerateUserAccessTokenRequest
-         * @return GenerateUserAccessTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成用户免登Token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateUserAccessTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateUserAccessTokenResponse
+        /// </returns>
         public GenerateUserAccessTokenResponse GenerateUserAccessToken(GenerateUserAccessTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GenerateUserAccessTokenWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 生成用户免登Token
-         *
-         * @param request GenerateUserAccessTokenRequest
-         * @return GenerateUserAccessTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成用户免登Token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateUserAccessTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateUserAccessTokenResponse
+        /// </returns>
         public async Task<GenerateUserAccessTokenResponse> GenerateUserAccessTokenAsync(GenerateUserAccessTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateUserAccessTokenWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取业务空间信息
-         *
-         * @param request GetAgentInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAgentInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentInfoResponse
+        /// </returns>
         public GetAgentInfoResponse GetAgentInfoWithOptions(GetAgentInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5163,13 +6419,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GetAgentInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取业务空间信息
-         *
-         * @param request GetAgentInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAgentInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentInfoResponse
+        /// </returns>
         public async Task<GetAgentInfoResponse> GetAgentInfoWithOptionsAsync(GetAgentInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5197,37 +6461,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GetAgentInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取业务空间信息
-         *
-         * @param request GetAgentInfoRequest
-         * @return GetAgentInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentInfoResponse
+        /// </returns>
         public GetAgentInfoResponse GetAgentInfo(GetAgentInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAgentInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取业务空间信息
-         *
-         * @param request GetAgentInfoRequest
-         * @return GetAgentInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentInfoResponse
+        /// </returns>
         public async Task<GetAgentInfoResponse> GetAgentInfoAsync(GetAgentInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAgentInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取异步函数执行结果接口
-         *
-         * @param request GetAsyncResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAsyncResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步函数执行结果接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAsyncResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAsyncResultResponse
+        /// </returns>
         public GetAsyncResultResponse GetAsyncResultWithOptions(GetAsyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5259,13 +6543,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GetAsyncResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取异步函数执行结果接口
-         *
-         * @param request GetAsyncResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAsyncResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步函数执行结果接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAsyncResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAsyncResultResponse
+        /// </returns>
         public async Task<GetAsyncResultResponse> GetAsyncResultWithOptionsAsync(GetAsyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5297,37 +6589,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GetAsyncResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取异步函数执行结果接口
-         *
-         * @param request GetAsyncResultRequest
-         * @return GetAsyncResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步函数执行结果接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAsyncResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAsyncResultResponse
+        /// </returns>
         public GetAsyncResultResponse GetAsyncResult(GetAsyncResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAsyncResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取异步函数执行结果接口
-         *
-         * @param request GetAsyncResultRequest
-         * @return GetAsyncResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步函数执行结果接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAsyncResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAsyncResultResponse
+        /// </returns>
         public async Task<GetAsyncResultResponse> GetAsyncResultAsync(GetAsyncResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAsyncResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询机器人接待人次和对话轮次
-         *
-         * @param request GetBotSessionDataRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetBotSessionDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询机器人接待人次和对话轮次</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBotSessionDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBotSessionDataResponse
+        /// </returns>
         public GetBotSessionDataResponse GetBotSessionDataWithOptions(GetBotSessionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5367,13 +6679,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GetBotSessionDataResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询机器人接待人次和对话轮次
-         *
-         * @param request GetBotSessionDataRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetBotSessionDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询机器人接待人次和对话轮次</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBotSessionDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBotSessionDataResponse
+        /// </returns>
         public async Task<GetBotSessionDataResponse> GetBotSessionDataWithOptionsAsync(GetBotSessionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5413,37 +6733,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GetBotSessionDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询机器人接待人次和对话轮次
-         *
-         * @param request GetBotSessionDataRequest
-         * @return GetBotSessionDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询机器人接待人次和对话轮次</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBotSessionDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBotSessionDataResponse
+        /// </returns>
         public GetBotSessionDataResponse GetBotSessionData(GetBotSessionDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetBotSessionDataWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询机器人接待人次和对话轮次
-         *
-         * @param request GetBotSessionDataRequest
-         * @return GetBotSessionDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询机器人接待人次和对话轮次</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBotSessionDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBotSessionDataResponse
+        /// </returns>
         public async Task<GetBotSessionDataResponse> GetBotSessionDataAsync(GetBotSessionDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetBotSessionDataWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询机器人发布进度
-         *
-         * @param request GetInstancePublishTaskStateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstancePublishTaskStateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询机器人发布进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstancePublishTaskStateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstancePublishTaskStateResponse
+        /// </returns>
         public GetInstancePublishTaskStateResponse GetInstancePublishTaskStateWithOptions(GetInstancePublishTaskStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5479,13 +6819,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GetInstancePublishTaskStateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询机器人发布进度
-         *
-         * @param request GetInstancePublishTaskStateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstancePublishTaskStateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询机器人发布进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstancePublishTaskStateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstancePublishTaskStateResponse
+        /// </returns>
         public async Task<GetInstancePublishTaskStateResponse> GetInstancePublishTaskStateWithOptionsAsync(GetInstancePublishTaskStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5521,37 +6869,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GetInstancePublishTaskStateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询机器人发布进度
-         *
-         * @param request GetInstancePublishTaskStateRequest
-         * @return GetInstancePublishTaskStateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询机器人发布进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstancePublishTaskStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstancePublishTaskStateResponse
+        /// </returns>
         public GetInstancePublishTaskStateResponse GetInstancePublishTaskState(GetInstancePublishTaskStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInstancePublishTaskStateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询机器人发布进度
-         *
-         * @param request GetInstancePublishTaskStateRequest
-         * @return GetInstancePublishTaskStateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询机器人发布进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstancePublishTaskStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstancePublishTaskStateResponse
+        /// </returns>
         public async Task<GetInstancePublishTaskStateResponse> GetInstancePublishTaskStateAsync(GetInstancePublishTaskStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstancePublishTaskStateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询发布进度
-         *
-         * @param request GetPublishTaskStateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPublishTaskStateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询发布进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPublishTaskStateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPublishTaskStateResponse
+        /// </returns>
         public GetPublishTaskStateResponse GetPublishTaskStateWithOptions(GetPublishTaskStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5583,13 +6951,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GetPublishTaskStateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询发布进度
-         *
-         * @param request GetPublishTaskStateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPublishTaskStateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询发布进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPublishTaskStateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPublishTaskStateResponse
+        /// </returns>
         public async Task<GetPublishTaskStateResponse> GetPublishTaskStateWithOptionsAsync(GetPublishTaskStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5621,37 +6997,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<GetPublishTaskStateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询发布进度
-         *
-         * @param request GetPublishTaskStateRequest
-         * @return GetPublishTaskStateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询发布进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPublishTaskStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPublishTaskStateResponse
+        /// </returns>
         public GetPublishTaskStateResponse GetPublishTaskState(GetPublishTaskStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPublishTaskStateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询发布进度
-         *
-         * @param request GetPublishTaskStateRequest
-         * @return GetPublishTaskStateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询发布进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPublishTaskStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPublishTaskStateResponse
+        /// </returns>
         public async Task<GetPublishTaskStateResponse> GetPublishTaskStateAsync(GetPublishTaskStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPublishTaskStateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 初始化im连接信息
-         *
-         * @param request InitIMConnectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return InitIMConnectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>初始化im连接信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitIMConnectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitIMConnectResponse
+        /// </returns>
         public InitIMConnectResponse InitIMConnectWithOptions(InitIMConnectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5687,13 +7083,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<InitIMConnectResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 初始化im连接信息
-         *
-         * @param request InitIMConnectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return InitIMConnectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>初始化im连接信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitIMConnectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitIMConnectResponse
+        /// </returns>
         public async Task<InitIMConnectResponse> InitIMConnectWithOptionsAsync(InitIMConnectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5729,37 +7133,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<InitIMConnectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 初始化im连接信息
-         *
-         * @param request InitIMConnectRequest
-         * @return InitIMConnectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>初始化im连接信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitIMConnectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitIMConnectResponse
+        /// </returns>
         public InitIMConnectResponse InitIMConnect(InitIMConnectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InitIMConnectWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 初始化im连接信息
-         *
-         * @param request InitIMConnectRequest
-         * @return InitIMConnectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>初始化im连接信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitIMConnectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitIMConnectResponse
+        /// </returns>
         public async Task<InitIMConnectResponse> InitIMConnectAsync(InitIMConnectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InitIMConnectWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 机器人-绑定类目
-         *
-         * @param request LinkInstanceCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return LinkInstanceCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-绑定类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LinkInstanceCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LinkInstanceCategoryResponse
+        /// </returns>
         public LinkInstanceCategoryResponse LinkInstanceCategoryWithOptions(LinkInstanceCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5797,13 +7221,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<LinkInstanceCategoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-绑定类目
-         *
-         * @param request LinkInstanceCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return LinkInstanceCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-绑定类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LinkInstanceCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LinkInstanceCategoryResponse
+        /// </returns>
         public async Task<LinkInstanceCategoryResponse> LinkInstanceCategoryWithOptionsAsync(LinkInstanceCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5841,37 +7273,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<LinkInstanceCategoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-绑定类目
-         *
-         * @param request LinkInstanceCategoryRequest
-         * @return LinkInstanceCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-绑定类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LinkInstanceCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LinkInstanceCategoryResponse
+        /// </returns>
         public LinkInstanceCategoryResponse LinkInstanceCategory(LinkInstanceCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return LinkInstanceCategoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 机器人-绑定类目
-         *
-         * @param request LinkInstanceCategoryRequest
-         * @return LinkInstanceCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-绑定类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LinkInstanceCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LinkInstanceCategoryResponse
+        /// </returns>
         public async Task<LinkInstanceCategoryResponse> LinkInstanceCategoryAsync(LinkInstanceCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await LinkInstanceCategoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取业务空间列表
-         *
-         * @param request ListAgentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAgentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentResponse
+        /// </returns>
         public ListAgentResponse ListAgentWithOptions(ListAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5911,13 +7363,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListAgentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取业务空间列表
-         *
-         * @param request ListAgentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAgentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentResponse
+        /// </returns>
         public async Task<ListAgentResponse> ListAgentWithOptionsAsync(ListAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5957,37 +7417,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListAgentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取业务空间列表
-         *
-         * @param request ListAgentRequest
-         * @return ListAgentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentResponse
+        /// </returns>
         public ListAgentResponse ListAgent(ListAgentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAgentWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取业务空间列表
-         *
-         * @param request ListAgentRequest
-         * @return ListAgentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentResponse
+        /// </returns>
         public async Task<ListAgentResponse> ListAgentAsync(ListAgentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAgentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 类目列表
-         *
-         * @param request ListCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>类目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCategoryResponse
+        /// </returns>
         public ListCategoryResponse ListCategoryWithOptions(ListCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6025,13 +7505,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListCategoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 类目列表
-         *
-         * @param request ListCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>类目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCategoryResponse
+        /// </returns>
         public async Task<ListCategoryResponse> ListCategoryWithOptionsAsync(ListCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6069,37 +7557,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListCategoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 类目列表
-         *
-         * @param request ListCategoryRequest
-         * @return ListCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>类目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCategoryResponse
+        /// </returns>
         public ListCategoryResponse ListCategory(ListCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCategoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 类目列表
-         *
-         * @param request ListCategoryRequest
-         * @return ListCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>类目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCategoryResponse
+        /// </returns>
         public async Task<ListCategoryResponse> ListCategoryAsync(ListCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCategoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询FAQ关联问列表
-         *
-         * @param request ListConnQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询FAQ关联问列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConnQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnQuestionResponse
+        /// </returns>
         public ListConnQuestionResponse ListConnQuestionWithOptions(ListConnQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6133,13 +7641,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListConnQuestionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询FAQ关联问列表
-         *
-         * @param request ListConnQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询FAQ关联问列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConnQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnQuestionResponse
+        /// </returns>
         public async Task<ListConnQuestionResponse> ListConnQuestionWithOptionsAsync(ListConnQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6173,37 +7689,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListConnQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询FAQ关联问列表
-         *
-         * @param request ListConnQuestionRequest
-         * @return ListConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询FAQ关联问列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConnQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnQuestionResponse
+        /// </returns>
         public ListConnQuestionResponse ListConnQuestion(ListConnQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListConnQuestionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询FAQ关联问列表
-         *
-         * @param request ListConnQuestionRequest
-         * @return ListConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询FAQ关联问列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConnQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnQuestionResponse
+        /// </returns>
         public async Task<ListConnQuestionResponse> ListConnQuestionAsync(ListConnQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListConnQuestionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 实体-列表
-         *
-         * @param request ListDSEntityRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDSEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDSEntityResponse
+        /// </returns>
         public ListDSEntityResponse ListDSEntityWithOptions(ListDSEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6251,13 +7787,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListDSEntityResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体-列表
-         *
-         * @param request ListDSEntityRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDSEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDSEntityResponse
+        /// </returns>
         public async Task<ListDSEntityResponse> ListDSEntityWithOptionsAsync(ListDSEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6305,37 +7849,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListDSEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体-列表
-         *
-         * @param request ListDSEntityRequest
-         * @return ListDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDSEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDSEntityResponse
+        /// </returns>
         public ListDSEntityResponse ListDSEntity(ListDSEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDSEntityWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 实体-列表
-         *
-         * @param request ListDSEntityRequest
-         * @return ListDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDSEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDSEntityResponse
+        /// </returns>
         public async Task<ListDSEntityResponse> ListDSEntityAsync(ListDSEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDSEntityWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 实体成员-列表
-         *
-         * @param request ListDSEntityValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDSEntityValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDSEntityValueResponse
+        /// </returns>
         public ListDSEntityValueResponse ListDSEntityValueWithOptions(ListDSEntityValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6389,13 +7953,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListDSEntityValueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体成员-列表
-         *
-         * @param request ListDSEntityValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDSEntityValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDSEntityValueResponse
+        /// </returns>
         public async Task<ListDSEntityValueResponse> ListDSEntityValueWithOptionsAsync(ListDSEntityValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6449,37 +8021,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListDSEntityValueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体成员-列表
-         *
-         * @param request ListDSEntityValueRequest
-         * @return ListDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDSEntityValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDSEntityValueResponse
+        /// </returns>
         public ListDSEntityValueResponse ListDSEntityValue(ListDSEntityValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDSEntityValueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 实体成员-列表
-         *
-         * @param request ListDSEntityValueRequest
-         * @return ListDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDSEntityValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDSEntityValueResponse
+        /// </returns>
         public async Task<ListDSEntityValueResponse> ListDSEntityValueAsync(ListDSEntityValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDSEntityValueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 机器人-修改
-         *
-         * @param request ListInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResponse
+        /// </returns>
         public ListInstanceResponse ListInstanceWithOptions(ListInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6523,13 +8115,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-修改
-         *
-         * @param request ListInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResponse
+        /// </returns>
         public async Task<ListInstanceResponse> ListInstanceWithOptionsAsync(ListInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6573,37 +8173,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-修改
-         *
-         * @param request ListInstanceRequest
-         * @return ListInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResponse
+        /// </returns>
         public ListInstanceResponse ListInstance(ListInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 机器人-修改
-         *
-         * @param request ListInstanceRequest
-         * @return ListInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResponse
+        /// </returns>
         public async Task<ListInstanceResponse> ListInstanceAsync(ListInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-列表
-         *
-         * @param request ListIntentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIntentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntentResponse
+        /// </returns>
         public ListIntentResponse ListIntentWithOptions(ListIntentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6647,13 +8267,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListIntentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-列表
-         *
-         * @param request ListIntentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIntentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntentResponse
+        /// </returns>
         public async Task<ListIntentResponse> ListIntentWithOptionsAsync(ListIntentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6697,37 +8325,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListIntentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-列表
-         *
-         * @param request ListIntentRequest
-         * @return ListIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIntentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntentResponse
+        /// </returns>
         public ListIntentResponse ListIntent(ListIntentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListIntentWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-列表
-         *
-         * @param request ListIntentRequest
-         * @return ListIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIntentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntentResponse
+        /// </returns>
         public async Task<ListIntentResponse> ListIntentAsync(ListIntentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListIntentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-LGF-列表
-         *
-         * @param request ListLgfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLgfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLgfResponse
+        /// </returns>
         public ListLgfResponse ListLgfWithOptions(ListLgfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6775,13 +8423,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListLgfResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-LGF-列表
-         *
-         * @param request ListLgfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLgfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLgfResponse
+        /// </returns>
         public async Task<ListLgfResponse> ListLgfWithOptionsAsync(ListLgfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6829,37 +8485,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListLgfResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-LGF-列表
-         *
-         * @param request ListLgfRequest
-         * @return ListLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLgfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLgfResponse
+        /// </returns>
         public ListLgfResponse ListLgf(ListLgfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListLgfWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-LGF-列表
-         *
-         * @param request ListLgfRequest
-         * @return ListLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLgfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLgfResponse
+        /// </returns>
         public async Task<ListLgfResponse> ListLgfAsync(ListLgfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListLgfWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取业务空间下可集成的SaaS信息列表
-         *
-         * @param request ListSaasInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSaasInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间下可集成的SaaS信息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSaasInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasInfoResponse
+        /// </returns>
         public ListSaasInfoResponse ListSaasInfoWithOptions(ListSaasInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6895,13 +8571,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListSaasInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取业务空间下可集成的SaaS信息列表
-         *
-         * @param request ListSaasInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSaasInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间下可集成的SaaS信息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSaasInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasInfoResponse
+        /// </returns>
         public async Task<ListSaasInfoResponse> ListSaasInfoWithOptionsAsync(ListSaasInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6937,37 +8621,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListSaasInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取业务空间下可集成的SaaS信息列表
-         *
-         * @param request ListSaasInfoRequest
-         * @return ListSaasInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间下可集成的SaaS信息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSaasInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasInfoResponse
+        /// </returns>
         public ListSaasInfoResponse ListSaasInfo(ListSaasInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSaasInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取业务空间下可集成的SaaS信息列表
-         *
-         * @param request ListSaasInfoRequest
-         * @return ListSaasInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间下可集成的SaaS信息列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSaasInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasInfoResponse
+        /// </returns>
         public async Task<ListSaasInfoResponse> ListSaasInfoAsync(ListSaasInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSaasInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取业务空间下可集成的权限组信息
-         *
-         * @param request ListSaasPermissionGroupInfosRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSaasPermissionGroupInfosResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间下可集成的权限组信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSaasPermissionGroupInfosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasPermissionGroupInfosResponse
+        /// </returns>
         public ListSaasPermissionGroupInfosResponse ListSaasPermissionGroupInfosWithOptions(ListSaasPermissionGroupInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6995,13 +8699,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListSaasPermissionGroupInfosResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取业务空间下可集成的权限组信息
-         *
-         * @param request ListSaasPermissionGroupInfosRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSaasPermissionGroupInfosResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间下可集成的权限组信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSaasPermissionGroupInfosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasPermissionGroupInfosResponse
+        /// </returns>
         public async Task<ListSaasPermissionGroupInfosResponse> ListSaasPermissionGroupInfosWithOptionsAsync(ListSaasPermissionGroupInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7029,37 +8741,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListSaasPermissionGroupInfosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取业务空间下可集成的权限组信息
-         *
-         * @param request ListSaasPermissionGroupInfosRequest
-         * @return ListSaasPermissionGroupInfosResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间下可集成的权限组信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSaasPermissionGroupInfosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasPermissionGroupInfosResponse
+        /// </returns>
         public ListSaasPermissionGroupInfosResponse ListSaasPermissionGroupInfos(ListSaasPermissionGroupInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSaasPermissionGroupInfosWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取业务空间下可集成的权限组信息
-         *
-         * @param request ListSaasPermissionGroupInfosRequest
-         * @return ListSaasPermissionGroupInfosResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取业务空间下可集成的权限组信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSaasPermissionGroupInfosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasPermissionGroupInfosResponse
+        /// </returns>
         public async Task<ListSaasPermissionGroupInfosResponse> ListSaasPermissionGroupInfosAsync(ListSaasPermissionGroupInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSaasPermissionGroupInfosWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary FAQ相似问列表
-         *
-         * @param request ListSimQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FAQ相似问列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSimQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSimQuestionResponse
+        /// </returns>
         public ListSimQuestionResponse ListSimQuestionWithOptions(ListSimQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7093,13 +8825,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListSimQuestionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary FAQ相似问列表
-         *
-         * @param request ListSimQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FAQ相似问列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSimQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSimQuestionResponse
+        /// </returns>
         public async Task<ListSimQuestionResponse> ListSimQuestionWithOptionsAsync(ListSimQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7133,37 +8873,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListSimQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary FAQ相似问列表
-         *
-         * @param request ListSimQuestionRequest
-         * @return ListSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FAQ相似问列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSimQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSimQuestionResponse
+        /// </returns>
         public ListSimQuestionResponse ListSimQuestion(ListSimQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSimQuestionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary FAQ相似问列表
-         *
-         * @param request ListSimQuestionRequest
-         * @return ListSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FAQ相似问列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSimQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSimQuestionResponse
+        /// </returns>
         public async Task<ListSimQuestionResponse> ListSimQuestionAsync(ListSimQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSimQuestionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary FAQ答案列表
-         *
-         * @param request ListSolutionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FAQ答案列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSolutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSolutionResponse
+        /// </returns>
         public ListSolutionResponse ListSolutionWithOptions(ListSolutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7197,13 +8957,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListSolutionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary FAQ答案列表
-         *
-         * @param request ListSolutionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FAQ答案列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSolutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSolutionResponse
+        /// </returns>
         public async Task<ListSolutionResponse> ListSolutionWithOptionsAsync(ListSolutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7237,37 +9005,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListSolutionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary FAQ答案列表
-         *
-         * @param request ListSolutionRequest
-         * @return ListSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FAQ答案列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSolutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSolutionResponse
+        /// </returns>
         public ListSolutionResponse ListSolution(ListSolutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSolutionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary FAQ答案列表
-         *
-         * @param request ListSolutionRequest
-         * @return ListSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FAQ答案列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSolutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSolutionResponse
+        /// </returns>
         public async Task<ListSolutionResponse> ListSolutionAsync(ListSolutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSolutionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Tongyi对话明细查询接口
-         *
-         * @param request ListTongyiChatHistorysRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTongyiChatHistorysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tongyi对话明细查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTongyiChatHistorysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTongyiChatHistorysResponse
+        /// </returns>
         public ListTongyiChatHistorysResponse ListTongyiChatHistorysWithOptions(ListTongyiChatHistorysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7311,13 +9099,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListTongyiChatHistorysResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Tongyi对话明细查询接口
-         *
-         * @param request ListTongyiChatHistorysRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTongyiChatHistorysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tongyi对话明细查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTongyiChatHistorysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTongyiChatHistorysResponse
+        /// </returns>
         public async Task<ListTongyiChatHistorysResponse> ListTongyiChatHistorysWithOptionsAsync(ListTongyiChatHistorysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7361,37 +9157,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListTongyiChatHistorysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Tongyi对话明细查询接口
-         *
-         * @param request ListTongyiChatHistorysRequest
-         * @return ListTongyiChatHistorysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tongyi对话明细查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTongyiChatHistorysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTongyiChatHistorysResponse
+        /// </returns>
         public ListTongyiChatHistorysResponse ListTongyiChatHistorys(ListTongyiChatHistorysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTongyiChatHistorysWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Tongyi对话明细查询接口
-         *
-         * @param request ListTongyiChatHistorysRequest
-         * @return ListTongyiChatHistorysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tongyi对话明细查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTongyiChatHistorysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTongyiChatHistorysResponse
+        /// </returns>
         public async Task<ListTongyiChatHistorysResponse> ListTongyiChatHistorysAsync(ListTongyiChatHistorysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTongyiChatHistorysWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 话术-列表
-         *
-         * @param request ListUserSayRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>话术-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserSayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserSayResponse
+        /// </returns>
         public ListUserSayResponse ListUserSayWithOptions(ListUserSayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7439,13 +9255,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListUserSayResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 话术-列表
-         *
-         * @param request ListUserSayRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>话术-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserSayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserSayResponse
+        /// </returns>
         public async Task<ListUserSayResponse> ListUserSayWithOptionsAsync(ListUserSayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7493,37 +9317,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<ListUserSayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 话术-列表
-         *
-         * @param request ListUserSayRequest
-         * @return ListUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>话术-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserSayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserSayResponse
+        /// </returns>
         public ListUserSayResponse ListUserSay(ListUserSayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUserSayWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 话术-列表
-         *
-         * @param request ListUserSayRequest
-         * @return ListUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>话术-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserSayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserSayResponse
+        /// </returns>
         public async Task<ListUserSayResponse> ListUserSayAsync(ListUserSayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUserSayWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 统一NLU接口
-         *
-         * @param request NluRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return NluResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统一NLU接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// NluRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// NluResponse
+        /// </returns>
         public NluResponse NluWithOptions(NluRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7559,13 +9403,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<NluResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 统一NLU接口
-         *
-         * @param request NluRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return NluResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统一NLU接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// NluRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// NluResponse
+        /// </returns>
         public async Task<NluResponse> NluWithOptionsAsync(NluRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7601,37 +9453,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<NluResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 统一NLU接口
-         *
-         * @param request NluRequest
-         * @return NluResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统一NLU接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// NluRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// NluResponse
+        /// </returns>
         public NluResponse Nlu(NluRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return NluWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 统一NLU接口
-         *
-         * @param request NluRequest
-         * @return NluResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统一NLU接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// NluRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// NluResponse
+        /// </returns>
         public async Task<NluResponse> NluAsync(NluRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await NluWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 视角-列表
-         *
-         * @param request QueryPerspectivesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryPerspectivesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPerspectivesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPerspectivesResponse
+        /// </returns>
         public QueryPerspectivesResponse QueryPerspectivesWithOptions(QueryPerspectivesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7659,13 +9531,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<QueryPerspectivesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 视角-列表
-         *
-         * @param request QueryPerspectivesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryPerspectivesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPerspectivesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPerspectivesResponse
+        /// </returns>
         public async Task<QueryPerspectivesResponse> QueryPerspectivesWithOptionsAsync(QueryPerspectivesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7693,37 +9573,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<QueryPerspectivesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 视角-列表
-         *
-         * @param request QueryPerspectivesRequest
-         * @return QueryPerspectivesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPerspectivesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPerspectivesResponse
+        /// </returns>
         public QueryPerspectivesResponse QueryPerspectives(QueryPerspectivesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryPerspectivesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 视角-列表
-         *
-         * @param request QueryPerspectivesRequest
-         * @return QueryPerspectivesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPerspectivesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPerspectivesResponse
+        /// </returns>
         public async Task<QueryPerspectivesResponse> QueryPerspectivesAsync(QueryPerspectivesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryPerspectivesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 文档重试
-         *
-         * @param request RetryDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RetryDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档重试</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryDocResponse
+        /// </returns>
         public RetryDocResponse RetryDocWithOptions(RetryDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7755,13 +9655,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<RetryDocResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档重试
-         *
-         * @param request RetryDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RetryDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档重试</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryDocResponse
+        /// </returns>
         public async Task<RetryDocResponse> RetryDocWithOptionsAsync(RetryDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7793,37 +9701,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<RetryDocResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档重试
-         *
-         * @param request RetryDocRequest
-         * @return RetryDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档重试</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryDocResponse
+        /// </returns>
         public RetryDocResponse RetryDoc(RetryDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RetryDocWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档重试
-         *
-         * @param request RetryDocRequest
-         * @return RetryDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档重试</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryDocResponse
+        /// </returns>
         public async Task<RetryDocResponse> RetryDocAsync(RetryDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RetryDocWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 文档搜索
-         *
-         * @param tmpReq SearchDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchDocResponse
+        /// </returns>
         public SearchDocResponse SearchDocWithOptions(SearchDocRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7933,13 +9861,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<SearchDocResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档搜索
-         *
-         * @param tmpReq SearchDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchDocResponse
+        /// </returns>
         public async Task<SearchDocResponse> SearchDocWithOptionsAsync(SearchDocRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8049,37 +9985,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<SearchDocResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档搜索
-         *
-         * @param request SearchDocRequest
-         * @return SearchDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchDocResponse
+        /// </returns>
         public SearchDocResponse SearchDoc(SearchDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SearchDocWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档搜索
-         *
-         * @param request SearchDocRequest
-         * @return SearchDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchDocResponse
+        /// </returns>
         public async Task<SearchDocResponse> SearchDocAsync(SearchDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchDocWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 知识搜索
-         *
-         * @param tmpReq SearchFaqRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchFaqRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchFaqResponse
+        /// </returns>
         public SearchFaqResponse SearchFaqWithOptions(SearchFaqRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8179,13 +10135,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<SearchFaqResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 知识搜索
-         *
-         * @param tmpReq SearchFaqRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchFaqRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchFaqResponse
+        /// </returns>
         public async Task<SearchFaqResponse> SearchFaqWithOptionsAsync(SearchFaqRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8285,37 +10249,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<SearchFaqResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 知识搜索
-         *
-         * @param request SearchFaqRequest
-         * @return SearchFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchFaqRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchFaqResponse
+        /// </returns>
         public SearchFaqResponse SearchFaq(SearchFaqRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SearchFaqWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 知识搜索
-         *
-         * @param request SearchFaqRequest
-         * @return SearchFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchFaqRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchFaqResponse
+        /// </returns>
         public async Task<SearchFaqResponse> SearchFaqAsync(SearchFaqRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchFaqWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 编辑类目
-         *
-         * @param request UpdateCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCategoryResponse
+        /// </returns>
         public UpdateCategoryResponse UpdateCategoryWithOptions(UpdateCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8357,13 +10341,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateCategoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 编辑类目
-         *
-         * @param request UpdateCategoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCategoryResponse
+        /// </returns>
         public async Task<UpdateCategoryResponse> UpdateCategoryWithOptionsAsync(UpdateCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8405,37 +10397,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateCategoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 编辑类目
-         *
-         * @param request UpdateCategoryRequest
-         * @return UpdateCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCategoryResponse
+        /// </returns>
         public UpdateCategoryResponse UpdateCategory(UpdateCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateCategoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 编辑类目
-         *
-         * @param request UpdateCategoryRequest
-         * @return UpdateCategoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCategoryResponse
+        /// </returns>
         public async Task<UpdateCategoryResponse> UpdateCategoryAsync(UpdateCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCategoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新FAQ关联问
-         *
-         * @param request UpdateConnQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConnQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnQuestionResponse
+        /// </returns>
         public UpdateConnQuestionResponse UpdateConnQuestionWithOptions(UpdateConnQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8473,13 +10485,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateConnQuestionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新FAQ关联问
-         *
-         * @param request UpdateConnQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConnQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnQuestionResponse
+        /// </returns>
         public async Task<UpdateConnQuestionResponse> UpdateConnQuestionWithOptionsAsync(UpdateConnQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8517,37 +10537,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateConnQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新FAQ关联问
-         *
-         * @param request UpdateConnQuestionRequest
-         * @return UpdateConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConnQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnQuestionResponse
+        /// </returns>
         public UpdateConnQuestionResponse UpdateConnQuestion(UpdateConnQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateConnQuestionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新FAQ关联问
-         *
-         * @param request UpdateConnQuestionRequest
-         * @return UpdateConnQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ关联问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConnQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnQuestionResponse
+        /// </returns>
         public async Task<UpdateConnQuestionResponse> UpdateConnQuestionAsync(UpdateConnQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateConnQuestionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 实体-更新
-         *
-         * @param request UpdateDSEntityRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDSEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDSEntityResponse
+        /// </returns>
         public UpdateDSEntityResponse UpdateDSEntityWithOptions(UpdateDSEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8591,13 +10631,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateDSEntityResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体-更新
-         *
-         * @param request UpdateDSEntityRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDSEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDSEntityResponse
+        /// </returns>
         public async Task<UpdateDSEntityResponse> UpdateDSEntityWithOptionsAsync(UpdateDSEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8641,37 +10689,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateDSEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体-更新
-         *
-         * @param request UpdateDSEntityRequest
-         * @return UpdateDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDSEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDSEntityResponse
+        /// </returns>
         public UpdateDSEntityResponse UpdateDSEntity(UpdateDSEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateDSEntityWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 实体-更新
-         *
-         * @param request UpdateDSEntityRequest
-         * @return UpdateDSEntityResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDSEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDSEntityResponse
+        /// </returns>
         public async Task<UpdateDSEntityResponse> UpdateDSEntityAsync(UpdateDSEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDSEntityWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 实体成员-更新
-         *
-         * @param tmpReq UpdateDSEntityValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDSEntityValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDSEntityValueResponse
+        /// </returns>
         public UpdateDSEntityValueResponse UpdateDSEntityValueWithOptions(UpdateDSEntityValueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8727,13 +10795,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateDSEntityValueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体成员-更新
-         *
-         * @param tmpReq UpdateDSEntityValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDSEntityValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDSEntityValueResponse
+        /// </returns>
         public async Task<UpdateDSEntityValueResponse> UpdateDSEntityValueWithOptionsAsync(UpdateDSEntityValueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8789,42 +10865,66 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateDSEntityValueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 实体成员-更新
-         *
-         * @param request UpdateDSEntityValueRequest
-         * @return UpdateDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDSEntityValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDSEntityValueResponse
+        /// </returns>
         public UpdateDSEntityValueResponse UpdateDSEntityValue(UpdateDSEntityValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateDSEntityValueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 实体成员-更新
-         *
-         * @param request UpdateDSEntityValueRequest
-         * @return UpdateDSEntityValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实体成员-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDSEntityValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDSEntityValueResponse
+        /// </returns>
         public async Task<UpdateDSEntityValueResponse> UpdateDSEntityValueAsync(UpdateDSEntityValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDSEntityValueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 文档变更
-         *
-         * @param tmpReq UpdateDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档变更</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDocResponse
+        /// </returns>
         public UpdateDocResponse UpdateDocWithOptions(UpdateDocRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateDocShrinkRequest request = new UpdateDocShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocMetadata))
+            {
+                request.DocMetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocMetadata, "DocMetadata", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
             {
                 request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
@@ -8845,6 +10945,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocMetadataShrink))
+            {
+                query["DocMetadata"] = request.DocMetadataShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocName))
             {
@@ -8893,18 +10997,30 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateDocResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档变更
-         *
-         * @param tmpReq UpdateDocRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档变更</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDocRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDocResponse
+        /// </returns>
         public async Task<UpdateDocResponse> UpdateDocWithOptionsAsync(UpdateDocRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateDocShrinkRequest request = new UpdateDocShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocMetadata))
+            {
+                request.DocMetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocMetadata, "DocMetadata", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
             {
                 request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
@@ -8925,6 +11041,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocMetadataShrink))
+            {
+                query["DocMetadata"] = request.DocMetadataShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocName))
             {
@@ -8973,37 +11093,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateDocResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档变更
-         *
-         * @param request UpdateDocRequest
-         * @return UpdateDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档变更</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDocResponse
+        /// </returns>
         public UpdateDocResponse UpdateDoc(UpdateDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateDocWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档变更
-         *
-         * @param request UpdateDocRequest
-         * @return UpdateDocResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档变更</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDocResponse
+        /// </returns>
         public async Task<UpdateDocResponse> UpdateDocAsync(UpdateDocRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDocWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新FAQ
-         *
-         * @param request UpdateFaqRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFaqRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFaqResponse
+        /// </returns>
         public UpdateFaqResponse UpdateFaqWithOptions(UpdateFaqRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9053,13 +11193,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateFaqResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新FAQ
-         *
-         * @param request UpdateFaqRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFaqRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFaqResponse
+        /// </returns>
         public async Task<UpdateFaqResponse> UpdateFaqWithOptionsAsync(UpdateFaqRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9109,37 +11257,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateFaqResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新FAQ
-         *
-         * @param request UpdateFaqRequest
-         * @return UpdateFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFaqRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFaqResponse
+        /// </returns>
         public UpdateFaqResponse UpdateFaq(UpdateFaqRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateFaqWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新FAQ
-         *
-         * @param request UpdateFaqRequest
-         * @return UpdateFaqResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFaqRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFaqResponse
+        /// </returns>
         public async Task<UpdateFaqResponse> UpdateFaqAsync(UpdateFaqRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateFaqWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 机器人-修改
-         *
-         * @param request UpdateInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public UpdateInstanceResponse UpdateInstanceWithOptions(UpdateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9179,13 +11347,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-修改
-         *
-         * @param request UpdateInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public async Task<UpdateInstanceResponse> UpdateInstanceWithOptionsAsync(UpdateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9225,37 +11401,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 机器人-修改
-         *
-         * @param request UpdateInstanceRequest
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public UpdateInstanceResponse UpdateInstance(UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 机器人-修改
-         *
-         * @param request UpdateInstanceRequest
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机器人-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public async Task<UpdateInstanceResponse> UpdateInstanceAsync(UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-更新
-         *
-         * @param tmpReq UpdateIntentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateIntentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIntentResponse
+        /// </returns>
         public UpdateIntentResponse UpdateIntentWithOptions(UpdateIntentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9301,13 +11497,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateIntentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-更新
-         *
-         * @param tmpReq UpdateIntentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateIntentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIntentResponse
+        /// </returns>
         public async Task<UpdateIntentResponse> UpdateIntentWithOptionsAsync(UpdateIntentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9353,37 +11557,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateIntentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-更新
-         *
-         * @param request UpdateIntentRequest
-         * @return UpdateIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIntentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIntentResponse
+        /// </returns>
         public UpdateIntentResponse UpdateIntent(UpdateIntentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateIntentWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-更新
-         *
-         * @param request UpdateIntentRequest
-         * @return UpdateIntentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIntentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIntentResponse
+        /// </returns>
         public async Task<UpdateIntentResponse> UpdateIntentAsync(UpdateIntentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateIntentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-LGF-更新
-         *
-         * @param tmpReq UpdateLgfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateLgfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLgfResponse
+        /// </returns>
         public UpdateLgfResponse UpdateLgfWithOptions(UpdateLgfRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9429,13 +11653,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateLgfResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-LGF-更新
-         *
-         * @param tmpReq UpdateLgfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateLgfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLgfResponse
+        /// </returns>
         public async Task<UpdateLgfResponse> UpdateLgfWithOptionsAsync(UpdateLgfRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9481,37 +11713,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateLgfResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-LGF-更新
-         *
-         * @param request UpdateLgfRequest
-         * @return UpdateLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLgfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLgfResponse
+        /// </returns>
         public UpdateLgfResponse UpdateLgf(UpdateLgfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateLgfWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-LGF-更新
-         *
-         * @param request UpdateLgfRequest
-         * @return UpdateLgfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-LGF-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLgfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLgfResponse
+        /// </returns>
         public async Task<UpdateLgfResponse> UpdateLgfAsync(UpdateLgfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateLgfWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 视角-修改
-         *
-         * @param request UpdatePerspectiveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdatePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePerspectiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePerspectiveResponse
+        /// </returns>
         public UpdatePerspectiveResponse UpdatePerspectiveWithOptions(UpdatePerspectiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9547,13 +11799,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdatePerspectiveResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 视角-修改
-         *
-         * @param request UpdatePerspectiveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdatePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePerspectiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePerspectiveResponse
+        /// </returns>
         public async Task<UpdatePerspectiveResponse> UpdatePerspectiveWithOptionsAsync(UpdatePerspectiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9589,37 +11849,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdatePerspectiveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 视角-修改
-         *
-         * @param request UpdatePerspectiveRequest
-         * @return UpdatePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePerspectiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePerspectiveResponse
+        /// </returns>
         public UpdatePerspectiveResponse UpdatePerspective(UpdatePerspectiveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdatePerspectiveWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 视角-修改
-         *
-         * @param request UpdatePerspectiveRequest
-         * @return UpdatePerspectiveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视角-修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePerspectiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePerspectiveResponse
+        /// </returns>
         public async Task<UpdatePerspectiveResponse> UpdatePerspectiveAsync(UpdatePerspectiveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdatePerspectiveWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新FAQ相似问
-         *
-         * @param request UpdateSimQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSimQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSimQuestionResponse
+        /// </returns>
         public UpdateSimQuestionResponse UpdateSimQuestionWithOptions(UpdateSimQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9657,13 +11937,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateSimQuestionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新FAQ相似问
-         *
-         * @param request UpdateSimQuestionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSimQuestionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSimQuestionResponse
+        /// </returns>
         public async Task<UpdateSimQuestionResponse> UpdateSimQuestionWithOptionsAsync(UpdateSimQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9701,37 +11989,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateSimQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新FAQ相似问
-         *
-         * @param request UpdateSimQuestionRequest
-         * @return UpdateSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSimQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSimQuestionResponse
+        /// </returns>
         public UpdateSimQuestionResponse UpdateSimQuestion(UpdateSimQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSimQuestionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新FAQ相似问
-         *
-         * @param request UpdateSimQuestionRequest
-         * @return UpdateSimQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ相似问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSimQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSimQuestionResponse
+        /// </returns>
         public async Task<UpdateSimQuestionResponse> UpdateSimQuestionAsync(UpdateSimQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSimQuestionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新FAQ答案
-         *
-         * @param request UpdateSolutionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSolutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSolutionResponse
+        /// </returns>
         public UpdateSolutionResponse UpdateSolutionWithOptions(UpdateSolutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9777,13 +12085,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateSolutionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新FAQ答案
-         *
-         * @param request UpdateSolutionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSolutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSolutionResponse
+        /// </returns>
         public async Task<UpdateSolutionResponse> UpdateSolutionWithOptionsAsync(UpdateSolutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9829,37 +12145,57 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateSolutionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新FAQ答案
-         *
-         * @param request UpdateSolutionRequest
-         * @return UpdateSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSolutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSolutionResponse
+        /// </returns>
         public UpdateSolutionResponse UpdateSolution(UpdateSolutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSolutionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新FAQ答案
-         *
-         * @param request UpdateSolutionRequest
-         * @return UpdateSolutionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新FAQ答案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSolutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSolutionResponse
+        /// </returns>
         public async Task<UpdateSolutionResponse> UpdateSolutionAsync(UpdateSolutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSolutionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 意图-话术-更新
-         *
-         * @param tmpReq UpdateUserSayRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-话术-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateUserSayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserSayResponse
+        /// </returns>
         public UpdateUserSayResponse UpdateUserSayWithOptions(UpdateUserSayRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9905,13 +12241,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateUserSayResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-话术-更新
-         *
-         * @param tmpReq UpdateUserSayRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-话术-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateUserSayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserSayResponse
+        /// </returns>
         public async Task<UpdateUserSayResponse> UpdateUserSayWithOptionsAsync(UpdateUserSayRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9957,24 +12301,36 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateUserSayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 意图-话术-更新
-         *
-         * @param request UpdateUserSayRequest
-         * @return UpdateUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-话术-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserSayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserSayResponse
+        /// </returns>
         public UpdateUserSayResponse UpdateUserSay(UpdateUserSayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateUserSayWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 意图-话术-更新
-         *
-         * @param request UpdateUserSayRequest
-         * @return UpdateUserSayResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>意图-话术-更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserSayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserSayResponse
+        /// </returns>
         public async Task<UpdateUserSayResponse> UpdateUserSayAsync(UpdateUserSayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

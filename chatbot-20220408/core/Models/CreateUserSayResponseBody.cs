@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateUserSayResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>8g4n8bnd236fg79</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>46456176856</para>
+        /// </summary>
         [NameInMap("UserSayId")]
         [Validation(Required=false)]
         public long? UserSayId { get; set; }

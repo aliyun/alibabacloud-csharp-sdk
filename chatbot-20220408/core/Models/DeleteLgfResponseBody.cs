@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteLgfResponseBody : TeaModel {
         /// <summary>
-        /// LGF ID
+        /// <para>LGF ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2342424</para>
         /// </summary>
         [NameInMap("LgfId")]
         [Validation(Required=false)]
         public long? LgfId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dgw2342424qw42</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

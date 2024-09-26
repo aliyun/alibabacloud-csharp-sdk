@@ -9,30 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateSolutionRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
+        /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ContentType")]
         [Validation(Required=false)]
         public int? ContentType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PerspectiveCodes")]
         [Validation(Required=false)]
         public List<string> PerspectiveCodes { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100001333260</para>
         /// </summary>
         [NameInMap("SolutionId")]
         [Validation(Required=false)]

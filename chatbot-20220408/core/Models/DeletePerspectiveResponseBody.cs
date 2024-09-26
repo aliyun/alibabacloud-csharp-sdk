@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeletePerspectiveResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>FC384CE1-8D42-1900-84E1-F33F990F2B5E</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public bool? Result { get; set; }

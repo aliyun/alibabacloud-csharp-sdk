@@ -9,19 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateConnQuestionRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
+        /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30002654628</para>
         /// </summary>
         [NameInMap("ConnQuestionId")]
         [Validation(Required=false)]
         public long? ConnQuestionId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30002174773</para>
         /// </summary>
         [NameInMap("KnowledgeId")]
         [Validation(Required=false)]

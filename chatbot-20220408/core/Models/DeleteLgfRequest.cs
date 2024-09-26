@@ -9,28 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteLgfRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
+        /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>chatbot-cn-yjzbyrEvqd</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23242342</para>
         /// </summary>
         [NameInMap("IntentId")]
         [Validation(Required=false)]
         public long? IntentId { get; set; }
 
         /// <summary>
-        /// lgf Id
+        /// <para>lgf Id</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2342424</para>
         /// </summary>
         [NameInMap("LgfId")]
         [Validation(Required=false)]

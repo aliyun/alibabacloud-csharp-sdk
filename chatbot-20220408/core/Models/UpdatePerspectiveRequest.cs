@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdatePerspectiveRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
+        /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>客户端视角</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3001</para>
+        /// </summary>
         [NameInMap("PerspectiveId")]
         [Validation(Required=false)]
         public string PerspectiveId { get; set; }
