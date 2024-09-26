@@ -8,27 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
-    public class RunMarketingInformationWritingRequest : TeaModel {
-        [NameInMap("customPrompt")]
+    public class RunCommentGenerationRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("length")]
         [Validation(Required=false)]
-        public string CustomPrompt { get; set; }
+        public string Length { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>qwen-max
-        /// qwen-plus</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("modelId")]
+        [NameInMap("numComments")]
         [Validation(Required=false)]
-        public string ModelId { get; set; }
+        public string NumComments { get; set; }
 
         [NameInMap("sourceMaterial")]
         [Validation(Required=false)]
         public string SourceMaterial { get; set; }
 
-        [NameInMap("writingType")]
+        [NameInMap("style")]
         [Validation(Required=false)]
-        public string WritingType { get; set; }
+        public string Style { get; set; }
 
     }
 

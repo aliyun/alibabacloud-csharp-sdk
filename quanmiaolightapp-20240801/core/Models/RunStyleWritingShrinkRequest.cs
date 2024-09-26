@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class RunStyleWritingShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("learningSamples")]
         [Validation(Required=false)]
         public string LearningSamplesShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("referenceMaterials")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         public string StyleFeature { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("writingTheme")]
         [Validation(Required=false)]

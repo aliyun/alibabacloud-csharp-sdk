@@ -8,19 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
-    public class RunMarketingInformationExtractResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{\&quot;TimeZone\&quot;: \&quot;Asia/Shanghai\&quot;, \&quot;DateTime\&quot;: \&quot;2024-03-07T17:00:09+08:00\&quot;}</para>
-        /// </summary>
+    public class RunCommentGenerationResponseBody : TeaModel {
         [NameInMap("end")]
         [Validation(Required=false)]
         public bool? End { get; set; }
 
         [NameInMap("header")]
         [Validation(Required=false)]
-        public RunMarketingInformationExtractResponseBodyHeader Header { get; set; }
-        public class RunMarketingInformationExtractResponseBodyHeader : TeaModel {
+        public RunCommentGenerationResponseBodyHeader Header { get; set; }
+        public class RunCommentGenerationResponseBodyHeader : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>result-generated</para>
@@ -35,7 +31,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>F08C71C0-9399-548C-838B-1DA01DE211B0</para>
+            /// <para>F8A35034-EDCF-5C50-95A5-1044316F36E3</para>
             /// </summary>
             [NameInMap("requestId")]
             [Validation(Required=false)]
@@ -43,7 +39,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>121dlsga4o7golrl1hojazg0u9lvytjc17ebgzzj2u4zukgh122tfg7wj1e6a1vcowy1ewzinauxriai9atcr6r323mm9ddbr0bg5m61ij8hxnf8664tstlfkfol6m8luc4shs3gums7l46uauyy0xndqmhdjtdon6coyhb4x17bo762bg9e3tb2geufg2</para>
+            /// <para>tcm9xac9dsfbfgm8hf5k94l3cqybwh9o3mn0iuyytdgd9qoejxf1crxsdvuvr8fu0zuhbe8anhdaoeif2wbkmebagnezh23cuhkiazx2tmjh4eml791eak7t95sshvtkz14bh2lnbktzvdhialzd8reoaem0pktw41slinwyoabe75xlnxsqb5eo1i6ly70</para>
             /// </summary>
             [NameInMap("sessionId")]
             [Validation(Required=false)]
@@ -51,7 +47,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>12826092918145</para>
+            /// <para>task-fu1918oghtodbis3chgpfr</para>
             /// </summary>
             [NameInMap("taskId")]
             [Validation(Required=false)]
@@ -59,7 +55,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>2150432017236011824686132ecdbc</para>
+            /// <para>21507c3517074446017046500ed5f1</para>
             /// </summary>
             [NameInMap("traceId")]
             [Validation(Required=false)]
@@ -69,12 +65,12 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
         [NameInMap("payload")]
         [Validation(Required=false)]
-        public RunMarketingInformationExtractResponseBodyPayload Payload { get; set; }
-        public class RunMarketingInformationExtractResponseBodyPayload : TeaModel {
+        public RunCommentGenerationResponseBodyPayload Payload { get; set; }
+        public class RunCommentGenerationResponseBodyPayload : TeaModel {
             [NameInMap("output")]
             [Validation(Required=false)]
-            public RunMarketingInformationExtractResponseBodyPayloadOutput Output { get; set; }
-            public class RunMarketingInformationExtractResponseBodyPayloadOutput : TeaModel {
+            public RunCommentGenerationResponseBodyPayloadOutput Output { get; set; }
+            public class RunCommentGenerationResponseBodyPayloadOutput : TeaModel {
                 [NameInMap("text")]
                 [Validation(Required=false)]
                 public string Text { get; set; }
@@ -83,8 +79,8 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
             [NameInMap("usage")]
             [Validation(Required=false)]
-            public RunMarketingInformationExtractResponseBodyPayloadUsage Usage { get; set; }
-            public class RunMarketingInformationExtractResponseBodyPayloadUsage : TeaModel {
+            public RunCommentGenerationResponseBodyPayloadUsage Usage { get; set; }
+            public class RunCommentGenerationResponseBodyPayloadUsage : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>100</para>

@@ -17,6 +17,11 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public string ExtractType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>qwen-max
+        /// qwen-plus</para>
+        /// </summary>
         [NameInMap("modelId")]
         [Validation(Required=false)]
         public string ModelId { get; set; }
