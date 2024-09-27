@@ -10,61 +10,80 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class ListTemplateRequest : TeaModel {
         /// <summary>
-        /// The keyword that is used to search for templates.
+        /// <para>The keyword that is used to search for templates.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cadt</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public int? NextToken { get; set; }
 
         /// <summary>
-        /// The criterion by which the returned templates are sorted. Valid values:
+        /// <para>The criterion by which the returned templates are sorted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: The templates are sorted by the time when they are updated.</description></item>
+        /// <item><description>2: The templates are sorted by the time when they are created.</description></item>
+        /// <item><description>3: The templates are sorted by the system.</description></item>
+        /// <item><description>4: The templates are sorted by the number of times that they are used.</description></item>
+        /// <item><description>If you specify an integer other than 1, 2, 3, and 4 or do not specify any value, the templates are sorted by the system.</description></item>
+        /// </list>
         /// 
-        /// *   1: The templates are sorted by the time when they are updated.
-        /// *   2: The templates are sorted by the time when they are created.
-        /// *   3: The templates are sorted by the system.
-        /// *   4: The templates are sorted by the number of times that they are used.
-        /// *   If you specify an integer other than 1, 2, 3, and 4 or do not specify any value, the templates are sorted by the system.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public long? OrderType { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmyjt3c5om3hi</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tag that you want to use to query templates.
+        /// <para>The tag that you want to use to query templates.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]
         public int? TagList { get; set; }
 
         /// <summary>
-        /// The type of the templates to be returned. Valid values: public and private
+        /// <para>The type of the templates to be returned. Valid values: public and private</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>public</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

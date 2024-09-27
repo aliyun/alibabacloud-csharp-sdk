@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class GetTokenRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekzhfgmw4e6fwq</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

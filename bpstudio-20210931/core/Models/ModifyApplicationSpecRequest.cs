@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class ModifyApplicationSpecRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>02S7UU41WKJL7ERR</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
@@ -24,6 +27,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             [Validation(Required=false)]
             public Dictionary<string, object> Configuration { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>rm-2ze8f4ah378a*****</para>
+            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }

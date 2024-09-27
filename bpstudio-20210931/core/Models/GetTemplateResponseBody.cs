@@ -10,91 +10,124 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class GetTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the template.
+        /// <para>The details of the template.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetTemplateResponseBodyData Data { get; set; }
         public class GetTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// The time when the template was created.
+            /// <para>The time when the template was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-09-22 17:08:31</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// Template DescriptionD
+            /// <para>Template DescriptionD</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>无</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The path to the template schema image file
+            /// <para>The path to the template schema image file</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bp-studio-template/sr-U37UD2YQCRJ75X5V.png</para>
             /// </summary>
             [NameInMap("ImageURL")]
             [Validation(Required=false)]
             public string ImageURL { get; set; }
 
             /// <summary>
-            /// The name of the template
+            /// <para>The name of the template</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cadt-template</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aekzhfgmw4e6fwq</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// Template ID
+            /// <para>Template ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>XFKR6WYRVS24S07R</para>
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// The details of the template variables.
+            /// <para>The details of the template variables.</para>
             /// </summary>
             [NameInMap("Variables")]
             [Validation(Required=false)]
             public List<GetTemplateResponseBodyDataVariables> Variables { get; set; }
             public class GetTemplateResponseBodyDataVariables : TeaModel {
                 /// <summary>
-                /// The name of the variable.
+                /// <para>The name of the variable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>instance_name</para>
                 /// </summary>
                 [NameInMap("Attribute")]
                 [Validation(Required=false)]
                 public string Attribute { get; set; }
 
                 /// <summary>
-                /// The type of the variable.
+                /// <para>The type of the variable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>String</para>
                 /// </summary>
                 [NameInMap("DataType")]
                 [Validation(Required=false)]
                 public string DataType { get; set; }
 
                 /// <summary>
-                /// The default value of the variable.
+                /// <para>The default value of the variable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cadt-app-01</para>
                 /// </summary>
                 [NameInMap("DefaultValue")]
                 [Validation(Required=false)]
                 public string DefaultValue { get; set; }
 
                 /// <summary>
-                /// The value of the variable.
+                /// <para>The value of the variable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>${name}</para>
                 /// </summary>
                 [NameInMap("Variable")]
                 [Validation(Required=false)]
@@ -105,14 +138,20 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         }
 
         /// <summary>
-        /// The interface returns information
+        /// <para>The interface returns information</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Request ID
+        /// <para>Request ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A07FFDF2-78FA-1B48-9E38-88E833A93187</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class InitAppFailOverRequest : TeaModel {
         /// <summary>
-        /// The application ID.
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>002XWH7MXB8MJRU0</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class AppFailOverRequest : TeaModel {
         /// <summary>
-        /// The application ID.
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BE68D71ZY5YYIU9R</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// The destination zone to which you want to switch the disaster recovery application.
+        /// <para>The destination zone to which you want to switch the disaster recovery application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-g</para>
         /// </summary>
         [NameInMap("FailZone")]
         [Validation(Required=false)]

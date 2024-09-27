@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class ReleaseApplicationRequest : TeaModel {
         /// <summary>
-        /// The ID of the application.
+        /// <para>The ID of the application.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>7QSXFQW46ZNGOUDM</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1600765710019</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
+        /// <para>The ID of the resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

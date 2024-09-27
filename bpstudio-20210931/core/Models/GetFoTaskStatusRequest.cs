@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class GetFoTaskStatusRequest : TeaModel {
         /// <summary>
-        /// The disaster recovery switchover task ID.
+        /// <para>The disaster recovery switchover task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2615</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

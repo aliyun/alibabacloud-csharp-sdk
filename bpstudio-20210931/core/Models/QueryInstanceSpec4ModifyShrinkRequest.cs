@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class QueryInstanceSpec4ModifyShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BE68D71ZY5YYIU9R</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-uf66k9143r2ch*****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

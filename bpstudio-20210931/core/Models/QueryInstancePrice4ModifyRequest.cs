@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class QueryInstancePrice4ModifyRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>002XWH7MXB8MJRU0</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         public Dictionary<string, object> Configuration { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-uf66k9143r2ch*****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

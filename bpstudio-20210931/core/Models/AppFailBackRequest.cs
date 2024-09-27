@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,7 +10,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class AppFailBackRequest : TeaModel {
         /// <summary>
-        /// The application ID.
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>61ZW1DY5Y3FSAOO2</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]

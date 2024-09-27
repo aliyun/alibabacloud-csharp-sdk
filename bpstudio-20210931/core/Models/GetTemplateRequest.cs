@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class GetTemplateRequest : TeaModel {
         /// <summary>
-        /// Template Area
+        /// <para>Template Area</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// ResourceGroup ID
+        /// <para>ResourceGroup ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekzhfgmw4e6fwq</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// Template ID
+        /// <para>Template ID</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>XFKR6WYRVS24S07R</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
