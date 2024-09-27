@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetGwpBenchmarkListRequest : TeaModel {
         /// <summary>
-        /// The enterprise code.
+        /// <para>The enterprise code.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>C-20080808-1</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The product id.
+        /// <para>The product id.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1024</para>
         /// </summary>
         [NameInMap("productId")]
         [Validation(Required=false)]
         public long? ProductId { get; set; }
 
         /// <summary>
-        /// Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.
+        /// <para>Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("productType")]
         [Validation(Required=false)]

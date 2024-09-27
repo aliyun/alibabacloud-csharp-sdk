@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetDeviceInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the device.
+        /// <para>The ID of the device.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pn_69873</para>
         /// </summary>
         [NameInMap("deviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
         /// <summary>
-        /// The time string in the YYYY-mm-dd format.
+        /// <para>The time string in the YYYY-mm-dd format.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2022-07-26</para>
         /// </summary>
         [NameInMap("ds")]
         [Validation(Required=false)]
         public string Ds { get; set; }
 
         /// <summary>
-        /// The ID of the site.
+        /// <para>The ID of the site.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pn_95</para>
         /// </summary>
         [NameInMap("factoryId")]
         [Validation(Required=false)]

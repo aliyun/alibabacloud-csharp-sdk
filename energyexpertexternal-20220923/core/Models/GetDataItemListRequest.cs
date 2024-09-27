@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetDataItemListRequest : TeaModel {
         /// <summary>
-        /// The enterprise code.
+        /// <para>The enterprise code.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>C-202302-01</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]

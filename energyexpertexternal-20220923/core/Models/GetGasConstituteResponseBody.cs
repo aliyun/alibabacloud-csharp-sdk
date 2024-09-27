@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetGasConstituteResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<GetGasConstituteResponseBodyData> Data { get; set; }
         public class GetGasConstituteResponseBodyData : TeaModel {
             /// <summary>
-            /// Carbon emissions
+            /// <para>Carbon emissions</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3.14</para>
             /// </summary>
             [NameInMap("carbonEmissionData")]
             [Validation(Required=false)]
             public double? CarbonEmissionData { get; set; }
 
             /// <summary>
-            /// Gas emissions
+            /// <para>Gas emissions</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3.14</para>
             /// </summary>
             [NameInMap("gasEmissionData")]
             [Validation(Required=false)]
             public double? GasEmissionData { get; set; }
 
             /// <summary>
-            /// Name of gas
+            /// <para>Name of gas</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CO₂</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// Proportion of carbon emissions. Example value: 0.5 (50%)
+            /// <para>Proportion of carbon emissions. Example value: 0.5 (50%)</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.5</para>
             /// </summary>
             [NameInMap("ratio")]
             [Validation(Required=false)]
             public double? Ratio { get; set; }
 
             /// <summary>
-            /// Gas Type
+            /// <para>Gas Type</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -54,7 +69,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>83A5A7DD-8974-5769-952E-590A97BEA34E</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

@@ -10,56 +10,74 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetGwpBenchmarkListResponseBody : TeaModel {
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetGwpBenchmarkListResponseBodyData Data { get; set; }
         public class GetGwpBenchmarkListResponseBodyData : TeaModel {
             /// <summary>
-            /// Active carbon reduction ranking list.
+            /// <para>Active carbon reduction ranking list.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<GetGwpBenchmarkListResponseBodyDataItems> Items { get; set; }
             public class GetGwpBenchmarkListResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// `activeReduction=benchmarkEmission-carbonEmission` Generally, baseline emissions are greater than inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.
+                /// <para><c>activeReduction=benchmarkEmission-carbonEmission</c> Generally, baseline emissions are greater than inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.2169</para>
                 /// </summary>
                 [NameInMap("activeReduction")]
                 [Validation(Required=false)]
                 public double? ActiveReduction { get; set; }
 
                 /// <summary>
-                /// Benchmark emissions. Maintain four decimal places. Unit pertains to a higher-level unit.
+                /// <para>Benchmark emissions. Maintain four decimal places. Unit pertains to a higher-level unit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0108</para>
                 /// </summary>
                 [NameInMap("benchmarkEmission")]
                 [Validation(Required=false)]
                 public double? BenchmarkEmission { get; set; }
 
                 /// <summary>
-                /// Benchmark name
+                /// <para>Benchmark name</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>old-energy</para>
                 /// </summary>
                 [NameInMap("benchmarkName")]
                 [Validation(Required=false)]
                 public string BenchmarkName { get; set; }
 
                 /// <summary>
-                /// Inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.
+                /// <para>Inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>-0.2061</para>
                 /// </summary>
                 [NameInMap("carbonEmission")]
                 [Validation(Required=false)]
                 public double? CarbonEmission { get; set; }
 
                 /// <summary>
-                /// name
+                /// <para>name</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>new-energy</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// Unused temporarily.
+                /// <para>Unused temporarily.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("percent")]
                 [Validation(Required=false)]
@@ -68,8 +86,11 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
             }
 
             /// <summary>
-            /// unit of emissions. The default value is `kgCO₂e/productUnit`. 
-            /// The `productUnit` is the unit selected for the product. The unit value is changed to `tCO₂e/productUnit` or `gCO₂e/productUnit`. For more information, see the remarks in the quantity column.
+            /// <para>unit of emissions. The default value is <c>kgCO₂e/productUnit</c>. 
+            /// The <c>productUnit</c> is the unit selected for the product. The unit value is changed to <c>tCO₂e/productUnit</c> or <c>gCO₂e/productUnit</c>. For more information, see the remarks in the quantity column.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>kgCO₂e/kg</para>
             /// </summary>
             [NameInMap("unit")]
             [Validation(Required=false)]
@@ -78,7 +99,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         }
 
         /// <summary>
-        /// The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+        /// <para>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A8AEC6D9-A359-5169-BD1A-BD848BA60D65</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

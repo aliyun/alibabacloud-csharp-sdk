@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetDeviceListRequest : TeaModel {
         /// <summary>
-        /// The ID of the site.
+        /// <para>The ID of the site.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pn_95</para>
         /// </summary>
         [NameInMap("factoryId")]
         [Validation(Required=false)]

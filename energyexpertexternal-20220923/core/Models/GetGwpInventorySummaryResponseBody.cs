@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetGwpInventorySummaryResponseBody : TeaModel {
         /// <summary>
-        /// The returned results.
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetGwpInventorySummaryResponseBodyData Data { get; set; }
         public class GetGwpInventorySummaryResponseBodyData : TeaModel {
             /// <summary>
-            /// Top 4 types of carbon footprint contribution.
+            /// <para>Top 4 types of carbon footprint contribution.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<GetGwpInventorySummaryResponseBodyDataItems> Items { get; set; }
             public class GetGwpInventorySummaryResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// Inventory resource type name.
+                /// <para>Inventory resource type name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Energy</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// Percentage.
+                /// <para>Percentage.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>99.01</para>
                 /// </summary>
                 [NameInMap("percent")]
                 [Validation(Required=false)]
                 public string Percent { get; set; }
 
                 /// <summary>
-                /// Quantity.
+                /// <para>Quantity.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9.9763</para>
                 /// </summary>
                 [NameInMap("quantity")]
                 [Validation(Required=false)]
                 public double? Quantity { get; set; }
 
                 /// <summary>
-                /// The unit.
+                /// <para>The unit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>kgCO₂e/Piece(s)</para>
                 /// </summary>
                 [NameInMap("unit")]
                 [Validation(Required=false)]
@@ -54,21 +66,30 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
             }
 
             /// <summary>
-            /// The emission quantity.
+            /// <para>The emission quantity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0100</para>
             /// </summary>
             [NameInMap("quantity")]
             [Validation(Required=false)]
             public double? Quantity { get; set; }
 
             /// <summary>
-            /// The time when the result was generated, in the millisecond timestamp format.
+            /// <para>The time when the result was generated, in the millisecond timestamp format.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1709108026000</para>
             /// </summary>
             [NameInMap("resultGenerateTime")]
             [Validation(Required=false)]
             public long? ResultGenerateTime { get; set; }
 
             /// <summary>
-            /// Emission Unit.
+            /// <para>Emission Unit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tCO₂e/Piece(s)</para>
             /// </summary>
             [NameInMap("unit")]
             [Validation(Required=false)]
@@ -77,7 +98,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         }
 
         /// <summary>
-        /// The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+        /// <para>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>83A5A7DD-8974-5769-952E-590A97BEA34E</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

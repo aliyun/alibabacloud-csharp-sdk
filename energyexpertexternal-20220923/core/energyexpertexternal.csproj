@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.EnergyExpertExternal20220923</AssemblyName>
-    <Version>2.1.0</Version>
+    <Version>2.1.1</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud energyExpertExternal (20220923) SDK Library for .NET</Description>
@@ -45,7 +45,7 @@
     <PackageReference Include="AlibabaCloud.SDK.OpenPlatform20191219" Version="2.0.0"/>
     <PackageReference Include="AlibabaCloud.OSSUtil" Version="0.0.3"/>
     <PackageReference Include="AlibabaCloud.SDK.TeaFileform" Version="0.0.2"/>
-    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.11"/>
+    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.12"/>
     <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.1.1"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
     <PackageReference Include="Tea" Version="1.1.3"/>

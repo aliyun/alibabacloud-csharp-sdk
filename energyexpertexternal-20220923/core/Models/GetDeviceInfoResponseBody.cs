@@ -10,84 +10,114 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetDeviceInfoResponseBody : TeaModel {
         /// <summary>
-        /// The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.
+        /// <para>The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetDeviceInfoResponseBodyData Data { get; set; }
         public class GetDeviceInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the device.
+            /// <para>The ID of the device.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pn_69873</para>
             /// </summary>
             [NameInMap("deviceId")]
             [Validation(Required=false)]
             public string DeviceId { get; set; }
 
             /// <summary>
-            /// The name of the device.
+            /// <para>The name of the device.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Main transformer 4#</para>
             /// </summary>
             [NameInMap("deviceName")]
             [Validation(Required=false)]
             public string DeviceName { get; set; }
 
             /// <summary>
-            /// The level 1 meter type.
+            /// <para>The level 1 meter type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Electric meter</para>
             /// </summary>
             [NameInMap("firstTypeName")]
             [Validation(Required=false)]
             public string FirstTypeName { get; set; }
 
             /// <summary>
-            /// The device parameters.
+            /// <para>The device parameters.</para>
             /// </summary>
             [NameInMap("recordList")]
             [Validation(Required=false)]
             public List<GetDeviceInfoResponseBodyDataRecordList> RecordList { get; set; }
             public class GetDeviceInfoResponseBodyDataRecordList : TeaModel {
                 /// <summary>
-                /// The device identifier.
+                /// <para>The device identifier.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Ia</para>
                 /// </summary>
                 [NameInMap("identifier")]
                 [Validation(Required=false)]
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// The parameter name.
+                /// <para>The parameter name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Phase A current</para>
                 /// </summary>
                 [NameInMap("paramName")]
                 [Validation(Required=false)]
                 public string ParamName { get; set; }
 
                 /// <summary>
-                /// The date on which the statistics were collected.
+                /// <para>The date on which the statistics were collected.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-07-26 00:00:00</para>
                 /// </summary>
                 [NameInMap("statisticsDate")]
                 [Validation(Required=false)]
                 public string StatisticsDate { get; set; }
 
                 /// <summary>
-                /// The type of the measuring point.
+                /// <para>The type of the measuring point.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DOUBLE</para>
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The unit of the parameter value.
+                /// <para>The unit of the parameter value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>A</para>
                 /// </summary>
                 [NameInMap("unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
 
                 /// <summary>
-                /// The value of the measuring point.
+                /// <para>The value of the measuring point.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20.00</para>
                 /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
@@ -96,7 +126,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
             }
 
             /// <summary>
-            /// The level 2 meter type.
+            /// <para>The level 2 meter type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Gateway meter</para>
             /// </summary>
             [NameInMap("secondTypeName")]
             [Validation(Required=false)]
@@ -105,21 +138,30 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("httpCode")]
         [Validation(Required=false)]
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>83A5A7DD-8974-5769-952E-590A97BEA34E</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

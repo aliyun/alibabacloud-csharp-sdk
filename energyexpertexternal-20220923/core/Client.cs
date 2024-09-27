@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 策略执行状态反馈
-         *
-         * @param request BatchSaveInstructionStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchSaveInstructionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>策略执行状态反馈</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSaveInstructionStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSaveInstructionStatusResponse
+        /// </returns>
         public BatchSaveInstructionStatusResponse BatchSaveInstructionStatusWithOptions(BatchSaveInstructionStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -81,14 +91,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<BatchSaveInstructionStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 策略执行状态反馈
-         *
-         * @param request BatchSaveInstructionStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchSaveInstructionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>策略执行状态反馈</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSaveInstructionStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSaveInstructionStatusResponse
+        /// </returns>
         public async Task<BatchSaveInstructionStatusResponse> BatchSaveInstructionStatusWithOptionsAsync(BatchSaveInstructionStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -125,12 +145,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<BatchSaveInstructionStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 策略执行状态反馈
-         *
-         * @param request BatchSaveInstructionStatusRequest
-         * @return BatchSaveInstructionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>策略执行状态反馈</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSaveInstructionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSaveInstructionStatusResponse
+        /// </returns>
         public BatchSaveInstructionStatusResponse BatchSaveInstructionStatus(BatchSaveInstructionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -138,12 +164,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return BatchSaveInstructionStatusWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 策略执行状态反馈
-         *
-         * @param request BatchSaveInstructionStatusRequest
-         * @return BatchSaveInstructionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>策略执行状态反馈</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSaveInstructionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSaveInstructionStatusResponse
+        /// </returns>
         public async Task<BatchSaveInstructionStatusResponse> BatchSaveInstructionStatusAsync(BatchSaveInstructionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -151,14 +183,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await BatchSaveInstructionStatusWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 批量设置空调站点运行计划
-         *
-         * @param request BatchUpdateSystemRunningPlanRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchUpdateSystemRunningPlanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置空调站点运行计划</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchUpdateSystemRunningPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateSystemRunningPlanResponse
+        /// </returns>
         public BatchUpdateSystemRunningPlanResponse BatchUpdateSystemRunningPlanWithOptions(BatchUpdateSystemRunningPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -239,14 +281,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<BatchUpdateSystemRunningPlanResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量设置空调站点运行计划
-         *
-         * @param request BatchUpdateSystemRunningPlanRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchUpdateSystemRunningPlanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置空调站点运行计划</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchUpdateSystemRunningPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateSystemRunningPlanResponse
+        /// </returns>
         public async Task<BatchUpdateSystemRunningPlanResponse> BatchUpdateSystemRunningPlanWithOptionsAsync(BatchUpdateSystemRunningPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -327,12 +379,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<BatchUpdateSystemRunningPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量设置空调站点运行计划
-         *
-         * @param request BatchUpdateSystemRunningPlanRequest
-         * @return BatchUpdateSystemRunningPlanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置空调站点运行计划</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchUpdateSystemRunningPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateSystemRunningPlanResponse
+        /// </returns>
         public BatchUpdateSystemRunningPlanResponse BatchUpdateSystemRunningPlan(BatchUpdateSystemRunningPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -340,12 +398,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return BatchUpdateSystemRunningPlanWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 批量设置空调站点运行计划
-         *
-         * @param request BatchUpdateSystemRunningPlanRequest
-         * @return BatchUpdateSystemRunningPlanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置空调站点运行计划</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchUpdateSystemRunningPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateSystemRunningPlanResponse
+        /// </returns>
         public async Task<BatchUpdateSystemRunningPlanResponse> BatchUpdateSystemRunningPlanAsync(BatchUpdateSystemRunningPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -353,14 +417,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await BatchUpdateSystemRunningPlanWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 编辑禁用设备
-         *
-         * @param request EditProhibitedDevicesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EditProhibitedDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑禁用设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditProhibitedDevicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditProhibitedDevicesResponse
+        /// </returns>
         public EditProhibitedDevicesResponse EditProhibitedDevicesWithOptions(EditProhibitedDevicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -397,14 +471,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<EditProhibitedDevicesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 编辑禁用设备
-         *
-         * @param request EditProhibitedDevicesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EditProhibitedDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑禁用设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditProhibitedDevicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditProhibitedDevicesResponse
+        /// </returns>
         public async Task<EditProhibitedDevicesResponse> EditProhibitedDevicesWithOptionsAsync(EditProhibitedDevicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -441,12 +525,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<EditProhibitedDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 编辑禁用设备
-         *
-         * @param request EditProhibitedDevicesRequest
-         * @return EditProhibitedDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑禁用设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditProhibitedDevicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditProhibitedDevicesResponse
+        /// </returns>
         public EditProhibitedDevicesResponse EditProhibitedDevices(EditProhibitedDevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -454,12 +544,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return EditProhibitedDevicesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 编辑禁用设备
-         *
-         * @param request EditProhibitedDevicesRequest
-         * @return EditProhibitedDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑禁用设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditProhibitedDevicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditProhibitedDevicesResponse
+        /// </returns>
         public async Task<EditProhibitedDevicesResponse> EditProhibitedDevicesAsync(EditProhibitedDevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -467,14 +563,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await EditProhibitedDevicesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 编辑不利区设备
-         *
-         * @param request EditUnfavorableAreaDevicesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EditUnfavorableAreaDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑不利区设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditUnfavorableAreaDevicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditUnfavorableAreaDevicesResponse
+        /// </returns>
         public EditUnfavorableAreaDevicesResponse EditUnfavorableAreaDevicesWithOptions(EditUnfavorableAreaDevicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -511,14 +617,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<EditUnfavorableAreaDevicesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 编辑不利区设备
-         *
-         * @param request EditUnfavorableAreaDevicesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EditUnfavorableAreaDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑不利区设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditUnfavorableAreaDevicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditUnfavorableAreaDevicesResponse
+        /// </returns>
         public async Task<EditUnfavorableAreaDevicesResponse> EditUnfavorableAreaDevicesWithOptionsAsync(EditUnfavorableAreaDevicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -555,12 +671,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<EditUnfavorableAreaDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 编辑不利区设备
-         *
-         * @param request EditUnfavorableAreaDevicesRequest
-         * @return EditUnfavorableAreaDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑不利区设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditUnfavorableAreaDevicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditUnfavorableAreaDevicesResponse
+        /// </returns>
         public EditUnfavorableAreaDevicesResponse EditUnfavorableAreaDevices(EditUnfavorableAreaDevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -568,12 +690,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return EditUnfavorableAreaDevicesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 编辑不利区设备
-         *
-         * @param request EditUnfavorableAreaDevicesRequest
-         * @return EditUnfavorableAreaDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑不利区设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditUnfavorableAreaDevicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditUnfavorableAreaDevicesResponse
+        /// </returns>
         public async Task<EditUnfavorableAreaDevicesResponse> EditUnfavorableAreaDevicesAsync(EditUnfavorableAreaDevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -581,16 +709,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await EditUnfavorableAreaDevicesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Generate a report of the specified carbon footprint.
-         *
-         * @description Given a product ID, this API initiates a task to calculate the carbon footprint result for the corresponding product. The task\\"s status can be checked using the `IsCompleted` API. Following the generation of results, other result inquiry APIs can be accessed for display content.
-         *
-         * @param request GenerateResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GenerateResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generate a report of the specified carbon footprint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Given a product ID, this API initiates a task to calculate the carbon footprint result for the corresponding product. The task\&quot;s status can be checked using the <c>IsCompleted</c> API. Following the generation of results, other result inquiry APIs can be accessed for display content.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateResultResponse
+        /// </returns>
         public GenerateResultResponse GenerateResultWithOptions(GenerateResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -627,16 +768,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GenerateResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Generate a report of the specified carbon footprint.
-         *
-         * @description Given a product ID, this API initiates a task to calculate the carbon footprint result for the corresponding product. The task\\"s status can be checked using the `IsCompleted` API. Following the generation of results, other result inquiry APIs can be accessed for display content.
-         *
-         * @param request GenerateResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GenerateResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generate a report of the specified carbon footprint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Given a product ID, this API initiates a task to calculate the carbon footprint result for the corresponding product. The task\&quot;s status can be checked using the <c>IsCompleted</c> API. Following the generation of results, other result inquiry APIs can be accessed for display content.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateResultResponse
+        /// </returns>
         public async Task<GenerateResultResponse> GenerateResultWithOptionsAsync(GenerateResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -673,14 +827,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GenerateResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Generate a report of the specified carbon footprint.
-         *
-         * @description Given a product ID, this API initiates a task to calculate the carbon footprint result for the corresponding product. The task\\"s status can be checked using the `IsCompleted` API. Following the generation of results, other result inquiry APIs can be accessed for display content.
-         *
-         * @param request GenerateResultRequest
-         * @return GenerateResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generate a report of the specified carbon footprint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Given a product ID, this API initiates a task to calculate the carbon footprint result for the corresponding product. The task\&quot;s status can be checked using the <c>IsCompleted</c> API. Following the generation of results, other result inquiry APIs can be accessed for display content.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateResultResponse
+        /// </returns>
         public GenerateResultResponse GenerateResult(GenerateResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -688,14 +851,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GenerateResultWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Generate a report of the specified carbon footprint.
-         *
-         * @description Given a product ID, this API initiates a task to calculate the carbon footprint result for the corresponding product. The task\\"s status can be checked using the `IsCompleted` API. Following the generation of results, other result inquiry APIs can be accessed for display content.
-         *
-         * @param request GenerateResultRequest
-         * @return GenerateResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generate a report of the specified carbon footprint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Given a product ID, this API initiates a task to calculate the carbon footprint result for the corresponding product. The task\&quot;s status can be checked using the <c>IsCompleted</c> API. Following the generation of results, other result inquiry APIs can be accessed for display content.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateResultResponse
+        /// </returns>
         public async Task<GenerateResultResponse> GenerateResultAsync(GenerateResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -703,14 +875,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GenerateResultWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain electrical constitute analysis data.
-         *
-         * @param request GetAreaElecConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAreaElecConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain electrical constitute analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAreaElecConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAreaElecConstituteResponse
+        /// </returns>
         public GetAreaElecConstituteResponse GetAreaElecConstituteWithOptions(GetAreaElecConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -743,14 +925,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetAreaElecConstituteResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain electrical constitute analysis data.
-         *
-         * @param request GetAreaElecConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAreaElecConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain electrical constitute analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAreaElecConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAreaElecConstituteResponse
+        /// </returns>
         public async Task<GetAreaElecConstituteResponse> GetAreaElecConstituteWithOptionsAsync(GetAreaElecConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -783,12 +975,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetAreaElecConstituteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain electrical constitute analysis data.
-         *
-         * @param request GetAreaElecConstituteRequest
-         * @return GetAreaElecConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain electrical constitute analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAreaElecConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAreaElecConstituteResponse
+        /// </returns>
         public GetAreaElecConstituteResponse GetAreaElecConstitute(GetAreaElecConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -796,12 +994,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetAreaElecConstituteWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain electrical constitute analysis data.
-         *
-         * @param request GetAreaElecConstituteRequest
-         * @return GetAreaElecConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain electrical constitute analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAreaElecConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAreaElecConstituteResponse
+        /// </returns>
         public async Task<GetAreaElecConstituteResponse> GetAreaElecConstituteAsync(GetAreaElecConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -809,14 +1013,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetAreaElecConstituteWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Get trends in carbon emissions.
-         *
-         * @param request GetCarbonEmissionTrendRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetCarbonEmissionTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get trends in carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCarbonEmissionTrendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCarbonEmissionTrendResponse
+        /// </returns>
         public GetCarbonEmissionTrendResponse GetCarbonEmissionTrendWithOptions(GetCarbonEmissionTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -861,14 +1075,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetCarbonEmissionTrendResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Get trends in carbon emissions.
-         *
-         * @param request GetCarbonEmissionTrendRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetCarbonEmissionTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get trends in carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCarbonEmissionTrendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCarbonEmissionTrendResponse
+        /// </returns>
         public async Task<GetCarbonEmissionTrendResponse> GetCarbonEmissionTrendWithOptionsAsync(GetCarbonEmissionTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -913,12 +1137,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetCarbonEmissionTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Get trends in carbon emissions.
-         *
-         * @param request GetCarbonEmissionTrendRequest
-         * @return GetCarbonEmissionTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get trends in carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCarbonEmissionTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCarbonEmissionTrendResponse
+        /// </returns>
         public GetCarbonEmissionTrendResponse GetCarbonEmissionTrend(GetCarbonEmissionTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -926,12 +1156,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetCarbonEmissionTrendWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Get trends in carbon emissions.
-         *
-         * @param request GetCarbonEmissionTrendRequest
-         * @return GetCarbonEmissionTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get trends in carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCarbonEmissionTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCarbonEmissionTrendResponse
+        /// </returns>
         public async Task<GetCarbonEmissionTrendResponse> GetCarbonEmissionTrendAsync(GetCarbonEmissionTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -939,16 +1175,31 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetCarbonEmissionTrendWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain the details category of a data item.
-         *
-         * @description - obtain data item detail list under the current enterprise.
-         *
-         * @param request GetDataItemListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDataItemListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain the details category of a data item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>obtain data item detail list under the current enterprise.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataItemListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataItemListResponse
+        /// </returns>
         public GetDataItemListResponse GetDataItemListWithOptions(GetDataItemListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -977,16 +1228,31 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetDataItemListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain the details category of a data item.
-         *
-         * @description - obtain data item detail list under the current enterprise.
-         *
-         * @param request GetDataItemListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDataItemListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain the details category of a data item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>obtain data item detail list under the current enterprise.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataItemListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataItemListResponse
+        /// </returns>
         public async Task<GetDataItemListResponse> GetDataItemListWithOptionsAsync(GetDataItemListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1015,14 +1281,25 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetDataItemListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain the details category of a data item.
-         *
-         * @description - obtain data item detail list under the current enterprise.
-         *
-         * @param request GetDataItemListRequest
-         * @return GetDataItemListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain the details category of a data item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>obtain data item detail list under the current enterprise.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataItemListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataItemListResponse
+        /// </returns>
         public GetDataItemListResponse GetDataItemList(GetDataItemListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1030,14 +1307,25 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetDataItemListWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain the details category of a data item.
-         *
-         * @description - obtain data item detail list under the current enterprise.
-         *
-         * @param request GetDataItemListRequest
-         * @return GetDataItemListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain the details category of a data item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>obtain data item detail list under the current enterprise.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataItemListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataItemListResponse
+        /// </returns>
         public async Task<GetDataItemListResponse> GetDataItemListAsync(GetDataItemListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1045,16 +1333,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetDataItemListWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Obtain the data quality evaluation results DQR and DQI.
-         *
-         * @description This API returns the data quality evaluation results based on the user-provided product ID. It\\"s useful for understanding the data quality of the carbon emission factors for each inventory of the product.
-         *
-         * @param request GetDataQualityAnalysisRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDataQualityAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the data quality evaluation results DQR and DQI.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the data quality evaluation results based on the user-provided product ID. It\&quot;s useful for understanding the data quality of the carbon emission factors for each inventory of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityAnalysisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityAnalysisResponse
+        /// </returns>
         public GetDataQualityAnalysisResponse GetDataQualityAnalysisWithOptions(GetDataQualityAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1095,16 +1396,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetDataQualityAnalysisResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtain the data quality evaluation results DQR and DQI.
-         *
-         * @description This API returns the data quality evaluation results based on the user-provided product ID. It\\"s useful for understanding the data quality of the carbon emission factors for each inventory of the product.
-         *
-         * @param request GetDataQualityAnalysisRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDataQualityAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the data quality evaluation results DQR and DQI.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the data quality evaluation results based on the user-provided product ID. It\&quot;s useful for understanding the data quality of the carbon emission factors for each inventory of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityAnalysisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityAnalysisResponse
+        /// </returns>
         public async Task<GetDataQualityAnalysisResponse> GetDataQualityAnalysisWithOptionsAsync(GetDataQualityAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1145,14 +1459,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetDataQualityAnalysisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtain the data quality evaluation results DQR and DQI.
-         *
-         * @description This API returns the data quality evaluation results based on the user-provided product ID. It\\"s useful for understanding the data quality of the carbon emission factors for each inventory of the product.
-         *
-         * @param request GetDataQualityAnalysisRequest
-         * @return GetDataQualityAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the data quality evaluation results DQR and DQI.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the data quality evaluation results based on the user-provided product ID. It\&quot;s useful for understanding the data quality of the carbon emission factors for each inventory of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityAnalysisResponse
+        /// </returns>
         public GetDataQualityAnalysisResponse GetDataQualityAnalysis(GetDataQualityAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1160,14 +1483,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetDataQualityAnalysisWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Obtain the data quality evaluation results DQR and DQI.
-         *
-         * @description This API returns the data quality evaluation results based on the user-provided product ID. It\\"s useful for understanding the data quality of the carbon emission factors for each inventory of the product.
-         *
-         * @param request GetDataQualityAnalysisRequest
-         * @return GetDataQualityAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the data quality evaluation results DQR and DQI.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the data quality evaluation results based on the user-provided product ID. It\&quot;s useful for understanding the data quality of the carbon emission factors for each inventory of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityAnalysisResponse
+        /// </returns>
         public async Task<GetDataQualityAnalysisResponse> GetDataQualityAnalysisAsync(GetDataQualityAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1175,20 +1507,37 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetDataQualityAnalysisWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about a device at a site that is activated by using an Alibaba Cloud account.
-         *
-         * @description *   You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.
-         * *   You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @param request GetDeviceInfoRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDeviceInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a device at a site that is activated by using an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDeviceInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeviceInfoResponse
+        /// </returns>
         public GetDeviceInfoResponse GetDeviceInfoWithOptions(GetDeviceInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1225,20 +1574,37 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetDeviceInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about a device at a site that is activated by using an Alibaba Cloud account.
-         *
-         * @description *   You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.
-         * *   You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @param request GetDeviceInfoRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDeviceInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a device at a site that is activated by using an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDeviceInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeviceInfoResponse
+        /// </returns>
         public async Task<GetDeviceInfoResponse> GetDeviceInfoWithOptionsAsync(GetDeviceInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1275,18 +1641,31 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetDeviceInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about a device at a site that is activated by using an Alibaba Cloud account.
-         *
-         * @description *   You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.
-         * *   You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @param request GetDeviceInfoRequest
-         * @return GetDeviceInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a device at a site that is activated by using an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDeviceInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeviceInfoResponse
+        /// </returns>
         public GetDeviceInfoResponse GetDeviceInfo(GetDeviceInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1294,18 +1673,31 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetDeviceInfoWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about a device at a site that is activated by using an Alibaba Cloud account.
-         *
-         * @description *   You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.
-         * *   You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @param request GetDeviceInfoRequest
-         * @return GetDeviceInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a device at a site that is activated by using an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDeviceInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeviceInfoResponse
+        /// </returns>
         public async Task<GetDeviceInfoResponse> GetDeviceInfoAsync(GetDeviceInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1313,20 +1705,37 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetDeviceInfoWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the devices of a site that is activated by using an Alibaba Cloud account.
-         *
-         * @description *   You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.
-         * *   Virtual meters at the site are not returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @param request GetDeviceListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDeviceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the devices of a site that is activated by using an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>Virtual meters at the site are not returned.</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDeviceListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeviceListResponse
+        /// </returns>
         public GetDeviceListResponse GetDeviceListWithOptions(GetDeviceListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1355,20 +1764,37 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetDeviceListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the devices of a site that is activated by using an Alibaba Cloud account.
-         *
-         * @description *   You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.
-         * *   Virtual meters at the site are not returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @param request GetDeviceListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDeviceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the devices of a site that is activated by using an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>Virtual meters at the site are not returned.</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDeviceListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeviceListResponse
+        /// </returns>
         public async Task<GetDeviceListResponse> GetDeviceListWithOptionsAsync(GetDeviceListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1397,18 +1823,31 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetDeviceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the devices of a site that is activated by using an Alibaba Cloud account.
-         *
-         * @description *   You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.
-         * *   Virtual meters at the site are not returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @param request GetDeviceListRequest
-         * @return GetDeviceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the devices of a site that is activated by using an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>Virtual meters at the site are not returned.</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDeviceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeviceListResponse
+        /// </returns>
         public GetDeviceListResponse GetDeviceList(GetDeviceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1416,18 +1855,31 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetDeviceListWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the devices of a site that is activated by using an Alibaba Cloud account.
-         *
-         * @description *   You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.
-         * *   Virtual meters at the site are not returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @param request GetDeviceListRequest
-         * @return GetDeviceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the devices of a site that is activated by using an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>Virtual meters at the site are not returned.</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDeviceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeviceListResponse
+        /// </returns>
         public async Task<GetDeviceListResponse> GetDeviceListAsync(GetDeviceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1435,14 +1887,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetDeviceListWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取文档结果
-         *
-         * @param request GetDocumentAnalyzeResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentAnalyzeResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentAnalyzeResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentAnalyzeResultResponse
+        /// </returns>
         public GetDocumentAnalyzeResultResponse GetDocumentAnalyzeResultWithOptions(GetDocumentAnalyzeResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1471,14 +1933,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetDocumentAnalyzeResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文档结果
-         *
-         * @param request GetDocumentAnalyzeResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentAnalyzeResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentAnalyzeResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentAnalyzeResultResponse
+        /// </returns>
         public async Task<GetDocumentAnalyzeResultResponse> GetDocumentAnalyzeResultWithOptionsAsync(GetDocumentAnalyzeResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1507,12 +1979,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetDocumentAnalyzeResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文档结果
-         *
-         * @param request GetDocumentAnalyzeResultRequest
-         * @return GetDocumentAnalyzeResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentAnalyzeResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentAnalyzeResultResponse
+        /// </returns>
         public GetDocumentAnalyzeResultResponse GetDocumentAnalyzeResult(GetDocumentAnalyzeResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1520,12 +1998,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetDocumentAnalyzeResultWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取文档结果
-         *
-         * @param request GetDocumentAnalyzeResultRequest
-         * @return GetDocumentAnalyzeResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentAnalyzeResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentAnalyzeResultResponse
+        /// </returns>
         public async Task<GetDocumentAnalyzeResultResponse> GetDocumentAnalyzeResultAsync(GetDocumentAnalyzeResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1533,14 +2017,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetDocumentAnalyzeResultWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain power composition analysis data.
-         *
-         * @param request GetElecConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetElecConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain power composition analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetElecConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetElecConstituteResponse
+        /// </returns>
         public GetElecConstituteResponse GetElecConstituteWithOptions(GetElecConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1573,14 +2067,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetElecConstituteResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain power composition analysis data.
-         *
-         * @param request GetElecConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetElecConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain power composition analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetElecConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetElecConstituteResponse
+        /// </returns>
         public async Task<GetElecConstituteResponse> GetElecConstituteWithOptionsAsync(GetElecConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1613,12 +2117,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetElecConstituteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain power composition analysis data.
-         *
-         * @param request GetElecConstituteRequest
-         * @return GetElecConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain power composition analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetElecConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetElecConstituteResponse
+        /// </returns>
         public GetElecConstituteResponse GetElecConstitute(GetElecConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1626,12 +2136,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetElecConstituteWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain power composition analysis data.
-         *
-         * @param request GetElecConstituteRequest
-         * @return GetElecConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain power composition analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetElecConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetElecConstituteResponse
+        /// </returns>
         public async Task<GetElecConstituteResponse> GetElecConstituteAsync(GetElecConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1639,14 +2155,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetElecConstituteWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain power trend analysis data.
-         *
-         * @param request GetElecTrendRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetElecTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain power trend analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetElecTrendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetElecTrendResponse
+        /// </returns>
         public GetElecTrendResponse GetElecTrendWithOptions(GetElecTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1679,14 +2205,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetElecTrendResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain power trend analysis data.
-         *
-         * @param request GetElecTrendRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetElecTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain power trend analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetElecTrendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetElecTrendResponse
+        /// </returns>
         public async Task<GetElecTrendResponse> GetElecTrendWithOptionsAsync(GetElecTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1719,12 +2255,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetElecTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain power trend analysis data.
-         *
-         * @param request GetElecTrendRequest
-         * @return GetElecTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain power trend analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetElecTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetElecTrendResponse
+        /// </returns>
         public GetElecTrendResponse GetElecTrend(GetElecTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1732,12 +2274,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetElecTrendWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain power trend analysis data.
-         *
-         * @param request GetElecTrendRequest
-         * @return GetElecTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain power trend analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetElecTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetElecTrendResponse
+        /// </returns>
         public async Task<GetElecTrendResponse> GetElecTrendAsync(GetElecTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1745,14 +2293,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetElecTrendWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Obtain the emission source composition.
-         *
-         * @param request GetEmissionSourceConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEmissionSourceConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the emission source composition.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmissionSourceConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmissionSourceConstituteResponse
+        /// </returns>
         public GetEmissionSourceConstituteResponse GetEmissionSourceConstituteWithOptions(GetEmissionSourceConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1793,14 +2351,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetEmissionSourceConstituteResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtain the emission source composition.
-         *
-         * @param request GetEmissionSourceConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEmissionSourceConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the emission source composition.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmissionSourceConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmissionSourceConstituteResponse
+        /// </returns>
         public async Task<GetEmissionSourceConstituteResponse> GetEmissionSourceConstituteWithOptionsAsync(GetEmissionSourceConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1841,12 +2409,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetEmissionSourceConstituteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtain the emission source composition.
-         *
-         * @param request GetEmissionSourceConstituteRequest
-         * @return GetEmissionSourceConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the emission source composition.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmissionSourceConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmissionSourceConstituteResponse
+        /// </returns>
         public GetEmissionSourceConstituteResponse GetEmissionSourceConstitute(GetEmissionSourceConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1854,12 +2428,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetEmissionSourceConstituteWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Obtain the emission source composition.
-         *
-         * @param request GetEmissionSourceConstituteRequest
-         * @return GetEmissionSourceConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the emission source composition.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmissionSourceConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmissionSourceConstituteResponse
+        /// </returns>
         public async Task<GetEmissionSourceConstituteResponse> GetEmissionSourceConstituteAsync(GetEmissionSourceConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1867,14 +2447,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetEmissionSourceConstituteWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Get a summary of carbon emissions.
-         *
-         * @param request GetEmissionSummaryRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEmissionSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get a summary of carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmissionSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmissionSummaryResponse
+        /// </returns>
         public GetEmissionSummaryResponse GetEmissionSummaryWithOptions(GetEmissionSummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1915,14 +2505,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetEmissionSummaryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Get a summary of carbon emissions.
-         *
-         * @param request GetEmissionSummaryRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEmissionSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get a summary of carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmissionSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmissionSummaryResponse
+        /// </returns>
         public async Task<GetEmissionSummaryResponse> GetEmissionSummaryWithOptionsAsync(GetEmissionSummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1963,12 +2563,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetEmissionSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Get a summary of carbon emissions.
-         *
-         * @param request GetEmissionSummaryRequest
-         * @return GetEmissionSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get a summary of carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmissionSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmissionSummaryResponse
+        /// </returns>
         public GetEmissionSummaryResponse GetEmissionSummary(GetEmissionSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1976,12 +2582,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetEmissionSummaryWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Get a summary of carbon emissions.
-         *
-         * @param request GetEmissionSummaryRequest
-         * @return GetEmissionSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get a summary of carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmissionSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmissionSummaryResponse
+        /// </returns>
         public async Task<GetEmissionSummaryResponse> GetEmissionSummaryAsync(GetEmissionSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1989,16 +2601,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetEmissionSummaryWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Gets the result details of the environmental impact category.
-         *
-         * @description This API returns the emission amounts for various environmental impact categories at different levels for the given product ID. It helps understand the emission quantities for different environmental impact categories and inventories of the product.
-         *
-         * @param request GetEpdInventoryConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEpdInventoryConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets the result details of the environmental impact category.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the emission amounts for various environmental impact categories at different levels for the given product ID. It helps understand the emission quantities for different environmental impact categories and inventories of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEpdInventoryConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEpdInventoryConstituteResponse
+        /// </returns>
         public GetEpdInventoryConstituteResponse GetEpdInventoryConstituteWithOptions(GetEpdInventoryConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2035,16 +2660,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetEpdInventoryConstituteResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Gets the result details of the environmental impact category.
-         *
-         * @description This API returns the emission amounts for various environmental impact categories at different levels for the given product ID. It helps understand the emission quantities for different environmental impact categories and inventories of the product.
-         *
-         * @param request GetEpdInventoryConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEpdInventoryConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets the result details of the environmental impact category.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the emission amounts for various environmental impact categories at different levels for the given product ID. It helps understand the emission quantities for different environmental impact categories and inventories of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEpdInventoryConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEpdInventoryConstituteResponse
+        /// </returns>
         public async Task<GetEpdInventoryConstituteResponse> GetEpdInventoryConstituteWithOptionsAsync(GetEpdInventoryConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2081,14 +2719,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetEpdInventoryConstituteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Gets the result details of the environmental impact category.
-         *
-         * @description This API returns the emission amounts for various environmental impact categories at different levels for the given product ID. It helps understand the emission quantities for different environmental impact categories and inventories of the product.
-         *
-         * @param request GetEpdInventoryConstituteRequest
-         * @return GetEpdInventoryConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets the result details of the environmental impact category.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the emission amounts for various environmental impact categories at different levels for the given product ID. It helps understand the emission quantities for different environmental impact categories and inventories of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEpdInventoryConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEpdInventoryConstituteResponse
+        /// </returns>
         public GetEpdInventoryConstituteResponse GetEpdInventoryConstitute(GetEpdInventoryConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2096,14 +2743,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetEpdInventoryConstituteWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Gets the result details of the environmental impact category.
-         *
-         * @description This API returns the emission amounts for various environmental impact categories at different levels for the given product ID. It helps understand the emission quantities for different environmental impact categories and inventories of the product.
-         *
-         * @param request GetEpdInventoryConstituteRequest
-         * @return GetEpdInventoryConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets the result details of the environmental impact category.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the emission amounts for various environmental impact categories at different levels for the given product ID. It helps understand the emission quantities for different environmental impact categories and inventories of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEpdInventoryConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEpdInventoryConstituteResponse
+        /// </returns>
         public async Task<GetEpdInventoryConstituteResponse> GetEpdInventoryConstituteAsync(GetEpdInventoryConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2111,16 +2767,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetEpdInventoryConstituteWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Obtain the total amount of emissions for various environmental impacts.
-         *
-         * @description This API takes a product ID from the user and returns the summary of environmental impact generated for the product. This info helps understand the overall emissions for different environmental impact categories of the product.
-         *
-         * @param request GetEpdSummaryRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEpdSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the total amount of emissions for various environmental impacts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API takes a product ID from the user and returns the summary of environmental impact generated for the product. This info helps understand the overall emissions for different environmental impact categories of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEpdSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEpdSummaryResponse
+        /// </returns>
         public GetEpdSummaryResponse GetEpdSummaryWithOptions(GetEpdSummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2157,16 +2826,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetEpdSummaryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtain the total amount of emissions for various environmental impacts.
-         *
-         * @description This API takes a product ID from the user and returns the summary of environmental impact generated for the product. This info helps understand the overall emissions for different environmental impact categories of the product.
-         *
-         * @param request GetEpdSummaryRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEpdSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the total amount of emissions for various environmental impacts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API takes a product ID from the user and returns the summary of environmental impact generated for the product. This info helps understand the overall emissions for different environmental impact categories of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEpdSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEpdSummaryResponse
+        /// </returns>
         public async Task<GetEpdSummaryResponse> GetEpdSummaryWithOptionsAsync(GetEpdSummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2203,14 +2885,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetEpdSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtain the total amount of emissions for various environmental impacts.
-         *
-         * @description This API takes a product ID from the user and returns the summary of environmental impact generated for the product. This info helps understand the overall emissions for different environmental impact categories of the product.
-         *
-         * @param request GetEpdSummaryRequest
-         * @return GetEpdSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the total amount of emissions for various environmental impacts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API takes a product ID from the user and returns the summary of environmental impact generated for the product. This info helps understand the overall emissions for different environmental impact categories of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEpdSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEpdSummaryResponse
+        /// </returns>
         public GetEpdSummaryResponse GetEpdSummary(GetEpdSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2218,14 +2909,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetEpdSummaryWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Obtain the total amount of emissions for various environmental impacts.
-         *
-         * @description This API takes a product ID from the user and returns the summary of environmental impact generated for the product. This info helps understand the overall emissions for different environmental impact categories of the product.
-         *
-         * @param request GetEpdSummaryRequest
-         * @return GetEpdSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the total amount of emissions for various environmental impacts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API takes a product ID from the user and returns the summary of environmental impact generated for the product. This info helps understand the overall emissions for different environmental impact categories of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEpdSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEpdSummaryResponse
+        /// </returns>
         public async Task<GetEpdSummaryResponse> GetEpdSummaryAsync(GetEpdSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2233,16 +2933,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetEpdSummaryWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Get the list of product carbon footprints.
-         *
-         * @description With user-specified parameters such as enterprise code, current page, and page size, this API returns a list of matching product carbon footprints (or supply chain carbon footprints), including product names and product IDs. The product ID can be used as input parameters in other APIs to get the corresponding product\\"s detailed information.
-         *
-         * @param request GetFootprintListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetFootprintListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the list of product carbon footprints.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>With user-specified parameters such as enterprise code, current page, and page size, this API returns a list of matching product carbon footprints (or supply chain carbon footprints), including product names and product IDs. The product ID can be used as input parameters in other APIs to get the corresponding product\&quot;s detailed information.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFootprintListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFootprintListResponse
+        /// </returns>
         public GetFootprintListResponse GetFootprintListWithOptions(GetFootprintListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2283,16 +2996,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetFootprintListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Get the list of product carbon footprints.
-         *
-         * @description With user-specified parameters such as enterprise code, current page, and page size, this API returns a list of matching product carbon footprints (or supply chain carbon footprints), including product names and product IDs. The product ID can be used as input parameters in other APIs to get the corresponding product\\"s detailed information.
-         *
-         * @param request GetFootprintListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetFootprintListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the list of product carbon footprints.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>With user-specified parameters such as enterprise code, current page, and page size, this API returns a list of matching product carbon footprints (or supply chain carbon footprints), including product names and product IDs. The product ID can be used as input parameters in other APIs to get the corresponding product\&quot;s detailed information.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFootprintListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFootprintListResponse
+        /// </returns>
         public async Task<GetFootprintListResponse> GetFootprintListWithOptionsAsync(GetFootprintListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2333,14 +3059,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetFootprintListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Get the list of product carbon footprints.
-         *
-         * @description With user-specified parameters such as enterprise code, current page, and page size, this API returns a list of matching product carbon footprints (or supply chain carbon footprints), including product names and product IDs. The product ID can be used as input parameters in other APIs to get the corresponding product\\"s detailed information.
-         *
-         * @param request GetFootprintListRequest
-         * @return GetFootprintListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the list of product carbon footprints.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>With user-specified parameters such as enterprise code, current page, and page size, this API returns a list of matching product carbon footprints (or supply chain carbon footprints), including product names and product IDs. The product ID can be used as input parameters in other APIs to get the corresponding product\&quot;s detailed information.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFootprintListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFootprintListResponse
+        /// </returns>
         public GetFootprintListResponse GetFootprintList(GetFootprintListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2348,14 +3083,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetFootprintListWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Get the list of product carbon footprints.
-         *
-         * @description With user-specified parameters such as enterprise code, current page, and page size, this API returns a list of matching product carbon footprints (or supply chain carbon footprints), including product names and product IDs. The product ID can be used as input parameters in other APIs to get the corresponding product\\"s detailed information.
-         *
-         * @param request GetFootprintListRequest
-         * @return GetFootprintListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the list of product carbon footprints.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>With user-specified parameters such as enterprise code, current page, and page size, this API returns a list of matching product carbon footprints (or supply chain carbon footprints), including product names and product IDs. The product ID can be used as input parameters in other APIs to get the corresponding product\&quot;s detailed information.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFootprintListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFootprintListResponse
+        /// </returns>
         public async Task<GetFootprintListResponse> GetFootprintListAsync(GetFootprintListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2363,14 +3107,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetFootprintListWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain gas composition analysis.
-         *
-         * @param request GetGasConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGasConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain gas composition analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGasConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGasConstituteResponse
+        /// </returns>
         public GetGasConstituteResponse GetGasConstituteWithOptions(GetGasConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2411,14 +3165,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetGasConstituteResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain gas composition analysis.
-         *
-         * @param request GetGasConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGasConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain gas composition analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGasConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGasConstituteResponse
+        /// </returns>
         public async Task<GetGasConstituteResponse> GetGasConstituteWithOptionsAsync(GetGasConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2459,12 +3223,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetGasConstituteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain gas composition analysis.
-         *
-         * @param request GetGasConstituteRequest
-         * @return GetGasConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain gas composition analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGasConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGasConstituteResponse
+        /// </returns>
         public GetGasConstituteResponse GetGasConstitute(GetGasConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2472,12 +3242,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetGasConstituteWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain gas composition analysis.
-         *
-         * @param request GetGasConstituteRequest
-         * @return GetGasConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain gas composition analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGasConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGasConstituteResponse
+        /// </returns>
         public async Task<GetGasConstituteResponse> GetGasConstituteAsync(GetGasConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2485,16 +3261,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetGasConstituteWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary obtain the active carbon reduction ranking list.
-         *
-         * @description This interface returns a list of proactive carbon reduction information given product ID. It\\"s used to understand the carbon reduction efforts at various levels of the product.
-         *
-         * @param request GetGwpBenchmarkListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGwpBenchmarkListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>obtain the active carbon reduction ranking list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface returns a list of proactive carbon reduction information given product ID. It\&quot;s used to understand the carbon reduction efforts at various levels of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpBenchmarkListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpBenchmarkListResponse
+        /// </returns>
         public GetGwpBenchmarkListResponse GetGwpBenchmarkListWithOptions(GetGwpBenchmarkListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2531,16 +3320,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetGwpBenchmarkListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary obtain the active carbon reduction ranking list.
-         *
-         * @description This interface returns a list of proactive carbon reduction information given product ID. It\\"s used to understand the carbon reduction efforts at various levels of the product.
-         *
-         * @param request GetGwpBenchmarkListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGwpBenchmarkListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>obtain the active carbon reduction ranking list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface returns a list of proactive carbon reduction information given product ID. It\&quot;s used to understand the carbon reduction efforts at various levels of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpBenchmarkListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpBenchmarkListResponse
+        /// </returns>
         public async Task<GetGwpBenchmarkListResponse> GetGwpBenchmarkListWithOptionsAsync(GetGwpBenchmarkListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2577,14 +3379,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetGwpBenchmarkListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary obtain the active carbon reduction ranking list.
-         *
-         * @description This interface returns a list of proactive carbon reduction information given product ID. It\\"s used to understand the carbon reduction efforts at various levels of the product.
-         *
-         * @param request GetGwpBenchmarkListRequest
-         * @return GetGwpBenchmarkListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>obtain the active carbon reduction ranking list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface returns a list of proactive carbon reduction information given product ID. It\&quot;s used to understand the carbon reduction efforts at various levels of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpBenchmarkListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpBenchmarkListResponse
+        /// </returns>
         public GetGwpBenchmarkListResponse GetGwpBenchmarkList(GetGwpBenchmarkListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2592,14 +3403,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetGwpBenchmarkListWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary obtain the active carbon reduction ranking list.
-         *
-         * @description This interface returns a list of proactive carbon reduction information given product ID. It\\"s used to understand the carbon reduction efforts at various levels of the product.
-         *
-         * @param request GetGwpBenchmarkListRequest
-         * @return GetGwpBenchmarkListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>obtain the active carbon reduction ranking list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface returns a list of proactive carbon reduction information given product ID. It\&quot;s used to understand the carbon reduction efforts at various levels of the product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpBenchmarkListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpBenchmarkListResponse
+        /// </returns>
         public async Task<GetGwpBenchmarkListResponse> GetGwpBenchmarkListAsync(GetGwpBenchmarkListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2607,16 +3427,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetGwpBenchmarkListWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary This API is to obtain the total amount of active carbon reduction.
-         *
-         * @description The API takes a product ID and returns data on the carbon emissions reduction along with a list of the top four contributors to carbon reduction. This info helps understand the total carbon reduction of the product and its main sources.
-         *
-         * @param request GetGwpBenchmarkSummaryRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGwpBenchmarkSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API is to obtain the total amount of active carbon reduction.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API takes a product ID and returns data on the carbon emissions reduction along with a list of the top four contributors to carbon reduction. This info helps understand the total carbon reduction of the product and its main sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpBenchmarkSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpBenchmarkSummaryResponse
+        /// </returns>
         public GetGwpBenchmarkSummaryResponse GetGwpBenchmarkSummaryWithOptions(GetGwpBenchmarkSummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2653,16 +3486,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetGwpBenchmarkSummaryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary This API is to obtain the total amount of active carbon reduction.
-         *
-         * @description The API takes a product ID and returns data on the carbon emissions reduction along with a list of the top four contributors to carbon reduction. This info helps understand the total carbon reduction of the product and its main sources.
-         *
-         * @param request GetGwpBenchmarkSummaryRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGwpBenchmarkSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API is to obtain the total amount of active carbon reduction.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API takes a product ID and returns data on the carbon emissions reduction along with a list of the top four contributors to carbon reduction. This info helps understand the total carbon reduction of the product and its main sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpBenchmarkSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpBenchmarkSummaryResponse
+        /// </returns>
         public async Task<GetGwpBenchmarkSummaryResponse> GetGwpBenchmarkSummaryWithOptionsAsync(GetGwpBenchmarkSummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2699,14 +3545,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetGwpBenchmarkSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary This API is to obtain the total amount of active carbon reduction.
-         *
-         * @description The API takes a product ID and returns data on the carbon emissions reduction along with a list of the top four contributors to carbon reduction. This info helps understand the total carbon reduction of the product and its main sources.
-         *
-         * @param request GetGwpBenchmarkSummaryRequest
-         * @return GetGwpBenchmarkSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API is to obtain the total amount of active carbon reduction.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API takes a product ID and returns data on the carbon emissions reduction along with a list of the top four contributors to carbon reduction. This info helps understand the total carbon reduction of the product and its main sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpBenchmarkSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpBenchmarkSummaryResponse
+        /// </returns>
         public GetGwpBenchmarkSummaryResponse GetGwpBenchmarkSummary(GetGwpBenchmarkSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2714,14 +3569,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetGwpBenchmarkSummaryWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary This API is to obtain the total amount of active carbon reduction.
-         *
-         * @description The API takes a product ID and returns data on the carbon emissions reduction along with a list of the top four contributors to carbon reduction. This info helps understand the total carbon reduction of the product and its main sources.
-         *
-         * @param request GetGwpBenchmarkSummaryRequest
-         * @return GetGwpBenchmarkSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API is to obtain the total amount of active carbon reduction.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API takes a product ID and returns data on the carbon emissions reduction along with a list of the top four contributors to carbon reduction. This info helps understand the total carbon reduction of the product and its main sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpBenchmarkSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpBenchmarkSummaryResponse
+        /// </returns>
         public async Task<GetGwpBenchmarkSummaryResponse> GetGwpBenchmarkSummaryAsync(GetGwpBenchmarkSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2729,16 +3593,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetGwpBenchmarkSummaryWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.
-         *
-         * @description Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.
-         *
-         * @param request GetGwpInventoryConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGwpInventoryConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpInventoryConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpInventoryConstituteResponse
+        /// </returns>
         public GetGwpInventoryConstituteResponse GetGwpInventoryConstituteWithOptions(GetGwpInventoryConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2775,16 +3652,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetGwpInventoryConstituteResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.
-         *
-         * @description Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.
-         *
-         * @param request GetGwpInventoryConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGwpInventoryConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpInventoryConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpInventoryConstituteResponse
+        /// </returns>
         public async Task<GetGwpInventoryConstituteResponse> GetGwpInventoryConstituteWithOptionsAsync(GetGwpInventoryConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2821,14 +3711,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetGwpInventoryConstituteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.
-         *
-         * @description Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.
-         *
-         * @param request GetGwpInventoryConstituteRequest
-         * @return GetGwpInventoryConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpInventoryConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpInventoryConstituteResponse
+        /// </returns>
         public GetGwpInventoryConstituteResponse GetGwpInventoryConstitute(GetGwpInventoryConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2836,14 +3735,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetGwpInventoryConstituteWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.
-         *
-         * @description Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.
-         *
-         * @param request GetGwpInventoryConstituteRequest
-         * @return GetGwpInventoryConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Used to obtain the carbon emission composition analysis of a specified product. Carbon emission composition analysis includes two analysis dimensions: inventory and type. In the rendering effect, including a hierarchical list and pie chart.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpInventoryConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpInventoryConstituteResponse
+        /// </returns>
         public async Task<GetGwpInventoryConstituteResponse> GetGwpInventoryConstituteAsync(GetGwpInventoryConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2851,16 +3759,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetGwpInventoryConstituteWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary This API is used to obtain the total carbon footprint of a product and the top four types of carbon footprint contribution.
-         *
-         * @description Returns the total carbon footprint data for the user-specified product ID, along with details on the top four contributors to the carbon footprint, helping to understand the overall carbon footprint and its main components.
-         *
-         * @param request GetGwpInventorySummaryRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGwpInventorySummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API is used to obtain the total carbon footprint of a product and the top four types of carbon footprint contribution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the total carbon footprint data for the user-specified product ID, along with details on the top four contributors to the carbon footprint, helping to understand the overall carbon footprint and its main components.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpInventorySummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpInventorySummaryResponse
+        /// </returns>
         public GetGwpInventorySummaryResponse GetGwpInventorySummaryWithOptions(GetGwpInventorySummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2897,16 +3818,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetGwpInventorySummaryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary This API is used to obtain the total carbon footprint of a product and the top four types of carbon footprint contribution.
-         *
-         * @description Returns the total carbon footprint data for the user-specified product ID, along with details on the top four contributors to the carbon footprint, helping to understand the overall carbon footprint and its main components.
-         *
-         * @param request GetGwpInventorySummaryRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGwpInventorySummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API is used to obtain the total carbon footprint of a product and the top four types of carbon footprint contribution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the total carbon footprint data for the user-specified product ID, along with details on the top four contributors to the carbon footprint, helping to understand the overall carbon footprint and its main components.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpInventorySummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpInventorySummaryResponse
+        /// </returns>
         public async Task<GetGwpInventorySummaryResponse> GetGwpInventorySummaryWithOptionsAsync(GetGwpInventorySummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2943,14 +3877,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetGwpInventorySummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary This API is used to obtain the total carbon footprint of a product and the top four types of carbon footprint contribution.
-         *
-         * @description Returns the total carbon footprint data for the user-specified product ID, along with details on the top four contributors to the carbon footprint, helping to understand the overall carbon footprint and its main components.
-         *
-         * @param request GetGwpInventorySummaryRequest
-         * @return GetGwpInventorySummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API is used to obtain the total carbon footprint of a product and the top four types of carbon footprint contribution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the total carbon footprint data for the user-specified product ID, along with details on the top four contributors to the carbon footprint, helping to understand the overall carbon footprint and its main components.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpInventorySummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpInventorySummaryResponse
+        /// </returns>
         public GetGwpInventorySummaryResponse GetGwpInventorySummary(GetGwpInventorySummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2958,14 +3901,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetGwpInventorySummaryWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary This API is used to obtain the total carbon footprint of a product and the top four types of carbon footprint contribution.
-         *
-         * @description Returns the total carbon footprint data for the user-specified product ID, along with details on the top four contributors to the carbon footprint, helping to understand the overall carbon footprint and its main components.
-         *
-         * @param request GetGwpInventorySummaryRequest
-         * @return GetGwpInventorySummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API is used to obtain the total carbon footprint of a product and the top four types of carbon footprint contribution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the total carbon footprint data for the user-specified product ID, along with details on the top four contributors to the carbon footprint, helping to understand the overall carbon footprint and its main components.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGwpInventorySummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGwpInventorySummaryResponse
+        /// </returns>
         public async Task<GetGwpInventorySummaryResponse> GetGwpInventorySummaryAsync(GetGwpInventorySummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2973,16 +3925,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetGwpInventorySummaryWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Get the list of emissions in descending order under the specified environmental impact (methodType), specified aggregate level (group), and specified calculation mode (emissionType).
-         *
-         * @description This interface retrieves a descending order list of emissions for a specified product ID, environmental impact method, group level, and calculation method. It\\"s used to understand various environmental impact emission scenarios.
-         *
-         * @param request GetInventoryListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInventoryListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the list of emissions in descending order under the specified environmental impact (methodType), specified aggregate level (group), and specified calculation mode (emissionType).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface retrieves a descending order list of emissions for a specified product ID, environmental impact method, group level, and calculation method. It\&quot;s used to understand various environmental impact emission scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInventoryListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInventoryListResponse
+        /// </returns>
         public GetInventoryListResponse GetInventoryListWithOptions(GetInventoryListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3031,16 +3996,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetInventoryListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Get the list of emissions in descending order under the specified environmental impact (methodType), specified aggregate level (group), and specified calculation mode (emissionType).
-         *
-         * @description This interface retrieves a descending order list of emissions for a specified product ID, environmental impact method, group level, and calculation method. It\\"s used to understand various environmental impact emission scenarios.
-         *
-         * @param request GetInventoryListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInventoryListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the list of emissions in descending order under the specified environmental impact (methodType), specified aggregate level (group), and specified calculation mode (emissionType).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface retrieves a descending order list of emissions for a specified product ID, environmental impact method, group level, and calculation method. It\&quot;s used to understand various environmental impact emission scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInventoryListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInventoryListResponse
+        /// </returns>
         public async Task<GetInventoryListResponse> GetInventoryListWithOptionsAsync(GetInventoryListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3089,14 +4067,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetInventoryListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Get the list of emissions in descending order under the specified environmental impact (methodType), specified aggregate level (group), and specified calculation mode (emissionType).
-         *
-         * @description This interface retrieves a descending order list of emissions for a specified product ID, environmental impact method, group level, and calculation method. It\\"s used to understand various environmental impact emission scenarios.
-         *
-         * @param request GetInventoryListRequest
-         * @return GetInventoryListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the list of emissions in descending order under the specified environmental impact (methodType), specified aggregate level (group), and specified calculation mode (emissionType).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface retrieves a descending order list of emissions for a specified product ID, environmental impact method, group level, and calculation method. It\&quot;s used to understand various environmental impact emission scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInventoryListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInventoryListResponse
+        /// </returns>
         public GetInventoryListResponse GetInventoryList(GetInventoryListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3104,14 +4091,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetInventoryListWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Get the list of emissions in descending order under the specified environmental impact (methodType), specified aggregate level (group), and specified calculation mode (emissionType).
-         *
-         * @description This interface retrieves a descending order list of emissions for a specified product ID, environmental impact method, group level, and calculation method. It\\"s used to understand various environmental impact emission scenarios.
-         *
-         * @param request GetInventoryListRequest
-         * @return GetInventoryListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the list of emissions in descending order under the specified environmental impact (methodType), specified aggregate level (group), and specified calculation mode (emissionType).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface retrieves a descending order list of emissions for a specified product ID, environmental impact method, group level, and calculation method. It\&quot;s used to understand various environmental impact emission scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInventoryListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInventoryListResponse
+        /// </returns>
         public async Task<GetInventoryListResponse> GetInventoryListAsync(GetInventoryListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3119,18 +4115,31 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetInventoryListWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the organizations and sites that are activated by using an Alibaba Cloud account. You cannot call this operation to query the organizations or sites that have not been activated in the console.
-         *
-         * @description *   If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOrgAndFactoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the organizations and sites that are activated by using an Alibaba Cloud account. You cannot call this operation to query the organizations or sites that have not been activated in the console.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrgAndFactoryResponse
+        /// </returns>
         public GetOrgAndFactoryResponse GetOrgAndFactoryWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3152,18 +4161,31 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetOrgAndFactoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the organizations and sites that are activated by using an Alibaba Cloud account. You cannot call this operation to query the organizations or sites that have not been activated in the console.
-         *
-         * @description *   If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOrgAndFactoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the organizations and sites that are activated by using an Alibaba Cloud account. You cannot call this operation to query the organizations or sites that have not been activated in the console.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrgAndFactoryResponse
+        /// </returns>
         public async Task<GetOrgAndFactoryResponse> GetOrgAndFactoryWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3185,16 +4207,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetOrgAndFactoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the organizations and sites that are activated by using an Alibaba Cloud account. You cannot call this operation to query the organizations or sites that have not been activated in the console.
-         *
-         * @description *   If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @return GetOrgAndFactoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the organizations and sites that are activated by using an Alibaba Cloud account. You cannot call this operation to query the organizations or sites that have not been activated in the console.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetOrgAndFactoryResponse
+        /// </returns>
         public GetOrgAndFactoryResponse GetOrgAndFactory()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3202,16 +4232,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetOrgAndFactoryWithOptions(headers, runtime);
         }
 
-        /**
-         * @summary Queries the organizations and sites that are activated by using an Alibaba Cloud account. You cannot call this operation to query the organizations or sites that have not been activated in the console.
-         *
-         * @description *   If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.
-         * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
-         *
-         * @return GetOrgAndFactoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the organizations and sites that are activated by using an Alibaba Cloud account. You cannot call this operation to query the organizations or sites that have not been activated in the console.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>By current, endpoint only supports Hangzhou: <c>energyexpertexternal.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>To use this API, you need to be added to the whitelist. Please contact us through  &lt;props=&quot;china&quot;&gt;<a href="https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89">official website</a> 
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en">official website</a> to apply for whitelist activation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetOrgAndFactoryResponse
+        /// </returns>
         public async Task<GetOrgAndFactoryResponse> GetOrgAndFactoryAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3219,14 +4257,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetOrgAndFactoryWithOptionsAsync(headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain carbon inventory organization analysis data.
-         *
-         * @param request GetOrgConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOrgConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain carbon inventory organization analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrgConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrgConstituteResponse
+        /// </returns>
         public GetOrgConstituteResponse GetOrgConstituteWithOptions(GetOrgConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3267,14 +4315,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetOrgConstituteResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain carbon inventory organization analysis data.
-         *
-         * @param request GetOrgConstituteRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOrgConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain carbon inventory organization analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrgConstituteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrgConstituteResponse
+        /// </returns>
         public async Task<GetOrgConstituteResponse> GetOrgConstituteWithOptionsAsync(GetOrgConstituteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3315,12 +4373,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetOrgConstituteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to obtain carbon inventory organization analysis data.
-         *
-         * @param request GetOrgConstituteRequest
-         * @return GetOrgConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain carbon inventory organization analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrgConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrgConstituteResponse
+        /// </returns>
         public GetOrgConstituteResponse GetOrgConstitute(GetOrgConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3328,12 +4392,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetOrgConstituteWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to obtain carbon inventory organization analysis data.
-         *
-         * @param request GetOrgConstituteRequest
-         * @return GetOrgConstituteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to obtain carbon inventory organization analysis data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrgConstituteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrgConstituteResponse
+        /// </returns>
         public async Task<GetOrgConstituteResponse> GetOrgConstituteAsync(GetOrgConstituteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3341,16 +4411,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetOrgConstituteWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Obtains the oss address of the Product Carbon footprint Report.
-         *
-         * @description With the user-specified product ID, this interface retrieves detailed information and download links for previously generated PCR reports. To use it, two conditions must be met: 1) the result has already been generated; 2) the PCR report has been created.
-         *
-         * @param request GetPcrInfoRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPcrInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the oss address of the Product Carbon footprint Report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>With the user-specified product ID, this interface retrieves detailed information and download links for previously generated PCR reports. To use it, two conditions must be met: 1) the result has already been generated; 2) the PCR report has been created.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPcrInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPcrInfoResponse
+        /// </returns>
         public GetPcrInfoResponse GetPcrInfoWithOptions(GetPcrInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3387,16 +4470,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetPcrInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the oss address of the Product Carbon footprint Report.
-         *
-         * @description With the user-specified product ID, this interface retrieves detailed information and download links for previously generated PCR reports. To use it, two conditions must be met: 1) the result has already been generated; 2) the PCR report has been created.
-         *
-         * @param request GetPcrInfoRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPcrInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the oss address of the Product Carbon footprint Report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>With the user-specified product ID, this interface retrieves detailed information and download links for previously generated PCR reports. To use it, two conditions must be met: 1) the result has already been generated; 2) the PCR report has been created.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPcrInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPcrInfoResponse
+        /// </returns>
         public async Task<GetPcrInfoResponse> GetPcrInfoWithOptionsAsync(GetPcrInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3433,14 +4529,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetPcrInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the oss address of the Product Carbon footprint Report.
-         *
-         * @description With the user-specified product ID, this interface retrieves detailed information and download links for previously generated PCR reports. To use it, two conditions must be met: 1) the result has already been generated; 2) the PCR report has been created.
-         *
-         * @param request GetPcrInfoRequest
-         * @return GetPcrInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the oss address of the Product Carbon footprint Report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>With the user-specified product ID, this interface retrieves detailed information and download links for previously generated PCR reports. To use it, two conditions must be met: 1) the result has already been generated; 2) the PCR report has been created.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPcrInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPcrInfoResponse
+        /// </returns>
         public GetPcrInfoResponse GetPcrInfo(GetPcrInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3448,14 +4553,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetPcrInfoWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Obtains the oss address of the Product Carbon footprint Report.
-         *
-         * @description With the user-specified product ID, this interface retrieves detailed information and download links for previously generated PCR reports. To use it, two conditions must be met: 1) the result has already been generated; 2) the PCR report has been created.
-         *
-         * @param request GetPcrInfoRequest
-         * @return GetPcrInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the oss address of the Product Carbon footprint Report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>With the user-specified product ID, this interface retrieves detailed information and download links for previously generated PCR reports. To use it, two conditions must be met: 1) the result has already been generated; 2) the PCR report has been created.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPcrInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPcrInfoResponse
+        /// </returns>
         public async Task<GetPcrInfoResponse> GetPcrInfoAsync(GetPcrInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3463,16 +4577,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetPcrInfoWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Get carbon reduction recommendations.
-         *
-         * @description This API returns carbon reduction proposals based on the product ID. It\\"s useful for understanding optimization tips to reduce the carbon emissions associated with a product.
-         *
-         * @param request GetReductionProposalRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetReductionProposalResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get carbon reduction recommendations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns carbon reduction proposals based on the product ID. It\&quot;s useful for understanding optimization tips to reduce the carbon emissions associated with a product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetReductionProposalRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReductionProposalResponse
+        /// </returns>
         public GetReductionProposalResponse GetReductionProposalWithOptions(GetReductionProposalRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3513,16 +4640,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetReductionProposalResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Get carbon reduction recommendations.
-         *
-         * @description This API returns carbon reduction proposals based on the product ID. It\\"s useful for understanding optimization tips to reduce the carbon emissions associated with a product.
-         *
-         * @param request GetReductionProposalRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetReductionProposalResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get carbon reduction recommendations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns carbon reduction proposals based on the product ID. It\&quot;s useful for understanding optimization tips to reduce the carbon emissions associated with a product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetReductionProposalRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReductionProposalResponse
+        /// </returns>
         public async Task<GetReductionProposalResponse> GetReductionProposalWithOptionsAsync(GetReductionProposalRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3563,14 +4703,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<GetReductionProposalResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Get carbon reduction recommendations.
-         *
-         * @description This API returns carbon reduction proposals based on the product ID. It\\"s useful for understanding optimization tips to reduce the carbon emissions associated with a product.
-         *
-         * @param request GetReductionProposalRequest
-         * @return GetReductionProposalResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get carbon reduction recommendations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns carbon reduction proposals based on the product ID. It\&quot;s useful for understanding optimization tips to reduce the carbon emissions associated with a product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetReductionProposalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReductionProposalResponse
+        /// </returns>
         public GetReductionProposalResponse GetReductionProposal(GetReductionProposalRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3578,14 +4727,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return GetReductionProposalWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Get carbon reduction recommendations.
-         *
-         * @description This API returns carbon reduction proposals based on the product ID. It\\"s useful for understanding optimization tips to reduce the carbon emissions associated with a product.
-         *
-         * @param request GetReductionProposalRequest
-         * @return GetReductionProposalResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get carbon reduction recommendations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns carbon reduction proposals based on the product ID. It\&quot;s useful for understanding optimization tips to reduce the carbon emissions associated with a product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetReductionProposalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReductionProposalResponse
+        /// </returns>
         public async Task<GetReductionProposalResponse> GetReductionProposalAsync(GetReductionProposalRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3593,16 +4751,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await GetReductionProposalWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Check if the result generation is complete.
-         *
-         * @description This API checks the completion status of generating a report. It should be used before calling other result APIs, as they will only display content once the report generation is complete.
-         *
-         * @param request IsCompletedRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return IsCompletedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Check if the result generation is complete.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API checks the completion status of generating a report. It should be used before calling other result APIs, as they will only display content once the report generation is complete.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// IsCompletedRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IsCompletedResponse
+        /// </returns>
         public IsCompletedResponse IsCompletedWithOptions(IsCompletedRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3639,16 +4810,29 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<IsCompletedResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Check if the result generation is complete.
-         *
-         * @description This API checks the completion status of generating a report. It should be used before calling other result APIs, as they will only display content once the report generation is complete.
-         *
-         * @param request IsCompletedRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return IsCompletedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Check if the result generation is complete.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API checks the completion status of generating a report. It should be used before calling other result APIs, as they will only display content once the report generation is complete.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// IsCompletedRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IsCompletedResponse
+        /// </returns>
         public async Task<IsCompletedResponse> IsCompletedWithOptionsAsync(IsCompletedRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3685,14 +4869,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<IsCompletedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Check if the result generation is complete.
-         *
-         * @description This API checks the completion status of generating a report. It should be used before calling other result APIs, as they will only display content once the report generation is complete.
-         *
-         * @param request IsCompletedRequest
-         * @return IsCompletedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Check if the result generation is complete.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API checks the completion status of generating a report. It should be used before calling other result APIs, as they will only display content once the report generation is complete.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// IsCompletedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IsCompletedResponse
+        /// </returns>
         public IsCompletedResponse IsCompleted(IsCompletedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3700,14 +4893,23 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return IsCompletedWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Check if the result generation is complete.
-         *
-         * @description This API checks the completion status of generating a report. It should be used before calling other result APIs, as they will only display content once the report generation is complete.
-         *
-         * @param request IsCompletedRequest
-         * @return IsCompletedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Check if the result generation is complete.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API checks the completion status of generating a report. It should be used before calling other result APIs, as they will only display content once the report generation is complete.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// IsCompletedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IsCompletedResponse
+        /// </returns>
         public async Task<IsCompletedResponse> IsCompletedAsync(IsCompletedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3715,14 +4917,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await IsCompletedWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to push device measuring point data, such as power meter voltage and other data.
-         *
-         * @param request PushDeviceDataRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PushDeviceDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to push device measuring point data, such as power meter voltage and other data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushDeviceDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDeviceDataResponse
+        /// </returns>
         public PushDeviceDataResponse PushDeviceDataWithOptions(PushDeviceDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3755,14 +4967,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<PushDeviceDataResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to push device measuring point data, such as power meter voltage and other data.
-         *
-         * @param request PushDeviceDataRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PushDeviceDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to push device measuring point data, such as power meter voltage and other data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushDeviceDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDeviceDataResponse
+        /// </returns>
         public async Task<PushDeviceDataResponse> PushDeviceDataWithOptionsAsync(PushDeviceDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3795,12 +5017,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<PushDeviceDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to push device measuring point data, such as power meter voltage and other data.
-         *
-         * @param request PushDeviceDataRequest
-         * @return PushDeviceDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to push device measuring point data, such as power meter voltage and other data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushDeviceDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDeviceDataResponse
+        /// </returns>
         public PushDeviceDataResponse PushDeviceData(PushDeviceDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3808,12 +5036,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return PushDeviceDataWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to push device measuring point data, such as power meter voltage and other data.
-         *
-         * @param request PushDeviceDataRequest
-         * @return PushDeviceDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to push device measuring point data, such as power meter voltage and other data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushDeviceDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDeviceDataResponse
+        /// </returns>
         public async Task<PushDeviceDataResponse> PushDeviceDataAsync(PushDeviceDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3821,18 +5055,33 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await PushDeviceDataWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to push data items.
-         *
-         * @description - This interface is used for individual data item data.
-         * - Data items can link data to services such as carbon footprints and carbon inventories.
-         * - Depending on the platform configuration, active data on a yearly and monthly basis is supported.
-         *
-         * @param request PushItemDataRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PushItemDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to push data items.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for individual data item data.</description></item>
+        /// <item><description>Data items can link data to services such as carbon footprints and carbon inventories.</description></item>
+        /// <item><description>Depending on the platform configuration, active data on a yearly and monthly basis is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PushItemDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushItemDataResponse
+        /// </returns>
         public PushItemDataResponse PushItemDataWithOptions(PushItemDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3869,18 +5118,33 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<PushItemDataResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to push data items.
-         *
-         * @description - This interface is used for individual data item data.
-         * - Data items can link data to services such as carbon footprints and carbon inventories.
-         * - Depending on the platform configuration, active data on a yearly and monthly basis is supported.
-         *
-         * @param request PushItemDataRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PushItemDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to push data items.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for individual data item data.</description></item>
+        /// <item><description>Data items can link data to services such as carbon footprints and carbon inventories.</description></item>
+        /// <item><description>Depending on the platform configuration, active data on a yearly and monthly basis is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PushItemDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushItemDataResponse
+        /// </returns>
         public async Task<PushItemDataResponse> PushItemDataWithOptionsAsync(PushItemDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3917,16 +5181,27 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<PushItemDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary This interface is used to push data items.
-         *
-         * @description - This interface is used for individual data item data.
-         * - Data items can link data to services such as carbon footprints and carbon inventories.
-         * - Depending on the platform configuration, active data on a yearly and monthly basis is supported.
-         *
-         * @param request PushItemDataRequest
-         * @return PushItemDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to push data items.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for individual data item data.</description></item>
+        /// <item><description>Data items can link data to services such as carbon footprints and carbon inventories.</description></item>
+        /// <item><description>Depending on the platform configuration, active data on a yearly and monthly basis is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PushItemDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushItemDataResponse
+        /// </returns>
         public PushItemDataResponse PushItemData(PushItemDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3934,16 +5209,27 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return PushItemDataWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary This interface is used to push data items.
-         *
-         * @description - This interface is used for individual data item data.
-         * - Data items can link data to services such as carbon footprints and carbon inventories.
-         * - Depending on the platform configuration, active data on a yearly and monthly basis is supported.
-         *
-         * @param request PushItemDataRequest
-         * @return PushItemDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to push data items.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for individual data item data.</description></item>
+        /// <item><description>Data items can link data to services such as carbon footprints and carbon inventories.</description></item>
+        /// <item><description>Depending on the platform configuration, active data on a yearly and monthly basis is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PushItemDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushItemDataResponse
+        /// </returns>
         public async Task<PushItemDataResponse> PushItemDataAsync(PushItemDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3951,16 +5237,31 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await PushItemDataWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Recalculate carbon emissions.
-         *
-         * @description - After uploading the data items, you need to call this interface to recalculate the carbon inventory data.
-         *
-         * @param request RecalculateCarbonEmissionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecalculateCarbonEmissionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recalculate carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After uploading the data items, you need to call this interface to recalculate the carbon inventory data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecalculateCarbonEmissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecalculateCarbonEmissionResponse
+        /// </returns>
         public RecalculateCarbonEmissionResponse RecalculateCarbonEmissionWithOptions(RecalculateCarbonEmissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3993,16 +5294,31 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<RecalculateCarbonEmissionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Recalculate carbon emissions.
-         *
-         * @description - After uploading the data items, you need to call this interface to recalculate the carbon inventory data.
-         *
-         * @param request RecalculateCarbonEmissionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecalculateCarbonEmissionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recalculate carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After uploading the data items, you need to call this interface to recalculate the carbon inventory data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecalculateCarbonEmissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecalculateCarbonEmissionResponse
+        /// </returns>
         public async Task<RecalculateCarbonEmissionResponse> RecalculateCarbonEmissionWithOptionsAsync(RecalculateCarbonEmissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4035,14 +5351,25 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<RecalculateCarbonEmissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Recalculate carbon emissions.
-         *
-         * @description - After uploading the data items, you need to call this interface to recalculate the carbon inventory data.
-         *
-         * @param request RecalculateCarbonEmissionRequest
-         * @return RecalculateCarbonEmissionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recalculate carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After uploading the data items, you need to call this interface to recalculate the carbon inventory data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecalculateCarbonEmissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecalculateCarbonEmissionResponse
+        /// </returns>
         public RecalculateCarbonEmissionResponse RecalculateCarbonEmission(RecalculateCarbonEmissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4050,14 +5377,25 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return RecalculateCarbonEmissionWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Recalculate carbon emissions.
-         *
-         * @description - After uploading the data items, you need to call this interface to recalculate the carbon inventory data.
-         *
-         * @param request RecalculateCarbonEmissionRequest
-         * @return RecalculateCarbonEmissionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recalculate carbon emissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After uploading the data items, you need to call this interface to recalculate the carbon inventory data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecalculateCarbonEmissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecalculateCarbonEmissionResponse
+        /// </returns>
         public async Task<RecalculateCarbonEmissionResponse> RecalculateCarbonEmissionAsync(RecalculateCarbonEmissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4065,14 +5403,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await RecalculateCarbonEmissionWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 在线文档问答
-         *
-         * @param request SendDocumentAskQuestionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendDocumentAskQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在线文档问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendDocumentAskQuestionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendDocumentAskQuestionResponse
+        /// </returns>
         public SendDocumentAskQuestionResponse SendDocumentAskQuestionWithOptions(SendDocumentAskQuestionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4109,14 +5457,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<SendDocumentAskQuestionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 在线文档问答
-         *
-         * @param request SendDocumentAskQuestionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendDocumentAskQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在线文档问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendDocumentAskQuestionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendDocumentAskQuestionResponse
+        /// </returns>
         public async Task<SendDocumentAskQuestionResponse> SendDocumentAskQuestionWithOptionsAsync(SendDocumentAskQuestionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4153,12 +5511,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<SendDocumentAskQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 在线文档问答
-         *
-         * @param request SendDocumentAskQuestionRequest
-         * @return SendDocumentAskQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在线文档问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendDocumentAskQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendDocumentAskQuestionResponse
+        /// </returns>
         public SendDocumentAskQuestionResponse SendDocumentAskQuestion(SendDocumentAskQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4166,12 +5530,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return SendDocumentAskQuestionWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 在线文档问答
-         *
-         * @param request SendDocumentAskQuestionRequest
-         * @return SendDocumentAskQuestionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在线文档问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendDocumentAskQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendDocumentAskQuestionResponse
+        /// </returns>
         public async Task<SendDocumentAskQuestionResponse> SendDocumentAskQuestionAsync(SendDocumentAskQuestionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4179,14 +5549,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await SendDocumentAskQuestionWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 设置运行计划
-         *
-         * @param request SetRunningPlanRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetRunningPlanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置运行计划</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetRunningPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetRunningPlanResponse
+        /// </returns>
         public SetRunningPlanResponse SetRunningPlanWithOptions(SetRunningPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4275,14 +5655,24 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<SetRunningPlanResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 设置运行计划
-         *
-         * @param request SetRunningPlanRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetRunningPlanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置运行计划</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetRunningPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetRunningPlanResponse
+        /// </returns>
         public async Task<SetRunningPlanResponse> SetRunningPlanWithOptionsAsync(SetRunningPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4371,12 +5761,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<SetRunningPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 设置运行计划
-         *
-         * @param request SetRunningPlanRequest
-         * @return SetRunningPlanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置运行计划</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetRunningPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetRunningPlanResponse
+        /// </returns>
         public SetRunningPlanResponse SetRunningPlan(SetRunningPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4384,12 +5780,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return SetRunningPlanWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 设置运行计划
-         *
-         * @param request SetRunningPlanRequest
-         * @return SetRunningPlanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置运行计划</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetRunningPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetRunningPlanResponse
+        /// </returns>
         public async Task<SetRunningPlanResponse> SetRunningPlanAsync(SetRunningPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4397,18 +5799,32 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return await SetRunningPlanWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取文档结果
-         *
-         * @param request SubmitDocumentAnalyzeJobRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitDocumentAnalyzeJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocumentAnalyzeJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocumentAnalyzeJobResponse
+        /// </returns>
         public SubmitDocumentAnalyzeJobResponse SubmitDocumentAnalyzeJobWithOptions(SubmitDocumentAnalyzeJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                query["dataType"] = request.DataType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 query["fileName"] = request.FileName;
@@ -4445,18 +5861,32 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<SubmitDocumentAnalyzeJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文档结果
-         *
-         * @param request SubmitDocumentAnalyzeJobRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitDocumentAnalyzeJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocumentAnalyzeJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocumentAnalyzeJobResponse
+        /// </returns>
         public async Task<SubmitDocumentAnalyzeJobResponse> SubmitDocumentAnalyzeJobWithOptionsAsync(SubmitDocumentAnalyzeJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                query["dataType"] = request.DataType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 query["fileName"] = request.FileName;
@@ -4493,12 +5923,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return TeaModel.ToObject<SubmitDocumentAnalyzeJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文档结果
-         *
-         * @param request SubmitDocumentAnalyzeJobRequest
-         * @return SubmitDocumentAnalyzeJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocumentAnalyzeJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocumentAnalyzeJobResponse
+        /// </returns>
         public SubmitDocumentAnalyzeJobResponse SubmitDocumentAnalyzeJob(SubmitDocumentAnalyzeJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4506,12 +5942,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             return SubmitDocumentAnalyzeJobWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取文档结果
-         *
-         * @param request SubmitDocumentAnalyzeJobRequest
-         * @return SubmitDocumentAnalyzeJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocumentAnalyzeJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocumentAnalyzeJobResponse
+        /// </returns>
         public async Task<SubmitDocumentAnalyzeJobResponse> SubmitDocumentAnalyzeJobAsync(SubmitDocumentAnalyzeJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

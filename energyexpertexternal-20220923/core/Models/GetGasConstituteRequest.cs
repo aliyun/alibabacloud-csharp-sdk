@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetGasConstituteRequest : TeaModel {
         /// <summary>
-        /// The enterprise code.
+        /// <para>The enterprise code.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>C-20240115-3</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Module code.
+        /// <para>Module code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>carbonInventory.check.scope_1_direct_ghg_emissions</para>
         /// </summary>
         [NameInMap("moduleCode")]
         [Validation(Required=false)]
         public string ModuleCode { get; set; }
 
         /// <summary>
-        /// Module type.
+        /// <para>Module type.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("moduleType")]
         [Validation(Required=false)]
         public int? ModuleType { get; set; }
 
         /// <summary>
-        /// Year
+        /// <para>Year</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2024</para>
         /// </summary>
         [NameInMap("year")]
         [Validation(Required=false)]

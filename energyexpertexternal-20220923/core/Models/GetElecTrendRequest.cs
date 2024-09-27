@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetElecTrendRequest : TeaModel {
         /// <summary>
-        /// The enterprise code.
+        /// <para>The enterprise code.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>C-20240115-3</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// List of years.
-        /// 
-        /// This parameter is required.
+        /// <para>List of years.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("yearList")]
         [Validation(Required=false)]

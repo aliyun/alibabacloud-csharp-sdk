@@ -10,45 +10,52 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class PushItemDataRequest : TeaModel {
         /// <summary>
-        /// The enterprise code.
+        /// <para>The enterprise code.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>C-20210223-01</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// List of data to be pushed.
-        /// 
-        /// This parameter is required.
+        /// <para>List of data to be pushed.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public PushItemDataRequestItems Items { get; set; }
         public class PushItemDataRequestItems : TeaModel {
             /// <summary>
-            /// API data identification.<props="intl">For details: [GetDataItemList ](https://www.alibabacloud.com/help/en/energy-expert/developer-reference/api-energyexpertexternal-2022-09-23-getdataitemlist)
+            /// <para>API data identification.&lt;props=&quot;intl&quot;&gt;For details: <a href="https://www.alibabacloud.com/help/en/energy-expert/developer-reference/api-energyexpertexternal-2022-09-23-getdataitemlist">GetDataItemList </a></para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>demo_api_code</para>
             /// </summary>
             [NameInMap("code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The month.
+            /// <para>The month.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("month")]
             [Validation(Required=false)]
             public string Month { get; set; }
 
             /// <summary>
-            /// The value of the data item.
+            /// <para>The value of the data item.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>1.11</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
@@ -57,9 +64,11 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         }
 
         /// <summary>
-        /// The year of the data created.
+        /// <para>The year of the data created.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2024</para>
         /// </summary>
         [NameInMap("year")]
         [Validation(Required=false)]

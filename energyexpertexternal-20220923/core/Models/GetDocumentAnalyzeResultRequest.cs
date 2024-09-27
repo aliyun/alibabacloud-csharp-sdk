@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetDocumentAnalyzeResultRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bfce2248-1546-4298-8bcf-70ac26e69646</para>
         /// </summary>
         [NameInMap("jobId")]
         [Validation(Required=false)]

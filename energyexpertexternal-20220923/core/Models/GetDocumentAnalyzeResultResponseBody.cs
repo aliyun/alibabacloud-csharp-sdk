@@ -25,10 +25,18 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                     [Validation(Required=false)]
                     public GetDocumentAnalyzeResultResponseBodyDataKvListInfoContextConfidence Confidence { get; set; }
                     public class GetDocumentAnalyzeResultResponseBodyDataKvListInfoContextConfidence : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>0.9994202852249146</para>
+                        /// </summary>
                         [NameInMap("keyConfidence")]
                         [Validation(Required=false)]
                         public double? KeyConfidence { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>0.9794202852249146</para>
+                        /// </summary>
                         [NameInMap("valueConfidence")]
                         [Validation(Required=false)]
                         public double? ValueConfidence { get; set; }
@@ -57,6 +65,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>83A5A7DD-8974-5769-952E-590A97BEA34E</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
