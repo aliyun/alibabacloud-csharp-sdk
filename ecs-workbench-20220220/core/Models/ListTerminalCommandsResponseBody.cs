@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecs_workbench20220220.Models
 {
-    public class GetInstanceRecordConfigResponseBody : TeaModel {
+    public class ListTerminalCommandsResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>InvalidParamter</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("Code")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>Parameter is null or invalid.</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("Message")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -33,51 +33,51 @@ namespace AlibabaCloud.SDK.Ecs_workbench20220220.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Root")]
+        [NameInMap("TerminalCommandList")]
         [Validation(Required=false)]
-        public GetInstanceRecordConfigResponseBodyRoot Root { get; set; }
-        public class GetInstanceRecordConfigResponseBodyRoot : TeaModel {
+        public List<ListTerminalCommandsResponseBodyTerminalCommandList> TerminalCommandList { get; set; }
+        public class ListTerminalCommandsResponseBodyTerminalCommandList : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>7</para>
+            /// <para>ls</para>
             /// </summary>
-            [NameInMap("ExpirationDays")]
+            [NameInMap("CommandLine")]
             [Validation(Required=false)]
-            public int? ExpirationDays { get; set; }
+            public string CommandLine { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>i-xxxx</para>
+            /// <para>2024-04-16T03:53:18Z</para>
             /// </summary>
-            [NameInMap("InstanceId")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string InstanceId { get; set; }
+            public string CreateTime { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>123</para>
+            /// <para>/root</para>
             /// </summary>
-            [NameInMap("ParentId")]
+            [NameInMap("ExecutePath")]
             [Validation(Required=false)]
-            public string ParentId { get; set; }
+            public string ExecutePath { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>acs:oss:cn-shanghai:123:workbench-record-123-1/record</para>
+            /// <para>root</para>
             /// </summary>
-            [NameInMap("RecordStorageTarget")]
+            [NameInMap("LoginUser")]
             [Validation(Required=false)]
-            public string RecordStorageTarget { get; set; }
+            public string LoginUser { get; set; }
 
         }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>3</para>
         /// </summary>
-        [NameInMap("Success")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 
