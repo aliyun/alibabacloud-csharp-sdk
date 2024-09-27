@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody : TeaModel {
         /// <summary>
-        /// The supported source regions.
+        /// <para>The supported source regions.</para>
         /// </summary>
         [NameInMap("AttributeInfos")]
         [Validation(Required=false)]
@@ -21,35 +21,50 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfosAttributeInfo> AttributeInfo { get; set; }
             public class DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfosAttributeInfo : TeaModel {
                 /// <summary>
-                /// The parent line code of the source region.
+                /// <para>The parent line code of the source region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>telecom</para>
                 /// </summary>
                 [NameInMap("FatherCode")]
                 [Validation(Required=false)]
                 public string FatherCode { get; set; }
 
                 /// <summary>
-                /// The code of the source region group.
+                /// <para>The code of the source region group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("GroupCode")]
                 [Validation(Required=false)]
                 public string GroupCode { get; set; }
 
                 /// <summary>
-                /// The name of the request source group.
+                /// <para>The name of the request source group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>global</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The line code of the source region.
+                /// <para>The line code of the source region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("LineCode")]
                 [Validation(Required=false)]
                 public string LineCode { get; set; }
 
                 /// <summary>
-                /// The line name of the source region.
+                /// <para>The line name of the source region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>global</para>
                 /// </summary>
                 [NameInMap("LineName")]
                 [Validation(Required=false)]
@@ -60,7 +75,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>199C3699-9A7B-41A1-BB5A-F1E862D3CB38</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

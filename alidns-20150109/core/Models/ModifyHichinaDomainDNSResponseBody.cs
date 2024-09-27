@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ModifyHichinaDomainDNSResponseBody : TeaModel {
         /// <summary>
-        /// The list of DNS servers after the domain name is changed.
+        /// <para>The DNS server names after modification.</para>
         /// </summary>
         [NameInMap("NewDnsServers")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The list of DNS servers before the domain name is changed.
+        /// <para>The DNS server names before modification.</para>
         /// </summary>
         [NameInMap("OriginalDnsServers")]
         [Validation(Required=false)]
@@ -36,7 +36,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

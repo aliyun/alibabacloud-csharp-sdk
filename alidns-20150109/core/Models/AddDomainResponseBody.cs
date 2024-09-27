@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDomainResponseBody : TeaModel {
         /// <summary>
-        /// The Domain Name System (DNS) servers configured for the domain name.
+        /// <para>The Domain Name System (DNS) servers configured for the domain name.</para>
         /// </summary>
         [NameInMap("DnsServers")]
         [Validation(Required=false)]
@@ -23,42 +23,60 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The ID of the domain name.
+        /// <para>The ID of the domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00efd71a-770e-4255-b54e-6fe5659baffe</para>
         /// </summary>
         [NameInMap("DomainId")]
         [Validation(Required=false)]
         public string DomainId { get; set; }
 
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dns-example.top</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The ID of the domain name group.
+        /// <para>The ID of the domain name group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2223</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The name of the domain name group.
+        /// <para>The name of the domain name group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MyGroup</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The Punycode for the domain name. This parameter is returned only for Chinese domain names.
+        /// <para>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xn--fsq270a.com</para>
         /// </summary>
         [NameInMap("PunyCode")]
         [Validation(Required=false)]
         public string PunyCode { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

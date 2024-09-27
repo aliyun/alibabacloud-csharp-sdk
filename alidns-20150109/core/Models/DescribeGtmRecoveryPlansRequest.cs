@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmRecoveryPlansRequest : TeaModel {
         /// <summary>
-        /// The keyword for the query. Fuzzy match is supported by disaster recovery plan name.
+        /// <para>The keyword for the query. Fuzzy match is supported by disaster recovery plan name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+        /// <para>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The page number to return. The page number starts from **1**. Default value: **1**.
+        /// <para>The page number to return. The page number starts from <b>1</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Maximum value: **100**. Default value: **20**.
+        /// <para>The number of entries to return per page. Maximum value: <b>100</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

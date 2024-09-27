@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCustomLineRequest : TeaModel {
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The unique ID of the custom line.
+        /// <para>The unique ID of the custom line.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>597</para>
         /// </summary>
         [NameInMap("LineId")]
         [Validation(Required=false)]

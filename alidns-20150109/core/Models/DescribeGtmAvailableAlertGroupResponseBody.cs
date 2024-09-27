@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmAvailableAlertGroupResponseBody : TeaModel {
         /// <summary>
-        /// The available alert groups of the GTM instance.
+        /// <para>The available alert groups of the GTM instance.</para>
         /// </summary>
         [NameInMap("AvailableAlertGroup")]
         [Validation(Required=false)]
         public string AvailableAlertGroup { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class CopyGtmConfigRequest : TeaModel {
         /// <summary>
-        /// The type of the object that you want to copy. Only the INSTANCE type is supported.
+        /// <para>The type of the object that is copied. Only the INSTANCE type is supported.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>INSTANCE</para>
         /// </summary>
         [NameInMap("CopyType")]
         [Validation(Required=false)]
         public string CopyType { get; set; }
 
         /// <summary>
-        /// The language that specific response parameters will use.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the source object. Only instance IDs are supported.
+        /// <para>The ID of the source object. Only instance IDs are supported.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gtm-cn-0pp1j84v60d</para>
         /// </summary>
         [NameInMap("SourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// The ID of the target object. Only instance IDs are supported.
+        /// <para>The ID of the target object. Only instance IDs are supported.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gtm-cn-v0h1gaujg06</para>
         /// </summary>
         [NameInMap("TargetId")]
         [Validation(Required=false)]

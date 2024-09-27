@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmRecoveryPlanAvailableConfigResponseBody : TeaModel {
         /// <summary>
-        /// The list of GTM instances involved in the disaster recovery plan.
+        /// <para>The instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance : TeaModel {
                 /// <summary>
-                /// The list of address pools for the GTM instance.
+                /// <para>The address pools.</para>
                 /// </summary>
                 [NameInMap("AddrPools")]
                 [Validation(Required=false)]
@@ -32,14 +32,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     public List<DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPoolsAddrPool> AddrPool { get; set; }
                     public class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPoolsAddrPool : TeaModel {
                         /// <summary>
-                        /// The ID of the address pool.
+                        /// <para>The address pool ID.</para>
                         /// </summary>
                         [NameInMap("AddrPoolId")]
                         [Validation(Required=false)]
                         public string AddrPoolId { get; set; }
 
                         /// <summary>
-                        /// The name of the address pool.
+                        /// <para>The name of the address pool.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>hra0i9</para>
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -50,14 +53,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 }
 
                 /// <summary>
-                /// The ID of the GTM instance.
+                /// <para>The instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>instance-example</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the GTM instance.
+                /// <para>The instance name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>instance-name-example</para>
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
@@ -68,7 +77,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F8F8EF50-8B7F-4702-B294-97170A423403</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

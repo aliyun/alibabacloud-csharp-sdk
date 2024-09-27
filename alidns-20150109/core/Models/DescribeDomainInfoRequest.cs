@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainInfoRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dns-example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// <para>The language type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// Specifies whether detailed attributes are required. The default value is **false**, which indicates that detailed attributes are not required.
+        /// <para>Specifies whether detailed attributes are required. The default value is <b>false</b>, which indicates that detailed attributes are not required.</para>
+        /// <para>If you set this parameter to <b>true</b>, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.</para>
         /// 
-        /// If you set this parameter to **true**, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("NeedDetailAttributes")]
         [Validation(Required=false)]

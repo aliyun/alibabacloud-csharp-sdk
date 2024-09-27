@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class GetTxtRecordForVerifyResponseBody : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, it is not returned.</para>
+        /// </remarks>
         /// 
-        /// >  If you do not specify this parameter, it is not returned.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -23,23 +27,33 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ParentDomainName { get; set; }
 
         /// <summary>
-        /// The hostname.
+        /// <para>The hostname.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aliyunRetrieval</para>
         /// </summary>
         [NameInMap("RR")]
         [Validation(Required=false)]
         public string RR { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9CC0D642-49D4-48DE-A1A5-9F218652E4A7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The record value.
+        /// <para>The record value.</para>
+        /// <remarks>
+        /// <para> The validity period is three days.</para>
+        /// </remarks>
         /// 
-        /// >  The validity period is three days.
+        /// <b>Example:</b>
+        /// <para>c99419e6997f41daaa3e*****</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

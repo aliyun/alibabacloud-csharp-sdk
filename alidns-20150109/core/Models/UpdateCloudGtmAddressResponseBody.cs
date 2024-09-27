@@ -9,10 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateCloudGtmAddressResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Unique request identification code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Modify address base configuration operation status:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Operation was successful</description></item>
+        /// <item><description>false: Operation was failed</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

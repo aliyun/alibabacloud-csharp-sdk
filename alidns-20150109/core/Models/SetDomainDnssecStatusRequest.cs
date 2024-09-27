@@ -10,28 +10,41 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDomainDnssecStatusRequest : TeaModel {
         /// <summary>
-        /// The domain name for which you want to set the DNSSEC status.
+        /// <para>The domain name for which you want to enable the DNSSEC. Only the users of the paid editions of Alibaba Cloud DNS can enable this feature.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages. Default value: en. Valid values: en, zh, and ja.
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// <para>Default value: en.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The DNSSEC status. Valid values:
+        /// <para>The DNSSEC status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ON: enables DNSSEC for the domain name.</description></item>
+        /// <item><description>OFF: disables DNSSEC for the domain name.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   ON: enables DNSSEC for the domain name.
-        /// *   OFF: disables DNSSEC for the domain name.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ON</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

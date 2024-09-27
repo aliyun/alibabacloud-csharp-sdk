@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstanceAddressPoolRequest : TeaModel {
         /// <summary>
-        /// The ID of the address pool that you want to query.
+        /// <para>The ID of the address pool that you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
         public string AddrPoolId { get; set; }
 
         /// <summary>
-        /// The language used by the user.
+        /// <para>The language used by the user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

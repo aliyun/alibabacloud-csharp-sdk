@@ -10,25 +10,37 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmRecoveryPlanResponseBody : TeaModel {
         /// <summary>
-        /// The time when the disaster recovery plan was created.
+        /// <para>The time when the disaster recovery plan was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-08-11T05:04Z</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        /// <summary>
+        /// <para>The time when the disaster recovery plan was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1565499867000</para>
+        /// </summary>
         [NameInMap("CreateTimestamp")]
         [Validation(Required=false)]
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// The number of faulty address pools.
+        /// <para>The number of faulty address pools.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("FaultAddrPoolNum")]
         [Validation(Required=false)]
         public int? FaultAddrPoolNum { get; set; }
 
         /// <summary>
-        /// The list of faulty address pools.
+        /// <para>The faulty address pools.</para>
         /// </summary>
         [NameInMap("FaultAddrPools")]
         [Validation(Required=false)]
@@ -39,22 +51,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool> FaultAddrPool { get; set; }
             public class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool : TeaModel {
                 /// <summary>
-                /// The ID of the address pool.
+                /// <para>The address pool ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hra0oq</para>
                 /// </summary>
                 [NameInMap("AddrPoolId")]
                 [Validation(Required=false)]
                 public string AddrPoolId { get; set; }
 
                 /// <summary>
-                /// The name of the address pool.
+                /// <para>The address pool name.</para>
                 /// </summary>
                 [NameInMap("AddrPoolName")]
                 [Validation(Required=false)]
                 public string AddrPoolName { get; set; }
 
-                /// <summary>
-                /// The list of addresses in the address pool.
-                /// </summary>
                 [NameInMap("Addrs")]
                 [Validation(Required=false)]
                 public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs Addrs { get; set; }
@@ -64,21 +76,30 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     public List<DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr> Addr { get; set; }
                     public class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr : TeaModel {
                         /// <summary>
-                        /// The ID of the address.
+                        /// <para>The address ID.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>739</para>
                         /// </summary>
                         [NameInMap("Id")]
                         [Validation(Required=false)]
                         public long? Id { get; set; }
 
                         /// <summary>
-                        /// The address work mode. It is the mode that was set for the IP address to work.
+                        /// <para>The address mode.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>OFFLINE</para>
                         /// </summary>
                         [NameInMap("Mode")]
                         [Validation(Required=false)]
                         public string Mode { get; set; }
 
                         /// <summary>
-                        /// The address value.
+                        /// <para>The address.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1.1.1.1</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -89,7 +110,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 }
 
                 /// <summary>
-                /// The ID of the GTM instance.
+                /// <para>The instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>instance-zwy-38</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -100,77 +124,110 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The last time when the recovery plan was executed.
+        /// <para>The time when the disaster recovery plan was last executed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-08-11T05:04Z</para>
         /// </summary>
         [NameInMap("LastExecuteTime")]
         [Validation(Required=false)]
         public string LastExecuteTime { get; set; }
 
         /// <summary>
-        /// A timestamp that indicates the last time when the recovery plan was executed.
+        /// <para>The time when the disaster recovery plan was last executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1565505898000</para>
         /// </summary>
         [NameInMap("LastExecuteTimestamp")]
         [Validation(Required=false)]
         public long? LastExecuteTimestamp { get; set; }
 
         /// <summary>
-        /// The last time when the disaster recovery plan was rolled back.
+        /// <para>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-08-11T06:45Z</para>
         /// </summary>
         [NameInMap("LastRollbackTime")]
         [Validation(Required=false)]
         public string LastRollbackTime { get; set; }
 
         /// <summary>
-        /// A timestamp that indicates the last time when the disaster recovery plan was rolled back.
+        /// <para>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1565505919000</para>
         /// </summary>
         [NameInMap("LastRollbackTimestamp")]
         [Validation(Required=false)]
         public long? LastRollbackTimestamp { get; set; }
 
         /// <summary>
-        /// The name of the disaster recovery plan queried.
+        /// <para>The name of the disaster recovery plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name-example</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the disaster recovery plan queried.
+        /// <para>The ID of the disaster recovery plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>55</para>
         /// </summary>
         [NameInMap("RecoveryPlanId")]
         [Validation(Required=false)]
         public long? RecoveryPlanId { get; set; }
 
         /// <summary>
-        /// The remarks on the disaster recovery plan.
+        /// <para>The description of the disaster recovery plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>remark-example</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0A5F4315-D6E8-435E-82DF-24F4C97D6999</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status of the disaster recovery plan queried.
+        /// <para>The status of the disaster recovery plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UNEXECUTED</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The last time when the disaster recovery plan was updated.
+        /// <para>The time when the disaster recovery plan was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-08-11T06:45Z</para>
         /// </summary>
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// A timestamp that indicates the last time when the disaster recovery plan was updated.
+        /// <para>The time when the disaster recovery plan was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1565499867000</para>
         /// </summary>
         [NameInMap("UpdateTimestamp")]
         [Validation(Required=false)]

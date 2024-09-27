@@ -10,66 +10,97 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsProductInstancesRequest : TeaModel {
         /// <summary>
-        /// The Sorting direction. Values:
-        /// * **DESC**: Descending (if not specified, the default is descending order)
-        /// * **ASC**: Ascending
+        /// <para>The order in which you want to sort returned entries. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DESC: Returned entries are sorted in descending order. If this parameter is left empty, returned entries are sorted in descending order by default.</description></item>
+        /// <item><description>ASC: Returned entries are sorted in ascending order.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DESC</para>
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }
 
         /// <summary>
-        /// The type of the domain name. Valid values:
+        /// <para>The type of the domain name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PUBLIC (default): hosted public domain name</description></item>
+        /// <item><description>CACHE: cached public domain name</description></item>
+        /// </list>
         /// 
-        /// *   PUBLIC (default): hosted public domain name
-        /// *   CACHE: cached public domain name
+        /// <b>Example:</b>
+        /// <para>PUBLIC</para>
         /// </summary>
         [NameInMap("DomainType")]
         [Validation(Required=false)]
         public string DomainType { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// <para>Default value: en</para>
         /// 
-        /// *   **zh** : Chinese
-        /// *   **en** (default) : English
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The Sorting parameter. Values:
-        /// * createDate: Sort by creation time (if not specified, the default is to sort by creation time)
-        /// * expireDate: Sort by expiration time
+        /// <para>The method that is used to sort returned entries. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>createDate: sorts returned entries by creation time. If this parameter is left empty, returned entries are sorted by creation time by default.</description></item>
+        /// <item><description>expireDate: sorts returned entries by expiration time.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>createDate</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page **1**. Default value: **1**.
+        /// <para>The number of the page to return. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **100**. Default value: **20**.
+        /// <para>The number of entries to return on each page. Maximum value: <b>100</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// <para>The IP address of the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.0.2.0</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// The version code of the Alibaba Cloud DNS instance.
+        /// <para>The version code of the Alibaba Cloud DNS instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>version1</para>
         /// </summary>
         [NameInMap("VersionCode")]
         [Validation(Required=false)]

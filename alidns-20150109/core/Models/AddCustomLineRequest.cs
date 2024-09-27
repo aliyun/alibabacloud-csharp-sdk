@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,32 +10,39 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddCustomLineRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The CIDR blocks.
-        /// 
-        /// This parameter is required.
+        /// <para>The CIDR blocks.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IpSegment")]
         [Validation(Required=false)]
         public List<AddCustomLineRequestIpSegment> IpSegment { get; set; }
         public class AddCustomLineRequestIpSegment : TeaModel {
             /// <summary>
-            /// The end IP address of the CIDR block.
+            /// <para>The end IP address of the CIDR block.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.0.2.254</para>
             /// </summary>
             [NameInMap("EndIp")]
             [Validation(Required=false)]
             public string EndIp { get; set; }
 
             /// <summary>
-            /// The start IP address of the CIDR block.
+            /// <para>The start IP address of the CIDR block.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.0.2.0</para>
             /// </summary>
             [NameInMap("StartIp")]
             [Validation(Required=false)]
@@ -47,16 +51,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The name of the custom line.
-        /// 
-        /// This parameter is required.
+        /// <para>The name of the custom line.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LineName")]
         [Validation(Required=false)]

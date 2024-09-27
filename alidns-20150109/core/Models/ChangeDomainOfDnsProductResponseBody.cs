@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ChangeDomainOfDnsProductResponseBody : TeaModel {
         /// <summary>
-        /// The original domain name that was bound to the instance. If the value of this parameter is empty, the instance is bound with a domain name for the first time.
+        /// <para>The domain name that is originally bound to the instance. If no value is returned for this parameter, the instance is bound to a domain name for the first time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>originaldomain.com</para>
         /// </summary>
         [NameInMap("OriginalDomain")]
         [Validation(Required=false)]
         public string OriginalDomain { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddGtmRecoveryPlanRequest : TeaModel {
         /// <summary>
-        /// The list of IDs of faulty address pools.
+        /// <para>The IDs of faulty address pools.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;hra0or&quot;]</para>
         /// </summary>
         [NameInMap("FaultAddrPool")]
         [Validation(Required=false)]
         public string FaultAddrPool { get; set; }
 
         /// <summary>
-        /// The language used by the user.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The name of the disaster recovery plan that you want to create.
+        /// <para>The name of the disaster recovery plan.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>name-example</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The remarks on the disaster recovery plan.
+        /// <para>The description of the disaster recovery plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>remark</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

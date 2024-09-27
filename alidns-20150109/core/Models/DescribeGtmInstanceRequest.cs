@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the GTM instance.
+        /// <para>The ID of the GTM instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>instance1</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The language of the values of specific response parameters.
+        /// <para>The language of the values of specific response parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// Specifies whether additional information is required. Default value: **false**. If the value is **true**, the AccessStrategyNum and AddressPoolNum parameters are returned.
+        /// <para>Specifies whether additional information is required. Default value: <b>false</b>. If the value is <b>true</b>, the AccessStrategyNum and AddressPoolNum parameters are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("NeedDetailAttributes")]
         [Validation(Required=false)]

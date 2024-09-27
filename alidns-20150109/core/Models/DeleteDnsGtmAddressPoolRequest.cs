@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteDnsGtmAddressPoolRequest : TeaModel {
         /// <summary>
-        /// The ID of the address pool.
+        /// <para>The ID of the address pool.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testpool1</para>
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
         public string AddrPoolId { get; set; }
 
         /// <summary>
-        /// The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+        /// <para>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

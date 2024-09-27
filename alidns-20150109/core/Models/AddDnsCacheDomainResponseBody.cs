@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDnsCacheDomainResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B57C121B-A45F-44D8-A9B2-XXXXXXX</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

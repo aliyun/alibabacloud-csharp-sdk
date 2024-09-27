@@ -10,29 +10,37 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAddrAttributeInfoRequest : TeaModel {
         /// <summary>
-        /// The addresses whose source regions you want to query.
+        /// <para>The addresses.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;1.1.1.1&quot;]</para>
         /// </summary>
         [NameInMap("Addrs")]
         [Validation(Required=false)]
         public string Addrs { get; set; }
 
         /// <summary>
-        /// The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+        /// <para>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The type of the addresses. Valid values:
+        /// <para>The type of addresses. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>IPV4: IPv4 address</description></item>
+        /// <item><description>IPv6: IPv6 address</description></item>
+        /// <item><description>DOMAIN: domain name</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   IPV4: IPv4 address
-        /// *   IPV6: IPv6 address
-        /// *   DOMAIN: domain name
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ipv4</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

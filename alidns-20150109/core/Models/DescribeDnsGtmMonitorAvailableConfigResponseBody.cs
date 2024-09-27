@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmMonitorAvailableConfigResponseBody : TeaModel {
         /// <summary>
-        /// The monitored nodes that can be used to perform health checks on address pools that contain public domain names that are resolved to IPv4 addresses.
+        /// <para>The nodes that perform health checks on domain names that use public IPv4 addresses.</para>
         /// </summary>
         [NameInMap("DomainIpv4IspCityNodes")]
         [Validation(Required=false)]
@@ -21,44 +21,63 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode> DomainIpv4IspCityNode { get; set; }
             public class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode : TeaModel {
                 /// <summary>
-                /// The code of the city where the monitored node is deployed.
+                /// <para>The city code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>503</para>
                 /// </summary>
                 [NameInMap("CityCode")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
                 /// <summary>
-                /// The display name of the city where the monitored node is deployed.
+                /// <para>The display name of the city.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Zhangjiakou</para>
                 /// </summary>
                 [NameInMap("CityName")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the monitored node is selected for the health check by default.
+                /// <para>Indicates whether the health check node is selected by default.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("DefaultSelected")]
                 [Validation(Required=false)]
                 public bool? DefaultSelected { get; set; }
 
                 /// <summary>
-                /// The name of the group to which the monitored node belongs.
+                /// <para>The name of the node group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>BGP Nodes</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The type of the group to which the monitored node belongs. Valid values:
+                /// <para>The type of the node group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>BGP: BGP node</description></item>
+                /// <item><description>OVERSEAS: node outside the Chinese mainland</description></item>
+                /// <item><description>ISP: ISP node</description></item>
+                /// </list>
                 /// 
-                /// *   BGP: BGP nodes
-                /// *   OVERSEAS: nodes outside the Chinese mainland
-                /// *   ISP: ISP nodes
+                /// <b>Example:</b>
+                /// <para>BGP</para>
                 /// </summary>
                 [NameInMap("GroupType")]
                 [Validation(Required=false)]
                 public string GroupType { get; set; }
 
+                /// <summary>
+                /// <para>The IP addresses of the health check nodes.</para>
+                /// </summary>
                 [NameInMap("Ips")]
                 [Validation(Required=false)]
                 public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps Ips { get; set; }
@@ -70,14 +89,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 }
 
                 /// <summary>
-                /// The code of the ISP to which the monitored node belongs.
+                /// <para>The ISP code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>465</para>
                 /// </summary>
                 [NameInMap("IspCode")]
                 [Validation(Required=false)]
                 public string IspCode { get; set; }
 
                 /// <summary>
-                /// The display name of the ISP to which the monitored node belongs.
+                /// <para>The display name of the ISP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Alibaba</para>
                 /// </summary>
                 [NameInMap("IspName")]
                 [Validation(Required=false)]
@@ -88,7 +113,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The monitored nodes that can be used to perform health checks on address pools that contain public domain names that are resolved to IPv6 addresses.
+        /// <para>The nodes that perform health checks on domain names that use public IPv6 addresses.</para>
         /// </summary>
         [NameInMap("DomainIpv6IspCityNodes")]
         [Validation(Required=false)]
@@ -99,44 +124,63 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode> DomainIpv6IspCityNode { get; set; }
             public class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode : TeaModel {
                 /// <summary>
-                /// The code of the city where the monitored node is deployed.
+                /// <para>The city code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>503</para>
                 /// </summary>
                 [NameInMap("CityCode")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
                 /// <summary>
-                /// The display name of the city where the monitored node is deployed.
+                /// <para>The display name of the city.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Zhangjiakou</para>
                 /// </summary>
                 [NameInMap("CityName")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the monitored node is selected for the health check by default.
+                /// <para>Indicates whether the health check node is selected by default.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("DefaultSelected")]
                 [Validation(Required=false)]
                 public bool? DefaultSelected { get; set; }
 
                 /// <summary>
-                /// The name of the group to which the monitored node belongs.
+                /// <para>The name of the node group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>BGP Nodes</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The type of the group to which the monitored node belongs. Valid values:
+                /// <para>The type of the node group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>BGP: BGP node</description></item>
+                /// <item><description>OVERSEAS: node outside the Chinese mainland</description></item>
+                /// <item><description>ISP: ISP node</description></item>
+                /// </list>
                 /// 
-                /// *   BGP: BGP nodes
-                /// *   OVERSEAS: nodes outside the Chinese mainland
-                /// *   ISP: ISP nodes
+                /// <b>Example:</b>
+                /// <para>BGP</para>
                 /// </summary>
                 [NameInMap("GroupType")]
                 [Validation(Required=false)]
                 public string GroupType { get; set; }
 
+                /// <summary>
+                /// <para>This parameter is not returned.</para>
+                /// </summary>
                 [NameInMap("Ips")]
                 [Validation(Required=false)]
                 public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps Ips { get; set; }
@@ -148,14 +192,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 }
 
                 /// <summary>
-                /// The code of the ISP to which the monitored node belongs.
+                /// <para>The ISP code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>465</para>
                 /// </summary>
                 [NameInMap("IspCode")]
                 [Validation(Required=false)]
                 public string IspCode { get; set; }
 
                 /// <summary>
-                /// The display name of the ISP to which the monitored node belongs.
+                /// <para>The display name of the ISP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Alibaba</para>
                 /// </summary>
                 [NameInMap("IspName")]
                 [Validation(Required=false)]
@@ -166,7 +216,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The monitored nodes that can be used to perform health checks on address pools that contain public IPv4 addresses.
+        /// <para>The nodes that perform health checks on public IPv4 addresses.</para>
         /// </summary>
         [NameInMap("Ipv4IspCityNodes")]
         [Validation(Required=false)]
@@ -177,44 +227,63 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode> Ipv4IspCityNode { get; set; }
             public class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode : TeaModel {
                 /// <summary>
-                /// The code of the city where the monitored node is deployed.
+                /// <para>The city code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>503</para>
                 /// </summary>
                 [NameInMap("CityCode")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
                 /// <summary>
-                /// The display name of the city where the monitored node is deployed.
+                /// <para>The display name of the city.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Zhangjiakou</para>
                 /// </summary>
                 [NameInMap("CityName")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the monitored node is selected for the health check by default.
+                /// <para>Indicates whether the health check node is selected by default.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("DefaultSelected")]
                 [Validation(Required=false)]
                 public bool? DefaultSelected { get; set; }
 
                 /// <summary>
-                /// The name of the group to which the monitored node belongs.
+                /// <para>The name of the node group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>BGP Nodes</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The type of the group to which the monitored node belongs. Valid values:
+                /// <para>The type of the node group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>BGP: Border Gateway Protocol (BGP) node</description></item>
+                /// <item><description>OVERSEAS: node outside the Chinese mainland</description></item>
+                /// <item><description>ISP: ISP node</description></item>
+                /// </list>
                 /// 
-                /// *   BGP: Border Gateway Protocol (BGP) nodes
-                /// *   OVERSEAS: nodes outside the Chinese mainland
-                /// *   ISP: ISP nodes
+                /// <b>Example:</b>
+                /// <para>BGP</para>
                 /// </summary>
                 [NameInMap("GroupType")]
                 [Validation(Required=false)]
                 public string GroupType { get; set; }
 
+                /// <summary>
+                /// <para>The IP addresses of the health check nodes.</para>
+                /// </summary>
                 [NameInMap("Ips")]
                 [Validation(Required=false)]
                 public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps Ips { get; set; }
@@ -226,14 +295,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 }
 
                 /// <summary>
-                /// The code of the Internet service provider (ISP) to which the monitored node belongs.
+                /// <para>The Internet service provider (ISP) code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>465</para>
                 /// </summary>
                 [NameInMap("IspCode")]
                 [Validation(Required=false)]
                 public string IspCode { get; set; }
 
                 /// <summary>
-                /// The display name of the ISP to which the monitored node belongs.
+                /// <para>The display name of the ISP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Alibaba</para>
                 /// </summary>
                 [NameInMap("IspName")]
                 [Validation(Required=false)]
@@ -244,7 +319,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The monitored nodes that can be used to perform health checks on address pools that contain public IPv6 addresses.
+        /// <para>The nodes that perform health checks on public IPv6 addresses.</para>
         /// </summary>
         [NameInMap("Ipv6IspCityNodes")]
         [Validation(Required=false)]
@@ -255,44 +330,63 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode> Ipv6IspCityNode { get; set; }
             public class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode : TeaModel {
                 /// <summary>
-                /// The code of the city where the monitored node is deployed.
+                /// <para>The city code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>503</para>
                 /// </summary>
                 [NameInMap("CityCode")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
                 /// <summary>
-                /// The display name of the city where the monitored node is deployed.
+                /// <para>The display name of the city.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Zhangjiakou</para>
                 /// </summary>
                 [NameInMap("CityName")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the monitored node is selected for the health check by default.
+                /// <para>Indicates whether the health check node is selected by default.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("DefaultSelected")]
                 [Validation(Required=false)]
                 public bool? DefaultSelected { get; set; }
 
                 /// <summary>
-                /// The name of the group to which the monitored node belongs.
+                /// <para>The name of the node group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>BGP Nodes</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The type of the group to which the monitored node belongs. Valid values:
+                /// <para>The type of the node group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>BGP: BGP node</description></item>
+                /// <item><description>OVERSEAS: node outside the Chinese mainland</description></item>
+                /// <item><description>ISP: ISP node</description></item>
+                /// </list>
                 /// 
-                /// *   BGP: BGP nodes
-                /// *   OVERSEAS: nodes outside the Chinese mainland
-                /// *   ISP: ISP nodes
+                /// <b>Example:</b>
+                /// <para>BGP</para>
                 /// </summary>
                 [NameInMap("GroupType")]
                 [Validation(Required=false)]
                 public string GroupType { get; set; }
 
+                /// <summary>
+                /// <para>This parameter is not returned.</para>
+                /// </summary>
                 [NameInMap("Ips")]
                 [Validation(Required=false)]
                 public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps Ips { get; set; }
@@ -304,14 +398,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 }
 
                 /// <summary>
-                /// The code of the ISP to which the monitored node belongs.
+                /// <para>The ISP code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>465</para>
                 /// </summary>
                 [NameInMap("IspCode")]
                 [Validation(Required=false)]
                 public string IspCode { get; set; }
 
                 /// <summary>
-                /// The display name of the ISP to which the monitored node belongs.
+                /// <para>The display name of the ISP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Alibaba</para>
                 /// </summary>
                 [NameInMap("IspName")]
                 [Validation(Required=false)]
@@ -322,7 +422,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

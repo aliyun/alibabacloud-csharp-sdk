@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmAvailableAlertGroupRequest : TeaModel {
         /// <summary>
-        /// The language used by the user.
+        /// <para>The language used by the user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

@@ -10,82 +10,116 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class OperateBatchDomainRequest : TeaModel {
         /// <summary>
-        /// The DNS records. You can submit up to 1000 DNS records.
-        /// 
-        /// This parameter is required.
+        /// <para>The Domain Name System (DNS) records. You can submit up to 1,000 DNS records.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainRecordInfo")]
         [Validation(Required=false)]
         public List<OperateBatchDomainRequestDomainRecordInfo> DomainRecordInfo { get; set; }
         public class OperateBatchDomainRequestDomainRecordInfo : TeaModel {
             /// <summary>
-            /// The domain name.
+            /// <para>The domain name.</para>
+            /// <remarks>
+            /// <para> You can submit 1 to 1,000 domain names. Due to the limit on the length of HTTP request headers, excessive domain names are ignored. Do not enter more than 1,000 domain names.</para>
+            /// </remarks>
+            /// <para>This parameter is required.</para>
             /// 
-            /// >  You can submit 1 to 1,000 domain names. Due to the limit on the length of HTTP request headers, excessive domain names are ignored. Do not enter more than 1,000 domain names.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// The resolution line. Default value: default.
+            /// <para>The DNS request source. Default value: default.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("Line")]
             [Validation(Required=false)]
             public string Line { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>mail</para>
+            /// </summary>
             [NameInMap("NewRr")]
             [Validation(Required=false)]
             public string NewRr { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AAAA</para>
+            /// </summary>
             [NameInMap("NewType")]
             [Validation(Required=false)]
             public string NewType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>114.92.XX.XX</para>
+            /// </summary>
             [NameInMap("NewValue")]
             [Validation(Required=false)]
             public string NewValue { get; set; }
 
             /// <summary>
-            /// The priority of the mail exchanger (MX) record.
+            /// <para>The priority of the mail exchanger (MX) record.</para>
+            /// <para>This parameter is required if the type of the DNS record is MX. Default value: 10.</para>
             /// 
-            /// This parameter is required if the type of the DNS record is MX. Default value: 10.
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
             /// <summary>
-            /// The hostname.
+            /// <para>The hostname.</para>
+            /// <remarks>
+            /// <para> This parameter is required if you set Type to <b>RR_ADD</b> or <b>RR_DEL</b>.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is required if you set Type to **RR_ADD** or **RR_DEL**.
+            /// <b>Example:</b>
+            /// <para>zhaohui</para>
             /// </summary>
             [NameInMap("Rr")]
             [Validation(Required=false)]
             public string Rr { get; set; }
 
             /// <summary>
-            /// The time-to-live (TTL) value of the cached DNS record. Unit: seconds. Default value: ***600***.
+            /// <para>The time-to-live (TTL) value of the cached DNS record. Unit: seconds. Default value: <em><b>600</b></em>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>600</para>
             /// </summary>
             [NameInMap("Ttl")]
             [Validation(Required=false)]
             public int? Ttl { get; set; }
 
             /// <summary>
-            /// The type of the DNS record. Valid values: A, AAAA, TXT, MX, and CNAME.
+            /// <para>The type of the DNS record. Valid values: A, AAAA, TXT, MX, and CNAME.</para>
+            /// <remarks>
+            /// <para> This parameter is required if you set Type to <b>RR_ADD</b> or <b>RR_DEL</b>.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is required if you set Type to **RR_ADD** or **RR_DEL**.
+            /// <b>Example:</b>
+            /// <para>MX</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The record value.
+            /// <para>The record value.</para>
+            /// <remarks>
+            /// <para> This parameter is required if you set Type to <b>RR_ADD</b> or <b>RR_DEL</b>.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is required if you set Type to **RR_ADD** or **RR_DEL**.
+            /// <b>Example:</b>
+            /// <para>fd87da3c4528844d45af39200155a905</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -94,21 +128,27 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The type of the batch operation. Valid values:
+        /// <para>The type of the batch operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DOMAIN_ADD</b>: adds domain names in batches.</description></item>
+        /// <item><description><b>DOMAIN_DEL</b>: deletes domain names in batches.</description></item>
+        /// <item><description><b>RR_ADD</b>: adds DNS records in batches.</description></item>
+        /// <item><description><b>RR_DEL</b>: deletes DNS records in batches. This operation deletes the DNS records with the specified hostname or record value. If you do not specify the Rr and Value parameters, this operation deletes the DNS records that are added for the specified domain names.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **DOMAIN_ADD**: adds domain names in batches.
-        /// *   **DOMAIN_DEL**: deletes domain names in batches.
-        /// *   **RR_ADD**: adds DNS records in batches.
-        /// *   **RR_DEL**: deletes DNS records in batches. This operation deletes the DNS records with the specified hostname or record value. If you do not specify the Rr and Value parameters, this operation deletes the DNS records that are added for the specified domain names.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>RR_ADD</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

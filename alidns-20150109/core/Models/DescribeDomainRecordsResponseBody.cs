@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The returned Domain Name System (DNS) records.
+        /// <para>The returned Domain Name System (DNS) records.</para>
         /// </summary>
         [NameInMap("DomainRecords")]
         [Validation(Required=false)]
@@ -21,98 +21,140 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDomainRecordsResponseBodyDomainRecordsRecord> Record { get; set; }
             public class DescribeDomainRecordsResponseBodyDomainRecordsRecord : TeaModel {
                 /// <summary>
-                /// The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.
+                /// <para>The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1666501957000</para>
                 /// </summary>
                 [NameInMap("CreateTimestamp")]
                 [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// The domain name.
+                /// <para>The domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example.com</para>
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The resolution line.
+                /// <para>The resolution line.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("Line")]
                 [Validation(Required=false)]
                 public string Line { get; set; }
 
                 /// <summary>
-                /// Indicates whether the DNS record is locked.
+                /// <para>Indicates whether the DNS record is locked.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Locked")]
                 [Validation(Required=false)]
                 public bool? Locked { get; set; }
 
                 /// <summary>
-                /// The priority of the mail exchanger (MX) record.
+                /// <para>The priority of the mail exchanger (MX) record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
                 /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
                 public long? Priority { get; set; }
 
                 /// <summary>
-                /// The hostname.
+                /// <para>The hostname.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>www</para>
                 /// </summary>
                 [NameInMap("RR")]
                 [Validation(Required=false)]
                 public string RR { get; set; }
 
                 /// <summary>
-                /// The ID of the DNS record.
+                /// <para>The ID of the DNS record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9999985</para>
                 /// </summary>
                 [NameInMap("RecordId")]
                 [Validation(Required=false)]
                 public string RecordId { get; set; }
 
                 /// <summary>
-                /// The description of the DNS record.
+                /// <para>The description of the DNS record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// The status of the DNS record.
+                /// <para>The status of the DNS record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Enable</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The time-to-live (TTL) of the cached DNS record. Unit: seconds.
+                /// <para>The time-to-live (TTL) of the cached DNS record. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>600</para>
                 /// </summary>
                 [NameInMap("TTL")]
                 [Validation(Required=false)]
                 public long? TTL { get; set; }
 
                 /// <summary>
-                /// The type of the DNS record.
+                /// <para>The type of the DNS record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MX</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.
+                /// <para>The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1676872961000</para>
                 /// </summary>
                 [NameInMap("UpdateTimestamp")]
                 [Validation(Required=false)]
                 public long? UpdateTimestamp { get; set; }
 
                 /// <summary>
-                /// The record value.
+                /// <para>The record value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mail1.hichina.com</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
                 /// <summary>
-                /// The weight of the DNS record.
+                /// <para>The weight of the DNS record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
@@ -123,28 +165,40 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

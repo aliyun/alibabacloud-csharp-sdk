@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDohDomainStatisticsRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the YYYY-MM-DD format.
+        /// <para>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
+        /// <para>The default value is the day when you perform the operation.</para>
         /// 
-        /// The default value is the day when you perform the operation.
+        /// <b>Example:</b>
+        /// <para>2019-07-04</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// <para>The language type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.
+        /// <para>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
+        /// <para>You can query only the DNS records of the latest 90 days. <c>The value of StartDate must be greater than or equal to the difference between the current date and 90</c>.</para>
         /// 
-        /// You can query only the DNS records of the latest 90 days. `The value of StartDate must be greater than or equal to the difference between the current date and 90`.
+        /// <b>Example:</b>
+        /// <para>2019-07-04</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

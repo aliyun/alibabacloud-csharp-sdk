@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeBatchResultCountRequest : TeaModel {
         /// <summary>
-        /// The type of the batch operation. Valid values:
+        /// <para>The type of the batch operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DOMAIN_ADD</b>: adds domain names in batches.</description></item>
+        /// <item><description><b>DOMAIN_DEL</b>: deletes domain names in batches.</description></item>
+        /// <item><description><b>RR_ADD</b>: adds Domain Name System (DNS) records in batches.</description></item>
+        /// <item><description><b>RR_DEL</b>: deletes DNS records in batches.</description></item>
+        /// </list>
         /// 
-        /// *   **DOMAIN_ADD**: adds domain names in batches.
-        /// *   **DOMAIN_DEL**: deletes domain names in batches.
-        /// *   **RR_ADD**: adds DNS records in batches.
-        /// *   **RR_DEL**: deletes DNS records in batches.
+        /// <b>Example:</b>
+        /// <para>DOMAIN_ADD</para>
         /// </summary>
         [NameInMap("BatchType")]
         [Validation(Required=false)]
         public string BatchType { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the task.
+        /// <para>The task ID.</para>
+        /// <para>If you specify TaskId, the execution result of the specified task is returned. If you do not specify TaskId, the execution result of the last task is returned.</para>
         /// 
-        /// If you specify TaskId, the execution result of the specified task is returned. If you do not specify TaskId, the execution result of the last task is returned.
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

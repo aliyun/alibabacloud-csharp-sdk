@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddGtmRecoveryPlanResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the disaster recovery plan created.
+        /// <para>The ID of the disaster recovery plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("RecoveryPlanId")]
         [Validation(Required=false)]
         public string RecoveryPlanId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

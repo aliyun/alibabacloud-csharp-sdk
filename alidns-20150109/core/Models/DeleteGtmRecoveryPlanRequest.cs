@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteGtmRecoveryPlanRequest : TeaModel {
         /// <summary>
-        /// The language used by the user.
+        /// <para>The language used by the user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the disaster recovery plan that you want to delete.
+        /// <para>The ID of the disaster recovery plan that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("RecoveryPlanId")]
         [Validation(Required=false)]

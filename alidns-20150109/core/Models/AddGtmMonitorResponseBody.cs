@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddGtmMonitorResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the health check configuration.
+        /// <para>The ID of the health check configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234abc</para>
         /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
         public string MonitorConfigId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

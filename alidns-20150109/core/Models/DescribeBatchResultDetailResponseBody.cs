@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeBatchResultDetailResponseBody : TeaModel {
         /// <summary>
-        /// The detailed results of the batch operation.
+        /// <para>The detailed results of the batch operation.</para>
         /// </summary>
         [NameInMap("BatchResultDetails")]
         [Validation(Required=false)]
@@ -21,112 +21,160 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail> BatchResultDetail { get; set; }
             public class DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail : TeaModel {
                 /// <summary>
-                /// The type of the batch operation.
+                /// <para>The type of the batch operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DOMAIN_ADD</para>
                 /// </summary>
                 [NameInMap("BatchType")]
                 [Validation(Required=false)]
                 public string BatchType { get; set; }
 
                 /// <summary>
-                /// The domain name.
+                /// <para>The domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example.com</para>
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// The line code.
+                /// <para>The line code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("Line")]
                 [Validation(Required=false)]
                 public string Line { get; set; }
 
                 /// <summary>
-                /// The new hostname.
+                /// <para>The new hostname.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>demo-batch-7</para>
                 /// </summary>
                 [NameInMap("NewRr")]
                 [Validation(Required=false)]
                 public string NewRr { get; set; }
 
                 /// <summary>
-                /// The new record value.
+                /// <para>The new record value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.0.2.254</para>
                 /// </summary>
                 [NameInMap("NewValue")]
                 [Validation(Required=false)]
                 public string NewValue { get; set; }
 
                 /// <summary>
-                /// The time when the operation was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+                /// <para>The time when the operation was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-08-22 18:02:58</para>
                 /// </summary>
                 [NameInMap("OperateDateStr")]
                 [Validation(Required=false)]
                 public string OperateDateStr { get; set; }
 
                 /// <summary>
-                /// The priority of the mail exchanger (MX) record.
+                /// <para>The priority of the mail exchanger (MX) record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
                 public string Priority { get; set; }
 
                 /// <summary>
-                /// The cause of the execution failure.
+                /// <para>The cause of the execution failure.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Task lock fail</para>
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// The ID of the DNS record.
+                /// <para>The ID of the DNS record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123456789</para>
                 /// </summary>
                 [NameInMap("RecordId")]
                 [Validation(Required=false)]
                 public string RecordId { get; set; }
 
                 /// <summary>
-                /// The description of the DNS record.
+                /// <para>The description of the DNS record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>remark</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// The hostname.
+                /// <para>The hostname.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>www</para>
                 /// </summary>
                 [NameInMap("Rr")]
                 [Validation(Required=false)]
                 public string Rr { get; set; }
 
                 /// <summary>
-                /// The status of the DNS record.
+                /// <para>The status of the DNS record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>stop</para>
                 /// </summary>
                 [NameInMap("RrStatus")]
                 [Validation(Required=false)]
                 public string RrStatus { get; set; }
 
                 /// <summary>
-                /// The execution result of the batch operation. Valid values: **true**: The operation succeeded. **false**: The operation failed.
+                /// <para>The execution result of the batch operation. Valid values: <b>true</b>: The operation succeeded. <b>false</b>: The operation failed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public bool? Status { get; set; }
 
                 /// <summary>
-                /// The time-to-live (TTL) of the DNS record.
+                /// <para>The time-to-live (TTL) of the DNS record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>600</para>
                 /// </summary>
                 [NameInMap("Ttl")]
                 [Validation(Required=false)]
                 public string Ttl { get; set; }
 
                 /// <summary>
-                /// The type of the DNS record.
+                /// <para>The type of the DNS record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>A</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The record value.
+                /// <para>The record value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.0.2.0</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -137,28 +185,40 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>75446CC1-FC9A-4595-8D96-089D73D7A63D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

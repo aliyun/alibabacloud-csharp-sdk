@@ -10,35 +10,46 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDomainRecordStatusRequest : TeaModel {
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the DNS record.
+        /// <para>The ID of the DNS record.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>9999985</para>
         /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]
         public string RecordId { get; set; }
 
         /// <summary>
-        /// The state of the DNS record. Valid values:
+        /// <para>The state of the DNS record. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enable</b>: enables the DNS record.</description></item>
+        /// <item><description><b>Disable</b>: disables the DNS record.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Enable**: enables the DNS record.
-        /// *   **Disable**: disables the DNS record.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Disable</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// <para>The IP address of the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.0.2.0</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

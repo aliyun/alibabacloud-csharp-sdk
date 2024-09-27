@@ -10,44 +10,57 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainStatisticsRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The type of the domain name. Valid values:
+        /// <para>The type of the domain name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PUBLIC (default): hosted public domain name</description></item>
+        /// <item><description>CACHE: cached public domain name</description></item>
+        /// </list>
         /// 
-        /// *   PUBLIC (default): hosted public domain name
-        /// *   CACHE: cached public domain name
+        /// <b>Example:</b>
+        /// <para>PUBLIC CACHE</para>
         /// </summary>
         [NameInMap("DomainType")]
         [Validation(Required=false)]
         public string DomainType { get; set; }
 
         /// <summary>
-        /// The end date of the query. Specify the end date in the **YYYY-MM-DD** format.
+        /// <para>The end date of the query. Specify the end date in the <b>YYYY-MM-DD</b> format.</para>
+        /// <para>The default value is the day when you query the data.</para>
         /// 
-        /// The default value is the day when you query the data.
+        /// <b>Example:</b>
+        /// <para>2019-07-04</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
+        /// <para>The start date of the query. Specify the start date in the <b>YYYY-MM-DD</b> format.</para>
+        /// <para>You can only query the DNS records within the last 90 days.``</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can only query the DNS records within the last 90 days.``
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2019-07-04</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

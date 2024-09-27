@@ -10,43 +10,54 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteSubDomainRecordsRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// <para>The language type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The host record.
+        /// <para>The host record.</para>
+        /// <para>For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>www</para>
         /// </summary>
         [NameInMap("RR")]
         [Validation(Required=false)]
         public string RR { get; set; }
 
         /// <summary>
-        /// The type of the DNS record. If you do not specify this parameter, all DNS record types corresponding to the subdomain name are returned.
+        /// <para>The type of the DNS record. If you do not specify this parameter, all DNS record types corresponding to the subdomain name are returned.</para>
+        /// <para>DNS record types include <b>A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV</b>. The value is not case-sensitive.</para>
         /// 
-        /// DNS record types include **A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV**. The value is not case-sensitive.
+        /// <b>Example:</b>
+        /// <para>A</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// <para>The IP address of the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.0.2.0</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

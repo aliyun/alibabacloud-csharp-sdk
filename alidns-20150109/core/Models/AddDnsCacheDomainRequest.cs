@@ -10,77 +10,94 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDnsCacheDomainRequest : TeaModel {
         /// <summary>
-        /// The maximum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.
+        /// <para>The maximum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>86400</para>
         /// </summary>
         [NameInMap("CacheTtlMax")]
         [Validation(Required=false)]
         public int? CacheTtlMax { get; set; }
 
         /// <summary>
-        /// The minimum time-to-live (TTL) period of the cached data retrieved from the origin Domain Name System (DNS) server. Unit: seconds. Valid values: 30 to 86400.
+        /// <para>The minimum time-to-live (TTL) period of the cached data retrieved from the origin Domain Name System (DNS) server. Unit: seconds. Valid values: 30 to 86400.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("CacheTtlMin")]
         [Validation(Required=false)]
         public int? CacheTtlMin { get; set; }
 
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dns.example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The instance ID of the cache-accelerated domain name.
+        /// <para>The instance ID of the cache-accelerated domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dns-cn-j6666</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The remarks.
+        /// <para>The remarks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// The origin DNS servers. A maximum of 10 origin DNS servers are supported.
-        /// 
-        /// This parameter is required.
+        /// <para>The origin DNS servers. A maximum of 10 origin DNS servers are supported.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SourceDnsServer")]
         [Validation(Required=false)]
         public List<AddDnsCacheDomainRequestSourceDnsServer> SourceDnsServer { get; set; }
         public class AddDnsCacheDomainRequestSourceDnsServer : TeaModel {
             /// <summary>
-            /// The domain name or IP address of the origin DNS server.
+            /// <para>The domain name or IP address of the origin DNS server.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>192.0.0.0</para>
             /// </summary>
             [NameInMap("Host")]
             [Validation(Required=false)]
             public string Host { get; set; }
 
             /// <summary>
-            /// The port of the origin DNS server.
+            /// <para>The port of the origin DNS server.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>53</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
@@ -89,18 +106,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// Specifies whether the origin DNS server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.
+        /// <para>Specifies whether the origin DNS server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SUPPORT</para>
         /// </summary>
         [NameInMap("SourceEdns")]
         [Validation(Required=false)]
         public string SourceEdns { get; set; }
 
         /// <summary>
-        /// The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.
+        /// <para>The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>UDP</para>
         /// </summary>
         [NameInMap("SourceProtocol")]
         [Validation(Required=false)]

@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteDnsGtmAccessStrategyRequest : TeaModel {
         /// <summary>
-        /// The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+        /// <para>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the access policy.
+        /// <para>The ID of the access policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testStrategyId1</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

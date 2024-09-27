@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ChangeDomainGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the destination domain name group.
+        /// <para>The ID of the target domain name group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2223</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The name of the destination domain name group.
+        /// <para>The name of the destination domain name group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MyGroup</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

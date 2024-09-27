@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDnsGtmMonitorStatusRequest : TeaModel {
         /// <summary>
-        /// The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.
+        /// <para>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the health check task.
+        /// <para>The ID of the health check task.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MonitorConfigId1</para>
         /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
         public string MonitorConfigId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the health check feature. Valid values:
+        /// <para>Specifies whether to enable the health check feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>OPEN: enables the health check feature.</description></item>
+        /// <item><description>CLOSE: disables the health check feature.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   OPEN: enables the health check feature.
-        /// *   CLOSE: disables the health check feature.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>open</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

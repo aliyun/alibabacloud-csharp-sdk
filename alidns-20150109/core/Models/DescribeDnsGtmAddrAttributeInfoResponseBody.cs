@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAddrAttributeInfoResponseBody : TeaModel {
         /// <summary>
-        /// The addresses that were queried.
+        /// <para>The address in the address pool.</para>
         /// </summary>
         [NameInMap("Addr")]
         [Validation(Required=false)]
@@ -21,49 +21,67 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr> Addr { get; set; }
             public class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr : TeaModel {
                 /// <summary>
-                /// The address that was queried.
+                /// <para>The address in the address pool.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.1.1.1</para>
                 /// </summary>
                 [NameInMap("Addr")]
                 [Validation(Required=false)]
                 public string Addr { get; set; }
 
                 /// <summary>
-                /// The source region of the address.
+                /// <para>The information about the source region of the address.</para>
                 /// </summary>
                 [NameInMap("AttributeInfo")]
                 [Validation(Required=false)]
                 public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo AttributeInfo { get; set; }
                 public class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo : TeaModel {
                     /// <summary>
-                    /// The parent line code of the source region.
+                    /// <para>The parent line code of the source region.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>telecom</para>
                     /// </summary>
                     [NameInMap("FatherCode")]
                     [Validation(Required=false)]
                     public string FatherCode { get; set; }
 
                     /// <summary>
-                    /// The code of the source region group.
+                    /// <para>The code of the source region group.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>DEFAULT</para>
                     /// </summary>
                     [NameInMap("GroupCode")]
                     [Validation(Required=false)]
                     public string GroupCode { get; set; }
 
                     /// <summary>
-                    /// The name of the source region group.
+                    /// <para>The name of the source region group.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Global</para>
                     /// </summary>
                     [NameInMap("GroupName")]
                     [Validation(Required=false)]
                     public string GroupName { get; set; }
 
                     /// <summary>
-                    /// The line code of the source region.
+                    /// <para>The line code of the source region.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>default</para>
                     /// </summary>
                     [NameInMap("LineCode")]
                     [Validation(Required=false)]
                     public string LineCode { get; set; }
 
                     /// <summary>
-                    /// The line name of the source region.
+                    /// <para>The line name of the source region.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Global</para>
                     /// </summary>
                     [NameInMap("LineName")]
                     [Validation(Required=false)]
@@ -76,7 +94,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

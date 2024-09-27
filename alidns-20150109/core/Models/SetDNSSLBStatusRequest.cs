@@ -10,54 +10,75 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDNSSLBStatusRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The DNS resolution line. The line can be the default line, China Telecom, and China Mobile.
+        /// <para>The DNS resolution line. The line can be the default line, China Telecom, and China Mobile.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>China Mobile.</para>
         /// </summary>
         [NameInMap("Line")]
         [Validation(Required=false)]
         public string Line { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable or disable weighted round-robin. Valid values:
+        /// <para>Specifies whether to enable or disable weighted round-robin. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default): enables weighted round-robin.</description></item>
+        /// <item><description><b>false</b>: disables weighted round-robin.</description></item>
+        /// </list>
         /// 
-        /// *   **true** (default): enables weighted round-robin.
-        /// *   **false**: disables weighted round-robin.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Open")]
         [Validation(Required=false)]
         public bool? Open { get; set; }
 
         /// <summary>
-        /// The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.
+        /// <para>The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("SubDomain")]
         [Validation(Required=false)]
         public string SubDomain { get; set; }
 
         /// <summary>
-        /// The type of the Domain Name System (DNS) record. Valid values: A and AAAA. Default value: A.
+        /// <para>The type of the Domain Name System (DNS) record. Valid values: A and AAAA. Default value: A.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// <para>The IP address of the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.0.2.0</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

@@ -10,59 +10,71 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecordStatisticsRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The primary domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dns-example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The type of the domain name. The parameter value is not case-sensitive. Valid values:
+        /// <para>The type of the domain name. The parameter value is not case-sensitive. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PUBLIC (default): hosted public domain name</description></item>
+        /// <item><description>CACHE: cache-accelerated domain name</description></item>
+        /// </list>
         /// 
-        /// *   PUBLIC (default): hosted public domain name
-        /// *   CACHE: cache-accelerated domain name
+        /// <b>Example:</b>
+        /// <para>PUBLIC</para>
         /// </summary>
         [NameInMap("DomainType")]
         [Validation(Required=false)]
         public string DomainType { get; set; }
 
         /// <summary>
-        /// The end date of the query. Specify the end date in the **YYYY-MM-DD** format.
+        /// <para>The end date of the query. Specify the end date in the <b>YYYY-MM-DD</b> format.</para>
+        /// <para>The default value is the day when you query the data.</para>
         /// 
-        /// The default value is the day when you query the data.
+        /// <b>Example:</b>
+        /// <para>2019-07-04</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The hostname. If you want to resolve the subdomain name www.dns-exmaple.top, set this parameter to www.
+        /// <para>The hostname. If you want to resolve <a href="http://www.dns-exmaple.top">www.dns-exmaple.top</a>, set Rr to www.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>www</para>
         /// </summary>
         [NameInMap("Rr")]
         [Validation(Required=false)]
         public string Rr { get; set; }
 
         /// <summary>
-        /// The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
+        /// <para>The start date of the query. Specify the start date in the <b>YYYY-MM-DD</b> format.</para>
+        /// <para>You can only query the DNS records within the last 90 days.``</para>
+        /// <para>If the time range is less than or equal to seven days, data is returned on an hourly basis.````</para>
+        /// <para>If the time range is greater than seven days, data is returned on a daily basis.````</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can only query the DNS records within the last 90 days.``
-        /// 
-        /// If the time range is less than or equal to seven days, data is returned on an hourly basis.````
-        /// 
-        /// If the time range is greater than seven days, data is returned on a daily basis.````
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2019-07-04</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCloudGtmSummaryRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN: Chinese</description></item>
+        /// <item><description>en-US: English</description></item>
+        /// </list>
         /// 
-        /// *   zh-CN: Chinese
-        /// *   en-US: English
+        /// <b>Example:</b>
+        /// <para>en-US</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

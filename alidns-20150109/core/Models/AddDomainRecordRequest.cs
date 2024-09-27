@@ -10,81 +10,99 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDomainRecordRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The DNS resolution line. Default value: **default**. For more information, see
+        /// <para>The resolution line. Default value: <b>default</b>. For more information, see</para>
+        /// <para><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">DNS resolution lines</a>.</para>
         /// 
-        /// [DNS lines](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm).
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("Line")]
         [Validation(Required=false)]
         public string Line { get; set; }
 
         /// <summary>
-        /// The priority of the mail exchanger (MX) record. Valid values: `1 to 50`.
+        /// <para>The priority of the mail exchanger (MX) record. Valid values: <c>1 to 50</c>.</para>
+        /// <para>This parameter is required if the type of the DNS record is MX. A smaller value indicates a higher priority.</para>
         /// 
-        /// This parameter must be specified if the type of the DNS record is MX. A smaller value indicates a higher priority.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public long? Priority { get; set; }
 
         /// <summary>
-        /// The hostname.
+        /// <para>The hostname.</para>
+        /// <para>For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>www</para>
         /// </summary>
         [NameInMap("RR")]
         [Validation(Required=false)]
         public string RR { get; set; }
 
         /// <summary>
-        /// The time-to-live (TTL) of the DNS record. Default value: 600. Unit: seconds. For more information, see
+        /// <para>The time to live (TTL) period of the Domain Name System (DNS) record. Default value: 600. Unit: seconds. For more information, see</para>
+        /// <para><a href="https://www.alibabacloud.com/help/zh/doc-detail/29806.htm">TTL definition</a>.</para>
         /// 
-        /// [TTL definition](https://www.alibabacloud.com/help/zh/doc-detail/29806.htm).
+        /// <b>Example:</b>
+        /// <para>600</para>
         /// </summary>
         [NameInMap("TTL")]
         [Validation(Required=false)]
         public long? TTL { get; set; }
 
         /// <summary>
-        /// The type of the DNS record. For more information, see
+        /// <para>The type of the DNS record. For more information, see</para>
+        /// <para><a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// [DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>A</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// <para>The IP address of the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.0.2.0</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// The record value.
+        /// <para>The record value.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>192.0.2.254</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

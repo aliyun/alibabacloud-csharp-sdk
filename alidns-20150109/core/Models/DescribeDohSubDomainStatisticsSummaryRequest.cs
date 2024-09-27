@@ -10,53 +10,72 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDohSubDomainStatisticsSummaryRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the YYYY-MM-DD format.
+        /// <para>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
+        /// <para>The default value is the day when you query the required data.</para>
         /// 
-        /// The default value is the day when you query the required data.
+        /// <b>Example:</b>
+        /// <para>2019-07-04</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// <para>The language type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100. Default value: 20.
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.
+        /// <para>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
+        /// <para>You can query only the DNS records of the last 90 days. <c>The value of StartDate must be greater than or equal to the difference between the current date and 90</c>.</para>
         /// 
-        /// You can query only the DNS records of the last 90 days. `The value of StartDate must be greater than or equal to the difference between the current date and 90`.
+        /// <b>Example:</b>
+        /// <para>2019-07-04</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
         /// <summary>
-        /// The subdomain.
+        /// <para>The subdomain.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("SubDomain")]
         [Validation(Required=false)]

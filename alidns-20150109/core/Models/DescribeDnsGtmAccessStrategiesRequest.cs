@@ -10,42 +10,56 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAccessStrategiesRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>instance1</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+        /// <para>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The type of the access policy. Valid values:
+        /// <para>The type of the access policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>GEO: geographical location-based</description></item>
+        /// <item><description>LATENCY: latency-based</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   GEO: geographical location-based
-        /// *   LATENCY: latency-based
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>geo</para>
         /// </summary>
         [NameInMap("StrategyMode")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class CopyGtmConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

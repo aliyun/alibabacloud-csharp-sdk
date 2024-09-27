@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDNSSLBSubDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The page number. Pages start from page **1**. Default value: **1**.
+        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
+        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The subdomains for which weighted round-robin is enabled.
+        /// <para>The subdomains for which weighted round-robin is enabled.</para>
         /// </summary>
         [NameInMap("SlbSubDomains")]
         [Validation(Required=false)]
@@ -42,7 +51,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain> SlbSubDomain { get; set; }
             public class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain : TeaModel {
                 /// <summary>
-                /// The lines for which weighted round-robin is enabled.
+                /// <para>The lines for which weighted round-robin is enabled.</para>
                 /// </summary>
                 [NameInMap("LineAlgorithms")]
                 [Validation(Required=false)]
@@ -53,17 +62,24 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     public List<DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm> LineAlgorithm { get; set; }
                     public class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm : TeaModel {
                         /// <summary>
-                        /// The DNS resolution line. The line can be China Telecom, China Mobile, and China Unicom.
+                        /// <para>The DNS resolution line. The line can be China Telecom, China Mobile, and China Unicom.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>default</para>
                         /// </summary>
                         [NameInMap("Line")]
                         [Validation(Required=false)]
                         public string Line { get; set; }
 
                         /// <summary>
-                        /// Indicates whether weighted round-robin is enabled for the line. Valid values:
+                        /// <para>Indicates whether weighted round-robin is enabled for the line. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b> (default): Weighted round-robin is enabled.</description></item>
+                        /// <item><description><b>false</b>: Weighted round-robin is disabled.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **true** (default): Weighted round-robin is enabled.
-                        /// *   **false**: Weighted round-robin is disabled.
+                        /// <b>Example:</b>
+                        /// <para>true</para>
                         /// </summary>
                         [NameInMap("Open")]
                         [Validation(Required=false)]
@@ -74,28 +90,40 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 }
 
                 /// <summary>
-                /// Indicates whether weighted round-robin is enabled for the subdomain.
+                /// <para>Indicates whether weighted round-robin is enabled for the subdomain.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Open")]
                 [Validation(Required=false)]
                 public bool? Open { get; set; }
 
                 /// <summary>
-                /// The number of DNS records added for the subdomain.
+                /// <para>The number of DNS records added for the subdomain.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("RecordCount")]
                 [Validation(Required=false)]
                 public long? RecordCount { get; set; }
 
                 /// <summary>
-                /// The subdomain name.
+                /// <para>The subdomain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://www.example.com">www.example.com</a></para>
                 /// </summary>
                 [NameInMap("SubDomain")]
                 [Validation(Required=false)]
                 public string SubDomain { get; set; }
 
                 /// <summary>
-                /// The type of the Domain Name System (DNS) record that supports weighted round-robin. Valid values: A, AAAA, and CNAME.
+                /// <para>The type of the Domain Name System (DNS) record that supports weighted round-robin. Valid values: A, AAAA, and CNAME.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>A</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -106,7 +134,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

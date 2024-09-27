@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteCustomLinesRequest : TeaModel {
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The unique IDs of the custom lines that you want to delete. Separate the unique IDs with commas (,).
+        /// <para>The unique IDs of the custom lines that you want to delete. Separate the unique IDs with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234,1235</para>
         /// </summary>
         [NameInMap("LineIds")]
         [Validation(Required=false)]

@@ -10,55 +10,78 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstanceStatusResponseBody : TeaModel {
         /// <summary>
-        /// The number of unavailable addresses.
+        /// <para>The number of unavailable addresses.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("AddrNotAvailableNum")]
         [Validation(Required=false)]
         public int? AddrNotAvailableNum { get; set; }
 
         /// <summary>
-        /// The number of unavailable address pools.
+        /// <para>The number of unavailable address pools.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("AddrPoolNotAvailableNum")]
         [Validation(Required=false)]
         public int? AddrPoolNotAvailableNum { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status of the instance. Valid values:
+        /// <para>The state of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ALLOW: The operation on the instance is allowed.</description></item>
+        /// <item><description>DENY: The operation on the instance is not allowed.</description></item>
+        /// </list>
         /// 
-        /// *   ALLOW: Operations on the instance are allowed.
-        /// *   DENY: Operations on the instance are not allowed.
+        /// <b>Example:</b>
+        /// <para>ALLOW</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// List of reasons for an instance status. Valid values:
+        /// <para>The reasons why the instance is in the current state. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>INSTANCE_OPERATE_BLACK_LIST: The operation on the instance is not allowed.</description></item>
+        /// <item><description>BETA_INSTANCE: The instance is in public preview.</description></item>
+        /// </list>
         /// 
-        /// *   INSTANCE_OPERATE_BLACK_LIST: The instance is in the blacklist.
-        /// *   BETA_INSTANCE: The instance is in public preview.
+        /// <b>Example:</b>
+        /// <para>[&quot;BETA_INSTANCE&quot;]</para>
         /// </summary>
         [NameInMap("StatusReason")]
         [Validation(Required=false)]
         public string StatusReason { get; set; }
 
         /// <summary>
-        /// The number of access policies that are unavailable in the active address pool.
+        /// <para>The number of unavailable access policies.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("StrategyNotAvailableNum")]
         [Validation(Required=false)]
         public int? StrategyNotAvailableNum { get; set; }
 
         /// <summary>
-        /// The number of access policies that fail over to the secondary address pool.
+        /// <para>The number of access policies switched to the secondary address pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("SwitchToFailoverStrategyNum")]
         [Validation(Required=false)]

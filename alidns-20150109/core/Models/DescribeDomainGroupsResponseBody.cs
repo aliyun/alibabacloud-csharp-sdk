@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The domain name groups.
+        /// <para>The domain name groups.</para>
         /// </summary>
         [NameInMap("DomainGroups")]
         [Validation(Required=false)]
@@ -21,24 +21,34 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup> DomainGroup { get; set; }
             public class DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup : TeaModel {
                 /// <summary>
-                /// The number of domain name groups.
+                /// <para>The number of domain name groups.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("DomainCount")]
                 [Validation(Required=false)]
                 public long? DomainCount { get; set; }
 
                 /// <summary>
-                /// The ID of the domain name group. Valid values:
+                /// <para>The ID of the domain name group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>defaultGroup: the default group</description></item>
+                /// <item><description>If an empty string is returned, it indicates the group that contains all domain names.</description></item>
+                /// </list>
                 /// 
-                /// *   defaultGroup: the default group
-                /// *   If an empty string is returned, it indicates the group that contains all domain names.
+                /// <b>Example:</b>
+                /// <para>2223</para>
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The name of the domain name group.
+                /// <para>The name of the domain name group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MyGroup</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
@@ -49,28 +59,40 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The page number. Pages start from page **1**. Default value: **1**.
+        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
+        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SwitchDnsGtmInstanceStrategyModeRequest : TeaModel {
         /// <summary>
-        /// The ID of the GTM instance.
+        /// <para>The ID of the GTM instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>instance1</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
+        /// <para>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The access policy type. Valid values:
+        /// <para>The access policy type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>GEO: geographical location-based</description></item>
+        /// <item><description>LATENCY: latency-based</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   GEO: geographical location-based
-        /// *   LATENCY: latency-based
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>GEO</para>
         /// </summary>
         [NameInMap("StrategyMode")]
         [Validation(Required=false)]

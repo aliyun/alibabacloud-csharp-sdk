@@ -10,44 +10,58 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateGtmAccessStrategyRequest : TeaModel {
         /// <summary>
-        /// The line codes of access regions.
+        /// <para>The line codes of access regions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;default&quot;, &quot;mobile&quot;]</para>
         /// </summary>
         [NameInMap("AccessLines")]
         [Validation(Required=false)]
         public string AccessLines { get; set; }
 
         /// <summary>
-        /// The ID of the default address pool.
+        /// <para>The ID of the default address pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hrsix</para>
         /// </summary>
         [NameInMap("DefaultAddrPoolId")]
         [Validation(Required=false)]
         public string DefaultAddrPoolId { get; set; }
 
         /// <summary>
-        /// The ID of the failover address pool.
+        /// <para>The ID of the failover address pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hrsyw</para>
         /// </summary>
         [NameInMap("FailoverAddrPoolId")]
         [Validation(Required=false)]
         public string FailoverAddrPoolId { get; set; }
 
         /// <summary>
-        /// The language used by the user.
+        /// <para>The language used by the user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the access policy that you want to query for the GTM instance.
+        /// <para>The ID of the access policy that you want to query for the GTM instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>hrmxc</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
         public string StrategyId { get; set; }
 
         /// <summary>
-        /// The name of the access policy.
+        /// <para>The name of the access policy.</para>
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

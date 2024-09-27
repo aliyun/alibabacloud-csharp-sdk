@@ -10,28 +10,41 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDomainBackupRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test.aliyun.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// <para>Default value: en.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The backup cycle. Valid values:
+        /// <para>The backup cycle. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DAY: backs up data on a daily basis.</description></item>
+        /// <item><description>HOUR: backs up data on an hourly basis.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **DAY**: Backs up data once every day.
-        /// *   **HOUR**: Backs up data once every hour.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>HOUR</para>
         /// </summary>
         [NameInMap("PeriodType")]
         [Validation(Required=false)]

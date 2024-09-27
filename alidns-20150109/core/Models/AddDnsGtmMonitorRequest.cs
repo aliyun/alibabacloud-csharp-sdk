@@ -10,50 +10,61 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDnsGtmMonitorRequest : TeaModel {
         /// <summary>
-        /// The ID of the address pool.
+        /// <para>The ID of the address pool.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pool1</para>
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
         public string AddrPoolId { get; set; }
 
         /// <summary>
-        /// The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
+        /// <para>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
         public int? EvaluationCount { get; set; }
 
         /// <summary>
-        /// The health check interval. Unit: seconds.
+        /// <para>The health check interval. Unit: seconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public int? Interval { get; set; }
 
         /// <summary>
-        /// The monitored nodes.
-        /// 
-        /// This parameter is required.
+        /// <para>The monitored nodes.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IspCityNode")]
         [Validation(Required=false)]
         public List<AddDnsGtmMonitorRequestIspCityNode> IspCityNode { get; set; }
         public class AddDnsGtmMonitorRequestIspCityNode : TeaModel {
             /// <summary>
-            /// The code of the city where the monitored node is deployed.
+            /// <para>The code of the city where the monitored node is deployed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("CityCode")]
             [Validation(Required=false)]
             public string CityCode { get; set; }
 
             /// <summary>
-            /// The code of the Internet service provider (ISP) to which the monitored node belongs.
+            /// <para>The code of the Internet service provider (ISP) to which the monitored node belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("IspCode")]
             [Validation(Required=false)]
@@ -62,85 +73,107 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
+        /// <para>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
+        /// <para>The extended information. The required parameters vary based on the value of ProtocolType.</para>
+        /// <list type="bullet">
+        /// <item><description><para>HTTP or HTTPS</para>
+        /// <list type="bullet">
+        /// <item><description><para>port: the port that you want to check</para>
+        /// </description></item>
+        /// <item><description><para>host: the host settings</para>
+        /// </description></item>
+        /// <item><description><para>path: the URL path</para>
+        /// </description></item>
+        /// <item><description><para>code: the response code. The health check result is deemed abnormal if the returned value is greater than the specified value.</para>
+        /// </description></item>
+        /// <item><description><para>failureRate: the failure rate</para>
+        /// </description></item>
+        /// <item><description><para>sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enables SNI.</description></item>
+        /// <item><description>false: disables SNI.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>IPV4</description></item>
+        /// <item><description>IPV6</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>PING</para>
+        /// <list type="bullet">
+        /// <item><description><para>failureRate: the failure rate</para>
+        /// </description></item>
+        /// <item><description><para>packetNum: the number of ping packets</para>
+        /// </description></item>
+        /// <item><description><para>packetLossRate: the loss rate of ping packets</para>
+        /// </description></item>
+        /// <item><description><para>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>IPV4</description></item>
+        /// <item><description>IPV6</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>TCP</para>
+        /// <list type="bullet">
+        /// <item><description><para>port: the port that you want to check</para>
+        /// </description></item>
+        /// <item><description><para>failureRate: the failure rate</para>
+        /// </description></item>
+        /// <item><description><para>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>IPV4</description></item>
+        /// <item><description>IPV6</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   HTTP or HTTPS:
-        /// 
-        ///     *   port: the port to check.
-        /// 
-        ///     *   host: the host configuration.
-        /// 
-        ///     *   path: the health check URL.
-        /// 
-        ///     *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal.
-        /// 
-        ///     *   failureRate: the failure rate.
-        /// 
-        ///     *   sni: specifies whether to enable Server Name Indication (SNI). This parameter is only required for the HTTPS protocol. Valid values:
-        /// 
-        ///         *   true: enables SNI.
-        ///         *   false: disables SNI.
-        /// 
-        ///     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
-        /// 
-        ///         *   IPV4
-        ///         *   IPV6
-        /// 
-        /// *   PING:
-        /// 
-        ///     *   failureRate: the failure rate.
-        /// 
-        ///     *   packetNum: the number of ping packets.
-        /// 
-        ///     *   packetLossRate: the loss rate of ping packets.
-        /// 
-        ///     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
-        /// 
-        ///         *   IPV4
-        ///         *   IPV6
-        /// 
-        /// *   TCP:
-        /// 
-        ///     *   port: the port to check.
-        /// 
-        ///     *   failureRate: the failure rate.
-        /// 
-        ///     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
-        /// 
-        ///         *   IPV4
-        ///         *   IPV6
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{\&quot;code\&quot;:200,\&quot;path\&quot;:\&quot;\\index.htm\&quot;,\&quot;host\&quot;:\&quot;aliyun.com\&quot;}</para>
         /// </summary>
         [NameInMap("MonitorExtendInfo")]
         [Validation(Required=false)]
         public string MonitorExtendInfo { get; set; }
 
         /// <summary>
-        /// The protocol used for the health check. Valid values:
+        /// <para>The health check protocol. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>HTTP</description></item>
+        /// <item><description>HTTPS</description></item>
+        /// <item><description>PING</description></item>
+        /// <item><description>TCP</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   HTTP
-        /// *   HTTPS
-        /// *   PING
-        /// *   TCP
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>http</para>
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// The health check timeout period. Unit: milliseconds.
+        /// <para>The timeout period. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>30000</para>
         /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]

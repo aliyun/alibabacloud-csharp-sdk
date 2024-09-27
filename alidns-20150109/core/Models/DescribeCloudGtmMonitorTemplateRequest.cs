@@ -9,12 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCloudGtmMonitorTemplateRequest : TeaModel {
+        /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh-CN</b>: Chinese</description></item>
+        /// <item><description><b>en-US</b> (default): English</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en-US</para>
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The ID of the health check template that you want to query. This ID uniquely identifies the health check template.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mtp-89518052425100**80</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

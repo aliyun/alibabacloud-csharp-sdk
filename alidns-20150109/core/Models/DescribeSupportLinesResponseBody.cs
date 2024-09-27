@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeSupportLinesResponseBody : TeaModel {
         /// <summary>
-        /// 云解析线路列表。
+        /// <para>The Alibaba Cloud DNS lines.</para>
         /// </summary>
         [NameInMap("RecordLines")]
         [Validation(Required=false)]
@@ -21,28 +21,40 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeSupportLinesResponseBodyRecordLinesRecordLine> RecordLine { get; set; }
             public class DescribeSupportLinesResponseBodyRecordLinesRecordLine : TeaModel {
                 /// <summary>
-                /// 2021-12-06T02:47:26.000+0000
+                /// <para>The code of the parent line. This parameter is not returned if the line has no parent line.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>unicom</para>
                 /// </summary>
                 [NameInMap("FatherCode")]
                 [Validation(Required=false)]
                 public string FatherCode { get; set; }
 
                 /// <summary>
-                /// 子线路Code。
+                /// <para>The code of the line.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn_unicom_shanxi</para>
                 /// </summary>
                 [NameInMap("LineCode")]
                 [Validation(Required=false)]
                 public string LineCode { get; set; }
 
                 /// <summary>
-                /// 父线路展示名称。
+                /// <para>The display name of the parent line.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China Unicom</para>
                 /// </summary>
                 [NameInMap("LineDisplayName")]
                 [Validation(Required=false)]
                 public string LineDisplayName { get; set; }
 
                 /// <summary>
-                /// 子线路展示名称。
+                /// <para>The display name of the line.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China Unicom_Shanxi</para>
                 /// </summary>
                 [NameInMap("LineName")]
                 [Validation(Required=false)]
@@ -53,7 +65,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// 请求ID。
+        /// <b>Example:</b>
+        /// <para>CFDA0830-7D6E-4C13-8632-B57C7EDCF079</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

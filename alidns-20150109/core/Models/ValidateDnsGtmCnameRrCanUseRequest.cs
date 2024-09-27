@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ValidateDnsGtmCnameRrCanUseRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CnameMode")]
         [Validation(Required=false)]
         public string CnameMode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CnameRr")]
         [Validation(Required=false)]
         public string CnameRr { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CnameType")]
         [Validation(Required=false)]
         public string CnameType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CnameZone")]
         [Validation(Required=false)]
         public string CnameZone { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

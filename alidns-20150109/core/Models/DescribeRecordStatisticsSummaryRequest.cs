@@ -10,84 +10,112 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecordStatisticsSummaryRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dns-example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The type of the domain name. The parameter value is not case-sensitive. Valid values:
+        /// <para>The type of the domain name. The parameter value is not case-sensitive. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PUBLIC (default): hosted public domain name</description></item>
+        /// <item><description>CACHE: cache-accelerated domain name</description></item>
+        /// </list>
         /// 
-        /// *   PUBLIC (default): hosted public domain name
-        /// *   CACHE: cache-accelerated domain name
+        /// <b>Example:</b>
+        /// <para>PUBLIC</para>
         /// </summary>
         [NameInMap("DomainType")]
         [Validation(Required=false)]
         public string DomainType { get; set; }
 
         /// <summary>
-        /// The end date of the query. Specify the start date in the **YYYY-MM-DD** format.
+        /// <para>The end date of the query. Specify the start date in the <b>YYYY-MM-DD</b> format.</para>
+        /// <para>The default value is the day when you query the data.</para>
         /// 
-        /// The default value is the day when you query the data.
+        /// <b>Example:</b>
+        /// <para>2019-07-04</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
         /// <summary>
-        /// The keyword for searches in %KeyWord% mode. The value is not case-sensitive.
+        /// <para>The keyword for searches in %KeyWord% mode. The value is not case-sensitive.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page **1**. Default value: **1**.
+        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
+        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The search mode of the keyword. Valid values:
+        /// <para>The search mode of the keyword. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>LIKE</b> (default): fuzzy search</description></item>
+        /// <item><description><b>EXACT</b>: exact search</description></item>
+        /// </list>
         /// 
-        /// *   **LIKE** (default): fuzzy search
-        /// *   **EXACT**: exact search
+        /// <b>Example:</b>
+        /// <para>EXACT</para>
         /// </summary>
         [NameInMap("SearchMode")]
         [Validation(Required=false)]
         public string SearchMode { get; set; }
 
         /// <summary>
-        /// The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
+        /// <para>The start date of the query. Specify the start date in the <b>YYYY-MM-DD</b> format.</para>
+        /// <para>You can only query the DNS records within the last 90 days.``</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can only query the DNS records within the last 90 days.``
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2019-07-04</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
         /// <summary>
-        /// The maximum number of DNS requests that you can obtain. You can obtain data about a domain name with DNS request volume less than or equal to the maximum number. For example, if you set this parameter to 100, you can query domain names with less than 100 DNS requests.
+        /// <para>The maximum number of DNS requests that you can obtain. You can obtain data about a domain name with DNS request volume less than or equal to the maximum number. For example, if you set this parameter to 100, you can query domain names with less than 100 DNS requests.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]

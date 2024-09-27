@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmMonitorConfigRequest : TeaModel {
         /// <summary>
-        /// The language of the values of specific response parameters.
+        /// <para>The language of the values of specific response parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the health check configuration.
+        /// <para>The ID of the health check configuration.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
