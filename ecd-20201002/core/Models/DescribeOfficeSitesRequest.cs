@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DescribeOfficeSitesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>42f6645a-9c3c-4772-be2a-cc5f5732****</para>
         /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public List<string> OfficeSiteId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

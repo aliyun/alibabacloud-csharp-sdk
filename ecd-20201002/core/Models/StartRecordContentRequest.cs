@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class StartRecordContentRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientVersion { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -36,21 +36,21 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string FilePath { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LoginToken")]
         [Validation(Required=false)]
         public string LoginToken { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]

@@ -18,7 +18,9 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
+            this._productId = "ecd";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("ecd", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -38,13 +40,21 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 允许桌面FOTA升级
-         *
-         * @param request ApproveFotaUpdateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApproveFotaUpdateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>允许桌面FOTA升级</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApproveFotaUpdateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApproveFotaUpdateResponse
+        /// </returns>
         public ApproveFotaUpdateResponse ApproveFotaUpdateWithOptions(ApproveFotaUpdateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -93,16 +103,24 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ApproveFotaUpdateResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ApproveFotaUpdateResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 允许桌面FOTA升级
-         *
-         * @param request ApproveFotaUpdateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApproveFotaUpdateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>允许桌面FOTA升级</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApproveFotaUpdateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApproveFotaUpdateResponse
+        /// </returns>
         public async Task<ApproveFotaUpdateResponse> ApproveFotaUpdateWithOptionsAsync(ApproveFotaUpdateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -151,38 +169,55 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ApproveFotaUpdateResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ApproveFotaUpdateResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 允许桌面FOTA升级
-         *
-         * @param request ApproveFotaUpdateRequest
-         * @return ApproveFotaUpdateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>允许桌面FOTA升级</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApproveFotaUpdateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApproveFotaUpdateResponse
+        /// </returns>
         public ApproveFotaUpdateResponse ApproveFotaUpdate(ApproveFotaUpdateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ApproveFotaUpdateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 允许桌面FOTA升级
-         *
-         * @param request ApproveFotaUpdateRequest
-         * @return ApproveFotaUpdateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>允许桌面FOTA升级</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApproveFotaUpdateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApproveFotaUpdateResponse
+        /// </returns>
         public async Task<ApproveFotaUpdateResponse> ApproveFotaUpdateAsync(ApproveFotaUpdateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ApproveFotaUpdateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ChangePasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangePasswordResponse
-         */
+        /// <param name="request">
+        /// ChangePasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangePasswordResponse
+        /// </returns>
         public ChangePasswordResponse ChangePasswordWithOptions(ChangePasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -235,14 +270,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ChangePasswordResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ChangePasswordResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request ChangePasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangePasswordResponse
-         */
+        /// <param name="request">
+        /// ChangePasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangePasswordResponse
+        /// </returns>
         public async Task<ChangePasswordResponse> ChangePasswordWithOptionsAsync(ChangePasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -295,34 +335,45 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ChangePasswordResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ChangePasswordResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request ChangePasswordRequest
-         * @return ChangePasswordResponse
-         */
+        /// <param name="request">
+        /// ChangePasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangePasswordResponse
+        /// </returns>
         public ChangePasswordResponse ChangePassword(ChangePasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangePasswordWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ChangePasswordRequest
-         * @return ChangePasswordResponse
-         */
+        /// <param name="request">
+        /// ChangePasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangePasswordResponse
+        /// </returns>
         public async Task<ChangePasswordResponse> ChangePasswordAsync(ChangePasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChangePasswordWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DeleteFingerPrintTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFingerPrintTemplateResponse
-         */
+        /// <param name="request">
+        /// DeleteFingerPrintTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFingerPrintTemplateResponse
+        /// </returns>
         public DeleteFingerPrintTemplateResponse DeleteFingerPrintTemplateWithOptions(DeleteFingerPrintTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -367,14 +418,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteFingerPrintTemplateResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DeleteFingerPrintTemplateResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DeleteFingerPrintTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFingerPrintTemplateResponse
-         */
+        /// <param name="request">
+        /// DeleteFingerPrintTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFingerPrintTemplateResponse
+        /// </returns>
         public async Task<DeleteFingerPrintTemplateResponse> DeleteFingerPrintTemplateWithOptionsAsync(DeleteFingerPrintTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -419,34 +475,45 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteFingerPrintTemplateResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteFingerPrintTemplateResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DeleteFingerPrintTemplateRequest
-         * @return DeleteFingerPrintTemplateResponse
-         */
+        /// <param name="request">
+        /// DeleteFingerPrintTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFingerPrintTemplateResponse
+        /// </returns>
         public DeleteFingerPrintTemplateResponse DeleteFingerPrintTemplate(DeleteFingerPrintTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFingerPrintTemplateWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DeleteFingerPrintTemplateRequest
-         * @return DeleteFingerPrintTemplateResponse
-         */
+        /// <param name="request">
+        /// DeleteFingerPrintTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFingerPrintTemplateResponse
+        /// </returns>
         public async Task<DeleteFingerPrintTemplateResponse> DeleteFingerPrintTemplateAsync(DeleteFingerPrintTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFingerPrintTemplateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDirectoriesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDirectoriesResponse
-         */
+        /// <param name="request">
+        /// DescribeDirectoriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDirectoriesResponse
+        /// </returns>
         public DescribeDirectoriesResponse DescribeDirectoriesWithOptions(DescribeDirectoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -479,14 +546,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDirectoriesResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeDirectoriesResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DescribeDirectoriesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDirectoriesResponse
-         */
+        /// <param name="request">
+        /// DescribeDirectoriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDirectoriesResponse
+        /// </returns>
         public async Task<DescribeDirectoriesResponse> DescribeDirectoriesWithOptionsAsync(DescribeDirectoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -519,34 +591,45 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDirectoriesResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeDirectoriesResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DescribeDirectoriesRequest
-         * @return DescribeDirectoriesResponse
-         */
+        /// <param name="request">
+        /// DescribeDirectoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDirectoriesResponse
+        /// </returns>
         public DescribeDirectoriesResponse DescribeDirectories(DescribeDirectoriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDirectoriesWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDirectoriesRequest
-         * @return DescribeDirectoriesResponse
-         */
+        /// <param name="request">
+        /// DescribeDirectoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDirectoriesResponse
+        /// </returns>
         public async Task<DescribeDirectoriesResponse> DescribeDirectoriesAsync(DescribeDirectoriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDirectoriesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeFingerPrintTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFingerPrintTemplatesResponse
-         */
+        /// <param name="request">
+        /// DescribeFingerPrintTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFingerPrintTemplatesResponse
+        /// </returns>
         public DescribeFingerPrintTemplatesResponse DescribeFingerPrintTemplatesWithOptions(DescribeFingerPrintTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -583,14 +666,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeFingerPrintTemplatesResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeFingerPrintTemplatesResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DescribeFingerPrintTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFingerPrintTemplatesResponse
-         */
+        /// <param name="request">
+        /// DescribeFingerPrintTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFingerPrintTemplatesResponse
+        /// </returns>
         public async Task<DescribeFingerPrintTemplatesResponse> DescribeFingerPrintTemplatesWithOptionsAsync(DescribeFingerPrintTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -627,34 +715,45 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeFingerPrintTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeFingerPrintTemplatesResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DescribeFingerPrintTemplatesRequest
-         * @return DescribeFingerPrintTemplatesResponse
-         */
+        /// <param name="request">
+        /// DescribeFingerPrintTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFingerPrintTemplatesResponse
+        /// </returns>
         public DescribeFingerPrintTemplatesResponse DescribeFingerPrintTemplates(DescribeFingerPrintTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFingerPrintTemplatesWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeFingerPrintTemplatesRequest
-         * @return DescribeFingerPrintTemplatesResponse
-         */
+        /// <param name="request">
+        /// DescribeFingerPrintTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFingerPrintTemplatesResponse
+        /// </returns>
         public async Task<DescribeFingerPrintTemplatesResponse> DescribeFingerPrintTemplatesAsync(DescribeFingerPrintTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFingerPrintTemplatesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeGlobalDesktopsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeGlobalDesktopsResponse
-         */
+        /// <param name="request">
+        /// DescribeGlobalDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalDesktopsResponse
+        /// </returns>
         public DescribeGlobalDesktopsResponse DescribeGlobalDesktopsWithOptions(DescribeGlobalDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -751,14 +850,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeGlobalDesktopsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeGlobalDesktopsResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DescribeGlobalDesktopsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeGlobalDesktopsResponse
-         */
+        /// <param name="request">
+        /// DescribeGlobalDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalDesktopsResponse
+        /// </returns>
         public async Task<DescribeGlobalDesktopsResponse> DescribeGlobalDesktopsWithOptionsAsync(DescribeGlobalDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -855,34 +959,45 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeGlobalDesktopsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeGlobalDesktopsResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DescribeGlobalDesktopsRequest
-         * @return DescribeGlobalDesktopsResponse
-         */
+        /// <param name="request">
+        /// DescribeGlobalDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalDesktopsResponse
+        /// </returns>
         public DescribeGlobalDesktopsResponse DescribeGlobalDesktops(DescribeGlobalDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGlobalDesktopsWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeGlobalDesktopsRequest
-         * @return DescribeGlobalDesktopsResponse
-         */
+        /// <param name="request">
+        /// DescribeGlobalDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalDesktopsResponse
+        /// </returns>
         public async Task<DescribeGlobalDesktopsResponse> DescribeGlobalDesktopsAsync(DescribeGlobalDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGlobalDesktopsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeOfficeSitesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeOfficeSitesResponse
-         */
+        /// <param name="request">
+        /// DescribeOfficeSitesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOfficeSitesResponse
+        /// </returns>
         public DescribeOfficeSitesResponse DescribeOfficeSitesWithOptions(DescribeOfficeSitesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -915,14 +1030,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeOfficeSitesResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeOfficeSitesResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DescribeOfficeSitesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeOfficeSitesResponse
-         */
+        /// <param name="request">
+        /// DescribeOfficeSitesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOfficeSitesResponse
+        /// </returns>
         public async Task<DescribeOfficeSitesResponse> DescribeOfficeSitesWithOptionsAsync(DescribeOfficeSitesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -955,34 +1075,45 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeOfficeSitesResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeOfficeSitesResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DescribeOfficeSitesRequest
-         * @return DescribeOfficeSitesResponse
-         */
+        /// <param name="request">
+        /// DescribeOfficeSitesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOfficeSitesResponse
+        /// </returns>
         public DescribeOfficeSitesResponse DescribeOfficeSites(DescribeOfficeSitesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeOfficeSitesWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeOfficeSitesRequest
-         * @return DescribeOfficeSitesResponse
-         */
+        /// <param name="request">
+        /// DescribeOfficeSitesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOfficeSitesResponse
+        /// </returns>
         public async Task<DescribeOfficeSitesResponse> DescribeOfficeSitesAsync(DescribeOfficeSitesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeOfficeSitesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRegionsResponse
-         */
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1011,14 +1142,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeRegionsResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DescribeRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRegionsResponse
-         */
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1047,36 +1183,50 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeRegionsResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request DescribeRegionsRequest
-         * @return DescribeRegionsResponse
-         */
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeRegionsRequest
-         * @return DescribeRegionsResponse
-         */
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 列举快照
-         *
-         * @param request DescribeSnapshotsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSnapshotsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSnapshotsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnapshotsResponse
+        /// </returns>
         public DescribeSnapshotsResponse DescribeSnapshotsWithOptions(DescribeSnapshotsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1129,16 +1279,24 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSnapshotsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeSnapshotsResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 列举快照
-         *
-         * @param request DescribeSnapshotsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSnapshotsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSnapshotsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnapshotsResponse
+        /// </returns>
         public async Task<DescribeSnapshotsResponse> DescribeSnapshotsWithOptionsAsync(DescribeSnapshotsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1191,38 +1349,55 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSnapshotsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeSnapshotsResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 列举快照
-         *
-         * @param request DescribeSnapshotsRequest
-         * @return DescribeSnapshotsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSnapshotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnapshotsResponse
+        /// </returns>
         public DescribeSnapshotsResponse DescribeSnapshots(DescribeSnapshotsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSnapshotsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 列举快照
-         *
-         * @param request DescribeSnapshotsRequest
-         * @return DescribeSnapshotsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSnapshotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnapshotsResponse
+        /// </returns>
         public async Task<DescribeSnapshotsResponse> DescribeSnapshotsAsync(DescribeSnapshotsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSnapshotsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request EncryptPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EncryptPasswordResponse
-         */
+        /// <param name="request">
+        /// EncryptPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EncryptPasswordResponse
+        /// </returns>
         public EncryptPasswordResponse EncryptPasswordWithOptions(EncryptPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1271,14 +1446,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EncryptPasswordResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<EncryptPasswordResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request EncryptPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EncryptPasswordResponse
-         */
+        /// <param name="request">
+        /// EncryptPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EncryptPasswordResponse
+        /// </returns>
         public async Task<EncryptPasswordResponse> EncryptPasswordWithOptionsAsync(EncryptPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1327,36 +1507,50 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EncryptPasswordResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<EncryptPasswordResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request EncryptPasswordRequest
-         * @return EncryptPasswordResponse
-         */
+        /// <param name="request">
+        /// EncryptPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EncryptPasswordResponse
+        /// </returns>
         public EncryptPasswordResponse EncryptPassword(EncryptPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EncryptPasswordWithOptions(request, runtime);
         }
 
-        /**
-         * @param request EncryptPasswordRequest
-         * @return EncryptPasswordResponse
-         */
+        /// <param name="request">
+        /// EncryptPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EncryptPasswordResponse
+        /// </returns>
         public async Task<EncryptPasswordResponse> EncryptPasswordAsync(EncryptPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EncryptPasswordWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取无影云盘的免密token
-         *
-         * @param request GetCloudDriveServiceMountTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetCloudDriveServiceMountTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取无影云盘的免密token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudDriveServiceMountTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudDriveServiceMountTokenResponse
+        /// </returns>
         public GetCloudDriveServiceMountTokenResponse GetCloudDriveServiceMountTokenWithOptions(GetCloudDriveServiceMountTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1397,16 +1591,24 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetCloudDriveServiceMountTokenResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetCloudDriveServiceMountTokenResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 获取无影云盘的免密token
-         *
-         * @param request GetCloudDriveServiceMountTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetCloudDriveServiceMountTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取无影云盘的免密token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudDriveServiceMountTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudDriveServiceMountTokenResponse
+        /// </returns>
         public async Task<GetCloudDriveServiceMountTokenResponse> GetCloudDriveServiceMountTokenWithOptionsAsync(GetCloudDriveServiceMountTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1447,38 +1649,55 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetCloudDriveServiceMountTokenResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetCloudDriveServiceMountTokenResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 获取无影云盘的免密token
-         *
-         * @param request GetCloudDriveServiceMountTokenRequest
-         * @return GetCloudDriveServiceMountTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取无影云盘的免密token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudDriveServiceMountTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudDriveServiceMountTokenResponse
+        /// </returns>
         public GetCloudDriveServiceMountTokenResponse GetCloudDriveServiceMountToken(GetCloudDriveServiceMountTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetCloudDriveServiceMountTokenWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取无影云盘的免密token
-         *
-         * @param request GetCloudDriveServiceMountTokenRequest
-         * @return GetCloudDriveServiceMountTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取无影云盘的免密token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudDriveServiceMountTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudDriveServiceMountTokenResponse
+        /// </returns>
         public async Task<GetCloudDriveServiceMountTokenResponse> GetCloudDriveServiceMountTokenAsync(GetCloudDriveServiceMountTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCloudDriveServiceMountTokenWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request GetConnectionTicketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConnectionTicketResponse
-         */
+        /// <param name="request">
+        /// GetConnectionTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionTicketResponse
+        /// </returns>
         public GetConnectionTicketResponse GetConnectionTicketWithOptions(GetConnectionTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1555,14 +1774,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetConnectionTicketResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetConnectionTicketResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request GetConnectionTicketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConnectionTicketResponse
-         */
+        /// <param name="request">
+        /// GetConnectionTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionTicketResponse
+        /// </returns>
         public async Task<GetConnectionTicketResponse> GetConnectionTicketWithOptionsAsync(GetConnectionTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1639,36 +1863,50 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetConnectionTicketResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetConnectionTicketResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request GetConnectionTicketRequest
-         * @return GetConnectionTicketResponse
-         */
+        /// <param name="request">
+        /// GetConnectionTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionTicketResponse
+        /// </returns>
         public GetConnectionTicketResponse GetConnectionTicket(GetConnectionTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetConnectionTicketWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetConnectionTicketRequest
-         * @return GetConnectionTicketResponse
-         */
+        /// <param name="request">
+        /// GetConnectionTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionTicketResponse
+        /// </returns>
         public async Task<GetConnectionTicketResponse> GetConnectionTicketAsync(GetConnectionTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetConnectionTicketWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Obtains logon credentials.
-         *
-         * @param request GetLoginTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetLoginTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains logon credentials.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLoginTokenResponse
+        /// </returns>
         public GetLoginTokenResponse GetLoginTokenWithOptions(GetLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1761,16 +1999,24 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetLoginTokenResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetLoginTokenResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary Obtains logon credentials.
-         *
-         * @param request GetLoginTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetLoginTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains logon credentials.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLoginTokenResponse
+        /// </returns>
         public async Task<GetLoginTokenResponse> GetLoginTokenWithOptionsAsync(GetLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1863,40 +2109,60 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetLoginTokenResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetLoginTokenResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary Obtains logon credentials.
-         *
-         * @param request GetLoginTokenRequest
-         * @return GetLoginTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains logon credentials.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLoginTokenResponse
+        /// </returns>
         public GetLoginTokenResponse GetLoginToken(GetLoginTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetLoginTokenWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Obtains logon credentials.
-         *
-         * @param request GetLoginTokenRequest
-         * @return GetLoginTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains logon credentials.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLoginTokenResponse
+        /// </returns>
         public async Task<GetLoginTokenResponse> GetLoginTokenAsync(GetLoginTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetLoginTokenWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 是否保持登录判断接口
-         *
-         * @param request IsKeepAliveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return IsKeepAliveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>是否保持登录判断接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IsKeepAliveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IsKeepAliveResponse
+        /// </returns>
         public IsKeepAliveResponse IsKeepAliveWithOptions(IsKeepAliveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1929,16 +2195,24 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<IsKeepAliveResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<IsKeepAliveResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 是否保持登录判断接口
-         *
-         * @param request IsKeepAliveRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return IsKeepAliveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>是否保持登录判断接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IsKeepAliveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IsKeepAliveResponse
+        /// </returns>
         public async Task<IsKeepAliveResponse> IsKeepAliveWithOptionsAsync(IsKeepAliveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1971,40 +2245,60 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<IsKeepAliveResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<IsKeepAliveResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 是否保持登录判断接口
-         *
-         * @param request IsKeepAliveRequest
-         * @return IsKeepAliveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>是否保持登录判断接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IsKeepAliveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IsKeepAliveResponse
+        /// </returns>
         public IsKeepAliveResponse IsKeepAlive(IsKeepAliveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return IsKeepAliveWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 是否保持登录判断接口
-         *
-         * @param request IsKeepAliveRequest
-         * @return IsKeepAliveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>是否保持登录判断接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IsKeepAliveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IsKeepAliveResponse
+        /// </returns>
         public async Task<IsKeepAliveResponse> IsKeepAliveAsync(IsKeepAliveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await IsKeepAliveWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询Agent需要上报的配置信息
-         *
-         * @param request QueryEdsAgentReportConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryEdsAgentReportConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Agent需要上报的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEdsAgentReportConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEdsAgentReportConfigResponse
+        /// </returns>
         public QueryEdsAgentReportConfigResponse QueryEdsAgentReportConfigWithOptions(QueryEdsAgentReportConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2037,16 +2331,24 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryEdsAgentReportConfigResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<QueryEdsAgentReportConfigResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 查询Agent需要上报的配置信息
-         *
-         * @param request QueryEdsAgentReportConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryEdsAgentReportConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Agent需要上报的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEdsAgentReportConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEdsAgentReportConfigResponse
+        /// </returns>
         public async Task<QueryEdsAgentReportConfigResponse> QueryEdsAgentReportConfigWithOptionsAsync(QueryEdsAgentReportConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2079,40 +2381,60 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryEdsAgentReportConfigResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<QueryEdsAgentReportConfigResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 查询Agent需要上报的配置信息
-         *
-         * @param request QueryEdsAgentReportConfigRequest
-         * @return QueryEdsAgentReportConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Agent需要上报的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEdsAgentReportConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEdsAgentReportConfigResponse
+        /// </returns>
         public QueryEdsAgentReportConfigResponse QueryEdsAgentReportConfig(QueryEdsAgentReportConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryEdsAgentReportConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询Agent需要上报的配置信息
-         *
-         * @param request QueryEdsAgentReportConfigRequest
-         * @return QueryEdsAgentReportConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Agent需要上报的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEdsAgentReportConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEdsAgentReportConfigResponse
+        /// </returns>
         public async Task<QueryEdsAgentReportConfigResponse> QueryEdsAgentReportConfigAsync(QueryEdsAgentReportConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryEdsAgentReportConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Restart cloud computers.
-         *
-         * @param request RebootDesktopsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RebootDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restart cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebootDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootDesktopsResponse
+        /// </returns>
         public RebootDesktopsResponse RebootDesktopsWithOptions(RebootDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2173,16 +2495,24 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RebootDesktopsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<RebootDesktopsResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary Restart cloud computers.
-         *
-         * @param request RebootDesktopsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RebootDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restart cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebootDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootDesktopsResponse
+        /// </returns>
         public async Task<RebootDesktopsResponse> RebootDesktopsWithOptionsAsync(RebootDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2243,38 +2573,55 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RebootDesktopsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<RebootDesktopsResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary Restart cloud computers.
-         *
-         * @param request RebootDesktopsRequest
-         * @return RebootDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restart cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebootDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootDesktopsResponse
+        /// </returns>
         public RebootDesktopsResponse RebootDesktops(RebootDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RebootDesktopsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Restart cloud computers.
-         *
-         * @param request RebootDesktopsRequest
-         * @return RebootDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restart cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebootDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootDesktopsResponse
+        /// </returns>
         public async Task<RebootDesktopsResponse> RebootDesktopsAsync(RebootDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RebootDesktopsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request RefreshLoginTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefreshLoginTokenResponse
-         */
+        /// <param name="request">
+        /// RefreshLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLoginTokenResponse
+        /// </returns>
         public RefreshLoginTokenResponse RefreshLoginTokenWithOptions(RefreshLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2323,14 +2670,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RefreshLoginTokenResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<RefreshLoginTokenResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request RefreshLoginTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefreshLoginTokenResponse
-         */
+        /// <param name="request">
+        /// RefreshLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLoginTokenResponse
+        /// </returns>
         public async Task<RefreshLoginTokenResponse> RefreshLoginTokenWithOptionsAsync(RefreshLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2379,36 +2731,50 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RefreshLoginTokenResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<RefreshLoginTokenResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request RefreshLoginTokenRequest
-         * @return RefreshLoginTokenResponse
-         */
+        /// <param name="request">
+        /// RefreshLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLoginTokenResponse
+        /// </returns>
         public RefreshLoginTokenResponse RefreshLoginToken(RefreshLoginTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RefreshLoginTokenWithOptions(request, runtime);
         }
 
-        /**
-         * @param request RefreshLoginTokenRequest
-         * @return RefreshLoginTokenResponse
-         */
+        /// <param name="request">
+        /// RefreshLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLoginTokenResponse
+        /// </returns>
         public async Task<RefreshLoginTokenResponse> RefreshLoginTokenAsync(RefreshLoginTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RefreshLoginTokenWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 上报edsAgent的信息
-         *
-         * @param request ReportEdsAgentInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReportEdsAgentInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上报edsAgent的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReportEdsAgentInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportEdsAgentInfoResponse
+        /// </returns>
         public ReportEdsAgentInfoResponse ReportEdsAgentInfoWithOptions(ReportEdsAgentInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2445,16 +2811,24 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ReportEdsAgentInfoResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ReportEdsAgentInfoResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 上报edsAgent的信息
-         *
-         * @param request ReportEdsAgentInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReportEdsAgentInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上报edsAgent的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReportEdsAgentInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportEdsAgentInfoResponse
+        /// </returns>
         public async Task<ReportEdsAgentInfoResponse> ReportEdsAgentInfoWithOptionsAsync(ReportEdsAgentInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2491,38 +2865,55 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ReportEdsAgentInfoResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ReportEdsAgentInfoResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 上报edsAgent的信息
-         *
-         * @param request ReportEdsAgentInfoRequest
-         * @return ReportEdsAgentInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上报edsAgent的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReportEdsAgentInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportEdsAgentInfoResponse
+        /// </returns>
         public ReportEdsAgentInfoResponse ReportEdsAgentInfo(ReportEdsAgentInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReportEdsAgentInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 上报edsAgent的信息
-         *
-         * @param request ReportEdsAgentInfoRequest
-         * @return ReportEdsAgentInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上报edsAgent的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReportEdsAgentInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportEdsAgentInfoResponse
+        /// </returns>
         public async Task<ReportEdsAgentInfoResponse> ReportEdsAgentInfoAsync(ReportEdsAgentInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReportEdsAgentInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ReportSessionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReportSessionStatusResponse
-         */
+        /// <param name="request">
+        /// ReportSessionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportSessionStatusResponse
+        /// </returns>
         public ReportSessionStatusResponse ReportSessionStatusWithOptions(ReportSessionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2567,14 +2958,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ReportSessionStatusResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ReportSessionStatusResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request ReportSessionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReportSessionStatusResponse
-         */
+        /// <param name="request">
+        /// ReportSessionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportSessionStatusResponse
+        /// </returns>
         public async Task<ReportSessionStatusResponse> ReportSessionStatusWithOptionsAsync(ReportSessionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2619,34 +3015,45 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ReportSessionStatusResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ReportSessionStatusResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request ReportSessionStatusRequest
-         * @return ReportSessionStatusResponse
-         */
+        /// <param name="request">
+        /// ReportSessionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportSessionStatusResponse
+        /// </returns>
         public ReportSessionStatusResponse ReportSessionStatus(ReportSessionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReportSessionStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ReportSessionStatusRequest
-         * @return ReportSessionStatusResponse
-         */
+        /// <param name="request">
+        /// ReportSessionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportSessionStatusResponse
+        /// </returns>
         public async Task<ReportSessionStatusResponse> ReportSessionStatusAsync(ReportSessionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReportSessionStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ResetPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetPasswordResponse
-         */
+        /// <param name="request">
+        /// ResetPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetPasswordResponse
+        /// </returns>
         public ResetPasswordResponse ResetPasswordWithOptions(ResetPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2695,14 +3102,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetPasswordResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ResetPasswordResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request ResetPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetPasswordResponse
-         */
+        /// <param name="request">
+        /// ResetPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetPasswordResponse
+        /// </returns>
         public async Task<ResetPasswordResponse> ResetPasswordWithOptionsAsync(ResetPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2751,36 +3163,50 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetPasswordResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ResetPasswordResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request ResetPasswordRequest
-         * @return ResetPasswordResponse
-         */
+        /// <param name="request">
+        /// ResetPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetPasswordResponse
+        /// </returns>
         public ResetPasswordResponse ResetPassword(ResetPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetPasswordWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ResetPasswordRequest
-         * @return ResetPasswordResponse
-         */
+        /// <param name="request">
+        /// ResetPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetPasswordResponse
+        /// </returns>
         public async Task<ResetPasswordResponse> ResetPasswordAsync(ResetPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetPasswordWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 还原快照
-         *
-         * @param request ResetSnapshotRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>还原快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetSnapshotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSnapshotResponse
+        /// </returns>
         public ResetSnapshotResponse ResetSnapshotWithOptions(ResetSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2821,16 +3247,24 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetSnapshotResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ResetSnapshotResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 还原快照
-         *
-         * @param request ResetSnapshotRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>还原快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetSnapshotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSnapshotResponse
+        /// </returns>
         public async Task<ResetSnapshotResponse> ResetSnapshotWithOptionsAsync(ResetSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2871,38 +3305,55 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetSnapshotResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ResetSnapshotResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 还原快照
-         *
-         * @param request ResetSnapshotRequest
-         * @return ResetSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>还原快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSnapshotResponse
+        /// </returns>
         public ResetSnapshotResponse ResetSnapshot(ResetSnapshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetSnapshotWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 还原快照
-         *
-         * @param request ResetSnapshotRequest
-         * @return ResetSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>还原快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSnapshotResponse
+        /// </returns>
         public async Task<ResetSnapshotResponse> ResetSnapshotAsync(ResetSnapshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetSnapshotWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request SendTokenCodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendTokenCodeResponse
-         */
+        /// <param name="request">
+        /// SendTokenCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendTokenCodeResponse
+        /// </returns>
         public SendTokenCodeResponse SendTokenCodeWithOptions(SendTokenCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2955,14 +3406,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SendTokenCodeResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<SendTokenCodeResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request SendTokenCodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendTokenCodeResponse
-         */
+        /// <param name="request">
+        /// SendTokenCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendTokenCodeResponse
+        /// </returns>
         public async Task<SendTokenCodeResponse> SendTokenCodeWithOptionsAsync(SendTokenCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3015,34 +3471,45 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SendTokenCodeResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<SendTokenCodeResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request SendTokenCodeRequest
-         * @return SendTokenCodeResponse
-         */
+        /// <param name="request">
+        /// SendTokenCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendTokenCodeResponse
+        /// </returns>
         public SendTokenCodeResponse SendTokenCode(SendTokenCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SendTokenCodeWithOptions(request, runtime);
         }
 
-        /**
-         * @param request SendTokenCodeRequest
-         * @return SendTokenCodeResponse
-         */
+        /// <param name="request">
+        /// SendTokenCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendTokenCodeResponse
+        /// </returns>
         public async Task<SendTokenCodeResponse> SendTokenCodeAsync(SendTokenCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendTokenCodeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request SetFingerPrintTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetFingerPrintTemplateResponse
-         */
+        /// <param name="request">
+        /// SetFingerPrintTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFingerPrintTemplateResponse
+        /// </returns>
         public SetFingerPrintTemplateResponse SetFingerPrintTemplateWithOptions(SetFingerPrintTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3103,14 +3570,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SetFingerPrintTemplateResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<SetFingerPrintTemplateResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request SetFingerPrintTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetFingerPrintTemplateResponse
-         */
+        /// <param name="request">
+        /// SetFingerPrintTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFingerPrintTemplateResponse
+        /// </returns>
         public async Task<SetFingerPrintTemplateResponse> SetFingerPrintTemplateWithOptionsAsync(SetFingerPrintTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3171,34 +3643,45 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SetFingerPrintTemplateResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<SetFingerPrintTemplateResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request SetFingerPrintTemplateRequest
-         * @return SetFingerPrintTemplateResponse
-         */
+        /// <param name="request">
+        /// SetFingerPrintTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFingerPrintTemplateResponse
+        /// </returns>
         public SetFingerPrintTemplateResponse SetFingerPrintTemplate(SetFingerPrintTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetFingerPrintTemplateWithOptions(request, runtime);
         }
 
-        /**
-         * @param request SetFingerPrintTemplateRequest
-         * @return SetFingerPrintTemplateResponse
-         */
+        /// <param name="request">
+        /// SetFingerPrintTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFingerPrintTemplateResponse
+        /// </returns>
         public async Task<SetFingerPrintTemplateResponse> SetFingerPrintTemplateAsync(SetFingerPrintTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetFingerPrintTemplateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request SetFingerPrintTemplateDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetFingerPrintTemplateDescriptionResponse
-         */
+        /// <param name="request">
+        /// SetFingerPrintTemplateDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFingerPrintTemplateDescriptionResponse
+        /// </returns>
         public SetFingerPrintTemplateDescriptionResponse SetFingerPrintTemplateDescriptionWithOptions(SetFingerPrintTemplateDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3247,14 +3730,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SetFingerPrintTemplateDescriptionResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<SetFingerPrintTemplateDescriptionResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request SetFingerPrintTemplateDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetFingerPrintTemplateDescriptionResponse
-         */
+        /// <param name="request">
+        /// SetFingerPrintTemplateDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFingerPrintTemplateDescriptionResponse
+        /// </returns>
         public async Task<SetFingerPrintTemplateDescriptionResponse> SetFingerPrintTemplateDescriptionWithOptionsAsync(SetFingerPrintTemplateDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3303,38 +3791,55 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SetFingerPrintTemplateDescriptionResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<SetFingerPrintTemplateDescriptionResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request SetFingerPrintTemplateDescriptionRequest
-         * @return SetFingerPrintTemplateDescriptionResponse
-         */
+        /// <param name="request">
+        /// SetFingerPrintTemplateDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFingerPrintTemplateDescriptionResponse
+        /// </returns>
         public SetFingerPrintTemplateDescriptionResponse SetFingerPrintTemplateDescription(SetFingerPrintTemplateDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetFingerPrintTemplateDescriptionWithOptions(request, runtime);
         }
 
-        /**
-         * @param request SetFingerPrintTemplateDescriptionRequest
-         * @return SetFingerPrintTemplateDescriptionResponse
-         */
+        /// <param name="request">
+        /// SetFingerPrintTemplateDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFingerPrintTemplateDescriptionResponse
+        /// </returns>
         public async Task<SetFingerPrintTemplateDescriptionResponse> SetFingerPrintTemplateDescriptionAsync(SetFingerPrintTemplateDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetFingerPrintTemplateDescriptionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Start cloud computers.
-         *
-         * @description The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
-         *
-         * @param request StartDesktopsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDesktopsResponse
+        /// </returns>
         public StartDesktopsResponse StartDesktopsWithOptions(StartDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3391,18 +3896,29 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartDesktopsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<StartDesktopsResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary Start cloud computers.
-         *
-         * @description The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
-         *
-         * @param request StartDesktopsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDesktopsResponse
+        /// </returns>
         public async Task<StartDesktopsResponse> StartDesktopsWithOptionsAsync(StartDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3459,42 +3975,65 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartDesktopsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<StartDesktopsResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary Start cloud computers.
-         *
-         * @description The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
-         *
-         * @param request StartDesktopsRequest
-         * @return StartDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDesktopsResponse
+        /// </returns>
         public StartDesktopsResponse StartDesktops(StartDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartDesktopsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Start cloud computers.
-         *
-         * @description The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
-         *
-         * @param request StartDesktopsRequest
-         * @return StartDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDesktopsResponse
+        /// </returns>
         public async Task<StartDesktopsResponse> StartDesktopsAsync(StartDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartDesktopsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request StartRecordContentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartRecordContentResponse
-         */
+        /// <param name="request">
+        /// StartRecordContentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRecordContentResponse
+        /// </returns>
         public StartRecordContentResponse StartRecordContentWithOptions(StartRecordContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3547,14 +4086,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartRecordContentResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<StartRecordContentResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request StartRecordContentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartRecordContentResponse
-         */
+        /// <param name="request">
+        /// StartRecordContentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRecordContentResponse
+        /// </returns>
         public async Task<StartRecordContentResponse> StartRecordContentWithOptionsAsync(StartRecordContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3607,38 +4151,55 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartRecordContentResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<StartRecordContentResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request StartRecordContentRequest
-         * @return StartRecordContentResponse
-         */
+        /// <param name="request">
+        /// StartRecordContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRecordContentResponse
+        /// </returns>
         public StartRecordContentResponse StartRecordContent(StartRecordContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartRecordContentWithOptions(request, runtime);
         }
 
-        /**
-         * @param request StartRecordContentRequest
-         * @return StartRecordContentResponse
-         */
+        /// <param name="request">
+        /// StartRecordContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRecordContentResponse
+        /// </returns>
         public async Task<StartRecordContentResponse> StartRecordContentAsync(StartRecordContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartRecordContentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Stops cloud computers.
-         *
-         * @description The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
-         *
-         * @param request StopDesktopsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDesktopsResponse
+        /// </returns>
         public StopDesktopsResponse StopDesktopsWithOptions(StopDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3695,18 +4256,29 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopDesktopsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<StopDesktopsResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary Stops cloud computers.
-         *
-         * @description The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
-         *
-         * @param request StopDesktopsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDesktopsResponse
+        /// </returns>
         public async Task<StopDesktopsResponse> StopDesktopsWithOptionsAsync(StopDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3763,42 +4335,65 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopDesktopsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<StopDesktopsResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary Stops cloud computers.
-         *
-         * @description The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
-         *
-         * @param request StopDesktopsRequest
-         * @return StopDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDesktopsResponse
+        /// </returns>
         public StopDesktopsResponse StopDesktops(StopDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopDesktopsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Stops cloud computers.
-         *
-         * @description The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
-         *
-         * @param request StopDesktopsRequest
-         * @return StopDesktopsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDesktopsResponse
+        /// </returns>
         public async Task<StopDesktopsResponse> StopDesktopsAsync(StopDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDesktopsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request StopRecordContentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopRecordContentResponse
-         */
+        /// <param name="request">
+        /// StopRecordContentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRecordContentResponse
+        /// </returns>
         public StopRecordContentResponse StopRecordContentWithOptions(StopRecordContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3847,14 +4442,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopRecordContentResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<StopRecordContentResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request StopRecordContentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopRecordContentResponse
-         */
+        /// <param name="request">
+        /// StopRecordContentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRecordContentResponse
+        /// </returns>
         public async Task<StopRecordContentResponse> StopRecordContentWithOptionsAsync(StopRecordContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3903,36 +4503,50 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopRecordContentResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<StopRecordContentResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request StopRecordContentRequest
-         * @return StopRecordContentResponse
-         */
+        /// <param name="request">
+        /// StopRecordContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRecordContentResponse
+        /// </returns>
         public StopRecordContentResponse StopRecordContent(StopRecordContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopRecordContentWithOptions(request, runtime);
         }
 
-        /**
-         * @param request StopRecordContentRequest
-         * @return StopRecordContentResponse
-         */
+        /// <param name="request">
+        /// StopRecordContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRecordContentResponse
+        /// </returns>
         public async Task<StopRecordContentResponse> StopRecordContentAsync(StopRecordContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopRecordContentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 解绑用户桌面
-         *
-         * @param request UnbindUserDesktopRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UnbindUserDesktopResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑用户桌面</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindUserDesktopRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindUserDesktopResponse
+        /// </returns>
         public UnbindUserDesktopResponse UnbindUserDesktopWithOptions(UnbindUserDesktopRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3981,16 +4595,24 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UnbindUserDesktopResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<UnbindUserDesktopResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 解绑用户桌面
-         *
-         * @param request UnbindUserDesktopRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UnbindUserDesktopResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑用户桌面</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindUserDesktopRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindUserDesktopResponse
+        /// </returns>
         public async Task<UnbindUserDesktopResponse> UnbindUserDesktopWithOptionsAsync(UnbindUserDesktopRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4039,38 +4661,55 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UnbindUserDesktopResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<UnbindUserDesktopResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @summary 解绑用户桌面
-         *
-         * @param request UnbindUserDesktopRequest
-         * @return UnbindUserDesktopResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑用户桌面</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindUserDesktopRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindUserDesktopResponse
+        /// </returns>
         public UnbindUserDesktopResponse UnbindUserDesktop(UnbindUserDesktopRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnbindUserDesktopWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 解绑用户桌面
-         *
-         * @param request UnbindUserDesktopRequest
-         * @return UnbindUserDesktopResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑用户桌面</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindUserDesktopRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindUserDesktopResponse
+        /// </returns>
         public async Task<UnbindUserDesktopResponse> UnbindUserDesktopAsync(UnbindUserDesktopRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnbindUserDesktopWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request VerifyCredentialRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return VerifyCredentialResponse
-         */
+        /// <param name="request">
+        /// VerifyCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCredentialResponse
+        /// </returns>
         public VerifyCredentialResponse VerifyCredentialWithOptions(VerifyCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4123,14 +4762,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<VerifyCredentialResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<VerifyCredentialResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request VerifyCredentialRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return VerifyCredentialResponse
-         */
+        /// <param name="request">
+        /// VerifyCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCredentialResponse
+        /// </returns>
         public async Task<VerifyCredentialResponse> VerifyCredentialWithOptionsAsync(VerifyCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4183,23 +4827,29 @@ namespace AlibabaCloud.SDK.Ecd20201002
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<VerifyCredentialResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<VerifyCredentialResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
-        /**
-         * @param request VerifyCredentialRequest
-         * @return VerifyCredentialResponse
-         */
+        /// <param name="request">
+        /// VerifyCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCredentialResponse
+        /// </returns>
         public VerifyCredentialResponse VerifyCredential(VerifyCredentialRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return VerifyCredentialWithOptions(request, runtime);
         }
 
-        /**
-         * @param request VerifyCredentialRequest
-         * @return VerifyCredentialResponse
-         */
+        /// <param name="request">
+        /// VerifyCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCredentialResponse
+        /// </returns>
         public async Task<VerifyCredentialResponse> VerifyCredentialAsync(VerifyCredentialRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

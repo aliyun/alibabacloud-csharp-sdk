@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class ApproveFotaUpdateResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class VerifyCredentialResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>D5F0BDFB-A229-5F1D-B790-33709D43****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
