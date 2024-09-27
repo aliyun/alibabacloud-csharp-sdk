@@ -1,3 +1,8 @@
+2024-09-27 Version: 0.3.3
+- Update API ListEvaluationMetricDetails: update response param.
+- Update API ListEvaluationScoreHistory: add param AccountId.
+
+
 2024-08-23 Version: 0.3.2
 - Generated csharp 2021-01-20 for governance.
 

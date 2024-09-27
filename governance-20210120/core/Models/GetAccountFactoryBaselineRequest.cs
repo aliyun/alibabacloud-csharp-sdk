@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class GetAccountFactoryBaselineRequest : TeaModel {
         /// <summary>
-        /// The baseline ID.
+        /// <para>The baseline ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>afb-bp1nf0enuzb89az*****</para>
         /// </summary>
         [NameInMap("BaselineId")]
         [Validation(Required=false)]
         public string BaselineId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

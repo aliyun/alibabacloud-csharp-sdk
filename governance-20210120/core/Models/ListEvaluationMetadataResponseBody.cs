@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             [Validation(Required=false)]
             public List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata> Metadata { get; set; }
             public class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Security</para>
+                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
@@ -29,10 +33,18 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>pxgtda****</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>High</para>
+                /// </summary>
                 [NameInMap("RecommendationLevel")]
                 [Validation(Required=false)]
                 public string RecommendationLevel { get; set; }
@@ -49,6 +61,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                         [Validation(Required=false)]
                         public List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActions> Actions { get; set; }
                         public class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActions : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>UnusedAccessKeyInRamUser</para>
+                            /// </summary>
                             [NameInMap("Classification")]
                             [Validation(Required=false)]
                             public string Classification { get; set; }
@@ -69,6 +85,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                                 [Validation(Required=false)]
                                 public string ButtonName { get; set; }
 
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para><a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></para>
+                                /// </summary>
                                 [NameInMap("ButtonRef")]
                                 [Validation(Required=false)]
                                 public string ButtonRef { get; set; }
@@ -93,6 +113,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
                         }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>Manual</para>
+                        /// </summary>
                         [NameInMap("RemediationType")]
                         [Validation(Required=false)]
                         public string RemediationType { get; set; }
@@ -113,10 +137,18 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                         [Validation(Required=false)]
                         public string DisplayName { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>AkLastUsedTime</para>
+                        /// </summary>
                         [NameInMap("PropertyName")]
                         [Validation(Required=false)]
                         public string PropertyName { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>String</para>
+                        /// </summary>
                         [NameInMap("PropertyType")]
                         [Validation(Required=false)]
                         public string PropertyType { get; set; }
@@ -125,22 +157,38 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Account</para>
+                /// </summary>
                 [NameInMap("Scope")]
                 [Validation(Required=false)]
                 public string Scope { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Released</para>
+                /// </summary>
                 [NameInMap("Stage")]
                 [Validation(Required=false)]
                 public string Stage { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Metric</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>16B208DD-86BD-5E7D-AC93-FFD44B6FBDF1</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

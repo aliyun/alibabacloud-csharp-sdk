@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class GetEnrolledAccountRequest : TeaModel {
         /// <summary>
-        /// The account ID.
+        /// <para>The account ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>19534534552****</para>
         /// </summary>
         [NameInMap("AccountUid")]
         [Validation(Required=false)]
         public long? AccountUid { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

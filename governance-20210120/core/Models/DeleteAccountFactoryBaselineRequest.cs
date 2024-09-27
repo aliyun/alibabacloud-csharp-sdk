@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class DeleteAccountFactoryBaselineRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>afb-bp1durvn3lgqe28v****</para>
+        /// </summary>
         [NameInMap("BaselineId")]
         [Validation(Required=false)]
         public string BaselineId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
