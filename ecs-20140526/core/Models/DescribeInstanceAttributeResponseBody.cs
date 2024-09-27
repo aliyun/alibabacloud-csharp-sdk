@@ -10,54 +10,74 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the cluster to which the instance belongs.
+        /// <para>The ID of the cluster to which the instance belongs.</para>
+        /// <remarks>
+        /// <para>This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</para>
+        /// </remarks>
         /// 
-        /// > This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
+        /// <b>Example:</b>
+        /// <para>cls-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The number of vCPUs.
+        /// <para>The number of vCPUs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public int? Cpu { get; set; }
 
         /// <summary>
-        /// The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).
+        /// <para>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2017-12-10T04:04Z</para>
         /// </summary>
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// The performance mode of the burstable instance. Valid values:
+        /// <para>The performance mode of the burstable instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard: the standard mode. For more information, see the <a href="~~59977#section-svb-w9d-dju~~">Performance modes</a> section of the &quot;Overview of burstable instances&quot; topic.</description></item>
+        /// <item><description>Unlimited: the unlimited mode. For more information, see the <a href="~~59977#section-svb-w9d-dju~~">Performance modes</a> section of the &quot;Overview of burstable instances&quot; topic.</description></item>
+        /// </list>
         /// 
-        /// *   Standard: the standard mode. For more information, see the [Performance modes](~~59977#section-svb-w9d-dju~~) section of the "Overview of burstable instances" topic.
-        /// *   Unlimited: the unlimited mode. For more information, see the [Performance modes](~~59977#section-svb-w9d-dju~~) section of the "Overview of burstable instances" topic.
+        /// <b>Example:</b>
+        /// <para>Standard</para>
         /// </summary>
         [NameInMap("CreditSpecification")]
         [Validation(Required=false)]
         public string CreditSpecification { get; set; }
 
         /// <summary>
-        /// Details about the dedicated host. It is an array that consists of the DedicatedHostClusterId, DedicatedHostId, and DedicatedHostName parameters.
+        /// <para>Details about the dedicated host. It is an array that consists of the DedicatedHostClusterId, DedicatedHostId, and DedicatedHostName parameters.</para>
         /// </summary>
         [NameInMap("DedicatedHostAttribute")]
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyDedicatedHostAttribute DedicatedHostAttribute { get; set; }
         public class DescribeInstanceAttributeResponseBodyDedicatedHostAttribute : TeaModel {
             /// <summary>
-            /// The ID of the dedicated host.
+            /// <para>The ID of the dedicated host.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dh-2ze7qrzz6lvbfhr0****</para>
             /// </summary>
             [NameInMap("DedicatedHostId")]
             [Validation(Required=false)]
             public string DedicatedHostId { get; set; }
 
             /// <summary>
-            /// The name of the dedicated host.
+            /// <para>The name of the dedicated host.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecs-autoui-create-ddh-temp</para>
             /// </summary>
             [NameInMap("DedicatedHostName")]
             [Validation(Required=false)]
@@ -66,47 +86,64 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The description of the instance.
+        /// <para>The description of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testDescription</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The elastic IP address (EIP) associated with the instance.
+        /// <para>The elastic IP address (EIP) associated with the instance.</para>
         /// </summary>
         [NameInMap("EipAddress")]
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyEipAddress EipAddress { get; set; }
         public class DescribeInstanceAttributeResponseBodyEipAddress : TeaModel {
             /// <summary>
-            /// The ID of the EIP.
+            /// <para>The ID of the EIP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eip-wz9uilio26dfscamm****</para>
             /// </summary>
             [NameInMap("AllocationId")]
             [Validation(Required=false)]
             public string AllocationId { get; set; }
 
             /// <summary>
-            /// The maximum public bandwidth of the EIP. Unit: Mbit/s.
+            /// <para>The maximum public bandwidth of the EIP. Unit: Mbit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8</para>
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// The billing method for network usage. Valid values:
+            /// <para>The billing method for network usage. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PayByBandwidth</description></item>
+            /// <item><description>PayByTraffic</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> When the <b>pay-by-traffic</b> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <b>pay-by-bandwidth</b> billing method for network usage.</para>
+            /// </remarks>
             /// 
-            /// *   PayByBandwidth
-            /// *   PayByTraffic
-            /// 
-            /// >  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+            /// <b>Example:</b>
+            /// <para>PayByTraffic</para>
             /// </summary>
             [NameInMap("InternetChargeType")]
             [Validation(Required=false)]
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// The ID of the elastic IP address (EIP).
+            /// <para>The ID of the elastic IP address (EIP).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><c>30.21.**.**</c></para>
             /// </summary>
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
@@ -115,40 +152,52 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:
+        /// <para>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</para>
         /// 
-        /// *   true
-        /// *   false
-        /// 
-        /// For more information, see [MTUs](https://help.aliyun.com/document_detail/200512.html).
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("EnableJumboFrame")]
         [Validation(Required=false)]
         public bool? EnableJumboFrame { get; set; }
 
         /// <summary>
-        /// The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).
+        /// <para>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2017-12-10T04:04Z</para>
         /// </summary>
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// The hostname of the instance.
+        /// <para>The hostname of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testHostName</para>
         /// </summary>
         [NameInMap("HostName")]
         [Validation(Required=false)]
         public string HostName { get; set; }
 
         /// <summary>
-        /// The ID of the image that the instance is running.
+        /// <para>The ID of the image that the instance is running.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>m-bp1h46wfpjsjastc****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The internal IP address of the instance located in the classic network.
+        /// <para>The internal IP address of the instance located in the classic network.</para>
         /// </summary>
         [NameInMap("InnerIpAddress")]
         [Validation(Required=false)]
@@ -161,94 +210,129 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid: subscription.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go</description></item>
+        /// </list>
         /// 
-        /// *   PrePaid: subscription.
-        /// *   PostPaid: pay-as-you-go
+        /// <b>Example:</b>
+        /// <para>PrePaid</para>
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The instance ID
+        /// <para>The instance ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-uf6f5trc95ug8t33****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The instance name.
+        /// <para>The instance name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testInstanceName</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The network type of the instance. Valid values:
+        /// <para>The network type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>classic: classic network</description></item>
+        /// <item><description>vpc: VPC</description></item>
+        /// </list>
         /// 
-        /// *   classic: classic network
-        /// *   vpc: VPC
+        /// <b>Example:</b>
+        /// <para>vpc</para>
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// The instance type.
+        /// <para>The instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs.g5.large</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The billing method for network usage. Valid values:
+        /// <para>The billing method for network usage. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PayByBandwidth</description></item>
+        /// <item><description>PayByTraffic</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> When the <b>pay-by-traffic</b> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <b>pay-by-bandwidth</b> billing method for network usage.</para>
+        /// </remarks>
         /// 
-        /// *   PayByBandwidth
-        /// *   PayByTraffic
-        /// 
-        /// >  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+        /// <b>Example:</b>
+        /// <para>PayByTraffic</para>
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// The maximum inbound public bandwidth. Unit: Mbit/s.
+        /// <para>The maximum inbound public bandwidth. Unit: Mbit/s.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("InternetMaxBandwidthIn")]
         [Validation(Required=false)]
         public int? InternetMaxBandwidthIn { get; set; }
 
         /// <summary>
-        /// The maximum outbound public bandwidth. Unit: Mbit/s.
+        /// <para>The maximum outbound public bandwidth. Unit: Mbit/s.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("InternetMaxBandwidthOut")]
         [Validation(Required=false)]
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// Indicates whether the instance is I/O optimized.
+        /// <para>Indicates whether the instance is I/O optimized.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IoOptimized")]
         [Validation(Required=false)]
         public string IoOptimized { get; set; }
 
         /// <summary>
-        /// The memory size of the instance. Unit: MiB.
+        /// <para>The memory size of the instance. Unit: MiB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16384</para>
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
         /// <summary>
-        /// The reason why the instance was locked. Valid values:
-        /// 
-        /// *   financial: The dedicated host was locked due to overdue payments.
-        /// *   security: The instance was locked due to security reasons.
-        /// *   recycling: The preemptible instance was locked and pending release.
-        /// *   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
-        /// *   refunded: The instance was locked because a refund was made for the instance.
+        /// <para>The reason why the instance was locked. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>financial: The dedicated host was locked due to overdue payments.</description></item>
+        /// <item><description>security: The instance was locked due to security reasons.</description></item>
+        /// <item><description>recycling: The preemptible instance was locked and pending release.</description></item>
+        /// <item><description>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</description></item>
+        /// <item><description>refunded: The instance was locked because a refund was made for the instance.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("OperationLocks")]
         [Validation(Required=false)]
@@ -259,13 +343,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeInstanceAttributeResponseBodyOperationLocksLockReason> LockReason { get; set; }
             public class DescribeInstanceAttributeResponseBodyOperationLocksLockReason : TeaModel {
                 /// <summary>
-                /// The reason why the instance was locked. Valid values:
+                /// <para>The reason why the instance was locked. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>financial: The instance was locked due to overdue payments.</description></item>
+                /// <item><description>security: The instance was locked due to security reasons.</description></item>
+                /// <item><description>recycling: The preemptible instance was locked and pending release.</description></item>
+                /// <item><description>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</description></item>
+                /// <item><description>refunded: The instance was locked because a refund is made for the instance.</description></item>
+                /// </list>
                 /// 
-                /// *   financial: The instance was locked due to overdue payments.
-                /// *   security: The instance was locked due to security reasons.
-                /// *   recycling: The preemptible instance was locked and pending release.
-                /// *   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
-                /// *   refunded: The instance was locked because a refund is made for the instance.
+                /// <b>Example:</b>
+                /// <para>financial</para>
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
@@ -276,7 +364,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The public IP address of the instance.
+        /// <para>The public IP address of the instance.</para>
         /// </summary>
         [NameInMap("PublicIpAddress")]
         [Validation(Required=false)]
@@ -289,21 +377,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the region in which the instance resides.
+        /// <para>The ID of the region in which the instance resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The IDs of the security groups to which the instance belongs.
+        /// <para>The IDs of the security groups to which the instance belongs.</para>
         /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
@@ -316,61 +410,79 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The serial number of the instance.
+        /// <para>The serial number of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>51d1353b-22bf-4567-a176-8b3e12e4****</para>
         /// </summary>
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]
         public string SerialNumber { get; set; }
 
         /// <summary>
-        /// The status of the instance. Valid values:
+        /// <para>The status of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Pending: The instance is being created.</description></item>
+        /// <item><description>Running: The instance is running.</description></item>
+        /// <item><description>Starting: The instance is being started.</description></item>
+        /// <item><description>Stopping: The instance is being stopped.</description></item>
+        /// <item><description>Stopped: The instance is stopped.</description></item>
+        /// </list>
         /// 
-        /// *   Pending: The instance is being created.
-        /// *   Running: The instance is running.
-        /// *   Starting: The instance is being started.
-        /// *   Stopping: The instance is being stopped.
-        /// *   Stopped: The instance is stopped.
+        /// <b>Example:</b>
+        /// <para>Running</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// Indicates whether the system implements billing after the instance is stopped. Valid values:
+        /// <para>Indicates whether the system implements billing after the instance is stopped. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</description></item>
+        /// <item><description>StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.</description></item>
+        /// <item><description>Not-applicable: The instance does not support economical mode.</description></item>
+        /// </list>
         /// 
-        /// *   KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.
-        /// *   StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.
-        /// *   Not-applicable: The instance does not support economical mode.
+        /// <b>Example:</b>
+        /// <para>KeepCharging</para>
         /// </summary>
         [NameInMap("StoppedMode")]
         [Validation(Required=false)]
         public string StoppedMode { get; set; }
 
         /// <summary>
-        /// The virtual LAN (VLAN) ID of the instance.
+        /// <para>The virtual LAN (VLAN) ID of the instance.</para>
+        /// <remarks>
+        /// <para>This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</para>
+        /// </remarks>
         /// 
-        /// > This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("VlanId")]
         [Validation(Required=false)]
         public string VlanId { get; set; }
 
         /// <summary>
-        /// The VPC attributes of the instance.
+        /// <para>The VPC attributes of the instance.</para>
         /// </summary>
         [NameInMap("VpcAttributes")]
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyVpcAttributes VpcAttributes { get; set; }
         public class DescribeInstanceAttributeResponseBodyVpcAttributes : TeaModel {
             /// <summary>
-            /// The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.
+            /// <para>The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><c>172.17.**.**</c></para>
             /// </summary>
             [NameInMap("NatIpAddress")]
             [Validation(Required=false)]
             public string NatIpAddress { get; set; }
 
             /// <summary>
-            /// The private IP address of the instance.
+            /// <para>The private IP address of the instance.</para>
             /// </summary>
             [NameInMap("PrivateIpAddress")]
             [Validation(Required=false)]
@@ -383,14 +495,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// The ID of the vSwitch to which the instance is connected.
+            /// <para>The ID of the vSwitch to which the instance is connected.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-uf6ixacqz8osrwnqb****</para>
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The ID of the VPC.
+            /// <para>The ID of the VPC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-wz9e4e9pmbcnj6ki6****</para>
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -399,7 +517,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the zone in which the instance resides.
+        /// <para>The ID of the zone in which the instance resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-g</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

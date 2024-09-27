@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageSupportInstanceTypesRequest : TeaModel {
         /// <summary>
-        /// The scenario in which you want to use the image. Valid values:
+        /// <para>The scenario in which you want to use the image. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CreateEcs (default): instance creation</description></item>
+        /// <item><description>ChangeOS: replacement of the system disk or operating system</description></item>
+        /// </list>
         /// 
-        /// - CreateEcs (default): instance creation
-        /// - ChangeOS: replacement of the system disk or operating system
+        /// <b>Example:</b>
+        /// <para>CreateEcs</para>
         /// </summary>
         [NameInMap("ActionType")]
         [Validation(Required=false)]
         public string ActionType { get; set; }
 
         /// <summary>
-        /// The number of vCPUs of the instance type.
+        /// <para>The number of vCPUs of the instance type.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeImageSupportInstanceTypesRequestFilter> Filter { get; set; }
         public class DescribeImageSupportInstanceTypesRequestFilter : TeaModel {
             /// <summary>
-            /// Filter N used to filter instance types.
+            /// <para>Filter N used to filter instance types.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>imageId</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The ID of the image.
+            /// <para>The ID of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>m-o6w3gy99qf89rkga****</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -43,7 +53,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The region ID of the image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>m-o6w3gy99qf89rkga****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -54,9 +67,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Details about the instance types that are supported by the image.
+        /// <para>Details about the instance types that are supported by the image.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

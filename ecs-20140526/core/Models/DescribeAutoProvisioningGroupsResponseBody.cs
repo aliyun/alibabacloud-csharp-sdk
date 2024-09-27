@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the auto provisioning groups.
+        /// <para>Details about the auto provisioning groups.</para>
         /// </summary>
         [NameInMap("AutoProvisioningGroups")]
         [Validation(Required=false)]
@@ -21,48 +21,65 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup> AutoProvisioningGroup { get; set; }
             public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup : TeaModel {
                 /// <summary>
-                /// The ID of the auto provisioning group.
+                /// <para>The ID of the auto provisioning group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>apg-sn54avj8htgvtyh8****</para>
                 /// </summary>
                 [NameInMap("AutoProvisioningGroupId")]
                 [Validation(Required=false)]
                 public string AutoProvisioningGroupId { get; set; }
 
                 /// <summary>
-                /// The name of the auto provisioning group.
+                /// <para>The name of the auto provisioning group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>EcsDocTest</para>
                 /// </summary>
                 [NameInMap("AutoProvisioningGroupName")]
                 [Validation(Required=false)]
                 public string AutoProvisioningGroupName { get; set; }
 
                 /// <summary>
-                /// The delivery type of the auto provisioning group. Valid values:
+                /// <para>The delivery type of the auto provisioning group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>request: one-time delivery. When the auto provisioning group is started, it delivers instances only once. If the instances fail to be delivered, the auto provisioning group does not retry the delivery.</description></item>
+                /// <item><description>maintain: continuous delivery. When the auto provisioning group is started, it attempts to deliver instances that meet the target capacity and monitors the real-time capacity. If the target capacity of the auto provisioning group is not reached, the auto provisioning group continues to create instances until the target capacity is reached.</description></item>
+                /// </list>
                 /// 
-                /// *   request: one-time delivery. When the auto provisioning group is started, it delivers instances only once. If the instances fail to be delivered, the auto provisioning group does not retry the delivery.
-                /// *   maintain: continuous delivery. When the auto provisioning group is started, it attempts to deliver instances that meet the target capacity and monitors the real-time capacity. If the target capacity of the auto provisioning group is not reached, the auto provisioning group continues to create instances until the target capacity is reached.
+                /// <b>Example:</b>
+                /// <para>maintain</para>
                 /// </summary>
                 [NameInMap("AutoProvisioningGroupType")]
                 [Validation(Required=false)]
                 public string AutoProvisioningGroupType { get; set; }
 
                 /// <summary>
-                /// The time when the auto provisioning group was created.
+                /// <para>The time when the auto provisioning group was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-04-01T15:10:20Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether to release the scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:
+                /// <para>Indicates whether to release the scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>termination: releases the scaled-in instances.</description></item>
+                /// <item><description>no-termination: only removes the scaled-in instances from the auto provisioning group but does not release the instances.</description></item>
+                /// </list>
                 /// 
-                /// *   termination: releases the scaled-in instances.
-                /// *   no-termination: only removes the scaled-in instances from the auto provisioning group but does not release the instances.
+                /// <b>Example:</b>
+                /// <para>termination</para>
                 /// </summary>
                 [NameInMap("ExcessCapacityTerminationPolicy")]
                 [Validation(Required=false)]
                 public string ExcessCapacityTerminationPolicy { get; set; }
 
                 /// <summary>
-                /// Details about the extended configurations.
+                /// <para>Details about the extended configurations.</para>
                 /// </summary>
                 [NameInMap("LaunchTemplateConfigs")]
                 [Validation(Required=false)]
@@ -73,35 +90,50 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig> LaunchTemplateConfig { get; set; }
                     public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig : TeaModel {
                         /// <summary>
-                        /// The instance type that is specified in the extended configuration.
+                        /// <para>The instance type that is specified in the extended configuration.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>ecs.g5.large</para>
                         /// </summary>
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
 
                         /// <summary>
-                        /// The maximum price of the instance type specified in the extended configuration.
+                        /// <para>The maximum price of the instance type specified in the extended configuration.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>3</para>
                         /// </summary>
                         [NameInMap("MaxPrice")]
                         [Validation(Required=false)]
                         public float? MaxPrice { get; set; }
 
                         /// <summary>
-                        /// The priority of the instance type specified in the extended configuration. A value of 0 indicates the highest priority.
+                        /// <para>The priority of the instance type specified in the extended configuration. A value of 0 indicates the highest priority.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1</para>
                         /// </summary>
                         [NameInMap("Priority")]
                         [Validation(Required=false)]
                         public float? Priority { get; set; }
 
                         /// <summary>
-                        /// The ID of the vSwitch specified in the extended configuration.
+                        /// <para>The ID of the vSwitch specified in the extended configuration.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>vsw-sn5bsitu4lfzgc5o7****</para>
                         /// </summary>
                         [NameInMap("VSwitchId")]
                         [Validation(Required=false)]
                         public string VSwitchId { get; set; }
 
                         /// <summary>
-                        /// The weight of the instance type specified in the extended configuration.
+                        /// <para>The weight of the instance type specified in the extended configuration.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2</para>
                         /// </summary>
                         [NameInMap("WeightedCapacity")]
                         [Validation(Required=false)]
@@ -112,44 +144,58 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the launch template associated with the auto provisioning group.
+                /// <para>The ID of the launch template associated with the auto provisioning group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>lt-bp1fgzds4bdogu03****</para>
                 /// </summary>
                 [NameInMap("LaunchTemplateId")]
                 [Validation(Required=false)]
                 public string LaunchTemplateId { get; set; }
 
                 /// <summary>
-                /// The version of the launch template associated with the auto provisioning group.
+                /// <para>The version of the launch template associated with the auto provisioning group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("LaunchTemplateVersion")]
                 [Validation(Required=false)]
                 public string LaunchTemplateVersion { get; set; }
 
                 /// <summary>
-                /// The maximum price of preemptible instances in the auto provisioning group.
+                /// <para>The maximum price of preemptible instances in the auto provisioning group.</para>
+                /// <remarks>
+                /// <para> When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used.</para>
+                /// </remarks>
+                /// <para>The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.</para>
                 /// 
-                /// >  When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used.
-                /// 
-                /// The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("MaxSpotPrice")]
                 [Validation(Required=false)]
                 public float? MaxSpotPrice { get; set; }
 
                 /// <summary>
-                /// The policies related to pay-as-you-go instances.
+                /// <para>The policies related to pay-as-you-go instances.</para>
                 /// </summary>
                 [NameInMap("PayAsYouGoOptions")]
                 [Validation(Required=false)]
                 public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions PayAsYouGoOptions { get; set; }
                 public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions : TeaModel {
                     /// <summary>
-                    /// The policy for creating pay-as-you-go instances. Valid values:
+                    /// <para>The policy for creating pay-as-you-go instances. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>lowest-price: cost optimization policy. This policy indicates that lowest-cost instance types are used to create instances.</description></item>
+                    /// <item><description>prioritized: priority-based policy. This policy indicates that instances are created based on the priority specified by the LaunchTemplateConfig.N.Priority parameter.</description></item>
+                    /// </list>
+                    /// <remarks>
+                    /// <para> The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.</para>
+                    /// </remarks>
                     /// 
-                    /// *   lowest-price: cost optimization policy. This policy indicates that lowest-cost instance types are used to create instances.
-                    /// *   prioritized: priority-based policy. This policy indicates that instances are created based on the priority specified by the LaunchTemplateConfig.N.Priority parameter.
-                    /// 
-                    /// >  The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.
+                    /// <b>Example:</b>
+                    /// <para>prioritized</para>
                     /// </summary>
                     [NameInMap("AllocationStrategy")]
                     [Validation(Required=false)]
@@ -158,50 +204,68 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The region ID of the auto provisioning group.
+                /// <para>The region ID of the auto provisioning group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the auto provisioning group belongs.
+                /// <para>The ID of the resource group to which the auto provisioning group belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-bp67acfmxazb4p****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The policy related to preemptible instances.
+                /// <para>The policy related to preemptible instances.</para>
                 /// </summary>
                 [NameInMap("SpotOptions")]
                 [Validation(Required=false)]
                 public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions SpotOptions { get; set; }
                 public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions : TeaModel {
                     /// <summary>
-                    /// The policy for creating preemptible instances. Valid values:
+                    /// <para>The policy for creating preemptible instances. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>lowest-price: cost optimization policy. This policy indicates that the lowest-priced instance type is used to create instances.</description></item>
+                    /// <item><description>diversified: balanced distribution policy. This policy indicates that instances are created evenly across multiple zones specified in the extended configuration.</description></item>
+                    /// </list>
                     /// 
-                    /// *   lowest-price: cost optimization policy. This policy indicates that the lowest-priced instance type is used to create instances.
-                    /// *   diversified: balanced distribution policy. This policy indicates that instances are created evenly across multiple zones specified in the extended configuration.
+                    /// <b>Example:</b>
+                    /// <para>diversified</para>
                     /// </summary>
                     [NameInMap("AllocationStrategy")]
                     [Validation(Required=false)]
                     public string AllocationStrategy { get; set; }
 
                     /// <summary>
-                    /// The action to be performed after the excess preemptible instances are stopped. Valid values:
+                    /// <para>The action to be performed after the excess preemptible instances are stopped. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>stop: retains the excess preemptible instances in the stopped state.</description></item>
+                    /// <item><description>terminate: releases the excess preemptible instances.</description></item>
+                    /// </list>
                     /// 
-                    /// *   stop: retains the excess preemptible instances in the stopped state.
-                    /// *   terminate: releases the excess preemptible instances.
+                    /// <b>Example:</b>
+                    /// <para>stop</para>
                     /// </summary>
                     [NameInMap("InstanceInterruptionBehavior")]
                     [Validation(Required=false)]
                     public string InstanceInterruptionBehavior { get; set; }
 
                     /// <summary>
-                    /// The number of instances that the auto provisioning group creates by selecting the instance type of the lowest price.
+                    /// <para>The number of instances that the auto provisioning group creates by selecting the instance type of the lowest price.</para>
+                    /// <remarks>
+                    /// <para> This parameter is set when the auto provisioning group is created, and cannot be modified.</para>
+                    /// </remarks>
                     /// 
-                    /// >  This parameter is set when the auto provisioning group is created, and cannot be modified.
+                    /// <b>Example:</b>
+                    /// <para>2</para>
                     /// </summary>
                     [NameInMap("InstancePoolsToUseCount")]
                     [Validation(Required=false)]
@@ -210,32 +274,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The overall status of instance scheduling in the auto provisioning group. Valid values:
+                /// <para>The overall status of instance scheduling in the auto provisioning group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>fulfilled: Scheduling was complete and the instances were delivered.</description></item>
+                /// <item><description>pending-fulfillment: The instances were being created.</description></item>
+                /// <item><description>pending-termination: The instances were being removed.</description></item>
+                /// <item><description>error: An exception occurred during scheduling and the instances were not delivered.</description></item>
+                /// </list>
                 /// 
-                /// *   fulfilled: Scheduling was complete and the instances were delivered.
-                /// *   pending-fulfillment: The instances were being created.
-                /// *   pending-termination: The instances were being removed.
-                /// *   error: An exception occurred during scheduling and the instances were not delivered.
+                /// <b>Example:</b>
+                /// <para>fulfilled</para>
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public string State { get; set; }
 
                 /// <summary>
-                /// The status of the auto provisioning group. Valid values:
+                /// <para>The status of the auto provisioning group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>submitted: The auto provisioning group was created but did not execute scheduling tasks.</description></item>
+                /// <item><description>active: The auto provisioning group was executing scheduling tasks.</description></item>
+                /// <item><description>deleted: The auto provisioning group was deleted.</description></item>
+                /// <item><description>delete-running: The auto provisioning group was being deleted.</description></item>
+                /// <item><description>modifying: The auto provisioning group was being modified.</description></item>
+                /// </list>
                 /// 
-                /// *   submitted: The auto provisioning group was created but did not execute scheduling tasks.
-                /// *   active: The auto provisioning group was executing scheduling tasks.
-                /// *   deleted: The auto provisioning group was deleted.
-                /// *   delete-running: The auto provisioning group was being deleted.
-                /// *   modifying: The auto provisioning group was being modified.
+                /// <b>Example:</b>
+                /// <para>submitted</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tags that are added to the auto provisioning group.
+                /// <para>The tags that are added to the auto provisioning group.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -246,18 +318,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTagsTag> Tag { get; set; }
                     public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of tag N that is added to the auto provisioning group.
+                        /// <para>The key of tag N that is added to the auto provisioning group.</para>
+                        /// <para>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
                         /// 
-                        /// Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+                        /// <b>Example:</b>
+                        /// <para>TestKey</para>
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The value of tag N that is added to the auto provisioning group.
+                        /// <para>The value of tag N that is added to the auto provisioning group.</para>
+                        /// <para>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
                         /// 
-                        /// Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
+                        /// <b>Example:</b>
+                        /// <para>TestValue</para>
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -268,42 +344,56 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The settings of the target capacity of the auto provisioning group.
+                /// <para>The settings of the target capacity of the auto provisioning group.</para>
                 /// </summary>
                 [NameInMap("TargetCapacitySpecification")]
                 [Validation(Required=false)]
                 public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification TargetCapacitySpecification { get; set; }
                 public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification : TeaModel {
                     /// <summary>
-                    /// The type of supplemental instances. When the sum of the `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` values is less than the `TotalTargetCapacity` value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:
+                    /// <para>The type of supplemental instances. When the sum of the <c>PayAsYouGoTargetCapacity</c> and <c>SpotTargetCapacity</c> values is less than the <c>TotalTargetCapacity</c> value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>PayAsYouGo: pay-as-you-go instances.</description></item>
+                    /// <item><description>Spot: preemptible instances.</description></item>
+                    /// </list>
                     /// 
-                    /// *   PayAsYouGo: pay-as-you-go instances.
-                    /// *   Spot: preemptible instances.
+                    /// <b>Example:</b>
+                    /// <para>Spot</para>
                     /// </summary>
                     [NameInMap("DefaultTargetCapacityType")]
                     [Validation(Required=false)]
                     public string DefaultTargetCapacityType { get; set; }
 
                     /// <summary>
-                    /// The target capacity of pay-as-you-go instances that the auto provisioning group provisions.
+                    /// <para>The target capacity of pay-as-you-go instances that the auto provisioning group provisions.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>30</para>
                     /// </summary>
                     [NameInMap("PayAsYouGoTargetCapacity")]
                     [Validation(Required=false)]
                     public float? PayAsYouGoTargetCapacity { get; set; }
 
                     /// <summary>
-                    /// The target capacity of preemptible instances that the auto provisioning group provisions.
+                    /// <para>The target capacity of preemptible instances that the auto provisioning group provisions.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>20</para>
                     /// </summary>
                     [NameInMap("SpotTargetCapacity")]
                     [Validation(Required=false)]
                     public float? SpotTargetCapacity { get; set; }
 
                     /// <summary>
-                    /// The target capacity of the auto provisioning group. The capacity consists of the following parts:
+                    /// <para>The target capacity of the auto provisioning group. The capacity consists of the following parts:</para>
+                    /// <list type="bullet">
+                    /// <item><description>PayAsYouGoTargetCapacity</description></item>
+                    /// <item><description>SpotTargetCapacity</description></item>
+                    /// <item><description>The supplemental capacity besides instance capacities specified by PayAsYouGoTargetCapacity and SpotTargetCapacity.</description></item>
+                    /// </list>
                     /// 
-                    /// *   PayAsYouGoTargetCapacity
-                    /// *   SpotTargetCapacity
-                    /// *   The supplemental capacity besides instance capacities specified by PayAsYouGoTargetCapacity and SpotTargetCapacity.
+                    /// <b>Example:</b>
+                    /// <para>60</para>
                     /// </summary>
                     [NameInMap("TotalTargetCapacity")]
                     [Validation(Required=false)]
@@ -312,34 +402,48 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// Indicates whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:
+                /// <para>Indicates whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: releases the instances.</description></item>
+                /// <item><description>false: only removes the instances from the auto provisioning group but does not release the instances.</description></item>
+                /// </list>
                 /// 
-                /// *   true: releases the instances.
-                /// *   false: only removes the instances from the auto provisioning group but does not release the instances.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("TerminateInstances")]
                 [Validation(Required=false)]
                 public bool? TerminateInstances { get; set; }
 
                 /// <summary>
-                /// Indicates whether to release instances in the auto provisioning group when the group expires. Valid values:
+                /// <para>Indicates whether to release instances in the auto provisioning group when the group expires. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: releases the instances.</description></item>
+                /// <item><description>false: only removes the instances from the auto provisioning group but does not release the instances.</description></item>
+                /// </list>
                 /// 
-                /// *   true: releases the instances.
-                /// *   false: only removes the instances from the auto provisioning group but does not release the instances.
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("TerminateInstancesWithExpiration")]
                 [Validation(Required=false)]
                 public bool? TerminateInstancesWithExpiration { get; set; }
 
                 /// <summary>
-                /// The time at which the auto provisioning group is started. The provisioning group is effective until the point in time specified by `ValidUntil`.
+                /// <para>The time at which the auto provisioning group is started. The provisioning group is effective until the point in time specified by <c>ValidUntil</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-04-01T15:10:20Z</para>
                 /// </summary>
                 [NameInMap("ValidFrom")]
                 [Validation(Required=false)]
                 public string ValidFrom { get; set; }
 
                 /// <summary>
-                /// The time at which the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `ValidFrom` parameter is the validity period of the auto provisioning group.
+                /// <para>The time at which the auto provisioning group expires. The period of time between this point in time and the point in time specified by the <c>ValidFrom</c> parameter is the validity period of the auto provisioning group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-06-01T15:10:20Z</para>
                 /// </summary>
                 [NameInMap("ValidUntil")]
                 [Validation(Required=false)]
@@ -350,28 +454,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The number of the page returned.
+        /// <para>The number of the page returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>745CEC9F-0DD7-4451-9FE7-8B752F39****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of queried auto provisioning groups.
+        /// <para>The number of queried auto provisioning groups.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

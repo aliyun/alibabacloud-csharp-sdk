@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceStatusRequest : TeaModel {
         /// <summary>
-        /// The cluster ID of the instances.
+        /// <para>The cluster ID of the instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cls-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The IDs of the instances. When you use this parameter to specify multiple instance IDs, separate the IDs with commas(,). Example: `InstanceId.1=i-bp1j4i2jdf3owlhe****, InstanceId.2=i-bp1j4i2jdf3o1234****`.
+        /// <para>The IDs of the instances. When you use this parameter to specify multiple instance IDs, separate the IDs with commas(,). Example: <c>InstanceId.1=i-bp1j4i2jdf3owlhe****, InstanceId.2=i-bp1j4i2jdf3o1234****</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-bp1j4i2jdf3owlhe****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -32,29 +38,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Pages start from page 1.
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: 1 to 50.
+        /// <para>The number of entries per page. Valid values: 1 to 50.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instances. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -69,7 +80,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The zone ID of the instances. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.
+        /// <para>The zone ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-d</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

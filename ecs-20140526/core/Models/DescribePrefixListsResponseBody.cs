@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePrefixListsResponseBody : TeaModel {
         /// <summary>
-        /// The query token returned in this call. If the return value is empty, no more data is returned.
+        /// <para>The query token returned in this call. If the return value is empty, no more data is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAdDWBF2****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// Details about the prefix lists.
+        /// <para>Details about the prefix lists.</para>
         /// </summary>
         [NameInMap("PrefixLists")]
         [Validation(Required=false)]
@@ -28,52 +31,74 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribePrefixListsResponseBodyPrefixListsPrefixList> PrefixList { get; set; }
             public class DescribePrefixListsResponseBodyPrefixListsPrefixList : TeaModel {
                 /// <summary>
-                /// The IP address family of the prefix list. Valid values:
+                /// <para>The IP address family of the prefix list. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>IPv4</description></item>
+                /// <item><description>IPv6</description></item>
+                /// </list>
                 /// 
-                /// *   IPv4
-                /// *   IPv6
+                /// <b>Example:</b>
+                /// <para>IPv4</para>
                 /// </summary>
                 [NameInMap("AddressFamily")]
                 [Validation(Required=false)]
                 public string AddressFamily { get; set; }
 
                 /// <summary>
-                /// The number of associated resources.
+                /// <para>The number of associated resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("AssociationCount")]
                 [Validation(Required=false)]
                 public int? AssociationCount { get; set; }
 
                 /// <summary>
-                /// The time when the prefix list was created.
+                /// <para>The time when the prefix list was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-02-20T07:11Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the prefix list.
+                /// <para>The description of the prefix list.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>This is description.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The maximum number of entries that the prefix list can contain.
+                /// <para>The maximum number of entries that the prefix list can contain.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("MaxEntries")]
                 [Validation(Required=false)]
                 public int? MaxEntries { get; set; }
 
                 /// <summary>
-                /// The ID of the prefix list.
+                /// <para>The ID of the prefix list.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pl-x1j1k5ykzqlixdcy****</para>
                 /// </summary>
                 [NameInMap("PrefixListId")]
                 [Validation(Required=false)]
                 public string PrefixListId { get; set; }
 
                 /// <summary>
-                /// The name of the prefix list.
+                /// <para>The name of the prefix list.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PrefixListNameSample</para>
                 /// </summary>
                 [NameInMap("PrefixListName")]
                 [Validation(Required=false)]
@@ -84,7 +109,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>38793DB8-A4B2-4AEC-BFD3-111234E9188D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,94 +10,124 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRecommendInstanceTypeRequest : TeaModel {
         /// <summary>
-        /// The number of vCPUs of the instance.
+        /// <para>The number of vCPUs of the instance.</para>
+        /// <remarks>
+        /// <para>If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
+        /// </remarks>
         /// 
-        /// > If you specify both `Cores` and `Memory`, the system returns all instance types that match the values of the parameters.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Cores")]
         [Validation(Required=false)]
         public int? Cores { get; set; }
 
         /// <summary>
-        /// The billing method of the ECS instance. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:
+        /// <para>The billing method of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid: subscription</description></item>
+        /// <item><description>PostPaid: pay-as-you-go</description></item>
+        /// </list>
+        /// <para>Default value: PostPaid.</para>
         /// 
-        /// *   PrePaid: subscription
-        /// *   PostPaid: pay-as-you-go
-        /// 
-        /// Default value: PostPaid.
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The level of the instance family. Valid values:
+        /// <para>The level of the instance family. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EntryLevel</description></item>
+        /// <item><description>EnterpriseLevel</description></item>
+        /// <item><description>CreditEntryLevel For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</description></item>
+        /// </list>
         /// 
-        /// *   EntryLevel
-        /// *   EnterpriseLevel
-        /// *   CreditEntryLevel For more information, see [Burstable instance families](https://help.aliyun.com/document_detail/59977.html).
+        /// <b>Example:</b>
+        /// <para>EnterpriseLevel</para>
         /// </summary>
         [NameInMap("InstanceFamilyLevel")]
         [Validation(Required=false)]
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// The instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html) or call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent instance type list.
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</para>
+        /// <remarks>
+        /// <para>If you specify <c>InstanceType</c>, the <c>Cores</c> and <c>Memory</c> parameters are ignored.</para>
+        /// </remarks>
         /// 
-        /// > If you specify `InstanceType`, the `Cores` and `Memory` parameters are ignored.
+        /// <b>Example:</b>
+        /// <para>ecs.hfg6.large</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// Specifies the instance families from which the alternative instance types are selected. You can specify up to 10 instance families.
+        /// <para>Specifies the instance families from which the alternative instance types are selected. You can specify up to 10 instance families.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs.hfg6</para>
         /// </summary>
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
         public List<string> InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// Specifies whether the instance is I/O optimized. The IoOptimized parameter cannot be specified when the instance is not I/O optimized. Valid values:
+        /// <para>Specifies whether the instance is I/O optimized. The IoOptimized parameter cannot be specified when the instance is not I/O optimized. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>optimized: The instance is I/O optimized.</description></item>
+        /// <item><description>none: The instance is not I/O optimized.</description></item>
+        /// </list>
+        /// <para>Default value: optimized.</para>
+        /// <para>If you query alternative instance types for retired instance types, this parameter is set to none by default.</para>
         /// 
-        /// *   optimized: The instance is I/O optimized.
-        /// *   none: The instance is not I/O optimized.
-        /// 
-        /// Default value: optimized.
-        /// 
-        /// If you query alternative instance types for retired instance types, this parameter is set to none by default.
+        /// <b>Example:</b>
+        /// <para>optimized</para>
         /// </summary>
         [NameInMap("IoOptimized")]
         [Validation(Required=false)]
         public string IoOptimized { get; set; }
 
         /// <summary>
-        /// The maximum hourly price for pay-as-you-go instances or preemptible instances.
+        /// <para>The maximum hourly price for pay-as-you-go instances or preemptible instances.</para>
+        /// <remarks>
+        /// <para> This parameter takes effect only when <c>SpotStrategy</c> is set to <c>SpotWithPriceLimit</c>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter takes effect only when `SpotStrategy` is set to `SpotWithPriceLimit`.
+        /// <b>Example:</b>
+        /// <para>10.0</para>
         /// </summary>
         [NameInMap("MaxPrice")]
         [Validation(Required=false)]
         public float? MaxPrice { get; set; }
 
         /// <summary>
-        /// The memory size of the instance. Unit: GiB.
+        /// <para>The memory size of the instance. Unit: GiB.</para>
+        /// <remarks>
+        /// <para>If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
+        /// </remarks>
         /// 
-        /// > If you specify both `Cores` and `Memory`, the system returns all instance types that match the values of the parameters.
+        /// <b>Example:</b>
+        /// <para>8.0</para>
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public float? Memory { get; set; }
 
         /// <summary>
-        /// The network type of the instance. Valid values:
+        /// <para>The network type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>classic</description></item>
+        /// <item><description>vpc</description></item>
+        /// </list>
+        /// <para>Default value: vpc.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   classic
-        /// *   vpc
-        /// 
-        /// Default value: vpc.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc</para>
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -112,22 +142,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The policy that is used to recommend instance types. Valid values:
+        /// <para>The policy that is used to recommend instance types. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>InventoryFirst: recommends instance types in descending order of resource availability.</description></item>
+        /// <item><description>PriceFirst: recommends the most cost-effective instance types. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.</description></item>
+        /// <item><description>NewProductFirst: recommends the latest instance types.</description></item>
+        /// </list>
+        /// <para>Default value: InventoryFirst.</para>
         /// 
-        /// *   InventoryFirst: recommends instance types in descending order of resource availability.
-        /// *   PriceFirst: recommends the most cost-effective instance types. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.
-        /// *   NewProductFirst: recommends the latest instance types.
-        /// 
-        /// Default value: InventoryFirst.
+        /// <b>Example:</b>
+        /// <para>PriceFirst</para>
         /// </summary>
         [NameInMap("PriorityStrategy")]
         [Validation(Required=false)]
         public string PriorityStrategy { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -142,64 +177,78 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies the scenarios in which instance types are recommended. Valid values:
+        /// <para>Specifies the scenarios in which instance types are recommended. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>UPGRADE: instance type upgrade or downgrade</description></item>
+        /// <item><description>CREATE: instance creation</description></item>
+        /// </list>
+        /// <para>Default value: CREATE.</para>
         /// 
-        /// *   UPGRADE: instance type upgrade or downgrade
-        /// *   CREATE: instance creation
-        /// 
-        /// Default value: CREATE.
+        /// <b>Example:</b>
+        /// <para>CREATE</para>
         /// </summary>
         [NameInMap("Scene")]
         [Validation(Required=false)]
         public string Scene { get; set; }
 
         /// <summary>
-        /// The bidding policy of the preemptible instance. Valid values:
+        /// <para>The bidding policy of the preemptible instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NoSpot: The instance is a regular pay-as-you-go instance.</description></item>
+        /// <item><description>SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</description></item>
+        /// <item><description>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you specify <c>SpotStrategy</c>, you must set <c>InstanceChargeType</c> to <c>PostPaid</c>.</para>
+        /// </remarks>
+        /// <para>Default value: NoSpot.</para>
         /// 
-        /// *   NoSpot: The instance is a regular pay-as-you-go instance.
-        /// *   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.
-        /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
-        /// 
-        /// >  If you specify `SpotStrategy`, you must set `InstanceChargeType` to `PostPaid`.
-        /// 
-        /// Default value: NoSpot.
+        /// <b>Example:</b>
+        /// <para>NoSpot</para>
         /// </summary>
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// The category of the system disk. Valid values:
+        /// <para>The category of the system disk. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cloud_efficiency: ultra disk</description></item>
+        /// <item><description>cloud_ssd: SSD</description></item>
+        /// <item><description>cloud_essd: ESSD</description></item>
+        /// <item><description>cloud: basic disk</description></item>
+        /// </list>
+        /// <para>For non-I/O optimized instances, the default value is cloud.</para>
+        /// <para>For I/O optimized instances, the default value is cloud_efficiency.</para>
         /// 
-        /// *   cloud_efficiency: ultra disk
-        /// *   cloud_ssd: SSD
-        /// *   cloud_essd: ESSD
-        /// *   cloud: basic disk
-        /// 
-        /// For non-I/O optimized instances, the default value is cloud.
-        /// 
-        /// For I/O optimized instances, the default value is cloud_efficiency.
+        /// <b>Example:</b>
+        /// <para>cloud_ssd</para>
         /// </summary>
         [NameInMap("SystemDiskCategory")]
         [Validation(Required=false)]
         public string SystemDiskCategory { get; set; }
 
         /// <summary>
-        /// The zone ID. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.
+        /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>We recommend that you set the value of ZoneMatchMode to Include, which is the default value. This way, the system recommends instance types that are available in the zone specified by the ZoneId parameter based on priority. The system also recommends instance types that are available in other zones within the same region.</para>
         /// 
-        /// We recommend that you set the value of ZoneMatchMode to Include, which is the default value. This way, the system recommends instance types that are available in the zone specified by the ZoneId parameter based on priority. The system also recommends instance types that are available in other zones within the same region.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-f</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// Specifies whether to recommend only instance types in the zone specified by ZoneId. Valid values:
+        /// <para>Specifies whether to recommend only instance types in the zone specified by ZoneId. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Strict: recommends only instance types that are available in zones specified by the ZoneId parameter.</description></item>
+        /// <item><description>Include: recommends instance types that are available in zones specified by the ZoneId parameter and other zones within the same region.</description></item>
+        /// </list>
+        /// <para>If <c>ZoneId</c> is specified, the default value of this parameter is Strict. This value indicates that only alternative instance types in the zone specified by ZoneId are recommended.</para>
         /// 
-        /// *   Strict: recommends only instance types that are available in zones specified by the ZoneId parameter.
-        /// *   Include: recommends instance types that are available in zones specified by the ZoneId parameter and other zones within the same region.
-        /// 
-        /// If `ZoneId` is specified, the default value of this parameter is Strict. This value indicates that only alternative instance types in the zone specified by ZoneId are recommended.
+        /// <b>Example:</b>
+        /// <para>Strict</para>
         /// </summary>
         [NameInMap("ZoneMatchMode")]
         [Validation(Required=false)]

@@ -10,30 +10,43 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReleasePublicIpAddressRequest : TeaModel {
         /// <summary>
-        /// > This parameter is unavailable.
+        /// <remarks>
+        /// <para>This parameter is unavailable.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hide</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The public IP address of the instance.
+        /// <para>The public IP address of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><c>121.40.**.**</c></para>
         /// </summary>
         [NameInMap("PublicIpAddress")]
         [Validation(Required=false)]
         public string PublicIpAddress { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

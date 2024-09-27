@@ -1,3 +1,13 @@
+2024-09-27 Version: 4.4.0
+- Support API PurchaseElasticityAssurance.
+- Update API DescribeNetworkInterfaceAttribute: update response param.
+- Update API DescribeNetworkInterfaces: update response param.
+- Update API DescribeSecurityGroups: update response param.
+- Update API ModifyElasticityAssurance: add param ClientToken.
+- Update API ModifyElasticityAssurance: add param InstanceAmount.
+- Update API ModifyNetworkInterfaceAttribute: add param SourceDestCheck.
+
+
 2024-09-07 Version: 4.3.1
 - Generated csharp 2014-05-26 for Ecs.
 

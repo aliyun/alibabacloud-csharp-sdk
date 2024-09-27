@@ -10,75 +10,103 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskAttributeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the performance burst feature for data disk N. Valid values:
+        /// <para>Specifies whether to enable the performance burst feature for data disk N. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: encrypts the disk.</description></item>
+        /// <item><description>false: does not encrypt the disk.</description></item>
+        /// </list>
         /// 
-        /// *   true: encrypts the disk.
-        /// *   false: does not encrypt the disk.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
         public bool? BurstingEnabled { get; set; }
 
         /// <summary>
-        /// Specifies whether to delete the automatic snapshots of the disk when the disk is released. This parameter is empty by default, which indicates that the current value remains unchanged.
+        /// <para>Specifies whether to delete the automatic snapshots of the disk when the disk is released. This parameter is empty by default, which indicates that the current value remains unchanged.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DeleteAutoSnapshot")]
         [Validation(Required=false)]
         public bool? DeleteAutoSnapshot { get; set; }
 
         /// <summary>
-        /// Specifies whether to release the disk along with its associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.
+        /// <para>Specifies whether to release the disk along with its associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.</para>
+        /// <para>An error is returned if you set <c>DeleteWithInstance</c> to <c>false</c> in one of the following cases:</para>
+        /// <list type="bullet">
+        /// <item><description>The disk is a local disk.</description></item>
+        /// <item><description>The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.</description></item>
+        /// </list>
         /// 
-        /// An error is returned if you set `DeleteWithInstance` to `false` in one of the following cases:
-        /// 
-        /// *   The disk is a local disk.
-        /// *   The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DeleteWithInstance")]
         [Validation(Required=false)]
         public bool? DeleteWithInstance { get; set; }
 
         /// <summary>
-        /// The description of the disk. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+        /// <para>The description of the disk. The description must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestDescription</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the disk.
+        /// <para>The ID of the disk.</para>
+        /// <remarks>
+        /// <para>You can specify the <c>DiskId</c> parameter or the <c>DiskIds.N</c> parameter, but you cannot specify both parameters at the same time.</para>
+        /// </remarks>
         /// 
-        /// > You can specify the `DiskId` parameter or the `DiskIds.N` parameter, but you cannot specify both parameters at the same time.
+        /// <b>Example:</b>
+        /// <para>d-bp1famypsnar20bv****</para>
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
         /// <summary>
-        /// The ID of disk N. Valid values of N: 0 to 100.
+        /// <para>The ID of disk N. Valid values of N: 0 to 100.</para>
+        /// <remarks>
+        /// <para>You can specify the <c>DiskId</c> parameter or the <c>DiskIds.N</c> parameter, but you cannot specify both parameters at the same time.</para>
+        /// </remarks>
         /// 
-        /// > You can specify the `DiskId` parameter or the `DiskIds.N` parameter, but you cannot specify both parameters at the same time.
+        /// <b>Example:</b>
+        /// <para>d-bp1famypsnar20bv****</para>
         /// </summary>
         [NameInMap("DiskIds")]
         [Validation(Required=false)]
         public List<string> DiskIds { get; set; }
 
         /// <summary>
-        /// The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).
+        /// <para>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MyDiskName</para>
         /// </summary>
         [NameInMap("DiskName")]
         [Validation(Required=false)]
         public string DiskName { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the automatic snapshot policy feature for the cloud disk. Valid values:
+        /// <para>Specifies whether to enable the automatic snapshot policy feature for the cloud disk. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <para>This parameter is empty by default, which indicates that the current value remains unchanged.</para>
+        /// <remarks>
+        /// <para> By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to associate an automatic snapshot policy with a cloud disk before you can use the policy.</para>
+        /// </remarks>
         /// 
-        /// *   true
-        /// *   false
-        /// 
-        /// This parameter is empty by default, which indicates that the current value remains unchanged.
-        /// 
-        /// >  By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to associate an automatic snapshot policy with a cloud disk before you can use the policy.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableAutoSnapshot")]
         [Validation(Required=false)]
@@ -93,7 +121,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the command. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.
+        /// <para>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

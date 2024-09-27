@@ -14,18 +14,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shenzhen</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource. For example, if you set ResourceType to instance, you must set this parameter to the ID of the related instance.
+        /// <para>The ID of the resource. For example, if you set ResourceType to instance, you must set this parameter to the ID of the related instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>s-946ntx4****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -40,45 +44,53 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// <para>The type of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>instance</description></item>
+        /// <item><description>disk</description></item>
+        /// <item><description>snapshot</description></item>
+        /// <item><description>image</description></item>
+        /// <item><description>securitygroup</description></item>
+        /// <item><description>volume</description></item>
+        /// <item><description>eni</description></item>
+        /// <item><description>ddh</description></item>
+        /// <item><description>keypair</description></item>
+        /// <item><description>launchtemplate</description></item>
+        /// <item><description>reservedinstance</description></item>
+        /// <item><description>snapshotpolicy</description></item>
+        /// </list>
+        /// <para>All values must be in lowercase.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   instance
-        /// *   disk
-        /// *   snapshot
-        /// *   image
-        /// *   securitygroup
-        /// *   volume
-        /// *   eni
-        /// *   ddh
-        /// *   keypair
-        /// *   launchtemplate
-        /// *   reservedinstance
-        /// *   snapshotpolicy
-        /// 
-        /// All values must be in lowercase.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>snapshot</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<RemoveTagsRequestTag> Tag { get; set; }
         public class RemoveTagsRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
+            /// <para>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs: or aliyun.
+            /// <para>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs: or aliyun.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

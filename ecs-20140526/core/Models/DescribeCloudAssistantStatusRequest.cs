@@ -10,36 +10,47 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCloudAssistantStatusRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-bp1iudwa5b1tqa****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries per page. If you specify **InstanceId**, this parameter does not take effect.
+        /// <para>The maximum number of entries per page. If you specify <b>InstanceId</b>, this parameter does not take effect.</para>
+        /// <para>Valid values: 1 to 50.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 50.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAdDWBF2</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The operating system type of the instance. Valid values:
+        /// <para>The operating system type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Windows</description></item>
+        /// <item><description>Linux</description></item>
+        /// <item><description>FreeBSD</description></item>
+        /// </list>
         /// 
-        /// *   Windows
-        /// *   Linux
-        /// *   FreeBSD
+        /// <b>Example:</b>
+        /// <para>Windows</para>
         /// </summary>
         [NameInMap("OSType")]
         [Validation(Required=false)]
@@ -54,29 +65,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Pages start from page 1.
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. If you specify **InstanceId**, this parameter does not take effect. Valid values: 1 to 50.
+        /// <para>The number of entries per page. If you specify <b>InstanceId</b>, this parameter does not take effect. Valid values: 1 to 50.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) to query the most recent region list.
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResizeDiskResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20413515388****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F3CD6886-D8D0-4FEE-B93E-1B732396****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

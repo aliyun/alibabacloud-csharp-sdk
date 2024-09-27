@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteDiagnosticMetricSetsRequest : TeaModel {
         /// <summary>
-        /// The ID of diagnostic metric set.
-        /// 
-        /// This parameter is required.
+        /// <para>The ID of diagnostic metric set.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MetricSetIds")]
         [Validation(Required=false)]
         public List<string> MetricSetIds { get; set; }
 
         /// <summary>
-        /// The IDs of diagnostic metric sets. You can specify up to 10 set IDs.
+        /// <para>The IDs of diagnostic metric sets. You can specify up to 10 set IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

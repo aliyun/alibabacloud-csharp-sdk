@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotPriceHistoryResponseBody : TeaModel {
         /// <summary>
-        /// The instance type of the preemptible instance.
+        /// <para>The instance type of the preemptible instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CNY</para>
         /// </summary>
         [NameInMap("Currency")]
         [Validation(Required=false)]
         public string Currency { get; set; }
 
         /// <summary>
-        /// The network type of the preemptible instance.
+        /// <para>The network type of the preemptible instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("NextOffset")]
         [Validation(Required=false)]
         public int? NextOffset { get; set; }
 
         /// <summary>
-        /// The instance type of the preemptible instance.
+        /// <para>The instance type of the preemptible instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The zone ID of the preemptible instance.
+        /// <para>The zone ID of the preemptible instance.</para>
         /// </summary>
         [NameInMap("SpotPrices")]
         [Validation(Required=false)]
@@ -42,53 +51,72 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType> SpotPriceType { get; set; }
             public class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType : TeaModel {
                 /// <summary>
-                /// The instance type of the preemptible instance.
+                /// <para>The instance type of the preemptible instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs.g5.large</para>
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// Details about the price history of the preemptible instance.
+                /// <para>Details about the price history of the preemptible instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>optimized</para>
                 /// </summary>
                 [NameInMap("IoOptimized")]
                 [Validation(Required=false)]
                 public string IoOptimized { get; set; }
 
                 /// <summary>
-                /// Queries the price history of a preemptible instance within the last 30 days.
+                /// <para>Queries the price history of a preemptible instance within the last 30 days.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc</para>
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.
+                /// <para>The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.354</para>
                 /// </summary>
                 [NameInMap("OriginPrice")]
                 [Validation(Required=false)]
                 public float? OriginPrice { get; set; }
 
                 /// <summary>
-                /// The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.
+                /// <para>The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.036</para>
                 /// </summary>
                 [NameInMap("SpotPrice")]
                 [Validation(Required=false)]
                 public float? SpotPrice { get; set; }
 
                 /// <summary>
-                /// The currency unit of the price.
+                /// <para>The currency unit of the price.</para>
+                /// <para>Alibaba Cloud China site (aliyun.com): CNY.</para>
+                /// <para>Alibaba Cloud International site (alibabacloud.com): USD.</para>
                 /// 
-                /// Alibaba Cloud China site (aliyun.com): CNY.
-                /// 
-                /// Alibaba Cloud International site (alibabacloud.com): USD.
+                /// <b>Example:</b>
+                /// <para>2019-11-19T06:00:00Z</para>
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
                 public string Timestamp { get; set; }
 
                 /// <summary>
-                /// The ID of the request.
+                /// <para>The ID of the request.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-c</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

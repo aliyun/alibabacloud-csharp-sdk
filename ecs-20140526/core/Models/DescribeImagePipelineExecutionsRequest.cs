@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelineExecutionsRequest : TeaModel {
         /// <summary>
-        /// The ID of the image creation task.
+        /// <para>The ID of the image creation task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>exec-5fb8facb8ed7427c****</para>
         /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
         public string ExecutionId { get; set; }
 
         /// <summary>
-        /// The ID of the image template.
+        /// <para>The ID of the image template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ip-2ze5tsl5bp6nf2b3****</para>
         /// </summary>
         [NameInMap("ImagePipelineId")]
         [Validation(Required=false)]
         public string ImagePipelineId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries per page. Valid values: 1 to 500.
+        /// <para>The maximum number of entries per page. Valid values: 1 to 500.</para>
+        /// <para>Default value: 50.</para>
         /// 
-        /// Default value: 50.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+        /// <para>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAdDWBF2****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -48,9 +59,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -65,38 +78,55 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: `BUILDING,DISTRIBUTING`. Valid values:
+        /// <para>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: <c>BUILDING,DISTRIBUTING</c>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>BUILDING</description></item>
+        /// <item><description>DISTRIBUTING</description></item>
+        /// <item><description>RELEASING</description></item>
+        /// <item><description>SUCCESS</description></item>
+        /// <item><description>FAILED</description></item>
+        /// <item><description>CANCELLING</description></item>
+        /// <item><description>CANCELLED</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you want to query the image creation tasks in all states, specify all values.</para>
+        /// </remarks>
         /// 
-        /// *   BUILDING
-        /// *   DISTRIBUTING
-        /// *   RELEASING
-        /// *   SUCCESS
-        /// *   FAILED
-        /// *   CANCELLING
-        /// *   CANCELLED
-        /// 
-        /// > If you want to query the image creation tasks in all states, specify all values.
+        /// <b>Example:</b>
+        /// <para>BUILDING</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// > This parameter is not publicly available.
+        /// <remarks>
+        /// <para>This parameter is not publicly available.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeImagePipelineExecutionsRequestTag> Tag { get; set; }
         public class DescribeImagePipelineExecutionsRequestTag : TeaModel {
             /// <summary>
-            /// > This parameter is not publicly available.
+            /// <remarks>
+            /// <para>This parameter is not publicly available.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// > This parameter is not publicly available.
+            /// <remarks>
+            /// <para>This parameter is not publicly available.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

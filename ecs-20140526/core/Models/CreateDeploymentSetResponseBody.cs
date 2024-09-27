@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDeploymentSetResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the deployment set.
+        /// <para>The ID of the deployment set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ds-bp1frxuzdg87zh4pzq****</para>
         /// </summary>
         [NameInMap("DeploymentSetId")]
         [Validation(Required=false)]
         public string DeploymentSetId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

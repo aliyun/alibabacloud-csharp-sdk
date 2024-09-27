@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RunInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the instances (`InstanceIdSet`).
+        /// <para>The IDs of the instances (<c>InstanceIdSet</c>).</para>
         /// </summary>
         [NameInMap("InstanceIdSets")]
         [Validation(Required=false)]
@@ -23,21 +23,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the order. This parameter is returned only when `InstanceChargeType` is set to PrePaid.
+        /// <para>The ID of the order. This parameter is returned only when <c>InstanceChargeType</c> is set to PrePaid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The transaction price.
+        /// <para>The transaction price.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.165</para>
         /// </summary>
         [NameInMap("TradePrice")]
         [Validation(Required=false)]

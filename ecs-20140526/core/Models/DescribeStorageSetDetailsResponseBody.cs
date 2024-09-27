@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeStorageSetDetailsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the disks or Shared Block Storage devices in the storage set.
+        /// <para>Details about the disks or Shared Block Storage devices in the storage set.</para>
         /// </summary>
         [NameInMap("Disks")]
         [Validation(Required=false)]
@@ -21,56 +21,80 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeStorageSetDetailsResponseBodyDisksDisk> Disk { get; set; }
             public class DescribeStorageSetDetailsResponseBodyDisksDisk : TeaModel {
                 /// <summary>
-                /// The category of the disk or Shared Block Storage device.
+                /// <para>The category of the disk or Shared Block Storage device.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cloud_ssd</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The time when the disk or Shared Block Storage device was created.
+                /// <para>The time when the disk or Shared Block Storage device was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-06-01T00:00:00Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The ID of the disk or Shared Block Storage device.
+                /// <para>The ID of the disk or Shared Block Storage device.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>d-bp67acfmxazb4p****</para>
                 /// </summary>
                 [NameInMap("DiskId")]
                 [Validation(Required=false)]
                 public string DiskId { get; set; }
 
                 /// <summary>
-                /// The name of the disk or Shared Block Storage device.
+                /// <para>The name of the disk or Shared Block Storage device.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testDiskName</para>
                 /// </summary>
                 [NameInMap("DiskName")]
                 [Validation(Required=false)]
                 public string DiskName { get; set; }
 
                 /// <summary>
-                /// The region to which the disk or Shared Block Storage device belongs.
+                /// <para>The region to which the disk or Shared Block Storage device belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the storage set.
+                /// <para>The ID of the storage set.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ss-bp67acfmxazb4p****</para>
                 /// </summary>
                 [NameInMap("StorageSetId")]
                 [Validation(Required=false)]
                 public string StorageSetId { get; set; }
 
                 /// <summary>
-                /// The number of partitions in the storage set.
+                /// <para>The number of partitions in the storage set.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("StorageSetPartitionNumber")]
                 [Validation(Required=false)]
                 public int? StorageSetPartitionNumber { get; set; }
 
                 /// <summary>
-                /// The zone to which the disk or Shared Block Storage device belongs.
+                /// <para>The zone to which the disk or Shared Block Storage device belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-g</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -81,28 +105,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>49765E79-0D5D-4451-B3AE-580A20831846</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of storage sets.
+        /// <para>The total number of storage sets.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

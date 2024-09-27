@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeElasticityAssurancesRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class DescribeElasticityAssurancesRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// The IDs of the elasticity assurances. The value can be a JSON array that consists of up to 100 elasticity assurance IDs. Separate the IDs with commas (,).
+            /// <para>The IDs of the elasticity assurances. The value can be a JSON array that consists of up to 100 elasticity assurance IDs. Separate the IDs with commas (,).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[&quot;eap-bp67acfmxazb4****&quot;, &quot;eap-bp67acfmxazb5****&quot;]</para>
             /// </summary>
             [NameInMap("Ids")]
             [Validation(Required=false)]
@@ -23,34 +26,43 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The billing method of the instance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.
+        /// <para>The billing method of the instance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.</para>
+        /// <para>Default value: PostPaid.</para>
         /// 
-        /// Default value: PostPaid.
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The instance type.
+        /// <para>The instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs.c6.large</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The maximum number of entries per page.
+        /// <para>The maximum number of entries per page.</para>
+        /// <para>Maximum value: 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Maximum value: 100.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// <para>The pagination token that is used in the request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -65,25 +77,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// > This parameter is deprecated.
+        /// <remarks>
+        /// <para>This parameter is deprecated.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }
 
         /// <summary>
-        /// The region ID of the elasticity assurances. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the elasticity assurances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+        /// <para>The ID of the resource group. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</para>
+        /// <remarks>
+        /// <para>Resources in the default resource group are displayed in the response regardless of whether you configure this parameter.</para>
+        /// </remarks>
         /// 
-        /// > Resources in the default resource group are displayed in the response regardless of whether you configure this parameter.
+        /// <b>Example:</b>
+        /// <para>rg-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -98,38 +121,46 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the elasticity assurances. Valid values:
+        /// <para>The status of the elasticity assurances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>All</description></item>
+        /// <item><description>Preparing</description></item>
+        /// <item><description>Prepared</description></item>
+        /// <item><description>Active</description></item>
+        /// <item><description>Released</description></item>
+        /// </list>
+        /// <para>Default value: Active.</para>
         /// 
-        /// *   All
-        /// *   Preparing
-        /// *   Prepared
-        /// *   Active
-        /// *   Released
-        /// 
-        /// Default value: Active.
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeElasticityAssurancesRequestTag> Tag { get; set; }
         public class DescribeElasticityAssurancesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N. Valid values of N: 1 to 20.
+            /// <para>The key of tag N. Valid values of N: 1 to 20.</para>
+            /// <para>If you specify a tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
             /// 
-            /// If you specify a tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N. Valid values of N: 1 to 20.
+            /// <para>The value of tag N. Valid values of N: 1 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -138,7 +169,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The zone ID of the elasticity assurances.
+        /// <para>The zone ID of the elasticity assurances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-h</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

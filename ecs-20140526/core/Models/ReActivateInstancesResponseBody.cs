@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReActivateInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>51AB7717-6E1A-4D1D-A44D-54CB123ABC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,23 +10,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The token used to start the next query.
+        /// <para>The token used to start the next query.</para>
+        /// <remarks>
+        /// <para>If the return value is empty, no more data exists.</para>
+        /// </remarks>
         /// 
-        /// > If the return value is empty, no more data exists.
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3F9A4CC4-362F-469A-B9EF-B3204EF8AA3A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the snapshot-consistent groups.
+        /// <para>Details of the snapshot-consistent groups.</para>
         /// </summary>
         [NameInMap("SnapshotGroups")]
         [Validation(Required=false)]
@@ -37,56 +44,79 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup> SnapshotGroup { get; set; }
             public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup : TeaModel {
                 /// <summary>
-                /// The time when the snapshot-consistent group was created.
+                /// <para>The time when the snapshot-consistent group was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-03-23T10:58:48Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the snapshot-consistent group.
+                /// <para>The description of the snapshot-consistent group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>This is description.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can check the response parameters that start with `Snapshots.Snapshot.Tags.` to determine the ID of the instance to which each snapshot in the snapshot-consistent group belongs.
+                /// <para>The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can check the response parameters that start with <c>Snapshots.Snapshot.Tags.</c> to determine the ID of the instance to which each snapshot in the snapshot-consistent group belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-j6ca469urv8ei629****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the snapshot-consistent group.
+                /// <para>The name of the snapshot-consistent group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testName</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// >  This parameter is not publicly available.
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("ProgressStatus")]
                 [Validation(Required=false)]
                 public string ProgressStatus { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the snapshot-consistent group belongs.
+                /// <para>The ID of the resource group to which the snapshot-consistent group belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-bp67acfmxazb4p****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The ID of the snapshot-consistent group.
+                /// <para>The ID of the snapshot-consistent group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ssg-j6ciyh3k52qp7ovm****</para>
                 /// </summary>
                 [NameInMap("SnapshotGroupId")]
                 [Validation(Required=false)]
                 public string SnapshotGroupId { get; set; }
 
                 /// <summary>
-                /// Details of the snapshots in the snapshot-consistent group.
+                /// <para>Details of the snapshots in the snapshot-consistent group.</para>
                 /// </summary>
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
@@ -97,67 +127,92 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot> Snapshot { get; set; }
                     public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot : TeaModel {
                         /// <summary>
-                        /// Indicates whether the snapshot can be used to create or roll back disks. Valid values:
+                        /// <para>Indicates whether the snapshot can be used to create or roll back disks. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>true</description></item>
+                        /// <item><description>false</description></item>
+                        /// </list>
                         /// 
-                        /// *   true
-                        /// *   false
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("Available")]
                         [Validation(Required=false)]
                         public bool? Available { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the instant access feature is enabled. Valid values:
+                        /// <para>Indicates whether the instant access feature is enabled. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>true: The instant access feature is enabled. By default, the instant access feature is enabled for ESSDs.</description></item>
+                        /// <item><description>false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</description></item>
+                        /// </list>
                         /// 
-                        /// *   true: The instant access feature is enabled. By default, the instant access feature is enabled for ESSDs.
-                        /// *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+                        /// <b>Example:</b>
+                        /// <para>true</para>
                         /// </summary>
                         [NameInMap("InstantAccess")]
                         [Validation(Required=false)]
                         public bool? InstantAccess { get; set; }
 
                         /// <summary>
-                        /// The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.
+                        /// <para>The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.</para>
+                        /// <remarks>
+                        /// <para> This parameter is deprecated. The normal snapshots of enhanced SSDs (ESSDs) are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+                        /// </remarks>
                         /// 
-                        /// >  This parameter is deprecated. The normal snapshots of enhanced SSDs (ESSDs) are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).
+                        /// <b>Example:</b>
+                        /// <para>3</para>
                         /// </summary>
                         [NameInMap("InstantAccessRetentionDays")]
                         [Validation(Required=false)]
                         public int? InstantAccessRetentionDays { get; set; }
 
                         /// <summary>
-                        /// The progress of the snapshot creation task. Unit: percent (%).
+                        /// <para>The progress of the snapshot creation task. Unit: percent (%).</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100%</para>
                         /// </summary>
                         [NameInMap("Progress")]
                         [Validation(Required=false)]
                         public string Progress { get; set; }
 
                         /// <summary>
-                        /// The ID of the snapshot.
+                        /// <para>The ID of the snapshot.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>s-j6cbzmrlbf09w72q****</para>
                         /// </summary>
                         [NameInMap("SnapshotId")]
                         [Validation(Required=false)]
                         public string SnapshotId { get; set; }
 
                         /// <summary>
-                        /// The ID of the source disk. This parameter is retained even after the source disk of the snapshot is released.
+                        /// <para>The ID of the source disk. This parameter is retained even after the source disk of the snapshot is released.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>d-j6c3ogynmvpi6wy7****</para>
                         /// </summary>
                         [NameInMap("SourceDiskId")]
                         [Validation(Required=false)]
                         public string SourceDiskId { get; set; }
 
                         /// <summary>
-                        /// The type of the source disk. Valid values:
+                        /// <para>The type of the source disk. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>system: system disk</description></item>
+                        /// <item><description>data: data disk</description></item>
+                        /// </list>
                         /// 
-                        /// *   system: system disk
-                        /// *   data: data disk
+                        /// <b>Example:</b>
+                        /// <para>system</para>
                         /// </summary>
                         [NameInMap("SourceDiskType")]
                         [Validation(Required=false)]
                         public string SourceDiskType { get; set; }
 
                         /// <summary>
-                        /// The tags of the snapshot. The default values contain snapshot source information.
+                        /// <para>The tags of the snapshot. The default values contain snapshot source information.</para>
                         /// </summary>
                         [NameInMap("Tags")]
                         [Validation(Required=false)]
@@ -168,14 +223,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTagsTag> Tag { get; set; }
                             public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTagsTag : TeaModel {
                                 /// <summary>
-                                /// The tag key of the snapshot. The default values of Key and Value contain snapshot source information.
+                                /// <para>The tag key of the snapshot. The default values of Key and Value contain snapshot source information.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>acs:ecs:createFrom</para>
                                 /// </summary>
                                 [NameInMap("Key")]
                                 [Validation(Required=false)]
                                 public string Key { get; set; }
 
                                 /// <summary>
-                                /// The tag value of the snapshot. The default values of Key and Value contain snapshot source information.
+                                /// <para>The tag value of the snapshot. The default values of Key and Value contain snapshot source information.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>i-bp11qm0o3dk4iuc****</para>
                                 /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
@@ -190,18 +251,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The state of the snapshot-consistent group. Valid values:
+                /// <para>The state of the snapshot-consistent group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>progressing: The snapshot-consistent group was being created.</description></item>
+                /// <item><description>accomplished: The snapshot-consistent group was created.</description></item>
+                /// <item><description>failed: The snapshot-consistent group failed to be created.</description></item>
+                /// </list>
                 /// 
-                /// *   progressing: The snapshot-consistent group was being created.
-                /// *   accomplished: The snapshot-consistent group was created.
-                /// *   failed: The snapshot-consistent group failed to be created.
+                /// <b>Example:</b>
+                /// <para>accomplished</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tags of the snapshot-consistent group.
+                /// <para>The tags of the snapshot-consistent group.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -212,14 +277,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupTagsTag> Tag { get; set; }
                     public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the snapshot-consistent group.
+                        /// <para>The tag key of the snapshot-consistent group.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TestKey</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value of the snapshot-consistent group.
+                        /// <para>The tag value of the snapshot-consistent group.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TestValue</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

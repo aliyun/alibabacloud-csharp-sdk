@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeClassicLinkInstancesRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can specify a maximum of 100 instance IDs in a single request. Separate the instance IDs with commas (,).
+        /// <para>The instance ID. You can specify a maximum of 100 instance IDs in a single request. Separate the instance IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-bp1a5zr3u7nq9cxh****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -21,27 +24,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page 1.
+        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: 1 to 100.
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instances. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -56,7 +65,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](https://help.aliyun.com/document_detail/65413.html).
+        /// <para>The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see <a href="https://help.aliyun.com/document_detail/65413.html">Establish a ClassicLink connection</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1vwnn14rqpyiczj****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

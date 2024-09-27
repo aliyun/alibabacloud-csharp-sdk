@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDedicatedHostClusterResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the dedicated host cluster.
+        /// <para>The ID of the dedicated host cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dc-bp12wlf6bw0vz9v2****</para>
         /// </summary>
         [NameInMap("DedicatedHostClusterId")]
         [Validation(Required=false)]
         public string DedicatedHostClusterId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E2A664A6-2933-4C64-88AE-5033D003****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,57 +10,77 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeManagedInstancesRequest : TeaModel {
         /// <summary>
-        /// The ID of the activation code.
+        /// <para>The ID of the activation code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4ECEEE12-56F1-4FBC-9AB1-890F7494****</para>
         /// </summary>
         [NameInMap("ActivationId")]
         [Validation(Required=false)]
         public string ActivationId { get; set; }
 
         /// <summary>
-        /// The ID of managed instance N. Valid values of N: 1 to 50.
+        /// <para>The ID of managed instance N. Valid values of N: 1 to 50.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mi-hz018jrc1o0****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// The internal or public IP address of the managed instance.
+        /// <para>The internal or public IP address of the managed instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><c>192.168.**.**</c></para>
         /// </summary>
         [NameInMap("InstanceIp")]
         [Validation(Required=false)]
         public string InstanceIp { get; set; }
 
         /// <summary>
-        /// The name of the managed instance.
+        /// <para>The name of the managed instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-webapp-server</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The maximum number of entries per page.
+        /// <para>The maximum number of entries per page.</para>
+        /// <para>Valid values: 1 to 50.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 50.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAdDWBF2****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The operating system type of the managed instance. Valid values:
+        /// <para>The operating system type of the managed instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>windows</description></item>
+        /// <item><description>linux</description></item>
+        /// <item><description>FreeBSD</description></item>
+        /// </list>
         /// 
-        /// *   windows
-        /// *   linux
-        /// *   FreeBSD
+        /// <b>Example:</b>
+        /// <para>windows</para>
         /// </summary>
         [NameInMap("OsType")]
         [Validation(Required=false)]
@@ -75,40 +95,46 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Pages start from page 1.
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 50.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 50.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).
+        /// <para>The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the managed instance belongs.
+        /// <para>The ID of the resource group to which the managed instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-123******</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -123,27 +149,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags of the managed instance.
+        /// <para>The tags of the managed instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeManagedInstancesRequestTag> Tag { get; set; }
         public class DescribeManagedInstancesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+            /// <para>The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
+            /// <para>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
-            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
-            /// 
-            /// The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.
+            /// <para>The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
-            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

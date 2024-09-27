@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssignPrivateIpAddressesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the ENI and the secondary private IP addresses that are assigned to the ENI.
+        /// <para>Details about the ENI and the secondary private IP addresses that are assigned to the ENI.</para>
         /// </summary>
         [NameInMap("AssignedPrivateIpAddressesSet")]
         [Validation(Required=false)]
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet AssignedPrivateIpAddressesSet { get; set; }
         public class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet : TeaModel {
             /// <summary>
-            /// Details about the assigned IPv4 prefixes.
+            /// <para>Details about the assigned IPv4 prefixes.</para>
             /// </summary>
             [NameInMap("Ipv4PrefixSet")]
             [Validation(Required=false)]
@@ -30,14 +30,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// The ENI ID.
+            /// <para>The ENI ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eni-bp125p95hhdhn3ot****</para>
             /// </summary>
             [NameInMap("NetworkInterfaceId")]
             [Validation(Required=false)]
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// The secondary private IP addresses that are assigned to the ENI.
+            /// <para>The secondary private IP addresses that are assigned to the ENI.</para>
             /// </summary>
             [NameInMap("PrivateIpSet")]
             [Validation(Required=false)]
@@ -52,7 +55,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRenewalPriceRequest : TeaModel {
         /// <summary>
-        /// The synchronized expiration date. If you specify this parameter, the price for renewing a specified instance to the specified synchronized expiration date is queried. Valid values: 1 to 28.
+        /// <para>The synchronized expiration date. If you specify this parameter, the price for renewing a specified instance to the specified synchronized expiration date is queried. Valid values: 1 to 28.</para>
+        /// <para>For information about how to synchronize the expiration dates of instances, see <a href="https://help.aliyun.com/document_detail/108486.html">Synchronize the expiration dates of instances</a>.</para>
+        /// <remarks>
+        /// <para>The renewal period-related parameter pair (<c>Period</c> and <c>PeriodUnit</c>) and the <c>ExpectedRenewDay</c> parameter are mutually exclusive.</para>
+        /// </remarks>
         /// 
-        /// For information about how to synchronize the expiration dates of instances, see [Synchronize the expiration dates of instances](https://help.aliyun.com/document_detail/108486.html).
-        /// 
-        /// > The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the `ExpectedRenewDay` parameter are mutually exclusive.
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("ExpectedRenewDay")]
         [Validation(Required=false)]
@@ -29,44 +32,55 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The renewal period. Valid values:
+        /// <para>The renewal period. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values when the <c>PriceUnit</c> parameter is set to <c>Month</c>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
+        /// <item><description>Valid values when the <c>PriceUnit</c> parameter is set to <c>Year</c>: 1, 2, 3.</description></item>
+        /// </list>
+        /// <para>Default value: 1.</para>
+        /// <remarks>
+        /// <para>The renewal period-related parameter pair (<c>Period</c> and <c>PeriodUnit</c>) and the <c>ExpectedRenewDay</c> parameter are mutually exclusive.</para>
+        /// </remarks>
         /// 
-        /// *   Valid values when the `PriceUnit` parameter is set to `Month`: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-        /// *   Valid values when the `PriceUnit` parameter is set to `Year`: 1, 2, 3.
-        /// 
-        /// Default value: 1.
-        /// 
-        /// > The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the `ExpectedRenewDay` parameter are mutually exclusive.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the renewal period. Valid values:
+        /// <para>The unit of the renewal period. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Month</description></item>
+        /// <item><description>Year</description></item>
+        /// </list>
+        /// <para>Default value: Month.</para>
         /// 
-        /// *   Month
-        /// *   Year
-        /// 
-        /// Default value: Month.
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("PriceUnit")]
         [Validation(Required=false)]
         public string PriceUnit { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource. If the `ResourceType` parameter is set to`  instance `, the value of the `ResourceId` parameter is the ID of the specified instance.``
+        /// <para>The ID of the resource. If the <c>ResourceType</c> parameter is set to<c> instance</c>, the value of the <c>ResourceId</c> parameter is the ID of the specified instance.``</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-bp1f2o4ldh8l29zv****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -81,9 +95,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to instance.
+        /// <para>The type of the resource. Set the value to instance.</para>
+        /// <para>Default value: instance.</para>
         /// 
-        /// Default value: instance.
+        /// <b>Example:</b>
+        /// <para>instance</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

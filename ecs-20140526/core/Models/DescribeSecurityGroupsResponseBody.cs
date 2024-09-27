@@ -10,46 +10,63 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSecurityGroupsResponseBody : TeaModel {
         /// <summary>
-        /// A pagination token. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no next page exists.
+        /// <para>A pagination token. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no next page exists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e71d8a535bd9cc11</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <remarks>
+        /// <para>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// </remarks>
         /// 
-        /// > This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <remarks>
+        /// <para>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// </remarks>
         /// 
-        /// > This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the security group.
+        /// <para>The region ID of the security group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the security groups.
+        /// <para>The information about the security groups.</para>
         /// </summary>
         [NameInMap("SecurityGroups")]
         [Validation(Required=false)]
@@ -60,88 +77,127 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup> SecurityGroup { get; set; }
             public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup : TeaModel {
                 /// <summary>
-                /// The number of private IP addresses that can be added to the security group. For more information, see the "Security group capacity" section in [Basic security groups and advanced security groups](~~605897#section-kj9-e46-6v5~~).
+                /// <para>The number of private IP addresses that can be added to the security group. For more information, see the &quot;Security group capacity&quot; section in <a href="~~605897#section-kj9-e46-6v5~~">Basic security groups and advanced security groups</a>.</para>
+                /// <para>If you set IsQueryEcsCount to True, the return value of AvailableInstanceAmount is valid.</para>
+                /// <remarks>
+                /// <para> This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</para>
+                /// </remarks>
                 /// 
-                /// If you set IsQueryEcsCount to True, the return value of AvailableInstanceAmount is valid.
-                /// 
-                /// >  This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("AvailableInstanceAmount")]
                 [Validation(Required=false)]
                 public int? AvailableInstanceAmount { get; set; }
 
                 /// <summary>
-                /// The time when the security group was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+                /// <para>The time when the security group was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-08-31T03:12:29Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the security group.
+                /// <para>The description of the security group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestDescription</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The number of private IP addresses that are contained in the security group. For more information, see the "Security group capacity" section in [Basic security groups and advanced security groups](~~605897#section-kj9-e46-6v5~~).
+                /// <para>The number of private IP addresses that are contained in the security group. For more information, see the &quot;Security group capacity&quot; section in <a href="~~605897#section-kj9-e46-6v5~~">Basic security groups and advanced security groups</a>.</para>
+                /// <para>If you set IsQueryEcsCount to True, the return value of EcsCount is valid.</para>
+                /// <remarks>
+                /// <para> This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</para>
+                /// </remarks>
                 /// 
-                /// If you set IsQueryEcsCount to True, the return value of EcsCount is valid.
-                /// 
-                /// >  This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("EcsCount")]
                 [Validation(Required=false)]
                 public int? EcsCount { get; set; }
 
+                [NameInMap("GroupToGroupRuleCount")]
+                [Validation(Required=false)]
+                public int? GroupToGroupRuleCount { get; set; }
+
                 /// <summary>
-                /// The ID of the resource group to which the security group belongs.
+                /// <para>The ID of the resource group to which the security group belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-bp67acfmxazb4p****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                [NameInMap("RuleCount")]
+                [Validation(Required=false)]
+                public int? RuleCount { get; set; }
+
                 /// <summary>
-                /// The ID of the security group.
+                /// <para>The ID of the security group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sg-bp67acfmxazb4p****</para>
                 /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// The name of the security group.
+                /// <para>The name of the security group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SGTestName</para>
                 /// </summary>
                 [NameInMap("SecurityGroupName")]
                 [Validation(Required=false)]
                 public string SecurityGroupName { get; set; }
 
                 /// <summary>
-                /// The type of the security group. Valid values:
+                /// <para>The type of the security group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>normal: basic security group</description></item>
+                /// <item><description>enterprise: advanced security group</description></item>
+                /// </list>
                 /// 
-                /// *   normal: basic security group
-                /// *   enterprise: advanced security group
+                /// <b>Example:</b>
+                /// <para>normal</para>
                 /// </summary>
                 [NameInMap("SecurityGroupType")]
                 [Validation(Required=false)]
                 public string SecurityGroupType { get; set; }
 
                 /// <summary>
-                /// The ID of the distributor to which the security group belongs.
+                /// <para>The ID of the distributor to which the security group belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12345678910</para>
                 /// </summary>
                 [NameInMap("ServiceID")]
                 [Validation(Required=false)]
                 public long? ServiceID { get; set; }
 
                 /// <summary>
-                /// Indicates whether the user of the security group is an Alibaba Cloud service or a distributor.
+                /// <para>Indicates whether the user of the security group is an Alibaba Cloud service or a distributor.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("ServiceManaged")]
                 [Validation(Required=false)]
                 public bool? ServiceManaged { get; set; }
 
                 /// <summary>
-                /// The tags of the security group.
+                /// <para>The tags of the security group.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -152,14 +208,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTagsTag> Tag { get; set; }
                     public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// <para>The key of the tag.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TestKey</para>
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// <para>The value of the tag.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TestValue</para>
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -170,7 +232,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the VPC to which the security group belongs.
+                /// <para>The ID of the VPC to which the security group belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp67acfmxazb4p****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -181,7 +246,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The total number of security groups returned. If `MaxResults` and `NextToken` are specified in the request, the value of this parameter is not returned.
+        /// <para>The total number of security groups returned. If <c>MaxResults</c> and <c>NextToken</c> are specified in the request, the value of this parameter is not returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

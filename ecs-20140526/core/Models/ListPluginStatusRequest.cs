@@ -10,40 +10,47 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ListPluginStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries per page. 
+        /// <para>The maximum number of entries per page. </para>
+        /// <para>Valid values: 1 to 50. </para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 50. 
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.
+        /// <para>The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.</para>
+        /// <para>**</para>
+        /// <para><b>Note</b> If this parameter is not specified, only a single instance ID can be specified.</para>
+        /// </description></item>
+        /// <item><description><para>If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.
-        /// 
-        ///     **
-        /// 
-        ///     **Note** If this parameter is not specified, only a single instance ID can be specified.
-        /// 
-        /// *   If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.
+        /// <b>Example:</b>
+        /// <para>testPluginName</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAdDWBF2</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -58,29 +65,39 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <list type="bullet">
+        /// <item><description>Pages start from page 1.</description></item>
+        /// <item><description>Default value: 1.</description></item>
+        /// </list>
         /// 
-        /// *   Pages start from page 1.
-        /// *   Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values: 1 to 50.</description></item>
+        /// <item><description>Default value: 10.</description></item>
+        /// </list>
         /// 
-        /// *   Valid values: 1 to 50.
-        /// *   Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskDefaultKMSKeyIdRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The ID of the new KMS key.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
         /// </summary>
         [NameInMap("KMSKeyId")]
         [Validation(Required=false)]
         public string KMSKeyId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

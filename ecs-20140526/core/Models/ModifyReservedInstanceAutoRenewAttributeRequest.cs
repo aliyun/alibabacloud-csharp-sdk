@@ -18,44 +18,54 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The auto-renewal cycle.
+        /// <para>The auto-renewal cycle.</para>
+        /// <para>Valid values: 1 and 3.</para>
         /// 
-        /// Valid values: 1 and 3.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the auto-renewal duration.
+        /// <para>The unit of the auto-renewal duration.</para>
+        /// <para>Valid values: Year and Month.</para>
         /// 
-        /// Valid values: Year and Month.
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The region ID of the reserved instances. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the reserved instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically renew the reserved instances. Valid values:
+        /// <para>Specifies whether to automatically renew the reserved instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>AutoRenewal: automatically renews the reserved instances.</description></item>
+        /// <item><description>Normal: manually renews the reserved instances.</description></item>
+        /// </list>
         /// 
-        /// *   AutoRenewal: automatically renews the reserved instances.
-        /// *   Normal: manually renews the reserved instances.
+        /// <b>Example:</b>
+        /// <para>AutoRenewal</para>
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]
         public string RenewalStatus { get; set; }
 
         /// <summary>
-        /// The IDs of the reserved instances.
+        /// <para>The IDs of the reserved instances.</para>
         /// </summary>
         [NameInMap("ReservedInstanceId")]
         [Validation(Required=false)]

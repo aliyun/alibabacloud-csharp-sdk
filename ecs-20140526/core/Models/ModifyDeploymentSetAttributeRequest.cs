@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDeploymentSetAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the deployment set.
+        /// <para>The ID of the deployment set.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ds-bp1frxuzdg87zh4p****</para>
         /// </summary>
         [NameInMap("DeploymentSetId")]
         [Validation(Required=false)]
         public string DeploymentSetId { get; set; }
 
         /// <summary>
-        /// The new name of the deployment set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
+        /// <para>The new name of the deployment set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DeploymentSetTestName</para>
         /// </summary>
         [NameInMap("DeploymentSetName")]
         [Validation(Required=false)]
         public string DeploymentSetName { get; set; }
 
         /// <summary>
-        /// The new description of the deployment set. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+        /// <para>The new description of the deployment set. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestDescription</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -41,9 +49,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the deployment set. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

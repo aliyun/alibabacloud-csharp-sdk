@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotPackageResponseBody : TeaModel {
         /// <summary>
-        /// Details about the OSS storage plans.
+        /// <para>Details about the OSS storage plans.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The total number of returned OSS storage plans.
+        /// <para>The total number of returned OSS storage plans.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The time when the OSS storage plan expires. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /// <para>The time when the OSS storage plan expires. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// </summary>
         [NameInMap("SnapshotPackages")]
         [Validation(Required=false)]
@@ -42,25 +51,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage> SnapshotPackage { get; set; }
             public class DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage : TeaModel {
                 /// <summary>
-                /// The time when the OSS storage plan was purchased. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// <para>The time when the OSS storage plan was purchased. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testDisplayName</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// The maximum storage capacity offered by the OSS storage plan.
+                /// <para>The maximum storage capacity offered by the OSS storage plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-11-30T06:32:31Z</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>500</para>
+                /// </summary>
                 [NameInMap("InitCapacity")]
                 [Validation(Required=false)]
                 public long? InitCapacity { get; set; }
 
                 /// <summary>
-                /// DescribeSnapshotPackage
+                /// <para>DescribeSnapshotPackage</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2017-11-30T06:32:31Z</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
@@ -71,7 +93,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The name of the OSS storage plan.
+        /// <para>The name of the OSS storage plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

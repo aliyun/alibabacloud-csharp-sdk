@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DisableDiskEncryptionByDefaultRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
