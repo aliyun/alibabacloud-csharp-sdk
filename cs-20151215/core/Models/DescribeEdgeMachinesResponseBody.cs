@@ -10,77 +10,107 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeEdgeMachinesResponseBody : TeaModel {
         /// <summary>
-        /// The list of cloud-native boxes.
+        /// <para>The list of cloud-native boxes.</para>
         /// </summary>
         [NameInMap("edge_machines")]
         [Validation(Required=false)]
         public List<DescribeEdgeMachinesResponseBodyEdgeMachines> EdgeMachines { get; set; }
         public class DescribeEdgeMachinesResponseBodyEdgeMachines : TeaModel {
             /// <summary>
-            /// The time when the cloud-native box was activated.
+            /// <para>The time when the cloud-native box was activated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-07-19T16:07:48+08:00</para>
             /// </summary>
             [NameInMap("active_time")]
             [Validation(Required=false)]
             public string ActiveTime { get; set; }
 
             /// <summary>
-            /// The time when the cloud-native box was created.
+            /// <para>The time when the cloud-native box was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-07-07T20:44:00+08:00</para>
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
             public string Created { get; set; }
 
             /// <summary>
-            /// The device ID.
+            /// <para>The device ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c61083909b13f4a95b8554bda9577****</para>
             /// </summary>
             [NameInMap("edge_machine_id")]
             [Validation(Required=false)]
             public string EdgeMachineId { get; set; }
 
             /// <summary>
-            /// The `hostname` of the cloud-native box.
+            /// <para>The <c>hostname</c> of the cloud-native box.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ack-v-b010-ssdfw****</para>
             /// </summary>
             [NameInMap("hostname")]
             [Validation(Required=false)]
             public string Hostname { get; set; }
 
             /// <summary>
-            /// The lifecycle of the cloud-native box.
+            /// <para>The lifecycle of the cloud-native box.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>activated</para>
             /// </summary>
             [NameInMap("life_state")]
             [Validation(Required=false)]
             public string LifeState { get; set; }
 
             /// <summary>
-            /// The model of the cloud-native box.
+            /// <para>The model of the cloud-native box.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ACK-V-B010</para>
             /// </summary>
             [NameInMap("model")]
             [Validation(Required=false)]
             public string Model { get; set; }
 
             /// <summary>
-            /// The machine name.
+            /// <para>The machine name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ack-v-b010-ssdfw****</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The status of the cloud-native box.
+            /// <para>The status of the cloud-native box.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>online</para>
             /// </summary>
             [NameInMap("online_state")]
             [Validation(Required=false)]
             public string OnlineState { get; set; }
 
             /// <summary>
-            /// The serial number.
+            /// <para>The serial number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ACK9GBL31SXX****</para>
             /// </summary>
             [NameInMap("sn")]
             [Validation(Required=false)]
             public string Sn { get; set; }
 
             /// <summary>
-            /// The time when the cloud-native box was last updated.
+            /// <para>The time when the cloud-native box was last updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-07-07T20:44:00+08:00</para>
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]
@@ -89,32 +119,39 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The paging information.
+        /// <para>The paging information.</para>
         /// </summary>
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeEdgeMachinesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeEdgeMachinesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// <para>Default value: 1.</para>
             /// 
-            /// Default value: 1.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("page_number")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// <para>Default value: 10.</para>
             /// 
-            /// Default value: 10.
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("page_size")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of pages returned.
+            /// <para>The total number of pages returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("total_count")]
             [Validation(Required=false)]

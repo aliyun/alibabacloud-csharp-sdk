@@ -10,23 +10,29 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeSubaccountK8sClusterUserConfigRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to obtain the kubeconfig file used to connect to the cluster over the internal network. Valid values:
+        /// <para>Specifies whether to obtain the kubeconfig file used to connect to the cluster over the internal network. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: Obtain the kubeconfig file used to connect to the cluster over the internal network.</description></item>
+        /// <item><description><c>false</c>: Obtain the kubeconfig file used to connect to the cluster over the Internet.</description></item>
+        /// </list>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
-        /// *   `true`: Obtain the kubeconfig file used to connect to the cluster over the internal network.
-        /// *   `false`: Obtain the kubeconfig file used to connect to the cluster over the Internet.
-        /// 
-        /// Default value: `false`.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public bool? PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The validity period of the temporary kubeconfig file. Unit: minutes.
+        /// <para>The validity period of the temporary kubeconfig file. Unit: minutes.</para>
+        /// <para>Valid values: 15 to 4320 (three days).</para>
+        /// <remarks>
+        /// <para>If you leave this parameter empty, the system sets a longer validity period and returns the value in the expiration parameter of the response.</para>
+        /// </remarks>
         /// 
-        /// Valid values: 15 to 4320 (three days).
-        /// 
-        /// > If you leave this parameter empty, the system sets a longer validity period and returns the value in the expiration parameter of the response.
+        /// <b>Example:</b>
+        /// <para>15</para>
         /// </summary>
         [NameInMap("TemporaryDurationMinutes")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateEdgeMachineResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the cloud-native box.
+        /// <para>The ID of the cloud-native box.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc0725ddf688744979cd98445f67e****</para>
         /// </summary>
         [NameInMap("edge_machine_id")]
         [Validation(Required=false)]
         public string EdgeMachineId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;request_id&quot;: &quot;6e7b377a-c5ed-4388-8026-689e1b34****&quot;,</para>
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]

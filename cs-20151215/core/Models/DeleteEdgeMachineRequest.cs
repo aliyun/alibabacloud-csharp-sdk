@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteEdgeMachineRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to forcefully delete the cloud-native box. Valid values:
+        /// <para>Specifies whether to forcefully delete the cloud-native box. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: forcefully deletes the cloud-native box.</description></item>
+        /// <item><description><c>false</c>: does not forcefully delete the cloud-native box.</description></item>
+        /// </list>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
-        /// *   `true`: forcefully deletes the cloud-native box.
-        /// *   `false`: does not forcefully delete the cloud-native box.
-        /// 
-        /// Default value: `false`.
+        /// <b>Example:</b>
+        /// <para>true/false</para>
         /// </summary>
         [NameInMap("force")]
         [Validation(Required=false)]

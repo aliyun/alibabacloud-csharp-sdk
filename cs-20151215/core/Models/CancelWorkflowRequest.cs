@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CancelWorkflowRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to cancel.
+        /// <para>The operation that you want to perform. Set the value to cancel.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cancel</para>
         /// </summary>
         [NameInMap("action")]
         [Validation(Required=false)]

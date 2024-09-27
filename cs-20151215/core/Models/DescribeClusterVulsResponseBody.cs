@@ -10,78 +10,99 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterVulsResponseBody : TeaModel {
         /// <summary>
-        /// An array of vulnerabilities.
+        /// <para>An array of vulnerabilities.</para>
         /// </summary>
         [NameInMap("vul_records")]
         [Validation(Required=false)]
         public List<DescribeClusterVulsResponseBodyVulRecords> VulRecords { get; set; }
         public class DescribeClusterVulsResponseBodyVulRecords : TeaModel {
             /// <summary>
-            /// The CVE list.
+            /// <para>The CVE list.</para>
             /// </summary>
             [NameInMap("cve_list")]
             [Validation(Required=false)]
             public List<string> CveList { get; set; }
 
             /// <summary>
-            /// The severity level of the vulnerability.
+            /// <para>The severity level of the vulnerability.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>nntf: low</description></item>
+            /// <item><description>later: medium     </description></item>
+            /// <item><description>asap: high</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   nntf: low
-            /// *   later: medium     
-            /// *   asap: high
+            /// <b>Example:</b>
+            /// <para>asap</para>
             /// </summary>
             [NameInMap("necessity")]
             [Validation(Required=false)]
             public string Necessity { get; set; }
 
             /// <summary>
-            /// The number of nodes that have the vulnerability.
+            /// <para>The number of nodes that have the vulnerability.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("node_count")]
             [Validation(Required=false)]
             public int? NodeCount { get; set; }
 
             /// <summary>
-            /// The node pool ID.
+            /// <para>The node pool ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>np0156da1082b54fa987e32618dd45f5d3</para>
             /// </summary>
             [NameInMap("nodepool_id")]
             [Validation(Required=false)]
             public string NodepoolId { get; set; }
 
             /// <summary>
-            /// The name of the node pool.
+            /// <para>The name of the node pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("nodepool_name")]
             [Validation(Required=false)]
             public string NodepoolName { get; set; }
 
             /// <summary>
-            /// The alias of the vulnerability.
+            /// <para>The alias of the vulnerability.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CVE-2022-xxxx:rsync Security vulnerabilities</para>
             /// </summary>
             [NameInMap("vul_alias_name")]
             [Validation(Required=false)]
             public string VulAliasName { get; set; }
 
             /// <summary>
-            /// The name of the vulnerability.
+            /// <para>The name of the vulnerability.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oval:com.redhat.rhsa:def:xxxxxxx</para>
             /// </summary>
             [NameInMap("vul_name")]
             [Validation(Required=false)]
             public string VulName { get; set; }
 
             /// <summary>
-            /// The type of vulnerability.
+            /// <para>The type of vulnerability.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>app: application vulnerabilities</description></item>
+            /// <item><description>sca: application vulnerabilities (software component analysis)</description></item>
+            /// <item><description>cve: Linux vulnerabilities</description></item>
+            /// <item><description>cms: Web-CMS vulnerabilities</description></item>
+            /// <item><description>sys: Windows vulnerabilities</description></item>
+            /// <item><description>emg:  emergency vulnerabilities</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   app: application vulnerabilities
-            /// *   sca: application vulnerabilities (software component analysis)
-            /// *   cve: Linux vulnerabilities
-            /// *   cms: Web-CMS vulnerabilities
-            /// *   sys: Windows vulnerabilities
-            /// *   emg:  emergency vulnerabilities
+            /// <b>Example:</b>
+            /// <para>cve</para>
             /// </summary>
             [NameInMap("vul_type")]
             [Validation(Required=false)]

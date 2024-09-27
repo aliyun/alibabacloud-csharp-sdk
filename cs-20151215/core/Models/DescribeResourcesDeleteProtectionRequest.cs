@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeResourcesDeleteProtectionRequest : TeaModel {
         /// <summary>
-        /// The namespace to which the resource belongs.
+        /// <para>The namespace to which the resource belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The name of the resource that you want to query. Separate multiple resource names with commas (,).
+        /// <para>The name of the resource that you want to query. Separate multiple resource names with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test1,test2</para>
         /// </summary>
         [NameInMap("resources")]
         [Validation(Required=false)]

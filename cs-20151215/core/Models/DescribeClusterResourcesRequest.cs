@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to query the resources created by cluster components.
+        /// <para>Specifies whether to query the resources created by cluster components.</para>
         /// </summary>
         [NameInMap("with_addon_resources")]
         [Validation(Required=false)]

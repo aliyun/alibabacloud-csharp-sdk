@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class StopAlertRequest : TeaModel {
         /// <summary>
-        /// The name of the alert rule set to be disabled.
+        /// <para>The name of the alert rule set to be disabled.</para>
         /// </summary>
         [NameInMap("alert_rule_group_name")]
         [Validation(Required=false)]
         public string AlertRuleGroupName { get; set; }
 
         /// <summary>
-        /// The name of the alert rule to be disabled. If you do not specify an alert rule name, the alert rule set is disabled.
+        /// <para>The name of the alert rule to be disabled. If you do not specify an alert rule name, the alert rule set is disabled.</para>
         /// </summary>
         [NameInMap("alert_rule_name")]
         [Validation(Required=false)]

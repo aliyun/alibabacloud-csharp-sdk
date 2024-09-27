@@ -10,68 +10,77 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterEventsResponseBody : TeaModel {
         /// <summary>
-        /// The list of events.
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("events")]
         [Validation(Required=false)]
         public List<DescribeClusterEventsResponseBodyEvents> Events { get; set; }
         public class DescribeClusterEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// The ID of the cluster.
+            /// <para>The ID of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c82e6987e2961451182edacd74faf****</para>
             /// </summary>
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The description of the event.
+            /// <para>The description of the event.</para>
             /// </summary>
             [NameInMap("data")]
             [Validation(Required=false)]
             public DescribeClusterEventsResponseBodyEventsData Data { get; set; }
             public class DescribeClusterEventsResponseBodyEventsData : TeaModel {
                 /// <summary>
-                /// The severity level of the event.
+                /// <para>The severity level of the event.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>warning</para>
+                /// <!-- -->
                 /// 
-                /// Valid values:
+                /// <!-- -->
                 /// 
-                /// *   warning
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>error</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>info</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                /// *   error
+                /// <!-- --></description></item>
+                /// </list>
                 /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   info
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
+                /// <b>Example:</b>
+                /// <para>info</para>
                 /// </summary>
                 [NameInMap("level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
 
                 /// <summary>
-                /// The details of the event.
+                /// <para>The details of the event.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Start to upgrade NodePool nodePool/npdd89dc2b76c04f14b06774883b******</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// The status of the event.
+                /// <para>The status of the event.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Started</para>
                 /// </summary>
                 [NameInMap("reason")]
                 [Validation(Required=false)]
@@ -80,35 +89,50 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// The event ID.
+            /// <para>The event ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>e-9ad04f72-8ee7-46bf-a02c-e4a06b39****</para>
             /// </summary>
             [NameInMap("event_id")]
             [Validation(Required=false)]
             public string EventId { get; set; }
 
             /// <summary>
-            /// The event source.
+            /// <para>The event source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cluster</para>
             /// </summary>
             [NameInMap("source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// The subject related to the event.
+            /// <para>The subject related to the event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>npdd89dc2b76c04f14b06774883b******</para>
             /// </summary>
             [NameInMap("subject")]
             [Validation(Required=false)]
             public string Subject { get; set; }
 
             /// <summary>
-            /// The time when the event started.
+            /// <para>The time when the event started.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-12-01T17:31:00Z</para>
             /// </summary>
             [NameInMap("time")]
             [Validation(Required=false)]
             public string Time { get; set; }
 
             /// <summary>
-            /// The type of event. Valid values:
+            /// <para>The type of event. Valid values:</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>nodepool_update</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -117,28 +141,37 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeClusterEventsResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeClusterEventsResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of the page to return.
+            /// <para>The number of the page to return.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("page_number")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page. Valid values: 1 to 50. Default value: 50.
+            /// <para>The number of entries per page. Valid values: 1 to 50. Default value: 50.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("page_size")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("total_count")]
             [Validation(Required=false)]

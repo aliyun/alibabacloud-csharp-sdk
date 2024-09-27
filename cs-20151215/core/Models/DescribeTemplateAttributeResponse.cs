@@ -22,76 +22,106 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeTemplateAttributeResponseBody> Body { get; set; }
         public class DescribeTemplateAttributeResponseBody : TeaModel {
             /// <summary>
-            /// The ID of the template. When you update a template, a new template ID is generated.
+            /// <para>The ID of the template. When you update a template, a new template ID is generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>72d20cf8-a533-4ea9-a10d-e7630d3d****</para>
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The access control policy of the template.
+            /// <para>The access control policy of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>private</para>
             /// </summary>
             [NameInMap("acl")]
             [Validation(Required=false)]
             public string Acl { get; set; }
 
             /// <summary>
-            /// The name of the template.
+            /// <para>The name of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>web</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The template content in the YAML format.
+            /// <para>The template content in the YAML format.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>apiVersion: V1\n***</para>
             /// </summary>
             [NameInMap("template")]
             [Validation(Required=false)]
             public string Template { get; set; }
 
             /// <summary>
-            /// The type of template. The value can be a custom value.
+            /// <para>The type of template. The value can be a custom value.</para>
+            /// <list type="bullet">
+            /// <item><description>If the parameter is set to <c>kubernetes</c>, the template is displayed on the Templates page in the console.</description></item>
+            /// <item><description>If the parameter is set to <c>compose</c>, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</description></item>
+            /// <item><description>If the value of the parameter is not <c>kubernetes</c>, the template is not displayed on the Templates page in the console. We recommend that you set the parameter to <c>kubernetes</c>.</description></item>
+            /// </list>
+            /// <para>Default value: <c>kubernetes</c>.</para>
             /// 
-            /// *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
-            /// *   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.
-            /// *   If the value of the parameter is not `kubernetes`, the template is not displayed on the Templates page in the console. We recommend that you set the parameter to `kubernetes`.
-            /// 
-            /// Default value: `kubernetes`.
+            /// <b>Example:</b>
+            /// <para>kubernetes</para>
             /// </summary>
             [NameInMap("template_type")]
             [Validation(Required=false)]
             public string TemplateType { get; set; }
 
             /// <summary>
-            /// The description of the template.
+            /// <para>The description of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test template</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The label of the template.
+            /// <para>The label of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sa</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public string Tags { get; set; }
 
             /// <summary>
-            /// The unique ID of the template. The value remains unchanged after the template is updated.
+            /// <para>The unique ID of the template. The value remains unchanged after the template is updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>874ec485-e7e6-4373-8a3b-47bde8ae****</para>
             /// </summary>
             [NameInMap("template_with_hist_id")]
             [Validation(Required=false)]
             public string TemplateWithHistId { get; set; }
 
             /// <summary>
-            /// The time when the template was created.
+            /// <para>The time when the template was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-09-16T19:21:29+08:00</para>
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
             public string Created { get; set; }
 
             /// <summary>
-            /// The time when the template was updated.
+            /// <para>The time when the template was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-09-16T19:21:29+08:00</para>
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

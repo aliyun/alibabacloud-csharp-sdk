@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RepairClusterNodePoolRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to restart the instance of the node.
+        /// <para>Specifies whether to restart the instance of the node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("auto_restart")]
         [Validation(Required=false)]
         public bool? AutoRestart { get; set; }
 
         /// <summary>
-        /// The list of nodes. If you do not specify nodes, all nodes in the node pool are selected.
+        /// <para>The list of nodes. If you do not specify nodes, all nodes in the node pool are selected.</para>
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]

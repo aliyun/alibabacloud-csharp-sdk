@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class StopAlertResponseBody : TeaModel {
         /// <summary>
-        /// The error message returned if the call fails.
+        /// <para>The error message returned if the call fails.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
         /// <summary>
-        /// The operation result. Valid values:
+        /// <para>The operation result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>True: The operation is successful.</description></item>
+        /// <item><description>False: The operation failed.</description></item>
+        /// </list>
         /// 
-        /// *   True: The operation is successful.
-        /// *   False: The operation failed.
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

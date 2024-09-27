@@ -10,41 +10,58 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class StandardComponentsValue : TeaModel {
         /// <summary>
-        /// The name of the component.
+        /// <para>The name of the component.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ack-arena</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The version of the component.
+        /// <para>The version of the component.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.5.0</para>
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]
         public string Version { get; set; }
 
         /// <summary>
-        /// The description of the component.
+        /// <para>The description of the component.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Indicates whether the component is a required component. Valid values:
+        /// <para>Indicates whether the component is a required component. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The component is required and must be installed when a cluster is created.</description></item>
+        /// <item><description><c>false</c>: The component is optional. After a cluster is created, you can go to the <c>Add-ons</c> page to install the component.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The component is required and must be installed when a cluster is created.
-        /// *   `false`: The component is optional. After a cluster is created, you can go to the `Add-ons` page to install the component.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("required")]
         [Validation(Required=false)]
         public string Required { get; set; }
 
         /// <summary>
-        /// Indicates whether the automatic installation of the component is disabled. By default, some optional components, such as components for logging and Ingresses, are installed when a cluster is created. You can set this parameter to disable automatic component installation. Valid values:
+        /// <para>Indicates whether the automatic installation of the component is disabled. By default, some optional components, such as components for logging and Ingresses, are installed when a cluster is created. You can set this parameter to disable automatic component installation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: disables automatic component installation.</description></item>
+        /// <item><description><c>false</c>: enables automatic component installation.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: disables automatic component installation.
-        /// *   `false`: enables automatic component installation.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("disabled")]
         [Validation(Required=false)]

@@ -9,29 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RemoveNodePoolNodesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Whether to remove concurrently.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("concurrency")]
         [Validation(Required=false)]
         public bool? Concurrency { get; set; }
 
         /// <summary>
-        /// Specifies whether to drain the nodes that you want to remove. Valid values:
+        /// <para>Specifies whether to drain the nodes that you want to remove. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: drain the nodes that you want to remove.</description></item>
+        /// <item><description>false: do not drain the nodes that you want to remove.</description></item>
+        /// </list>
         /// 
-        /// *   true: drain the nodes that you want to remove.
-        /// *   false: do not drain the nodes that you want to remove.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("drain_node")]
         [Validation(Required=false)]
         public bool? DrainNode { get; set; }
 
         /// <summary>
-        /// A list of instances that you want to remove.
+        /// <para>A list of instances that you want to remove.</para>
         /// </summary>
         [NameInMap("instance_ids")]
         [Validation(Required=false)]
         public string InstanceIdsShrink { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// A list of nodes that you want to remove.
+        /// <para>A list of nodes that you want to remove.</para>
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
@@ -39,10 +51,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodesShrink { get; set; }
 
         /// <summary>
-        /// Specifies whether to release the nodes after they are removed. Valid values:
+        /// <para>Specifies whether to release the nodes after they are removed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: release the nodes after they are removed.</description></item>
+        /// <item><description>false: do not release the nodes after they are removed.</description></item>
+        /// </list>
         /// 
-        /// *   true: release the nodes after they are removed.
-        /// *   false: do not release the nodes after they are removed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("release_node")]
         [Validation(Required=false)]

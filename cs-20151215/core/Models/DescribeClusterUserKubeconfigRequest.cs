@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterUserKubeconfigRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network. Valid values:
+        /// <para>Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: obtains the kubeconfig file that is used to connect to the master instance over the internal network.</description></item>
+        /// <item><description><c>false</c>: obtains the kubeconfig file that is used to connect to the master instance over the Internet.</description></item>
+        /// </list>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
-        /// *   `true`: obtains the kubeconfig file that is used to connect to the master instance over the internal network.
-        /// *   `false`: obtains the kubeconfig file that is used to connect to the master instance over the Internet.
-        /// 
-        /// Default value: `false`.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public bool? PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The validity period of a temporary kubeconfig file. Unit: minutes. Valid values: 15 to 4320 (3 days).
+        /// <para>The validity period of a temporary kubeconfig file. Unit: minutes. Valid values: 15 to 4320 (3 days).</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system specifies a longer validity period. The validity period is returned in the <c>expiration</c> parameter.</para>
+        /// </remarks>
         /// 
-        /// >  If you do not specify this parameter, the system specifies a longer validity period. The validity period is returned in the `expiration` parameter.
+        /// <b>Example:</b>
+        /// <para>15</para>
         /// </summary>
         [NameInMap("TemporaryDurationMinutes")]
         [Validation(Required=false)]

@@ -10,45 +10,51 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateTriggerRequest : TeaModel {
         /// <summary>
-        /// The action that the trigger performs. Set the value to redeploy.
+        /// <para>The action that the trigger performs. Set the value to redeploy.</para>
+        /// <para><c>redeploy</c>: redeploys the resources specified by <c>project_id</c>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// `redeploy`: redeploys the resources specified by `project_id`.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>redeploy</para>
         /// </summary>
         [NameInMap("action")]
         [Validation(Required=false)]
         public string Action { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c5cdf7e3938bc4f8eb0e44b21a80f****</para>
         /// </summary>
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the trigger project.
+        /// <para>The name of the trigger project.</para>
+        /// <para>The name consists of the namespace where the application is deployed and the name of the application. The format is <c>${namespace}/${name}</c>.</para>
+        /// <para>Example: <c>default/test-app</c>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name consists of the namespace where the application is deployed and the name of the application. The format is `${namespace}/${name}`.
-        /// 
-        /// Example: `default/test-app`.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>default/test-app</para>
         /// </summary>
         [NameInMap("project_id")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// The type of trigger. Valid values:
+        /// <para>The type of trigger. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>deployment</c>: performs actions on Deployments.</description></item>
+        /// <item><description><c>application</c>: performs actions on applications that are deployed in Application Center.</description></item>
+        /// </list>
+        /// <para>Default value: <c>deployment</c>.</para>
         /// 
-        /// *   `deployment`: performs actions on Deployments.
-        /// *   `application`: performs actions on applications that are deployed in Application Center.
-        /// 
-        /// Default value: `deployment`.
+        /// <b>Example:</b>
+        /// <para>deployment</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

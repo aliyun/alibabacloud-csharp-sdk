@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateResourcesDeleteProtectionRequest : TeaModel {
         /// <summary>
-        /// Specify whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.
+        /// <para>Specify whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// The namespace to which the resource belongs.
+        /// <para>The namespace to which the resource belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.
+        /// <para>The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>services</para>
         /// </summary>
         [NameInMap("resource_type")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The resources list.
+        /// <para>The resources list.</para>
         /// </summary>
         [NameInMap("resources")]
         [Validation(Required=false)]

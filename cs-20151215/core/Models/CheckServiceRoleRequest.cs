@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CheckServiceRoleRequest : TeaModel {
         /// <summary>
-        /// The service roles that you want to check.
-        /// 
-        /// This parameter is required.
+        /// <para>The service roles that you want to check.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("roles")]
         [Validation(Required=false)]
         public List<CheckServiceRoleRequestRoles> Roles { get; set; }
         public class CheckServiceRoleRequestRoles : TeaModel {
             /// <summary>
-            /// The service role name.
+            /// <para>The service role name.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>AliyunCSManagedAutoScalerRole</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

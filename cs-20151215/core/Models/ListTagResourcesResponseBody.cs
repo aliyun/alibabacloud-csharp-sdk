@@ -10,56 +10,74 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c374bf4864448****</para>
         /// </summary>
         [NameInMap("next_token")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E368C761-F8F6-4A36-9B58-BD53D5CD0CEB</para>
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the queried labels and resources.
+        /// <para>The details of the queried labels and resources.</para>
         /// </summary>
         [NameInMap("tag_resources")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// The resource and label.
+            /// <para>The resource and label.</para>
             /// </summary>
             [NameInMap("tag_resource")]
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
-                /// The ID of the resource.
+                /// <para>The ID of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-xxx</para>
                 /// </summary>
                 [NameInMap("resource_id")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource. For more information, see [Labels](https://help.aliyun.com/document_detail/110425.html).
+                /// <para>The type of the resource. For more information, see <a href="https://help.aliyun.com/document_detail/110425.html">Labels</a>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CLUSTER</para>
                 /// </summary>
                 [NameInMap("resource_type")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The key of the label.
+                /// <para>The key of the label.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ack.aliyun.com</para>
                 /// </summary>
                 [NameInMap("tag_key")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The value of the label.
+                /// <para>The value of the label.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>c71cf3d796c374bf48644482cb0c3****</para>
                 /// </summary>
                 [NameInMap("tag_value")]
                 [Validation(Required=false)]

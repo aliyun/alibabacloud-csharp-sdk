@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeTemplatesRequest : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page_num")]
         [Validation(Required=false)]
         public long? PageNum { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("page_size")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The type of template. This parameter can be set to a custom value.
+        /// <para>The type of template. This parameter can be set to a custom value.</para>
+        /// <list type="bullet">
+        /// <item><description>If the parameter is set to <c>kubernetes</c>, the template is displayed on the Templates page in the console.</description></item>
+        /// <item><description>If you set the parameter to <c>compose</c>, the template is not displayed on the Templates page in the console.</description></item>
+        /// </list>
+        /// <para>Default value: <c>kubernetes</c>.</para>
         /// 
-        /// *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
-        /// *   If you set the parameter to `compose`, the template is not displayed on the Templates page in the console.
-        /// 
-        /// Default value: `kubernetes`.
+        /// <b>Example:</b>
+        /// <para>kubernetes</para>
         /// </summary>
         [NameInMap("template_type")]
         [Validation(Required=false)]

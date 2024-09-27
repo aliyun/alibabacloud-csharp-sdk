@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeEventsResponseBody : TeaModel {
         /// <summary>
-        /// The details of the event.
+        /// <para>The details of the event.</para>
         /// </summary>
         [NameInMap("events")]
         [Validation(Required=false)]
         public List<DescribeEventsResponseBodyEvents> Events { get; set; }
         public class DescribeEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// The ID of the cluster.
+            /// <para>The ID of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cluster-id</para>
             /// </summary>
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The description of the event.
+            /// <para>The description of the event.</para>
             /// </summary>
             [NameInMap("data")]
             [Validation(Required=false)]
             public DescribeEventsResponseBodyEventsData Data { get; set; }
             public class DescribeEventsResponseBodyEventsData : TeaModel {
                 /// <summary>
-                /// The severity level of the event.
+                /// <para>The severity level of the event.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>info</para>
                 /// </summary>
                 [NameInMap("level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
 
                 /// <summary>
-                /// The details of the event.
+                /// <para>The details of the event.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Start to upgrade NodePool nodePool/nodePool-A</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// The status of the event.
+                /// <para>The status of the event.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Started</para>
                 /// </summary>
                 [NameInMap("reason")]
                 [Validation(Required=false)]
@@ -54,52 +66,65 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// The event ID.
+            /// <para>The event ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>A234-1234-1234</para>
             /// </summary>
             [NameInMap("event_id")]
             [Validation(Required=false)]
             public string EventId { get; set; }
 
             /// <summary>
-            /// The source of the event.
+            /// <para>The source of the event.</para>
             /// </summary>
             [NameInMap("source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// The subject of the event.
+            /// <para>The subject of the event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>nodePool-id</para>
             /// </summary>
             [NameInMap("subject")]
             [Validation(Required=false)]
             public string Subject { get; set; }
 
             /// <summary>
-            /// The time when the event started.
+            /// <para>The time when the event started.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-11-23T20:48:01+08:00</para>
             /// </summary>
             [NameInMap("time")]
             [Validation(Required=false)]
             public string Time { get; set; }
 
             /// <summary>
-            /// The event type. Valid values:
+            /// <para>The event type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>cluster_create</c>: cluster creation.</description></item>
+            /// <item><description><c>cluster_scaleout</c>: cluster scale-out.</description></item>
+            /// <item><description><c>cluster_attach</c>: node addition.</description></item>
+            /// <item><description><c>cluster_delete</c>: cluster deletion.</description></item>
+            /// <item><description><c>cluster_upgrade</c>: cluster upgrades.</description></item>
+            /// <item><description><c>cluster_migrate</c>: cluster migration.</description></item>
+            /// <item><description><c>cluster_node_delete</c>: node removal.</description></item>
+            /// <item><description><c>cluster_node_drain</c>: node draining.</description></item>
+            /// <item><description><c>cluster_modify</c>: cluster modifications.</description></item>
+            /// <item><description><c>cluster_configuration_modify</c>: modifications of control plane configurations.</description></item>
+            /// <item><description><c>cluster_addon_install</c>: component installation.</description></item>
+            /// <item><description><c>cluster_addon_upgrade</c>: component updates.</description></item>
+            /// <item><description><c>cluster_addon_uninstall</c>: component uninstallation.</description></item>
+            /// <item><description><c>runtime_upgrade</c>: runtime updates.</description></item>
+            /// <item><description><c>nodepool_upgrade</c>: node pool upgrades.</description></item>
+            /// <item><description><c>nodepool_update</c>: node pool updates.</description></item>
+            /// </list>
             /// 
-            /// *   `cluster_create`: cluster creation.
-            /// *   `cluster_scaleout`: cluster scale-out.
-            /// *   `cluster_attach`: node addition.
-            /// *   `cluster_delete`: cluster deletion.
-            /// *   `cluster_upgrade`: cluster upgrades.
-            /// *   `cluster_migrate`: cluster migration.
-            /// *   `cluster_node_delete`: node removal.
-            /// *   `cluster_node_drain`: node draining.
-            /// *   `cluster_modify`: cluster modifications.
-            /// *   `cluster_configuration_modify`: modifications of control plane configurations.
-            /// *   `cluster_addon_install`: component installation.
-            /// *   `cluster_addon_upgrade`: component updates.
-            /// *   `cluster_addon_uninstall`: component uninstallation.
-            /// *   `runtime_upgrade`: runtime updates.
-            /// *   `nodepool_upgrade`: node pool upgrades.
-            /// *   `nodepool_update`: node pool updates.
+            /// <b>Example:</b>
+            /// <para>nodepool_upgrade</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -108,28 +133,37 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeEventsResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeEventsResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("page_number")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("page_size")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("total_count")]
             [Validation(Required=false)]

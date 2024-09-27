@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class StartAlertResponseBody : TeaModel {
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
         /// <summary>
-        /// The status.
+        /// <para>The status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

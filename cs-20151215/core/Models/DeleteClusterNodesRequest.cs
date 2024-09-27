@@ -10,35 +10,41 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterNodesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all pods from the nodes that you want to remove. Valid values:
+        /// <para>Specifies whether to remove all pods from the nodes that you want to remove. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: removes all pods from the nodes that you want to remove.</description></item>
+        /// <item><description><c>false</c>: does not remove pods from the nodes that you want to remove.</description></item>
+        /// </list>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
-        /// *   `true`: removes all pods from the nodes that you want to remove.
-        /// *   `false`: does not remove pods from the nodes that you want to remove.
-        /// 
-        /// Default value: `false`.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("drain_node")]
         [Validation(Required=false)]
         public bool? DrainNode { get; set; }
 
         /// <summary>
-        /// The list of nodes to be removed. You need to specify the name of the nodes used in the cluster, for example, `cn-hangzhou.192.168.0.70`.
-        /// 
-        /// This parameter is required.
+        /// <para>The list of nodes to be removed. You need to specify the name of the nodes used in the cluster, for example, <c>cn-hangzhou.192.168.0.70</c>.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
         public List<string> Nodes { get; set; }
 
         /// <summary>
-        /// Specifies whether to release the Elastic Compute Service (ECS) instances. Valid values:
+        /// <para>Specifies whether to release the Elastic Compute Service (ECS) instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: releases the ECS instances.</description></item>
+        /// <item><description><c>false</c>: does not release the ECS instances.</description></item>
+        /// </list>
+        /// <para>Default value: <c>false</c>.</para>
+        /// <remarks>
+        /// <para> You cannot release subscription ECS instances.</para>
+        /// </remarks>
         /// 
-        /// *   `true`: releases the ECS instances.
-        /// *   `false`: does not release the ECS instances.
-        /// 
-        /// Default value: `false`.
-        /// 
-        /// >  You cannot release subscription ECS instances.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("release_node")]
         [Validation(Required=false)]

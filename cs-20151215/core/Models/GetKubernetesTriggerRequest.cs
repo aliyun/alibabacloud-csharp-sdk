@@ -10,43 +10,50 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetKubernetesTriggerRequest : TeaModel {
         /// <summary>
-        /// The application name.
+        /// <para>The application name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>web-server</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The namespace name.
+        /// <para>The namespace name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The type of trigger. Valid values:
+        /// <para>The type of trigger. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>deployment</c>: performs actions on Deployments.</description></item>
+        /// <item><description><c>application</c>: performs actions on applications that are deployed in Application Center.</description></item>
+        /// </list>
+        /// <para>Default value: <c>deployment</c>.</para>
+        /// <para>If you do not set this parameter, triggers are not filtered by type.</para>
         /// 
-        /// *   `deployment`: performs actions on Deployments.
-        /// *   `application`: performs actions on applications that are deployed in Application Center.
-        /// 
-        /// Default value: `deployment`.
-        /// 
-        /// If you do not set this parameter, triggers are not filtered by type.
+        /// <b>Example:</b>
+        /// <para>deployment</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The action that the trigger performs. Set the value to redeploy.
+        /// <para>The action that the trigger performs. Set the value to redeploy.</para>
+        /// <para><c>redeploy</c>: redeploys the resources specified by <c>project_id</c>.</para>
+        /// <para>If you do not specify this parameter, triggers are not filtered by action.</para>
         /// 
-        /// `redeploy`: redeploys the resources specified by `project_id`.
-        /// 
-        /// If you do not specify this parameter, triggers are not filtered by action.
+        /// <b>Example:</b>
+        /// <para>redeploy</para>
         /// </summary>
         [NameInMap("action")]
         [Validation(Required=false)]

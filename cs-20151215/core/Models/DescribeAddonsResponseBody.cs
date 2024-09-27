@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeAddonsResponseBody : TeaModel {
         /// <summary>
-        /// The list of the returned components.
+        /// <para>The list of the returned components.</para>
         /// </summary>
         [NameInMap("ComponentGroups")]
         [Validation(Required=false)]
         public List<DescribeAddonsResponseBodyComponentGroups> ComponentGroups { get; set; }
         public class DescribeAddonsResponseBodyComponentGroups : TeaModel {
             /// <summary>
-            /// The name of the component group.
+            /// <para>The name of the component group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>storage</para>
             /// </summary>
             [NameInMap("group_name")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
             /// <summary>
-            /// The names of the components in the component group.
+            /// <para>The names of the components in the component group.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<DescribeAddonsResponseBodyComponentGroupsItems> Items { get; set; }
             public class DescribeAddonsResponseBodyComponentGroupsItems : TeaModel {
                 /// <summary>
-                /// The name of the component.
+                /// <para>The name of the component.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>flexvolume</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -42,7 +48,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// Standard components.
+        /// <para>Standard components.</para>
         /// </summary>
         [NameInMap("StandardComponents")]
         [Validation(Required=false)]

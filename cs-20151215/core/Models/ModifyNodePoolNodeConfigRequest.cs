@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyNodePoolNodeConfigRequest : TeaModel {
         /// <summary>
-        /// The parameter settings of the kubelet.
+        /// <para>The parameter settings of the kubelet.</para>
         /// </summary>
         [NameInMap("kubelet_config")]
         [Validation(Required=false)]
@@ -27,14 +27,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The rotation configurations.
+        /// <para>The rotation configurations.</para>
         /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestRollingPolicy RollingPolicy { get; set; }
         public class ModifyNodePoolNodeConfigRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// The maximum number of unavailable nodes.
+            /// <para>The maximum number of unavailable nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("max_parallelism")]
             [Validation(Required=false)]

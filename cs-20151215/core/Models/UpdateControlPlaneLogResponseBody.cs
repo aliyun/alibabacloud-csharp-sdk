@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateControlPlaneLogResponseBody : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cb95aa626a47740afbf6aa099b650****</para>
         /// </summary>
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>687C5BAA-D103-4993-884B-C35E4314****</para>
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The task ID.
+        /// <para>The task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>T-5a54309c80282e39ea00****</para>
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]

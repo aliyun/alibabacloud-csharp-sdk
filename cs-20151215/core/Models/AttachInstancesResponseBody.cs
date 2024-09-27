@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class AttachInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The details of the added nodes.
+        /// <para>The details of the added nodes.</para>
         /// </summary>
         [NameInMap("list")]
         [Validation(Required=false)]
         public List<AttachInstancesResponseBodyList> List { get; set; }
         public class AttachInstancesResponseBodyList : TeaModel {
             /// <summary>
-            /// The code that indicates the task result.
+            /// <para>The code that indicates the task result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The ID of the ECS instance.
+            /// <para>The ID of the ECS instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-2ze0lgm3y6iylcbt****</para>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// Indicates whether the ECS instance is successfully added to the ACK cluster.
+            /// <para>Indicates whether the ECS instance is successfully added to the ACK cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>successful</para>
             /// </summary>
             [NameInMap("message")]
             [Validation(Required=false)]
@@ -40,7 +49,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The task ID.
+        /// <para>The task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>T-5a544aff80282e39ea000039</para>
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]

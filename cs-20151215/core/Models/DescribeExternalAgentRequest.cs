@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeExternalAgentRequest : TeaModel {
         /// <summary>
-        /// The permission mode of the agent. Valid values:
+        /// <para>The permission mode of the agent. Valid values:</para>
+        /// <para>admin: the admin mode, which provides full permissions. restricted: the restricted mode, which provides partial permissions. Default value: admin.</para>
         /// 
-        /// admin: the admin mode, which provides full permissions. restricted: the restricted mode, which provides partial permissions. Default value: admin.
+        /// <b>Example:</b>
+        /// <para>admin</para>
         /// </summary>
         [NameInMap("AgentMode")]
         [Validation(Required=false)]
         public string AgentMode { get; set; }
 
         /// <summary>
-        /// Specifies whether to obtain the credentials that are used to access the cluster over the internal network.
+        /// <para>Specifies whether to obtain the credentials that are used to access the cluster over the internal network.</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: obtains the credentials that are used to access the cluster over the internal network.</description></item>
+        /// <item><description><c>false</c>: obtains the credentials that are used to access the cluster over the Internet.</description></item>
+        /// </list>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
-        /// *   `true`: obtains the credentials that are used to access the cluster over the internal network.
-        /// *   `false`: obtains the credentials that are used to access the cluster over the Internet.
-        /// 
-        /// Default value: `false`.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

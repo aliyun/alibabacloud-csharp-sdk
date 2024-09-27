@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterTasksRequest : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page_number")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("page_size")]
         [Validation(Required=false)]

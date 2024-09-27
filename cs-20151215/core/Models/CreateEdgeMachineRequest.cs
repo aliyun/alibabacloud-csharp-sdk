@@ -10,29 +10,36 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateEdgeMachineRequest : TeaModel {
         /// <summary>
-        /// The `hostname` of the cloud-native box.
+        /// <para>The <c>hostname</c> of the cloud-native box.</para>
+        /// <remarks>
+        /// <para> After the cloud-native box is activated, the <c>hostname</c> is automatically modified. The <c>hostname</c> is prefixed with the model and the prefix is followed by a random string.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  After the cloud-native box is activated, the `hostname` is automatically modified. The `hostname` is prefixed with the model and the prefix is followed by a random string.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ACK-B-B010-****</para>
         /// </summary>
         [NameInMap("hostname")]
         [Validation(Required=false)]
         public string Hostname { get; set; }
 
         /// <summary>
-        /// The model of the cloud-native box.
+        /// <para>The model of the cloud-native box.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ACK-V-B010</para>
         /// </summary>
         [NameInMap("model")]
         [Validation(Required=false)]
         public string Model { get; set; }
 
         /// <summary>
-        /// The serial number of the cloud-native box.
+        /// <para>The serial number of the cloud-native box.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Q2CB5XZAFBFG****</para>
         /// </summary>
         [NameInMap("sn")]
         [Validation(Required=false)]

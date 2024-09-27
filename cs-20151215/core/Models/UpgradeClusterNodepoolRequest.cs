@@ -10,53 +10,69 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpgradeClusterNodepoolRequest : TeaModel {
         /// <summary>
-        /// The ID of the OS image that is used by the nodes.
+        /// <para>The ID of the OS image that is used by the nodes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aliyun_2_1903_x64_20G_alibase_20200529.vhd</para>
         /// </summary>
         [NameInMap("image_id")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The Kubernetes version that is used by the nodes. You can call the [DescribeKubernetesVersionMetadata](https://help.aliyun.com/document_detail/2667899.html) operation to query the Kubernetes version of the cluster returned in the current_version parameter.
+        /// <para>The Kubernetes version that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the Kubernetes version of the cluster returned in the current_version parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.22.15-aliyun.1</para>
         /// </summary>
         [NameInMap("kubernetes_version")]
         [Validation(Required=false)]
         public string KubernetesVersion { get; set; }
 
         /// <summary>
-        /// The nodes that you want to update. If you do not specify this parameter, all nodes in the node pool are updated by default.
+        /// <para>The nodes that you want to update. If you do not specify this parameter, all nodes in the node pool are updated by default.</para>
         /// </summary>
         [NameInMap("node_names")]
         [Validation(Required=false)]
         public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// The rotation configuration.
+        /// <para>The rotation configuration.</para>
         /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
         public UpgradeClusterNodepoolRequestRollingPolicy RollingPolicy { get; set; }
         public class UpgradeClusterNodepoolRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// The update interval between batches takes effect only when the pause policy is set to NotPause. Unit: minutes. Valid values: 5 to 120.
+            /// <para>The update interval between batches takes effect only when the pause policy is set to NotPause. Unit: minutes. Valid values: 5 to 120.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5 minutes</para>
             /// </summary>
             [NameInMap("batch_interval")]
             [Validation(Required=false)]
             public int? BatchInterval { get; set; }
 
             /// <summary>
-            /// The maximum number of unavailable nodes.
+            /// <para>The maximum number of unavailable nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("max_parallelism")]
             [Validation(Required=false)]
             public int? MaxParallelism { get; set; }
 
             /// <summary>
-            /// The policy that is used to pause the update. Valid values:
+            /// <para>The policy that is used to pause the update. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>FirstBatch: pauses the update after the first batch is completed.</description></item>
+            /// <item><description>EveryBatch: pauses after each batch is completed.</description></item>
+            /// <item><description>NotPause: does not pause.</description></item>
+            /// </list>
             /// 
-            /// *   FirstBatch: pauses the update after the first batch is completed.
-            /// *   EveryBatch: pauses after each batch is completed.
-            /// *   NotPause: does not pause.
+            /// <b>Example:</b>
+            /// <para>NotPause</para>
             /// </summary>
             [NameInMap("pause_policy")]
             [Validation(Required=false)]
@@ -65,26 +81,35 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The runtime type. You can call the [DescribeKubernetesVersionMetadata](https://help.aliyun.com/document_detail/2667899.html) operation to query the runtime information returned in the runtime parameter.
+        /// <para>The runtime type. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime information returned in the runtime parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>containerd</para>
         /// </summary>
         [NameInMap("runtime_type")]
         [Validation(Required=false)]
         public string RuntimeType { get; set; }
 
         /// <summary>
-        /// The version of the container runtime that is used by the nodes. You can call the [DescribeKubernetesVersionMetadata](https://help.aliyun.com/document_detail/2667899.html) operation to query the runtime version information returned in the runtime parameter.
+        /// <para>The version of the container runtime that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime version information returned in the runtime parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.5.10</para>
         /// </summary>
         [NameInMap("runtime_version")]
         [Validation(Required=false)]
         public string RuntimeVersion { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform the update by replacing the system disk. Valid values:
+        /// <para>Specifies whether to perform the update by replacing the system disk. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: updates by replacing the system disk.</description></item>
+        /// <item><description>false: does not update by replacing the system disk.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
-        /// *   true: updates by replacing the system disk.
-        /// *   false: does not update by replacing the system disk.
-        /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("use_replace")]
         [Validation(Required=false)]

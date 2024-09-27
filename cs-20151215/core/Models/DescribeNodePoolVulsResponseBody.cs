@@ -10,69 +10,84 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeNodePoolVulsResponseBody : TeaModel {
         /// <summary>
-        /// The node pool vulnerabilities.
+        /// <para>The node pool vulnerabilities.</para>
         /// </summary>
         [NameInMap("vul_records")]
         [Validation(Required=false)]
         public List<DescribeNodePoolVulsResponseBodyVulRecords> VulRecords { get; set; }
         public class DescribeNodePoolVulsResponseBodyVulRecords : TeaModel {
             /// <summary>
-            /// The ID of the node.
+            /// <para>The ID of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-t4n2qolb0wtzt0pz****</para>
             /// </summary>
             [NameInMap("instance_id")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The node name. This name is the identifier of the node in the cluster.
+            /// <para>The node name. This name is the identifier of the node in the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou.192.168.x.x</para>
             /// </summary>
             [NameInMap("node_name")]
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
             /// <summary>
-            /// A list of vulnerabilities.
+            /// <para>A list of vulnerabilities.</para>
             /// </summary>
             [NameInMap("vul_list")]
             [Validation(Required=false)]
             public List<DescribeNodePoolVulsResponseBodyVulRecordsVulList> VulList { get; set; }
             public class DescribeNodePoolVulsResponseBodyVulRecordsVulList : TeaModel {
                 /// <summary>
-                /// The alias of the vulnerability.
+                /// <para>The alias of the vulnerability.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RHSA-2019:3197-Important: sudo security update</para>
                 /// </summary>
                 [NameInMap("alias_name")]
                 [Validation(Required=false)]
                 public string AliasName { get; set; }
 
                 /// <summary>
-                /// A list of CVE names corresponding to the vulnerabilities.
+                /// <para>A list of CVE names corresponding to the vulnerabilities.</para>
                 /// </summary>
                 [NameInMap("cve_list")]
                 [Validation(Required=false)]
                 public List<string> CveList { get; set; }
 
                 /// <summary>
-                /// The name of the vulnerability.
+                /// <para>The name of the vulnerability.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>oval:com.redhat.rhsa:def:20193197</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The severity level of the vulnerability.
+                /// <para>The severity level of the vulnerability.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>nntf: You can ignore the vulnerability.</description></item>
+                /// <item><description>later: You can fix the vulnerability later.</description></item>
+                /// <item><description>asap: You need to fix the vulnerability at the earliest opportunity.</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   nntf: You can ignore the vulnerability.
-                /// *   later: You can fix the vulnerability later.
-                /// *   asap: You need to fix the vulnerability at the earliest opportunity.
+                /// <b>Example:</b>
+                /// <para>asap</para>
                 /// </summary>
                 [NameInMap("necessity")]
                 [Validation(Required=false)]
                 public string Necessity { get; set; }
 
                 /// <summary>
-                /// Indicates whether a restart is required.
+                /// <para>Indicates whether a restart is required.</para>
                 /// </summary>
                 [NameInMap("need_reboot")]
                 [Validation(Required=false)]
@@ -82,6 +97,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// <para>Whether the Cloud Security CVE Remediation Service has been purchased</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("vuls_fix_service_purchased")]
         [Validation(Required=false)]
         public bool? VulsFixServicePurchased { get; set; }

@@ -10,45 +10,58 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeEventsRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cf62854ac2130470897be7a27ed1f****</para>
         /// </summary>
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page_number")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("page_size")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The event type. Valid values:
+        /// <para>The event type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>cluster_create</c>: cluster creation.</description></item>
+        /// <item><description><c>cluster_scaleout</c>: cluster scale-out.</description></item>
+        /// <item><description><c>cluster_attach</c>: node addition.</description></item>
+        /// <item><description><c>cluster_delete</c>: cluster deletion.</description></item>
+        /// <item><description><c>cluster_upgrade</c>: cluster upgrades.</description></item>
+        /// <item><description><c>cluster_migrate</c>: cluster migration.</description></item>
+        /// <item><description><c>cluster_node_delete</c>: node removal.</description></item>
+        /// <item><description><c>cluster_node_drain</c>: node draining.</description></item>
+        /// <item><description><c>cluster_modify</c>: cluster modifications.</description></item>
+        /// <item><description><c>cluster_configuration_modify</c>: modifications of control plane configurations.</description></item>
+        /// <item><description><c>cluster_addon_install</c>: component installation.</description></item>
+        /// <item><description><c>cluster_addon_upgrade</c>: component updates.</description></item>
+        /// <item><description><c>cluster_addon_uninstall</c>: component uninstallation.</description></item>
+        /// <item><description><c>runtime_upgrade</c>: runtime updates.</description></item>
+        /// <item><description><c>nodepool_upgrade</c>: node pool upgrades.</description></item>
+        /// <item><description><c>nodepool_update</c>: node pool updates.</description></item>
+        /// </list>
         /// 
-        /// *   `cluster_create`: cluster creation.
-        /// *   `cluster_scaleout`: cluster scale-out.
-        /// *   `cluster_attach`: node addition.
-        /// *   `cluster_delete`: cluster deletion.
-        /// *   `cluster_upgrade`: cluster upgrades.
-        /// *   `cluster_migrate`: cluster migration.
-        /// *   `cluster_node_delete`: node removal.
-        /// *   `cluster_node_drain`: node draining.
-        /// *   `cluster_modify`: cluster modifications.
-        /// *   `cluster_configuration_modify`: modifications of control plane configurations.
-        /// *   `cluster_addon_install`: component installation.
-        /// *   `cluster_addon_upgrade`: component updates.
-        /// *   `cluster_addon_uninstall`: component uninstallation.
-        /// *   `runtime_upgrade`: runtime updates.
-        /// *   `nodepool_upgrade`: node pool upgrades.
-        /// *   `nodepool_update`: node pool updates.
+        /// <b>Example:</b>
+        /// <para>nodepool_upgrade</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

@@ -10,256 +10,341 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClustersV1ResponseBody : TeaModel {
         /// <summary>
-        /// The details of the clusters.
+        /// <para>The details of the clusters.</para>
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]
         public List<DescribeClustersV1ResponseBodyClusters> Clusters { get; set; }
         public class DescribeClustersV1ResponseBodyClusters : TeaModel {
             /// <summary>
-            /// The cluster ID.
+            /// <para>The cluster ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c3fb96524f9274b4495df0f12a6b5****</para>
             /// </summary>
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// After you set `cluster_type` to `ManagedKubernetes` and configure the `profile` parameter, you can further specify the edition of the cluster. Valid values:
+            /// <para>After you set <c>cluster_type</c> to <c>ManagedKubernetes</c> and configure the <c>profile</c> parameter, you can further specify the edition of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>ack.pro.small</c>: ACK Pro cluster.</description></item>
+            /// <item><description><c>ack.standard</c>: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.</description></item>
+            /// </list>
             /// 
-            /// *   `ack.pro.small`: ACK Pro cluster.
-            /// *   `ack.standard`: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.
+            /// <b>Example:</b>
+            /// <para>ack.standard</para>
             /// </summary>
             [NameInMap("cluster_spec")]
             [Validation(Required=false)]
             public string ClusterSpec { get; set; }
 
             /// <summary>
-            /// *   `Kubernetes`: ACK dedicated cluster.
-            /// *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.
-            /// *   `ExternalKubernetes`: registered cluster.
+            /// <list type="bullet">
+            /// <item><description><c>Kubernetes</c>: ACK dedicated cluster.</description></item>
+            /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</description></item>
+            /// <item><description><c>ExternalKubernetes</c>: registered cluster.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Kubernetes</para>
             /// </summary>
             [NameInMap("cluster_type")]
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// The time when the cluster was created.
+            /// <para>The time when the cluster was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-08-20T10:51:29+08:00</para>
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
             public string Created { get; set; }
 
             /// <summary>
-            /// The Kubernetes version of the cluster.
+            /// <para>The Kubernetes version of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.16.9-aliyun.1</para>
             /// </summary>
             [NameInMap("current_version")]
             [Validation(Required=false)]
             public string CurrentVersion { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:
+            /// <para>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.</description></item>
+            /// <item><description><c>false</c>: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.
-            /// *   `false`: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("deletion_protection")]
             [Validation(Required=false)]
             public bool? DeletionProtection { get; set; }
 
             /// <summary>
-            /// The Docker version that is used by the cluster.
+            /// <para>The Docker version that is used by the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>19.03.5</para>
             /// </summary>
             [NameInMap("docker_version")]
             [Validation(Required=false)]
             public string DockerVersion { get; set; }
 
             /// <summary>
-            /// The ID of the Server Load Balancer (SLB) instance that is used by the Ingresses of the cluster.
+            /// <para>The ID of the Server Load Balancer (SLB) instance that is used by the Ingresses of the cluster.</para>
+            /// <para>The default SLB specification is slb.s1.small, which belongs to the high-performance instance type.</para>
             /// 
-            /// The default SLB specification is slb.s1.small, which belongs to the high-performance instance type.
+            /// <b>Example:</b>
+            /// <para>lb-2vcrbmlevo6kjpgch****</para>
             /// </summary>
             [NameInMap("external_loadbalancer_id")]
             [Validation(Required=false)]
             public string ExternalLoadbalancerId { get; set; }
 
             /// <summary>
-            /// The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.
+            /// <para>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.</para>
+            /// <para>You can create clusters that run the latest two Kubernetes versions in the ACK console. You can call the API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</para>
             /// 
-            /// You can create clusters that run the latest two Kubernetes versions in the ACK console. You can call the API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
+            /// <b>Example:</b>
+            /// <para>1.16.9-aliyun.1</para>
             /// </summary>
             [NameInMap("init_version")]
             [Validation(Required=false)]
             public string InitVersion { get; set; }
 
             /// <summary>
-            /// The maintenance window of the cluster. This feature is available only for ACK managed clusters and ACK Serverless clusters.
+            /// <para>The maintenance window of the cluster. This feature is available only for ACK managed clusters and ACK Serverless clusters.</para>
             /// </summary>
             [NameInMap("maintenance_window")]
             [Validation(Required=false)]
             public MaintenanceWindow MaintenanceWindow { get; set; }
 
             /// <summary>
-            /// The address of the cluster API server. It includes an internal endpoint and a public endpoint.
+            /// <para>The address of the cluster API server. It includes an internal endpoint and a public endpoint.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;api_server_endpoint\&quot;:\&quot;\&quot;,\&quot;intranet_api_server_endpoint\&quot;:\&quot;<a href="https://192.168.0.251:6443%5C%5C%22%7D">https://192.168.0.251:6443\\&quot;}</a></para>
             /// </summary>
             [NameInMap("master_url")]
             [Validation(Required=false)]
             public string MasterUrl { get; set; }
 
             /// <summary>
-            /// The metadata of the cluster.
+            /// <para>The metadata of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;Addons\&quot;:[{\&quot;config\&quot;:***}</para>
             /// </summary>
             [NameInMap("meta_data")]
             [Validation(Required=false)]
             public string MetaData { get; set; }
 
             /// <summary>
-            /// The cluster name.
+            /// <para>The cluster name.</para>
+            /// <para>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</para>
             /// 
-            /// The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
+            /// <b>Example:</b>
+            /// <para>cluster-demo</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The network mode of the cluster. Valid values:
+            /// <para>The network mode of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>classic</c>: classic network.</description></item>
+            /// <item><description><c>vpc</c>: virtual private cloud (VPC).</description></item>
+            /// <item><description><c>overlay</c>: overlay network.</description></item>
+            /// <item><description><c>calico</c>: network powered by Calico.</description></item>
+            /// </list>
             /// 
-            /// *   `classic`: classic network.
-            /// *   `vpc`: virtual private cloud (VPC).
-            /// *   `overlay`: overlay network.
-            /// *   `calico`: network powered by Calico.
+            /// <b>Example:</b>
+            /// <para>vpc</para>
             /// </summary>
             [NameInMap("network_mode")]
             [Validation(Required=false)]
             public string NetworkMode { get; set; }
 
             /// <summary>
-            /// The Kubernetes version to which the cluster can be updated.
+            /// <para>The Kubernetes version to which the cluster can be updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.18.8-aliyun.1</para>
             /// </summary>
             [NameInMap("next_version")]
             [Validation(Required=false)]
             public string NextVersion { get; set; }
 
             /// <summary>
-            /// Indicates whether Alibaba Cloud DNS PrivateZone is enabled. Valid values:
+            /// <para>Indicates whether Alibaba Cloud DNS PrivateZone is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c>: Alibaba Cloud DNS PrivateZone is enabled.</description></item>
+            /// <item><description><c>false</c>: Alibaba Cloud DNS PrivateZone is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   `true`: Alibaba Cloud DNS PrivateZone is enabled.
-            /// *   `false`: Alibaba Cloud DNS PrivateZone is disabled.
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("private_zone")]
             [Validation(Required=false)]
             public bool? PrivateZone { get; set; }
 
             /// <summary>
-            /// The cluster identifier. Valid values:
+            /// <para>The cluster identifier. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>Default</c>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</description></item>
+            /// <item><description><c>Edge</c>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</description></item>
+            /// <item><description><c>Serverless</c>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</description></item>
+            /// <item><description><c>Lingjun</c>: ACK Lingjun Pro cluster.</description></item>
+            /// </list>
             /// 
-            /// *   `Default`: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.
-            /// *   `Edge`: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.
-            /// *   `Serverless`: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.
-            /// *   `Lingjun`: ACK Lingjun Pro cluster.
+            /// <b>Example:</b>
+            /// <para>Default</para>
             /// </summary>
             [NameInMap("profile")]
             [Validation(Required=false)]
             public string Profile { get; set; }
 
             /// <summary>
-            /// The region ID of the cluster.
+            /// <para>The region ID of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-beijing</para>
             /// </summary>
             [NameInMap("region_id")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The ID of the resource group to which the cluster belongs.
+            /// <para>The ID of the resource group to which the cluster belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmyvw3wjm****</para>
             /// </summary>
             [NameInMap("resource_group_id")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The ID of the security group of the cluster.
+            /// <para>The ID of the security group of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sg-2vcgwsrwgt5mp0yi****</para>
             /// </summary>
             [NameInMap("security_group_id")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// The number of nodes in the cluster, including master nodes and worker nodes.
+            /// <para>The number of nodes in the cluster, including master nodes and worker nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
 
             /// <summary>
-            /// The status of the cluster. Valid values:
+            /// <para>The status of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>initial</c>: The cluster is being created.</description></item>
+            /// <item><description><c>failed</c>: The cluster failed to be created.</description></item>
+            /// <item><description><c>running</c>: The cluster is running.</description></item>
+            /// <item><description><c>updating</c>: The cluster is being updated.</description></item>
+            /// <item><description><c>updating_failed</c>: The cluster failed to be updated.</description></item>
+            /// <item><description><c>scaling</c>: The cluster is being scaled.</description></item>
+            /// <item><description><c>stopped</c>: The cluster is stopped.</description></item>
+            /// <item><description><c>deleting</c>: The cluster is being deleted.</description></item>
+            /// <item><description><c>deleted</c>: The cluster is deleted.</description></item>
+            /// <item><description><c>delete_failed</c>: The cluster failed to be deleted.</description></item>
+            /// </list>
             /// 
-            /// *   `initial`: The cluster is being created.
-            /// *   `failed`: The cluster failed to be created.
-            /// *   `running`: The cluster is running.
-            /// *   `updating`: The cluster is being updated.
-            /// *   `updating_failed`: The cluster failed to be updated.
-            /// *   `scaling`: The cluster is being scaled.
-            /// *   `stopped`: The cluster is stopped.
-            /// *   `deleting`: The cluster is being deleted.
-            /// *   `deleted`: The cluster is deleted.
-            /// *   `delete_failed`: The cluster failed to be deleted.
+            /// <b>Example:</b>
+            /// <para>running</para>
             /// </summary>
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:
+            /// <para>The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</para>
+            /// <list type="bullet">
+            /// <item><description>10.0.0.0/8</description></item>
+            /// <item><description>172.16-31.0.0/12-16</description></item>
+            /// <item><description>192.168.0.0/16</description></item>
+            /// </list>
+            /// <para>The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</para>
+            /// <para>For more information about the network planning of ACK clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster</a>.</para>
             /// 
-            /// *   10.0.0.0/8
-            /// *   172.16-31.0.0/12-16
-            /// *   192.168.0.0/16
-            /// 
-            /// The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.
-            /// 
-            /// For more information about the network planning of ACK clusters, see [Plan CIDR blocks for an ACK cluster](https://help.aliyun.com/document_detail/86500.html).
+            /// <b>Example:</b>
+            /// <para>172.21.0.0/16</para>
             /// </summary>
             [NameInMap("subnet_cidr")]
             [Validation(Required=false)]
             public string SubnetCidr { get; set; }
 
             /// <summary>
-            /// The resource labels of the cluster.
+            /// <para>The resource labels of the cluster.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// The time when the cluster was updated.
+            /// <para>The time when the cluster was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-09-16T11:09:55+08:00</para>
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]
             public string Updated { get; set; }
 
             /// <summary>
-            /// The ID of the VPC where the cluster is deployed. This parameter is required when you create a cluster.
+            /// <para>The ID of the VPC where the cluster is deployed. This parameter is required when you create a cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-2vcg932hsxsxuqbgl****</para>
             /// </summary>
             [NameInMap("vpc_id")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
             /// <summary>
-            /// The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.
+            /// <para>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-2vc41xuumx5z2rdma****,vsw-2vc41xuumx5z2rdma****</para>
             /// </summary>
             [NameInMap("vswitch_id")]
             [Validation(Required=false)]
             public string VswitchId { get; set; }
 
             /// <summary>
-            /// The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.
+            /// <para>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>KubernetesWorkerRole-ec87d15b-edca-4302-933f-c8a16bf0****</para>
             /// </summary>
             [NameInMap("worker_ram_role_name")]
             [Validation(Required=false)]
             public string WorkerRamRoleName { get; set; }
 
             /// <summary>
-            /// The ID of the zone where the cluster is deployed.
+            /// <para>The ID of the zone where the cluster is deployed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-beijing-b</para>
             /// </summary>
             [NameInMap("zone_id")]
             [Validation(Required=false)]
@@ -268,28 +353,37 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeClustersV1ResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeClustersV1ResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("page_number")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("page_size")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("total_count")]
             [Validation(Required=false)]

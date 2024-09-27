@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterUserKubeconfigResponseBody : TeaModel {
         /// <summary>
-        /// The kubeconfig file of the cluster. For more information about the content of the kubeconfig file, see [Configure cluster credentials](https://help.aliyun.com/document_detail/86494.html).
+        /// <para>The kubeconfig file of the cluster. For more information about the content of the kubeconfig file, see <a href="https://help.aliyun.com/document_detail/86494.html">Configure cluster credentials</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>apiVersion: v1****</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// The validity period of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.
+        /// <para>The validity period of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-03-10T09:56:17Z</para>
         /// </summary>
         [NameInMap("expiration")]
         [Validation(Required=false)]

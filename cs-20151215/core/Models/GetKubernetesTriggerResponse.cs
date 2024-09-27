@@ -22,60 +22,78 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<GetKubernetesTriggerResponseBody> Body { get; set; }
         public class GetKubernetesTriggerResponseBody : TeaModel {
             /// <summary>
-            /// The ID of the trigger.
+            /// <para>The ID of the trigger.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234</para>
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The name of the trigger.
+            /// <para>The name of the trigger.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the associated cluster.
+            /// <para>The ID of the associated cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c259f563386444ebb8d7**</para>
             /// </summary>
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the project.
+            /// <para>The name of the project.</para>
+            /// <para>The name consists of the namespace where the application is deployed and the name of the application. The format is <c>${namespace}/${name}</c>. Example: default/test-app.</para>
             /// 
-            /// The name consists of the namespace where the application is deployed and the name of the application. The format is `${namespace}/${name}`. Example: default/test-app.
+            /// <b>Example:</b>
+            /// <para>default/test-app</para>
             /// </summary>
             [NameInMap("project_id")]
             [Validation(Required=false)]
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// The type of trigger.
+            /// <para>The type of trigger.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>deployment</c>: performs actions on Deployments.</description></item>
+            /// <item><description><c>application</c>: performs actions on applications that are deployed in Application Center.</description></item>
+            /// </list>
+            /// <para>Default value: <c>deployment</c>.</para>
             /// 
-            /// Valid values:
-            /// 
-            /// *   `deployment`: performs actions on Deployments.
-            /// *   `application`: performs actions on applications that are deployed in Application Center.
-            /// 
-            /// Default value: `deployment`.
+            /// <b>Example:</b>
+            /// <para>deployment</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The action that the trigger performs. The value is set to redeploy.
+            /// <para>The action that the trigger performs. The value is set to redeploy.</para>
+            /// <para><c>redeploy</c>: redeploys the resource specified by project_id.</para>
             /// 
-            /// `redeploy`: redeploys the resource specified by project_id.
+            /// <b>Example:</b>
+            /// <para>redeploy</para>
             /// </summary>
             [NameInMap("action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
             /// <summary>
-            /// Token
+            /// <para>Token</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eyJhbGci***</para>
             /// </summary>
             [NameInMap("token")]
             [Validation(Required=false)]

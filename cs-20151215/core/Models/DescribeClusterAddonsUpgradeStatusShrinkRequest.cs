@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterAddonsUpgradeStatusShrinkRequest : TeaModel {
         /// <summary>
-        /// The list of component names.
-        /// 
-        /// This parameter is required.
+        /// <para>The list of component names.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("componentIds")]
         [Validation(Required=false)]

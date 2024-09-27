@@ -22,93 +22,121 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeKubernetesVersionMetadataResponseBody> Body { get; set; }
         public class DescribeKubernetesVersionMetadataResponseBody : TeaModel {
             /// <summary>
-            /// Features of the queried Kubernetes version.
+            /// <para>Features of the queried Kubernetes version.</para>
             /// </summary>
             [NameInMap("capabilities")]
             [Validation(Required=false)]
             public Dictionary<string, object> Capabilities { get; set; }
 
             /// <summary>
-            /// The OS images that are returned.
+            /// <para>The OS images that are returned.</para>
             /// </summary>
             [NameInMap("images")]
             [Validation(Required=false)]
             public List<DescribeKubernetesVersionMetadataResponseBodyImages> Images { get; set; }
             public class DescribeKubernetesVersionMetadataResponseBodyImages : TeaModel {
                 /// <summary>
-                /// The image ID.
+                /// <para>The image ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>centos_7_7_x64_20G_alibase_20200426.vhd</para>
                 /// </summary>
                 [NameInMap("image_id")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The image name.
+                /// <para>The image name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CentOS 7.7</para>
                 /// </summary>
                 [NameInMap("image_name")]
                 [Validation(Required=false)]
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// The OS platform. Valid values:
+                /// <para>The OS platform. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>AliyunLinux</c></description></item>
+                /// <item><description><c>CentOS</c></description></item>
+                /// <item><description><c>Windows</c></description></item>
+                /// <item><description><c>WindowsCore</c></description></item>
+                /// </list>
                 /// 
-                /// *   `AliyunLinux`
-                /// *   `CentOS`
-                /// *   `Windows`
-                /// *   `WindowsCore`
+                /// <b>Example:</b>
+                /// <para>CentOS</para>
                 /// </summary>
                 [NameInMap("platform")]
                 [Validation(Required=false)]
                 public string Platform { get; set; }
 
                 /// <summary>
-                /// The version of the image.
+                /// <para>The version of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>7.7</para>
                 /// </summary>
                 [NameInMap("os_version")]
                 [Validation(Required=false)]
                 public string OsVersion { get; set; }
 
                 /// <summary>
-                /// The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:
+                /// <para>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>CentOS</c></description></item>
+                /// <item><description><c>AliyunLinux</c></description></item>
+                /// <item><description><c>AliyunLinux Qboot</c></description></item>
+                /// <item><description><c>AliyunLinuxUEFI</c></description></item>
+                /// <item><description><c>AliyunLinux3</c></description></item>
+                /// <item><description><c>Windows</c></description></item>
+                /// <item><description><c>WindowsCore</c></description></item>
+                /// <item><description><c>AliyunLinux3Arm64</c></description></item>
+                /// <item><description><c>ContainerOS</c></description></item>
+                /// </list>
                 /// 
-                /// *   `CentOS`
-                /// *   `AliyunLinux`
-                /// *   `AliyunLinux Qboot`
-                /// *   `AliyunLinuxUEFI`
-                /// *   `AliyunLinux3`
-                /// *   `Windows`
-                /// *   `WindowsCore`
-                /// *   `AliyunLinux3Arm64`
-                /// *   `ContainerOS`
+                /// <b>Example:</b>
+                /// <para>centos_7_7_20</para>
                 /// </summary>
                 [NameInMap("image_type")]
                 [Validation(Required=false)]
                 public string ImageType { get; set; }
 
                 /// <summary>
-                /// The type of OS. Examples:
+                /// <para>The type of OS. Examples:</para>
+                /// <list type="bullet">
+                /// <item><description><c>Windows</c></description></item>
+                /// <item><description><c>Linux</c></description></item>
+                /// </list>
                 /// 
-                /// *   `Windows`
-                /// *   `Linux`
+                /// <b>Example:</b>
+                /// <para>Linux</para>
                 /// </summary>
                 [NameInMap("os_type")]
                 [Validation(Required=false)]
                 public string OsType { get; set; }
 
                 /// <summary>
-                /// The type of image. Valid values:
+                /// <para>The type of image. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>system</c>: public image</description></item>
+                /// <item><description><c>self</c>: custom image</description></item>
+                /// <item><description><c>others</c>: shared image from other Alibaba Cloud accounts</description></item>
+                /// <item><description><c>marketplace</c>: image from the marketplace</description></item>
+                /// </list>
                 /// 
-                /// *   `system`: public image
-                /// *   `self`: custom image
-                /// *   `others`: shared image from other Alibaba Cloud accounts
-                /// *   `marketplace`: image from the marketplace
+                /// <b>Example:</b>
+                /// <para>system</para>
                 /// </summary>
                 [NameInMap("image_category")]
                 [Validation(Required=false)]
                 public string ImageCategory { get; set; }
 
                 /// <summary>
-                /// The architecture of the image.
+                /// <para>The architecture of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>x86_64</para>
                 /// </summary>
                 [NameInMap("architecture")]
                 [Validation(Required=false)]
@@ -117,49 +145,61 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// The metadata of the Kubernetes version.
+            /// <para>The metadata of the Kubernetes version.</para>
             /// </summary>
             [NameInMap("meta_data")]
             [Validation(Required=false)]
             public Dictionary<string, object> MetaData { get; set; }
 
             /// <summary>
-            /// Details of the supported container runtimes.
+            /// <para>Details of the supported container runtimes.</para>
             /// </summary>
             [NameInMap("runtimes")]
             [Validation(Required=false)]
             public List<Runtime> Runtimes { get; set; }
 
             /// <summary>
-            /// The Kubernetes version supported by ACK. For more information, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
+            /// <para>The Kubernetes version supported by ACK. For more information, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.16.9-aliyun.1</para>
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]
             public string Version { get; set; }
 
             /// <summary>
-            /// The release date of the Kubernetes version.
+            /// <para>The release date of the Kubernetes version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-04-30T00:00:00Z</para>
             /// </summary>
             [NameInMap("release_date")]
             [Validation(Required=false)]
             public string ReleaseDate { get; set; }
 
             /// <summary>
-            /// The expiration date of the Kubernetes version.
+            /// <para>The expiration date of the Kubernetes version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-04-30T00:00:00Z</para>
             /// </summary>
             [NameInMap("expiration_date")]
             [Validation(Required=false)]
             public string ExpirationDate { get; set; }
 
             /// <summary>
-            /// Indicates whether you can create clusters that run the Kubernetes version.
+            /// <para>Indicates whether you can create clusters that run the Kubernetes version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("creatable")]
             [Validation(Required=false)]
             public bool? Creatable { get; set; }
 
             /// <summary>
-            /// The list of available versions for updates.
+            /// <para>The list of available versions for updates.</para>
             /// </summary>
             [NameInMap("upgradable_versions")]
             [Validation(Required=false)]

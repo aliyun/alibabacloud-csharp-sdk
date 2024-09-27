@@ -10,61 +10,82 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateUserPermissionsRequest : TeaModel {
         /// <summary>
-        /// The request body.
+        /// <para>The request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<UpdateUserPermissionsRequestBody> Body { get; set; }
         public class UpdateUserPermissionsRequestBody : TeaModel {
             /// <summary>
-            /// The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.
+            /// <para>The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.</para>
+            /// <list type="bullet">
+            /// <item><description>Set this parameter to an empty string if <c>role_type</c> is set to <c>all-clusters</c>.</description></item>
+            /// </list>
             /// 
-            /// *   Set this parameter to an empty string if `role_type` is set to `all-clusters`.
+            /// <b>Example:</b>
+            /// <para>c796c60***</para>
             /// </summary>
             [NameInMap("cluster")]
             [Validation(Required=false)]
             public string Cluster { get; set; }
 
             /// <summary>
-            /// Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set `role_name` to the name of the custom role.
+            /// <para>Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set <c>role_name</c> to the name of the custom role.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("is_custom")]
             [Validation(Required=false)]
             public bool? IsCustom { get; set; }
 
             /// <summary>
-            /// Specifies whether to use a RAM role to grant permissions.
+            /// <para>Specifies whether to use a RAM role to grant permissions.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("is_ram_role")]
             [Validation(Required=false)]
             public bool? IsRamRole { get; set; }
 
             /// <summary>
-            /// The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.
+            /// <para>The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The predefined role. Valid values:
+            /// <para>The predefined role. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>admin</c>: administrator</description></item>
+            /// <item><description><c>ops</c>: O\&amp;M engineer</description></item>
+            /// <item><description><c>dev</c>: developer</description></item>
+            /// <item><description><c>restricted</c>: restricted user</description></item>
+            /// <item><description>Custom role</description></item>
+            /// </list>
             /// 
-            /// *   `admin`: administrator
-            /// *   `ops`: O\\&M engineer
-            /// *   `dev`: developer
-            /// *   `restricted`: restricted user
-            /// *   Custom role
+            /// <b>Example:</b>
+            /// <para>ops</para>
             /// </summary>
             [NameInMap("role_name")]
             [Validation(Required=false)]
             public string RoleName { get; set; }
 
             /// <summary>
-            /// The authorization type. Valid values:
+            /// <para>The authorization type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>cluster</c>: authorizes the RAM user or RAM role to manage the specified clusters.</description></item>
+            /// <item><description><c>namespace</c>: authorizes the RAM user or RAM role to manage the specified namepsaces.</description></item>
+            /// <item><description><c>all-clusters</c>: authorizes the RAM user or RAM role to manage all clusters.</description></item>
+            /// </list>
             /// 
-            /// *   `cluster`: authorizes the RAM user or RAM role to manage the specified clusters.
-            /// *   `namespace`: authorizes the RAM user or RAM role to manage the specified namepsaces.
-            /// *   `all-clusters`: authorizes the RAM user or RAM role to manage all clusters.
+            /// <b>Example:</b>
+            /// <para>cluster</para>
             /// </summary>
             [NameInMap("role_type")]
             [Validation(Required=false)]
@@ -73,13 +94,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The authorization method. Valid values:
+        /// <para>The authorization method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>apply</c>: updates all permissions of the RAM user or RAM role. If you use this method, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</description></item>
+        /// <item><description><c>delete</c>: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, other permissions of the RAM user or RAM role on the cluster are not affected.</description></item>
+        /// <item><description><c>patch</c>: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, other permissions of the RAM user or RAM role on the cluster are not affected.</description></item>
+        /// </list>
+        /// <para>Default value: <c>apply</c></para>
         /// 
-        /// *   `apply`: updates all permissions of the RAM user or RAM role. If you use this method, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.
-        /// *   `delete`: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, other permissions of the RAM user or RAM role on the cluster are not affected.
-        /// *   `patch`: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, other permissions of the RAM user or RAM role on the cluster are not affected.
-        /// 
-        /// Default value: `apply`
+        /// <b>Example:</b>
+        /// <para>apply</para>
         /// </summary>
         [NameInMap("mode")]
         [Validation(Required=false)]

@@ -22,35 +22,50 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeClusterLogsResponseBody> Body { get; set; }
         public class DescribeClusterLogsResponseBody : TeaModel {
             /// <summary>
-            /// The ID of the log entry.
+            /// <para>The ID of the log entry.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>590749245</para>
             /// </summary>
             [NameInMap("ID")]
             [Validation(Required=false)]
             public long? ID { get; set; }
 
             /// <summary>
-            /// The cluster ID.
+            /// <para>The cluster ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c23421cfa74454bc8b37163fd19af***</para>
             /// </summary>
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The log content.
+            /// <para>The log content.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>start to update cluster status to CREATE_COMPLETE</para>
             /// </summary>
             [NameInMap("cluster_log")]
             [Validation(Required=false)]
             public string ClusterLog { get; set; }
 
             /// <summary>
-            /// The time when the log entry was generated.
+            /// <para>The time when the log entry was generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-09-11T10:11:51+08:00</para>
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
             public string Created { get; set; }
 
             /// <summary>
-            /// The time when the log entry was updated.
+            /// <para>The time when the log entry was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-09-11T10:11:51+08:00</para>
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]
