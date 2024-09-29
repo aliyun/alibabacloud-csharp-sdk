@@ -136,6 +136,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string MaxComputeResource { get; set; }
 
+            [NameInMap("MaxGpuQuantity")]
+            [Validation(Required=false)]
+            public int? MaxGpuQuantity { get; set; }
+
             /// <summary>
             /// <para>This parameter is required.</para>
             /// </summary>
@@ -162,6 +166,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [NameInMap("MinComputeResource")]
             [Validation(Required=false)]
             public string MinComputeResource { get; set; }
+
+            [NameInMap("MinGpuQuantity")]
+            [Validation(Required=false)]
+            public int? MinGpuQuantity { get; set; }
 
             /// <summary>
             /// <para>The job resubmission rules.</para>
@@ -212,6 +220,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public int? RunningClusterCount { get; set; }
 
+            [NameInMap("SpecName")]
+            [Validation(Required=false)]
+            public string SpecName { get; set; }
+
             /// <summary>
             /// <para>The status of the resource group. Valid values:</para>
             /// <list type="bullet">
@@ -226,6 +238,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("TargetResourceGroupName")]
+            [Validation(Required=false)]
+            public string TargetResourceGroupName { get; set; }
 
             /// <summary>
             /// <para>The time when the resource group was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</para>

@@ -1,3 +1,15 @@
+2024-09-29 Version: 2.0.9
+- Update API CreateDBResourceGroup: add param MaxGpuQuantity.
+- Update API CreateDBResourceGroup: add param MinGpuQuantity.
+- Update API CreateDBResourceGroup: add param SpecName.
+- Update API CreateDBResourceGroup: add param TargetResourceGroupName.
+- Update API DescribeDBResourceGroup: update response param.
+- Update API ModifyDBResourceGroup: add param MaxGpuQuantity.
+- Update API ModifyDBResourceGroup: add param MinGpuQuantity.
+- Update API ModifyDBResourceGroup: add param SpecName.
+- Update API ModifyDBResourceGroup: add param TargetResourceGroupName.
+
+
 2024-09-26 Version: 2.0.8
 - Update API DescribeClusterAccessWhiteList: add param RegionId.
 

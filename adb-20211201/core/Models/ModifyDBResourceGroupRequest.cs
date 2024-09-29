@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string MaxComputeResource { get; set; }
 
+        [NameInMap("MaxGpuQuantity")]
+        [Validation(Required=false)]
+        public int? MaxGpuQuantity { get; set; }
+
         /// <summary>
         /// <para>A reserved parameter.</para>
         /// 
@@ -137,6 +141,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("MinComputeResource")]
         [Validation(Required=false)]
         public string MinComputeResource { get; set; }
+
+        [NameInMap("MinGpuQuantity")]
+        [Validation(Required=false)]
+        public int? MinGpuQuantity { get; set; }
 
         /// <summary>
         /// <para>The region ID of the cluster.</para>
@@ -189,6 +197,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TargetGroupName { get; set; }
 
         }
+
+        [NameInMap("SpecName")]
+        [Validation(Required=false)]
+        public string SpecName { get; set; }
+
+        [NameInMap("TargetResourceGroupName")]
+        [Validation(Required=false)]
+        public string TargetResourceGroupName { get; set; }
 
     }
 
