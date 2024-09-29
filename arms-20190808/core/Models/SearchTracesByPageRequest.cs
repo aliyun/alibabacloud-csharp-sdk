@@ -10,30 +10,38 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class SearchTracesByPageRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. Unit: milliseconds.
+        /// <para>The end of the time range to query. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1595210400000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The filter conditions.
+        /// <para>The filter conditions.</para>
         /// </summary>
         [NameInMap("ExclusionFilters")]
         [Validation(Required=false)]
         public List<SearchTracesByPageRequestExclusionFilters> ExclusionFilters { get; set; }
         public class SearchTracesByPageRequestExclusionFilters : TeaModel {
             /// <summary>
-            /// The key that is used to filter the query results.
+            /// <para>The key that is used to filter the query results.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>http.status_code</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the key that is used to filter the query results.
+            /// <para>The value of the key that is used to filter the query results.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>404</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -42,118 +50,158 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// Specifies whether to include the traces of abnormal calls.
+        /// <para>Specifies whether to include the traces of abnormal calls.</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: No</description></item>
+        /// <item><description><c>false</c> (default): Yes</description></item>
+        /// </list>
         /// 
-        /// *   `true`: No
-        /// *   `false` (default): Yes
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsError")]
         [Validation(Required=false)]
         public bool? IsError { get; set; }
 
         /// <summary>
-        /// The minimum amount of time consumed by traces. Unit: milliseconds.
+        /// <para>The minimum amount of time consumed by traces. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("MinDuration")]
         [Validation(Required=false)]
         public long? MinDuration { get; set; }
 
         /// <summary>
-        /// The name of the traced span.
+        /// <para>The name of the traced span.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/demo/queryNotExistDB/11</para>
         /// </summary>
         [NameInMap("OperationName")]
         [Validation(Required=false)]
         public string OperationName { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100.
+        /// <para>The number of entries to return on each page. Maximum value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The application ID.
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b590lhguqs@9781be0f44dXXXX</para>
         /// </summary>
         [NameInMap("Pid")]
         [Validation(Required=false)]
         public string Pid { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.
+        /// <para>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: <c>false</c>.</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: sorts the query results in reverse chronological order.</description></item>
+        /// <item><description><c>false</c>: sorts the query results in chronological order.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: sorts the query results in reverse chronological order.
-        /// *   `false`: sorts the query results in chronological order.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Reverse")]
         [Validation(Required=false)]
         public bool? Reverse { get; set; }
 
         /// <summary>
-        /// The IP address of the host where the application resides.
+        /// <para>The IP address of the host where the application resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.20.XX.XX</para>
         /// </summary>
         [NameInMap("ServiceIp")]
         [Validation(Required=false)]
         public string ServiceIp { get; set; }
 
         /// <summary>
-        /// The name of the application.
+        /// <para>The name of the application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>arms-k8s-demo-subcomponent</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Unit: milliseconds.
+        /// <para>The beginning of the time range to query. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1595174400000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<SearchTracesByPageRequestTags> Tags { get; set; }
         public class SearchTracesByPageRequestTags : TeaModel {
             /// <summary>
-            /// The key of the tag. The following system preset fields are provided:
+            /// <para>The key of the tag. The following system preset fields are provided:</para>
+            /// <list type="bullet">
+            /// <item><description>traceId: the ID of the trace.</description></item>
+            /// <item><description>serverApp: the name of the server application.</description></item>
+            /// <item><description>clientApp: the name of the client application.</description></item>
+            /// <item><description>service: the name of the interface.</description></item>
+            /// <item><description>rpc: the type of the call.</description></item>
+            /// <item><description>msOfSpan: the duration exceeds a specific value.</description></item>
+            /// <item><description>clientIp: the IP address of the client.</description></item>
+            /// <item><description>serverIp: the IP address of the server.</description></item>
+            /// <item><description>isError: specifies whether the call is abnormal.</description></item>
+            /// </list>
             /// 
-            /// *   traceId: the ID of the trace.
-            /// *   serverApp: the name of the server application.
-            /// *   clientApp: the name of the client application.
-            /// *   service: the name of the interface.
-            /// *   rpc: the type of the call.
-            /// *   msOfSpan: the duration exceeds a specific value.
-            /// *   clientIp: the IP address of the client.
-            /// *   serverIp: the IP address of the server.
-            /// *   isError: specifies whether the call is abnormal.
+            /// <b>Example:</b>
+            /// <para>http.status_code</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

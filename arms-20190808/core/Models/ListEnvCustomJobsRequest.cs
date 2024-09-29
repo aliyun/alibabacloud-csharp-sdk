@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvCustomJobsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return the encrypted YAML string.
+        /// <para>Specifies whether to return the encrypted YAML string.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EncryptYaml")]
         [Validation(Required=false)]
         public bool? EncryptYaml { get; set; }
 
         /// <summary>
-        /// The ID of the environment instance.
+        /// <para>The ID of the environment instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>env-xxxxx</para>
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

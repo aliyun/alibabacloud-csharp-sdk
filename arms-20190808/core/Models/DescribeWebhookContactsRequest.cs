@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeWebhookContactsRequest : TeaModel {
         /// <summary>
-        /// The ID of the alert contact.
+        /// <para>The ID of the alert contact.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("ContactIds")]
         [Validation(Required=false)]
         public string ContactIds { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public long? Page { get; set; }
 
         /// <summary>
-        /// The number of alert contacts displayed on each page.
+        /// <para>The number of alert contacts displayed on each page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]
         public long? Size { get; set; }
 
         /// <summary>
-        /// The name of the webhook alert contact.
+        /// <para>The name of the webhook alert contact.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Webhook name</para>
         /// </summary>
         [NameInMap("WebhookName")]
         [Validation(Required=false)]

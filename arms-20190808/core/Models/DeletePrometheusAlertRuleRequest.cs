@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeletePrometheusAlertRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.
+        /// <para>The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3888704</para>
         /// </summary>
         [NameInMap("AlertId")]
         [Validation(Required=false)]
         public long? AlertId { get; set; }
 
         /// <summary>
-        /// The cluster ID of the Prometheus monitoring alarm rule.
+        /// <para>The cluster ID of the Prometheus monitoring alarm rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc7a37ee31aea4ed1a059eff8034b****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

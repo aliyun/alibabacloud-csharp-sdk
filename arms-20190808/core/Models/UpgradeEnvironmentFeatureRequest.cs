@@ -10,46 +10,62 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpgradeEnvironmentFeatureRequest : TeaModel {
         /// <summary>
-        /// The language. Valid values: zh and en. Default value: zh.
+        /// <para>The language. Valid values: zh and en. Default value: zh.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// The environment ID.
+        /// <para>The environment ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>env-xxx</para>
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The feature name. Valid values: app-agent-pilot, metric-agent, ebpf-agent, and service-check.
+        /// <para>The feature name. Valid values: app-agent-pilot, metric-agent, ebpf-agent, and service-check.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>metric-agent</para>
         /// </summary>
         [NameInMap("FeatureName")]
         [Validation(Required=false)]
         public string FeatureName { get; set; }
 
         /// <summary>
-        /// The version of the feature.
+        /// <para>The version of the feature.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.1.17</para>
         /// </summary>
         [NameInMap("FeatureVersion")]
         [Validation(Required=false)]
         public string FeatureVersion { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable service discovery. For PodAnnotation, set the value to run or mini. For PodMonitor and ServiceMonitor, set the value to true or false.
+        /// <para>Specifies whether to enable service discovery. For PodAnnotation, set the value to run or mini. For PodMonitor and ServiceMonitor, set the value to true or false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;PodAnnotation&quot;:&quot;run&quot;}</para>
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]

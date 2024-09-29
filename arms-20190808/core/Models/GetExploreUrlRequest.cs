@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetExploreUrlRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c9cc4c5e220f8461f9d71b6ec6e******</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The query statement that corresponds to the data source.
+        /// <para>The query statement that corresponds to the data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{app=&quot;buy2&quot;}</para>
         /// </summary>
         [NameInMap("Expression")]
         [Validation(Required=false)]
         public string Expression { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the Grafana data source.
+        /// <para>The type of the Grafana data source.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>prometheus</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

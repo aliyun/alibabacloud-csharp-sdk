@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DataBonreeSDKConfigModuleConfigDefaultConfigValue : TeaModel {
         /// <summary>
-        /// Indicates whether the configuration is enabled.
+        /// <para>Indicates whether the configuration is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]

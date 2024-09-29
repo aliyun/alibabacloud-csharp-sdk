@@ -10,47 +10,59 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetTraceAppConfigResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>2xx: The request was successful.</description></item>
+        /// <item><description>3xx: The request was redirected.</description></item>
+        /// <item><description>4xx: A request error occurred.</description></item>
+        /// <item><description>5xx: A server error occurred.</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   2xx: The request was successful.
-        /// *   3xx: The request was redirected.
-        /// *   4xx: A request error occurred.
-        /// *   5xx: A server error occurred.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
         /// <summary>
-        /// The custom settings of the application, which is a JSON string. For more information, see **Additional description of response parameters**.
+        /// <para>The custom settings of the application, which is a JSON string. For more information, see <b>Additional description of response parameters</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;profiler&quot;:{&quot;enable&quot;:true}}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>78901766-3806-4E96-8E47-CFEF59E4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

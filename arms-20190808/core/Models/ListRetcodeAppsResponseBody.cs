@@ -10,84 +10,112 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListRetcodeAppsResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>99A663CB-8D7B-4B0D-A006-03C8EE38E7BB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of applications monitored by Browser Monitoring.
+        /// <para>The list of applications monitored by Browser Monitoring.</para>
         /// </summary>
         [NameInMap("RetcodeApps")]
         [Validation(Required=false)]
         public List<ListRetcodeAppsResponseBodyRetcodeApps> RetcodeApps { get; set; }
         public class ListRetcodeAppsResponseBodyRetcodeApps : TeaModel {
             /// <summary>
-            /// The ID of the application. The parameter is an auto-increment parameter.
+            /// <para>The ID of the application. The parameter is an auto-increment parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16064</para>
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public long? AppId { get; set; }
 
             /// <summary>
-            /// The name of the application.
+            /// <para>The name of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>A1</para>
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
             /// <summary>
-            /// The alias of the application monitored by Browser Monitoring.
+            /// <para>The alias of the application monitored by Browser Monitoring.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>B1</para>
             /// </summary>
             [NameInMap("NickName")]
             [Validation(Required=false)]
             public string NickName { get; set; }
 
             /// <summary>
-            /// The process identifier (PID) of the application.
+            /// <para>The process identifier (PID) of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>atc889zkcf@d8deedfa9bf****</para>
             /// </summary>
             [NameInMap("Pid")]
             [Validation(Required=false)]
             public string Pid { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmxyexli2****</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The type of the application. Valid values:
+            /// <para>The type of the application. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>web</c>: web application</description></item>
+            /// <item><description><c>weex</c>: Weex mobile app</description></item>
+            /// <item><description><c>mini_dd</c>: DingTalk mini program</description></item>
+            /// <item><description><c>mini_alipay</c>: Alipay mini program</description></item>
+            /// <item><description><c>mini_wx</c>: WeChat mini program</description></item>
+            /// <item><description><c>mini_common</c>: mini program on other platforms</description></item>
+            /// </list>
             /// 
-            /// *   `web`: web application
-            /// *   `weex`: Weex mobile app
-            /// *   `mini_dd`: DingTalk mini program
-            /// *   `mini_alipay`: Alipay mini program
-            /// *   `mini_wx`: WeChat mini program
-            /// *   `mini_common`: mini program on other platforms
+            /// <b>Example:</b>
+            /// <para>web</para>
             /// </summary>
             [NameInMap("RetcodeAppType")]
             [Validation(Required=false)]
             public string RetcodeAppType { get; set; }
 
             /// <summary>
-            /// The tags of the task.
+            /// <para>The tags of the task.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListRetcodeAppsResponseBodyRetcodeAppsTags> Tags { get; set; }
             public class ListRetcodeAppsResponseBodyRetcodeAppsTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

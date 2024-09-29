@@ -10,76 +10,103 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetSyntheticTaskMonitorsResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// <list type="bullet">
+        /// <item><description>1001: The request was successful.</description></item>
+        /// <item><description>1002: The request failed.</description></item>
+        /// <item><description>1003: Parameter errors occurred.</description></item>
+        /// <item><description>1004: Authentication failed.</description></item>
+        /// <item><description>1006: The task does not exist.</description></item>
+        /// <item><description>1099: Internal errors occurred.</description></item>
+        /// </list>
         /// 
-        /// *   1001: The request was successful.
-        /// *   1002: The request failed.
-        /// *   1003: Parameter errors occurred.
-        /// *   1004: Authentication failed.
-        /// *   1006: The task does not exist.
-        /// *   1099: Internal errors occurred.
+        /// <b>Example:</b>
+        /// <para>1001</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The details of the monitoring point.
+        /// <para>The details of the monitoring point.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetSyntheticTaskMonitorsResponseBodyData> Data { get; set; }
         public class GetSyntheticTaskMonitorsResponseBodyData : TeaModel {
             /// <summary>
-            /// The task status.
+            /// <para>The task status.</para>
+            /// <list type="bullet">
+            /// <item><description>0: active</description></item>
+            /// <item><description>1: busy</description></item>
+            /// </list>
             /// 
-            /// *   0: active
-            /// *   1: busy
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Busy")]
             [Validation(Required=false)]
             public long? Busy { get; set; }
 
             /// <summary>
-            /// The name of the city to which the monitoring point belongs.
+            /// <para>The name of the city to which the monitoring point belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Beijing</para>
             /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
 
             /// <summary>
-            /// The ID of the city to which the monitoring point belongs.
+            /// <para>The ID of the city to which the monitoring point belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1100101</para>
             /// </summary>
             [NameInMap("CityCode")]
             [Validation(Required=false)]
             public long? CityCode { get; set; }
 
             /// <summary>
-            /// The client type:
+            /// <para>The client type:</para>
+            /// <list type="bullet">
+            /// <item><description>1: IDC</description></item>
+            /// <item><description>2: Last mile</description></item>
+            /// </list>
             /// 
-            /// *   1: IDC
-            /// *   2: Last mile
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ClientType")]
             [Validation(Required=false)]
             public long? ClientType { get; set; }
 
             /// <summary>
-            /// The region to which the monitoring point belongs.
+            /// <para>The region to which the monitoring point belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Beijing</para>
             /// </summary>
             [NameInMap("District")]
             [Validation(Required=false)]
             public string District { get; set; }
 
             /// <summary>
-            /// The ID of the carrier.
+            /// <para>The ID of the carrier.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>18</para>
             /// </summary>
             [NameInMap("NetServiceId")]
             [Validation(Required=false)]
             public long? NetServiceId { get; set; }
 
             /// <summary>
-            /// The name of the carrier.
+            /// <para>The name of the carrier.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>XXX</para>
             /// </summary>
             [NameInMap("NetServiceName")]
             [Validation(Required=false)]
@@ -88,14 +115,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The message that is returned when the request failed.
+        /// <para>The message that is returned when the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("Msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21E85B16-75A6-429A-9F65-8AAC9A54****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

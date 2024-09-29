@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UploadResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A5EC8221-08F2-4C95-9AF1-49FD998C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("UploadResult")]
         [Validation(Required=false)]
         public UploadResponseBodyUploadResult UploadResult { get; set; }
         public class UploadResponseBodyUploadResult : TeaModel {
             /// <summary>
-            /// The ID of the SourceMap file.
+            /// <para>The ID of the SourceMap file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("Fid")]
             [Validation(Required=false)]
             public string Fid { get; set; }
 
             /// <summary>
-            /// The name of the SourceMap file.
+            /// <para>The name of the SourceMap file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test.js.map</para>
             /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
 
             /// <summary>
-            /// The time when the file was uploaded.
+            /// <para>The time when the file was uploaded.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1650272251</para>
             /// </summary>
             [NameInMap("UploadTime")]
             [Validation(Required=false)]

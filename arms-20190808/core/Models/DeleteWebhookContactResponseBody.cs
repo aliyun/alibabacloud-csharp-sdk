@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteWebhookContactResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the webhook alert contact was deleted.
+        /// <para>Indicates whether the webhook alert contact was deleted.</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c></description></item>
+        /// <item><description><c>false</c></description></item>
+        /// </list>
         /// 
-        /// *   `true`
-        /// *   `false`
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C21AB7CF-B7AF-410F-BD61-82D1567F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

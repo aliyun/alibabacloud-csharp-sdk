@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListAddonsRequest : TeaModel {
         /// <summary>
-        /// Language,the default language is Chinese.
+        /// <para>Language,the default language is Chinese.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// Category filter.
+        /// <para>Category filter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>database</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// Whether to enable regular matching.
+        /// <para>Whether to enable regular matching.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Regexp")]
         [Validation(Required=false)]
         public bool? Regexp { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// A query field can be queried by name or description.
+        /// <para>A query field can be queried by name or description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql</para>
         /// </summary>
         [NameInMap("Search")]
         [Validation(Required=false)]

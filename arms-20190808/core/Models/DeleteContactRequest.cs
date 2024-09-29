@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteContactRequest : TeaModel {
         /// <summary>
-        /// The ID of the alert contact.
+        /// <para>The ID of the alert contact.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]

@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdateTimingSyntheticTaskResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+        /// <para>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
         /// <summary>
-        /// The struct returned.
+        /// <para>The struct returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateTimingSyntheticTaskResponseBodyData Data { get; set; }
         public class UpdateTimingSyntheticTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// The task ID.
+            /// <para>The task ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1eeb351722c84e05b52c82fd0dc9953e</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -33,24 +39,34 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F7781D4A-2818-41E7-B7BB-79D809E9****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c></description></item>
+        /// <item><description><c>false</c></description></item>
+        /// </list>
         /// 
-        /// *   `true`
-        /// *   `false`
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

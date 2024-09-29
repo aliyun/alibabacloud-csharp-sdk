@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteEventBridgeIntegrationRequest : TeaModel {
         /// <summary>
-        /// Required. The ID of the EventBridge notification integration. You can call the **ListEventBridgeIntegrations** operation to query the ID.
+        /// <para>Required. The ID of the EventBridge notification integration. You can call the <b>ListEventBridgeIntegrations</b> operation to query the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

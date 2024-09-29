@@ -10,17 +10,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class SwitchSyntheticTaskStatusRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to start or stop the task. Valid values:
+        /// <para>Specifies whether to start or stop the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: stops the task</description></item>
+        /// <item><description><b>1</b>: starts the task</description></item>
+        /// </list>
         /// 
-        /// *   **0**: stops the task
-        /// *   **1**: starts the task
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("SwitchStatus")]
         [Validation(Required=false)]
         public long? SwitchStatus { get; set; }
 
         /// <summary>
-        /// The task IDs. You can specify up to 30 task IDs at a time.
+        /// <para>The task IDs. You can specify up to 30 task IDs at a time.</para>
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]

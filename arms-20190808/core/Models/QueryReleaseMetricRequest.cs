@@ -10,64 +10,84 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class QueryReleaseMetricRequest : TeaModel {
         /// <summary>
-        /// The ID of the change order.
+        /// <para>The ID of the change order.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>a341a2f2-ed07-4257-aae9-dfb1be******</para>
         /// </summary>
         [NameInMap("ChangeOrderId")]
         [Validation(Required=false)]
         public string ChangeOrderId { get; set; }
 
         /// <summary>
-        /// The time when the change order was created.
+        /// <para>The time when the change order was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1634005438000</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// The type of the metric that you want to query.
+        /// <para>The type of the metric that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SystemContrast</para>
         /// </summary>
         [NameInMap("MetricType")]
         [Validation(Required=false)]
         public string MetricType { get; set; }
 
         /// <summary>
-        /// The ID of the Enterprise Distributed Application Service (EDAS) or Kubernetes application.
+        /// <para>The ID of the Enterprise Distributed Application Service (EDAS) or Kubernetes application.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>8b46d03f-5947-449d-90fd-3a96c2******</para>
         /// </summary>
         [NameInMap("Pid")]
         [Validation(Required=false)]
         public string Pid { get; set; }
 
         /// <summary>
-        /// This parameter is not in use.
+        /// <para>This parameter is not in use.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ProxyUserId")]
         [Validation(Required=false)]
         public string ProxyUserId { get; set; }
 
         /// <summary>
-        /// The end time of the version release.
+        /// <para>The end time of the version release.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1632798718632</para>
         /// </summary>
         [NameInMap("ReleaseEndTime")]
         [Validation(Required=false)]
         public long? ReleaseEndTime { get; set; }
 
         /// <summary>
-        /// The start time of the version release.
+        /// <para>The start time of the version release.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1632798686692</para>
         /// </summary>
         [NameInMap("ReleaseStartTime")]
         [Validation(Required=false)]
         public long? ReleaseStartTime { get; set; }
 
         /// <summary>
-        /// The service that you want to query.
+        /// <para>The service that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>clothservice</para>
         /// </summary>
         [NameInMap("Service")]
         [Validation(Required=false)]

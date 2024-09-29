@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateOrUpdateContactGroupResponseBody : TeaModel {
         /// <summary>
-        /// The information about the alert contact group.
+        /// <para>The information about the alert contact group.</para>
         /// </summary>
         [NameInMap("AlertContactGroup")]
         [Validation(Required=false)]
         public CreateOrUpdateContactGroupResponseBodyAlertContactGroup AlertContactGroup { get; set; }
         public class CreateOrUpdateContactGroupResponseBodyAlertContactGroup : TeaModel {
             /// <summary>
-            /// The ID of the alert contact group.
+            /// <para>The ID of the alert contact group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("ContactGroupId")]
             [Validation(Required=false)]
             public float? ContactGroupId { get; set; }
 
             /// <summary>
-            /// The name of the alert contact group.
+            /// <para>The name of the alert contact group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestGroup</para>
             /// </summary>
             [NameInMap("ContactGroupName")]
             [Validation(Required=false)]
             public string ContactGroupName { get; set; }
 
             /// <summary>
-            /// The IDs of the contacts that are included in the alert contact group.
+            /// <para>The IDs of the contacts that are included in the alert contact group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[1,2,3]</para>
             /// </summary>
             [NameInMap("ContactIds")]
             [Validation(Required=false)]
@@ -40,7 +49,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9319A57D-2D9E-472A-B69B-CF3CD16D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

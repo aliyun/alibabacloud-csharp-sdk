@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteWebhookContactRequest : TeaModel {
         /// <summary>
-        /// The ID of the webhook alert contact.
+        /// <para>The ID of the webhook alert contact.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("WebhookId")]
         [Validation(Required=false)]

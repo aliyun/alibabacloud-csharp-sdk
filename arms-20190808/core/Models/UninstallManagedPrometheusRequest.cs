@@ -10,39 +10,55 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UninstallManagedPrometheusRequest : TeaModel {
         /// <summary>
-        /// The ID of the Container Service for Kubernetes (ACK) cluster. This parameter is required when the ClusterType parameter is set to ask or one.
+        /// <para>The ID of the Container Service for Kubernetes (ACK) cluster. This parameter is required when the ClusterType parameter is set to ask or one.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc7a37ee31aea4ed1a059eff8034b****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The cluster type. Valid values: ask, ecs, and one.
+        /// <para>The cluster type. Valid values: ask, ecs, and one.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ask</para>
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the Prometheus instance belongs.
+        /// <para>The ID of the resource group to which the Prometheus instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxyexli2****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) where the cluster resides.
+        /// <para>The ID of the virtual private cloud (VPC) where the cluster resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-rpn**********</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

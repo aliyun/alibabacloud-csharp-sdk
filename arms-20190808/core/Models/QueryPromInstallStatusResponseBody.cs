@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class QueryPromInstallStatusResponseBody : TeaModel {
         /// <summary>
-        /// The returned struct.
+        /// <para>The returned struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryPromInstallStatusResponseBodyData Data { get; set; }
         public class QueryPromInstallStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether the call was successful. Valid values:
+            /// <para>Indicates whether the call was successful. Valid values:</para>
+            /// <para>true: The call was successful. false: The call fails.</para>
             /// 
-            /// true: The call was successful. false: The call fails.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("isControllerInstalled")]
             [Validation(Required=false)]
@@ -28,7 +30,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>27E653FA-5958-45BE-8AA9-14D884DC****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

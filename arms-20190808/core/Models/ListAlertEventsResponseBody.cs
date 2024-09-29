@@ -10,53 +10,66 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListAlertEventsResponseBody : TeaModel {
         /// <summary>
-        /// The returned struct.
+        /// <para>The returned struct.</para>
         /// </summary>
         [NameInMap("PageBean")]
         [Validation(Required=false)]
         public ListAlertEventsResponseBodyPageBean PageBean { get; set; }
         public class ListAlertEventsResponseBodyPageBean : TeaModel {
             /// <summary>
-            /// The queried historical alert events.
+            /// <para>The queried historical alert events.</para>
             /// </summary>
             [NameInMap("Events")]
             [Validation(Required=false)]
             public List<ListAlertEventsResponseBodyPageBeanEvents> Events { get; set; }
             public class ListAlertEventsResponseBodyPageBeanEvents : TeaModel {
                 /// <summary>
-                /// The associated alerts.
+                /// <para>The associated alerts.</para>
                 /// </summary>
                 [NameInMap("Alarms")]
                 [Validation(Required=false)]
                 public List<ListAlertEventsResponseBodyPageBeanEventsAlarms> Alarms { get; set; }
                 public class ListAlertEventsResponseBodyPageBeanEventsAlarms : TeaModel {
                     /// <summary>
-                    /// The ID of the alert.
+                    /// <para>The ID of the alert.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>77444</para>
                     /// </summary>
                     [NameInMap("AlarmId")]
                     [Validation(Required=false)]
                     public long? AlarmId { get; set; }
 
                     /// <summary>
-                    /// The name of the alert.
+                    /// <para>The name of the alert.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Test-triggered alert</para>
                     /// </summary>
                     [NameInMap("AlarmName")]
                     [Validation(Required=false)]
                     public string AlarmName { get; set; }
 
                     /// <summary>
-                    /// The time when the alert was created.
+                    /// <para>The time when the alert was created.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2021-12-20 07:10:18</para>
                     /// </summary>
                     [NameInMap("CreateTime")]
                     [Validation(Required=false)]
                     public string CreateTime { get; set; }
 
                     /// <summary>
-                    /// The status of the alert. Valid values:
+                    /// <para>The status of the alert. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>0: The alert is pending.</description></item>
+                    /// <item><description>1: The alert is being handled.</description></item>
+                    /// <item><description>2: The alert is cleared.</description></item>
+                    /// </list>
                     /// 
-                    /// *   0: The alert is pending.
-                    /// *   1: The alert is being handled.
-                    /// *   2: The alert is cleared.
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("State")]
                     [Validation(Required=false)]
@@ -65,84 +78,117 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// The name of the alert.
+                /// <para>The name of the alert.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test-triggered alert</para>
                 /// </summary>
                 [NameInMap("AlertName")]
                 [Validation(Required=false)]
                 public string AlertName { get; set; }
 
                 /// <summary>
-                /// The annotations.
+                /// <para>The annotations.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[{\&quot;Name\&quot;:\&quot;annotation-a\&quot;,\&quot;Value\&quot;:\&quot;annotation a value\&quot;}]</para>
                 /// </summary>
                 [NameInMap("Annotations")]
                 [Validation(Required=false)]
                 public string Annotations { get; set; }
 
                 /// <summary>
-                /// The description of the alert event.
+                /// <para>The description of the alert event.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The end time.
+                /// <para>The end time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-12-20 17:42:16</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// The URL of the alert event.
+                /// <para>The URL of the alert event.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://xxx.xx/">https://xxx.xx/</a></para>
                 /// </summary>
                 [NameInMap("GeneratorURL")]
                 [Validation(Required=false)]
                 public string GeneratorURL { get; set; }
 
                 /// <summary>
-                /// The user who handled the alert.
+                /// <para>The user who handled the alert.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Tom</para>
                 /// </summary>
                 [NameInMap("HandlerName")]
                 [Validation(Required=false)]
                 public string HandlerName { get; set; }
 
                 /// <summary>
-                /// The name of the alert integration.
+                /// <para>The name of the alert integration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Custom integration</para>
                 /// </summary>
                 [NameInMap("IntegrationName")]
                 [Validation(Required=false)]
                 public string IntegrationName { get; set; }
 
                 /// <summary>
-                /// The type of the alert integration.
+                /// <para>The type of the alert integration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CUSTOM</para>
                 /// </summary>
                 [NameInMap("IntegrationType")]
                 [Validation(Required=false)]
                 public string IntegrationType { get; set; }
 
                 /// <summary>
-                /// The tags.
+                /// <para>The tags.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[{\&quot;name\&quot;:\&quot;severity\&quot;,\&quot;value\&quot;:\&quot;error\&quot;}]</para>
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public string Labels { get; set; }
 
                 /// <summary>
-                /// The associated notification policies.
+                /// <para>The associated notification policies.</para>
                 /// </summary>
                 [NameInMap("NotificationPolicies")]
                 [Validation(Required=false)]
                 public List<ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies> NotificationPolicies { get; set; }
                 public class ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies : TeaModel {
                     /// <summary>
-                    /// The ID of the notification policy.
+                    /// <para>The ID of the notification policy.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>646093</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// The name of the notification policy.
+                    /// <para>The name of the notification policy.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>P1 alert notification policy</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -151,45 +197,62 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// The time when the alert event was received.
+                /// <para>The time when the alert event was received.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-12-20 17:42:16</para>
                 /// </summary>
                 [NameInMap("ReceiveTime")]
                 [Validation(Required=false)]
                 public string ReceiveTime { get; set; }
 
                 /// <summary>
-                /// The severity level of the alert. Valid values:
+                /// <para>The severity level of the alert. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>critical: P1</description></item>
+                /// <item><description>error: P2</description></item>
+                /// <item><description>warning: P3</description></item>
+                /// <item><description>page: P4</description></item>
+                /// <item><description>default: P6</description></item>
+                /// </list>
                 /// 
-                /// *   critical: P1
-                /// *   error: P2
-                /// *   warning: P3
-                /// *   page: P4
-                /// *   default: P6
+                /// <b>Example:</b>
+                /// <para>critical</para>
                 /// </summary>
                 [NameInMap("Severity")]
                 [Validation(Required=false)]
                 public string Severity { get; set; }
 
                 /// <summary>
-                /// The start time.
+                /// <para>The start time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-12-20 17:42:16</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The status of the alert event. Valid values:
+                /// <para>The status of the alert event. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Active</description></item>
+                /// <item><description>Silenced</description></item>
+                /// <item><description>Resolved</description></item>
+                /// </list>
                 /// 
-                /// *   Active
-                /// *   Silenced
-                /// *   Resolved
+                /// <b>Example:</b>
+                /// <para>Active</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The number of times the event is triggered.
+                /// <para>The number of times the event is triggered.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("TriggerCount")]
                 [Validation(Required=false)]
@@ -198,21 +261,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The number of the page returned.
+            /// <para>The number of the page returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Page")]
             [Validation(Required=false)]
             public long? Page { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
 
             /// <summary>
-            /// The total number of returned entries.
+            /// <para>The total number of returned entries.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>24</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -221,7 +293,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2FC13182-B9AF-4E6B-BE51-72669B7C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

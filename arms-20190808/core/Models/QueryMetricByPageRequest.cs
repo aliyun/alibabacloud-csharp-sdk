@@ -10,51 +10,65 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class QueryMetricByPageRequest : TeaModel {
         /// <summary>
-        /// The page number. Default value: `1`.
+        /// <para>The page number. Default value: <c>1</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// Custom filter conditions.
+        /// <para>Custom filter conditions.</para>
         /// </summary>
         [NameInMap("CustomFilters")]
         [Validation(Required=false)]
         public List<string> CustomFilters { get; set; }
 
         /// <summary>
-        /// The dimensions of the metric that you want to query.
+        /// <para>The dimensions of the metric that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;detector_browser&quot;,&quot;detector_device&quot;]</para>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<string> Dimensions { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Unit: milliseconds.
+        /// <para>The end of the time range to query. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1667546895000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The filter conditions.
+        /// <para>The filter conditions.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<QueryMetricByPageRequestFilters> Filters { get; set; }
         public class QueryMetricByPageRequestFilters : TeaModel {
             /// <summary>
-            /// The key of the filter condition. You must set the key to `pid` or `regionId`.
+            /// <para>The key of the filter condition. You must set the key to <c>pid</c> or <c>regionId</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pid</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the filter condition. You must set the value of the `pid` or `regionId` condition. For information about how to obtain the `pid`, see the "Obtain the PID of an application" section.
+            /// <para>The value of the filter condition. You must set the value of the <c>pid</c> or <c>regionId</c> condition. For information about how to obtain the <c>pid</c>, see the &quot;Obtain the PID of an application&quot; section.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx@74xxx</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -63,58 +77,79 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The time interval at which you want to query metric data. Unit: milliseconds. Minimum value: 60000.
+        /// <para>The time interval at which you want to query metric data. Unit: milliseconds. Minimum value: 60000.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100000</para>
         /// </summary>
         [NameInMap("IntervalInSec")]
         [Validation(Required=false)]
         public int? IntervalInSec { get; set; }
 
         /// <summary>
-        /// The measures of the metric that you want to query.
+        /// <para>The measures of the metric that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pv</para>
         /// </summary>
         [NameInMap("Measures")]
         [Validation(Required=false)]
         public List<string> Measures { get; set; }
 
         /// <summary>
-        /// The metric that you want to query. You cannot specify a custom metric. For more information, see the "Application monitoring metrics that can be queried" section.
+        /// <para>The metric that you want to query. You cannot specify a custom metric. For more information, see the &quot;Application monitoring metrics that can be queried&quot; section.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>appstat.host</para>
         /// </summary>
         [NameInMap("Metric")]
         [Validation(Required=false)]
         public string Metric { get; set; }
 
         /// <summary>
-        /// The order in which measures are sorted. Valid values:
+        /// <para>The order in which measures are sorted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>ASC</c>: ascending order</description></item>
+        /// <item><description><c>DESC</c>: descending order</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you do not specify the parameter, data is not sorted.</para>
+        /// </remarks>
         /// 
-        /// *   `ASC`: ascending order
-        /// *   `DESC`: descending order
-        /// 
-        /// > If you do not specify the parameter, data is not sorted.
+        /// <b>Example:</b>
+        /// <para>ASC</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
         /// <summary>
-        /// The dimension from which metrics are sorted. You can set this parameter to a supported dimension.
+        /// <para>The dimension from which metrics are sorted. You can set this parameter to a supported dimension.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pid</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// This parameter is no longer supported. The number of entries per page.
+        /// <para>This parameter is no longer supported. The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The start of the time range to query. Unit: milliseconds.
+        /// <para>The start of the time range to query. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1667287695000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

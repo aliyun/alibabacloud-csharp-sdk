@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteEnvCustomJobRequest : TeaModel {
         /// <summary>
-        /// The name of the custom job.
+        /// <para>The name of the custom job.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>job1</para>
         /// </summary>
         [NameInMap("CustomJobName")]
         [Validation(Required=false)]
         public string CustomJobName { get; set; }
 
         /// <summary>
-        /// The ID of the environment instance.
+        /// <para>The ID of the environment instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>env-xxx</para>
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

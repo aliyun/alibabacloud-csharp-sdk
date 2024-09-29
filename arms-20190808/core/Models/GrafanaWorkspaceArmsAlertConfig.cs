@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GrafanaWorkspaceArmsAlertConfig : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("armsAlertsEnable")]
         [Validation(Required=false)]
         public string ArmsAlertsEnable { get; set; }

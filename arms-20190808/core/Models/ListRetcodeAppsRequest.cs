@@ -10,37 +10,48 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListRetcodeAppsRequest : TeaModel {
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.
+        /// <para>The ID of the resource group. You can obtain the resource group ID in the <b>Resource Management</b> console.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxyexli2****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tags that you want to add to the task.
+        /// <para>The tags that you want to add to the task.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListRetcodeAppsRequestTags> Tags { get; set; }
         public class ListRetcodeAppsRequestTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -10,37 +10,51 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateRumAppShrinkRequest : TeaModel {
         /// <summary>
-        /// The name of the application group.
+        /// <para>The name of the application group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("AppGroup")]
         [Validation(Required=false)]
         public string AppGroup { get; set; }
 
         /// <summary>
-        /// The application name.
+        /// <para>The application name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test-app</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// The description of the application.
+        /// <para>The description of the application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Monitoring description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The nick name.
+        /// <para>The nickname of the application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-app</para>
         /// </summary>
         [NameInMap("NickName")]
         [Validation(Required=false)]
         public string NickName { get; set; }
 
         /// <summary>
-        /// The name of the Android application package. This parameter is required if you create an Android application.
+        /// <para>The name of the Android application package. This parameter is required if you create an Android application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>com.xxxx.xxxxxx</para>
         /// </summary>
         [NameInMap("PackageName")]
         [Validation(Required=false)]
@@ -51,39 +65,49 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RealRegionId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxyexli2****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The application type. Valid values: web, miniapp, ios, and android.
+        /// <para>The application type. Valid values: web, miniapp, ios, and android.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>web</para>
         /// </summary>
         [NameInMap("SiteType")]
         [Validation(Required=false)]
         public string SiteType { get; set; }
 
         /// <summary>
-        /// The source. This is a reserved parameter.
+        /// <para>The source. This is a reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>arms</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// The list of tags. You can specify a maximum of 20 tags.
+        /// <para>The list of tags. You can specify a maximum of 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

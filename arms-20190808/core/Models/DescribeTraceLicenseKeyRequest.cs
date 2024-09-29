@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeTraceLicenseKeyRequest : TeaModel {
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteRumAppRequest : TeaModel {
         /// <summary>
-        /// The group where the application resides.
+        /// <para>The group where the application resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("AppGroup")]
         [Validation(Required=false)]
         public string AppGroup { get; set; }
 
         /// <summary>
-        /// The ID of the application.
+        /// <para>The ID of the application.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>b590lhguqs@28f515462******</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -30,9 +35,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RealRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

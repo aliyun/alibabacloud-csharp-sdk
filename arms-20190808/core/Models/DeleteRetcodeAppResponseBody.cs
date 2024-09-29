@@ -10,42 +10,62 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteRetcodeAppResponseBody : TeaModel {
         /// <summary>
-        /// Status code. 200 means success, other status codes are exceptions.
+        /// <para>Status code. 200 means success, other status codes are exceptions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// Indicates whether the Browser Monitoring task was deleted. Valid values:
+        /// <para>Indicates whether the Browser Monitoring task was deleted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c></description></item>
+        /// <item><description><c>false</c></description></item>
+        /// </list>
         /// 
-        /// *   `true`
-        /// *   `false`
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// Additional information. The value description is as follows:
-        /// - If the request is normal, return success.
-        /// - If the request is abnormal, return specific abnormal information.
+        /// <para>Additional information. The value description is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>If the request is normal, return success.</description></item>
+        /// <item><description>If the request is abnormal, return specific abnormal information.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>01FF8DD9-A09C-47A1-895A-B6E321BE77B6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Whether the operation was successful:
-        /// - `true`: The operation was successful
-        /// - `false`: The operation failed
+        /// <para>Whether the operation was successful:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The operation was successful</description></item>
+        /// <item><description><c>false</c>: The operation failed</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdateRumFileStatusResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>626037F5-FDEB-45B0-804C-B3C92797****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

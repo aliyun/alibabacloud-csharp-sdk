@@ -10,63 +10,83 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListPrometheusAlertRulesRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c0bad479465464e1d8c1e641b0afb****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The tag match conditions that are described in a JSON string. For more information about this parameter, see the **Additional description of the MatchExpressions parameter** section.
+        /// <para>The tag match conditions that are described in a JSON string. For more information about this parameter, see the <b>Additional description of the MatchExpressions parameter</b> section.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;key&quot;:&quot;severity&quot;,&quot;value&quot;:&quot;critical&quot;,&quot;operator&quot;:&quot;re&quot;}]</para>
         /// </summary>
         [NameInMap("MatchExpressions")]
         [Validation(Required=false)]
         public string MatchExpressions { get; set; }
 
         /// <summary>
-        /// The name of the alert rule.
+        /// <para>The name of the alert rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Prometheus_Alert</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether the alert rule is enabled. Valid values:
+        /// <para>Specifies whether the alert rule is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: enables the alert rule.</description></item>
+        /// <item><description>0: disables the alert rule.</description></item>
+        /// </list>
         /// 
-        /// - 1: enables the alert rule.
-        /// - 0: disables the alert rule.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListPrometheusAlertRulesRequestTags> Tags { get; set; }
         public class ListPrometheusAlertRulesRequestTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>owner</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zhangsan</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -75,7 +95,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The type of the alert rule.
+        /// <para>The type of the alert rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

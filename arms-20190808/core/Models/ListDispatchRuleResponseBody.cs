@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListDispatchRuleResponseBody : TeaModel {
         /// <summary>
-        /// The returned struct.
+        /// <para>The returned struct.</para>
         /// </summary>
         [NameInMap("DispatchRules")]
         [Validation(Required=false)]
         public List<ListDispatchRuleResponseBodyDispatchRules> DispatchRules { get; set; }
         public class ListDispatchRuleResponseBodyDispatchRules : TeaModel {
             /// <summary>
-            /// The name of the notification policy.
+            /// <para>The name of the notification policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Prod</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the notification policy.
+            /// <para>The ID of the notification policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10282</para>
             /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// Indicates whether the notification policy is enabled. Valid values:
+            /// <para>Indicates whether the notification policy is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>true</c></description></item>
+            /// <item><description><c>false</c></description></item>
+            /// </list>
             /// 
-            /// *   `true`
-            /// *   `false`
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -43,7 +53,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34ED024E-9E31-434A-9E4E-D9D15C3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

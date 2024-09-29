@@ -10,62 +10,83 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class InstallAddonRequest : TeaModel {
         /// <summary>
-        /// The version of the add-on.
+        /// <para>The version of the add-on.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0.0.1</para>
         /// </summary>
         [NameInMap("AddonVersion")]
         [Validation(Required=false)]
         public string AddonVersion { get; set; }
 
         /// <summary>
-        /// The language. Valid values: zh and en. Default value: zh.
+        /// <para>The language. Valid values: zh and en. Default value: zh.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The environment ID.
+        /// <para>The environment ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>env-xxx</para>
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The name of the add-on.
+        /// <para>The name of the add-on.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>mysql</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the add-on after it is installed. If you do not specify this parameter, a default rule name is generated.
+        /// <para>The name of the add-on after it is installed. If you do not specify this parameter, a default rule name is generated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql-xxxxx</para>
         /// </summary>
         [NameInMap("ReleaseName")]
         [Validation(Required=false)]
         public string ReleaseName { get; set; }
 
         /// <summary>
-        /// The metadata.
+        /// <para>The metadata.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;host&quot;:&quot;mysql-service.default&quot;,&quot;port&quot;:3306,&quot;username&quot;:&quot;root&quot;,&quot;password&quot;:&quot;roots&quot;}</para>
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]

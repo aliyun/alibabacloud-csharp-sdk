@@ -10,68 +10,91 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateOrUpdateWebhookContactRequest : TeaModel {
         /// <summary>
-        /// The HTTP request headers.
+        /// <para>The HTTP request headers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;Content-Type&quot;:&quot;application/json;charset=utf-8&quot;}]</para>
         /// </summary>
         [NameInMap("BizHeaders")]
         [Validation(Required=false)]
         public string BizHeaders { get; set; }
 
         /// <summary>
-        /// The parameters in the HTTP request.
+        /// <para>The parameters in the HTTP request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;content&quot;:&quot;mike&quot;}]</para>
         /// </summary>
         [NameInMap("BizParams")]
         [Validation(Required=false)]
         public string BizParams { get; set; }
 
         /// <summary>
-        /// The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](https://help.aliyun.com/document_detail/251834.html).\\\\
+        /// <para>The notification template that is sent when an alert is triggered. This parameter is required if the <b>Method</b> parameter is set to <b>Post</b>. You can use the <c>$content</c> placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/251834.html">Variable description of a notification template</a>.\\</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Alert time&quot;:&quot;{{ .startTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</para>
         /// </summary>
         [NameInMap("Body")]
         [Validation(Required=false)]
         public string Body { get; set; }
 
         /// <summary>
-        /// The HTTP request method.
+        /// <para>The HTTP request method.</para>
+        /// <list type="bullet">
+        /// <item><description>Post</description></item>
+        /// <item><description>Get</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Post
-        /// *   Get
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Post</para>
         /// </summary>
         [NameInMap("Method")]
         [Validation(Required=false)]
         public string Method { get; set; }
 
         /// <summary>
-        /// The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](https://help.aliyun.com/document_detail/251834.html).
+        /// <para>The notification template that is sent when an alert is resolved. This parameter is required if the <b>Method</b> parameter is set to <b>Post</b>. You can use the <c>$content</c> placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/251834.html">Variable description of a notification template</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Recovery time&quot;:&quot;{{ .endTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</para>
         /// </summary>
         [NameInMap("RecoverBody")]
         [Validation(Required=false)]
         public string RecoverBody { get; set; }
 
         /// <summary>
-        /// The URL of the HTTP request **method**.
+        /// <para>The URL of the HTTP request <b>method</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=e1a049121">https://oapi.dingtalk.com/robot/send?access_token=e1a049121</a>******</para>
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }
 
         /// <summary>
-        /// The ID of the webhook alert contact.
+        /// <para>The ID of the webhook alert contact.</para>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify this parameter, a new webhook alert contact is created.</description></item>
+        /// <item><description>If you specify this parameter, the specified webhook alert contact is modified.</description></item>
+        /// </list>
         /// 
-        /// *   If you do not specify this parameter, a new webhook alert contact is created.
-        /// * If you specify this parameter, the specified webhook alert contact is modified.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("WebhookId")]
         [Validation(Required=false)]
         public long? WebhookId { get; set; }
 
         /// <summary>
-        /// The name of the webhook alert contact.
+        /// <para>The name of the webhook alert contact.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Webhook alert</para>
         /// </summary>
         [NameInMap("WebhookName")]
         [Validation(Required=false)]

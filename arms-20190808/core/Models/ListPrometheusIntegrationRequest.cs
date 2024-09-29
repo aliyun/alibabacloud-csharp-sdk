@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListPrometheusIntegrationRequest : TeaModel {
         /// <summary>
-        /// The ID of the Prometheus instance. Only aliyun-cs and ecs instances are supported.
+        /// <para>The ID of the Prometheus instance. Only aliyun-cs and ecs instances are supported.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c77f6f2397ea74672872acf5e31374a27</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.
+        /// <para>The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>kafka, mysql, redis, snmp, emr, nubela, and tidb</para>
         /// </summary>
         [NameInMap("IntegrationType")]
         [Validation(Required=false)]
         public string IntegrationType { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

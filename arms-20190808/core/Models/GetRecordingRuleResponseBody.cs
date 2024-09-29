@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetRecordingRuleResponseBody : TeaModel {
         /// <summary>
-        /// Status code. 200 is success, other status codes are exceptions.
+        /// <para>Status code. 200 is success, other status codes are exceptions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The recording rule.
+        /// <para>The recording rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>--- groups: - name: &quot;recording_demo&quot;   rules:   - expr: &quot;sum(jvm_memory_max_bytes)&quot;     record: &quot;rate_coredns_demo&quot;</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// Returns a hint message for the result.
+        /// <para>Returns a hint message for the result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9FEA6D00-317F-45E3-9004-7FB8B0B7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

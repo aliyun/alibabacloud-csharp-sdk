@@ -10,91 +10,121 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeAddonReleaseResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+        /// <para>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The release information.
+        /// <para>The release information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeAddonReleaseResponseBodyData Data { get; set; }
         public class DescribeAddonReleaseResponseBodyData : TeaModel {
             /// <summary>
-            /// The configuration information of the add-on release.
+            /// <para>The configuration information of the add-on release.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;host&quot;:&quot;mysql-service.default&quot;,&quot;port&quot;:3306,&quot;username&quot;:&quot;root&quot;,&quot;password&quot;:&quot;roots&quot;}</para>
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
             public string Config { get; set; }
 
             /// <summary>
-            /// The release information.
+            /// <para>The release information.</para>
             /// </summary>
             [NameInMap("Release")]
             [Validation(Required=false)]
             public DescribeAddonReleaseResponseBodyDataRelease Release { get; set; }
             public class DescribeAddonReleaseResponseBodyDataRelease : TeaModel {
                 /// <summary>
-                /// The name of the add-on.
+                /// <para>The name of the add-on.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mysql</para>
                 /// </summary>
                 [NameInMap("AddonName")]
                 [Validation(Required=false)]
                 public string AddonName { get; set; }
 
                 /// <summary>
-                /// The number of alert rules.
+                /// <para>The number of alert rules.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("AlertRuleCount")]
                 [Validation(Required=false)]
                 public long? AlertRuleCount { get; set; }
 
                 /// <summary>
-                /// The installation phase.
+                /// <para>The installation phase.</para>
                 /// </summary>
                 [NameInMap("Conditions")]
                 [Validation(Required=false)]
                 public List<DescribeAddonReleaseResponseBodyDataReleaseConditions> Conditions { get; set; }
                 public class DescribeAddonReleaseResponseBodyDataReleaseConditions : TeaModel {
                     /// <summary>
-                    /// The first transition time.
+                    /// <para>The first transition time.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2018-01-31T14:32:19Z</para>
                     /// </summary>
                     [NameInMap("FirstTransitionTime")]
                     [Validation(Required=false)]
                     public string FirstTransitionTime { get; set; }
 
                     /// <summary>
-                    /// The last transition time.
+                    /// <para>The last transition time.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2018-01-31T14:32:19Z</para>
                     /// </summary>
                     [NameInMap("LastTransitionTime")]
                     [Validation(Required=false)]
                     public string LastTransitionTime { get; set; }
 
                     /// <summary>
-                    /// The returned message.
+                    /// <para>The returned message.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>xxxx</para>
                     /// </summary>
                     [NameInMap("Message")]
                     [Validation(Required=false)]
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// The reason for the failure.
+                    /// <para>The reason for the failure.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>xxxx</para>
                     /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
                     public string Reason { get; set; }
 
                     /// <summary>
-                    /// The status of the phase.
+                    /// <para>The status of the phase.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>True</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// The type of the phase.
+                    /// <para>The type of the phase.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Loaded</para>
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -103,112 +133,157 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// The time when the add-on was created.
+                /// <para>The time when the add-on was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2023-09-22T16:56:29+08:00</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The number of dashboards.
+                /// <para>The number of dashboards.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("DashboardCount")]
                 [Validation(Required=false)]
                 public long? DashboardCount { get; set; }
 
                 /// <summary>
-                /// The environment ID.
+                /// <para>The environment ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>env-xxxx</para>
                 /// </summary>
                 [NameInMap("EnvironmentId")]
                 [Validation(Required=false)]
                 public string EnvironmentId { get; set; }
 
                 /// <summary>
-                /// The number of exporters.
+                /// <para>The number of exporters.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("ExporterCount")]
                 [Validation(Required=false)]
                 public long? ExporterCount { get; set; }
 
                 /// <summary>
-                /// Indicates whether the configuration is available.
+                /// <para>Indicates whether the configuration is available.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("HaveConfig")]
                 [Validation(Required=false)]
                 public bool? HaveConfig { get; set; }
 
                 /// <summary>
-                /// The user ID.
+                /// <para>The user ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>23810923891</para>
                 /// </summary>
                 [NameInMap("InstallUserId")]
                 [Validation(Required=false)]
                 public string InstallUserId { get; set; }
 
                 /// <summary>
-                /// The language.
+                /// <para>The language.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>zh</para>
                 /// </summary>
                 [NameInMap("Language")]
                 [Validation(Required=false)]
                 public string Language { get; set; }
 
                 /// <summary>
-                /// Indicates whether the component is fully managed.
+                /// <para>Indicates whether the component is fully managed.</para>
                 /// </summary>
                 [NameInMap("Managed")]
                 [Validation(Required=false)]
                 public bool? Managed { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-heyuan</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The release ID after installation.
+                /// <para>The release ID after installation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>be29c093-3fd6-4fb6-9430-797030cc183a</para>
                 /// </summary>
                 [NameInMap("ReleaseId")]
                 [Validation(Required=false)]
                 public string ReleaseId { get; set; }
 
                 /// <summary>
-                /// The name of the release.
+                /// <para>The name of the release.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mysql-1695372983039</para>
                 /// </summary>
                 [NameInMap("ReleaseName")]
                 [Validation(Required=false)]
                 public string ReleaseName { get; set; }
 
                 /// <summary>
-                /// The scenario.
+                /// <para>The scenario.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>database</para>
                 /// </summary>
                 [NameInMap("Scene")]
                 [Validation(Required=false)]
                 public string Scene { get; set; }
 
                 /// <summary>
-                /// The status.
+                /// <para>The status.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The time when the add-on was updated.
+                /// <para>The time when the add-on was updated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2023-09-22T16:56:29+08:00</para>
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
 
                 /// <summary>
-                /// The user ID.
+                /// <para>The user ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>13818734031</para>
                 /// </summary>
                 [NameInMap("UserID")]
                 [Validation(Required=false)]
                 public string UserID { get; set; }
 
                 /// <summary>
-                /// The version of the add-on.
+                /// <para>The version of the add-on.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0.1</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -219,21 +294,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>78901766-3806-4E96-8E47-CFEF59E4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values: true and false.
+        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

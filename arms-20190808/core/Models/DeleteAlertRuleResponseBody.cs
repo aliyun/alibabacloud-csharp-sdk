@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteAlertRuleResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the call was successful.
+        /// <para>Indicates whether the call was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The call was successful.</description></item>
+        /// <item><description><c>false</c>: The call failed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The call was successful.
-        /// *   `false`: The call failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C21AB7CF-B7AF-410F-BD61-82D1567F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

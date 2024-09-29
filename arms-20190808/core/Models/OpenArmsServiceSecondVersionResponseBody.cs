@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class OpenArmsServiceSecondVersionResponseBody : TeaModel {
         /// <summary>
-        /// The service ID returned if the service is activated.
+        /// <para>The service ID returned if the service is activated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20896874992****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9ED50893-F3C4-42DF-ABB2-C200BE******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

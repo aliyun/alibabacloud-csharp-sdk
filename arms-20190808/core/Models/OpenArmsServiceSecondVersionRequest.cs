@@ -10,24 +10,29 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class OpenArmsServiceSecondVersionRequest : TeaModel {
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the service. Valid values:
+        /// <para>The type of the service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>arms</c>: ARMS</description></item>
+        /// <item><description><c>arms_app</c>: Application Monitoring</description></item>
+        /// <item><description><c>arms_web</c>: Browser Monitoring</description></item>
+        /// <item><description><c>prometheus_monitor</c>: Managed Service for Prometheus</description></item>
+        /// <item><description><c>synthetic_post</c>: Synthetic Monitoring</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   `arms`: ARMS
-        /// *   `arms_app`: Application Monitoring
-        /// *   `arms_web`: Browser Monitoring
-        /// *   `prometheus_monitor`: Managed Service for Prometheus
-        /// *   `synthetic_post`: Synthetic Monitoring
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>arms</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

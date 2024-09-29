@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvironmentDashboardsRequest : TeaModel {
         /// <summary>
-        /// Name of Addon,One of AddonName and Scene must be filled in.
+        /// <para>Name of Addon,One of AddonName and Scene must be filled in.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>trace-java</para>
         /// </summary>
         [NameInMap("AddonName")]
         [Validation(Required=false)]
         public string AddonName { get; set; }
 
         /// <summary>
-        /// The ID of the environment instance.
+        /// <para>The ID of the environment instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>env-xxx</para>
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The scenario of Addon. Either AddonName or Scene is required.
+        /// <para>The scenario of Addon. Either AddonName or Scene is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>database</para>
         /// </summary>
         [NameInMap("Scene")]
         [Validation(Required=false)]

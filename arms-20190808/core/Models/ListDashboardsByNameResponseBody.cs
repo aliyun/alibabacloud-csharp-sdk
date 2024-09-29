@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListDashboardsByNameResponseBody : TeaModel {
         /// <summary>
-        /// Status Code. Description 200 indicates success.
+        /// <para>Status Code. Description 200 indicates success.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned struct.
+        /// <para>The returned struct.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;name&quot;:&quot;Edas Ingress Url Analysis&quot;,&quot;type&quot;:&quot;edas-ingress-url-analysis&quot;,&quot;url&quot;:&quot;<a href="https://g.console.aliyun.com/d/1036052989950239-11040375-66-3/edas-ingress-url-analysis?var-clusterId=29ksa&var-regionId=cn-hangzhou%22%7D%5D">https://g.console.aliyun.com/d/1036052989950239-11040375-66-3/edas-ingress-url-analysis?var-clusterId=29ksa&amp;var-regionId=cn-hangzhou&quot;}]</a></para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// Returns a hint message for the result.
+        /// <para>Returns a hint message for the result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request, You can use the ID to locate logs and troubleshoot issues.
+        /// <para>The ID of the request, You can use the ID to locate logs and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2983BEF7-4A0D-47A2-94A2-8E9C5E63****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

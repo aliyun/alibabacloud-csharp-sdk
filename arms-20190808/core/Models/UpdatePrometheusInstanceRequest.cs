@@ -10,59 +10,102 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdatePrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
+        /// <para>The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90</para>
         /// </summary>
         [NameInMap("ArchiveDuration")]
         [Validation(Required=false)]
         public int? ArchiveDuration { get; set; }
 
+        /// <summary>
+        /// <para>The IP addresses or CIDR blocks for which password-free read is enabled. Separate multiple IP addresses with line breaks.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("AuthFreeReadPolicy")]
         [Validation(Required=false)]
         public string AuthFreeReadPolicy { get; set; }
 
+        /// <summary>
+        /// <para>The IP addresses or CIDR blocks for which password-free write is enabled. Separate multiple IP addresses with line breaks.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("AuthFreeWritePolicy")]
         [Validation(Required=false)]
         public string AuthFreeWritePolicy { get; set; }
 
         /// <summary>
-        /// The ID of the Prometheus instance.
+        /// <para>The ID of the Prometheus instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-xxx</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable password-free read.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("EnableAuthFreeRead")]
         [Validation(Required=false)]
         public bool? EnableAuthFreeRead { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable password-free write.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("EnableAuthFreeWrite")]
         [Validation(Required=false)]
         public bool? EnableAuthFreeWrite { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable access token authentication.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("EnableAuthToken")]
         [Validation(Required=false)]
         public bool? EnableAuthToken { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxyexli2****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The data storage duration. Unit: days.
+        /// <para>The data storage duration. Unit: days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90</para>
         /// </summary>
         [NameInMap("StorageDuration")]
         [Validation(Required=false)]

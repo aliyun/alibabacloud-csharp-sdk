@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetOnCallSchedulesDetailRequest : TeaModel {
         /// <summary>
-        /// The date on which the shift ends. Format: `yyyy-MM-dd`.
+        /// <para>The date on which the shift ends. Format: <c>yyyy-MM-dd</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-10-30</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the scheduling policy.
+        /// <para>The ID of the scheduling policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The date from which the shift starts. Format: `yyyy-MM-dd`.
+        /// <para>The date from which the shift starts. Format: <c>yyyy-MM-dd</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-10-01</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

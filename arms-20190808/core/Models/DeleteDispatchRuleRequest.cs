@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteDispatchRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the dispatch policy.
+        /// <para>The ID of the dispatch policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

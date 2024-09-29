@@ -10,25 +10,35 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteEnvironmentRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to delete the related Prometheus instance.
+        /// <para>Specifies whether to delete the related Prometheus instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("DeletePromInstance")]
         [Validation(Required=false)]
         public bool? DeletePromInstance { get; set; }
 
         /// <summary>
-        /// The ID of the environment instance.
+        /// <para>The ID of the environment instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>env-xxxxxx</para>
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

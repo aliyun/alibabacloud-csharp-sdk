@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetIntegrationStateResponseBody : TeaModel {
         /// <summary>
-        /// Status code. 200 means success, other status codes are exceptions.
+        /// <para>Status code. 200 means success, other status codes are exceptions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The prompt information of the returned result.
+        /// <para>The prompt information of the returned result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The integration state of Prometheus dashboards and collection rules. Valid values:
+        /// <para>The integration state of Prometheus dashboards and collection rules. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The Prometheus dashboards and collection rules that monitor the software are integrated.</description></item>
+        /// <item><description><c>false</c>: The Prometheus dashboards and collection rules that monitor the software are not integrated.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The Prometheus dashboards and collection rules that monitor the software are integrated.
-        /// *   `false`: The Prometheus dashboards and collection rules that monitor the software are not integrated.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

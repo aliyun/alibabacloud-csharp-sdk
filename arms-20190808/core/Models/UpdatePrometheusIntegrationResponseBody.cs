@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdatePrometheusIntegrationResponseBody : TeaModel {
         /// <summary>
-        /// The status code or error code.
+        /// <para>The status code or error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The struct returned.
+        /// <para>The struct returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdatePrometheusIntegrationResponseBodyData Data { get; set; }
         public class UpdatePrometheusIntegrationResponseBodyData : TeaModel {
             /// <summary>
-            /// The exporter ID.
+            /// <para>The exporter ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2866</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public long? InstanceId { get; set; }
 
             /// <summary>
-            /// The exporter name.
+            /// <para>The exporter name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>inet</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -40,14 +49,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2DB771C3-D1BB-5363-8A5F-ADB2AF2948DB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

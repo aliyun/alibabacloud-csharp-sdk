@@ -10,28 +10,35 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateSyntheticTaskResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// <list type="bullet">
+        /// <item><description>1001: The request was successful.</description></item>
+        /// <item><description>1002: The request failed.</description></item>
+        /// <item><description>1003: Parameter errors occurred.</description></item>
+        /// <item><description>1004: Authentication failed.</description></item>
+        /// <item><description>1006: The task does not exist.</description></item>
+        /// <item><description>1099: Internal errors occurred.</description></item>
+        /// </list>
         /// 
-        /// *   1001: The request was successful.
-        /// *   1002: The request failed.
-        /// *   1003: Parameter errors occurred.
-        /// *   1004: Authentication failed.
-        /// *   1006: The task does not exist.
-        /// *   1099: Internal errors occurred.
+        /// <b>Example:</b>
+        /// <para>1001</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The information about the synthetic monitoring task.
+        /// <para>The information about the synthetic monitoring task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateSyntheticTaskResponseBodyData Data { get; set; }
         public class CreateSyntheticTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the synthetic monitoring task.
+            /// <para>The ID of the synthetic monitoring task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -40,14 +47,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The message that is returned when the task failed to be created.
+        /// <para>The message that is returned when the task failed to be created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("Msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A5EC8221-08F2-4C95-9AF1-49FD998C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListAddonReleasesRequest : TeaModel {
         /// <summary>
-        /// The name of the add-on.
+        /// <para>The name of the add-on.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql</para>
         /// </summary>
         [NameInMap("AddonName")]
         [Validation(Required=false)]
         public string AddonName { get; set; }
 
         /// <summary>
-        /// The environment ID.
+        /// <para>The environment ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>env-xxx</para>
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

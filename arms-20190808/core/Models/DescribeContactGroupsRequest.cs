@@ -10,49 +10,66 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeContactGroupsRequest : TeaModel {
         /// <summary>
-        /// The name of the alert contact group.
+        /// <para>The name of the alert contact group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestGroup</para>
         /// </summary>
         [NameInMap("ContactGroupName")]
         [Validation(Required=false)]
         public string ContactGroupName { get; set; }
 
         /// <summary>
-        /// The ID of the alert contact group.
+        /// <para>The ID of the alert contact group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
         public string GroupIds { get; set; }
 
         /// <summary>
-        /// Specifies whether to return all the alert contacts in the queried alert contact group. Valid values:
+        /// <para>Specifies whether to return all the alert contacts in the queried alert contact group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>false</c></description></item>
+        /// <item><description><c>true</c></description></item>
+        /// </list>
         /// 
-        /// *   `false`
-        /// *   `true`
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsDetail")]
         [Validation(Required=false)]
         public bool? IsDetail { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public long? Page { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The number of alert contact groups displayed on each page.
+        /// <para>The number of alert contact groups displayed on each page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]

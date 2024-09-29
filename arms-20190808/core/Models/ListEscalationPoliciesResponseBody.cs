@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEscalationPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// The returned objects.
+        /// <para>The returned objects.</para>
         /// </summary>
         [NameInMap("PageBean")]
         [Validation(Required=false)]
         public ListEscalationPoliciesResponseBodyPageBean PageBean { get; set; }
         public class ListEscalationPoliciesResponseBodyPageBean : TeaModel {
             /// <summary>
-            /// The list of escalation policies.
+            /// <para>The list of escalation policies.</para>
             /// </summary>
             [NameInMap("EscalationPolicies")]
             [Validation(Required=false)]
             public List<ListEscalationPoliciesResponseBodyPageBeanEscalationPolicies> EscalationPolicies { get; set; }
             public class ListEscalationPoliciesResponseBodyPageBeanEscalationPolicies : TeaModel {
                 /// <summary>
-                /// The ID of the escalation policy.
+                /// <para>The ID of the escalation policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1234</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The name of the escalation policy.
+                /// <para>The name of the escalation policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>prod escalation policy</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -40,21 +46,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Page")]
             [Validation(Required=false)]
             public long? Page { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
 
             /// <summary>
-            /// The total number of returned entries.
+            /// <para>The total number of returned entries.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -63,7 +78,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>78901766-3806-4E96-8E47-CFEF59E4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

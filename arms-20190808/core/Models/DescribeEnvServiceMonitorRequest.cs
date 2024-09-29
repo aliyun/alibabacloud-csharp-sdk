@@ -10,36 +10,44 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeEnvServiceMonitorRequest : TeaModel {
         /// <summary>
-        /// The ID of the environment instance.
+        /// <para>The ID of the environment instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>env-xxxxx</para>
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The namespace where the ServiceMonitor resides.
+        /// <para>The namespace where the ServiceMonitor resides.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>arms-prom</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the ServiceMonitor.
+        /// <para>The name of the ServiceMonitor.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>arms-admin1</para>
         /// </summary>
         [NameInMap("ServiceMonitorName")]
         [Validation(Required=false)]

@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteAlertRulesResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the alert rule was deleted.
+        /// <para>Indicates whether the alert rule was deleted.</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The alert rule was deleted.</description></item>
+        /// <item><description><c>false</c>: The alert rule failed to be deleted.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The alert rule was deleted.
-        /// *   `false`: The alert rule failed to be deleted.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C21AB7CF-B7AF-410F-BD61-82D1567F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

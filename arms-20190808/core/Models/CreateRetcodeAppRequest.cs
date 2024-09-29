@@ -10,62 +10,78 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateRetcodeAppRequest : TeaModel {
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.
+        /// <para>The ID of the resource group. You can obtain the resource group ID in the <b>Resource Management</b> console.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxyexli2****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The name of the application.
+        /// <para>The name of the application.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SdkTest</para>
         /// </summary>
         [NameInMap("RetcodeAppName")]
         [Validation(Required=false)]
         public string RetcodeAppName { get; set; }
 
         /// <summary>
-        /// The type of the application. Valid values:
+        /// <para>The type of the application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>web</c>: web application</description></item>
+        /// <item><description><c>weex</c>: Weex mobile app</description></item>
+        /// <item><description><c>mini_dd</c>: DingTalk mini program</description></item>
+        /// <item><description><c>mini_alipay</c>: Alipay mini program</description></item>
+        /// <item><description><c>mini_wx</c>: WeChat mini program</description></item>
+        /// <item><description><c>mini_common</c>: mini program on other platforms</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   `web`: web application
-        /// *   `weex`: Weex mobile app
-        /// *   `mini_dd`: DingTalk mini program
-        /// *   `mini_alipay`: Alipay mini program
-        /// *   `mini_wx`: WeChat mini program
-        /// *   `mini_common`: mini program on other platforms
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>mini_dd</para>
         /// </summary>
         [NameInMap("RetcodeAppType")]
         [Validation(Required=false)]
         public string RetcodeAppType { get; set; }
 
         /// <summary>
-        /// The tags that you want to add to the task.
+        /// <para>The tags that you want to add to the task.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateRetcodeAppRequestTags> Tags { get; set; }
         public class CreateRetcodeAppRequestTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -10,35 +10,44 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListOnCallSchedulesResponseBody : TeaModel {
         /// <summary>
-        /// The objects that were returned.
+        /// <para>The objects that were returned.</para>
         /// </summary>
         [NameInMap("PageBean")]
         [Validation(Required=false)]
         public ListOnCallSchedulesResponseBodyPageBean PageBean { get; set; }
         public class ListOnCallSchedulesResponseBodyPageBean : TeaModel {
             /// <summary>
-            /// The information about the scheduling policy.
+            /// <para>The information about the scheduling policy.</para>
             /// </summary>
             [NameInMap("OnCallSchedules")]
             [Validation(Required=false)]
             public List<ListOnCallSchedulesResponseBodyPageBeanOnCallSchedules> OnCallSchedules { get; set; }
             public class ListOnCallSchedulesResponseBodyPageBeanOnCallSchedules : TeaModel {
                 /// <summary>
-                /// The description of the scheduling policy.
+                /// <para>The description of the scheduling policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test scheduling policy</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the scheduling policy.
+                /// <para>The ID of the scheduling policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1234</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The name of the scheduling policy.
+                /// <para>The name of the scheduling policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>OnCallSchedule_test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -47,21 +56,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Page")]
             [Validation(Required=false)]
             public long? Page { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
 
             /// <summary>
-            /// The total number of returned entries.
+            /// <para>The total number of returned entries.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -70,7 +88,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>78901766-3806-4E96-8E47-CFEF59E4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

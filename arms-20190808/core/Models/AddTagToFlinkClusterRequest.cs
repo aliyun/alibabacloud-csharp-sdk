@@ -10,52 +10,65 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AddTagToFlinkClusterRequest : TeaModel {
         /// <summary>
-        /// The ID of the Prometheus instance.
+        /// <para>The ID of the Prometheus instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c5defa51f******c92bd2ef5fb093269</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the Flink workspace.
+        /// <para>The ID of the Flink workspace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ab18f***93744d</para>
         /// </summary>
         [NameInMap("FlinkWorkSpaceId")]
         [Validation(Required=false)]
         public string FlinkWorkSpaceId { get; set; }
 
         /// <summary>
-        /// The name of the Flink workspace.
+        /// <para>The name of the Flink workspace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>flink-demo</para>
         /// </summary>
         [NameInMap("FlinkWorkSpaceName")]
         [Validation(Required=false)]
         public string FlinkWorkSpaceName { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxyexli2****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the Flink workspace belongs.
+        /// <para>The ID of the Alibaba Cloud account to which the Flink workspace belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>198608******7619</para>
         /// </summary>
         [NameInMap("TargetUserId")]
         [Validation(Required=false)]

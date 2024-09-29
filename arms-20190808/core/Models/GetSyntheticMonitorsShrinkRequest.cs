@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetSyntheticMonitorsShrinkRequest : TeaModel {
         /// <summary>
-        /// The query conditions.
-        /// 
-        /// This parameter is required.
+        /// <para>The query conditions.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string FilterShrink { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

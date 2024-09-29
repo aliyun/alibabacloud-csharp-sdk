@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class SendTTSVerifyLinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the alert contact.
+        /// <para>The ID of the alert contact.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public long? ContactId { get; set; }
 
         /// <summary>
-        /// The mobile number of the alert contact.
+        /// <para>The mobile number of the alert contact.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1381111****</para>
         /// </summary>
         [NameInMap("Phone")]
         [Validation(Required=false)]

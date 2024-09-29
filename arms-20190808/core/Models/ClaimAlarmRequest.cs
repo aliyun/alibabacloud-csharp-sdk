@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ClaimAlarmRequest : TeaModel {
         /// <summary>
-        /// The ID of the alert.
+        /// <para>The ID of the alert.</para>
+        /// <para>For more information about how to obtain the ID of an alert, see <a href="https://help.aliyun.com/document_detail/2612346.html">ListAlertEvents</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of an alert, see [ListAlertEvents](https://help.aliyun.com/document_detail/2612346.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("AlarmId")]
         [Validation(Required=false)]
         public long? AlarmId { get; set; }
 
         /// <summary>
-        /// The ID of the handler.
+        /// <para>The ID of the handler.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2046076</para>
         /// </summary>
         [NameInMap("HandlerId")]
         [Validation(Required=false)]
         public long? HandlerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

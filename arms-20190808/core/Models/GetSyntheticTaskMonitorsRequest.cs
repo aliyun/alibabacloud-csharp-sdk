@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetSyntheticTaskMonitorsRequest : TeaModel {
         /// <summary>
-        /// The ID of the region in which the application is located.
+        /// <para>The ID of the region in which the application is located.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

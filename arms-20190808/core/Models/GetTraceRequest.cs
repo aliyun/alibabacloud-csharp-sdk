@@ -10,36 +10,48 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetTraceRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. Unit: milliseconds.
+        /// <para>The end of the time range to query. Unit: milliseconds.</para>
+        /// <remarks>
+        /// <para>If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.</para>
+        /// </remarks>
         /// 
-        /// > If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.
+        /// <b>Example:</b>
+        /// <para>1623827603000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Unit: milliseconds.
+        /// <para>The beginning of the time range to query. Unit: milliseconds.</para>
+        /// <remarks>
+        /// <para>If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.</para>
+        /// </remarks>
         /// 
-        /// > If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.
+        /// <b>Example:</b>
+        /// <para>1623827602000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// The trace ID. You can log on to the ARMS console and obtain the trace ID on the **Trace Query** page or **Interface Snapshot** tab.
+        /// <para>The trace ID. You can log on to the ARMS console and obtain the trace ID on the <b>Trace Query</b> page or <b>Interface Snapshot</b> tab.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ac14001a15954493811405707d****</para>
         /// </summary>
         [NameInMap("TraceID")]
         [Validation(Required=false)]

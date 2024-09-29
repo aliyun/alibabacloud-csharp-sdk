@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateDispatchRuleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the dispatch policy.
+        /// <para>The ID of the dispatch policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10413</para>
         /// </summary>
         [NameInMap("DispatchRuleId")]
         [Validation(Required=false)]
         public long? DispatchRuleId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A5EC8221-08F2-4C95-9AF1-49FD998C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

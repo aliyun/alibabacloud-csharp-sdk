@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ManageGetRecordingRuleResponseBody : TeaModel {
         /// <summary>
-        /// 状态码。200为成功，其他状态码为异常。
+        /// <para>状态码。200为成功，其他状态码为异常。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>--- groups: - name: &quot;recording_demo&quot;   rules:   - expr: &quot;sum(jvm_memory_max_bytes)&quot;     record: &quot;rate_coredns_demo&quot;</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// 返回信息。
+        /// <para>返回信息。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the ID to query logs and troubleshoot issues.
+        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34ED024E-9E31-434A-9E4E-D9D15C3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

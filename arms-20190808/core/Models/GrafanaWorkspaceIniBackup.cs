@@ -13,18 +13,34 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Ext { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1680861352600</para>
+        /// </summary>
         [NameInMap("gmtCreate")]
         [Validation(Required=false)]
         public long? GmtCreate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1680861352600</para>
+        /// </summary>
         [NameInMap("gmtModified")]
         [Validation(Required=false)]
         public long? GmtModified { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>grafana-cn-**********</para>
+        /// </summary>
         [NameInMap("grafanaWorkspaceId")]
         [Validation(Required=false)]
         public string GrafanaWorkspaceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
@@ -41,6 +57,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ProcessStatus { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>User</para>
+        /// </summary>
         [NameInMap("subType")]
         [Validation(Required=false)]
         public string SubType { get; set; }

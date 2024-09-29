@@ -10,77 +10,104 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class SearchTracesByPageResponseBody : TeaModel {
         /// <summary>
-        /// The returned struct.
+        /// <para>The returned struct.</para>
         /// </summary>
         [NameInMap("PageBean")]
         [Validation(Required=false)]
         public SearchTracesByPageResponseBodyPageBean PageBean { get; set; }
         public class SearchTracesByPageResponseBodyPageBean : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of returned entries.
+            /// <para>The total number of returned entries.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1601</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
 
             /// <summary>
-            /// The details of the returned traces.
+            /// <para>The details of the returned traces.</para>
             /// </summary>
             [NameInMap("TraceInfos")]
             [Validation(Required=false)]
             public List<SearchTracesByPageResponseBodyPageBeanTraceInfos> TraceInfos { get; set; }
             public class SearchTracesByPageResponseBodyPageBeanTraceInfos : TeaModel {
                 /// <summary>
-                /// The amount of time consumed by the trace. Unit: milliseconds.
+                /// <para>The amount of time consumed by the trace. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>679</para>
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public long? Duration { get; set; }
 
                 /// <summary>
-                /// The name of the traced span.
+                /// <para>The name of the traced span.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/demo/queryException/12</para>
                 /// </summary>
                 [NameInMap("OperationName")]
                 [Validation(Required=false)]
                 public string OperationName { get; set; }
 
                 /// <summary>
-                /// The IP address of the host where the application resides.
+                /// <para>The IP address of the host where the application resides.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172.20.XX.XX</para>
                 /// </summary>
                 [NameInMap("ServiceIp")]
                 [Validation(Required=false)]
                 public string ServiceIp { get; set; }
 
                 /// <summary>
-                /// The name of the application.
+                /// <para>The name of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>arms-k8s-demo-subcomponent</para>
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// The timestamp.
+                /// <para>The timestamp.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1595174436994</para>
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
                 public long? Timestamp { get; set; }
 
                 /// <summary>
-                /// The trace ID.
+                /// <para>The trace ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ac1400a115951744369947025d****</para>
                 /// </summary>
                 [NameInMap("TraceID")]
                 [Validation(Required=false)]
@@ -91,7 +118,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4C518054-852F-4023-ABC1-4AF95FF7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetAuthTokenRequest : TeaModel {
         /// <summary>
-        /// The ID of the ACK cluster.
+        /// <para>The ID of the ACK cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc7a37ee31aea4ed1a059eff8034b****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

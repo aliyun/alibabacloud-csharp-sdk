@@ -10,90 +10,121 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateGrafanaWorkspaceRequest : TeaModel {
         /// <summary>
-        /// The language. Valid values: zh and en. Default value: zh.
+        /// <para>The language. Default value: zh. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh</description></item>
+        /// <item><description>en</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// The description of the workspace
+        /// <para>The description of the workspace</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.0.x</para>
         /// </summary>
         [NameInMap("GrafanaVersion")]
         [Validation(Required=false)]
         public string GrafanaVersion { get; set; }
 
         /// <summary>
-        /// The edition.
+        /// <para>The edition.</para>
+        /// <para><b>Valid values:</b></para>
+        /// <list type="bullet">
+        /// <item><description>standard: <c>Beta Edition or Standard Edition</c></description></item>
+        /// <item><description>personal_edition: Developer Edition</description></item>
+        /// <item><description>experts_edition: Pro Edition</description></item>
+        /// <item><description>advanced_edition: Advanced Edition</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// **Valid values:**
-        /// 
-        /// *   standard: `Beta Edition or Standard Edition`
-        /// *   personal_edition: Developer Edition
-        /// *   experts_edition: Pro Edition
-        /// *   advanced_edition: Advanced Edition
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>experts_edition</para>
         /// </summary>
         [NameInMap("GrafanaWorkspaceEdition")]
         [Validation(Required=false)]
         public string GrafanaWorkspaceEdition { get; set; }
 
         /// <summary>
-        /// The name of the Grafana workspace.
+        /// <para>The name of the Grafana workspace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testgrafana</para>
         /// </summary>
         [NameInMap("GrafanaWorkspaceName")]
         [Validation(Required=false)]
         public string GrafanaWorkspaceName { get; set; }
 
         /// <summary>
-        /// The password of the workspace. The password must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letter, lowercase letter, digit, and special character. Special characters include () \\" ~ ! @ # $ % ^ & \\* - _ + =.
+        /// <para>The password of the workspace. The password must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letter, lowercase letter, digit, and special character. Special characters include () \&quot; ~ ! @ # $ % ^ &amp; \* - _ + =.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test123456!</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxyexli2****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateGrafanaWorkspaceRequestTags> Tags { get; set; }
         public class CreateGrafanaWorkspaceRequestTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

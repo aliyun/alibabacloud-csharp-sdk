@@ -10,78 +10,104 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeContactsResponseBody : TeaModel {
         /// <summary>
-        /// The objects that were returned.
+        /// <para>The objects that were returned.</para>
         /// </summary>
         [NameInMap("PageBean")]
         [Validation(Required=false)]
         public DescribeContactsResponseBodyPageBean PageBean { get; set; }
         public class DescribeContactsResponseBodyPageBean : TeaModel {
             /// <summary>
-            /// The alert contacts.
+            /// <para>The alert contacts.</para>
             /// </summary>
             [NameInMap("AlertContacts")]
             [Validation(Required=false)]
             public List<DescribeContactsResponseBodyPageBeanAlertContacts> AlertContacts { get; set; }
             public class DescribeContactsResponseBodyPageBeanAlertContacts : TeaModel {
                 /// <summary>
-                /// The ID of the alert contact.
+                /// <para>The ID of the alert contact.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100147</para>
                 /// </summary>
                 [NameInMap("ArmsContactId")]
                 [Validation(Required=false)]
                 public long? ArmsContactId { get; set; }
 
                 /// <summary>
-                /// The ID of the alert contact.
+                /// <para>The ID of the alert contact.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123</para>
                 /// </summary>
                 [NameInMap("ContactId")]
                 [Validation(Required=false)]
                 public float? ContactId { get; set; }
 
                 /// <summary>
-                /// The name of the alert contact.
+                /// <para>The name of the alert contact.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>John Doe</para>
                 /// </summary>
                 [NameInMap("ContactName")]
                 [Validation(Required=false)]
                 public string ContactName { get; set; }
 
                 /// <summary>
-                /// The email address of the alert contact.
+                /// <para>The email address of the alert contact.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="mailto:someone@example.com">someone@example.com</a></para>
                 /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
                 /// <summary>
-                /// Indicates whether the email address was verified.
+                /// <para>Indicates whether the email address was verified.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("IsEmailVerify")]
                 [Validation(Required=false)]
                 public bool? IsEmailVerify { get; set; }
 
                 /// <summary>
-                /// Indicates whether the mobile number was verified. Valid values:
+                /// <para>Indicates whether the mobile number was verified. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>false</c>: no</description></item>
+                /// <item><description><c>true</c>: yes</description></item>
+                /// </list>
                 /// 
-                /// *   `false`: no
-                /// *   `true`: yes
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsVerify")]
                 [Validation(Required=false)]
                 public bool? IsVerify { get; set; }
 
                 /// <summary>
-                /// The mobile number of the alert contact.
+                /// <para>The mobile number of the alert contact.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1381111****</para>
                 /// </summary>
                 [NameInMap("Phone")]
                 [Validation(Required=false)]
                 public string Phone { get; set; }
 
                 /// <summary>
-                /// The operation that you want to perform if phone calls fail to be answered. Valid values:
+                /// <para>The operation that you want to perform if phone calls fail to be answered. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: No operation is performed.</description></item>
+                /// <item><description>1: A phone call is made again.</description></item>
+                /// <item><description>2: A text message is sent.</description></item>
+                /// <item><description>3 (default value): The global default value is used.</description></item>
+                /// </list>
                 /// 
-                /// *   0: No operation is performed.
-                /// *   1: A phone call is made again.
-                /// *   2: A text message is sent.
-                /// *   3 (default value): The global default value is used.
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("ReissueSendNotice")]
                 [Validation(Required=false)]
@@ -90,21 +116,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Page")]
             [Validation(Required=false)]
             public long? Page { get; set; }
 
             /// <summary>
-            /// The number of alert contacts returned per page.
+            /// <para>The number of alert contacts returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
 
             /// <summary>
-            /// The total number of alert contacts.
+            /// <para>The total number of alert contacts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -113,7 +148,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21E85B16-75A6-429A-9F65-8AAC9A54****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

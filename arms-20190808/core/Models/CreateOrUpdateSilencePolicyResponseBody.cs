@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateOrUpdateSilencePolicyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A5EC8221-08F2-4C95-9AF1-49FD998C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// A list of silence policies.
+        /// <para>A list of silence policies.</para>
         /// </summary>
         [NameInMap("SilencePolicy")]
         [Validation(Required=false)]
@@ -28,49 +31,62 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string EffectiveTimeType { get; set; }
 
             /// <summary>
-            /// The ID of the silence policy.
+            /// <para>The ID of the silence policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// A list of matching rules.
+            /// <para>A list of matching rules.</para>
             /// </summary>
             [NameInMap("MatchingRules")]
             [Validation(Required=false)]
             public List<CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRules> MatchingRules { get; set; }
             public class CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRules : TeaModel {
                 /// <summary>
-                /// A list of matching conditions.
+                /// <para>A list of matching conditions.</para>
                 /// </summary>
                 [NameInMap("MatchingConditions")]
                 [Validation(Required=false)]
                 public List<CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRulesMatchingConditions> MatchingConditions { get; set; }
                 public class CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRulesMatchingConditions : TeaModel {
                     /// <summary>
-                    /// The key of the matching condition.
+                    /// <para>The key of the matching condition.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>altertname</para>
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// The logical operator of the matching condition. Valid values:
+                    /// <para>The logical operator of the matching condition. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><c>eq</c>: equal to</description></item>
+                    /// <item><description><c>neq</c>: not equal to</description></item>
+                    /// <item><description><c>in</c>: contains</description></item>
+                    /// <item><description><c>nin</c>: does not contain</description></item>
+                    /// <item><description><c>re</c>: regular expression match</description></item>
+                    /// <item><description><c>nre</c>: regular expression mismatch</description></item>
+                    /// </list>
                     /// 
-                    /// *   `eq`: equal to
-                    /// *   `neq`: not equal to
-                    /// *   `in`: contains
-                    /// *   `nin`: does not contain
-                    /// *   `re`: regular expression match
-                    /// *   `nre`: regular expression mismatch
+                    /// <b>Example:</b>
+                    /// <para>eq</para>
                     /// </summary>
                     [NameInMap("Operator")]
                     [Validation(Required=false)]
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// The value of the matching condition.
+                    /// <para>The value of the matching condition.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -81,14 +97,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The name of the silence policy.
+            /// <para>The name of the silence policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>silencepolicy_test</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable the silence policy. Valid values: enable and disable.
+            /// <para>Specifies whether to enable the silence policy. Valid values: enable and disable.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>enable</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
