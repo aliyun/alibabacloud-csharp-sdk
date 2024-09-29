@@ -1,3 +1,6 @@
+2024-09-29 Version: 4.4.1
+- Generated csharp 2014-05-26 for Ecs.
+
 2024-09-27 Version: 4.4.0
 - Support API PurchaseElasticityAssurance.
 - Update API DescribeNetworkInterfaceAttribute: update response param.
