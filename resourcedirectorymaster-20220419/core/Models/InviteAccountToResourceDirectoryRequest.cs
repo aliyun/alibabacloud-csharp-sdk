@@ -10,37 +10,48 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class InviteAccountToResourceDirectoryRequest : TeaModel {
         /// <summary>
-        /// The description of the invitation.
+        /// <para>The description of the invitation.</para>
+        /// <para>The description can be up to 1,024 characters in length.</para>
         /// 
-        /// The description can be up to 1,024 characters in length.
+        /// <b>Example:</b>
+        /// <para>Welcome</para>
         /// </summary>
         [NameInMap("Note")]
         [Validation(Required=false)]
         public string Note { get; set; }
 
         /// <summary>
-        /// The ID of the parent folder.
+        /// <para>The ID of the parent folder.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>r-b1****</para>
         /// </summary>
         [NameInMap("ParentFolderId")]
         [Validation(Required=false)]
         public string ParentFolderId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<InviteAccountToResourceDirectoryRequestTag> Tag { get; set; }
         public class InviteAccountToResourceDirectoryRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>k1</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -49,21 +60,26 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         }
 
         /// <summary>
-        /// The ID or logon email address of the account that you want to invite.
+        /// <para>The ID or logon email address of the account that you want to invite.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="mailto:someone@example.com">someone@example.com</a></para>
         /// </summary>
         [NameInMap("TargetEntity")]
         [Validation(Required=false)]
         public string TargetEntity { get; set; }
 
         /// <summary>
-        /// The type of the invited account. Valid values:
+        /// <para>The type of the invited account. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Account: indicates the ID of the account.</description></item>
+        /// <item><description>Email: indicates the logon email address of the account.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Account: indicates the ID of the account.
-        /// *   Email: indicates the logon email address of the account.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Email</para>
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]

@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetAccountRequest : TeaModel {
         /// <summary>
-        /// The Alibaba Cloud account ID of the member.
+        /// <para>The Alibaba Cloud account ID of the member.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>181761095690****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the information of tags. Valid values:
+        /// <para>Specifies whether to return the information of tags. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false (default value)</description></item>
+        /// <item><description>true</description></item>
+        /// </list>
         /// 
-        /// *   false (default value)
-        /// *   true
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IncludeTags")]
         [Validation(Required=false)]

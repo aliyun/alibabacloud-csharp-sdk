@@ -10,40 +10,55 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class UpdateAccountRequest : TeaModel {
         /// <summary>
-        /// The Alibaba Cloud account ID of the member.
+        /// <para>The Alibaba Cloud account ID of the member.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12323344****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs only a dry run. The system checks items such as whether the member status can be modified and whether security information is configured for the member. If the request does not pass the dry run, an error code is returned.</description></item>
+        /// <item><description>false (default): performs a dry run and performs the actual request.</description></item>
+        /// </list>
         /// 
-        /// *   true: performs only a dry run. The system checks items such as whether the member status can be modified and whether security information is configured for the member. If the request does not pass the dry run, an error code is returned.
-        /// *   false (default): performs a dry run and performs the actual request.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The new type of the member. Valid values:
+        /// <para>The new type of the member. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ResourceAccount: resource account</description></item>
+        /// <item><description>CloudAccount: cloud account</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You can specify either <c>NewDisplayName</c> or <c>NewAccountType</c>.</para>
+        /// </remarks>
         /// 
-        /// *   ResourceAccount: resource account
-        /// *   CloudAccount: cloud account
-        /// 
-        /// > You can specify either `NewDisplayName` or `NewAccountType`.
+        /// <b>Example:</b>
+        /// <para>ResourceAccount</para>
         /// </summary>
         [NameInMap("NewAccountType")]
         [Validation(Required=false)]
         public string NewAccountType { get; set; }
 
         /// <summary>
-        /// The new display name of the member.
+        /// <para>The new display name of the member.</para>
+        /// <remarks>
+        /// <para>You can specify either <c>NewDisplayName</c> or <c>NewAccountType</c>.</para>
+        /// </remarks>
         /// 
-        /// > You can specify either `NewDisplayName` or `NewAccountType`.
+        /// <b>Example:</b>
+        /// <para>admin</para>
         /// </summary>
         [NameInMap("NewDisplayName")]
         [Validation(Required=false)]

@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class DeleteAccountShrinkRequest : TeaModel {
         /// <summary>
-        /// The IDs of the check items that you can choose to ignore for the member deletion.
-        /// 
-        /// You can obtain the IDs from the response of the [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operation.
+        /// <para>The IDs of the check items that you can choose to ignore for the member deletion.</para>
+        /// <para>You can obtain the IDs from the response of the <a href="~~GetAccountDeletionCheckResult~~">GetAccountDeletionCheckResult</a> operation.</para>
         /// </summary>
         [NameInMap("AbandonableCheckId")]
         [Validation(Required=false)]
         public string AbandonableCheckIdShrink { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud account ID of the member that you want to delete.
+        /// <para>The Alibaba Cloud account ID of the member that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>169946124551****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]

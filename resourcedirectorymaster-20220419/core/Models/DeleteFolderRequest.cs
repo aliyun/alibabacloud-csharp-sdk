@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class DeleteFolderRequest : TeaModel {
         /// <summary>
-        /// The ID of the folder.
+        /// <para>The ID of the folder.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>fd-ae1in7****</para>
         /// </summary>
         [NameInMap("FolderId")]
         [Validation(Required=false)]

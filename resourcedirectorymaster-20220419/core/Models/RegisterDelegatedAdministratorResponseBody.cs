@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class RegisterDelegatedAdministratorResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0A45FC8F-54D2-4A65-8338-25E5DEBDA304</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,105 +10,103 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class AddMessageContactRequest : TeaModel {
         /// <summary>
-        /// The email address of the contact.
+        /// <para>The email address of the contact.</para>
+        /// <para>After you specify an email address, you need to call <a href="~~SendEmailVerificationForMessageContact~~">SendEmailVerificationForMessageContact</a> to send verification information to the email address. After the verification is passed, the email address takes effect.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// After you specify an email address, you need to call [SendEmailVerificationForMessageContact](~~SendEmailVerificationForMessageContact~~) to send verification information to the email address. After the verification is passed, the email address takes effect.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>someone***@example.com</para>
         /// </summary>
         [NameInMap("EmailAddress")]
         [Validation(Required=false)]
         public string EmailAddress { get; set; }
 
         /// <summary>
-        /// The types of messages received by the contact.
-        /// 
-        /// This parameter is required.
+        /// <para>The types of messages received by the contact.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MessageTypes")]
         [Validation(Required=false)]
         public List<string> MessageTypes { get; set; }
 
         /// <summary>
-        /// The name of the contact.
+        /// <para>The name of the contact.</para>
+        /// <para>The name must be unique in your resource directory.</para>
+        /// <para>The name must be 2 to 12 characters in length and can contain only letters.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name must be unique in your resource directory.
-        /// 
-        /// The name must be 2 to 12 characters in length and can contain only letters.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tom</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The mobile phone number of the contact.
+        /// <para>The mobile phone number of the contact.</para>
+        /// <para>Specify the mobile phone number in the <c>&lt;Country code&gt;-&lt;Mobile phone number&gt;</c> format.</para>
+        /// <remarks>
+        /// <para>Only mobile phone numbers in the <c>86-&lt;Mobile phone number&gt;</c> format in the Chinese mainland are supported.</para>
+        /// </remarks>
+        /// <para>After you specify a mobile phone number, you need to call <a href="~~SendPhoneVerificationForMessageContact~~">SendPhoneVerificationForMessageContact</a> to send verification information to the mobile phone number. After the verification is passed, the mobile phone number takes effect.</para>
         /// 
-        /// Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.
-        /// 
-        /// > Only mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are supported.
-        /// 
-        /// After you specify a mobile phone number, you need to call [SendPhoneVerificationForMessageContact](~~SendPhoneVerificationForMessageContact~~) to send verification information to the mobile phone number. After the verification is passed, the mobile phone number takes effect.
+        /// <b>Example:</b>
+        /// <para>86-139****1234</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// The job title of the contact.
+        /// <para>The job title of the contact.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>FinanceDirector</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   FinanceDirector
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>TechnicalDirector</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>MaintenanceDirector</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   TechnicalDirector
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>CEO</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ProjectDirector</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   MaintenanceDirector
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Other</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   CEO
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   ProjectDirector
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Other
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>TechnicalDirector</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

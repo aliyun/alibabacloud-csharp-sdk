@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListMessageContactVerificationsResponseBody : TeaModel {
         /// <summary>
-        /// The record for the contact to be verified.
+        /// <para>The record for the contact to be verified.</para>
         /// </summary>
         [NameInMap("ContactVerifications")]
         [Validation(Required=false)]
         public List<ListMessageContactVerificationsResponseBodyContactVerifications> ContactVerifications { get; set; }
         public class ListMessageContactVerificationsResponseBodyContactVerifications : TeaModel {
             /// <summary>
-            /// The ID of the contact.
+            /// <para>The ID of the contact.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c-qL4HqKONzOM7****</para>
             /// </summary>
             [NameInMap("ContactId")]
             [Validation(Required=false)]
             public string ContactId { get; set; }
 
             /// <summary>
-            /// The object that is used for verification. Valid values:
+            /// <para>The object that is used for verification. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Mobile phone number</description></item>
+            /// <item><description>Email address</description></item>
+            /// </list>
             /// 
-            /// - Mobile phone number
-            /// - Email address
+            /// <b>Example:</b>
+            /// <para>someone***@example.com</para>
             /// </summary>
             [NameInMap("Target")]
             [Validation(Required=false)]
@@ -36,28 +43,40 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CD76D376-2517-4924-92C5-DBC52262F93A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>48</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

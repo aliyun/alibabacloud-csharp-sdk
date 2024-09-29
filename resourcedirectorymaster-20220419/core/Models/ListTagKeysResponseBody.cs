@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the next query is required.
+        /// <para>Indicates whether the next query is required.</para>
+        /// <list type="bullet">
+        /// <item><description>If the value of this parameter is empty (<c>&quot;NextToken&quot;: &quot;&quot;</c>), all results are returned, and the next query is not required.</description></item>
+        /// <item><description>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</description></item>
+        /// </list>
         /// 
-        /// *   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the next query is not required.
-        /// *   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.
+        /// <b>Example:</b>
+        /// <para>TGlzdFJlc291cm****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DC09A6AA-2713-4E10-A2E9-E6C5C43A8842</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the tag keys.
+        /// <para>The information about the tag keys.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListTagKeysResponseBodyTags> Tags { get; set; }
         public class ListTagKeysResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>team</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

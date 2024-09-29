@@ -10,41 +10,54 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListControlPoliciesRequest : TeaModel {
         /// <summary>
-        /// The language in which you want to return the descriptions of the access control policies. Valid values:
+        /// <para>The language in which you want to return the descriptions of the access control policies. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN (default value): Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// <item><description>ja: Japanese</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is available only for system access control policies.</para>
+        /// </remarks>
         /// 
-        /// *   zh-CN (default value): Chinese
-        /// *   en: English
-        /// *   ja: Japanese
-        /// 
-        /// > This parameter is available only for system access control policies.
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The type of the access control policies. Valid values:
+        /// <para>The type of the access control policies. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>System: system access control policy</description></item>
+        /// <item><description>Custom: custom access control policy</description></item>
+        /// </list>
         /// 
-        /// *   System: system access control policy
-        /// *   Custom: custom access control policy
+        /// <b>Example:</b>
+        /// <para>System</para>
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]

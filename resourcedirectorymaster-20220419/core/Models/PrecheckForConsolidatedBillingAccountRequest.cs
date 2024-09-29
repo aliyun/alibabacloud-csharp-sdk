@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class PrecheckForConsolidatedBillingAccountRequest : TeaModel {
         /// <summary>
-        /// The ID of the management account or member to be used as a main financial account.
+        /// <para>The ID of the management account or member to be used as a main financial account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>111***089</para>
         /// </summary>
         [NameInMap("BillingAccountId")]
         [Validation(Required=false)]

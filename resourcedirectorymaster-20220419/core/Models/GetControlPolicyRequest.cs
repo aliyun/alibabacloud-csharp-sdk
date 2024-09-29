@@ -10,22 +10,29 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetControlPolicyRequest : TeaModel {
         /// <summary>
-        /// The language in which you want to return the description of the access control policy. Valid values:
+        /// <para>The language in which you want to return the description of the access control policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN (default value): Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// <item><description>ja: Japanese</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is valid only for system access control policies.</para>
+        /// </remarks>
         /// 
-        /// *   zh-CN (default value): Chinese
-        /// *   en: English
-        /// *   ja: Japanese
-        /// 
-        /// > This parameter is valid only for system access control policies.
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
         /// <summary>
-        /// The ID of the access control policy.
+        /// <para>The ID of the access control policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cp-SImPt8GCEwiq****</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

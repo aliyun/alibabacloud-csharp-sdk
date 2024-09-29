@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class SendEmailVerificationForMessageContactResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

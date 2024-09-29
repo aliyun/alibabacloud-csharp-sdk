@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class SendEmailVerificationForMessageContactRequest : TeaModel {
         /// <summary>
-        /// The ID of the contact.
+        /// <para>The ID of the contact.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c-5gsZAGt***PGduDF</para>
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
         /// <summary>
-        /// The email address of the contact.
+        /// <para>The email address of the contact.</para>
+        /// <para>The specified email address must be the one you specify when you call <a href="~~AddMessageContact~~">AddMessageContact</a>.</para>
         /// 
-        /// The specified email address must be the one you specify when you call [AddMessageContact](~~AddMessageContact~~).
+        /// <b>Example:</b>
+        /// <para>someone***@example.com</para>
         /// </summary>
         [NameInMap("EmailAddress")]
         [Validation(Required=false)]

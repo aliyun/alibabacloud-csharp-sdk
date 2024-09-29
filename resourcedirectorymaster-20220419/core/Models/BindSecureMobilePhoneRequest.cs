@@ -10,35 +10,39 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class BindSecureMobilePhoneRequest : TeaModel {
         /// <summary>
-        /// The Alibaba Cloud account ID of the member.
+        /// <para>The Alibaba Cloud account ID of the member.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>138660628348****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// The mobile phone number that you want to bind to the member for security purposes.
+        /// <para>The mobile phone number that you want to bind to the member for security purposes.</para>
+        /// <para>The mobile phone number you specify must be the same as the mobile phone number that you specify when you call the <a href="~~SendVerificationCodeForBindSecureMobilePhone~~">SendVerificationCodeForBindSecureMobilePhone</a> operation to obtain a verification code.</para>
+        /// <para>Specify the mobile phone number in the \<Country code>-\<Mobile phone number> format.</para>
+        /// <remarks>
+        /// <para>Mobile phone numbers in the <c>86-&lt;Mobile phone number&gt;</c> format in the Chinese mainland are not supported.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The mobile phone number you specify must be the same as the mobile phone number that you specify when you call the [SendVerificationCodeForBindSecureMobilePhone](~~SendVerificationCodeForBindSecureMobilePhone~~) operation to obtain a verification code.
-        /// 
-        /// Specify the mobile phone number in the \\<Country code>-\\<Mobile phone number> format.
-        /// 
-        /// > Mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are not supported.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>xx-13900001234</para>
         /// </summary>
         [NameInMap("SecureMobilePhone")]
         [Validation(Required=false)]
         public string SecureMobilePhone { get; set; }
 
         /// <summary>
-        /// The verification code.
+        /// <para>The verification code.</para>
+        /// <para>You can call the <a href="~~SendVerificationCodeForBindSecureMobilePhone~~">SendVerificationCodeForBindSecureMobilePhone</a> operation to obtain the verification code.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [SendVerificationCodeForBindSecureMobilePhone](~~SendVerificationCodeForBindSecureMobilePhone~~) operation to obtain the verification code.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("VerificationCode")]
         [Validation(Required=false)]

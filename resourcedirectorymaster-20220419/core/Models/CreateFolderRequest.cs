@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class CreateFolderRequest : TeaModel {
         /// <summary>
-        /// The name of the folder.
+        /// <para>The name of the folder.</para>
+        /// <para>The name must be 1 to 24 characters in length and can contain letters, digits, underscores (_), periods (.),and hyphens (-).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name must be 1 to 24 characters in length and can contain letters, digits, underscores (_), periods (.),and hyphens (-).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rdFolder</para>
         /// </summary>
         [NameInMap("FolderName")]
         [Validation(Required=false)]
         public string FolderName { get; set; }
 
         /// <summary>
-        /// The ID of the parent folder.
+        /// <para>The ID of the parent folder.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>r-b1****</para>
         /// </summary>
         [NameInMap("ParentFolderId")]
         [Validation(Required=false)]

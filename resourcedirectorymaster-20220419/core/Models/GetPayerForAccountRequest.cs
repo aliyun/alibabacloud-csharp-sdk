@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetPayerForAccountRequest : TeaModel {
         /// <summary>
-        /// The ID of the billing account.
+        /// <para>The ID of the billing account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12323344****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]

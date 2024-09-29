@@ -18,7 +18,9 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
+            this._productId = "ResourceDirectoryMaster";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("resourcedirectorymaster", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -38,15 +40,26 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary Accepts an invitation.
-         *
-         * @description After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-         *
-         * @param request AcceptHandshakeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AcceptHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Accepts an invitation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptHandshakeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptHandshakeResponse
+        /// </returns>
         public AcceptHandshakeResponse AcceptHandshakeWithOptions(AcceptHandshakeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -71,18 +84,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AcceptHandshakeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AcceptHandshakeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AcceptHandshakeResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Accepts an invitation.
-         *
-         * @description After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-         *
-         * @param request AcceptHandshakeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AcceptHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Accepts an invitation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptHandshakeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptHandshakeResponse
+        /// </returns>
         public async Task<AcceptHandshakeResponse> AcceptHandshakeWithOptionsAsync(AcceptHandshakeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -107,44 +138,77 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AcceptHandshakeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AcceptHandshakeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AcceptHandshakeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Accepts an invitation.
-         *
-         * @description After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-         *
-         * @param request AcceptHandshakeRequest
-         * @return AcceptHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Accepts an invitation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptHandshakeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptHandshakeResponse
+        /// </returns>
         public AcceptHandshakeResponse AcceptHandshake(AcceptHandshakeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AcceptHandshakeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Accepts an invitation.
-         *
-         * @description After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-         *
-         * @param request AcceptHandshakeRequest
-         * @return AcceptHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Accepts an invitation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptHandshakeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptHandshakeResponse
+        /// </returns>
         public async Task<AcceptHandshakeResponse> AcceptHandshakeAsync(AcceptHandshakeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AcceptHandshakeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Adds a contact.
-         *
-         * @param request AddMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMessageContactResponse
+        /// </returns>
         public AddMessageContactResponse AddMessageContactWithOptions(AddMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -185,16 +249,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AddMessageContactResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AddMessageContactResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AddMessageContactResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Adds a contact.
-         *
-         * @param request AddMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMessageContactResponse
+        /// </returns>
         public async Task<AddMessageContactResponse> AddMessageContactWithOptionsAsync(AddMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -235,40 +314,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AddMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AddMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AddMessageContactResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Adds a contact.
-         *
-         * @param request AddMessageContactRequest
-         * @return AddMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMessageContactResponse
+        /// </returns>
         public AddMessageContactResponse AddMessageContact(AddMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddMessageContactWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Adds a contact.
-         *
-         * @param request AddMessageContactRequest
-         * @return AddMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMessageContactResponse
+        /// </returns>
         public async Task<AddMessageContactResponse> AddMessageContactAsync(AddMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddMessageContactWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Binds a contact to a resource directory, folder, or member.
-         *
-         * @param request AssociateMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AssociateMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a contact to a resource directory, folder, or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateMembersResponse
+        /// </returns>
         public AssociateMembersResponse AssociateMembersWithOptions(AssociateMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -297,16 +403,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssociateMembersResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AssociateMembersResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AssociateMembersResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Binds a contact to a resource directory, folder, or member.
-         *
-         * @param request AssociateMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AssociateMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a contact to a resource directory, folder, or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateMembersResponse
+        /// </returns>
         public async Task<AssociateMembersResponse> AssociateMembersWithOptionsAsync(AssociateMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -335,45 +456,75 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssociateMembersResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AssociateMembersResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AssociateMembersResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Binds a contact to a resource directory, folder, or member.
-         *
-         * @param request AssociateMembersRequest
-         * @return AssociateMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a contact to a resource directory, folder, or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateMembersResponse
+        /// </returns>
         public AssociateMembersResponse AssociateMembers(AssociateMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateMembersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Binds a contact to a resource directory, folder, or member.
-         *
-         * @param request AssociateMembersRequest
-         * @return AssociateMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a contact to a resource directory, folder, or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateMembersResponse
+        /// </returns>
         public async Task<AssociateMembersResponse> AssociateMembersAsync(AssociateMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateMembersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Attaches an access control policy.
-         *
-         * @description After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-         * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-         * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-         * A maximum of 10 access control policies can be attached to a folder or member.
-         *
-         * @param request AttachControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AttachControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
+        /// By default, the system access control policy FullAliyunAccess is attached to each folder and member.
+        /// The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
+        /// A maximum of 10 access control policies can be attached to a folder or member.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachControlPolicyResponse
+        /// </returns>
         public AttachControlPolicyResponse AttachControlPolicyWithOptions(AttachControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -402,21 +553,39 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AttachControlPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AttachControlPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AttachControlPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Attaches an access control policy.
-         *
-         * @description After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-         * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-         * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-         * A maximum of 10 access control policies can be attached to a folder or member.
-         *
-         * @param request AttachControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AttachControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
+        /// By default, the system access control policy FullAliyunAccess is attached to each folder and member.
+        /// The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
+        /// A maximum of 10 access control policies can be attached to a folder or member.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachControlPolicyResponse
+        /// </returns>
         public async Task<AttachControlPolicyResponse> AttachControlPolicyWithOptionsAsync(AttachControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -445,53 +614,89 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AttachControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AttachControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AttachControlPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Attaches an access control policy.
-         *
-         * @description After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-         * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-         * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-         * A maximum of 10 access control policies can be attached to a folder or member.
-         *
-         * @param request AttachControlPolicyRequest
-         * @return AttachControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
+        /// By default, the system access control policy FullAliyunAccess is attached to each folder and member.
+        /// The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
+        /// A maximum of 10 access control policies can be attached to a folder or member.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachControlPolicyResponse
+        /// </returns>
         public AttachControlPolicyResponse AttachControlPolicy(AttachControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Attaches an access control policy.
-         *
-         * @description After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-         * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-         * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-         * A maximum of 10 access control policies can be attached to a folder or member.
-         *
-         * @param request AttachControlPolicyRequest
-         * @return AttachControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
+        /// By default, the system access control policy FullAliyunAccess is attached to each folder and member.
+        /// The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
+        /// A maximum of 10 access control policies can be attached to a folder or member.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachControlPolicyResponse
+        /// </returns>
         public async Task<AttachControlPolicyResponse> AttachControlPolicyAsync(AttachControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.
-         *
-         * @description You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-         * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-         *
-         * @param request BindSecureMobilePhoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BindSecureMobilePhoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
+        /// To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BindSecureMobilePhoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSecureMobilePhoneResponse
+        /// </returns>
         public BindSecureMobilePhoneResponse BindSecureMobilePhoneWithOptions(BindSecureMobilePhoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -524,19 +729,37 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<BindSecureMobilePhoneResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BindSecureMobilePhoneResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BindSecureMobilePhoneResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.
-         *
-         * @description You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-         * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-         *
-         * @param request BindSecureMobilePhoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BindSecureMobilePhoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
+        /// To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BindSecureMobilePhoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSecureMobilePhoneResponse
+        /// </returns>
         public async Task<BindSecureMobilePhoneResponse> BindSecureMobilePhoneWithOptionsAsync(BindSecureMobilePhoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -569,46 +792,79 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<BindSecureMobilePhoneResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BindSecureMobilePhoneResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BindSecureMobilePhoneResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.
-         *
-         * @description You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-         * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-         *
-         * @param request BindSecureMobilePhoneRequest
-         * @return BindSecureMobilePhoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
+        /// To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BindSecureMobilePhoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSecureMobilePhoneResponse
+        /// </returns>
         public BindSecureMobilePhoneResponse BindSecureMobilePhone(BindSecureMobilePhoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BindSecureMobilePhoneWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.
-         *
-         * @description You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-         * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-         *
-         * @param request BindSecureMobilePhoneRequest
-         * @return BindSecureMobilePhoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
+        /// To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BindSecureMobilePhoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSecureMobilePhoneResponse
+        /// </returns>
         public async Task<BindSecureMobilePhoneResponse> BindSecureMobilePhoneAsync(BindSecureMobilePhoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BindSecureMobilePhoneWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Cancels the email address change of a member.
-         *
-         * @param request CancelChangeAccountEmailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the email address change of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelChangeAccountEmailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelChangeAccountEmailResponse
+        /// </returns>
         public CancelChangeAccountEmailResponse CancelChangeAccountEmailWithOptions(CancelChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -633,16 +889,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CancelChangeAccountEmailResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CancelChangeAccountEmailResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CancelChangeAccountEmailResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Cancels the email address change of a member.
-         *
-         * @param request CancelChangeAccountEmailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the email address change of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelChangeAccountEmailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelChangeAccountEmailResponse
+        /// </returns>
         public async Task<CancelChangeAccountEmailResponse> CancelChangeAccountEmailWithOptionsAsync(CancelChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -667,40 +938,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CancelChangeAccountEmailResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CancelChangeAccountEmailResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CancelChangeAccountEmailResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Cancels the email address change of a member.
-         *
-         * @param request CancelChangeAccountEmailRequest
-         * @return CancelChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the email address change of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelChangeAccountEmailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelChangeAccountEmailResponse
+        /// </returns>
         public CancelChangeAccountEmailResponse CancelChangeAccountEmail(CancelChangeAccountEmailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelChangeAccountEmailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Cancels the email address change of a member.
-         *
-         * @param request CancelChangeAccountEmailRequest
-         * @return CancelChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the email address change of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelChangeAccountEmailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelChangeAccountEmailResponse
+        /// </returns>
         public async Task<CancelChangeAccountEmailResponse> CancelChangeAccountEmailAsync(CancelChangeAccountEmailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelChangeAccountEmailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Cancels an invitation.
-         *
-         * @param request CancelHandshakeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelHandshakeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelHandshakeResponse
+        /// </returns>
         public CancelHandshakeResponse CancelHandshakeWithOptions(CancelHandshakeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -725,16 +1023,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CancelHandshakeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CancelHandshakeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CancelHandshakeResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Cancels an invitation.
-         *
-         * @param request CancelHandshakeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelHandshakeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelHandshakeResponse
+        /// </returns>
         public async Task<CancelHandshakeResponse> CancelHandshakeWithOptionsAsync(CancelHandshakeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -759,40 +1072,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CancelHandshakeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CancelHandshakeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CancelHandshakeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Cancels an invitation.
-         *
-         * @param request CancelHandshakeRequest
-         * @return CancelHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelHandshakeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelHandshakeResponse
+        /// </returns>
         public CancelHandshakeResponse CancelHandshake(CancelHandshakeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelHandshakeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Cancels an invitation.
-         *
-         * @param request CancelHandshakeRequest
-         * @return CancelHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelHandshakeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelHandshakeResponse
+        /// </returns>
         public async Task<CancelHandshakeResponse> CancelHandshakeAsync(CancelHandshakeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelHandshakeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Cancels the update of the mobile phone number or email address of a contact.
-         *
-         * @param request CancelMessageContactUpdateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelMessageContactUpdateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the update of the mobile phone number or email address of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelMessageContactUpdateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelMessageContactUpdateResponse
+        /// </returns>
         public CancelMessageContactUpdateResponse CancelMessageContactUpdateWithOptions(CancelMessageContactUpdateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -825,16 +1165,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CancelMessageContactUpdateResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CancelMessageContactUpdateResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CancelMessageContactUpdateResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Cancels the update of the mobile phone number or email address of a contact.
-         *
-         * @param request CancelMessageContactUpdateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelMessageContactUpdateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the update of the mobile phone number or email address of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelMessageContactUpdateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelMessageContactUpdateResponse
+        /// </returns>
         public async Task<CancelMessageContactUpdateResponse> CancelMessageContactUpdateWithOptionsAsync(CancelMessageContactUpdateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -867,40 +1222,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CancelMessageContactUpdateResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CancelMessageContactUpdateResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CancelMessageContactUpdateResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Cancels the update of the mobile phone number or email address of a contact.
-         *
-         * @param request CancelMessageContactUpdateRequest
-         * @return CancelMessageContactUpdateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the update of the mobile phone number or email address of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelMessageContactUpdateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelMessageContactUpdateResponse
+        /// </returns>
         public CancelMessageContactUpdateResponse CancelMessageContactUpdate(CancelMessageContactUpdateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelMessageContactUpdateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Cancels the update of the mobile phone number or email address of a contact.
-         *
-         * @param request CancelMessageContactUpdateRequest
-         * @return CancelMessageContactUpdateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the update of the mobile phone number or email address of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelMessageContactUpdateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelMessageContactUpdateResponse
+        /// </returns>
         public async Task<CancelMessageContactUpdateResponse> CancelMessageContactUpdateAsync(CancelMessageContactUpdateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelMessageContactUpdateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the email address that is bound to a member.
-         *
-         * @param request ChangeAccountEmailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the email address that is bound to a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeAccountEmailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeAccountEmailResponse
+        /// </returns>
         public ChangeAccountEmailResponse ChangeAccountEmailWithOptions(ChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -929,16 +1311,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ChangeAccountEmailResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ChangeAccountEmailResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ChangeAccountEmailResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Changes the email address that is bound to a member.
-         *
-         * @param request ChangeAccountEmailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the email address that is bound to a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeAccountEmailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeAccountEmailResponse
+        /// </returns>
         public async Task<ChangeAccountEmailResponse> ChangeAccountEmailWithOptionsAsync(ChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -967,42 +1364,72 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ChangeAccountEmailResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ChangeAccountEmailResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ChangeAccountEmailResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Changes the email address that is bound to a member.
-         *
-         * @param request ChangeAccountEmailRequest
-         * @return ChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the email address that is bound to a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeAccountEmailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeAccountEmailResponse
+        /// </returns>
         public ChangeAccountEmailResponse ChangeAccountEmail(ChangeAccountEmailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeAccountEmailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the email address that is bound to a member.
-         *
-         * @param request ChangeAccountEmailRequest
-         * @return ChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the email address that is bound to a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeAccountEmailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeAccountEmailResponse
+        /// </returns>
         public async Task<ChangeAccountEmailResponse> ChangeAccountEmailAsync(ChangeAccountEmailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChangeAccountEmailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Performs a member deletion check.
-         *
-         * @description Before you delete a member, you must call this API operation to check whether the member can be deleted.
-         *
-         * @param request CheckAccountDeleteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckAccountDeleteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a member deletion check.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a member, you must call this API operation to check whether the member can be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckAccountDeleteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAccountDeleteResponse
+        /// </returns>
         public CheckAccountDeleteResponse CheckAccountDeleteWithOptions(CheckAccountDeleteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1027,18 +1454,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CheckAccountDeleteResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CheckAccountDeleteResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CheckAccountDeleteResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Performs a member deletion check.
-         *
-         * @description Before you delete a member, you must call this API operation to check whether the member can be deleted.
-         *
-         * @param request CheckAccountDeleteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckAccountDeleteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a member deletion check.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a member, you must call this API operation to check whether the member can be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckAccountDeleteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAccountDeleteResponse
+        /// </returns>
         public async Task<CheckAccountDeleteResponse> CheckAccountDeleteWithOptionsAsync(CheckAccountDeleteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1063,44 +1508,77 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CheckAccountDeleteResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CheckAccountDeleteResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CheckAccountDeleteResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Performs a member deletion check.
-         *
-         * @description Before you delete a member, you must call this API operation to check whether the member can be deleted.
-         *
-         * @param request CheckAccountDeleteRequest
-         * @return CheckAccountDeleteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a member deletion check.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a member, you must call this API operation to check whether the member can be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckAccountDeleteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAccountDeleteResponse
+        /// </returns>
         public CheckAccountDeleteResponse CheckAccountDelete(CheckAccountDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckAccountDeleteWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Performs a member deletion check.
-         *
-         * @description Before you delete a member, you must call this API operation to check whether the member can be deleted.
-         *
-         * @param request CheckAccountDeleteRequest
-         * @return CheckAccountDeleteResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a member deletion check.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a member, you must call this API operation to check whether the member can be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckAccountDeleteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAccountDeleteResponse
+        /// </returns>
         public async Task<CheckAccountDeleteResponse> CheckAccountDeleteAsync(CheckAccountDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckAccountDeleteWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a custom access control policy.
-         *
-         * @param request CreateControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateControlPolicyResponse
+        /// </returns>
         public CreateControlPolicyResponse CreateControlPolicyWithOptions(CreateControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1141,16 +1619,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateControlPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateControlPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateControlPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates a custom access control policy.
-         *
-         * @param request CreateControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateControlPolicyResponse
+        /// </returns>
         public async Task<CreateControlPolicyResponse> CreateControlPolicyWithOptionsAsync(CreateControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1191,42 +1684,72 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateControlPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates a custom access control policy.
-         *
-         * @param request CreateControlPolicyRequest
-         * @return CreateControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateControlPolicyResponse
+        /// </returns>
         public CreateControlPolicyResponse CreateControlPolicy(CreateControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a custom access control policy.
-         *
-         * @param request CreateControlPolicyRequest
-         * @return CreateControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateControlPolicyResponse
+        /// </returns>
         public async Task<CreateControlPolicyResponse> CreateControlPolicyAsync(CreateControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a folder.
-         *
-         * @description A maximum of five levels of folders can be created under the Root folder.
-         *
-         * @param request CreateFolderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A maximum of five levels of folders can be created under the Root folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFolderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFolderResponse
+        /// </returns>
         public CreateFolderResponse CreateFolderWithOptions(CreateFolderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1259,18 +1782,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateFolderResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateFolderResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateFolderResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates a folder.
-         *
-         * @description A maximum of five levels of folders can be created under the Root folder.
-         *
-         * @param request CreateFolderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A maximum of five levels of folders can be created under the Root folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFolderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFolderResponse
+        /// </returns>
         public async Task<CreateFolderResponse> CreateFolderWithOptionsAsync(CreateFolderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1303,47 +1844,83 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateFolderResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateFolderResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateFolderResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates a folder.
-         *
-         * @description A maximum of five levels of folders can be created under the Root folder.
-         *
-         * @param request CreateFolderRequest
-         * @return CreateFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A maximum of five levels of folders can be created under the Root folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFolderResponse
+        /// </returns>
         public CreateFolderResponse CreateFolder(CreateFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFolderWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a folder.
-         *
-         * @description A maximum of five levels of folders can be created under the Root folder.
-         *
-         * @param request CreateFolderRequest
-         * @return CreateFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A maximum of five levels of folders can be created under the Root folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFolderResponse
+        /// </returns>
         public async Task<CreateFolderResponse> CreateFolderAsync(CreateFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFolderWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a member of the resource account type.
-         *
-         * @description A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
-         * This topic provides an example on how to call the API operation to create a member in the `fd-r23M55****` folder. The display name of the member is `Dev`, and the prefix for the Alibaba Cloud account name of the member is `alice`.
-         *
-         * @param request CreateResourceAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateResourceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a member of the resource account type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
+        /// This topic provides an example on how to call the API operation to create a member in the <c>fd-r23M55****</c> folder. The display name of the member is <c>Dev</c>, and the prefix for the Alibaba Cloud account name of the member is <c>alice</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateResourceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceAccountResponse
+        /// </returns>
         public CreateResourceAccountResponse CreateResourceAccountWithOptions(CreateResourceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1392,19 +1969,37 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateResourceAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateResourceAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateResourceAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates a member of the resource account type.
-         *
-         * @description A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
-         * This topic provides an example on how to call the API operation to create a member in the `fd-r23M55****` folder. The display name of the member is `Dev`, and the prefix for the Alibaba Cloud account name of the member is `alice`.
-         *
-         * @param request CreateResourceAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateResourceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a member of the resource account type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
+        /// This topic provides an example on how to call the API operation to create a member in the <c>fd-r23M55****</c> folder. The display name of the member is <c>Dev</c>, and the prefix for the Alibaba Cloud account name of the member is <c>alice</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateResourceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceAccountResponse
+        /// </returns>
         public async Task<CreateResourceAccountResponse> CreateResourceAccountWithOptionsAsync(CreateResourceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1453,46 +2048,79 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateResourceAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateResourceAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateResourceAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates a member of the resource account type.
-         *
-         * @description A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
-         * This topic provides an example on how to call the API operation to create a member in the `fd-r23M55****` folder. The display name of the member is `Dev`, and the prefix for the Alibaba Cloud account name of the member is `alice`.
-         *
-         * @param request CreateResourceAccountRequest
-         * @return CreateResourceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a member of the resource account type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
+        /// This topic provides an example on how to call the API operation to create a member in the <c>fd-r23M55****</c> folder. The display name of the member is <c>Dev</c>, and the prefix for the Alibaba Cloud account name of the member is <c>alice</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateResourceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceAccountResponse
+        /// </returns>
         public CreateResourceAccountResponse CreateResourceAccount(CreateResourceAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateResourceAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a member of the resource account type.
-         *
-         * @description A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
-         * This topic provides an example on how to call the API operation to create a member in the `fd-r23M55****` folder. The display name of the member is `Dev`, and the prefix for the Alibaba Cloud account name of the member is `alice`.
-         *
-         * @param request CreateResourceAccountRequest
-         * @return CreateResourceAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a member of the resource account type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
+        /// This topic provides an example on how to call the API operation to create a member in the <c>fd-r23M55****</c> folder. The display name of the member is <c>Dev</c>, and the prefix for the Alibaba Cloud account name of the member is <c>alice</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateResourceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceAccountResponse
+        /// </returns>
         public async Task<CreateResourceAccountResponse> CreateResourceAccountAsync(CreateResourceAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateResourceAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Rejects an invitation.
-         *
-         * @param request DeclineHandshakeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeclineHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rejects an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeclineHandshakeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeclineHandshakeResponse
+        /// </returns>
         public DeclineHandshakeResponse DeclineHandshakeWithOptions(DeclineHandshakeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1517,16 +2145,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeclineHandshakeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeclineHandshakeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeclineHandshakeResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Rejects an invitation.
-         *
-         * @param request DeclineHandshakeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeclineHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rejects an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeclineHandshakeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeclineHandshakeResponse
+        /// </returns>
         public async Task<DeclineHandshakeResponse> DeclineHandshakeWithOptionsAsync(DeclineHandshakeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1551,43 +2194,73 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeclineHandshakeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeclineHandshakeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeclineHandshakeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Rejects an invitation.
-         *
-         * @param request DeclineHandshakeRequest
-         * @return DeclineHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rejects an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeclineHandshakeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeclineHandshakeResponse
+        /// </returns>
         public DeclineHandshakeResponse DeclineHandshake(DeclineHandshakeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeclineHandshakeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Rejects an invitation.
-         *
-         * @param request DeclineHandshakeRequest
-         * @return DeclineHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rejects an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeclineHandshakeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeclineHandshakeResponse
+        /// </returns>
         public async Task<DeclineHandshakeResponse> DeclineHandshakeAsync(DeclineHandshakeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeclineHandshakeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a member of the resource account type.
-         *
-         * @description Before you delete a member, we recommend that you call the [CheckAccountDelete](~~CheckAccountDelete~~) and [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-         * After you submit a deletion request for a member, you can call the [GetAccountDeletionStatus](~~GetAccountDeletionStatus~~) operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see [Delete a member of the resource account type](https://help.aliyun.com/document_detail/446078.html).
-         *
-         * @param tmpReq DeleteAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a member of the resource account type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a member, we recommend that you call the <a href="~~CheckAccountDelete~~">CheckAccountDelete</a> and <a href="~~GetAccountDeletionCheckResult~~">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
+        /// After you submit a deletion request for a member, you can call the <a href="~~GetAccountDeletionStatus~~">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccountResponse
+        /// </returns>
         public DeleteAccountResponse DeleteAccountWithOptions(DeleteAccountRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1622,19 +2295,37 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes a member of the resource account type.
-         *
-         * @description Before you delete a member, we recommend that you call the [CheckAccountDelete](~~CheckAccountDelete~~) and [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-         * After you submit a deletion request for a member, you can call the [GetAccountDeletionStatus](~~GetAccountDeletionStatus~~) operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see [Delete a member of the resource account type](https://help.aliyun.com/document_detail/446078.html).
-         *
-         * @param tmpReq DeleteAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a member of the resource account type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a member, we recommend that you call the <a href="~~CheckAccountDelete~~">CheckAccountDelete</a> and <a href="~~GetAccountDeletionCheckResult~~">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
+        /// After you submit a deletion request for a member, you can call the <a href="~~GetAccountDeletionStatus~~">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccountResponse
+        /// </returns>
         public async Task<DeleteAccountResponse> DeleteAccountWithOptionsAsync(DeleteAccountRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1669,48 +2360,84 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes a member of the resource account type.
-         *
-         * @description Before you delete a member, we recommend that you call the [CheckAccountDelete](~~CheckAccountDelete~~) and [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-         * After you submit a deletion request for a member, you can call the [GetAccountDeletionStatus](~~GetAccountDeletionStatus~~) operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see [Delete a member of the resource account type](https://help.aliyun.com/document_detail/446078.html).
-         *
-         * @param request DeleteAccountRequest
-         * @return DeleteAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a member of the resource account type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a member, we recommend that you call the <a href="~~CheckAccountDelete~~">CheckAccountDelete</a> and <a href="~~GetAccountDeletionCheckResult~~">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
+        /// After you submit a deletion request for a member, you can call the <a href="~~GetAccountDeletionStatus~~">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccountResponse
+        /// </returns>
         public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a member of the resource account type.
-         *
-         * @description Before you delete a member, we recommend that you call the [CheckAccountDelete](~~CheckAccountDelete~~) and [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-         * After you submit a deletion request for a member, you can call the [GetAccountDeletionStatus](~~GetAccountDeletionStatus~~) operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see [Delete a member of the resource account type](https://help.aliyun.com/document_detail/446078.html).
-         *
-         * @param request DeleteAccountRequest
-         * @return DeleteAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a member of the resource account type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a member, we recommend that you call the <a href="~~CheckAccountDelete~~">CheckAccountDelete</a> and <a href="~~GetAccountDeletionCheckResult~~">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
+        /// After you submit a deletion request for a member, you can call the <a href="~~GetAccountDeletionStatus~~">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccountResponse
+        /// </returns>
         public async Task<DeleteAccountResponse> DeleteAccountAsync(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a custom access control policy.
-         *
-         * @description If you want to delete a custom access control policy that is attached to folders or members, you must call the [DetachControlPolicy](~~DetachControlPolicy~~) operation to detach the policy before you delete it.
-         *
-         * @param request DeleteControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to delete a custom access control policy that is attached to folders or members, you must call the <a href="~~DetachControlPolicy~~">DetachControlPolicy</a> operation to detach the policy before you delete it.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyResponse
+        /// </returns>
         public DeleteControlPolicyResponse DeleteControlPolicyWithOptions(DeleteControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1735,18 +2462,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteControlPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteControlPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteControlPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes a custom access control policy.
-         *
-         * @description If you want to delete a custom access control policy that is attached to folders or members, you must call the [DetachControlPolicy](~~DetachControlPolicy~~) operation to detach the policy before you delete it.
-         *
-         * @param request DeleteControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to delete a custom access control policy that is attached to folders or members, you must call the <a href="~~DetachControlPolicy~~">DetachControlPolicy</a> operation to detach the policy before you delete it.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyResponse
+        /// </returns>
         public async Task<DeleteControlPolicyResponse> DeleteControlPolicyWithOptionsAsync(DeleteControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1771,46 +2516,82 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteControlPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes a custom access control policy.
-         *
-         * @description If you want to delete a custom access control policy that is attached to folders or members, you must call the [DetachControlPolicy](~~DetachControlPolicy~~) operation to detach the policy before you delete it.
-         *
-         * @param request DeleteControlPolicyRequest
-         * @return DeleteControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to delete a custom access control policy that is attached to folders or members, you must call the <a href="~~DetachControlPolicy~~">DetachControlPolicy</a> operation to detach the policy before you delete it.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyResponse
+        /// </returns>
         public DeleteControlPolicyResponse DeleteControlPolicy(DeleteControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a custom access control policy.
-         *
-         * @description If you want to delete a custom access control policy that is attached to folders or members, you must call the [DetachControlPolicy](~~DetachControlPolicy~~) operation to detach the policy before you delete it.
-         *
-         * @param request DeleteControlPolicyRequest
-         * @return DeleteControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to delete a custom access control policy that is attached to folders or members, you must call the <a href="~~DetachControlPolicy~~">DetachControlPolicy</a> operation to detach the policy before you delete it.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteControlPolicyResponse
+        /// </returns>
         public async Task<DeleteControlPolicyResponse> DeleteControlPolicyAsync(DeleteControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a folder.
-         *
-         * @description Before you delete a folder, you must make sure that the folder does not contain members or subfolders.
-         *
-         * @param request DeleteFolderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a folder, you must make sure that the folder does not contain members or subfolders.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFolderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFolderResponse
+        /// </returns>
         public DeleteFolderResponse DeleteFolderWithOptions(DeleteFolderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1835,18 +2616,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteFolderResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteFolderResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteFolderResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes a folder.
-         *
-         * @description Before you delete a folder, you must make sure that the folder does not contain members or subfolders.
-         *
-         * @param request DeleteFolderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a folder, you must make sure that the folder does not contain members or subfolders.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFolderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFolderResponse
+        /// </returns>
         public async Task<DeleteFolderResponse> DeleteFolderWithOptionsAsync(DeleteFolderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1871,44 +2670,77 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteFolderResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteFolderResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteFolderResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes a folder.
-         *
-         * @description Before you delete a folder, you must make sure that the folder does not contain members or subfolders.
-         *
-         * @param request DeleteFolderRequest
-         * @return DeleteFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a folder, you must make sure that the folder does not contain members or subfolders.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFolderResponse
+        /// </returns>
         public DeleteFolderResponse DeleteFolder(DeleteFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFolderWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a folder.
-         *
-         * @description Before you delete a folder, you must make sure that the folder does not contain members or subfolders.
-         *
-         * @param request DeleteFolderRequest
-         * @return DeleteFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a folder, you must make sure that the folder does not contain members or subfolders.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFolderResponse
+        /// </returns>
         public async Task<DeleteFolderResponse> DeleteFolderAsync(DeleteFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFolderWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a contact.
-         *
-         * @param request DeleteMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMessageContactResponse
+        /// </returns>
         public DeleteMessageContactResponse DeleteMessageContactWithOptions(DeleteMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1937,16 +2769,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteMessageContactResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteMessageContactResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteMessageContactResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes a contact.
-         *
-         * @param request DeleteMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMessageContactResponse
+        /// </returns>
         public async Task<DeleteMessageContactResponse> DeleteMessageContactWithOptionsAsync(DeleteMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1975,42 +2822,72 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteMessageContactResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes a contact.
-         *
-         * @param request DeleteMessageContactRequest
-         * @return DeleteMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMessageContactResponse
+        /// </returns>
         public DeleteMessageContactResponse DeleteMessageContact(DeleteMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteMessageContactWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a contact.
-         *
-         * @param request DeleteMessageContactRequest
-         * @return DeleteMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMessageContactResponse
+        /// </returns>
         public async Task<DeleteMessageContactResponse> DeleteMessageContactAsync(DeleteMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteMessageContactWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Removes a delegated administrator account for a trusted service.
-         *
-         * @description If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-         *
-         * @param request DeregisterDelegatedAdministratorRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeregisterDelegatedAdministratorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a delegated administrator account for a trusted service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeregisterDelegatedAdministratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeregisterDelegatedAdministratorResponse
+        /// </returns>
         public DeregisterDelegatedAdministratorResponse DeregisterDelegatedAdministratorWithOptions(DeregisterDelegatedAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2039,18 +2916,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeregisterDelegatedAdministratorResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeregisterDelegatedAdministratorResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeregisterDelegatedAdministratorResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Removes a delegated administrator account for a trusted service.
-         *
-         * @description If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-         *
-         * @param request DeregisterDelegatedAdministratorRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeregisterDelegatedAdministratorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a delegated administrator account for a trusted service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeregisterDelegatedAdministratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeregisterDelegatedAdministratorResponse
+        /// </returns>
         public async Task<DeregisterDelegatedAdministratorResponse> DeregisterDelegatedAdministratorWithOptionsAsync(DeregisterDelegatedAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2079,48 +2974,86 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeregisterDelegatedAdministratorResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeregisterDelegatedAdministratorResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeregisterDelegatedAdministratorResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Removes a delegated administrator account for a trusted service.
-         *
-         * @description If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-         *
-         * @param request DeregisterDelegatedAdministratorRequest
-         * @return DeregisterDelegatedAdministratorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a delegated administrator account for a trusted service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeregisterDelegatedAdministratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeregisterDelegatedAdministratorResponse
+        /// </returns>
         public DeregisterDelegatedAdministratorResponse DeregisterDelegatedAdministrator(DeregisterDelegatedAdministratorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeregisterDelegatedAdministratorWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes a delegated administrator account for a trusted service.
-         *
-         * @description If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-         *
-         * @param request DeregisterDelegatedAdministratorRequest
-         * @return DeregisterDelegatedAdministratorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a delegated administrator account for a trusted service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeregisterDelegatedAdministratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeregisterDelegatedAdministratorResponse
+        /// </returns>
         public async Task<DeregisterDelegatedAdministratorResponse> DeregisterDelegatedAdministratorAsync(DeregisterDelegatedAdministratorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeregisterDelegatedAdministratorWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Disables a resource directory. This operation cannot be undone. Therefore, proceed with caution.
-         *
-         * @description Before you disable a resource directory, you must make sure that the following requirements are met:
-         * *   All members of the cloud account type in the resource directory are removed. You can call the [RemoveCloudAccount](~~RemoveCloudAccount~~) operation to remove a member of the cloud account type.
-         * *   All folders except the Root folder are deleted from the resource directory. You can call the [DeleteFolder](~~DeleteFolder~~) operation to delete a folder.
-         *
-         * @param request DestroyResourceDirectoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DestroyResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, proceed with caution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you disable a resource directory, you must make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>All members of the cloud account type in the resource directory are removed. You can call the <a href="~~RemoveCloudAccount~~">RemoveCloudAccount</a> operation to remove a member of the cloud account type.</description></item>
+        /// <item><description>All folders except the Root folder are deleted from the resource directory. You can call the <a href="~~DeleteFolder~~">DeleteFolder</a> operation to delete a folder.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DestroyResourceDirectoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DestroyResourceDirectoryResponse
+        /// </returns>
         public DestroyResourceDirectoryResponse DestroyResourceDirectoryWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -2136,20 +3069,40 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DestroyResourceDirectoryResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DestroyResourceDirectoryResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DestroyResourceDirectoryResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Disables a resource directory. This operation cannot be undone. Therefore, proceed with caution.
-         *
-         * @description Before you disable a resource directory, you must make sure that the following requirements are met:
-         * *   All members of the cloud account type in the resource directory are removed. You can call the [RemoveCloudAccount](~~RemoveCloudAccount~~) operation to remove a member of the cloud account type.
-         * *   All folders except the Root folder are deleted from the resource directory. You can call the [DeleteFolder](~~DeleteFolder~~) operation to delete a folder.
-         *
-         * @param request DestroyResourceDirectoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DestroyResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, proceed with caution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you disable a resource directory, you must make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>All members of the cloud account type in the resource directory are removed. You can call the <a href="~~RemoveCloudAccount~~">RemoveCloudAccount</a> operation to remove a member of the cloud account type.</description></item>
+        /// <item><description>All folders except the Root folder are deleted from the resource directory. You can call the <a href="~~DeleteFolder~~">DeleteFolder</a> operation to delete a folder.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DestroyResourceDirectoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DestroyResourceDirectoryResponse
+        /// </returns>
         public async Task<DestroyResourceDirectoryResponse> DestroyResourceDirectoryWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -2165,49 +3118,83 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DestroyResourceDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DestroyResourceDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DestroyResourceDirectoryResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Disables a resource directory. This operation cannot be undone. Therefore, proceed with caution.
-         *
-         * @description Before you disable a resource directory, you must make sure that the following requirements are met:
-         * *   All members of the cloud account type in the resource directory are removed. You can call the [RemoveCloudAccount](~~RemoveCloudAccount~~) operation to remove a member of the cloud account type.
-         * *   All folders except the Root folder are deleted from the resource directory. You can call the [DeleteFolder](~~DeleteFolder~~) operation to delete a folder.
-         *
-         * @return DestroyResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, proceed with caution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you disable a resource directory, you must make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>All members of the cloud account type in the resource directory are removed. You can call the <a href="~~RemoveCloudAccount~~">RemoveCloudAccount</a> operation to remove a member of the cloud account type.</description></item>
+        /// <item><description>All folders except the Root folder are deleted from the resource directory. You can call the <a href="~~DeleteFolder~~">DeleteFolder</a> operation to delete a folder.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DestroyResourceDirectoryResponse
+        /// </returns>
         public DestroyResourceDirectoryResponse DestroyResourceDirectory()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DestroyResourceDirectoryWithOptions(runtime);
         }
 
-        /**
-         * @summary Disables a resource directory. This operation cannot be undone. Therefore, proceed with caution.
-         *
-         * @description Before you disable a resource directory, you must make sure that the following requirements are met:
-         * *   All members of the cloud account type in the resource directory are removed. You can call the [RemoveCloudAccount](~~RemoveCloudAccount~~) operation to remove a member of the cloud account type.
-         * *   All folders except the Root folder are deleted from the resource directory. You can call the [DeleteFolder](~~DeleteFolder~~) operation to delete a folder.
-         *
-         * @return DestroyResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, proceed with caution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you disable a resource directory, you must make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>All members of the cloud account type in the resource directory are removed. You can call the <a href="~~RemoveCloudAccount~~">RemoveCloudAccount</a> operation to remove a member of the cloud account type.</description></item>
+        /// <item><description>All folders except the Root folder are deleted from the resource directory. You can call the <a href="~~DeleteFolder~~">DeleteFolder</a> operation to delete a folder.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DestroyResourceDirectoryResponse
+        /// </returns>
         public async Task<DestroyResourceDirectoryResponse> DestroyResourceDirectoryAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DestroyResourceDirectoryWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Detaches an access control policy.
-         *
-         * @description After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-         * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-         *
-         * @param request DetachControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetachControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
+        /// Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachControlPolicyResponse
+        /// </returns>
         public DetachControlPolicyResponse DetachControlPolicyWithOptions(DetachControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2236,19 +3223,37 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DetachControlPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DetachControlPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DetachControlPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Detaches an access control policy.
-         *
-         * @description After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-         * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-         *
-         * @param request DetachControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetachControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
+        /// Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachControlPolicyResponse
+        /// </returns>
         public async Task<DetachControlPolicyResponse> DetachControlPolicyWithOptionsAsync(DetachControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2277,49 +3282,87 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DetachControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DetachControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DetachControlPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Detaches an access control policy.
-         *
-         * @description After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-         * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-         *
-         * @param request DetachControlPolicyRequest
-         * @return DetachControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
+        /// Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachControlPolicyResponse
+        /// </returns>
         public DetachControlPolicyResponse DetachControlPolicy(DetachControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Detaches an access control policy.
-         *
-         * @description After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-         * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-         *
-         * @param request DetachControlPolicyRequest
-         * @return DetachControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
+        /// Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachControlPolicyResponse
+        /// </returns>
         public async Task<DetachControlPolicyResponse> DetachControlPolicyAsync(DetachControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Disables the Control Policy feature.
-         *
-         * @description After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
-         * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
-         *
-         * @param request DisableControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.</para>
+        /// <remarks>
+        /// <para>If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableControlPolicyResponse
+        /// </returns>
         public DisableControlPolicyResponse DisableControlPolicyWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -2335,19 +3378,39 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DisableControlPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisableControlPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisableControlPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Disables the Control Policy feature.
-         *
-         * @description After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
-         * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
-         *
-         * @param request DisableControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.</para>
+        /// <remarks>
+        /// <para>If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableControlPolicyResponse
+        /// </returns>
         public async Task<DisableControlPolicyResponse> DisableControlPolicyWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -2363,44 +3426,75 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DisableControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisableControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisableControlPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Disables the Control Policy feature.
-         *
-         * @description After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
-         * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
-         *
-         * @return DisableControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.</para>
+        /// <remarks>
+        /// <para>If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DisableControlPolicyResponse
+        /// </returns>
         public DisableControlPolicyResponse DisableControlPolicy()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableControlPolicyWithOptions(runtime);
         }
 
-        /**
-         * @summary Disables the Control Policy feature.
-         *
-         * @description After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
-         * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
-         *
-         * @return DisableControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.</para>
+        /// <remarks>
+        /// <para>If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DisableControlPolicyResponse
+        /// </returns>
         public async Task<DisableControlPolicyResponse> DisableControlPolicyAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableControlPolicyWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Unbinds a contact from a resource directory, folder, or member.
-         *
-         * @param request DisassociateMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisassociateMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a contact from a resource directory, folder, or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateMembersResponse
+        /// </returns>
         public DisassociateMembersResponse DisassociateMembersWithOptions(DisassociateMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2429,16 +3523,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DisassociateMembersResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisassociateMembersResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisassociateMembersResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Unbinds a contact from a resource directory, folder, or member.
-         *
-         * @param request DisassociateMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisassociateMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a contact from a resource directory, folder, or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateMembersResponse
+        /// </returns>
         public async Task<DisassociateMembersResponse> DisassociateMembersWithOptionsAsync(DisassociateMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2467,42 +3576,72 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DisassociateMembersResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisassociateMembersResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisassociateMembersResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Unbinds a contact from a resource directory, folder, or member.
-         *
-         * @param request DisassociateMembersRequest
-         * @return DisassociateMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a contact from a resource directory, folder, or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateMembersResponse
+        /// </returns>
         public DisassociateMembersResponse DisassociateMembers(DisassociateMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisassociateMembersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Unbinds a contact from a resource directory, folder, or member.
-         *
-         * @param request DisassociateMembersRequest
-         * @return DisassociateMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a contact from a resource directory, folder, or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateMembersResponse
+        /// </returns>
         public async Task<DisassociateMembersResponse> DisassociateMembersAsync(DisassociateMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisassociateMembersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables the Control Policy feature.
-         *
-         * @description The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see [Overview of the Control Policy feature](https://help.aliyun.com/document_detail/178671.html).
-         *
-         * @param request EnableControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of the Control Policy feature</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableControlPolicyResponse
+        /// </returns>
         public EnableControlPolicyResponse EnableControlPolicyWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -2518,18 +3657,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EnableControlPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnableControlPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnableControlPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Enables the Control Policy feature.
-         *
-         * @description The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see [Overview of the Control Policy feature](https://help.aliyun.com/document_detail/178671.html).
-         *
-         * @param request EnableControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of the Control Policy feature</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableControlPolicyResponse
+        /// </returns>
         public async Task<EnableControlPolicyResponse> EnableControlPolicyWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -2545,44 +3702,74 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EnableControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnableControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnableControlPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Enables the Control Policy feature.
-         *
-         * @description The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see [Overview of the Control Policy feature](https://help.aliyun.com/document_detail/178671.html).
-         *
-         * @return EnableControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of the Control Policy feature</a>.</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// EnableControlPolicyResponse
+        /// </returns>
         public EnableControlPolicyResponse EnableControlPolicy()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableControlPolicyWithOptions(runtime);
         }
 
-        /**
-         * @summary Enables the Control Policy feature.
-         *
-         * @description The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see [Overview of the Control Policy feature](https://help.aliyun.com/document_detail/178671.html).
-         *
-         * @return EnableControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of the Control Policy feature</a>.</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// EnableControlPolicyResponse
+        /// </returns>
         public async Task<EnableControlPolicyResponse> EnableControlPolicyAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableControlPolicyWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Enables a resource directory.
-         *
-         * @description You can use the current account or a newly created account to enable a resource directory. For more information, see [Enable a resource directory](https://help.aliyun.com/document_detail/111215.html).
-         *
-         * @param request EnableResourceDirectoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use the current account or a newly created account to enable a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableResourceDirectoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableResourceDirectoryResponse
+        /// </returns>
         public EnableResourceDirectoryResponse EnableResourceDirectoryWithOptions(EnableResourceDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2623,18 +3810,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EnableResourceDirectoryResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnableResourceDirectoryResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnableResourceDirectoryResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Enables a resource directory.
-         *
-         * @description You can use the current account or a newly created account to enable a resource directory. For more information, see [Enable a resource directory](https://help.aliyun.com/document_detail/111215.html).
-         *
-         * @param request EnableResourceDirectoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use the current account or a newly created account to enable a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableResourceDirectoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableResourceDirectoryResponse
+        /// </returns>
         public async Task<EnableResourceDirectoryResponse> EnableResourceDirectoryWithOptionsAsync(EnableResourceDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2675,44 +3880,77 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EnableResourceDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnableResourceDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnableResourceDirectoryResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Enables a resource directory.
-         *
-         * @description You can use the current account or a newly created account to enable a resource directory. For more information, see [Enable a resource directory](https://help.aliyun.com/document_detail/111215.html).
-         *
-         * @param request EnableResourceDirectoryRequest
-         * @return EnableResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use the current account or a newly created account to enable a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableResourceDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableResourceDirectoryResponse
+        /// </returns>
         public EnableResourceDirectoryResponse EnableResourceDirectory(EnableResourceDirectoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableResourceDirectoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables a resource directory.
-         *
-         * @description You can use the current account or a newly created account to enable a resource directory. For more information, see [Enable a resource directory](https://help.aliyun.com/document_detail/111215.html).
-         *
-         * @param request EnableResourceDirectoryRequest
-         * @return EnableResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use the current account or a newly created account to enable a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableResourceDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableResourceDirectoryResponse
+        /// </returns>
         public async Task<EnableResourceDirectoryResponse> EnableResourceDirectoryAsync(EnableResourceDirectoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableResourceDirectoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of a member.
-         *
-         * @param request GetAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountResponse
+        /// </returns>
         public GetAccountResponse GetAccountWithOptions(GetAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2741,16 +3979,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of a member.
-         *
-         * @param request GetAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountResponse
+        /// </returns>
         public async Task<GetAccountResponse> GetAccountWithOptionsAsync(GetAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2779,42 +4032,72 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of a member.
-         *
-         * @param request GetAccountRequest
-         * @return GetAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountResponse
+        /// </returns>
         public GetAccountResponse GetAccount(GetAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of a member.
-         *
-         * @param request GetAccountRequest
-         * @return GetAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountResponse
+        /// </returns>
         public async Task<GetAccountResponse> GetAccountAsync(GetAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the result of a member deletion check.
-         *
-         * @description After you call the [CheckAccountDelete](~~CheckAccountDelete~~) operation to perform a member deletion check, you can call the [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
-         *
-         * @param request GetAccountDeletionCheckResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAccountDeletionCheckResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of a member deletion check.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call the <a href="~~CheckAccountDelete~~">CheckAccountDelete</a> operation to perform a member deletion check, you can call the <a href="~~GetAccountDeletionCheckResult~~">GetAccountDeletionCheckResult</a> operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAccountDeletionCheckResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountDeletionCheckResultResponse
+        /// </returns>
         public GetAccountDeletionCheckResultResponse GetAccountDeletionCheckResultWithOptions(GetAccountDeletionCheckResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2839,18 +4122,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetAccountDeletionCheckResultResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetAccountDeletionCheckResultResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetAccountDeletionCheckResultResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the result of a member deletion check.
-         *
-         * @description After you call the [CheckAccountDelete](~~CheckAccountDelete~~) operation to perform a member deletion check, you can call the [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
-         *
-         * @param request GetAccountDeletionCheckResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAccountDeletionCheckResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of a member deletion check.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call the <a href="~~CheckAccountDelete~~">CheckAccountDelete</a> operation to perform a member deletion check, you can call the <a href="~~GetAccountDeletionCheckResult~~">GetAccountDeletionCheckResult</a> operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAccountDeletionCheckResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountDeletionCheckResultResponse
+        /// </returns>
         public async Task<GetAccountDeletionCheckResultResponse> GetAccountDeletionCheckResultWithOptionsAsync(GetAccountDeletionCheckResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2875,44 +4176,77 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetAccountDeletionCheckResultResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetAccountDeletionCheckResultResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetAccountDeletionCheckResultResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the result of a member deletion check.
-         *
-         * @description After you call the [CheckAccountDelete](~~CheckAccountDelete~~) operation to perform a member deletion check, you can call the [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
-         *
-         * @param request GetAccountDeletionCheckResultRequest
-         * @return GetAccountDeletionCheckResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of a member deletion check.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call the <a href="~~CheckAccountDelete~~">CheckAccountDelete</a> operation to perform a member deletion check, you can call the <a href="~~GetAccountDeletionCheckResult~~">GetAccountDeletionCheckResult</a> operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAccountDeletionCheckResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountDeletionCheckResultResponse
+        /// </returns>
         public GetAccountDeletionCheckResultResponse GetAccountDeletionCheckResult(GetAccountDeletionCheckResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAccountDeletionCheckResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the result of a member deletion check.
-         *
-         * @description After you call the [CheckAccountDelete](~~CheckAccountDelete~~) operation to perform a member deletion check, you can call the [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
-         *
-         * @param request GetAccountDeletionCheckResultRequest
-         * @return GetAccountDeletionCheckResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of a member deletion check.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call the <a href="~~CheckAccountDelete~~">CheckAccountDelete</a> operation to perform a member deletion check, you can call the <a href="~~GetAccountDeletionCheckResult~~">GetAccountDeletionCheckResult</a> operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAccountDeletionCheckResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountDeletionCheckResultResponse
+        /// </returns>
         public async Task<GetAccountDeletionCheckResultResponse> GetAccountDeletionCheckResultAsync(GetAccountDeletionCheckResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAccountDeletionCheckResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the deletion status of a member.
-         *
-         * @param request GetAccountDeletionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAccountDeletionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the deletion status of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountDeletionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountDeletionStatusResponse
+        /// </returns>
         public GetAccountDeletionStatusResponse GetAccountDeletionStatusWithOptions(GetAccountDeletionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2937,16 +4271,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetAccountDeletionStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetAccountDeletionStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetAccountDeletionStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the deletion status of a member.
-         *
-         * @param request GetAccountDeletionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAccountDeletionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the deletion status of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountDeletionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountDeletionStatusResponse
+        /// </returns>
         public async Task<GetAccountDeletionStatusResponse> GetAccountDeletionStatusWithOptionsAsync(GetAccountDeletionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2971,40 +4320,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetAccountDeletionStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetAccountDeletionStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetAccountDeletionStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the deletion status of a member.
-         *
-         * @param request GetAccountDeletionStatusRequest
-         * @return GetAccountDeletionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the deletion status of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountDeletionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountDeletionStatusResponse
+        /// </returns>
         public GetAccountDeletionStatusResponse GetAccountDeletionStatus(GetAccountDeletionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAccountDeletionStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the deletion status of a member.
-         *
-         * @param request GetAccountDeletionStatusRequest
-         * @return GetAccountDeletionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the deletion status of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountDeletionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountDeletionStatusResponse
+        /// </returns>
         public async Task<GetAccountDeletionStatusResponse> GetAccountDeletionStatusAsync(GetAccountDeletionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAccountDeletionStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of an access control policy.
-         *
-         * @param request GetControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetControlPolicyResponse
+        /// </returns>
         public GetControlPolicyResponse GetControlPolicyWithOptions(GetControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3033,16 +4409,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetControlPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetControlPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetControlPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the details of an access control policy.
-         *
-         * @param request GetControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetControlPolicyResponse
+        /// </returns>
         public async Task<GetControlPolicyResponse> GetControlPolicyWithOptionsAsync(GetControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3071,40 +4462,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetControlPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the details of an access control policy.
-         *
-         * @param request GetControlPolicyRequest
-         * @return GetControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetControlPolicyResponse
+        /// </returns>
         public GetControlPolicyResponse GetControlPolicy(GetControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of an access control policy.
-         *
-         * @param request GetControlPolicyRequest
-         * @return GetControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetControlPolicyResponse
+        /// </returns>
         public async Task<GetControlPolicyResponse> GetControlPolicyAsync(GetControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the status of the Control Policy feature.
-         *
-         * @param request GetControlPolicyEnablementStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetControlPolicyEnablementStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetControlPolicyEnablementStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetControlPolicyEnablementStatusResponse
+        /// </returns>
         public GetControlPolicyEnablementStatusResponse GetControlPolicyEnablementStatusWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3120,16 +4538,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetControlPolicyEnablementStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetControlPolicyEnablementStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetControlPolicyEnablementStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the status of the Control Policy feature.
-         *
-         * @param request GetControlPolicyEnablementStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetControlPolicyEnablementStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetControlPolicyEnablementStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetControlPolicyEnablementStatusResponse
+        /// </returns>
         public async Task<GetControlPolicyEnablementStatusResponse> GetControlPolicyEnablementStatusWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3145,38 +4578,59 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetControlPolicyEnablementStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetControlPolicyEnablementStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetControlPolicyEnablementStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the status of the Control Policy feature.
-         *
-         * @return GetControlPolicyEnablementStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetControlPolicyEnablementStatusResponse
+        /// </returns>
         public GetControlPolicyEnablementStatusResponse GetControlPolicyEnablementStatus()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetControlPolicyEnablementStatusWithOptions(runtime);
         }
 
-        /**
-         * @summary Queries the status of the Control Policy feature.
-         *
-         * @return GetControlPolicyEnablementStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the Control Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetControlPolicyEnablementStatusResponse
+        /// </returns>
         public async Task<GetControlPolicyEnablementStatusResponse> GetControlPolicyEnablementStatusAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetControlPolicyEnablementStatusWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Queries the information about a folder.
-         *
-         * @param request GetFolderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFolderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFolderResponse
+        /// </returns>
         public GetFolderResponse GetFolderWithOptions(GetFolderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3201,16 +4655,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetFolderResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetFolderResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetFolderResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information about a folder.
-         *
-         * @param request GetFolderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFolderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFolderResponse
+        /// </returns>
         public async Task<GetFolderResponse> GetFolderWithOptionsAsync(GetFolderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3235,40 +4704,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetFolderResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetFolderResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetFolderResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information about a folder.
-         *
-         * @param request GetFolderRequest
-         * @return GetFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFolderResponse
+        /// </returns>
         public GetFolderResponse GetFolder(GetFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetFolderWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about a folder.
-         *
-         * @param request GetFolderRequest
-         * @return GetFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFolderResponse
+        /// </returns>
         public async Task<GetFolderResponse> GetFolderAsync(GetFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetFolderWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of an invitation.
-         *
-         * @param request GetHandshakeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHandshakeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHandshakeResponse
+        /// </returns>
         public GetHandshakeResponse GetHandshakeWithOptions(GetHandshakeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3293,16 +4789,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetHandshakeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetHandshakeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetHandshakeResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of an invitation.
-         *
-         * @param request GetHandshakeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHandshakeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHandshakeResponse
+        /// </returns>
         public async Task<GetHandshakeResponse> GetHandshakeWithOptionsAsync(GetHandshakeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3327,40 +4838,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetHandshakeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetHandshakeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetHandshakeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of an invitation.
-         *
-         * @param request GetHandshakeRequest
-         * @return GetHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHandshakeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHandshakeResponse
+        /// </returns>
         public GetHandshakeResponse GetHandshake(GetHandshakeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetHandshakeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of an invitation.
-         *
-         * @param request GetHandshakeRequest
-         * @return GetHandshakeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of an invitation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHandshakeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHandshakeResponse
+        /// </returns>
         public async Task<GetHandshakeResponse> GetHandshakeAsync(GetHandshakeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetHandshakeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about a contact.
-         *
-         * @param request GetMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessageContactResponse
+        /// </returns>
         public GetMessageContactResponse GetMessageContactWithOptions(GetMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3385,16 +4923,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetMessageContactResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetMessageContactResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetMessageContactResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information about a contact.
-         *
-         * @param request GetMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessageContactResponse
+        /// </returns>
         public async Task<GetMessageContactResponse> GetMessageContactWithOptionsAsync(GetMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3419,40 +4972,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetMessageContactResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information about a contact.
-         *
-         * @param request GetMessageContactRequest
-         * @return GetMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessageContactResponse
+        /// </returns>
         public GetMessageContactResponse GetMessageContact(GetMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetMessageContactWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about a contact.
-         *
-         * @param request GetMessageContactRequest
-         * @return GetMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessageContactResponse
+        /// </returns>
         public async Task<GetMessageContactResponse> GetMessageContactAsync(GetMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetMessageContactWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the deletion status of a contact.
-         *
-         * @param request GetMessageContactDeletionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetMessageContactDeletionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the deletion status of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessageContactDeletionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessageContactDeletionStatusResponse
+        /// </returns>
         public GetMessageContactDeletionStatusResponse GetMessageContactDeletionStatusWithOptions(GetMessageContactDeletionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3477,16 +5057,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetMessageContactDeletionStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetMessageContactDeletionStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetMessageContactDeletionStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the deletion status of a contact.
-         *
-         * @param request GetMessageContactDeletionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetMessageContactDeletionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the deletion status of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessageContactDeletionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessageContactDeletionStatusResponse
+        /// </returns>
         public async Task<GetMessageContactDeletionStatusResponse> GetMessageContactDeletionStatusWithOptionsAsync(GetMessageContactDeletionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3511,40 +5106,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetMessageContactDeletionStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetMessageContactDeletionStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetMessageContactDeletionStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the deletion status of a contact.
-         *
-         * @param request GetMessageContactDeletionStatusRequest
-         * @return GetMessageContactDeletionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the deletion status of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessageContactDeletionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessageContactDeletionStatusResponse
+        /// </returns>
         public GetMessageContactDeletionStatusResponse GetMessageContactDeletionStatus(GetMessageContactDeletionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetMessageContactDeletionStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the deletion status of a contact.
-         *
-         * @param request GetMessageContactDeletionStatusRequest
-         * @return GetMessageContactDeletionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the deletion status of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessageContactDeletionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessageContactDeletionStatusResponse
+        /// </returns>
         public async Task<GetMessageContactDeletionStatusResponse> GetMessageContactDeletionStatusAsync(GetMessageContactDeletionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetMessageContactDeletionStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of a billing account.
-         *
-         * @param request GetPayerForAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPayerForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a billing account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPayerForAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPayerForAccountResponse
+        /// </returns>
         public GetPayerForAccountResponse GetPayerForAccountWithOptions(GetPayerForAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3569,16 +5191,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPayerForAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPayerForAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPayerForAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of a billing account.
-         *
-         * @param request GetPayerForAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPayerForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a billing account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPayerForAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPayerForAccountResponse
+        /// </returns>
         public async Task<GetPayerForAccountResponse> GetPayerForAccountWithOptionsAsync(GetPayerForAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3603,40 +5240,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPayerForAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPayerForAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPayerForAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of a billing account.
-         *
-         * @param request GetPayerForAccountRequest
-         * @return GetPayerForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a billing account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPayerForAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPayerForAccountResponse
+        /// </returns>
         public GetPayerForAccountResponse GetPayerForAccount(GetPayerForAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPayerForAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of a billing account.
-         *
-         * @param request GetPayerForAccountRequest
-         * @return GetPayerForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a billing account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPayerForAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPayerForAccountResponse
+        /// </returns>
         public async Task<GetPayerForAccountResponse> GetPayerForAccountAsync(GetPayerForAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPayerForAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary \\*\\*\\* Co., Ltd.
-         *
-         * @param request GetResourceDirectoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>\<em>\</em>\* Co., Ltd.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetResourceDirectoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceDirectoryResponse
+        /// </returns>
         public GetResourceDirectoryResponse GetResourceDirectoryWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3652,16 +5316,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetResourceDirectoryResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetResourceDirectoryResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetResourceDirectoryResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary \\*\\*\\* Co., Ltd.
-         *
-         * @param request GetResourceDirectoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>\<em>\</em>\* Co., Ltd.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetResourceDirectoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceDirectoryResponse
+        /// </returns>
         public async Task<GetResourceDirectoryResponse> GetResourceDirectoryWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3677,38 +5356,59 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetResourceDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetResourceDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetResourceDirectoryResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary \\*\\*\\* Co., Ltd.
-         *
-         * @return GetResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>\<em>\</em>\* Co., Ltd.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetResourceDirectoryResponse
+        /// </returns>
         public GetResourceDirectoryResponse GetResourceDirectory()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetResourceDirectoryWithOptions(runtime);
         }
 
-        /**
-         * @summary \\*\\*\\* Co., Ltd.
-         *
-         * @return GetResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>\<em>\</em>\* Co., Ltd.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetResourceDirectoryResponse
+        /// </returns>
         public async Task<GetResourceDirectoryResponse> GetResourceDirectoryAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetResourceDirectoryWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Invites an account to join a resource directory.
-         *
-         * @param request InviteAccountToResourceDirectoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return InviteAccountToResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invites an account to join a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InviteAccountToResourceDirectoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InviteAccountToResourceDirectoryResponse
+        /// </returns>
         public InviteAccountToResourceDirectoryResponse InviteAccountToResourceDirectoryWithOptions(InviteAccountToResourceDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3749,16 +5449,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<InviteAccountToResourceDirectoryResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<InviteAccountToResourceDirectoryResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<InviteAccountToResourceDirectoryResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Invites an account to join a resource directory.
-         *
-         * @param request InviteAccountToResourceDirectoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return InviteAccountToResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invites an account to join a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InviteAccountToResourceDirectoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InviteAccountToResourceDirectoryResponse
+        /// </returns>
         public async Task<InviteAccountToResourceDirectoryResponse> InviteAccountToResourceDirectoryWithOptionsAsync(InviteAccountToResourceDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3799,42 +5514,72 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<InviteAccountToResourceDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<InviteAccountToResourceDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<InviteAccountToResourceDirectoryResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Invites an account to join a resource directory.
-         *
-         * @param request InviteAccountToResourceDirectoryRequest
-         * @return InviteAccountToResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invites an account to join a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InviteAccountToResourceDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InviteAccountToResourceDirectoryResponse
+        /// </returns>
         public InviteAccountToResourceDirectoryResponse InviteAccountToResourceDirectory(InviteAccountToResourceDirectoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InviteAccountToResourceDirectoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Invites an account to join a resource directory.
-         *
-         * @param request InviteAccountToResourceDirectoryRequest
-         * @return InviteAccountToResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invites an account to join a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InviteAccountToResourceDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InviteAccountToResourceDirectoryResponse
+        /// </returns>
         public async Task<InviteAccountToResourceDirectoryResponse> InviteAccountToResourceDirectoryAsync(InviteAccountToResourceDirectoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InviteAccountToResourceDirectoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all the members in a resource directory.
-         *
-         * @description You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.
-         *
-         * @param request ListAccountsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccountsResponse
+        /// </returns>
         public ListAccountsResponse ListAccountsWithOptions(ListAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3875,18 +5620,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAccountsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListAccountsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListAccountsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all the members in a resource directory.
-         *
-         * @description You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.
-         *
-         * @param request ListAccountsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccountsResponse
+        /// </returns>
         public async Task<ListAccountsResponse> ListAccountsWithOptionsAsync(ListAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3927,44 +5690,77 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAccountsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListAccountsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListAccountsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all the members in a resource directory.
-         *
-         * @description You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.
-         *
-         * @param request ListAccountsRequest
-         * @return ListAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccountsResponse
+        /// </returns>
         public ListAccountsResponse ListAccounts(ListAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAccountsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries all the members in a resource directory.
-         *
-         * @description You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.
-         *
-         * @param request ListAccountsRequest
-         * @return ListAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccountsResponse
+        /// </returns>
         public async Task<ListAccountsResponse> ListAccountsAsync(ListAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAccountsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of members in a folder.
-         *
-         * @param request ListAccountsForParentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAccountsForParentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of members in a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccountsForParentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccountsForParentResponse
+        /// </returns>
         public ListAccountsForParentResponse ListAccountsForParentWithOptions(ListAccountsForParentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4009,16 +5805,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAccountsForParentResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListAccountsForParentResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListAccountsForParentResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of members in a folder.
-         *
-         * @param request ListAccountsForParentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAccountsForParentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of members in a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccountsForParentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccountsForParentResponse
+        /// </returns>
         public async Task<ListAccountsForParentResponse> ListAccountsForParentWithOptionsAsync(ListAccountsForParentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4063,40 +5874,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAccountsForParentResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListAccountsForParentResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListAccountsForParentResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of members in a folder.
-         *
-         * @param request ListAccountsForParentRequest
-         * @return ListAccountsForParentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of members in a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccountsForParentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccountsForParentResponse
+        /// </returns>
         public ListAccountsForParentResponse ListAccountsForParent(ListAccountsForParentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAccountsForParentWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of members in a folder.
-         *
-         * @param request ListAccountsForParentRequest
-         * @return ListAccountsForParentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of members in a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccountsForParentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccountsForParentResponse
+        /// </returns>
         public async Task<ListAccountsForParentResponse> ListAccountsForParentAsync(ListAccountsForParentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAccountsForParentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of all the parent folders of a specified folder.
-         *
-         * @param request ListAncestorsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAncestorsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all the parent folders of a specified folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAncestorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAncestorsResponse
+        /// </returns>
         public ListAncestorsResponse ListAncestorsWithOptions(ListAncestorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4121,16 +5959,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAncestorsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListAncestorsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListAncestorsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of all the parent folders of a specified folder.
-         *
-         * @param request ListAncestorsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAncestorsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all the parent folders of a specified folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAncestorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAncestorsResponse
+        /// </returns>
         public async Task<ListAncestorsResponse> ListAncestorsWithOptionsAsync(ListAncestorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4155,40 +6008,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAncestorsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListAncestorsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListAncestorsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of all the parent folders of a specified folder.
-         *
-         * @param request ListAncestorsRequest
-         * @return ListAncestorsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all the parent folders of a specified folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAncestorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAncestorsResponse
+        /// </returns>
         public ListAncestorsResponse ListAncestors(ListAncestorsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAncestorsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of all the parent folders of a specified folder.
-         *
-         * @param request ListAncestorsRequest
-         * @return ListAncestorsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all the parent folders of a specified folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAncestorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAncestorsResponse
+        /// </returns>
         public async Task<ListAncestorsResponse> ListAncestorsAsync(ListAncestorsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAncestorsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries access control policies.
-         *
-         * @param request ListControlPoliciesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListControlPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListControlPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListControlPoliciesResponse
+        /// </returns>
         public ListControlPoliciesResponse ListControlPoliciesWithOptions(ListControlPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4225,16 +6105,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListControlPoliciesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListControlPoliciesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListControlPoliciesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries access control policies.
-         *
-         * @param request ListControlPoliciesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListControlPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListControlPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListControlPoliciesResponse
+        /// </returns>
         public async Task<ListControlPoliciesResponse> ListControlPoliciesWithOptionsAsync(ListControlPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4271,40 +6166,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListControlPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListControlPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListControlPoliciesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries access control policies.
-         *
-         * @param request ListControlPoliciesRequest
-         * @return ListControlPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListControlPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListControlPoliciesResponse
+        /// </returns>
         public ListControlPoliciesResponse ListControlPolicies(ListControlPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListControlPoliciesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries access control policies.
-         *
-         * @param request ListControlPoliciesRequest
-         * @return ListControlPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListControlPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListControlPoliciesResponse
+        /// </returns>
         public async Task<ListControlPoliciesResponse> ListControlPoliciesAsync(ListControlPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListControlPoliciesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the access control policies that are attached to a folder or member.
-         *
-         * @param request ListControlPolicyAttachmentsForTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListControlPolicyAttachmentsForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListControlPolicyAttachmentsForTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListControlPolicyAttachmentsForTargetResponse
+        /// </returns>
         public ListControlPolicyAttachmentsForTargetResponse ListControlPolicyAttachmentsForTargetWithOptions(ListControlPolicyAttachmentsForTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4333,16 +6255,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListControlPolicyAttachmentsForTargetResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListControlPolicyAttachmentsForTargetResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListControlPolicyAttachmentsForTargetResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the access control policies that are attached to a folder or member.
-         *
-         * @param request ListControlPolicyAttachmentsForTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListControlPolicyAttachmentsForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListControlPolicyAttachmentsForTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListControlPolicyAttachmentsForTargetResponse
+        /// </returns>
         public async Task<ListControlPolicyAttachmentsForTargetResponse> ListControlPolicyAttachmentsForTargetWithOptionsAsync(ListControlPolicyAttachmentsForTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4371,40 +6308,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListControlPolicyAttachmentsForTargetResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListControlPolicyAttachmentsForTargetResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListControlPolicyAttachmentsForTargetResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the access control policies that are attached to a folder or member.
-         *
-         * @param request ListControlPolicyAttachmentsForTargetRequest
-         * @return ListControlPolicyAttachmentsForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListControlPolicyAttachmentsForTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListControlPolicyAttachmentsForTargetResponse
+        /// </returns>
         public ListControlPolicyAttachmentsForTargetResponse ListControlPolicyAttachmentsForTarget(ListControlPolicyAttachmentsForTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListControlPolicyAttachmentsForTargetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the access control policies that are attached to a folder or member.
-         *
-         * @param request ListControlPolicyAttachmentsForTargetRequest
-         * @return ListControlPolicyAttachmentsForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListControlPolicyAttachmentsForTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListControlPolicyAttachmentsForTargetResponse
+        /// </returns>
         public async Task<ListControlPolicyAttachmentsForTargetResponse> ListControlPolicyAttachmentsForTargetAsync(ListControlPolicyAttachmentsForTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListControlPolicyAttachmentsForTargetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries delegated administrator accounts.
-         *
-         * @param request ListDelegatedAdministratorsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDelegatedAdministratorsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries delegated administrator accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDelegatedAdministratorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDelegatedAdministratorsResponse
+        /// </returns>
         public ListDelegatedAdministratorsResponse ListDelegatedAdministratorsWithOptions(ListDelegatedAdministratorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4437,16 +6401,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListDelegatedAdministratorsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListDelegatedAdministratorsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListDelegatedAdministratorsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries delegated administrator accounts.
-         *
-         * @param request ListDelegatedAdministratorsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDelegatedAdministratorsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries delegated administrator accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDelegatedAdministratorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDelegatedAdministratorsResponse
+        /// </returns>
         public async Task<ListDelegatedAdministratorsResponse> ListDelegatedAdministratorsWithOptionsAsync(ListDelegatedAdministratorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4479,40 +6458,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListDelegatedAdministratorsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListDelegatedAdministratorsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListDelegatedAdministratorsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries delegated administrator accounts.
-         *
-         * @param request ListDelegatedAdministratorsRequest
-         * @return ListDelegatedAdministratorsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries delegated administrator accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDelegatedAdministratorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDelegatedAdministratorsResponse
+        /// </returns>
         public ListDelegatedAdministratorsResponse ListDelegatedAdministrators(ListDelegatedAdministratorsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDelegatedAdministratorsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries delegated administrator accounts.
-         *
-         * @param request ListDelegatedAdministratorsRequest
-         * @return ListDelegatedAdministratorsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries delegated administrator accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDelegatedAdministratorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDelegatedAdministratorsResponse
+        /// </returns>
         public async Task<ListDelegatedAdministratorsResponse> ListDelegatedAdministratorsAsync(ListDelegatedAdministratorsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDelegatedAdministratorsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the trusted services for which a member is specified as a delegated administrator account.
-         *
-         * @param request ListDelegatedServicesForAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDelegatedServicesForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDelegatedServicesForAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDelegatedServicesForAccountResponse
+        /// </returns>
         public ListDelegatedServicesForAccountResponse ListDelegatedServicesForAccountWithOptions(ListDelegatedServicesForAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4537,16 +6543,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListDelegatedServicesForAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListDelegatedServicesForAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListDelegatedServicesForAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the trusted services for which a member is specified as a delegated administrator account.
-         *
-         * @param request ListDelegatedServicesForAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDelegatedServicesForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDelegatedServicesForAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDelegatedServicesForAccountResponse
+        /// </returns>
         public async Task<ListDelegatedServicesForAccountResponse> ListDelegatedServicesForAccountWithOptionsAsync(ListDelegatedServicesForAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4571,42 +6592,72 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListDelegatedServicesForAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListDelegatedServicesForAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListDelegatedServicesForAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the trusted services for which a member is specified as a delegated administrator account.
-         *
-         * @param request ListDelegatedServicesForAccountRequest
-         * @return ListDelegatedServicesForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDelegatedServicesForAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDelegatedServicesForAccountResponse
+        /// </returns>
         public ListDelegatedServicesForAccountResponse ListDelegatedServicesForAccount(ListDelegatedServicesForAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDelegatedServicesForAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the trusted services for which a member is specified as a delegated administrator account.
-         *
-         * @param request ListDelegatedServicesForAccountRequest
-         * @return ListDelegatedServicesForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDelegatedServicesForAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDelegatedServicesForAccountResponse
+        /// </returns>
         public async Task<ListDelegatedServicesForAccountResponse> ListDelegatedServicesForAccountAsync(ListDelegatedServicesForAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDelegatedServicesForAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of all subfolders of a folder.
-         *
-         * @description You can call this API operation to view the information of only the first-level subfolders of a folder.
-         *
-         * @param request ListFoldersForParentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListFoldersForParentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to view the information of only the first-level subfolders of a folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFoldersForParentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFoldersForParentResponse
+        /// </returns>
         public ListFoldersForParentResponse ListFoldersForParentWithOptions(ListFoldersForParentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4627,6 +6678,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             {
                 query["QueryKeyword"] = request.QueryKeyword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4643,18 +6698,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListFoldersForParentResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListFoldersForParentResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListFoldersForParentResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of all subfolders of a folder.
-         *
-         * @description You can call this API operation to view the information of only the first-level subfolders of a folder.
-         *
-         * @param request ListFoldersForParentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListFoldersForParentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to view the information of only the first-level subfolders of a folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFoldersForParentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFoldersForParentResponse
+        /// </returns>
         public async Task<ListFoldersForParentResponse> ListFoldersForParentWithOptionsAsync(ListFoldersForParentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4675,6 +6748,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             {
                 query["QueryKeyword"] = request.QueryKeyword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4691,44 +6768,77 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListFoldersForParentResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListFoldersForParentResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListFoldersForParentResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information of all subfolders of a folder.
-         *
-         * @description You can call this API operation to view the information of only the first-level subfolders of a folder.
-         *
-         * @param request ListFoldersForParentRequest
-         * @return ListFoldersForParentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to view the information of only the first-level subfolders of a folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFoldersForParentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFoldersForParentResponse
+        /// </returns>
         public ListFoldersForParentResponse ListFoldersForParent(ListFoldersForParentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListFoldersForParentWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information of all subfolders of a folder.
-         *
-         * @description You can call this API operation to view the information of only the first-level subfolders of a folder.
-         *
-         * @param request ListFoldersForParentRequest
-         * @return ListFoldersForParentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to view the information of only the first-level subfolders of a folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFoldersForParentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFoldersForParentResponse
+        /// </returns>
         public async Task<ListFoldersForParentResponse> ListFoldersForParentAsync(ListFoldersForParentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListFoldersForParentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the invitations that are associated with an account.
-         *
-         * @param request ListHandshakesForAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListHandshakesForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the invitations that are associated with an account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHandshakesForAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHandshakesForAccountResponse
+        /// </returns>
         public ListHandshakesForAccountResponse ListHandshakesForAccountWithOptions(ListHandshakesForAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4757,16 +6867,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListHandshakesForAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListHandshakesForAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListHandshakesForAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the invitations that are associated with an account.
-         *
-         * @param request ListHandshakesForAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListHandshakesForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the invitations that are associated with an account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHandshakesForAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHandshakesForAccountResponse
+        /// </returns>
         public async Task<ListHandshakesForAccountResponse> ListHandshakesForAccountWithOptionsAsync(ListHandshakesForAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4795,40 +6920,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListHandshakesForAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListHandshakesForAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListHandshakesForAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the invitations that are associated with an account.
-         *
-         * @param request ListHandshakesForAccountRequest
-         * @return ListHandshakesForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the invitations that are associated with an account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHandshakesForAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHandshakesForAccountResponse
+        /// </returns>
         public ListHandshakesForAccountResponse ListHandshakesForAccount(ListHandshakesForAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHandshakesForAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the invitations that are associated with an account.
-         *
-         * @param request ListHandshakesForAccountRequest
-         * @return ListHandshakesForAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the invitations that are associated with an account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHandshakesForAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHandshakesForAccountResponse
+        /// </returns>
         public async Task<ListHandshakesForAccountResponse> ListHandshakesForAccountAsync(ListHandshakesForAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHandshakesForAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries invitations in a resource directory.
-         *
-         * @param request ListHandshakesForResourceDirectoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListHandshakesForResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries invitations in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHandshakesForResourceDirectoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHandshakesForResourceDirectoryResponse
+        /// </returns>
         public ListHandshakesForResourceDirectoryResponse ListHandshakesForResourceDirectoryWithOptions(ListHandshakesForResourceDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4857,16 +7009,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListHandshakesForResourceDirectoryResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListHandshakesForResourceDirectoryResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListHandshakesForResourceDirectoryResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries invitations in a resource directory.
-         *
-         * @param request ListHandshakesForResourceDirectoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListHandshakesForResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries invitations in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHandshakesForResourceDirectoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHandshakesForResourceDirectoryResponse
+        /// </returns>
         public async Task<ListHandshakesForResourceDirectoryResponse> ListHandshakesForResourceDirectoryWithOptionsAsync(ListHandshakesForResourceDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4895,40 +7062,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListHandshakesForResourceDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListHandshakesForResourceDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListHandshakesForResourceDirectoryResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries invitations in a resource directory.
-         *
-         * @param request ListHandshakesForResourceDirectoryRequest
-         * @return ListHandshakesForResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries invitations in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHandshakesForResourceDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHandshakesForResourceDirectoryResponse
+        /// </returns>
         public ListHandshakesForResourceDirectoryResponse ListHandshakesForResourceDirectory(ListHandshakesForResourceDirectoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHandshakesForResourceDirectoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries invitations in a resource directory.
-         *
-         * @param request ListHandshakesForResourceDirectoryRequest
-         * @return ListHandshakesForResourceDirectoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries invitations in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHandshakesForResourceDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHandshakesForResourceDirectoryResponse
+        /// </returns>
         public async Task<ListHandshakesForResourceDirectoryResponse> ListHandshakesForResourceDirectoryAsync(ListHandshakesForResourceDirectoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHandshakesForResourceDirectoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the mobile phone number or email address to be verified for a contact.
-         *
-         * @param request ListMessageContactVerificationsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListMessageContactVerificationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the mobile phone number or email address to be verified for a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessageContactVerificationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessageContactVerificationsResponse
+        /// </returns>
         public ListMessageContactVerificationsResponse ListMessageContactVerificationsWithOptions(ListMessageContactVerificationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4961,16 +7155,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListMessageContactVerificationsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListMessageContactVerificationsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListMessageContactVerificationsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the mobile phone number or email address to be verified for a contact.
-         *
-         * @param request ListMessageContactVerificationsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListMessageContactVerificationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the mobile phone number or email address to be verified for a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessageContactVerificationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessageContactVerificationsResponse
+        /// </returns>
         public async Task<ListMessageContactVerificationsResponse> ListMessageContactVerificationsWithOptionsAsync(ListMessageContactVerificationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5003,40 +7212,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListMessageContactVerificationsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListMessageContactVerificationsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListMessageContactVerificationsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the mobile phone number or email address to be verified for a contact.
-         *
-         * @param request ListMessageContactVerificationsRequest
-         * @return ListMessageContactVerificationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the mobile phone number or email address to be verified for a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessageContactVerificationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessageContactVerificationsResponse
+        /// </returns>
         public ListMessageContactVerificationsResponse ListMessageContactVerifications(ListMessageContactVerificationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListMessageContactVerificationsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the mobile phone number or email address to be verified for a contact.
-         *
-         * @param request ListMessageContactVerificationsRequest
-         * @return ListMessageContactVerificationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the mobile phone number or email address to be verified for a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessageContactVerificationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessageContactVerificationsResponse
+        /// </returns>
         public async Task<ListMessageContactVerificationsResponse> ListMessageContactVerificationsAsync(ListMessageContactVerificationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListMessageContactVerificationsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries contacts.
-         *
-         * @param request ListMessageContactsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListMessageContactsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries contacts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessageContactsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessageContactsResponse
+        /// </returns>
         public ListMessageContactsResponse ListMessageContactsWithOptions(ListMessageContactsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5073,16 +7309,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListMessageContactsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListMessageContactsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListMessageContactsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries contacts.
-         *
-         * @param request ListMessageContactsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListMessageContactsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries contacts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessageContactsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessageContactsResponse
+        /// </returns>
         public async Task<ListMessageContactsResponse> ListMessageContactsWithOptionsAsync(ListMessageContactsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5119,40 +7370,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListMessageContactsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListMessageContactsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListMessageContactsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries contacts.
-         *
-         * @param request ListMessageContactsRequest
-         * @return ListMessageContactsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries contacts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessageContactsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessageContactsResponse
+        /// </returns>
         public ListMessageContactsResponse ListMessageContacts(ListMessageContactsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListMessageContactsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries contacts.
-         *
-         * @param request ListMessageContactsRequest
-         * @return ListMessageContactsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries contacts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMessageContactsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMessageContactsResponse
+        /// </returns>
         public async Task<ListMessageContactsResponse> ListMessageContactsAsync(ListMessageContactsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListMessageContactsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request ListTagKeysRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public ListTagKeysResponse ListTagKeysWithOptions(ListTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5189,16 +7467,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagKeysResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagKeysResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagKeysResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request ListTagKeysRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public async Task<ListTagKeysResponse> ListTagKeysWithOptionsAsync(ListTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5235,40 +7528,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagKeysResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagKeysResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagKeysResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request ListTagKeysRequest
-         * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public ListTagKeysResponse ListTagKeys(ListTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagKeysWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request ListTagKeysRequest
-         * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public async Task<ListTagKeysResponse> ListTagKeysAsync(ListTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagKeysWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the tags that are added to the members in a resource directory.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5309,16 +7629,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the tags that are added to the members in a resource directory.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5359,40 +7694,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the tags that are added to the members in a resource directory.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the tags that are added to the members in a resource directory.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the tag values of a tag key.
-         *
-         * @param request ListTagValuesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public ListTagValuesResponse ListTagValuesWithOptions(ListTagValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5433,16 +7795,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagValuesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagValuesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagValuesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the tag values of a tag key.
-         *
-         * @param request ListTagValuesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public async Task<ListTagValuesResponse> ListTagValuesWithOptionsAsync(ListTagValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5483,40 +7860,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagValuesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagValuesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagValuesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the tag values of a tag key.
-         *
-         * @param request ListTagValuesRequest
-         * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public ListTagValuesResponse ListTagValues(ListTagValuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagValuesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the tag values of a tag key.
-         *
-         * @param request ListTagValuesRequest
-         * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public async Task<ListTagValuesResponse> ListTagValuesAsync(ListTagValuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagValuesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the objects to which an access control policy is attached.
-         *
-         * @param request ListTargetAttachmentsForControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTargetAttachmentsForControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the objects to which an access control policy is attached.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTargetAttachmentsForControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetAttachmentsForControlPolicyResponse
+        /// </returns>
         public ListTargetAttachmentsForControlPolicyResponse ListTargetAttachmentsForControlPolicyWithOptions(ListTargetAttachmentsForControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5549,16 +7953,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTargetAttachmentsForControlPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTargetAttachmentsForControlPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTargetAttachmentsForControlPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the objects to which an access control policy is attached.
-         *
-         * @param request ListTargetAttachmentsForControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTargetAttachmentsForControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the objects to which an access control policy is attached.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTargetAttachmentsForControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetAttachmentsForControlPolicyResponse
+        /// </returns>
         public async Task<ListTargetAttachmentsForControlPolicyResponse> ListTargetAttachmentsForControlPolicyWithOptionsAsync(ListTargetAttachmentsForControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5591,42 +8010,72 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTargetAttachmentsForControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTargetAttachmentsForControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTargetAttachmentsForControlPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the objects to which an access control policy is attached.
-         *
-         * @param request ListTargetAttachmentsForControlPolicyRequest
-         * @return ListTargetAttachmentsForControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the objects to which an access control policy is attached.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTargetAttachmentsForControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetAttachmentsForControlPolicyResponse
+        /// </returns>
         public ListTargetAttachmentsForControlPolicyResponse ListTargetAttachmentsForControlPolicy(ListTargetAttachmentsForControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTargetAttachmentsForControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the objects to which an access control policy is attached.
-         *
-         * @param request ListTargetAttachmentsForControlPolicyRequest
-         * @return ListTargetAttachmentsForControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the objects to which an access control policy is attached.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTargetAttachmentsForControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetAttachmentsForControlPolicyResponse
+        /// </returns>
         public async Task<ListTargetAttachmentsForControlPolicyResponse> ListTargetAttachmentsForControlPolicyAsync(ListTargetAttachmentsForControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTargetAttachmentsForControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the trusted services that are enabled within a management account or delegated administrator account.
-         *
-         * @description Only a management account or delegated administrator account can be used to call this operation.
-         *
-         * @param request ListTrustedServiceStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTrustedServiceStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services that are enabled within a management account or delegated administrator account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only a management account or delegated administrator account can be used to call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTrustedServiceStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTrustedServiceStatusResponse
+        /// </returns>
         public ListTrustedServiceStatusResponse ListTrustedServiceStatusWithOptions(ListTrustedServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5659,18 +8108,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTrustedServiceStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTrustedServiceStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTrustedServiceStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the trusted services that are enabled within a management account or delegated administrator account.
-         *
-         * @description Only a management account or delegated administrator account can be used to call this operation.
-         *
-         * @param request ListTrustedServiceStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTrustedServiceStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services that are enabled within a management account or delegated administrator account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only a management account or delegated administrator account can be used to call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTrustedServiceStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTrustedServiceStatusResponse
+        /// </returns>
         public async Task<ListTrustedServiceStatusResponse> ListTrustedServiceStatusWithOptionsAsync(ListTrustedServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5703,44 +8170,77 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTrustedServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTrustedServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTrustedServiceStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the trusted services that are enabled within a management account or delegated administrator account.
-         *
-         * @description Only a management account or delegated administrator account can be used to call this operation.
-         *
-         * @param request ListTrustedServiceStatusRequest
-         * @return ListTrustedServiceStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services that are enabled within a management account or delegated administrator account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only a management account or delegated administrator account can be used to call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTrustedServiceStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTrustedServiceStatusResponse
+        /// </returns>
         public ListTrustedServiceStatusResponse ListTrustedServiceStatus(ListTrustedServiceStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTrustedServiceStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the trusted services that are enabled within a management account or delegated administrator account.
-         *
-         * @description Only a management account or delegated administrator account can be used to call this operation.
-         *
-         * @param request ListTrustedServiceStatusRequest
-         * @return ListTrustedServiceStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services that are enabled within a management account or delegated administrator account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only a management account or delegated administrator account can be used to call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTrustedServiceStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTrustedServiceStatusResponse
+        /// </returns>
         public async Task<ListTrustedServiceStatusResponse> ListTrustedServiceStatusAsync(ListTrustedServiceStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTrustedServiceStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Moves a member from a folder to another.
-         *
-         * @param request MoveAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return MoveAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a member from a folder to another.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveAccountResponse
+        /// </returns>
         public MoveAccountResponse MoveAccountWithOptions(MoveAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5769,16 +8269,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MoveAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<MoveAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<MoveAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Moves a member from a folder to another.
-         *
-         * @param request MoveAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return MoveAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a member from a folder to another.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveAccountResponse
+        /// </returns>
         public async Task<MoveAccountResponse> MoveAccountWithOptionsAsync(MoveAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5807,40 +8322,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MoveAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<MoveAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<MoveAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Moves a member from a folder to another.
-         *
-         * @param request MoveAccountRequest
-         * @return MoveAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a member from a folder to another.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveAccountResponse
+        /// </returns>
         public MoveAccountResponse MoveAccount(MoveAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MoveAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Moves a member from a folder to another.
-         *
-         * @param request MoveAccountRequest
-         * @return MoveAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a member from a folder to another.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveAccountResponse
+        /// </returns>
         public async Task<MoveAccountResponse> MoveAccountAsync(MoveAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MoveAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Checks whether a management account or member can be used as a main financial account.
-         *
-         * @param request PrecheckForConsolidatedBillingAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PrecheckForConsolidatedBillingAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a management account or member can be used as a main financial account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PrecheckForConsolidatedBillingAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckForConsolidatedBillingAccountResponse
+        /// </returns>
         public PrecheckForConsolidatedBillingAccountResponse PrecheckForConsolidatedBillingAccountWithOptions(PrecheckForConsolidatedBillingAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5865,16 +8407,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PrecheckForConsolidatedBillingAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<PrecheckForConsolidatedBillingAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<PrecheckForConsolidatedBillingAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Checks whether a management account or member can be used as a main financial account.
-         *
-         * @param request PrecheckForConsolidatedBillingAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PrecheckForConsolidatedBillingAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a management account or member can be used as a main financial account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PrecheckForConsolidatedBillingAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckForConsolidatedBillingAccountResponse
+        /// </returns>
         public async Task<PrecheckForConsolidatedBillingAccountResponse> PrecheckForConsolidatedBillingAccountWithOptionsAsync(PrecheckForConsolidatedBillingAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5899,45 +8456,77 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PrecheckForConsolidatedBillingAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<PrecheckForConsolidatedBillingAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<PrecheckForConsolidatedBillingAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Checks whether a management account or member can be used as a main financial account.
-         *
-         * @param request PrecheckForConsolidatedBillingAccountRequest
-         * @return PrecheckForConsolidatedBillingAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a management account or member can be used as a main financial account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PrecheckForConsolidatedBillingAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckForConsolidatedBillingAccountResponse
+        /// </returns>
         public PrecheckForConsolidatedBillingAccountResponse PrecheckForConsolidatedBillingAccount(PrecheckForConsolidatedBillingAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PrecheckForConsolidatedBillingAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Checks whether a management account or member can be used as a main financial account.
-         *
-         * @param request PrecheckForConsolidatedBillingAccountRequest
-         * @return PrecheckForConsolidatedBillingAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a management account or member can be used as a main financial account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PrecheckForConsolidatedBillingAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckForConsolidatedBillingAccountResponse
+        /// </returns>
         public async Task<PrecheckForConsolidatedBillingAccountResponse> PrecheckForConsolidatedBillingAccountAsync(PrecheckForConsolidatedBillingAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PrecheckForConsolidatedBillingAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Specifies a member in a resource directory as a delegated administrator account of a trusted service.
-         *
-         * @description The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:
-         * *   Only some trusted services support delegated administrator accounts. For more information, see [Supported trusted services](https://help.aliyun.com/document_detail/208133.html).
-         * *   Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.
-         * *   The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-         *
-         * @param request RegisterDelegatedAdministratorRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RegisterDelegatedAdministratorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:</para>
+        /// <list type="bullet">
+        /// <item><description>Only some trusted services support delegated administrator accounts. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
+        /// <item><description>Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.</description></item>
+        /// <item><description>The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RegisterDelegatedAdministratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterDelegatedAdministratorResponse
+        /// </returns>
         public RegisterDelegatedAdministratorResponse RegisterDelegatedAdministratorWithOptions(RegisterDelegatedAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5966,21 +8555,41 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RegisterDelegatedAdministratorResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RegisterDelegatedAdministratorResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RegisterDelegatedAdministratorResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Specifies a member in a resource directory as a delegated administrator account of a trusted service.
-         *
-         * @description The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:
-         * *   Only some trusted services support delegated administrator accounts. For more information, see [Supported trusted services](https://help.aliyun.com/document_detail/208133.html).
-         * *   Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.
-         * *   The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-         *
-         * @param request RegisterDelegatedAdministratorRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RegisterDelegatedAdministratorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:</para>
+        /// <list type="bullet">
+        /// <item><description>Only some trusted services support delegated administrator accounts. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
+        /// <item><description>Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.</description></item>
+        /// <item><description>The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RegisterDelegatedAdministratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterDelegatedAdministratorResponse
+        /// </returns>
         public async Task<RegisterDelegatedAdministratorResponse> RegisterDelegatedAdministratorWithOptionsAsync(RegisterDelegatedAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6009,50 +8618,87 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RegisterDelegatedAdministratorResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RegisterDelegatedAdministratorResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RegisterDelegatedAdministratorResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Specifies a member in a resource directory as a delegated administrator account of a trusted service.
-         *
-         * @description The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:
-         * *   Only some trusted services support delegated administrator accounts. For more information, see [Supported trusted services](https://help.aliyun.com/document_detail/208133.html).
-         * *   Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.
-         * *   The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-         *
-         * @param request RegisterDelegatedAdministratorRequest
-         * @return RegisterDelegatedAdministratorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:</para>
+        /// <list type="bullet">
+        /// <item><description>Only some trusted services support delegated administrator accounts. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
+        /// <item><description>Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.</description></item>
+        /// <item><description>The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RegisterDelegatedAdministratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterDelegatedAdministratorResponse
+        /// </returns>
         public RegisterDelegatedAdministratorResponse RegisterDelegatedAdministrator(RegisterDelegatedAdministratorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RegisterDelegatedAdministratorWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Specifies a member in a resource directory as a delegated administrator account of a trusted service.
-         *
-         * @description The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:
-         * *   Only some trusted services support delegated administrator accounts. For more information, see [Supported trusted services](https://help.aliyun.com/document_detail/208133.html).
-         * *   Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.
-         * *   The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-         *
-         * @param request RegisterDelegatedAdministratorRequest
-         * @return RegisterDelegatedAdministratorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:</para>
+        /// <list type="bullet">
+        /// <item><description>Only some trusted services support delegated administrator accounts. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
+        /// <item><description>Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.</description></item>
+        /// <item><description>The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RegisterDelegatedAdministratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterDelegatedAdministratorResponse
+        /// </returns>
         public async Task<RegisterDelegatedAdministratorResponse> RegisterDelegatedAdministratorAsync(RegisterDelegatedAdministratorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RegisterDelegatedAdministratorWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Removes a member of the cloud account type.
-         *
-         * @param request RemoveCloudAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveCloudAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a member of the cloud account type.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveCloudAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveCloudAccountResponse
+        /// </returns>
         public RemoveCloudAccountResponse RemoveCloudAccountWithOptions(RemoveCloudAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6077,16 +8723,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RemoveCloudAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RemoveCloudAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RemoveCloudAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Removes a member of the cloud account type.
-         *
-         * @param request RemoveCloudAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveCloudAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a member of the cloud account type.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveCloudAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveCloudAccountResponse
+        /// </returns>
         public async Task<RemoveCloudAccountResponse> RemoveCloudAccountWithOptionsAsync(RemoveCloudAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6111,40 +8772,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RemoveCloudAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RemoveCloudAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RemoveCloudAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Removes a member of the cloud account type.
-         *
-         * @param request RemoveCloudAccountRequest
-         * @return RemoveCloudAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a member of the cloud account type.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveCloudAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveCloudAccountResponse
+        /// </returns>
         public RemoveCloudAccountResponse RemoveCloudAccount(RemoveCloudAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveCloudAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes a member of the cloud account type.
-         *
-         * @param request RemoveCloudAccountRequest
-         * @return RemoveCloudAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a member of the cloud account type.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveCloudAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveCloudAccountResponse
+        /// </returns>
         public async Task<RemoveCloudAccountResponse> RemoveCloudAccountAsync(RemoveCloudAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveCloudAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Resends a verification email for the email address change of a member.
-         *
-         * @param request RetryChangeAccountEmailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RetryChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resends a verification email for the email address change of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryChangeAccountEmailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryChangeAccountEmailResponse
+        /// </returns>
         public RetryChangeAccountEmailResponse RetryChangeAccountEmailWithOptions(RetryChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6169,16 +8857,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RetryChangeAccountEmailResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RetryChangeAccountEmailResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RetryChangeAccountEmailResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Resends a verification email for the email address change of a member.
-         *
-         * @param request RetryChangeAccountEmailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RetryChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resends a verification email for the email address change of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryChangeAccountEmailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryChangeAccountEmailResponse
+        /// </returns>
         public async Task<RetryChangeAccountEmailResponse> RetryChangeAccountEmailWithOptionsAsync(RetryChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6203,40 +8906,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RetryChangeAccountEmailResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RetryChangeAccountEmailResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RetryChangeAccountEmailResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Resends a verification email for the email address change of a member.
-         *
-         * @param request RetryChangeAccountEmailRequest
-         * @return RetryChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resends a verification email for the email address change of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryChangeAccountEmailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryChangeAccountEmailResponse
+        /// </returns>
         public RetryChangeAccountEmailResponse RetryChangeAccountEmail(RetryChangeAccountEmailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RetryChangeAccountEmailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Resends a verification email for the email address change of a member.
-         *
-         * @param request RetryChangeAccountEmailRequest
-         * @return RetryChangeAccountEmailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resends a verification email for the email address change of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryChangeAccountEmailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryChangeAccountEmailResponse
+        /// </returns>
         public async Task<RetryChangeAccountEmailResponse> RetryChangeAccountEmailAsync(RetryChangeAccountEmailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RetryChangeAccountEmailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Sends verification information to the email address of a contact.
-         *
-         * @param request SendEmailVerificationForMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendEmailVerificationForMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends verification information to the email address of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendEmailVerificationForMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendEmailVerificationForMessageContactResponse
+        /// </returns>
         public SendEmailVerificationForMessageContactResponse SendEmailVerificationForMessageContactWithOptions(SendEmailVerificationForMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6265,16 +8995,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SendEmailVerificationForMessageContactResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendEmailVerificationForMessageContactResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendEmailVerificationForMessageContactResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Sends verification information to the email address of a contact.
-         *
-         * @param request SendEmailVerificationForMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendEmailVerificationForMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends verification information to the email address of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendEmailVerificationForMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendEmailVerificationForMessageContactResponse
+        /// </returns>
         public async Task<SendEmailVerificationForMessageContactResponse> SendEmailVerificationForMessageContactWithOptionsAsync(SendEmailVerificationForMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6303,40 +9048,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SendEmailVerificationForMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendEmailVerificationForMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendEmailVerificationForMessageContactResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Sends verification information to the email address of a contact.
-         *
-         * @param request SendEmailVerificationForMessageContactRequest
-         * @return SendEmailVerificationForMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends verification information to the email address of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendEmailVerificationForMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendEmailVerificationForMessageContactResponse
+        /// </returns>
         public SendEmailVerificationForMessageContactResponse SendEmailVerificationForMessageContact(SendEmailVerificationForMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SendEmailVerificationForMessageContactWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Sends verification information to the email address of a contact.
-         *
-         * @param request SendEmailVerificationForMessageContactRequest
-         * @return SendEmailVerificationForMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends verification information to the email address of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendEmailVerificationForMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendEmailVerificationForMessageContactResponse
+        /// </returns>
         public async Task<SendEmailVerificationForMessageContactResponse> SendEmailVerificationForMessageContactAsync(SendEmailVerificationForMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendEmailVerificationForMessageContactWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Sends verification information to the mobile phone number of a contact.
-         *
-         * @param request SendPhoneVerificationForMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendPhoneVerificationForMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends verification information to the mobile phone number of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendPhoneVerificationForMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendPhoneVerificationForMessageContactResponse
+        /// </returns>
         public SendPhoneVerificationForMessageContactResponse SendPhoneVerificationForMessageContactWithOptions(SendPhoneVerificationForMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6365,16 +9137,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SendPhoneVerificationForMessageContactResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendPhoneVerificationForMessageContactResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendPhoneVerificationForMessageContactResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Sends verification information to the mobile phone number of a contact.
-         *
-         * @param request SendPhoneVerificationForMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendPhoneVerificationForMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends verification information to the mobile phone number of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendPhoneVerificationForMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendPhoneVerificationForMessageContactResponse
+        /// </returns>
         public async Task<SendPhoneVerificationForMessageContactResponse> SendPhoneVerificationForMessageContactWithOptionsAsync(SendPhoneVerificationForMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6403,42 +9190,72 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SendPhoneVerificationForMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendPhoneVerificationForMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendPhoneVerificationForMessageContactResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Sends verification information to the mobile phone number of a contact.
-         *
-         * @param request SendPhoneVerificationForMessageContactRequest
-         * @return SendPhoneVerificationForMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends verification information to the mobile phone number of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendPhoneVerificationForMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendPhoneVerificationForMessageContactResponse
+        /// </returns>
         public SendPhoneVerificationForMessageContactResponse SendPhoneVerificationForMessageContact(SendPhoneVerificationForMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SendPhoneVerificationForMessageContactWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Sends verification information to the mobile phone number of a contact.
-         *
-         * @param request SendPhoneVerificationForMessageContactRequest
-         * @return SendPhoneVerificationForMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends verification information to the mobile phone number of a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendPhoneVerificationForMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendPhoneVerificationForMessageContactResponse
+        /// </returns>
         public async Task<SendPhoneVerificationForMessageContactResponse> SendPhoneVerificationForMessageContactAsync(SendPhoneVerificationForMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendPhoneVerificationForMessageContactWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Sends a verification code to the mobile phone number that you want to bind to a member of the resource account type in a resource directory for security purposes.
-         *
-         * @description To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-         *
-         * @param request SendVerificationCodeForBindSecureMobilePhoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendVerificationCodeForBindSecureMobilePhoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification code to the mobile phone number that you want to bind to a member of the resource account type in a resource directory for security purposes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationCodeForBindSecureMobilePhoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationCodeForBindSecureMobilePhoneResponse
+        /// </returns>
         public SendVerificationCodeForBindSecureMobilePhoneResponse SendVerificationCodeForBindSecureMobilePhoneWithOptions(SendVerificationCodeForBindSecureMobilePhoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6467,18 +9284,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SendVerificationCodeForBindSecureMobilePhoneResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendVerificationCodeForBindSecureMobilePhoneResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendVerificationCodeForBindSecureMobilePhoneResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Sends a verification code to the mobile phone number that you want to bind to a member of the resource account type in a resource directory for security purposes.
-         *
-         * @description To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-         *
-         * @param request SendVerificationCodeForBindSecureMobilePhoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendVerificationCodeForBindSecureMobilePhoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification code to the mobile phone number that you want to bind to a member of the resource account type in a resource directory for security purposes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationCodeForBindSecureMobilePhoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationCodeForBindSecureMobilePhoneResponse
+        /// </returns>
         public async Task<SendVerificationCodeForBindSecureMobilePhoneResponse> SendVerificationCodeForBindSecureMobilePhoneWithOptionsAsync(SendVerificationCodeForBindSecureMobilePhoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6507,46 +9342,82 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SendVerificationCodeForBindSecureMobilePhoneResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendVerificationCodeForBindSecureMobilePhoneResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendVerificationCodeForBindSecureMobilePhoneResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Sends a verification code to the mobile phone number that you want to bind to a member of the resource account type in a resource directory for security purposes.
-         *
-         * @description To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-         *
-         * @param request SendVerificationCodeForBindSecureMobilePhoneRequest
-         * @return SendVerificationCodeForBindSecureMobilePhoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification code to the mobile phone number that you want to bind to a member of the resource account type in a resource directory for security purposes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationCodeForBindSecureMobilePhoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationCodeForBindSecureMobilePhoneResponse
+        /// </returns>
         public SendVerificationCodeForBindSecureMobilePhoneResponse SendVerificationCodeForBindSecureMobilePhone(SendVerificationCodeForBindSecureMobilePhoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SendVerificationCodeForBindSecureMobilePhoneWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Sends a verification code to the mobile phone number that you want to bind to a member of the resource account type in a resource directory for security purposes.
-         *
-         * @description To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-         *
-         * @param request SendVerificationCodeForBindSecureMobilePhoneRequest
-         * @return SendVerificationCodeForBindSecureMobilePhoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification code to the mobile phone number that you want to bind to a member of the resource account type in a resource directory for security purposes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationCodeForBindSecureMobilePhoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationCodeForBindSecureMobilePhoneResponse
+        /// </returns>
         public async Task<SendVerificationCodeForBindSecureMobilePhoneResponse> SendVerificationCodeForBindSecureMobilePhoneAsync(SendVerificationCodeForBindSecureMobilePhoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendVerificationCodeForBindSecureMobilePhoneWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.
-         *
-         * @description Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.
-         *
-         * @param request SendVerificationCodeForEnableRDRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendVerificationCodeForEnableRDResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationCodeForEnableRDRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationCodeForEnableRDResponse
+        /// </returns>
         public SendVerificationCodeForEnableRDResponse SendVerificationCodeForEnableRDWithOptions(SendVerificationCodeForEnableRDRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6571,18 +9442,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SendVerificationCodeForEnableRDResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendVerificationCodeForEnableRDResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendVerificationCodeForEnableRDResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.
-         *
-         * @description Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.
-         *
-         * @param request SendVerificationCodeForEnableRDRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendVerificationCodeForEnableRDResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationCodeForEnableRDRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationCodeForEnableRDResponse
+        /// </returns>
         public async Task<SendVerificationCodeForEnableRDResponse> SendVerificationCodeForEnableRDWithOptionsAsync(SendVerificationCodeForEnableRDRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6607,46 +9496,82 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SendVerificationCodeForEnableRDResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendVerificationCodeForEnableRDResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendVerificationCodeForEnableRDResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.
-         *
-         * @description Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.
-         *
-         * @param request SendVerificationCodeForEnableRDRequest
-         * @return SendVerificationCodeForEnableRDResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationCodeForEnableRDRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationCodeForEnableRDResponse
+        /// </returns>
         public SendVerificationCodeForEnableRDResponse SendVerificationCodeForEnableRD(SendVerificationCodeForEnableRDRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SendVerificationCodeForEnableRDWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.
-         *
-         * @description Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.
-         *
-         * @param request SendVerificationCodeForEnableRDRequest
-         * @return SendVerificationCodeForEnableRDResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationCodeForEnableRDRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationCodeForEnableRDResponse
+        /// </returns>
         public async Task<SendVerificationCodeForEnableRDResponse> SendVerificationCodeForEnableRDAsync(SendVerificationCodeForEnableRDRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendVerificationCodeForEnableRDWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables the member deletion feature.
-         *
-         * @description Members of the resource account type can be deleted only after the member deletion feature is enabled.
-         *
-         * @param request SetMemberDeletionPermissionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetMemberDeletionPermissionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the member deletion feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Members of the resource account type can be deleted only after the member deletion feature is enabled.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetMemberDeletionPermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetMemberDeletionPermissionResponse
+        /// </returns>
         public SetMemberDeletionPermissionResponse SetMemberDeletionPermissionWithOptions(SetMemberDeletionPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6671,18 +9596,36 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SetMemberDeletionPermissionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SetMemberDeletionPermissionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SetMemberDeletionPermissionResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Enables or disables the member deletion feature.
-         *
-         * @description Members of the resource account type can be deleted only after the member deletion feature is enabled.
-         *
-         * @param request SetMemberDeletionPermissionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetMemberDeletionPermissionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the member deletion feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Members of the resource account type can be deleted only after the member deletion feature is enabled.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetMemberDeletionPermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetMemberDeletionPermissionResponse
+        /// </returns>
         public async Task<SetMemberDeletionPermissionResponse> SetMemberDeletionPermissionWithOptionsAsync(SetMemberDeletionPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6707,44 +9650,77 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SetMemberDeletionPermissionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SetMemberDeletionPermissionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SetMemberDeletionPermissionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Enables or disables the member deletion feature.
-         *
-         * @description Members of the resource account type can be deleted only after the member deletion feature is enabled.
-         *
-         * @param request SetMemberDeletionPermissionRequest
-         * @return SetMemberDeletionPermissionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the member deletion feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Members of the resource account type can be deleted only after the member deletion feature is enabled.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetMemberDeletionPermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetMemberDeletionPermissionResponse
+        /// </returns>
         public SetMemberDeletionPermissionResponse SetMemberDeletionPermission(SetMemberDeletionPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetMemberDeletionPermissionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables the member deletion feature.
-         *
-         * @description Members of the resource account type can be deleted only after the member deletion feature is enabled.
-         *
-         * @param request SetMemberDeletionPermissionRequest
-         * @return SetMemberDeletionPermissionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the member deletion feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Members of the resource account type can be deleted only after the member deletion feature is enabled.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetMemberDeletionPermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetMemberDeletionPermissionResponse
+        /// </returns>
         public async Task<SetMemberDeletionPermissionResponse> SetMemberDeletionPermissionAsync(SetMemberDeletionPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetMemberDeletionPermissionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Adds tags to the members in a resource directory.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6777,16 +9753,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Adds tags to the members in a resource directory.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6819,40 +9810,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Adds tags to the members in a resource directory.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Adds tags to the members in a resource directory.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Removes tags from the members in a resource directory.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6889,16 +9907,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Removes tags from the members in a resource directory.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6935,44 +9968,76 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Removes tags from the members in a resource directory.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes tags from the members in a resource directory.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the members in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the display name of a member, or switches the type of a member.
-         *
-         * @description *   To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-         * *   Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see [Switch a resource account to a cloud account](https://help.aliyun.com/document_detail/111233.html).
-         * *   Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see [Switch a cloud account to a resource account](https://help.aliyun.com/document_detail/209980.html).
-         *
-         * @param request UpdateAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
+        /// <item><description>Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccountResponse
+        /// </returns>
         public UpdateAccountResponse UpdateAccountWithOptions(UpdateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7009,20 +10074,40 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Changes the display name of a member, or switches the type of a member.
-         *
-         * @description *   To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-         * *   Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see [Switch a resource account to a cloud account](https://help.aliyun.com/document_detail/111233.html).
-         * *   Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see [Switch a cloud account to a resource account](https://help.aliyun.com/document_detail/209980.html).
-         *
-         * @param request UpdateAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
+        /// <item><description>Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccountResponse
+        /// </returns>
         public async Task<UpdateAccountResponse> UpdateAccountWithOptionsAsync(UpdateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7059,48 +10144,85 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Changes the display name of a member, or switches the type of a member.
-         *
-         * @description *   To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-         * *   Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see [Switch a resource account to a cloud account](https://help.aliyun.com/document_detail/111233.html).
-         * *   Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see [Switch a cloud account to a resource account](https://help.aliyun.com/document_detail/209980.html).
-         *
-         * @param request UpdateAccountRequest
-         * @return UpdateAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
+        /// <item><description>Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccountResponse
+        /// </returns>
         public UpdateAccountResponse UpdateAccount(UpdateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the display name of a member, or switches the type of a member.
-         *
-         * @description *   To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-         * *   Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see [Switch a resource account to a cloud account](https://help.aliyun.com/document_detail/111233.html).
-         * *   Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see [Switch a cloud account to a resource account](https://help.aliyun.com/document_detail/209980.html).
-         *
-         * @param request UpdateAccountRequest
-         * @return UpdateAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
+        /// <item><description>Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccountResponse
+        /// </returns>
         public async Task<UpdateAccountResponse> UpdateAccountAsync(UpdateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates a custom access control policy.
-         *
-         * @param request UpdateControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateControlPolicyResponse
+        /// </returns>
         public UpdateControlPolicyResponse UpdateControlPolicyWithOptions(UpdateControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7137,16 +10259,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateControlPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateControlPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateControlPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates a custom access control policy.
-         *
-         * @param request UpdateControlPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateControlPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateControlPolicyResponse
+        /// </returns>
         public async Task<UpdateControlPolicyResponse> UpdateControlPolicyWithOptionsAsync(UpdateControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7183,40 +10320,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateControlPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates a custom access control policy.
-         *
-         * @param request UpdateControlPolicyRequest
-         * @return UpdateControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateControlPolicyResponse
+        /// </returns>
         public UpdateControlPolicyResponse UpdateControlPolicy(UpdateControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates a custom access control policy.
-         *
-         * @param request UpdateControlPolicyRequest
-         * @return UpdateControlPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateControlPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateControlPolicyResponse
+        /// </returns>
         public async Task<UpdateControlPolicyResponse> UpdateControlPolicyAsync(UpdateControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateControlPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the name of a folder.
-         *
-         * @param request UpdateFolderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFolderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFolderResponse
+        /// </returns>
         public UpdateFolderResponse UpdateFolderWithOptions(UpdateFolderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7245,16 +10409,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateFolderResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateFolderResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateFolderResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Changes the name of a folder.
-         *
-         * @param request UpdateFolderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFolderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFolderResponse
+        /// </returns>
         public async Task<UpdateFolderResponse> UpdateFolderWithOptionsAsync(UpdateFolderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7283,40 +10462,67 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateFolderResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateFolderResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateFolderResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Changes the name of a folder.
-         *
-         * @param request UpdateFolderRequest
-         * @return UpdateFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFolderResponse
+        /// </returns>
         public UpdateFolderResponse UpdateFolder(UpdateFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateFolderWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the name of a folder.
-         *
-         * @param request UpdateFolderRequest
-         * @return UpdateFolderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a folder.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFolderResponse
+        /// </returns>
         public async Task<UpdateFolderResponse> UpdateFolderAsync(UpdateFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateFolderWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates a contact.
-         *
-         * @param request UpdateMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMessageContactResponse
+        /// </returns>
         public UpdateMessageContactResponse UpdateMessageContactWithOptions(UpdateMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7361,16 +10567,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateMessageContactResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateMessageContactResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateMessageContactResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates a contact.
-         *
-         * @param request UpdateMessageContactRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMessageContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMessageContactResponse
+        /// </returns>
         public async Task<UpdateMessageContactResponse> UpdateMessageContactWithOptionsAsync(UpdateMessageContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7415,27 +10636,46 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateMessageContactResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateMessageContactResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates a contact.
-         *
-         * @param request UpdateMessageContactRequest
-         * @return UpdateMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMessageContactResponse
+        /// </returns>
         public UpdateMessageContactResponse UpdateMessageContact(UpdateMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateMessageContactWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates a contact.
-         *
-         * @param request UpdateMessageContactRequest
-         * @return UpdateMessageContactResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMessageContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMessageContactResponse
+        /// </returns>
         public async Task<UpdateMessageContactResponse> UpdateMessageContactAsync(UpdateMessageContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetMessageContactRequest : TeaModel {
         /// <summary>
-        /// The ID of the contact.
+        /// <para>The ID of the contact.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-qL4HqKONzOM7****</para>
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class AttachControlPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>95060F1D-6990-4645-8920-A81D1BBFE992</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

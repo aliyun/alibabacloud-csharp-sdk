@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListDelegatedServicesForAccountResponseBody : TeaModel {
         /// <summary>
-        /// The information about the trusted services.
-        /// 
-        /// > If the value of this parameter is empty, the member is not specified as a delegated administrator account.
+        /// <para>The information about the trusted services.</para>
+        /// <remarks>
+        /// <para>If the value of this parameter is empty, the member is not specified as a delegated administrator account.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("DelegatedServices")]
         [Validation(Required=false)]
@@ -23,24 +24,34 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             public List<ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService> DelegatedService { get; set; }
             public class ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService : TeaModel {
                 /// <summary>
-                /// The time when the member was specified as a delegated administrator account.
+                /// <para>The time when the member was specified as a delegated administrator account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1616652684164</para>
                 /// </summary>
                 [NameInMap("DelegationEnabledTime")]
                 [Validation(Required=false)]
                 public string DelegationEnabledTime { get; set; }
 
                 /// <summary>
-                /// The identifier of the trusted service.
+                /// <para>The identifier of the trusted service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cloudfw.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("ServicePrincipal")]
                 [Validation(Required=false)]
                 public string ServicePrincipal { get; set; }
 
                 /// <summary>
-                /// The status of the trusted service. Valid values:
+                /// <para>The status of the trusted service. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ENABLED: enabled</description></item>
+                /// <item><description>DISABLED: disabled</description></item>
+                /// </list>
                 /// 
-                /// *   ENABLED: enabled
-                /// *   DISABLED: disabled
+                /// <b>Example:</b>
+                /// <para>ENABLED</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -51,7 +62,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D9C03B94-9396-4794-A74B-13DC437556A6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

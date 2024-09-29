@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class CancelMessageContactUpdateRequest : TeaModel {
         /// <summary>
-        /// The ID of the contact.
+        /// <para>The ID of the contact.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c-qL4HqKONzOM7****</para>
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
         /// <summary>
-        /// The email address of the contact.
+        /// <para>The email address of the contact.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>someone***@example.com</para>
         /// </summary>
         [NameInMap("EmailAddress")]
         [Validation(Required=false)]
         public string EmailAddress { get; set; }
 
         /// <summary>
-        /// The mobile phone number of the contact.
+        /// <para>The mobile phone number of the contact.</para>
+        /// <para>Specify the mobile phone number in the <c>&lt;Country code&gt;-&lt;Mobile phone number&gt;</c> format.</para>
         /// 
-        /// Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.
+        /// <b>Example:</b>
+        /// <para>86-139****1234</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

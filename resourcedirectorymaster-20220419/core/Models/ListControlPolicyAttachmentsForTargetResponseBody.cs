@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListControlPolicyAttachmentsForTargetResponseBody : TeaModel {
         /// <summary>
-        /// The information about the attached access control policies.
+        /// <para>The information about the attached access control policies.</para>
         /// </summary>
         [NameInMap("ControlPolicyAttachments")]
         [Validation(Required=false)]
@@ -21,48 +21,68 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             public List<ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment> ControlPolicyAttachment { get; set; }
             public class ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment : TeaModel {
                 /// <summary>
-                /// The time when the access control policy was attached.
+                /// <para>The time when the access control policy was attached.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-03-19T02:56:24Z</para>
                 /// </summary>
                 [NameInMap("AttachDate")]
                 [Validation(Required=false)]
                 public string AttachDate { get; set; }
 
                 /// <summary>
-                /// The description of the access control policy.
+                /// <para>The description of the access control policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ExampleControlPolicy</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The effective scope of the access control policy. Valid values:
+                /// <para>The effective scope of the access control policy. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</description></item>
+                /// <item><description>RAM: The access control policy is in effect only for RAM users and RAM roles.</description></item>
+                /// </list>
                 /// 
-                /// *   All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.
-                /// *   RAM: The access control policy is in effect only for RAM users and RAM roles.
+                /// <b>Example:</b>
+                /// <para>RAM</para>
                 /// </summary>
                 [NameInMap("EffectScope")]
                 [Validation(Required=false)]
                 public string EffectScope { get; set; }
 
                 /// <summary>
-                /// The ID of the access control policy.
+                /// <para>The ID of the access control policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cp-jExXAqIYkwHN****</para>
                 /// </summary>
                 [NameInMap("PolicyId")]
                 [Validation(Required=false)]
                 public string PolicyId { get; set; }
 
                 /// <summary>
-                /// The name of the access control policy.
+                /// <para>The name of the access control policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ExampleControlPolicy</para>
                 /// </summary>
                 [NameInMap("PolicyName")]
                 [Validation(Required=false)]
                 public string PolicyName { get; set; }
 
                 /// <summary>
-                /// The type of the access control policy. Valid values:
+                /// <para>The type of the access control policy. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>System: system access control policy</description></item>
+                /// <item><description>Custom: custom access control policy</description></item>
+                /// </list>
                 /// 
-                /// *   System: system access control policy
-                /// *   Custom: custom access control policy
+                /// <b>Example:</b>
+                /// <para>Custom</para>
                 /// </summary>
                 [NameInMap("PolicyType")]
                 [Validation(Required=false)]
@@ -73,7 +93,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C276B600-7B7A-49E8-938C-E16CFA955A82</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

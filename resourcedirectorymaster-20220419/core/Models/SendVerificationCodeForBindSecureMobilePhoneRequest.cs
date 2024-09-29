@@ -10,22 +10,26 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class SendVerificationCodeForBindSecureMobilePhoneRequest : TeaModel {
         /// <summary>
-        /// The Alibaba Cloud account ID of the member.
+        /// <para>The Alibaba Cloud account ID of the member.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>138660628348****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// The mobile phone number that you want to bind to the member for security purposes.
+        /// <para>The mobile phone number that you want to bind to the member for security purposes.</para>
+        /// <para>Specify the mobile phone number in the \<Country code>-\<Mobile phone number> format.</para>
+        /// <remarks>
+        /// <para>Mobile phone numbers in the <c>86-&lt;Mobile phone number&gt;</c> format in the Chinese mainland are not supported.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Specify the mobile phone number in the \\<Country code>-\\<Mobile phone number> format.
-        /// 
-        /// > Mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are not supported.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>xx-13900001234</para>
         /// </summary>
         [NameInMap("SecureMobilePhone")]
         [Validation(Required=false)]

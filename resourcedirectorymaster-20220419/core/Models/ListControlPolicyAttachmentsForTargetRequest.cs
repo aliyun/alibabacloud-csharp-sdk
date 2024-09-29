@@ -10,26 +10,34 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListControlPolicyAttachmentsForTargetRequest : TeaModel {
         /// <summary>
-        /// The language in which you want to return the descriptions of the access control policies. Valid values:
+        /// <para>The language in which you want to return the descriptions of the access control policies. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN (default value): Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// <item><description>ja: Japanese</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is valid only for system access control policies.</para>
+        /// </remarks>
         /// 
-        /// *   zh-CN (default value): Chinese
-        /// *   en: English
-        /// *   ja: Japanese
-        /// 
-        /// > This parameter is valid only for system access control policies.
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
         /// <summary>
-        /// The ID of the object whose access control policies you want to query. Access control policies can be attached to the following objects:
+        /// <para>The ID of the object whose access control policies you want to query. Access control policies can be attached to the following objects:</para>
+        /// <list type="bullet">
+        /// <item><description>Root folder</description></item>
+        /// <item><description>Subfolders of the Root folder</description></item>
+        /// <item><description>Members</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Root folder
-        /// *   Subfolders of the Root folder
-        /// *   Members
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>fd-ZDNPiT****</para>
         /// </summary>
         [NameInMap("TargetId")]
         [Validation(Required=false)]

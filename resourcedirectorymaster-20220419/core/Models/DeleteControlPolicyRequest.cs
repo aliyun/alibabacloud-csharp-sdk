@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class DeleteControlPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the access control policy.
+        /// <para>The ID of the access control policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cp-SImPt8GCEwiq****</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

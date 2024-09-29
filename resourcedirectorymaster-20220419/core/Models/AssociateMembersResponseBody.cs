@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class AssociateMembersResponseBody : TeaModel {
         /// <summary>
-        /// The time when the contact was bound to the object.
+        /// <para>The time when the contact was bound to the object.</para>
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<AssociateMembersResponseBodyMembers> Members { get; set; }
         public class AssociateMembersResponseBodyMembers : TeaModel {
             /// <summary>
-            /// The ID of the contact.
+            /// <para>The ID of the contact.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c-qL4HqKONzOM7****</para>
             /// </summary>
             [NameInMap("ContactId")]
             [Validation(Required=false)]
             public string ContactId { get; set; }
 
             /// <summary>
-            /// The ID of the object. Valid values:
+            /// <para>The ID of the object. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ID of the resource directory</description></item>
+            /// <item><description>ID of the folder</description></item>
+            /// <item><description>ID of the member</description></item>
+            /// </list>
             /// 
-            /// - ID of the resource directory
-            /// - ID of the folder
-            /// - ID of the member
+            /// <b>Example:</b>
+            /// <para>fd-ZDNPiT****</para>
             /// </summary>
             [NameInMap("MemberId")]
             [Validation(Required=false)]
             public string MemberId { get; set; }
 
             /// <summary>
-            /// The time when the contact was bound to the object.
+            /// <para>The time when the contact was bound to the object.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-03-27 17:19:21</para>
             /// </summary>
             [NameInMap("ModifyDate")]
             [Validation(Required=false)]
@@ -44,7 +54,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>95060F1D-6990-4645-8920-A81D1BBFE992</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

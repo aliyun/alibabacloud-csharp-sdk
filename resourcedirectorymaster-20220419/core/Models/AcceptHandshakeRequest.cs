@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,11 +10,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class AcceptHandshakeRequest : TeaModel {
         /// <summary>
-        /// The ID of the invitation.
+        /// <para>The ID of the invitation.</para>
+        /// <para>You can call the <a href="~~ListHandshakesForAccount~~">ListHandshakesForAccount</a> operation to obtain the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListHandshakesForAccount](~~ListHandshakesForAccount~~) operation to obtain the ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>h-Ih8IuPfvV0t0****</para>
         /// </summary>
         [NameInMap("HandshakeId")]
         [Validation(Required=false)]

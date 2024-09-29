@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class PrecheckForConsolidatedBillingAccountResponseBody : TeaModel {
         /// <summary>
-        /// The cause of the check failure.
+        /// <para>The cause of the check failure.</para>
         /// </summary>
         [NameInMap("Reasons")]
         [Validation(Required=false)]
         public List<PrecheckForConsolidatedBillingAccountResponseBodyReasons> Reasons { get; set; }
         public class PrecheckForConsolidatedBillingAccountResponseBodyReasons : TeaModel {
             /// <summary>
-            /// The error code.
+            /// <para>The error code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PaymentAccountEnterpriseInvoiceError</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The error message.
+            /// <para>The error message.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>No enterprise invoice header information is set for the payment account.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -33,17 +39,24 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9E6B6CA8-9E7A-521F-A743-AA582714727E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the check was successful. Valid values:
+        /// <para>Indicates whether the check was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

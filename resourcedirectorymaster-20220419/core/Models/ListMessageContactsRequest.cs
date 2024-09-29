@@ -10,32 +10,45 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListMessageContactsRequest : TeaModel {
         /// <summary>
-        /// The ID of the contact.
+        /// <para>The ID of the contact.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c-qL4HqKONzOM7****</para>
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
         /// <summary>
-        /// The ID of the object to which the contact is bound. Valid values:
+        /// <para>The ID of the object to which the contact is bound. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ID of the resource directory</description></item>
+        /// <item><description>ID of the folder</description></item>
+        /// <item><description>ID of the member</description></item>
+        /// </list>
         /// 
-        /// *   ID of the resource directory
-        /// *   ID of the folder
-        /// *   ID of the member
+        /// <b>Example:</b>
+        /// <para>fd-ZDNPiT****</para>
         /// </summary>
         [NameInMap("Member")]
         [Validation(Required=false)]
         public string Member { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
