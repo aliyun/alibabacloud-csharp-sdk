@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.EmrStudio20240430.Models
 {
     public class DescribeManualTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123***</para>
         /// </summary>
         [NameInMap("workspaceId")]
         [Validation(Required=false)]

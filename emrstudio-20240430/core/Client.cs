@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "EmrStudio";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("emrstudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -37,14 +40,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 创建工作流
-         *
-         * @param request CreateWorkflowRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowResponse
+        /// </returns>
         public CreateWorkflowResponse CreateWorkflowWithOptions(string projectId, CreateWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -152,17 +165,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateWorkflowResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateWorkflowResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateWorkflowResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 创建工作流
-         *
-         * @param request CreateWorkflowRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowResponse
+        /// </returns>
         public async Task<CreateWorkflowResponse> CreateWorkflowWithOptionsAsync(string projectId, CreateWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -270,15 +300,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateWorkflowResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 创建工作流
-         *
-         * @param request CreateWorkflowRequest
-         * @return CreateWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowResponse
+        /// </returns>
         public CreateWorkflowResponse CreateWorkflow(string projectId, CreateWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -286,12 +329,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return CreateWorkflowWithOptions(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建工作流
-         *
-         * @param request CreateWorkflowRequest
-         * @return CreateWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowResponse
+        /// </returns>
         public async Task<CreateWorkflowResponse> CreateWorkflowAsync(string projectId, CreateWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -299,14 +348,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await CreateWorkflowWithOptionsAsync(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除工作流
-         *
-         * @param request DeleteWorkflowRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowResponse
+        /// </returns>
         public DeleteWorkflowResponse DeleteWorkflowWithOptions(string projectId, string workflowId, DeleteWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -332,17 +391,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteWorkflowResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteWorkflowResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteWorkflowResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 删除工作流
-         *
-         * @param request DeleteWorkflowRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowResponse
+        /// </returns>
         public async Task<DeleteWorkflowResponse> DeleteWorkflowWithOptionsAsync(string projectId, string workflowId, DeleteWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -368,15 +444,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteWorkflowResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 删除工作流
-         *
-         * @param request DeleteWorkflowRequest
-         * @return DeleteWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowResponse
+        /// </returns>
         public DeleteWorkflowResponse DeleteWorkflow(string projectId, string workflowId, DeleteWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -384,12 +473,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return DeleteWorkflowWithOptions(projectId, workflowId, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除工作流
-         *
-         * @param request DeleteWorkflowRequest
-         * @return DeleteWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowResponse
+        /// </returns>
         public async Task<DeleteWorkflowResponse> DeleteWorkflowAsync(string projectId, string workflowId, DeleteWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -397,14 +492,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await DeleteWorkflowWithOptionsAsync(projectId, workflowId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取手动任务定义
-         *
-         * @param request DescribeManualTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeManualTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务定义</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeManualTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeManualTaskResponse
+        /// </returns>
         public DescribeManualTaskResponse DescribeManualTaskWithOptions(string projectId, string manualTaskId, DescribeManualTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -430,17 +535,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeManualTaskResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeManualTaskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeManualTaskResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取手动任务定义
-         *
-         * @param request DescribeManualTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeManualTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务定义</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeManualTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeManualTaskResponse
+        /// </returns>
         public async Task<DescribeManualTaskResponse> DescribeManualTaskWithOptionsAsync(string projectId, string manualTaskId, DescribeManualTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -466,15 +588,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeManualTaskResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeManualTaskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeManualTaskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取手动任务定义
-         *
-         * @param request DescribeManualTaskRequest
-         * @return DescribeManualTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务定义</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeManualTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeManualTaskResponse
+        /// </returns>
         public DescribeManualTaskResponse DescribeManualTask(string projectId, string manualTaskId, DescribeManualTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -482,12 +617,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return DescribeManualTaskWithOptions(projectId, manualTaskId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取手动任务定义
-         *
-         * @param request DescribeManualTaskRequest
-         * @return DescribeManualTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务定义</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeManualTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeManualTaskResponse
+        /// </returns>
         public async Task<DescribeManualTaskResponse> DescribeManualTaskAsync(string projectId, string manualTaskId, DescribeManualTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -495,14 +636,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await DescribeManualTaskWithOptionsAsync(projectId, manualTaskId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取手动任务实例
-         *
-         * @param request DescribeManualTaskInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeManualTaskInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeManualTaskInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeManualTaskInstanceResponse
+        /// </returns>
         public DescribeManualTaskInstanceResponse DescribeManualTaskInstanceWithOptions(string manualTaskInstanceId, string projectId, DescribeManualTaskInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -528,17 +679,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeManualTaskInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeManualTaskInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeManualTaskInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取手动任务实例
-         *
-         * @param request DescribeManualTaskInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeManualTaskInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeManualTaskInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeManualTaskInstanceResponse
+        /// </returns>
         public async Task<DescribeManualTaskInstanceResponse> DescribeManualTaskInstanceWithOptionsAsync(string manualTaskInstanceId, string projectId, DescribeManualTaskInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -564,15 +732,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeManualTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeManualTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeManualTaskInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取手动任务实例
-         *
-         * @param request DescribeManualTaskInstanceRequest
-         * @return DescribeManualTaskInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeManualTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeManualTaskInstanceResponse
+        /// </returns>
         public DescribeManualTaskInstanceResponse DescribeManualTaskInstance(string manualTaskInstanceId, string projectId, DescribeManualTaskInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -580,12 +761,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return DescribeManualTaskInstanceWithOptions(manualTaskInstanceId, projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取手动任务实例
-         *
-         * @param request DescribeManualTaskInstanceRequest
-         * @return DescribeManualTaskInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeManualTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeManualTaskInstanceResponse
+        /// </returns>
         public async Task<DescribeManualTaskInstanceResponse> DescribeManualTaskInstanceAsync(string manualTaskInstanceId, string projectId, DescribeManualTaskInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -593,14 +780,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await DescribeManualTaskInstanceWithOptionsAsync(manualTaskInstanceId, projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取项目详情
-         *
-         * @param request DescribeProjectRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取项目详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProjectResponse
+        /// </returns>
         public DescribeProjectResponse DescribeProjectWithOptions(string projectId, DescribeProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -626,17 +823,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeProjectResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeProjectResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeProjectResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取项目详情
-         *
-         * @param request DescribeProjectRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取项目详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProjectResponse
+        /// </returns>
         public async Task<DescribeProjectResponse> DescribeProjectWithOptionsAsync(string projectId, DescribeProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -662,15 +876,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeProjectResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeProjectResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeProjectResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取项目详情
-         *
-         * @param request DescribeProjectRequest
-         * @return DescribeProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取项目详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProjectResponse
+        /// </returns>
         public DescribeProjectResponse DescribeProject(string projectId, DescribeProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -678,12 +905,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return DescribeProjectWithOptions(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取项目详情
-         *
-         * @param request DescribeProjectRequest
-         * @return DescribeProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取项目详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProjectResponse
+        /// </returns>
         public async Task<DescribeProjectResponse> DescribeProjectAsync(string projectId, DescribeProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -691,14 +924,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await DescribeProjectWithOptionsAsync(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询任务定义
-         *
-         * @param request DescribeTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务定义</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskResponse
+        /// </returns>
         public DescribeTaskResponse DescribeTaskWithOptions(string workflowId, string projectId, string taskId, DescribeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -724,17 +967,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTaskResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTaskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTaskResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 查询任务定义
-         *
-         * @param request DescribeTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务定义</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskResponse
+        /// </returns>
         public async Task<DescribeTaskResponse> DescribeTaskWithOptionsAsync(string workflowId, string projectId, string taskId, DescribeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -760,15 +1020,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTaskResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTaskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTaskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 查询任务定义
-         *
-         * @param request DescribeTaskRequest
-         * @return DescribeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务定义</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskResponse
+        /// </returns>
         public DescribeTaskResponse DescribeTask(string workflowId, string projectId, string taskId, DescribeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -776,12 +1049,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return DescribeTaskWithOptions(workflowId, projectId, taskId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询任务定义
-         *
-         * @param request DescribeTaskRequest
-         * @return DescribeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务定义</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskResponse
+        /// </returns>
         public async Task<DescribeTaskResponse> DescribeTaskAsync(string workflowId, string projectId, string taskId, DescribeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -789,14 +1068,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await DescribeTaskWithOptionsAsync(workflowId, projectId, taskId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取任务实例
-         *
-         * @param request DescribeTaskInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTaskInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskInstanceResponse
+        /// </returns>
         public DescribeTaskInstanceResponse DescribeTaskInstanceWithOptions(string projectId, string workflowInstanceId, string taskInstanceId, DescribeTaskInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -822,17 +1111,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTaskInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTaskInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTaskInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取任务实例
-         *
-         * @param request DescribeTaskInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTaskInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskInstanceResponse
+        /// </returns>
         public async Task<DescribeTaskInstanceResponse> DescribeTaskInstanceWithOptionsAsync(string projectId, string workflowInstanceId, string taskInstanceId, DescribeTaskInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -858,15 +1164,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTaskInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取任务实例
-         *
-         * @param request DescribeTaskInstanceRequest
-         * @return DescribeTaskInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskInstanceResponse
+        /// </returns>
         public DescribeTaskInstanceResponse DescribeTaskInstance(string projectId, string workflowInstanceId, string taskInstanceId, DescribeTaskInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -874,12 +1193,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return DescribeTaskInstanceWithOptions(projectId, workflowInstanceId, taskInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取任务实例
-         *
-         * @param request DescribeTaskInstanceRequest
-         * @return DescribeTaskInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskInstanceResponse
+        /// </returns>
         public async Task<DescribeTaskInstanceResponse> DescribeTaskInstanceAsync(string projectId, string workflowInstanceId, string taskInstanceId, DescribeTaskInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -887,14 +1212,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await DescribeTaskInstanceWithOptionsAsync(projectId, workflowInstanceId, taskInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取工作流详情
-         *
-         * @param request DescribeWorkflowRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWorkflowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWorkflowResponse
+        /// </returns>
         public DescribeWorkflowResponse DescribeWorkflowWithOptions(string projectId, string workflowId, DescribeWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -920,17 +1255,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeWorkflowResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeWorkflowResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeWorkflowResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取工作流详情
-         *
-         * @param request DescribeWorkflowRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWorkflowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWorkflowResponse
+        /// </returns>
         public async Task<DescribeWorkflowResponse> DescribeWorkflowWithOptionsAsync(string projectId, string workflowId, DescribeWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -956,15 +1308,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeWorkflowResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取工作流详情
-         *
-         * @param request DescribeWorkflowRequest
-         * @return DescribeWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWorkflowResponse
+        /// </returns>
         public DescribeWorkflowResponse DescribeWorkflow(string projectId, string workflowId, DescribeWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -972,12 +1337,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return DescribeWorkflowWithOptions(projectId, workflowId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取工作流详情
-         *
-         * @param request DescribeWorkflowRequest
-         * @return DescribeWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWorkflowResponse
+        /// </returns>
         public async Task<DescribeWorkflowResponse> DescribeWorkflowAsync(string projectId, string workflowId, DescribeWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -985,14 +1356,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await DescribeWorkflowWithOptionsAsync(projectId, workflowId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取工作流实例详情
-         *
-         * @param request DescribeWorkflowInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeWorkflowInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWorkflowInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWorkflowInstanceResponse
+        /// </returns>
         public DescribeWorkflowInstanceResponse DescribeWorkflowInstanceWithOptions(string projectId, string workflowInstanceId, DescribeWorkflowInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1018,17 +1399,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeWorkflowInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeWorkflowInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeWorkflowInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取工作流实例详情
-         *
-         * @param request DescribeWorkflowInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeWorkflowInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWorkflowInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWorkflowInstanceResponse
+        /// </returns>
         public async Task<DescribeWorkflowInstanceResponse> DescribeWorkflowInstanceWithOptionsAsync(string projectId, string workflowInstanceId, DescribeWorkflowInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1054,15 +1452,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeWorkflowInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeWorkflowInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeWorkflowInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取工作流实例详情
-         *
-         * @param request DescribeWorkflowInstanceRequest
-         * @return DescribeWorkflowInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWorkflowInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWorkflowInstanceResponse
+        /// </returns>
         public DescribeWorkflowInstanceResponse DescribeWorkflowInstance(string projectId, string workflowInstanceId, DescribeWorkflowInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1070,12 +1481,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return DescribeWorkflowInstanceWithOptions(projectId, workflowInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取工作流实例详情
-         *
-         * @param request DescribeWorkflowInstanceRequest
-         * @return DescribeWorkflowInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWorkflowInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWorkflowInstanceResponse
+        /// </returns>
         public async Task<DescribeWorkflowInstanceResponse> DescribeWorkflowInstanceAsync(string projectId, string workflowInstanceId, DescribeWorkflowInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1083,14 +1500,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await DescribeWorkflowInstanceWithOptionsAsync(projectId, workflowInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取手动任务实例列表
-         *
-         * @param request ListManualTaskInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListManualTaskInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManualTaskInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManualTaskInstancesResponse
+        /// </returns>
         public ListManualTaskInstancesResponse ListManualTaskInstancesWithOptions(string projectId, ListManualTaskInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1140,17 +1567,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListManualTaskInstancesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListManualTaskInstancesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListManualTaskInstancesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取手动任务实例列表
-         *
-         * @param request ListManualTaskInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListManualTaskInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManualTaskInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManualTaskInstancesResponse
+        /// </returns>
         public async Task<ListManualTaskInstancesResponse> ListManualTaskInstancesWithOptionsAsync(string projectId, ListManualTaskInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1200,15 +1644,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListManualTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListManualTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListManualTaskInstancesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取手动任务实例列表
-         *
-         * @param request ListManualTaskInstancesRequest
-         * @return ListManualTaskInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManualTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManualTaskInstancesResponse
+        /// </returns>
         public ListManualTaskInstancesResponse ListManualTaskInstances(string projectId, ListManualTaskInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1216,12 +1673,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return ListManualTaskInstancesWithOptions(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取手动任务实例列表
-         *
-         * @param request ListManualTaskInstancesRequest
-         * @return ListManualTaskInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取手动任务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManualTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManualTaskInstancesResponse
+        /// </returns>
         public async Task<ListManualTaskInstancesResponse> ListManualTaskInstancesAsync(string projectId, ListManualTaskInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1229,14 +1692,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await ListManualTaskInstancesWithOptionsAsync(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询手动任务定义列表
-         *
-         * @param request ListManualTasksRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListManualTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询手动任务定义列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManualTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManualTasksResponse
+        /// </returns>
         public ListManualTasksResponse ListManualTasksWithOptions(string projectId, ListManualTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1278,17 +1751,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListManualTasksResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListManualTasksResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListManualTasksResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 查询手动任务定义列表
-         *
-         * @param request ListManualTasksRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListManualTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询手动任务定义列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManualTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManualTasksResponse
+        /// </returns>
         public async Task<ListManualTasksResponse> ListManualTasksWithOptionsAsync(string projectId, ListManualTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1330,15 +1820,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListManualTasksResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListManualTasksResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListManualTasksResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 查询手动任务定义列表
-         *
-         * @param request ListManualTasksRequest
-         * @return ListManualTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询手动任务定义列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManualTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManualTasksResponse
+        /// </returns>
         public ListManualTasksResponse ListManualTasks(string projectId, ListManualTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1346,12 +1849,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return ListManualTasksWithOptions(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询手动任务定义列表
-         *
-         * @param request ListManualTasksRequest
-         * @return ListManualTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询手动任务定义列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManualTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManualTasksResponse
+        /// </returns>
         public async Task<ListManualTasksResponse> ListManualTasksAsync(string projectId, ListManualTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1359,14 +1868,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await ListManualTasksWithOptionsAsync(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取项目详情
-         *
-         * @param request ListProjectsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取项目详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProjectsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
         public ListProjectsResponse ListProjectsWithOptions(ListProjectsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1404,17 +1923,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProjectsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListProjectsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListProjectsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取项目详情
-         *
-         * @param request ListProjectsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取项目详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProjectsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
         public async Task<ListProjectsResponse> ListProjectsWithOptionsAsync(ListProjectsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1452,15 +1988,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProjectsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListProjectsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListProjectsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取项目详情
-         *
-         * @param request ListProjectsRequest
-         * @return ListProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取项目详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
         public ListProjectsResponse ListProjects(ListProjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1468,12 +2017,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return ListProjectsWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取项目详情
-         *
-         * @param request ListProjectsRequest
-         * @return ListProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取项目详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
         public async Task<ListProjectsResponse> ListProjectsAsync(ListProjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1481,14 +2036,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await ListProjectsWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取任务实例列表
-         *
-         * @param request ListTaskInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTaskInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTaskInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstancesResponse
+        /// </returns>
         public ListTaskInstancesResponse ListTaskInstancesWithOptions(string projectId, ListTaskInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1542,17 +2107,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTaskInstancesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTaskInstancesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTaskInstancesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取任务实例列表
-         *
-         * @param request ListTaskInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTaskInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTaskInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstancesResponse
+        /// </returns>
         public async Task<ListTaskInstancesResponse> ListTaskInstancesWithOptionsAsync(string projectId, ListTaskInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1606,15 +2188,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTaskInstancesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取任务实例列表
-         *
-         * @param request ListTaskInstancesRequest
-         * @return ListTaskInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstancesResponse
+        /// </returns>
         public ListTaskInstancesResponse ListTaskInstances(string projectId, ListTaskInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1622,12 +2217,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return ListTaskInstancesWithOptions(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取任务实例列表
-         *
-         * @param request ListTaskInstancesRequest
-         * @return ListTaskInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstancesResponse
+        /// </returns>
         public async Task<ListTaskInstancesResponse> ListTaskInstancesAsync(string projectId, ListTaskInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1635,14 +2236,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await ListTaskInstancesWithOptionsAsync(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询任务定义列表
-         *
-         * @param request ListTasksRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务定义列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public ListTasksResponse ListTasksWithOptions(string projectId, ListTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1688,17 +2299,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTasksResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTasksResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTasksResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 查询任务定义列表
-         *
-         * @param request ListTasksRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务定义列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public async Task<ListTasksResponse> ListTasksWithOptionsAsync(string projectId, ListTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1744,15 +2372,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTasksResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTasksResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTasksResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 查询任务定义列表
-         *
-         * @param request ListTasksRequest
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务定义列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public ListTasksResponse ListTasks(string projectId, ListTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1760,12 +2401,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return ListTasksWithOptions(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询任务定义列表
-         *
-         * @param request ListTasksRequest
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务定义列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public async Task<ListTasksResponse> ListTasksAsync(string projectId, ListTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1773,14 +2420,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await ListTasksWithOptionsAsync(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取工作流实例列表
-         *
-         * @param request ListWorkflowInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkflowInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowInstancesResponse
+        /// </returns>
         public ListWorkflowInstancesResponse ListWorkflowInstancesWithOptions(string projectId, ListWorkflowInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1830,17 +2487,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListWorkflowInstancesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListWorkflowInstancesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListWorkflowInstancesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取工作流实例列表
-         *
-         * @param request ListWorkflowInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkflowInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowInstancesResponse
+        /// </returns>
         public async Task<ListWorkflowInstancesResponse> ListWorkflowInstancesWithOptionsAsync(string projectId, ListWorkflowInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1890,15 +2564,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListWorkflowInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListWorkflowInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListWorkflowInstancesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取工作流实例列表
-         *
-         * @param request ListWorkflowInstancesRequest
-         * @return ListWorkflowInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowInstancesResponse
+        /// </returns>
         public ListWorkflowInstancesResponse ListWorkflowInstances(string projectId, ListWorkflowInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1906,12 +2593,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return ListWorkflowInstancesWithOptions(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取工作流实例列表
-         *
-         * @param request ListWorkflowInstancesRequest
-         * @return ListWorkflowInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowInstancesResponse
+        /// </returns>
         public async Task<ListWorkflowInstancesResponse> ListWorkflowInstancesAsync(string projectId, ListWorkflowInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1919,14 +2612,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await ListWorkflowInstancesWithOptionsAsync(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取工作流列表
-         *
-         * @param request ListWorkflowsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkflowsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowsResponse
+        /// </returns>
         public ListWorkflowsResponse ListWorkflowsWithOptions(string projectId, ListWorkflowsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1964,17 +2667,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListWorkflowsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListWorkflowsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListWorkflowsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取工作流列表
-         *
-         * @param request ListWorkflowsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkflowsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowsResponse
+        /// </returns>
         public async Task<ListWorkflowsResponse> ListWorkflowsWithOptionsAsync(string projectId, ListWorkflowsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2012,15 +2732,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListWorkflowsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListWorkflowsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListWorkflowsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取工作流列表
-         *
-         * @param request ListWorkflowsRequest
-         * @return ListWorkflowsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowsResponse
+        /// </returns>
         public ListWorkflowsResponse ListWorkflows(string projectId, ListWorkflowsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2028,12 +2761,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return ListWorkflowsWithOptions(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取工作流列表
-         *
-         * @param request ListWorkflowsRequest
-         * @return ListWorkflowsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowsResponse
+        /// </returns>
         public async Task<ListWorkflowsResponse> ListWorkflowsAsync(string projectId, ListWorkflowsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2041,14 +2780,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await ListWorkflowsWithOptionsAsync(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 运行工作流
-         *
-         * @param request RunWorkflowRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunWorkflowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunWorkflowResponse
+        /// </returns>
         public RunWorkflowResponse RunWorkflowWithOptions(string projectId, RunWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2126,17 +2875,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RunWorkflowResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RunWorkflowResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RunWorkflowResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 运行工作流
-         *
-         * @param request RunWorkflowRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunWorkflowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunWorkflowResponse
+        /// </returns>
         public async Task<RunWorkflowResponse> RunWorkflowWithOptionsAsync(string projectId, RunWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2214,15 +2980,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RunWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RunWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RunWorkflowResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 运行工作流
-         *
-         * @param request RunWorkflowRequest
-         * @return RunWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunWorkflowResponse
+        /// </returns>
         public RunWorkflowResponse RunWorkflow(string projectId, RunWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2230,12 +3009,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return RunWorkflowWithOptions(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 运行工作流
-         *
-         * @param request RunWorkflowRequest
-         * @return RunWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunWorkflowResponse
+        /// </returns>
         public async Task<RunWorkflowResponse> RunWorkflowAsync(string projectId, RunWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2243,14 +3028,24 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return await RunWorkflowWithOptionsAsync(projectId, request, headers, runtime);
         }
 
-        /**
-         * @summary 更新工作流
-         *
-         * @param request UpdateWorkflowRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowResponse
+        /// </returns>
         public UpdateWorkflowResponse UpdateWorkflowWithOptions(string projectId, string workflowId, UpdateWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2358,17 +3153,34 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateWorkflowResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateWorkflowResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateWorkflowResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 更新工作流
-         *
-         * @param request UpdateWorkflowRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowResponse
+        /// </returns>
         public async Task<UpdateWorkflowResponse> UpdateWorkflowWithOptionsAsync(string projectId, string workflowId, UpdateWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2476,15 +3288,28 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateWorkflowResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 更新工作流
-         *
-         * @param request UpdateWorkflowRequest
-         * @return UpdateWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowResponse
+        /// </returns>
         public UpdateWorkflowResponse UpdateWorkflow(string projectId, string workflowId, UpdateWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2492,12 +3317,18 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             return UpdateWorkflowWithOptions(projectId, workflowId, request, headers, runtime);
         }
 
-        /**
-         * @summary 更新工作流
-         *
-         * @param request UpdateWorkflowRequest
-         * @return UpdateWorkflowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowResponse
+        /// </returns>
         public async Task<UpdateWorkflowResponse> UpdateWorkflowAsync(string projectId, string workflowId, UpdateWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

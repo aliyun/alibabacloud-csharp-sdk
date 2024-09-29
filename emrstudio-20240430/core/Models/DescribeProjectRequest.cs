@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.EmrStudio20240430.Models
 {
     public class DescribeProjectRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("workspaceId")]
         [Validation(Required=false)]
