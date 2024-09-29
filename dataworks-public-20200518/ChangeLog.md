@@ -1,3 +1,6 @@
+2024-09-29 Version: 6.1.5
+- Generated csharp 2020-05-18 for dataworks-public.
+
 2024-09-26 Version: 6.1.4
 - Update API CreateDISyncTask: update param TaskContent.
 - Update API GetNode: update response param.

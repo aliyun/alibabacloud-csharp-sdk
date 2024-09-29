@@ -281,6 +281,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public GetFileResponseBodyDataNodeConfiguration NodeConfiguration { get; set; }
             public class GetFileResponseBodyDataNodeConfiguration : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether scheduling configurations immediately take effect after the deployment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("ApplyScheduleImmediately")]
                 [Validation(Required=false)]
                 public string ApplyScheduleImmediately { get; set; }
