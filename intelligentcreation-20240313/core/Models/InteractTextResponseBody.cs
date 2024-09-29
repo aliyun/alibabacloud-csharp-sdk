@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
-    public class QueryTextStreamResponseBody : TeaModel {
+    public class InteractTextResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>
@@ -25,19 +25,29 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public int? Index { get; set; }
 
-        /// <summary>
-        /// <para>Id of the request</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>None</para>
-        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("relatedImages")]
+        [Validation(Required=false)]
+        public List<string> RelatedImages { get; set; }
+
+        [NameInMap("relatedVideos")]
+        [Validation(Required=false)]
+        public List<string> RelatedVideos { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>79e954faffe2415ebd18188ba787d78e</para>
+        /// </summary>
+        [NameInMap("sessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

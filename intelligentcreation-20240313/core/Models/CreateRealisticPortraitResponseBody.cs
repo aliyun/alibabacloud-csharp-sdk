@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class CreateRealisticPortraitResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D5798660-1531-5D12-9C20-16FEE9D22351</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>313123123</para>
+        /// </summary>
         [NameInMap("taskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

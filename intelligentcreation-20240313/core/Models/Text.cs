@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         public string AgentName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("desc")]
         [Validation(Required=false)]
@@ -45,12 +48,19 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         public string TextContent { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("textId")]
         [Validation(Required=false)]
         public long? TextId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("textIllustrationTag")]
         [Validation(Required=false)]
         public bool? TextIllustrationTag { get; set; }
@@ -60,7 +70,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         public string TextModeType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Generating</para>
         /// </summary>
         [NameInMap("textStatus")]
         [Validation(Required=false)]
@@ -71,7 +84,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         public string TextStyleType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("textTaskId")]
         [Validation(Required=false)]
@@ -81,19 +97,29 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public List<string> TextThemes { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("userNameCreate")]
         [Validation(Required=false)]
         public string UserNameCreate { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("userNameModified")]
         [Validation(Required=false)]

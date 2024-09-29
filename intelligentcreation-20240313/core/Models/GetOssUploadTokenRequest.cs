@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class GetOssUploadTokenRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8021678.png</para>
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ProductImage</para>
         /// </summary>
         [NameInMap("fileType")]
         [Validation(Required=false)]

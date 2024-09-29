@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
-    public class QueryAvatarProjectRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>11111</para>
-        /// </summary>
-        [NameInMap("projectId")]
+    public class ListAvatarProjectRequest : TeaModel {
+        [NameInMap("projectIdList")]
         [Validation(Required=false)]
-        public string ProjectId { get; set; }
+        public List<string> ProjectIdList { get; set; }
 
     }
 

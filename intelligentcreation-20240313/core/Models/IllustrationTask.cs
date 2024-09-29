@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public long? IllustrationTaskId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Success</para>
+        /// </summary>
         [NameInMap("taskStatus")]
         [Validation(Required=false)]
         public string TaskStatus { get; set; }

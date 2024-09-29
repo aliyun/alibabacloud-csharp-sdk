@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class GetTextTemplateRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Car</para>
+        /// </summary>
         [NameInMap("industry")]
         [Validation(Required=false)]
         public string Industry { get; set; }

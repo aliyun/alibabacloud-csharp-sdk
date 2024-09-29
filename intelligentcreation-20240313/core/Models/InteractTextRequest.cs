@@ -8,22 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
-    public class StopProjectTaskResponseBody : TeaModel {
+    public class InteractTextRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>86A90C40-D1AB-50DA-A4B1-0D545F80F2FE</para>
+        /// <para>1000222</para>
         /// </summary>
-        [NameInMap("requestId")]
+        [NameInMap("agentId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string AgentId { get; set; }
+
+        [NameInMap("content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>144285195534941</para>
         /// </summary>
-        [NameInMap("success")]
+        [NameInMap("sessionId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string SessionId { get; set; }
 
     }
 

@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string ChannelToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>121dlsga4o7golrl1hoja</para>
+        /// </summary>
         [NameInMap("sessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }

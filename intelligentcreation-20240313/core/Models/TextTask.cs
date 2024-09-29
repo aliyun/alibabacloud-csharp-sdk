@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>九寨沟三日游攻略</para>
+        /// </summary>
         [NameInMap("contentRequirement")]
         [Validation(Required=false)]
         public string ContentRequirement { get; set; }
@@ -34,12 +38,19 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         public string Introduction { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("nums")]
         [Validation(Required=false)]
         public int? Nums { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
         [NameInMap("point")]
         [Validation(Required=false)]
         public string Point { get; set; }
@@ -53,7 +64,7 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         public int? RelatedRagId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("style")]
         [Validation(Required=false)]
@@ -68,7 +79,7 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         public List<long?> TextIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("textModeType")]
         [Validation(Required=false)]
@@ -86,6 +97,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public List<Text> Texts { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>旅游路线</para>
+        /// </summary>
         [NameInMap("theme")]
         [Validation(Required=false)]
         public string Theme { get; set; }

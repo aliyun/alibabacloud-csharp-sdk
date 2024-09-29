@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public GetTextTemplateResponseBodyAvailableIndustry AvailableIndustry { get; set; }
         public class GetTextTemplateResponseBodyAvailableIndustry : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Car</para>
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public List<GetTextTemplateResponseBodyAvailableIndustryTextModeTypes> TextModeTypes { get; set; }
             public class GetTextTemplateResponseBodyAvailableIndustryTextModeTypes : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Rewrite</para>
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -33,14 +41,26 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                     [Validation(Required=false)]
                     public string Desc { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>false</para>
+                    /// </summary>
                     [NameInMap("disabled")]
                     [Validation(Required=false)]
                     public bool? Disabled { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>RED_BOOK</para>
+                    /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>111</para>
+                    /// </summary>
                     [NameInMap("templateKey")]
                     [Validation(Required=false)]
                     public string TemplateKey { get; set; }
@@ -51,6 +71,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3239281273464326823</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
