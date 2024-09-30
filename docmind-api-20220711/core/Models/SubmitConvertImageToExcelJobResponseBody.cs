@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
     public class SubmitConvertImageToExcelJobResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>noPermission</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,16 +21,28 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public SubmitConvertImageToExcelJobResponseBodyData Data { get; set; }
         public class SubmitConvertImageToExcelJobResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>docmind-20220810-7c5f9dd4</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>You are not authorized to perform this operation.</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>43A29C77-405E-4CC0-BC55-EE694AD00655</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

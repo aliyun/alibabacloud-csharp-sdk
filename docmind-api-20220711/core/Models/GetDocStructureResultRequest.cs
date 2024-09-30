@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
     public class GetDocStructureResultRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>docmind-20220816-1e89d65c</para>
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

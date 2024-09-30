@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public object Data { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>43A29C77-405E-4CC0-BC55-EE694AD00655</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public bool? ForceMergeExcel { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>jpg</para>
+        /// </summary>
         [NameInMap("ImageNameExtension")]
         [Validation(Required=false)]
         public string ImageNameExtension { get; set; }

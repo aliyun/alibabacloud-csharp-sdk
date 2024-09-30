@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FileUrl")]
         [Validation(Required=false)]

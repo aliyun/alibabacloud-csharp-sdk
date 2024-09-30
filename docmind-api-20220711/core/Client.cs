@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "docmind-api";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -96,13 +99,21 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 整票识别
-         *
-         * @param tmpReq AyncTradeDocumentPackageExtractSmartAppRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AyncTradeDocumentPackageExtractSmartAppResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AyncTradeDocumentPackageExtractSmartAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AyncTradeDocumentPackageExtractSmartAppResponse
+        /// </returns>
         public AyncTradeDocumentPackageExtractSmartAppResponse AyncTradeDocumentPackageExtractSmartAppWithOptions(AyncTradeDocumentPackageExtractSmartAppRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -149,16 +160,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AyncTradeDocumentPackageExtractSmartAppResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AyncTradeDocumentPackageExtractSmartAppResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AyncTradeDocumentPackageExtractSmartAppResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 整票识别
-         *
-         * @param tmpReq AyncTradeDocumentPackageExtractSmartAppRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AyncTradeDocumentPackageExtractSmartAppResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AyncTradeDocumentPackageExtractSmartAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AyncTradeDocumentPackageExtractSmartAppResponse
+        /// </returns>
         public async Task<AyncTradeDocumentPackageExtractSmartAppResponse> AyncTradeDocumentPackageExtractSmartAppWithOptionsAsync(AyncTradeDocumentPackageExtractSmartAppRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -205,40 +231,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AyncTradeDocumentPackageExtractSmartAppResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AyncTradeDocumentPackageExtractSmartAppResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AyncTradeDocumentPackageExtractSmartAppResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 整票识别
-         *
-         * @param request AyncTradeDocumentPackageExtractSmartAppRequest
-         * @return AyncTradeDocumentPackageExtractSmartAppResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AyncTradeDocumentPackageExtractSmartAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AyncTradeDocumentPackageExtractSmartAppResponse
+        /// </returns>
         public AyncTradeDocumentPackageExtractSmartAppResponse AyncTradeDocumentPackageExtractSmartApp(AyncTradeDocumentPackageExtractSmartAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AyncTradeDocumentPackageExtractSmartAppWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 整票识别
-         *
-         * @param request AyncTradeDocumentPackageExtractSmartAppRequest
-         * @return AyncTradeDocumentPackageExtractSmartAppResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AyncTradeDocumentPackageExtractSmartAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AyncTradeDocumentPackageExtractSmartAppResponse
+        /// </returns>
         public async Task<AyncTradeDocumentPackageExtractSmartAppResponse> AyncTradeDocumentPackageExtractSmartAppAsync(AyncTradeDocumentPackageExtractSmartAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AyncTradeDocumentPackageExtractSmartAppWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 文档结构化流式接口
-         *
-         * @param request GetDocParserResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocParserResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档结构化流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocParserResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocParserResultResponse
+        /// </returns>
         public GetDocParserResultResponse GetDocParserResultWithOptions(GetDocParserResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -271,16 +324,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDocParserResultResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDocParserResultResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDocParserResultResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档结构化流式接口
-         *
-         * @param request GetDocParserResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocParserResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档结构化流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocParserResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocParserResultResponse
+        /// </returns>
         public async Task<GetDocParserResultResponse> GetDocParserResultWithOptionsAsync(GetDocParserResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -313,40 +381,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDocParserResultResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDocParserResultResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDocParserResultResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档结构化流式接口
-         *
-         * @param request GetDocParserResultRequest
-         * @return GetDocParserResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档结构化流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocParserResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocParserResultResponse
+        /// </returns>
         public GetDocParserResultResponse GetDocParserResult(GetDocParserResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDocParserResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档结构化流式接口
-         *
-         * @param request GetDocParserResultRequest
-         * @return GetDocParserResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档结构化流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocParserResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocParserResultResponse
+        /// </returns>
         public async Task<GetDocParserResultResponse> GetDocParserResultAsync(GetDocParserResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDocParserResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 文档智能解析结果查询
-         *
-         * @param request GetDocStructureResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocStructureResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocStructureResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocStructureResultResponse
+        /// </returns>
         public GetDocStructureResultResponse GetDocStructureResultWithOptions(GetDocStructureResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -383,16 +478,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDocStructureResultResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDocStructureResultResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDocStructureResultResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档智能解析结果查询
-         *
-         * @param request GetDocStructureResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocStructureResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocStructureResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocStructureResultResponse
+        /// </returns>
         public async Task<GetDocStructureResultResponse> GetDocStructureResultWithOptionsAsync(GetDocStructureResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -429,40 +539,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDocStructureResultResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDocStructureResultResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDocStructureResultResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档智能解析结果查询
-         *
-         * @param request GetDocStructureResultRequest
-         * @return GetDocStructureResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocStructureResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocStructureResultResponse
+        /// </returns>
         public GetDocStructureResultResponse GetDocStructureResult(GetDocStructureResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDocStructureResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档智能解析结果查询
-         *
-         * @param request GetDocStructureResultRequest
-         * @return GetDocStructureResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocStructureResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocStructureResultResponse
+        /// </returns>
         public async Task<GetDocStructureResultResponse> GetDocStructureResultAsync(GetDocStructureResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDocStructureResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 文档对比结果查询
-         *
-         * @param request GetDocumentCompareResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentCompareResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档对比结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentCompareResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentCompareResultResponse
+        /// </returns>
         public GetDocumentCompareResultResponse GetDocumentCompareResultWithOptions(GetDocumentCompareResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -487,16 +624,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDocumentCompareResultResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDocumentCompareResultResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDocumentCompareResultResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档对比结果查询
-         *
-         * @param request GetDocumentCompareResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentCompareResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档对比结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentCompareResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentCompareResultResponse
+        /// </returns>
         public async Task<GetDocumentCompareResultResponse> GetDocumentCompareResultWithOptionsAsync(GetDocumentCompareResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -521,40 +673,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDocumentCompareResultResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDocumentCompareResultResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDocumentCompareResultResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档对比结果查询
-         *
-         * @param request GetDocumentCompareResultRequest
-         * @return GetDocumentCompareResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档对比结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentCompareResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentCompareResultResponse
+        /// </returns>
         public GetDocumentCompareResultResponse GetDocumentCompareResult(GetDocumentCompareResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDocumentCompareResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档对比结果查询
-         *
-         * @param request GetDocumentCompareResultRequest
-         * @return GetDocumentCompareResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档对比结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentCompareResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentCompareResultResponse
+        /// </returns>
         public async Task<GetDocumentCompareResultResponse> GetDocumentCompareResultAsync(GetDocumentCompareResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDocumentCompareResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 文档转换结果查询
-         *
-         * @param request GetDocumentConvertResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentConvertResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档转换结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentConvertResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentConvertResultResponse
+        /// </returns>
         public GetDocumentConvertResultResponse GetDocumentConvertResultWithOptions(GetDocumentConvertResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -579,16 +758,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDocumentConvertResultResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDocumentConvertResultResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDocumentConvertResultResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档转换结果查询
-         *
-         * @param request GetDocumentConvertResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentConvertResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档转换结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentConvertResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentConvertResultResponse
+        /// </returns>
         public async Task<GetDocumentConvertResultResponse> GetDocumentConvertResultWithOptionsAsync(GetDocumentConvertResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -613,40 +807,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDocumentConvertResultResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDocumentConvertResultResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDocumentConvertResultResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档转换结果查询
-         *
-         * @param request GetDocumentConvertResultRequest
-         * @return GetDocumentConvertResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档转换结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentConvertResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentConvertResultResponse
+        /// </returns>
         public GetDocumentConvertResultResponse GetDocumentConvertResult(GetDocumentConvertResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDocumentConvertResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档转换结果查询
-         *
-         * @param request GetDocumentConvertResultRequest
-         * @return GetDocumentConvertResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档转换结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentConvertResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentConvertResultResponse
+        /// </returns>
         public async Task<GetDocumentConvertResultResponse> GetDocumentConvertResultAsync(GetDocumentConvertResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDocumentConvertResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 文档抽取结果查询
-         *
-         * @param request GetDocumentExtractResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentExtractResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档抽取结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentExtractResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentExtractResultResponse
+        /// </returns>
         public GetDocumentExtractResultResponse GetDocumentExtractResultWithOptions(GetDocumentExtractResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -671,16 +892,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDocumentExtractResultResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDocumentExtractResultResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDocumentExtractResultResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档抽取结果查询
-         *
-         * @param request GetDocumentExtractResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentExtractResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档抽取结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentExtractResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentExtractResultResponse
+        /// </returns>
         public async Task<GetDocumentExtractResultResponse> GetDocumentExtractResultWithOptionsAsync(GetDocumentExtractResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -705,40 +941,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDocumentExtractResultResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDocumentExtractResultResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDocumentExtractResultResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档抽取结果查询
-         *
-         * @param request GetDocumentExtractResultRequest
-         * @return GetDocumentExtractResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档抽取结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentExtractResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentExtractResultResponse
+        /// </returns>
         public GetDocumentExtractResultResponse GetDocumentExtractResult(GetDocumentExtractResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDocumentExtractResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档抽取结果查询
-         *
-         * @param request GetDocumentExtractResultRequest
-         * @return GetDocumentExtractResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档抽取结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentExtractResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentExtractResultResponse
+        /// </returns>
         public async Task<GetDocumentExtractResultResponse> GetDocumentExtractResultAsync(GetDocumentExtractResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDocumentExtractResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary openmind
-         *
-         * @param request GetPageNumRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPageNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>openmind</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPageNumRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPageNumResponse
+        /// </returns>
         public GetPageNumResponse GetPageNumWithOptions(GetPageNumRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -763,16 +1026,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPageNumResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPageNumResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPageNumResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary openmind
-         *
-         * @param request GetPageNumRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPageNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>openmind</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPageNumRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPageNumResponse
+        /// </returns>
         public async Task<GetPageNumResponse> GetPageNumWithOptionsAsync(GetPageNumRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -797,40 +1075,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPageNumResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPageNumResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPageNumResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary openmind
-         *
-         * @param request GetPageNumRequest
-         * @return GetPageNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>openmind</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPageNumRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPageNumResponse
+        /// </returns>
         public GetPageNumResponse GetPageNum(GetPageNumRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPageNumWithOptions(request, runtime);
         }
 
-        /**
-         * @summary openmind
-         *
-         * @param request GetPageNumRequest
-         * @return GetPageNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>openmind</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPageNumRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPageNumResponse
+        /// </returns>
         public async Task<GetPageNumResponse> GetPageNumAsync(GetPageNumRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPageNumWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 表格智能解析结果查询
-         *
-         * @param request GetTableUnderstandingResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTableUnderstandingResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格智能解析结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableUnderstandingResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableUnderstandingResultResponse
+        /// </returns>
         public GetTableUnderstandingResultResponse GetTableUnderstandingResultWithOptions(GetTableUnderstandingResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -855,16 +1160,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetTableUnderstandingResultResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetTableUnderstandingResultResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetTableUnderstandingResultResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 表格智能解析结果查询
-         *
-         * @param request GetTableUnderstandingResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTableUnderstandingResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格智能解析结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableUnderstandingResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableUnderstandingResultResponse
+        /// </returns>
         public async Task<GetTableUnderstandingResultResponse> GetTableUnderstandingResultWithOptionsAsync(GetTableUnderstandingResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -889,40 +1209,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetTableUnderstandingResultResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetTableUnderstandingResultResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetTableUnderstandingResultResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 表格智能解析结果查询
-         *
-         * @param request GetTableUnderstandingResultRequest
-         * @return GetTableUnderstandingResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格智能解析结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableUnderstandingResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableUnderstandingResultResponse
+        /// </returns>
         public GetTableUnderstandingResultResponse GetTableUnderstandingResult(GetTableUnderstandingResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTableUnderstandingResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 表格智能解析结果查询
-         *
-         * @param request GetTableUnderstandingResultRequest
-         * @return GetTableUnderstandingResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格智能解析结果查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableUnderstandingResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableUnderstandingResultResponse
+        /// </returns>
         public async Task<GetTableUnderstandingResultResponse> GetTableUnderstandingResultAsync(GetTableUnderstandingResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTableUnderstandingResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取文档智能解析处理状态
-         *
-         * @param request QueryDocParserStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDocParserStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档智能解析处理状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDocParserStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDocParserStatusResponse
+        /// </returns>
         public QueryDocParserStatusResponse QueryDocParserStatusWithOptions(QueryDocParserStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -947,16 +1294,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryDocParserStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryDocParserStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryDocParserStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取文档智能解析处理状态
-         *
-         * @param request QueryDocParserStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDocParserStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档智能解析处理状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDocParserStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDocParserStatusResponse
+        /// </returns>
         public async Task<QueryDocParserStatusResponse> QueryDocParserStatusWithOptionsAsync(QueryDocParserStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -981,40 +1343,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryDocParserStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryDocParserStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryDocParserStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 获取文档智能解析处理状态
-         *
-         * @param request QueryDocParserStatusRequest
-         * @return QueryDocParserStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档智能解析处理状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDocParserStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDocParserStatusResponse
+        /// </returns>
         public QueryDocParserStatusResponse QueryDocParserStatus(QueryDocParserStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDocParserStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取文档智能解析处理状态
-         *
-         * @param request QueryDocParserStatusRequest
-         * @return QueryDocParserStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档智能解析处理状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDocParserStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDocParserStatusResponse
+        /// </returns>
         public async Task<QueryDocParserStatusResponse> QueryDocParserStatusAsync(QueryDocParserStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDocParserStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 图片转excel
-         *
-         * @param tmpReq SubmitConvertImageToExcelJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertImageToExcelJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转excel</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitConvertImageToExcelJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToExcelJobResponse
+        /// </returns>
         public SubmitConvertImageToExcelJobResponse SubmitConvertImageToExcelJobWithOptions(SubmitConvertImageToExcelJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1061,16 +1450,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertImageToExcelJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertImageToExcelJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertImageToExcelJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 图片转excel
-         *
-         * @param tmpReq SubmitConvertImageToExcelJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertImageToExcelJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转excel</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitConvertImageToExcelJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToExcelJobResponse
+        /// </returns>
         public async Task<SubmitConvertImageToExcelJobResponse> SubmitConvertImageToExcelJobWithOptionsAsync(SubmitConvertImageToExcelJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1117,40 +1521,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertImageToExcelJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertImageToExcelJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertImageToExcelJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 图片转excel
-         *
-         * @param request SubmitConvertImageToExcelJobRequest
-         * @return SubmitConvertImageToExcelJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转excel</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertImageToExcelJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToExcelJobResponse
+        /// </returns>
         public SubmitConvertImageToExcelJobResponse SubmitConvertImageToExcelJob(SubmitConvertImageToExcelJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitConvertImageToExcelJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 图片转excel
-         *
-         * @param request SubmitConvertImageToExcelJobRequest
-         * @return SubmitConvertImageToExcelJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转excel</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertImageToExcelJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToExcelJobResponse
+        /// </returns>
         public async Task<SubmitConvertImageToExcelJobResponse> SubmitConvertImageToExcelJobAsync(SubmitConvertImageToExcelJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitConvertImageToExcelJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 图片转markdown
-         *
-         * @param tmpReq SubmitConvertImageToMarkdownJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertImageToMarkdownJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转markdown</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitConvertImageToMarkdownJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToMarkdownJobResponse
+        /// </returns>
         public SubmitConvertImageToMarkdownJobResponse SubmitConvertImageToMarkdownJobWithOptions(SubmitConvertImageToMarkdownJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1193,16 +1624,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertImageToMarkdownJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertImageToMarkdownJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertImageToMarkdownJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 图片转markdown
-         *
-         * @param tmpReq SubmitConvertImageToMarkdownJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertImageToMarkdownJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转markdown</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitConvertImageToMarkdownJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToMarkdownJobResponse
+        /// </returns>
         public async Task<SubmitConvertImageToMarkdownJobResponse> SubmitConvertImageToMarkdownJobWithOptionsAsync(SubmitConvertImageToMarkdownJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1245,40 +1691,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertImageToMarkdownJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertImageToMarkdownJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertImageToMarkdownJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 图片转markdown
-         *
-         * @param request SubmitConvertImageToMarkdownJobRequest
-         * @return SubmitConvertImageToMarkdownJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转markdown</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertImageToMarkdownJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToMarkdownJobResponse
+        /// </returns>
         public SubmitConvertImageToMarkdownJobResponse SubmitConvertImageToMarkdownJob(SubmitConvertImageToMarkdownJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitConvertImageToMarkdownJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 图片转markdown
-         *
-         * @param request SubmitConvertImageToMarkdownJobRequest
-         * @return SubmitConvertImageToMarkdownJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转markdown</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertImageToMarkdownJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToMarkdownJobResponse
+        /// </returns>
         public async Task<SubmitConvertImageToMarkdownJobResponse> SubmitConvertImageToMarkdownJobAsync(SubmitConvertImageToMarkdownJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitConvertImageToMarkdownJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 图片转pdf
-         *
-         * @param tmpReq SubmitConvertImageToPdfJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertImageToPdfJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转pdf</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitConvertImageToPdfJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToPdfJobResponse
+        /// </returns>
         public SubmitConvertImageToPdfJobResponse SubmitConvertImageToPdfJobWithOptions(SubmitConvertImageToPdfJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1321,16 +1794,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertImageToPdfJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertImageToPdfJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertImageToPdfJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 图片转pdf
-         *
-         * @param tmpReq SubmitConvertImageToPdfJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertImageToPdfJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转pdf</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitConvertImageToPdfJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToPdfJobResponse
+        /// </returns>
         public async Task<SubmitConvertImageToPdfJobResponse> SubmitConvertImageToPdfJobWithOptionsAsync(SubmitConvertImageToPdfJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1373,40 +1861,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertImageToPdfJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertImageToPdfJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertImageToPdfJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 图片转pdf
-         *
-         * @param request SubmitConvertImageToPdfJobRequest
-         * @return SubmitConvertImageToPdfJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转pdf</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertImageToPdfJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToPdfJobResponse
+        /// </returns>
         public SubmitConvertImageToPdfJobResponse SubmitConvertImageToPdfJob(SubmitConvertImageToPdfJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitConvertImageToPdfJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 图片转pdf
-         *
-         * @param request SubmitConvertImageToPdfJobRequest
-         * @return SubmitConvertImageToPdfJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转pdf</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertImageToPdfJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToPdfJobResponse
+        /// </returns>
         public async Task<SubmitConvertImageToPdfJobResponse> SubmitConvertImageToPdfJobAsync(SubmitConvertImageToPdfJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitConvertImageToPdfJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 图片转word
-         *
-         * @param tmpReq SubmitConvertImageToWordJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertImageToWordJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转word</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitConvertImageToWordJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToWordJobResponse
+        /// </returns>
         public SubmitConvertImageToWordJobResponse SubmitConvertImageToWordJobWithOptions(SubmitConvertImageToWordJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1449,16 +1964,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertImageToWordJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertImageToWordJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertImageToWordJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 图片转word
-         *
-         * @param tmpReq SubmitConvertImageToWordJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertImageToWordJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转word</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitConvertImageToWordJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToWordJobResponse
+        /// </returns>
         public async Task<SubmitConvertImageToWordJobResponse> SubmitConvertImageToWordJobWithOptionsAsync(SubmitConvertImageToWordJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1501,40 +2031,67 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertImageToWordJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertImageToWordJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertImageToWordJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 图片转word
-         *
-         * @param request SubmitConvertImageToWordJobRequest
-         * @return SubmitConvertImageToWordJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转word</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertImageToWordJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToWordJobResponse
+        /// </returns>
         public SubmitConvertImageToWordJobResponse SubmitConvertImageToWordJob(SubmitConvertImageToWordJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitConvertImageToWordJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 图片转word
-         *
-         * @param request SubmitConvertImageToWordJobRequest
-         * @return SubmitConvertImageToWordJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片转word</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertImageToWordJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertImageToWordJobResponse
+        /// </returns>
         public async Task<SubmitConvertImageToWordJobResponse> SubmitConvertImageToWordJobAsync(SubmitConvertImageToWordJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitConvertImageToWordJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary pdf转excel
-         *
-         * @param request SubmitConvertPdfToExcelJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertPdfToExcelJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转excel</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToExcelJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToExcelJobResponse
+        /// </returns>
         public SubmitConvertPdfToExcelJobResponse SubmitConvertPdfToExcelJobWithOptions(SubmitConvertPdfToExcelJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1571,16 +2128,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertPdfToExcelJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToExcelJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToExcelJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary pdf转excel
-         *
-         * @param request SubmitConvertPdfToExcelJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertPdfToExcelJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转excel</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToExcelJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToExcelJobResponse
+        /// </returns>
         public async Task<SubmitConvertPdfToExcelJobResponse> SubmitConvertPdfToExcelJobWithOptionsAsync(SubmitConvertPdfToExcelJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1617,27 +2189,46 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertPdfToExcelJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToExcelJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToExcelJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary pdf转excel
-         *
-         * @param request SubmitConvertPdfToExcelJobRequest
-         * @return SubmitConvertPdfToExcelJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转excel</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToExcelJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToExcelJobResponse
+        /// </returns>
         public SubmitConvertPdfToExcelJobResponse SubmitConvertPdfToExcelJob(SubmitConvertPdfToExcelJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitConvertPdfToExcelJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary pdf转excel
-         *
-         * @param request SubmitConvertPdfToExcelJobRequest
-         * @return SubmitConvertPdfToExcelJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转excel</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToExcelJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToExcelJobResponse
+        /// </returns>
         public async Task<SubmitConvertPdfToExcelJobResponse> SubmitConvertPdfToExcelJobAsync(SubmitConvertPdfToExcelJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1808,13 +2399,21 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             return submitConvertPdfToExcelJobResp;
         }
 
-        /**
-         * @summary pdf转图片
-         *
-         * @param request SubmitConvertPdfToImageJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertPdfToImageJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转图片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToImageJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToImageJobResponse
+        /// </returns>
         public SubmitConvertPdfToImageJobResponse SubmitConvertPdfToImageJobWithOptions(SubmitConvertPdfToImageJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1843,16 +2442,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertPdfToImageJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToImageJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToImageJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary pdf转图片
-         *
-         * @param request SubmitConvertPdfToImageJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertPdfToImageJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转图片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToImageJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToImageJobResponse
+        /// </returns>
         public async Task<SubmitConvertPdfToImageJobResponse> SubmitConvertPdfToImageJobWithOptionsAsync(SubmitConvertPdfToImageJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1881,27 +2495,46 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertPdfToImageJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToImageJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToImageJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary pdf转图片
-         *
-         * @param request SubmitConvertPdfToImageJobRequest
-         * @return SubmitConvertPdfToImageJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转图片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToImageJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToImageJobResponse
+        /// </returns>
         public SubmitConvertPdfToImageJobResponse SubmitConvertPdfToImageJob(SubmitConvertPdfToImageJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitConvertPdfToImageJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary pdf转图片
-         *
-         * @param request SubmitConvertPdfToImageJobRequest
-         * @return SubmitConvertPdfToImageJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转图片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToImageJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToImageJobResponse
+        /// </returns>
         public async Task<SubmitConvertPdfToImageJobResponse> SubmitConvertPdfToImageJobAsync(SubmitConvertPdfToImageJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2072,13 +2705,21 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             return submitConvertPdfToImageJobResp;
         }
 
-        /**
-         * @summary pdf转markdown
-         *
-         * @param request SubmitConvertPdfToMarkdownJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertPdfToMarkdownJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转markdown</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToMarkdownJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToMarkdownJobResponse
+        /// </returns>
         public SubmitConvertPdfToMarkdownJobResponse SubmitConvertPdfToMarkdownJobWithOptions(SubmitConvertPdfToMarkdownJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2107,16 +2748,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertPdfToMarkdownJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToMarkdownJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToMarkdownJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary pdf转markdown
-         *
-         * @param request SubmitConvertPdfToMarkdownJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertPdfToMarkdownJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转markdown</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToMarkdownJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToMarkdownJobResponse
+        /// </returns>
         public async Task<SubmitConvertPdfToMarkdownJobResponse> SubmitConvertPdfToMarkdownJobWithOptionsAsync(SubmitConvertPdfToMarkdownJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2145,27 +2801,46 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertPdfToMarkdownJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToMarkdownJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToMarkdownJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary pdf转markdown
-         *
-         * @param request SubmitConvertPdfToMarkdownJobRequest
-         * @return SubmitConvertPdfToMarkdownJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转markdown</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToMarkdownJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToMarkdownJobResponse
+        /// </returns>
         public SubmitConvertPdfToMarkdownJobResponse SubmitConvertPdfToMarkdownJob(SubmitConvertPdfToMarkdownJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitConvertPdfToMarkdownJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary pdf转markdown
-         *
-         * @param request SubmitConvertPdfToMarkdownJobRequest
-         * @return SubmitConvertPdfToMarkdownJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转markdown</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToMarkdownJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToMarkdownJobResponse
+        /// </returns>
         public async Task<SubmitConvertPdfToMarkdownJobResponse> SubmitConvertPdfToMarkdownJobAsync(SubmitConvertPdfToMarkdownJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2336,13 +3011,21 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             return submitConvertPdfToMarkdownJobResp;
         }
 
-        /**
-         * @summary pdf转word
-         *
-         * @param request SubmitConvertPdfToWordJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertPdfToWordJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转word</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToWordJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToWordJobResponse
+        /// </returns>
         public SubmitConvertPdfToWordJobResponse SubmitConvertPdfToWordJobWithOptions(SubmitConvertPdfToWordJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2375,16 +3058,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertPdfToWordJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToWordJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToWordJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary pdf转word
-         *
-         * @param request SubmitConvertPdfToWordJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitConvertPdfToWordJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转word</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToWordJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToWordJobResponse
+        /// </returns>
         public async Task<SubmitConvertPdfToWordJobResponse> SubmitConvertPdfToWordJobWithOptionsAsync(SubmitConvertPdfToWordJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2417,27 +3115,46 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitConvertPdfToWordJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToWordJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitConvertPdfToWordJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary pdf转word
-         *
-         * @param request SubmitConvertPdfToWordJobRequest
-         * @return SubmitConvertPdfToWordJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转word</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToWordJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToWordJobResponse
+        /// </returns>
         public SubmitConvertPdfToWordJobResponse SubmitConvertPdfToWordJob(SubmitConvertPdfToWordJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitConvertPdfToWordJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary pdf转word
-         *
-         * @param request SubmitConvertPdfToWordJobRequest
-         * @return SubmitConvertPdfToWordJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>pdf转word</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitConvertPdfToWordJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitConvertPdfToWordJobResponse
+        /// </returns>
         public async Task<SubmitConvertPdfToWordJobResponse> SubmitConvertPdfToWordJobAsync(SubmitConvertPdfToWordJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2608,13 +3325,21 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             return submitConvertPdfToWordJobResp;
         }
 
-        /**
-         * @summary 电子解析
-         *
-         * @param request SubmitDigitalDocStructureJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitDigitalDocStructureJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电子解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDigitalDocStructureJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDigitalDocStructureJobResponse
+        /// </returns>
         public SubmitDigitalDocStructureJobResponse SubmitDigitalDocStructureJobWithOptions(SubmitDigitalDocStructureJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2659,16 +3384,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitDigitalDocStructureJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitDigitalDocStructureJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitDigitalDocStructureJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 电子解析
-         *
-         * @param request SubmitDigitalDocStructureJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitDigitalDocStructureJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电子解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDigitalDocStructureJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDigitalDocStructureJobResponse
+        /// </returns>
         public async Task<SubmitDigitalDocStructureJobResponse> SubmitDigitalDocStructureJobWithOptionsAsync(SubmitDigitalDocStructureJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2713,27 +3453,46 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitDigitalDocStructureJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitDigitalDocStructureJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitDigitalDocStructureJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 电子解析
-         *
-         * @param request SubmitDigitalDocStructureJobRequest
-         * @return SubmitDigitalDocStructureJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电子解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDigitalDocStructureJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDigitalDocStructureJobResponse
+        /// </returns>
         public SubmitDigitalDocStructureJobResponse SubmitDigitalDocStructureJob(SubmitDigitalDocStructureJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitDigitalDocStructureJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 电子解析
-         *
-         * @param request SubmitDigitalDocStructureJobRequest
-         * @return SubmitDigitalDocStructureJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电子解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDigitalDocStructureJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDigitalDocStructureJobResponse
+        /// </returns>
         public async Task<SubmitDigitalDocStructureJobResponse> SubmitDigitalDocStructureJobAsync(SubmitDigitalDocStructureJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2904,13 +3663,21 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             return submitDigitalDocStructureJobResp;
         }
 
-        /**
-         * @summary 文档智能解析流式输出
-         *
-         * @param request SubmitDocParserJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitDocParserJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析流式输出</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocParserJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocParserJobResponse
+        /// </returns>
         public SubmitDocParserJobResponse SubmitDocParserJobWithOptions(SubmitDocParserJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2947,16 +3714,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitDocParserJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitDocParserJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitDocParserJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档智能解析流式输出
-         *
-         * @param request SubmitDocParserJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitDocParserJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析流式输出</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocParserJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocParserJobResponse
+        /// </returns>
         public async Task<SubmitDocParserJobResponse> SubmitDocParserJobWithOptionsAsync(SubmitDocParserJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2993,27 +3775,46 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitDocParserJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitDocParserJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitDocParserJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档智能解析流式输出
-         *
-         * @param request SubmitDocParserJobRequest
-         * @return SubmitDocParserJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析流式输出</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocParserJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocParserJobResponse
+        /// </returns>
         public SubmitDocParserJobResponse SubmitDocParserJob(SubmitDocParserJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitDocParserJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档智能解析流式输出
-         *
-         * @param request SubmitDocParserJobRequest
-         * @return SubmitDocParserJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析流式输出</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocParserJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocParserJobResponse
+        /// </returns>
         public async Task<SubmitDocParserJobResponse> SubmitDocParserJobAsync(SubmitDocParserJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3184,13 +3985,21 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             return submitDocParserJobResp;
         }
 
-        /**
-         * @summary 文档智能解析
-         *
-         * @param request SubmitDocStructureJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitDocStructureJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocStructureJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocStructureJobResponse
+        /// </returns>
         public SubmitDocStructureJobResponse SubmitDocStructureJobWithOptions(SubmitDocStructureJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3235,16 +4044,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitDocStructureJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitDocStructureJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitDocStructureJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档智能解析
-         *
-         * @param request SubmitDocStructureJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitDocStructureJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocStructureJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocStructureJobResponse
+        /// </returns>
         public async Task<SubmitDocStructureJobResponse> SubmitDocStructureJobWithOptionsAsync(SubmitDocStructureJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3289,27 +4113,46 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitDocStructureJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitDocStructureJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitDocStructureJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档智能解析
-         *
-         * @param request SubmitDocStructureJobRequest
-         * @return SubmitDocStructureJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocStructureJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocStructureJobResponse
+        /// </returns>
         public SubmitDocStructureJobResponse SubmitDocStructureJob(SubmitDocStructureJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitDocStructureJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档智能解析
-         *
-         * @param request SubmitDocStructureJobRequest
-         * @return SubmitDocStructureJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocStructureJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocStructureJobResponse
+        /// </returns>
         public async Task<SubmitDocStructureJobResponse> SubmitDocStructureJobAsync(SubmitDocStructureJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3480,13 +4323,21 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             return submitDocStructureJobResp;
         }
 
-        /**
-         * @summary 文档抽取
-         *
-         * @param request SubmitDocumentExtractJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitDocumentExtractJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档抽取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocumentExtractJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocumentExtractJobResponse
+        /// </returns>
         public SubmitDocumentExtractJobResponse SubmitDocumentExtractJobWithOptions(SubmitDocumentExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3519,16 +4370,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitDocumentExtractJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitDocumentExtractJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitDocumentExtractJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档抽取
-         *
-         * @param request SubmitDocumentExtractJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitDocumentExtractJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档抽取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocumentExtractJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocumentExtractJobResponse
+        /// </returns>
         public async Task<SubmitDocumentExtractJobResponse> SubmitDocumentExtractJobWithOptionsAsync(SubmitDocumentExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3561,27 +4427,46 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitDocumentExtractJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitDocumentExtractJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitDocumentExtractJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 文档抽取
-         *
-         * @param request SubmitDocumentExtractJobRequest
-         * @return SubmitDocumentExtractJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档抽取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocumentExtractJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocumentExtractJobResponse
+        /// </returns>
         public SubmitDocumentExtractJobResponse SubmitDocumentExtractJob(SubmitDocumentExtractJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitDocumentExtractJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档抽取
-         *
-         * @param request SubmitDocumentExtractJobRequest
-         * @return SubmitDocumentExtractJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档抽取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocumentExtractJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocumentExtractJobResponse
+        /// </returns>
         public async Task<SubmitDocumentExtractJobResponse> SubmitDocumentExtractJobAsync(SubmitDocumentExtractJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3752,13 +4637,21 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             return submitDocumentExtractJobResp;
         }
 
-        /**
-         * @summary 表格智能解析
-         *
-         * @param request SubmitTableUnderstandingJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitTableUnderstandingJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格智能解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitTableUnderstandingJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTableUnderstandingJobResponse
+        /// </returns>
         public SubmitTableUnderstandingJobResponse SubmitTableUnderstandingJobWithOptions(SubmitTableUnderstandingJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3791,16 +4684,31 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitTableUnderstandingJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitTableUnderstandingJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitTableUnderstandingJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 表格智能解析
-         *
-         * @param request SubmitTableUnderstandingJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitTableUnderstandingJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格智能解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitTableUnderstandingJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTableUnderstandingJobResponse
+        /// </returns>
         public async Task<SubmitTableUnderstandingJobResponse> SubmitTableUnderstandingJobWithOptionsAsync(SubmitTableUnderstandingJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3833,27 +4741,46 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitTableUnderstandingJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitTableUnderstandingJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitTableUnderstandingJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 表格智能解析
-         *
-         * @param request SubmitTableUnderstandingJobRequest
-         * @return SubmitTableUnderstandingJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格智能解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitTableUnderstandingJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTableUnderstandingJobResponse
+        /// </returns>
         public SubmitTableUnderstandingJobResponse SubmitTableUnderstandingJob(SubmitTableUnderstandingJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitTableUnderstandingJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 表格智能解析
-         *
-         * @param request SubmitTableUnderstandingJobRequest
-         * @return SubmitTableUnderstandingJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格智能解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitTableUnderstandingJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTableUnderstandingJobResponse
+        /// </returns>
         public async Task<SubmitTableUnderstandingJobResponse> SubmitTableUnderstandingJobAsync(SubmitTableUnderstandingJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
