@@ -18,14 +18,21 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the tag policy.
+        /// <para>The ID of the tag policy.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>p-557cb141331f41c7****</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// The region ID. Set the value to cn-shanghai.
+        /// <para>The region ID. Set the value to cn-shanghai.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

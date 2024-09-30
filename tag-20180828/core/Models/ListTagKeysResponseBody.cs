@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// The information of the tag keys.
+        /// <para>The information of the tag keys.</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
@@ -21,24 +21,34 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             public List<ListTagKeysResponseBodyKeysKey> Key { get; set; }
             public class ListTagKeysResponseBodyKeysKey : TeaModel {
                 /// <summary>
-                /// The type of the resource tag. Valid values:
+                /// <para>The type of the resource tag. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>custom</description></item>
+                /// <item><description>system</description></item>
+                /// </list>
                 /// 
-                /// *   custom
-                /// *   system
+                /// <b>Example:</b>
+                /// <para>custom</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The description of the tag key.
+                /// <para>The description of the tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Business team</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>team</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
@@ -49,17 +59,24 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         }
 
         /// <summary>
-        /// Indicates whether the next query is required. The value of this parameter may be empty.
+        /// <para>Indicates whether the next query is required. The value of this parameter may be empty.</para>
+        /// <list type="bullet">
+        /// <item><description>If the value of this parameter is empty (<c>&quot;NextToken&quot;: &quot;&quot;</c>), all results are returned, and the next query is not required.</description></item>
+        /// <item><description>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</description></item>
+        /// </list>
         /// 
-        /// *   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the next query is not required.
-        /// *   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DC09A6AA-2713-4E10-A2E9-E6C5C43A8842</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

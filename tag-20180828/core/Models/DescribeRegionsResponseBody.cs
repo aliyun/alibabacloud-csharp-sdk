@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The information of the regions.
+        /// <para>The information of the regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// The name of the region.
+                /// <para>The name of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China (Hangzhou)</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The endpoint of the Tag service in the region.
+                /// <para>The endpoint of the Tag service in the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tag.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// <para>The ID of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -46,7 +55,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>632BBAE2-9C44-4212-8B51-B54742DA9713</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

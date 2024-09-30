@@ -10,44 +10,59 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class GetConfigRuleReportResponseBody : TeaModel {
         /// <summary>
-        /// The basic information of the resource non-compliance report that is last generated.
+        /// <para>The basic information of the resource non-compliance report that is last generated.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetConfigRuleReportResponseBodyData Data { get; set; }
         public class GetConfigRuleReportResponseBodyData : TeaModel {
             /// <summary>
-            /// The time when the report was generated. This value is a UNIX timestamp.
+            /// <para>The time when the report was generated. This value is a UNIX timestamp.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1655089159000</para>
             /// </summary>
             [NameInMap("CreatedTime")]
             [Validation(Required=false)]
             public long? CreatedTime { get; set; }
 
             /// <summary>
-            /// The ID of the report.
+            /// <para>The ID of the report.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>crp-ao0786618088006c****</para>
             /// </summary>
             [NameInMap("ReportId")]
             [Validation(Required=false)]
             public string ReportId { get; set; }
 
             /// <summary>
-            /// The ID of the object.
+            /// <para>The ID of the object.</para>
+            /// <remarks>
+            /// <para> This parameter is returned if you set the <c>TargetType</c> and <c>TargetId</c> parameters in the current request to the same values as the parameters that are configured when you call the <a href="https://help.aliyun.com/document_detail/433313.html">GenerateConfigRuleReport</a> operation to generate the report.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is returned if you set the `TargetType` and `TargetId` parameters in the current request to the same values as the parameters that are configured when you call the [GenerateConfigRuleReport](~~433313~~) operation to generate the report.
+            /// <b>Example:</b>
+            /// <para>154950938137****</para>
             /// </summary>
             [NameInMap("TargetId")]
             [Validation(Required=false)]
             public string TargetId { get; set; }
 
             /// <summary>
-            /// The type of the object. Valid values:
+            /// <para>The type of the object. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</description></item>
+            /// <item><description>ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+            /// <item><description>FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+            /// <item><description>ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> This parameter is returned if you set the <c>TargetType</c> and <c>TargetId</c> parameters in the current request to the same values as the parameters that are configured when you call the <a href="https://help.aliyun.com/document_detail/433313.html">GenerateConfigRuleReport</a> operation to generate the report.</para>
+            /// </remarks>
             /// 
-            /// *   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.
-            /// *   ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-            /// *   FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-            /// *   ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-            /// 
-            /// >  This parameter is returned if you set the `TargetType` and `TargetId` parameters in the current request to the same values as the parameters that are configured when you call the [GenerateConfigRuleReport](~~433313~~) operation to generate the report.
+            /// <b>Example:</b>
+            /// <para>ACCOUNT</para>
             /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]
@@ -56,24 +71,34 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A68BD5BC-5B12-5A9B-8AE9-77884886BE10</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
+        /// </list>
         /// 
-        /// *   true: The request is successful.
-        /// *   false: The request fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

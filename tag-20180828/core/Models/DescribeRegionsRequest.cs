@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The supported natural language. Valid values:
+        /// <para>The supported natural language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN: Chinese (default value)</description></item>
+        /// <item><description>en-US: English</description></item>
+        /// <item><description>ja: Japanese</description></item>
+        /// </list>
         /// 
-        /// *   zh-CN: Chinese (default value)
-        /// *   en-US: English
-        /// *   ja: Japanese
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -29,7 +33,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

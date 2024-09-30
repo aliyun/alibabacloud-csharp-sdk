@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class ListTargetsForPolicyRequest : TeaModel {
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Default value: 50. Maximum value: 1000.</para>
         /// 
-        /// Default value: 50. Maximum value: 1000.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResult")]
         [Validation(Required=false)]
         public int? MaxResult { get; set; }
 
         /// <summary>
-        /// The token that is used to start the next query.
+        /// <para>The token that is used to start the next query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -34,14 +39,21 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the tag policy.
+        /// <para>The ID of the tag policy.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>p-de62a0bf400e4b69****</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// The region ID. Set the value to cn-shanghai.
+        /// <para>The region ID. Set the value to cn-shanghai.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

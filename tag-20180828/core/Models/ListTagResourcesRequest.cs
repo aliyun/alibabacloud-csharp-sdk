@@ -10,20 +10,26 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The type of the tag. Valid values:
+        /// <para>The type of the tag. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Custom</description></item>
+        /// <item><description>System</description></item>
+        /// <item><description>All</description></item>
+        /// </list>
+        /// <para>Default value: All.</para>
         /// 
-        /// *   Custom
-        /// *   System
-        /// *   All
-        /// 
-        /// Default value: All.
+        /// <b>Example:</b>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The token that is used to start the next query.
+        /// <para>The token that is used to start the next query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -38,26 +44,36 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Maximum value: 1000. Default value: 50.</para>
         /// 
-        /// Maximum value: 1000. Default value: 50.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <list type="bullet">
+        /// <item><description>If the resources belong to a service that is centrally deployed, set the value to the region ID of the resources by referring to <a href="https://help.aliyun.com/document_detail/2579691.html">Regions supported by tag-related operations on resources of centrally deployed Alibaba Cloud services</a>.</description></item>
+        /// <item><description>If the resources belong to a service that is not centrally deployed, set the value to the region ID of the resources.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If the resources belong to a service that is centrally deployed, set the value to the region ID of the resources by referring to [Regions supported by tag-related operations on resources of centrally deployed Alibaba Cloud services](~~2579691~~).
-        /// *   If the resources belong to a service that is not centrally deployed, set the value to the region ID of the resources.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of a resource.
+        /// <para>The Alibaba Cloud Resource Name (ARN) of a resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>arn:acs:ecs:cn-hangzhou:123456789****:instance/i-bp15hr53jws84akg****</para>
         /// </summary>
         [NameInMap("ResourceARN")]
         [Validation(Required=false)]
@@ -68,16 +84,18 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The key-value pairs of tags. You can specify 1 to 10 key-value pairs.
+        /// <para>The key-value pairs of tags. You can specify 1 to 10 key-value pairs.</para>
+        /// <para>If you specify multiple tags, the system queries the resources to which all these tags are added.</para>
+        /// <para>Limits:</para>
+        /// <list type="bullet">
+        /// <item><description>A tag key must be 1 to 128 characters in length.</description></item>
+        /// <item><description>A tag value must be 1 to 128 characters in length.</description></item>
+        /// <item><description>Tag keys and tag values are case-sensitive.</description></item>
+        /// <item><description>Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</description></item>
+        /// </list>
         /// 
-        /// If you specify multiple tags, the system queries the resources to which all these tags are added.
-        /// 
-        /// Limits:
-        /// 
-        /// *   A tag key must be 1 to 128 characters in length.
-        /// *   A tag value must be 1 to 128 characters in length.
-        /// *   Tag keys and tag values are case-sensitive.
-        /// *   Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.
+        /// <b>Example:</b>
+        /// <para>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

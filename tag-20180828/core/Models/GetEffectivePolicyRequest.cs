@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. Set the value to cn-shanghai.
+        /// <para>The region ID. Set the value to cn-shanghai.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -29,23 +32,32 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The ID of the object.
+        /// <para>The ID of the object.</para>
+        /// <remarks>
+        /// <para> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required.</para>
+        /// </remarks>
         /// 
-        /// >  If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required.
+        /// <b>Example:</b>
+        /// <para>154950938137****</para>
         /// </summary>
         [NameInMap("TargetId")]
         [Validation(Required=false)]
         public string TargetId { get; set; }
 
         /// <summary>
-        /// The type of the object. Valid values:
+        /// <para>The type of the object. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</description></item>
+        /// <item><description>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+        /// <item><description>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+        /// <item><description>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required. The value of this parameter is not case-sensitive.</para>
+        /// </remarks>
         /// 
-        /// *   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.
-        /// *   ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-        /// *   FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-        /// *   ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-        /// 
-        /// >  If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required. The value of this parameter is not case-sensitive.
+        /// <b>Example:</b>
+        /// <para>ACCOUNT</para>
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]

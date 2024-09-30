@@ -14,18 +14,23 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public ListResourcesByTagRequestTagFilter TagFilter { get; set; }
         public class ListResourcesByTagRequestTagFilter : TeaModel {
             /// <summary>
-            /// The tag key. This parameter specifies a filter condition for the query.
+            /// <para>The tag key. This parameter specifies a filter condition for the query.</para>
+            /// <para>The tag key can be a maximum of 128 characters in length. It cannot contain <c>http://</c> or <c>https://</c> and cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// The tag key can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
+            /// <b>Example:</b>
+            /// <para>k1</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value. This parameter specifies a filter condition for the query.
+            /// <para>The tag value. This parameter specifies a filter condition for the query.</para>
+            /// <para>The tag value can be a maximum of 128 characters in length. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
-            /// The tag value can be a maximum of 128 characters in length. It cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>v1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -34,36 +39,49 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         }
 
         /// <summary>
-        /// The type of the query. Valid values:
+        /// <para>The type of the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EQUAL: exact match for resources to which the specified tag is added. This is the default value.</description></item>
+        /// <item><description>NOT: exact match for resources to which the specified tag is not added.</description></item>
+        /// </list>
         /// 
-        /// *   EQUAL: exact match for resources to which the specified tag is added. This is the default value.
-        /// *   NOT: exact match for resources to which the specified tag is not added.
+        /// <b>Example:</b>
+        /// <para>EQUAL</para>
         /// </summary>
         [NameInMap("FuzzyType")]
         [Validation(Required=false)]
         public string FuzzyType { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the information of tags added to the resources. Valid values:
+        /// <para>Specifies whether to return the information of tags added to the resources. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>False: does not return the information of tags added to the resources. This is the default value.</description></item>
+        /// <item><description>True: returns the information of all tags added to the resources.</description></item>
+        /// </list>
         /// 
-        /// *   False: does not return the information of tags added to the resources. This is the default value.
-        /// *   True: returns the information of all tags added to the resources.
+        /// <b>Example:</b>
+        /// <para>False</para>
         /// </summary>
         [NameInMap("IncludeAllTags")]
         [Validation(Required=false)]
         public bool? IncludeAllTags { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Default value: 50. Maximum value: 1000.</para>
         /// 
-        /// Default value: 50. Maximum value: 1000.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResult")]
         [Validation(Required=false)]
         public int? MaxResult { get; set; }
 
         /// <summary>
-        /// The token that is used to start the next query.
+        /// <para>The token that is used to start the next query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -78,9 +96,12 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/2330902.html">Endpoints</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about region IDs, see [Endpoints](~~2330902~~).
+        /// <b>Example:</b>
+        /// <para>cn-shenzhen</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -91,10 +112,15 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The resource type. This parameter specifies a filter condition for the query.
+        /// <para>The resource type. This parameter specifies a filter condition for the query.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set the FuzzyType parameter to EQUAL, you can set this parameter to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</description></item>
+        /// <item><description>If you set the FuzzyType parameter to NOT, you can set this parameter to a resource type provided in <b>Types of resources that support queries based on the NOT operator</b>.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If you set the FuzzyType parameter to EQUAL, you can set this parameter to a value obtained from the response of the [ListSupportResourceTypes](~~2330915~~) operation.
-        /// *   If you set the FuzzyType parameter to NOT, you can set this parameter to a resource type provided in **Types of resources that support queries based on the NOT operator**.
+        /// <b>Example:</b>
+        /// <para>ALIYUN::VPC::VPC</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

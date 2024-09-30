@@ -10,9 +10,12 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class DeleteTagRequest : TeaModel {
         /// <summary>
-        /// The tag key.
+        /// <para>The tag key.</para>
+        /// <para>If no tag value is associated with a tag key, you can specify the <c>Key</c> parameter without specifying the Value parameter to delete the tag key. Otherwise, you must specify both the <c>Key</c> and <c>Value</c> parameters to delete a preset tag.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// If no tag value is associated with a tag key, you can specify the `Key` parameter without specifying the Value parameter to delete the tag key. Otherwise, you must specify both the `Key` and `Value` parameters to delete a preset tag.
+        /// <b>Example:</b>
+        /// <para>Environment</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
@@ -27,9 +30,14 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para> Only <c>cn-hangzhou</c> is supported.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  Only `cn-hangzhou` is supported.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -40,7 +48,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The tag value.
+        /// <para>The tag value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

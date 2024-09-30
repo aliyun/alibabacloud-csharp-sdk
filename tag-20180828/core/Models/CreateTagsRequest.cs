@@ -18,9 +18,14 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para>Only <c>cn-hangzhou</c> is supported.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > Only `cn-hangzhou` is supported.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -31,54 +36,62 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The information about the tags.
+        /// <para>The information about the tags.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TagKeyValueParamList")]
         [Validation(Required=false)]
         public List<CreateTagsRequestTagKeyValueParamList> TagKeyValueParamList { get; set; }
         public class CreateTagsRequestTagKeyValueParamList : TeaModel {
             /// <summary>
-            /// The description of the key for tag N.
+            /// <para>The description of the key for tag N.</para>
+            /// <para>Valid values of N: 1 to 10.</para>
             /// 
-            /// Valid values of N: 1 to 10.
+            /// <b>Example:</b>
+            /// <para>Business environment</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The key of tag N.
+            /// <para>The key of tag N.</para>
+            /// <para>The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>Valid values of N: 1 to 10.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
-            /// 
-            /// Valid values of N: 1 to 10.
+            /// <b>Example:</b>
+            /// <para>Environment</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The information about the tag value.
+            /// <para>The information about the tag value.</para>
             /// </summary>
             [NameInMap("TagValueParamList")]
             [Validation(Required=false)]
             public List<CreateTagsRequestTagKeyValueParamListTagValueParamList> TagValueParamList { get; set; }
             public class CreateTagsRequestTagKeyValueParamListTagValueParamList : TeaModel {
                 /// <summary>
-                /// The description of the value for tag N.
+                /// <para>The description of the value for tag N.</para>
+                /// <para>Valid values of N: 1 to 10.</para>
                 /// 
-                /// Valid values of N: 1 to 10.
+                /// <b>Example:</b>
+                /// <para>Test environment</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The value of tag N.
+                /// <para>The value of tag N.</para>
+                /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. </para>
+                /// <para>Valid values of N: 1 to 10.</para>
                 /// 
-                /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. 
-                /// 
-                /// Valid values of N: 1 to 10.
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

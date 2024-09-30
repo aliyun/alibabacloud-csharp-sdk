@@ -10,38 +10,48 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class GetPolicyEnableStatusResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6C8DF1B1-C65F-5D3A-9FDA-26A4683BB36B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the Tag Policy feature.
+        /// <para>The information of the Tag Policy feature.</para>
         /// </summary>
         [NameInMap("StatusModels")]
         [Validation(Required=false)]
         public List<GetPolicyEnableStatusResponseBodyStatusModels> StatusModels { get; set; }
         public class GetPolicyEnableStatusResponseBodyStatusModels : TeaModel {
             /// <summary>
-            /// The status of the Tag Policy feature. Valid values:
+            /// <para>The status of the Tag Policy feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PendingEnable: The feature is being enabled.</description></item>
+            /// <item><description>Enabled: The feature is enabled.</description></item>
+            /// <item><description>Closing: The feature is being disabled.</description></item>
+            /// <item><description>Disabled: The feature is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   PendingEnable: The feature is being enabled.
-            /// *   Enabled: The feature is enabled.
-            /// *   Closing: The feature is being disabled.
-            /// *   Disabled: The feature is disabled.
+            /// <b>Example:</b>
+            /// <para>Enabled</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The mode of the Tag Policy feature. Valid values:
+            /// <para>The mode of the Tag Policy feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>USER: single-account mode</description></item>
+            /// <item><description>RD: multi-account mode</description></item>
+            /// </list>
+            /// <para>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</para>
             /// 
-            /// *   USER: single-account mode
-            /// *   RD: multi-account mode
-            /// 
-            /// For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
+            /// <b>Example:</b>
+            /// <para>RD</para>
             /// </summary>
             [NameInMap("UserType")]
             [Validation(Required=false)]

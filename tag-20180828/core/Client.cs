@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Tag";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -81,14 +84,27 @@ namespace AlibabaCloud.SDK.Tag20180828
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to attach a tag policy to the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to attach a tag policy to the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to attach the tag policy with an ID of `p-de62a0bf400e4b69****` to the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request AttachPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AttachPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to attach a tag policy to the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to attach a tag policy to the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to attach the tag policy with an ID of <c>p-de62a0bf400e4b69****</c> to the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachPolicyResponse
+        /// </returns>
         public AttachPolicyResponse AttachPolicyWithOptions(AttachPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -137,17 +153,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AttachPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AttachPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AttachPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to attach a tag policy to the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to attach a tag policy to the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to attach the tag policy with an ID of `p-de62a0bf400e4b69****` to the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request AttachPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AttachPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to attach a tag policy to the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to attach a tag policy to the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to attach the tag policy with an ID of <c>p-de62a0bf400e4b69****</c> to the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachPolicyResponse
+        /// </returns>
         public async Task<AttachPolicyResponse> AttachPolicyWithOptionsAsync(AttachPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -196,35 +232,79 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AttachPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AttachPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AttachPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to attach a tag policy to the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to attach a tag policy to the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to attach the tag policy with an ID of `p-de62a0bf400e4b69****` to the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request AttachPolicyRequest
-          * @return AttachPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to attach a tag policy to the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to attach a tag policy to the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to attach the tag policy with an ID of <c>p-de62a0bf400e4b69****</c> to the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachPolicyResponse
+        /// </returns>
         public AttachPolicyResponse AttachPolicy(AttachPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachPolicyWithOptions(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to attach a tag policy to the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to attach a tag policy to the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to attach the tag policy with an ID of `p-de62a0bf400e4b69****` to the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request AttachPolicyRequest
-          * @return AttachPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to attach a tag policy to the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to attach a tag policy to the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to attach the tag policy with an ID of <c>p-de62a0bf400e4b69****</c> to the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachPolicyResponse
+        /// </returns>
         public async Task<AttachPolicyResponse> AttachPolicyAsync(AttachPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验CreatedBy开通状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCreatedByEnabledRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCreatedByEnabledResponse
+        /// </returns>
         public CheckCreatedByEnabledResponse CheckCreatedByEnabledWithOptions(CheckCreatedByEnabledRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -265,9 +345,31 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CheckCreatedByEnabledResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CheckCreatedByEnabledResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CheckCreatedByEnabledResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验CreatedBy开通状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCreatedByEnabledRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCreatedByEnabledResponse
+        /// </returns>
         public async Task<CheckCreatedByEnabledResponse> CheckCreatedByEnabledWithOptionsAsync(CheckCreatedByEnabledRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -308,21 +410,67 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CheckCreatedByEnabledResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CheckCreatedByEnabledResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CheckCreatedByEnabledResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验CreatedBy开通状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCreatedByEnabledRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCreatedByEnabledResponse
+        /// </returns>
         public CheckCreatedByEnabledResponse CheckCreatedByEnabled(CheckCreatedByEnabledRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckCreatedByEnabledWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验CreatedBy开通状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCreatedByEnabledRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCreatedByEnabledResponse
+        /// </returns>
         public async Task<CheckCreatedByEnabledResponse> CheckCreatedByEnabledAsync(CheckCreatedByEnabledRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckCreatedByEnabledWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CreatedBy服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseCreatedByRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseCreatedByResponse
+        /// </returns>
         public CloseCreatedByResponse CloseCreatedByWithOptions(CloseCreatedByRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -363,9 +511,31 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CloseCreatedByResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CloseCreatedByResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CloseCreatedByResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CreatedBy服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseCreatedByRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseCreatedByResponse
+        /// </returns>
         public async Task<CloseCreatedByResponse> CloseCreatedByWithOptionsAsync(CloseCreatedByRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -406,29 +576,73 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CloseCreatedByResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CloseCreatedByResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CloseCreatedByResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CreatedBy服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseCreatedByRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseCreatedByResponse
+        /// </returns>
         public CloseCreatedByResponse CloseCreatedBy(CloseCreatedByRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CloseCreatedByWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CreatedBy服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseCreatedByRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseCreatedByResponse
+        /// </returns>
         public async Task<CloseCreatedByResponse> CloseCreatedByAsync(CloseCreatedByRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CloseCreatedByWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ###
-          * This topic provides an example on how to call the API operation to create a tag policy named `test`. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the `CostCenter:Beijing` or `CostCenter:Shanghai` tag is added are compliant and other resources are not compliant.
-          *
-          * @param request CreatePolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreatePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a tag policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>This topic provides an example on how to call the API operation to create a tag policy named <c>test</c>. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the <c>CostCenter:Beijing</c> or <c>CostCenter:Shanghai</c> tag is added are compliant and other resources are not compliant.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolicyResponse
+        /// </returns>
         public CreatePolicyResponse CreatePolicyWithOptions(CreatePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -485,17 +699,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreatePolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreatePolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreatePolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * ###
-          * This topic provides an example on how to call the API operation to create a tag policy named `test`. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the `CostCenter:Beijing` or `CostCenter:Shanghai` tag is added are compliant and other resources are not compliant.
-          *
-          * @param request CreatePolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreatePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a tag policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>This topic provides an example on how to call the API operation to create a tag policy named <c>test</c>. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the <c>CostCenter:Beijing</c> or <c>CostCenter:Shanghai</c> tag is added are compliant and other resources are not compliant.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolicyResponse
+        /// </returns>
         public async Task<CreatePolicyResponse> CreatePolicyWithOptionsAsync(CreatePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -552,44 +786,86 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreatePolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreatePolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreatePolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * ###
-          * This topic provides an example on how to call the API operation to create a tag policy named `test`. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the `CostCenter:Beijing` or `CostCenter:Shanghai` tag is added are compliant and other resources are not compliant.
-          *
-          * @param request CreatePolicyRequest
-          * @return CreatePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a tag policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>This topic provides an example on how to call the API operation to create a tag policy named <c>test</c>. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the <c>CostCenter:Beijing</c> or <c>CostCenter:Shanghai</c> tag is added are compliant and other resources are not compliant.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolicyResponse
+        /// </returns>
         public CreatePolicyResponse CreatePolicy(CreatePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreatePolicyWithOptions(request, runtime);
         }
 
-        /**
-          * ###
-          * This topic provides an example on how to call the API operation to create a tag policy named `test`. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the `CostCenter:Beijing` or `CostCenter:Shanghai` tag is added are compliant and other resources are not compliant.
-          *
-          * @param request CreatePolicyRequest
-          * @return CreatePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a tag policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>This topic provides an example on how to call the API operation to create a tag policy named <c>test</c>. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the <c>CostCenter:Beijing</c> or <c>CostCenter:Shanghai</c> tag is added are compliant and other resources are not compliant.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolicyResponse
+        /// </returns>
         public async Task<CreatePolicyResponse> CreatePolicyAsync(CreatePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ###
-          * A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
-          * This topic provides an example on how to call the API operation to create a preset tag whose tag key is `Environment` to indicate the business environment.
-          *
-          * @param request CreateTagsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates preset tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
+        /// This topic provides an example on how to call the API operation to create a preset tag whose tag key is <c>Environment</c> to indicate the business environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagsResponse
+        /// </returns>
         public CreateTagsResponse CreateTagsWithOptions(CreateTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -630,18 +906,38 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateTagsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateTagsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateTagsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * ###
-          * A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
-          * This topic provides an example on how to call the API operation to create a preset tag whose tag key is `Environment` to indicate the business environment.
-          *
-          * @param request CreateTagsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates preset tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
+        /// This topic provides an example on how to call the API operation to create a preset tag whose tag key is <c>Environment</c> to indicate the business environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagsResponse
+        /// </returns>
         public async Task<CreateTagsResponse> CreateTagsWithOptionsAsync(CreateTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -682,45 +978,87 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateTagsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateTagsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateTagsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * ###
-          * A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
-          * This topic provides an example on how to call the API operation to create a preset tag whose tag key is `Environment` to indicate the business environment.
-          *
-          * @param request CreateTagsRequest
-          * @return CreateTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates preset tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
+        /// This topic provides an example on how to call the API operation to create a preset tag whose tag key is <c>Environment</c> to indicate the business environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagsResponse
+        /// </returns>
         public CreateTagsResponse CreateTags(CreateTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTagsWithOptions(request, runtime);
         }
 
-        /**
-          * ###
-          * A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
-          * This topic provides an example on how to call the API operation to create a preset tag whose tag key is `Environment` to indicate the business environment.
-          *
-          * @param request CreateTagsRequest
-          * @return CreateTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates preset tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
+        /// This topic provides an example on how to call the API operation to create a preset tag whose tag key is <c>Environment</c> to indicate the business environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagsResponse
+        /// </returns>
         public async Task<CreateTagsResponse> CreateTagsAsync(CreateTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTagsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * Before you delete a tag policy, make sure that the tag policy is detached from all objects to which the tag policy is attached. For more information about how to detach a tag policy, see [DetachPolicy](~~429724~~).
-          * This topic provides an example on how to call the API operation to delete the tag policy with an ID of `p-557cb141331f41c7****`.
-          *
-          * @param request DeletePolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeletePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a tag policy, make sure that the tag policy is detached from all objects to which the tag policy is attached. For more information about how to detach a tag policy, see <a href="https://help.aliyun.com/document_detail/429724.html">DetachPolicy</a>.
+        /// This topic provides an example on how to call the API operation to delete the tag policy with an ID of <c>p-557cb141331f41c7****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeletePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolicyResponse
+        /// </returns>
         public DeletePolicyResponse DeletePolicyWithOptions(DeletePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -761,17 +1099,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeletePolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeletePolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeletePolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * Before you delete a tag policy, make sure that the tag policy is detached from all objects to which the tag policy is attached. For more information about how to detach a tag policy, see [DetachPolicy](~~429724~~).
-          * This topic provides an example on how to call the API operation to delete the tag policy with an ID of `p-557cb141331f41c7****`.
-          *
-          * @param request DeletePolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeletePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a tag policy, make sure that the tag policy is detached from all objects to which the tag policy is attached. For more information about how to detach a tag policy, see <a href="https://help.aliyun.com/document_detail/429724.html">DetachPolicy</a>.
+        /// This topic provides an example on how to call the API operation to delete the tag policy with an ID of <c>p-557cb141331f41c7****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeletePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolicyResponse
+        /// </returns>
         public async Task<DeletePolicyResponse> DeletePolicyWithOptionsAsync(DeletePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -812,42 +1170,84 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeletePolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeletePolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeletePolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * Before you delete a tag policy, make sure that the tag policy is detached from all objects to which the tag policy is attached. For more information about how to detach a tag policy, see [DetachPolicy](~~429724~~).
-          * This topic provides an example on how to call the API operation to delete the tag policy with an ID of `p-557cb141331f41c7****`.
-          *
-          * @param request DeletePolicyRequest
-          * @return DeletePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a tag policy, make sure that the tag policy is detached from all objects to which the tag policy is attached. For more information about how to detach a tag policy, see <a href="https://help.aliyun.com/document_detail/429724.html">DetachPolicy</a>.
+        /// This topic provides an example on how to call the API operation to delete the tag policy with an ID of <c>p-557cb141331f41c7****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeletePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolicyResponse
+        /// </returns>
         public DeletePolicyResponse DeletePolicy(DeletePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeletePolicyWithOptions(request, runtime);
         }
 
-        /**
-          * Before you delete a tag policy, make sure that the tag policy is detached from all objects to which the tag policy is attached. For more information about how to detach a tag policy, see [DetachPolicy](~~429724~~).
-          * This topic provides an example on how to call the API operation to delete the tag policy with an ID of `p-557cb141331f41c7****`.
-          *
-          * @param request DeletePolicyRequest
-          * @return DeletePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a tag policy, make sure that the tag policy is detached from all objects to which the tag policy is attached. For more information about how to detach a tag policy, see <a href="https://help.aliyun.com/document_detail/429724.html">DetachPolicy</a>.
+        /// This topic provides an example on how to call the API operation to delete the tag policy with an ID of <c>p-557cb141331f41c7****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeletePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolicyResponse
+        /// </returns>
         public async Task<DeletePolicyResponse> DeletePolicyAsync(DeletePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeletePolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to delete the preset tag whose tag key is `Environment` and tag value is `test`.
-          *
-          * @param request DeleteTagRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a preset tag.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to delete the preset tag whose tag key is <c>Environment</c> and tag value is <c>test</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public DeleteTagResponse DeleteTagWithOptions(DeleteTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -892,16 +1292,36 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteTagResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteTagResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteTagResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to delete the preset tag whose tag key is `Environment` and tag value is `test`.
-          *
-          * @param request DeleteTagRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a preset tag.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to delete the preset tag whose tag key is <c>Environment</c> and tag value is <c>test</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public async Task<DeleteTagResponse> DeleteTagWithOptionsAsync(DeleteTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -946,33 +1366,77 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteTagResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteTagResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteTagResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to delete the preset tag whose tag key is `Environment` and tag value is `test`.
-          *
-          * @param request DeleteTagRequest
-          * @return DeleteTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a preset tag.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to delete the preset tag whose tag key is <c>Environment</c> and tag value is <c>test</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public DeleteTagResponse DeleteTag(DeleteTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTagWithOptions(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to delete the preset tag whose tag key is `Environment` and tag value is `test`.
-          *
-          * @param request DeleteTagRequest
-          * @return DeleteTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a preset tag.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to delete the preset tag whose tag key is <c>Environment</c> and tag value is <c>test</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public async Task<DeleteTagResponse> DeleteTagAsync(DeleteTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTagWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where the Tag service is available.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1017,9 +1481,31 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeRegionsResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where the Tag service is available.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1064,29 +1550,73 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeRegionsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where the Tag service is available.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where the Tag service is available.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to detach a tag policy from the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to detach a tag policy from the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to detach the tag policy with an ID of `p-a3381efe2fe34a75****` from the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request DetachPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除策略绑定</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to detach a tag policy from the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to detach a tag policy from the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to detach the tag policy with an ID of <c>p-a3381efe2fe34a75****</c> from the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachPolicyResponse
+        /// </returns>
         public DetachPolicyResponse DetachPolicyWithOptions(DetachPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1135,17 +1665,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DetachPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DetachPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DetachPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to detach a tag policy from the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to detach a tag policy from the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to detach the tag policy with an ID of `p-a3381efe2fe34a75****` from the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request DetachPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除策略绑定</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to detach a tag policy from the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to detach a tag policy from the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to detach the tag policy with an ID of <c>p-a3381efe2fe34a75****</c> from the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachPolicyResponse
+        /// </returns>
         public async Task<DetachPolicyResponse> DetachPolicyWithOptionsAsync(DetachPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1194,35 +1744,79 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DetachPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DetachPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DetachPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to detach a tag policy from the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to detach a tag policy from the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to detach the tag policy with an ID of `p-a3381efe2fe34a75****` from the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request DetachPolicyRequest
-          * @return DetachPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除策略绑定</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to detach a tag policy from the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to detach a tag policy from the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to detach the tag policy with an ID of <c>p-a3381efe2fe34a75****</c> from the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachPolicyResponse
+        /// </returns>
         public DetachPolicyResponse DetachPolicy(DetachPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachPolicyWithOptions(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to detach a tag policy from the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to detach a tag policy from the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to detach the tag policy with an ID of `p-a3381efe2fe34a75****` from the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request DetachPolicyRequest
-          * @return DetachPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除策略绑定</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to detach a tag policy from the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to detach a tag policy from the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to detach the tag policy with an ID of <c>p-a3381efe2fe34a75****</c> from the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachPolicyResponse
+        /// </returns>
         public async Task<DetachPolicyResponse> DetachPolicyAsync(DetachPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisablePolicyTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisablePolicyTypeResponse
+        /// </returns>
         public DisablePolicyTypeResponse DisablePolicyTypeWithOptions(DisablePolicyTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1271,9 +1865,31 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DisablePolicyTypeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisablePolicyTypeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisablePolicyTypeResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisablePolicyTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisablePolicyTypeResponse
+        /// </returns>
         public async Task<DisablePolicyTypeResponse> DisablePolicyTypeWithOptionsAsync(DisablePolicyTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1322,21 +1938,67 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DisablePolicyTypeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisablePolicyTypeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisablePolicyTypeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisablePolicyTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisablePolicyTypeResponse
+        /// </returns>
         public DisablePolicyTypeResponse DisablePolicyType(DisablePolicyTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisablePolicyTypeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisablePolicyTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisablePolicyTypeResponse
+        /// </returns>
         public async Task<DisablePolicyTypeResponse> DisablePolicyTypeAsync(DisablePolicyTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisablePolicyTypeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnablePolicyTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnablePolicyTypeResponse
+        /// </returns>
         public EnablePolicyTypeResponse EnablePolicyTypeWithOptions(EnablePolicyTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1385,9 +2047,31 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EnablePolicyTypeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnablePolicyTypeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnablePolicyTypeResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnablePolicyTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnablePolicyTypeResponse
+        /// </returns>
         public async Task<EnablePolicyTypeResponse> EnablePolicyTypeWithOptionsAsync(EnablePolicyTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1436,29 +2120,73 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EnablePolicyTypeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnablePolicyTypeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnablePolicyTypeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnablePolicyTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnablePolicyTypeResponse
+        /// </returns>
         public EnablePolicyTypeResponse EnablePolicyType(EnablePolicyTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnablePolicyTypeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnablePolicyTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnablePolicyTypeResponse
+        /// </returns>
         public async Task<EnablePolicyTypeResponse> EnablePolicyTypeAsync(EnablePolicyTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnablePolicyTypeWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to generate a resource non-compliance report for the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to generate a resource non-compliance report for the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call this API operation to generate a resource non-compliance report for the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request GenerateConfigRuleReportRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GenerateConfigRuleReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成规则检测报告</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to generate a resource non-compliance report for the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to generate a resource non-compliance report for the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call this API operation to generate a resource non-compliance report for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateConfigRuleReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateConfigRuleReportResponse
+        /// </returns>
         public GenerateConfigRuleReportResponse GenerateConfigRuleReportWithOptions(GenerateConfigRuleReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1507,17 +2235,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GenerateConfigRuleReportResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GenerateConfigRuleReportResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GenerateConfigRuleReportResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to generate a resource non-compliance report for the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to generate a resource non-compliance report for the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call this API operation to generate a resource non-compliance report for the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request GenerateConfigRuleReportRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GenerateConfigRuleReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成规则检测报告</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to generate a resource non-compliance report for the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to generate a resource non-compliance report for the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call this API operation to generate a resource non-compliance report for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateConfigRuleReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateConfigRuleReportResponse
+        /// </returns>
         public async Task<GenerateConfigRuleReportResponse> GenerateConfigRuleReportWithOptionsAsync(GenerateConfigRuleReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1566,43 +2314,85 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GenerateConfigRuleReportResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GenerateConfigRuleReportResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GenerateConfigRuleReportResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to generate a resource non-compliance report for the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to generate a resource non-compliance report for the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call this API operation to generate a resource non-compliance report for the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request GenerateConfigRuleReportRequest
-          * @return GenerateConfigRuleReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成规则检测报告</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to generate a resource non-compliance report for the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to generate a resource non-compliance report for the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call this API operation to generate a resource non-compliance report for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateConfigRuleReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateConfigRuleReportResponse
+        /// </returns>
         public GenerateConfigRuleReportResponse GenerateConfigRuleReport(GenerateConfigRuleReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GenerateConfigRuleReportWithOptions(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can call this API operation to generate a resource non-compliance report for the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to generate a resource non-compliance report for the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call this API operation to generate a resource non-compliance report for the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request GenerateConfigRuleReportRequest
-          * @return GenerateConfigRuleReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成规则检测报告</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can call this API operation to generate a resource non-compliance report for the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to generate a resource non-compliance report for the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call this API operation to generate a resource non-compliance report for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateConfigRuleReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateConfigRuleReportResponse
+        /// </returns>
         public async Task<GenerateConfigRuleReportResponse> GenerateConfigRuleReportAsync(GenerateConfigRuleReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateConfigRuleReportWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the basic information of the resource non-compliance report that is last generated for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the basic information of the resource non-compliance report that is last generated for an object in the resource directory. The object can be the Root folder, a folder other than the Root folder, or a member. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call this API operation to query the basic information of the resource non-compliance report that is last generated for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that the ID of the report is `crp-ao0786618088006c****`.
-          *
-          * @param request GetConfigRuleReportRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetConfigRuleReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information of the resource non-compliance report that is last generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the basic information of the resource non-compliance report that is last generated for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the basic information of the resource non-compliance report that is last generated for an object in the resource directory. The object can be the Root folder, a folder other than the Root folder, or a member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call this API operation to query the basic information of the resource non-compliance report that is last generated for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that the ID of the report is <c>crp-ao0786618088006c****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConfigRuleReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigRuleReportResponse
+        /// </returns>
         public GetConfigRuleReportResponse GetConfigRuleReportWithOptions(GetConfigRuleReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1651,17 +2441,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetConfigRuleReportResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetConfigRuleReportResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetConfigRuleReportResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the basic information of the resource non-compliance report that is last generated for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the basic information of the resource non-compliance report that is last generated for an object in the resource directory. The object can be the Root folder, a folder other than the Root folder, or a member. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call this API operation to query the basic information of the resource non-compliance report that is last generated for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that the ID of the report is `crp-ao0786618088006c****`.
-          *
-          * @param request GetConfigRuleReportRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetConfigRuleReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information of the resource non-compliance report that is last generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the basic information of the resource non-compliance report that is last generated for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the basic information of the resource non-compliance report that is last generated for an object in the resource directory. The object can be the Root folder, a folder other than the Root folder, or a member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call this API operation to query the basic information of the resource non-compliance report that is last generated for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that the ID of the report is <c>crp-ao0786618088006c****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConfigRuleReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigRuleReportResponse
+        /// </returns>
         public async Task<GetConfigRuleReportResponse> GetConfigRuleReportWithOptionsAsync(GetConfigRuleReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1710,44 +2520,86 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetConfigRuleReportResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetConfigRuleReportResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetConfigRuleReportResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the basic information of the resource non-compliance report that is last generated for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the basic information of the resource non-compliance report that is last generated for an object in the resource directory. The object can be the Root folder, a folder other than the Root folder, or a member. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call this API operation to query the basic information of the resource non-compliance report that is last generated for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that the ID of the report is `crp-ao0786618088006c****`.
-          *
-          * @param request GetConfigRuleReportRequest
-          * @return GetConfigRuleReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information of the resource non-compliance report that is last generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the basic information of the resource non-compliance report that is last generated for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the basic information of the resource non-compliance report that is last generated for an object in the resource directory. The object can be the Root folder, a folder other than the Root folder, or a member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call this API operation to query the basic information of the resource non-compliance report that is last generated for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that the ID of the report is <c>crp-ao0786618088006c****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConfigRuleReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigRuleReportResponse
+        /// </returns>
         public GetConfigRuleReportResponse GetConfigRuleReport(GetConfigRuleReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetConfigRuleReportWithOptions(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the basic information of the resource non-compliance report that is last generated for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the basic information of the resource non-compliance report that is last generated for an object in the resource directory. The object can be the Root folder, a folder other than the Root folder, or a member. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call this API operation to query the basic information of the resource non-compliance report that is last generated for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that the ID of the report is `crp-ao0786618088006c****`.
-          *
-          * @param request GetConfigRuleReportRequest
-          * @return GetConfigRuleReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information of the resource non-compliance report that is last generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the basic information of the resource non-compliance report that is last generated for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the basic information of the resource non-compliance report that is last generated for an object in the resource directory. The object can be the Root folder, a folder other than the Root folder, or a member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call this API operation to query the basic information of the resource non-compliance report that is last generated for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that the ID of the report is <c>crp-ao0786618088006c****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConfigRuleReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigRuleReportResponse
+        /// </returns>
         public async Task<GetConfigRuleReportResponse> GetConfigRuleReportAsync(GetConfigRuleReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetConfigRuleReportWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * An effective tag policy is obtained based on tag policy inheritance. For more information, see [Inheritance of a tag policy and calculation of an effective tag policy](~~417435~~).
-          * This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request GetEffectivePolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetEffectivePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询有效策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// An effective tag policy is obtained based on tag policy inheritance. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Inheritance of a tag policy and calculation of an effective tag policy</a>.
+        /// This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEffectivePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEffectivePolicyResponse
+        /// </returns>
         public GetEffectivePolicyResponse GetEffectivePolicyWithOptions(GetEffectivePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1792,18 +2644,38 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetEffectivePolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetEffectivePolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetEffectivePolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * An effective tag policy is obtained based on tag policy inheritance. For more information, see [Inheritance of a tag policy and calculation of an effective tag policy](~~417435~~).
-          * This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request GetEffectivePolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetEffectivePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询有效策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// An effective tag policy is obtained based on tag policy inheritance. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Inheritance of a tag policy and calculation of an effective tag policy</a>.
+        /// This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEffectivePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEffectivePolicyResponse
+        /// </returns>
         public async Task<GetEffectivePolicyResponse> GetEffectivePolicyWithOptionsAsync(GetEffectivePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1848,44 +2720,86 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetEffectivePolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetEffectivePolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetEffectivePolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * An effective tag policy is obtained based on tag policy inheritance. For more information, see [Inheritance of a tag policy and calculation of an effective tag policy](~~417435~~).
-          * This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request GetEffectivePolicyRequest
-          * @return GetEffectivePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询有效策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// An effective tag policy is obtained based on tag policy inheritance. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Inheritance of a tag policy and calculation of an effective tag policy</a>.
+        /// This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEffectivePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEffectivePolicyResponse
+        /// </returns>
         public GetEffectivePolicyResponse GetEffectivePolicy(GetEffectivePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetEffectivePolicyWithOptions(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * An effective tag policy is obtained based on tag policy inheritance. For more information, see [Inheritance of a tag policy and calculation of an effective tag policy](~~417435~~).
-          * This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.
-          *
-          * @param request GetEffectivePolicyRequest
-          * @return GetEffectivePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询有效策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// An effective tag policy is obtained based on tag policy inheritance. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Inheritance of a tag policy and calculation of an effective tag policy</a>.
+        /// This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEffectivePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEffectivePolicyResponse
+        /// </returns>
         public async Task<GetEffectivePolicyResponse> GetEffectivePolicyAsync(GetEffectivePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetEffectivePolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the details of the tag policy with an ID of `p-557cb141331f41c7****`.
-          *
-          * @param request GetPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the details of the tag policy with an ID of <c>p-557cb141331f41c7****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyResponse
+        /// </returns>
         public GetPolicyResponse GetPolicyWithOptions(GetPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1926,16 +2840,36 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the details of the tag policy with an ID of `p-557cb141331f41c7****`.
-          *
-          * @param request GetPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the details of the tag policy with an ID of <c>p-557cb141331f41c7****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyResponse
+        /// </returns>
         public async Task<GetPolicyResponse> GetPolicyWithOptionsAsync(GetPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1976,40 +2910,82 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the details of the tag policy with an ID of `p-557cb141331f41c7****`.
-          *
-          * @param request GetPolicyRequest
-          * @return GetPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the details of the tag policy with an ID of <c>p-557cb141331f41c7****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyResponse
+        /// </returns>
         public GetPolicyResponse GetPolicy(GetPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPolicyWithOptions(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the details of the tag policy with an ID of `p-557cb141331f41c7****`.
-          *
-          * @param request GetPolicyRequest
-          * @return GetPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the details of the tag policy with an ID of <c>p-557cb141331f41c7****</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyResponse
+        /// </returns>
         public async Task<GetPolicyResponse> GetPolicyAsync(GetPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the status of the Tag Policy feature for the current logon account. The response shows that the Tag Policy feature in multi-account mode is enabled for the current logon account.
-          *
-          * @param request GetPolicyEnableStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetPolicyEnableStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the Tag Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the status of the Tag Policy feature for the current logon account. The response shows that the Tag Policy feature in multi-account mode is enabled for the current logon account.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPolicyEnableStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyEnableStatusResponse
+        /// </returns>
         public GetPolicyEnableStatusResponse GetPolicyEnableStatusWithOptions(GetPolicyEnableStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2058,16 +3034,36 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPolicyEnableStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPolicyEnableStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPolicyEnableStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the status of the Tag Policy feature for the current logon account. The response shows that the Tag Policy feature in multi-account mode is enabled for the current logon account.
-          *
-          * @param request GetPolicyEnableStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetPolicyEnableStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the Tag Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the status of the Tag Policy feature for the current logon account. The response shows that the Tag Policy feature in multi-account mode is enabled for the current logon account.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPolicyEnableStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyEnableStatusResponse
+        /// </returns>
         public async Task<GetPolicyEnableStatusResponse> GetPolicyEnableStatusWithOptionsAsync(GetPolicyEnableStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2116,41 +3112,83 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPolicyEnableStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPolicyEnableStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPolicyEnableStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the status of the Tag Policy feature for the current logon account. The response shows that the Tag Policy feature in multi-account mode is enabled for the current logon account.
-          *
-          * @param request GetPolicyEnableStatusRequest
-          * @return GetPolicyEnableStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the Tag Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the status of the Tag Policy feature for the current logon account. The response shows that the Tag Policy feature in multi-account mode is enabled for the current logon account.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPolicyEnableStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyEnableStatusResponse
+        /// </returns>
         public GetPolicyEnableStatusResponse GetPolicyEnableStatus(GetPolicyEnableStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPolicyEnableStatusWithOptions(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the status of the Tag Policy feature for the current logon account. The response shows that the Tag Policy feature in multi-account mode is enabled for the current logon account.
-          *
-          * @param request GetPolicyEnableStatusRequest
-          * @return GetPolicyEnableStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the Tag Policy feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the status of the Tag Policy feature for the current logon account. The response shows that the Tag Policy feature in multi-account mode is enabled for the current logon account.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetPolicyEnableStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyEnableStatusResponse
+        /// </returns>
         public async Task<GetPolicyEnableStatusResponse> GetPolicyEnableStatusAsync(GetPolicyEnableStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPolicyEnableStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag detection tasks for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag detection tasks for the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the tag detection tasks for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag detection task exists.
-          *
-          * @param request ListConfigRulesForTargetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListConfigRulesForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tag detection tasks for an object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag detection tasks for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag detection tasks for the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the tag detection tasks for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag detection task exists.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConfigRulesForTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigRulesForTargetResponse
+        /// </returns>
         public ListConfigRulesForTargetResponse ListConfigRulesForTargetWithOptions(ListConfigRulesForTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2215,17 +3253,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListConfigRulesForTargetResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListConfigRulesForTargetResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListConfigRulesForTargetResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag detection tasks for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag detection tasks for the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the tag detection tasks for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag detection task exists.
-          *
-          * @param request ListConfigRulesForTargetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListConfigRulesForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tag detection tasks for an object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag detection tasks for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag detection tasks for the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the tag detection tasks for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag detection task exists.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConfigRulesForTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigRulesForTargetResponse
+        /// </returns>
         public async Task<ListConfigRulesForTargetResponse> ListConfigRulesForTargetWithOptionsAsync(ListConfigRulesForTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2290,43 +3348,85 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListConfigRulesForTargetResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListConfigRulesForTargetResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListConfigRulesForTargetResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag detection tasks for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag detection tasks for the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the tag detection tasks for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag detection task exists.
-          *
-          * @param request ListConfigRulesForTargetRequest
-          * @return ListConfigRulesForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tag detection tasks for an object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag detection tasks for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag detection tasks for the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the tag detection tasks for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag detection task exists.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConfigRulesForTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigRulesForTargetResponse
+        /// </returns>
         public ListConfigRulesForTargetResponse ListConfigRulesForTarget(ListConfigRulesForTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListConfigRulesForTargetWithOptions(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag detection tasks for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag detection tasks for the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the tag detection tasks for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag detection task exists.
-          *
-          * @param request ListConfigRulesForTargetRequest
-          * @return ListConfigRulesForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tag detection tasks for an object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag detection tasks for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag detection tasks for the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the tag detection tasks for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag detection task exists.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConfigRulesForTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigRulesForTargetResponse
+        /// </returns>
         public async Task<ListConfigRulesForTargetResponse> ListConfigRulesForTargetAsync(ListConfigRulesForTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListConfigRulesForTargetWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query all tag policies that are created for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query all tag policies that are created for the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query all tag policies that are created for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that two tag policies are created.
-          *
-          * @param request ListPoliciesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query all tag policies that are created for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query all tag policies that are created for the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query all tag policies that are created for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that two tag policies are created.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
         public ListPoliciesResponse ListPoliciesWithOptions(ListPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2383,17 +3483,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListPoliciesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListPoliciesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListPoliciesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query all tag policies that are created for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query all tag policies that are created for the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query all tag policies that are created for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that two tag policies are created.
-          *
-          * @param request ListPoliciesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query all tag policies that are created for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query all tag policies that are created for the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query all tag policies that are created for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that two tag policies are created.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
         public async Task<ListPoliciesResponse> ListPoliciesWithOptionsAsync(ListPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2450,43 +3570,85 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListPoliciesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query all tag policies that are created for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query all tag policies that are created for the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query all tag policies that are created for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that two tag policies are created.
-          *
-          * @param request ListPoliciesRequest
-          * @return ListPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query all tag policies that are created for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query all tag policies that are created for the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query all tag policies that are created for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that two tag policies are created.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
         public ListPoliciesResponse ListPolicies(ListPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListPoliciesWithOptions(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query all tag policies that are created for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query all tag policies that are created for the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query all tag policies that are created for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that two tag policies are created.
-          *
-          * @param request ListPoliciesRequest
-          * @return ListPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query all tag policies that are created for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query all tag policies that are created for the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query all tag policies that are created for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that two tag policies are created.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
         public async Task<ListPoliciesResponse> ListPoliciesAsync(ListPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPoliciesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag policies that are attached to the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag policies that are attached to the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the tag policies that are attached to the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag policy is attached to the current logon account.
-          *
-          * @param request ListPoliciesForTargetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListPoliciesForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag policies that are attached to an object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag policies that are attached to the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag policies that are attached to the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the tag policies that are attached to the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag policy is attached to the current logon account.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesForTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesForTargetResponse
+        /// </returns>
         public ListPoliciesForTargetResponse ListPoliciesForTargetWithOptions(ListPoliciesForTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2539,17 +3701,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListPoliciesForTargetResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListPoliciesForTargetResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListPoliciesForTargetResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag policies that are attached to the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag policies that are attached to the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the tag policies that are attached to the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag policy is attached to the current logon account.
-          *
-          * @param request ListPoliciesForTargetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListPoliciesForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag policies that are attached to an object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag policies that are attached to the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag policies that are attached to the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the tag policies that are attached to the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag policy is attached to the current logon account.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesForTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesForTargetResponse
+        /// </returns>
         public async Task<ListPoliciesForTargetResponse> ListPoliciesForTargetWithOptionsAsync(ListPoliciesForTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2602,42 +3784,84 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListPoliciesForTargetResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListPoliciesForTargetResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListPoliciesForTargetResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag policies that are attached to the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag policies that are attached to the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the tag policies that are attached to the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag policy is attached to the current logon account.
-          *
-          * @param request ListPoliciesForTargetRequest
-          * @return ListPoliciesForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag policies that are attached to an object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag policies that are attached to the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag policies that are attached to the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the tag policies that are attached to the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag policy is attached to the current logon account.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesForTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesForTargetResponse
+        /// </returns>
         public ListPoliciesForTargetResponse ListPoliciesForTarget(ListPoliciesForTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListPoliciesForTargetWithOptions(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag policies that are attached to the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag policies that are attached to the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the tag policies that are attached to the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag policy is attached to the current logon account.
-          *
-          * @param request ListPoliciesForTargetRequest
-          * @return ListPoliciesForTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag policies that are attached to an object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the tag policies that are attached to the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the tag policies that are attached to the Root folder, a folder other than the Root folder, or a member in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the tag policies that are attached to the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag policy is attached to the current logon account.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesForTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesForTargetResponse
+        /// </returns>
         public async Task<ListPoliciesForTargetResponse> ListPoliciesForTargetAsync(ListPoliciesForTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPoliciesForTargetWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation in the China (Shenzhen) region to query virtual private clouds (VPCs) to which the tag key `k1` is added. The response shows that the tag key is added to two VPCs.
-          *
-          * @param request ListResourcesByTagRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListResourcesByTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resources to which a specified tag is added or resources to which a specified tag is not added.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation in the China (Shenzhen) region to query virtual private clouds (VPCs) to which the tag key <c>k1</c> is added. The response shows that the tag key is added to two VPCs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListResourcesByTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourcesByTagResponse
+        /// </returns>
         public ListResourcesByTagResponse ListResourcesByTagWithOptions(ListResourcesByTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2702,16 +3926,36 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListResourcesByTagResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListResourcesByTagResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListResourcesByTagResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation in the China (Shenzhen) region to query virtual private clouds (VPCs) to which the tag key `k1` is added. The response shows that the tag key is added to two VPCs.
-          *
-          * @param request ListResourcesByTagRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListResourcesByTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resources to which a specified tag is added or resources to which a specified tag is not added.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation in the China (Shenzhen) region to query virtual private clouds (VPCs) to which the tag key <c>k1</c> is added. The response shows that the tag key is added to two VPCs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListResourcesByTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourcesByTagResponse
+        /// </returns>
         public async Task<ListResourcesByTagResponse> ListResourcesByTagWithOptionsAsync(ListResourcesByTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2776,43 +4020,87 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListResourcesByTagResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListResourcesByTagResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListResourcesByTagResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation in the China (Shenzhen) region to query virtual private clouds (VPCs) to which the tag key `k1` is added. The response shows that the tag key is added to two VPCs.
-          *
-          * @param request ListResourcesByTagRequest
-          * @return ListResourcesByTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resources to which a specified tag is added or resources to which a specified tag is not added.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation in the China (Shenzhen) region to query virtual private clouds (VPCs) to which the tag key <c>k1</c> is added. The response shows that the tag key is added to two VPCs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListResourcesByTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourcesByTagResponse
+        /// </returns>
         public ListResourcesByTagResponse ListResourcesByTag(ListResourcesByTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListResourcesByTagWithOptions(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation in the China (Shenzhen) region to query virtual private clouds (VPCs) to which the tag key `k1` is added. The response shows that the tag key is added to two VPCs.
-          *
-          * @param request ListResourcesByTagRequest
-          * @return ListResourcesByTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resources to which a specified tag is added or resources to which a specified tag is not added.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation in the China (Shenzhen) region to query virtual private clouds (VPCs) to which the tag key <c>k1</c> is added. The response shows that the tag key is added to two VPCs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListResourcesByTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourcesByTagResponse
+        /// </returns>
         public async Task<ListResourcesByTagResponse> ListResourcesByTagAsync(ListResourcesByTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListResourcesByTagWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ### [](#)Call examples
-          * *   Query a list of resource types supported by TagResources or UntagResources. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D).
-          * *   Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D).
-          * *   Query a list of resource types that support createdby tags. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D).
-          *
-          * @param request ListSupportResourceTypesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListSupportResourceTypesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource types supported by tags and tag-related capability items.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Call examples</h3>
+        /// <list type="bullet">
+        /// <item><description>Query a list of resource types supported by TagResources or UntagResources. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
+        /// <item><description>Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D">Example</a>.</description></item>
+        /// <item><description>Query a list of resource types that support createdby tags. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSupportResourceTypesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSupportResourceTypesResponse
+        /// </returns>
         public ListSupportResourceTypesResponse ListSupportResourceTypesWithOptions(ListSupportResourceTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2873,19 +4161,41 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListSupportResourceTypesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListSupportResourceTypesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListSupportResourceTypesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * ### [](#)Call examples
-          * *   Query a list of resource types supported by TagResources or UntagResources. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D).
-          * *   Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D).
-          * *   Query a list of resource types that support createdby tags. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D).
-          *
-          * @param request ListSupportResourceTypesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListSupportResourceTypesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource types supported by tags and tag-related capability items.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Call examples</h3>
+        /// <list type="bullet">
+        /// <item><description>Query a list of resource types supported by TagResources or UntagResources. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
+        /// <item><description>Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D">Example</a>.</description></item>
+        /// <item><description>Query a list of resource types that support createdby tags. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSupportResourceTypesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSupportResourceTypesResponse
+        /// </returns>
         public async Task<ListSupportResourceTypesResponse> ListSupportResourceTypesWithOptionsAsync(ListSupportResourceTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2946,46 +4256,92 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListSupportResourceTypesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListSupportResourceTypesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListSupportResourceTypesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * ### [](#)Call examples
-          * *   Query a list of resource types supported by TagResources or UntagResources. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D).
-          * *   Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D).
-          * *   Query a list of resource types that support createdby tags. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D).
-          *
-          * @param request ListSupportResourceTypesRequest
-          * @return ListSupportResourceTypesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource types supported by tags and tag-related capability items.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Call examples</h3>
+        /// <list type="bullet">
+        /// <item><description>Query a list of resource types supported by TagResources or UntagResources. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
+        /// <item><description>Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D">Example</a>.</description></item>
+        /// <item><description>Query a list of resource types that support createdby tags. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSupportResourceTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSupportResourceTypesResponse
+        /// </returns>
         public ListSupportResourceTypesResponse ListSupportResourceTypes(ListSupportResourceTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSupportResourceTypesWithOptions(request, runtime);
         }
 
-        /**
-          * ### [](#)Call examples
-          * *   Query a list of resource types supported by TagResources or UntagResources. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D).
-          * *   Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D).
-          * *   Query a list of resource types that support createdby tags. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D).
-          *
-          * @param request ListSupportResourceTypesRequest
-          * @return ListSupportResourceTypesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource types supported by tags and tag-related capability items.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Call examples</h3>
+        /// <list type="bullet">
+        /// <item><description>Query a list of resource types supported by TagResources or UntagResources. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
+        /// <item><description>Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D">Example</a>.</description></item>
+        /// <item><description>Query a list of resource types that support createdby tags. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSupportResourceTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSupportResourceTypesResponse
+        /// </returns>
         public async Task<ListSupportResourceTypesResponse> ListSupportResourceTypesAsync(ListSupportResourceTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSupportResourceTypesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the tag keys in the `cn-hangzhou` region. The response shows that the following tag keys exist: `team`, `k1`, and `k2`.
-          *
-          * @param request ListTagKeysRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the tag keys in the <c>cn-hangzhou</c> region. The response shows that the following tag keys exist: <c>team</c>, <c>k1</c>, and <c>k2</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public ListTagKeysResponse ListTagKeysWithOptions(ListTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3054,16 +4410,36 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagKeysResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagKeysResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagKeysResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the tag keys in the `cn-hangzhou` region. The response shows that the following tag keys exist: `team`, `k1`, and `k2`.
-          *
-          * @param request ListTagKeysRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the tag keys in the <c>cn-hangzhou</c> region. The response shows that the following tag keys exist: <c>team</c>, <c>k1</c>, and <c>k2</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public async Task<ListTagKeysResponse> ListTagKeysWithOptionsAsync(ListTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3132,40 +4508,82 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagKeysResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagKeysResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagKeysResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the tag keys in the `cn-hangzhou` region. The response shows that the following tag keys exist: `team`, `k1`, and `k2`.
-          *
-          * @param request ListTagKeysRequest
-          * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the tag keys in the <c>cn-hangzhou</c> region. The response shows that the following tag keys exist: <c>team</c>, <c>k1</c>, and <c>k2</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public ListTagKeysResponse ListTagKeys(ListTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagKeysWithOptions(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the tag keys in the `cn-hangzhou` region. The response shows that the following tag keys exist: `team`, `k1`, and `k2`.
-          *
-          * @param request ListTagKeysRequest
-          * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the tag keys in the <c>cn-hangzhou</c> region. The response shows that the following tag keys exist: <c>team</c>, <c>k1</c>, and <c>k2</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public async Task<ListTagKeysResponse> ListTagKeysAsync(ListTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagKeysWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request ListTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3226,16 +4644,36 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request ListTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3296,40 +4734,82 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request ListTagResourcesRequest
-          * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
-        /**
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request ListTagResourcesRequest
-          * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the values of the tag key `k1` in the `cn-hangzhou` region. The response shows that the value of the tag key `k1` is `v1`.
-          *
-          * @param request ListTagValuesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the values of the tag key <c>k1</c> in the <c>cn-hangzhou</c> region. The response shows that the value of the tag key <c>k1</c> is <c>v1</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public ListTagValuesResponse ListTagValuesWithOptions(ListTagValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3398,16 +4878,36 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagValuesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagValuesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagValuesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the values of the tag key `k1` in the `cn-hangzhou` region. The response shows that the value of the tag key `k1` is `v1`.
-          *
-          * @param request ListTagValuesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the values of the tag key <c>k1</c> in the <c>cn-hangzhou</c> region. The response shows that the value of the tag key <c>k1</c> is <c>v1</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public async Task<ListTagValuesResponse> ListTagValuesWithOptionsAsync(ListTagValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3476,41 +4976,83 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagValuesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagValuesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagValuesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the values of the tag key `k1` in the `cn-hangzhou` region. The response shows that the value of the tag key `k1` is `v1`.
-          *
-          * @param request ListTagValuesRequest
-          * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the values of the tag key <c>k1</c> in the <c>cn-hangzhou</c> region. The response shows that the value of the tag key <c>k1</c> is <c>v1</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public ListTagValuesResponse ListTagValues(ListTagValuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagValuesWithOptions(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to query the values of the tag key `k1` in the `cn-hangzhou` region. The response shows that the value of the tag key `k1` is `v1`.
-          *
-          * @param request ListTagValuesRequest
-          * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to query the values of the tag key <c>k1</c> in the <c>cn-hangzhou</c> region. The response shows that the value of the tag key <c>k1</c> is <c>v1</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public async Task<ListTagValuesResponse> ListTagValuesAsync(ListTagValuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagValuesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the object to which a tag policy is attached. The object is the current logon account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the objects to which a tag policy is attached. The objects include the Root folder, folders other than the Root folder, and members in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the objects to which the tag policy with an ID of `p-de62a0bf400e4b69****` is attached. In this example, the Tag Policy feature in multi-account mode is used. The response shows that the tag policy is attached to two members in the related resource directory.
-          *
-          * @param request ListTargetsForPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTargetsForPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the objects to which a tag policy is attached.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the object to which a tag policy is attached. The object is the current logon account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the objects to which a tag policy is attached. The objects include the Root folder, folders other than the Root folder, and members in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the objects to which the tag policy with an ID of <c>p-de62a0bf400e4b69****</c> is attached. In this example, the Tag Policy feature in multi-account mode is used. The response shows that the tag policy is attached to two members in the related resource directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTargetsForPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetsForPolicyResponse
+        /// </returns>
         public ListTargetsForPolicyResponse ListTargetsForPolicyWithOptions(ListTargetsForPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3559,17 +5101,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTargetsForPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTargetsForPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTargetsForPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the object to which a tag policy is attached. The object is the current logon account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the objects to which a tag policy is attached. The objects include the Root folder, folders other than the Root folder, and members in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the objects to which the tag policy with an ID of `p-de62a0bf400e4b69****` is attached. In this example, the Tag Policy feature in multi-account mode is used. The response shows that the tag policy is attached to two members in the related resource directory.
-          *
-          * @param request ListTargetsForPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTargetsForPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the objects to which a tag policy is attached.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the object to which a tag policy is attached. The object is the current logon account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the objects to which a tag policy is attached. The objects include the Root folder, folders other than the Root folder, and members in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the objects to which the tag policy with an ID of <c>p-de62a0bf400e4b69****</c> is attached. In this example, the Tag Policy feature in multi-account mode is used. The response shows that the tag policy is attached to two members in the related resource directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTargetsForPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetsForPolicyResponse
+        /// </returns>
         public async Task<ListTargetsForPolicyResponse> ListTargetsForPolicyWithOptionsAsync(ListTargetsForPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3618,42 +5180,84 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTargetsForPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTargetsForPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTargetsForPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the object to which a tag policy is attached. The object is the current logon account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the objects to which a tag policy is attached. The objects include the Root folder, folders other than the Root folder, and members in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the objects to which the tag policy with an ID of `p-de62a0bf400e4b69****` is attached. In this example, the Tag Policy feature in multi-account mode is used. The response shows that the tag policy is attached to two members in the related resource directory.
-          *
-          * @param request ListTargetsForPolicyRequest
-          * @return ListTargetsForPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the objects to which a tag policy is attached.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the object to which a tag policy is attached. The object is the current logon account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the objects to which a tag policy is attached. The objects include the Root folder, folders other than the Root folder, and members in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the objects to which the tag policy with an ID of <c>p-de62a0bf400e4b69****</c> is attached. In this example, the Tag Policy feature in multi-account mode is used. The response shows that the tag policy is attached to two members in the related resource directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTargetsForPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetsForPolicyResponse
+        /// </returns>
         public ListTargetsForPolicyResponse ListTargetsForPolicy(ListTargetsForPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTargetsForPolicyWithOptions(request, runtime);
         }
 
-        /**
-          * If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the object to which a tag policy is attached. The object is the current logon account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the objects to which a tag policy is attached. The objects include the Root folder, folders other than the Root folder, and members in the resource directory. For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-          * This topic provides an example on how to call the API operation to query the objects to which the tag policy with an ID of `p-de62a0bf400e4b69****` is attached. In this example, the Tag Policy feature in multi-account mode is used. The response shows that the tag policy is attached to two members in the related resource directory.
-          *
-          * @param request ListTargetsForPolicyRequest
-          * @return ListTargetsForPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the objects to which a tag policy is attached.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the object to which a tag policy is attached. The object is the current logon account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the objects to which a tag policy is attached. The objects include the Root folder, folders other than the Root folder, and members in the resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
+        /// This topic provides an example on how to call the API operation to query the objects to which the tag policy with an ID of <c>p-de62a0bf400e4b69****</c> is attached. In this example, the Tag Policy feature in multi-account mode is used. The response shows that the tag policy is attached to two members in the related resource directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTargetsForPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetsForPolicyResponse
+        /// </returns>
         public async Task<ListTargetsForPolicyResponse> ListTargetsForPolicyAsync(ListTargetsForPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTargetsForPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to change the name of a tag policy to `test`.
-          *
-          * @param request ModifyPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to change the name of a tag policy to <c>test</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyResponse
+        /// </returns>
         public ModifyPolicyResponse ModifyPolicyWithOptions(ModifyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3710,16 +5314,36 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to change the name of a tag policy to `test`.
-          *
-          * @param request ModifyPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to change the name of a tag policy to <c>test</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyResponse
+        /// </returns>
         public async Task<ModifyPolicyResponse> ModifyPolicyWithOptionsAsync(ModifyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3776,40 +5400,82 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to change the name of a tag policy to `test`.
-          *
-          * @param request ModifyPolicyRequest
-          * @return ModifyPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to change the name of a tag policy to <c>test</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyResponse
+        /// </returns>
         public ModifyPolicyResponse ModifyPolicy(ModifyPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPolicyWithOptions(request, runtime);
         }
 
-        /**
-          * This topic provides an example on how to call the API operation to change the name of a tag policy to `test`.
-          *
-          * @param request ModifyPolicyRequest
-          * @return ModifyPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改策略</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to call the API operation to change the name of a tag policy to <c>test</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyResponse
+        /// </returns>
         public async Task<ModifyPolicyResponse> ModifyPolicyAsync(ModifyPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * createdby tags can help you analyze costs and bills and manage the costs of cloud resources in an efficient manner. You can identify the creators of resources based on the createdby tags added to the resources. createdby tags are system tags that are provided by Alibaba Cloud and automatically added to resources. The key of createdby tags is `acs:tag:createdby`.
-          *
-          * @param request OpenCreatedByRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return OpenCreatedByResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables createdby tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>createdby tags can help you analyze costs and bills and manage the costs of cloud resources in an efficient manner. You can identify the creators of resources based on the createdby tags added to the resources. createdby tags are system tags that are provided by Alibaba Cloud and automatically added to resources. The key of createdby tags is <c>acs:tag:createdby</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OpenCreatedByRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenCreatedByResponse
+        /// </returns>
         public OpenCreatedByResponse OpenCreatedByWithOptions(OpenCreatedByRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3850,16 +5516,36 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<OpenCreatedByResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<OpenCreatedByResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<OpenCreatedByResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * createdby tags can help you analyze costs and bills and manage the costs of cloud resources in an efficient manner. You can identify the creators of resources based on the createdby tags added to the resources. createdby tags are system tags that are provided by Alibaba Cloud and automatically added to resources. The key of createdby tags is `acs:tag:createdby`.
-          *
-          * @param request OpenCreatedByRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return OpenCreatedByResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables createdby tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>createdby tags can help you analyze costs and bills and manage the costs of cloud resources in an efficient manner. You can identify the creators of resources based on the createdby tags added to the resources. createdby tags are system tags that are provided by Alibaba Cloud and automatically added to resources. The key of createdby tags is <c>acs:tag:createdby</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OpenCreatedByRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenCreatedByResponse
+        /// </returns>
         public async Task<OpenCreatedByResponse> OpenCreatedByWithOptionsAsync(OpenCreatedByRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3900,41 +5586,83 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<OpenCreatedByResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<OpenCreatedByResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<OpenCreatedByResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * createdby tags can help you analyze costs and bills and manage the costs of cloud resources in an efficient manner. You can identify the creators of resources based on the createdby tags added to the resources. createdby tags are system tags that are provided by Alibaba Cloud and automatically added to resources. The key of createdby tags is `acs:tag:createdby`.
-          *
-          * @param request OpenCreatedByRequest
-          * @return OpenCreatedByResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables createdby tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>createdby tags can help you analyze costs and bills and manage the costs of cloud resources in an efficient manner. You can identify the creators of resources based on the createdby tags added to the resources. createdby tags are system tags that are provided by Alibaba Cloud and automatically added to resources. The key of createdby tags is <c>acs:tag:createdby</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OpenCreatedByRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenCreatedByResponse
+        /// </returns>
         public OpenCreatedByResponse OpenCreatedBy(OpenCreatedByRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return OpenCreatedByWithOptions(request, runtime);
         }
 
-        /**
-          * createdby tags can help you analyze costs and bills and manage the costs of cloud resources in an efficient manner. You can identify the creators of resources based on the createdby tags added to the resources. createdby tags are system tags that are provided by Alibaba Cloud and automatically added to resources. The key of createdby tags is `acs:tag:createdby`.
-          *
-          * @param request OpenCreatedByRequest
-          * @return OpenCreatedByResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables createdby tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>createdby tags can help you analyze costs and bills and manage the costs of cloud resources in an efficient manner. You can identify the creators of resources based on the createdby tags added to the resources. createdby tags are system tags that are provided by Alibaba Cloud and automatically added to resources. The key of createdby tags is <c>acs:tag:createdby</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OpenCreatedByRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenCreatedByResponse
+        /// </returns>
         public async Task<OpenCreatedByResponse> OpenCreatedByAsync(OpenCreatedByRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OpenCreatedByWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see [Tag overview](~~156983~~).
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request TagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.
+        /// For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3983,17 +5711,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see [Tag overview](~~156983~~).
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request TagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.
+        /// For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4042,43 +5790,85 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see [Tag overview](~~156983~~).
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request TagResourcesRequest
-          * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.
+        /// For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
-        /**
-          * Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see [Tag overview](~~156983~~).
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request TagResourcesRequest
-          * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.
+        /// For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * After you remove a tag, the tag is automatically deleted within 24 hours if it is not added to other resources.
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request UntagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you remove a tag, the tag is automatically deleted within 24 hours if it is not added to other resources.
+        /// For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4127,17 +5917,37 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * After you remove a tag, the tag is automatically deleted within 24 hours if it is not added to other resources.
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request UntagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you remove a tag, the tag is automatically deleted within 24 hours if it is not added to other resources.
+        /// For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4186,29 +5996,58 @@ namespace AlibabaCloud.SDK.Tag20180828
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * After you remove a tag, the tag is automatically deleted within 24 hours if it is not added to other resources.
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request UntagResourcesRequest
-          * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you remove a tag, the tag is automatically deleted within 24 hours if it is not added to other resources.
+        /// For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
-        /**
-          * After you remove a tag, the tag is automatically deleted within 24 hours if it is not added to other resources.
-          * For information about the Alibaba Cloud services that support tags, see [Services that work with Tag](~~171455~~).
-          *
-          * @param request UntagResourcesRequest
-          * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the resources of various Alibaba Cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you remove a tag, the tag is automatically deleted within 24 hours if it is not added to other resources.
+        /// For information about the Alibaba Cloud services that support tags, see <a href="https://help.aliyun.com/document_detail/171455.html">Services that work with Tag</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

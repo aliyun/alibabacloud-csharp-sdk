@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class GetPolicyEnableStatusRequest : TeaModel {
+        /// <summary>
+        /// <para>The enabling type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>TAG_POLICY: the Tag Policy feature.</description></item>
+        /// <item><description>VERIFY_NO_TAG: the strong verification feature.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TAG_POLICY</para>
+        /// </summary>
         [NameInMap("OpenType")]
         [Validation(Required=false)]
         public string OpenType { get; set; }
@@ -22,7 +32,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. Set the value to cn-shanghai.
+        /// <para>The region ID. Set the value to cn-shanghai.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,14 +50,18 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:
+        /// <para>The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>USER: single-account mode</description></item>
+        /// <item><description>RD: multi-account mode</description></item>
+        /// </list>
+        /// <para>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</para>
+        /// <remarks>
+        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// </remarks>
         /// 
-        /// *   USER: single-account mode
-        /// *   RD: multi-account mode
-        /// 
-        /// For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-        /// 
-        /// >  The value of this parameter is not case-sensitive.
+        /// <b>Example:</b>
+        /// <para>RD</para>
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

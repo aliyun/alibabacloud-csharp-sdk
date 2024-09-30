@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class ListConfigRulesForTargetRequest : TeaModel {
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Default value: 50. Maximum value: 1000.</para>
         /// 
-        /// Default value: 50. Maximum value: 1000.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResult")]
         [Validation(Required=false)]
         public int? MaxResult { get; set; }
 
         /// <summary>
-        /// The token that is used to start the next query.
+        /// <para>The token that is used to start the next query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -34,17 +39,24 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The use scenario of the tag policy. This parameter specifies a filter condition for the query. Valid values:
+        /// <para>The use scenario of the tag policy. This parameter specifies a filter condition for the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>tags: enables tags with specified tag values to be added to resources.</description></item>
+        /// <item><description>rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</description></item>
+        /// </list>
         /// 
-        /// *   tags: enables tags with specified tag values to be added to resources.
-        /// *   rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.
+        /// <b>Example:</b>
+        /// <para>tags</para>
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]
         public string PolicyType { get; set; }
 
         /// <summary>
-        /// The region ID. Set the value to cn-shanghai.
+        /// <para>The region ID. Set the value to cn-shanghai.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -55,42 +67,57 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The tag key. This parameter specifies a filter condition for the query.
+        /// <para>The tag key. This parameter specifies a filter condition for the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CostCenter</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public string TagKey { get; set; }
 
         /// <summary>
-        /// The ID of the object. This parameter specifies a filter condition for the query.
+        /// <para>The ID of the object. This parameter specifies a filter condition for the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>134254031178****</para>
         /// </summary>
         [NameInMap("TargetId")]
         [Validation(Required=false)]
         public string TargetId { get; set; }
 
         /// <summary>
-        /// The type of the object. This parameter specifies a filter condition for the query. Valid values:
+        /// <para>The type of the object. This parameter specifies a filter condition for the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</description></item>
+        /// <item><description>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+        /// <item><description>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+        /// <item><description>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// </remarks>
         /// 
-        /// *   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.
-        /// *   ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-        /// *   FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-        /// *   ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-        /// 
-        /// >  The value of this parameter is not case-sensitive.
+        /// <b>Example:</b>
+        /// <para>ACCOUNT</para>
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]
         public string TargetType { get; set; }
 
         /// <summary>
-        /// The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:
+        /// <para>The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>USER: single-account mode</description></item>
+        /// <item><description>RD: multi-account mode</description></item>
+        /// </list>
+        /// <para>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</para>
+        /// <remarks>
+        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// </remarks>
         /// 
-        /// *   USER: single-account mode
-        /// *   RD: multi-account mode
-        /// 
-        /// For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-        /// 
-        /// >  The value of this parameter is not case-sensitive.
+        /// <b>Example:</b>
+        /// <para>USER</para>
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

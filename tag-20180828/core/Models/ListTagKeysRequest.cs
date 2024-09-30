@@ -14,11 +14,14 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public ListTagKeysRequestTagFilter TagFilter { get; set; }
         public class ListTagKeysRequestTagFilter : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// <para>This parameter is used together with the <c>FuzzyType</c> parameter.</para>
+            /// <remarks>
+            /// <para> This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</para>
+            /// </remarks>
             /// 
-            /// This parameter is used together with the `FuzzyType` parameter.
-            /// 
-            /// >  This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.
+            /// <b>Example:</b>
+            /// <para>team</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -27,32 +30,45 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         }
 
         /// <summary>
-        /// The type of the resource tags. This parameter specifies a filter condition for the query. Valid values:
+        /// <para>The type of the resource tags. This parameter specifies a filter condition for the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>all (default value)</description></item>
+        /// <item><description>custom</description></item>
+        /// <item><description>system</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// </remarks>
         /// 
-        /// *   all (default value)
-        /// *   custom
-        /// *   system
-        /// 
-        /// >  The value of this parameter is not case-sensitive.
+        /// <b>Example:</b>
+        /// <para>all</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The type of the query. Valid values:
+        /// <para>The type of the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EQUAL: exact match. This is the default value.</description></item>
+        /// <item><description>PREFIX: prefix-based fuzzy match.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</para>
+        /// </remarks>
         /// 
-        /// *   EQUAL: exact match. This is the default value.
-        /// *   PREFIX: prefix-based fuzzy match.
-        /// 
-        /// >  This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.
+        /// <b>Example:</b>
+        /// <para>EQUAL</para>
         /// </summary>
         [NameInMap("FuzzyType")]
         [Validation(Required=false)]
         public string FuzzyType { get; set; }
 
         /// <summary>
-        /// The token that is used to start the next query.
+        /// <para>The token that is used to start the next query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -67,30 +83,40 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of tag keys to return on each page.
+        /// <para>The number of tag keys to return on each page.</para>
+        /// <para>Maximum value: 1000. Default value: 50.</para>
         /// 
-        /// Maximum value: 1000. Default value: 50.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The category of the tags. This parameter specifies a filter condition for the query. Valid values:
+        /// <para>The category of the tags. This parameter specifies a filter condition for the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ResourceTag: resource tags, including custom and system tags. This is the default value.</description></item>
+        /// <item><description>MetaTag: preset tags.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// </remarks>
         /// 
-        /// *   ResourceTag: resource tags, including custom and system tags. This is the default value.
-        /// *   MetaTag: preset tags.
-        /// 
-        /// >  The value of this parameter is not case-sensitive.
+        /// <b>Example:</b>
+        /// <para>ResourceTag</para>
         /// </summary>
         [NameInMap("QueryType")]
         [Validation(Required=false)]
         public string QueryType { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/2330902.html">Endpoints</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about region IDs, see [Endpoints](~~2330902~~).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -101,12 +127,15 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The resource type. This parameter specifies a filter condition for the query.
+        /// <para>The resource type. This parameter specifies a filter condition for the query.</para>
+        /// <para>Format: <c>ALIYUN::${ProductCode}::${ResourceType}</c>. All letters in the value of this parameter must be in uppercase.</para>
+        /// <list type="bullet">
+        /// <item><description><c>ProductCode</c>: the service code. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</description></item>
+        /// <item><description><c>ResourceType</c>: the resource type. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</description></item>
+        /// </list>
         /// 
-        /// Format: `ALIYUN::${ProductCode}::${ResourceType}`. All letters in the value of this parameter must be in uppercase.
-        /// 
-        /// *   `ProductCode`: the service code. You can set this field to a value obtained from the response of the [ListSupportResourceTypes](~~2330915~~) operation.
-        /// *   `ResourceType`: the resource type. You can set this field to a value obtained from the response of the [ListSupportResourceTypes](~~2330915~~) operation.
+        /// <b>Example:</b>
+        /// <para>ALIYUN::ECS::INSTANCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
