@@ -77,6 +77,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The UUID of the asset that you want to query.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7151f27e-1d51-4e98-a540-8936a****</para>
+        /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }

@@ -141,6 +141,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <list type="bullet">
             /// <item><description><b>1</b>: failed</description></item>
             /// <item><description><b>3</b>: passed</description></item>
+            /// <item><description><b>6</b>: Added to Whitelist</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

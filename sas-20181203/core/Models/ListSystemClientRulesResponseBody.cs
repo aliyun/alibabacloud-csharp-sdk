@@ -178,6 +178,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
+            /// <para>Whether the current rule switch takes effect. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: enabled</description></item>
+            /// <item><description><b>false</b>: disabled</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("SwitchEnable")]
+            [Validation(Required=false)]
+            public bool? SwitchEnable { get; set; }
+
+            /// <summary>
             /// <para>The switch ID of the system defense rule.</para>
             /// 
             /// <b>Example:</b>

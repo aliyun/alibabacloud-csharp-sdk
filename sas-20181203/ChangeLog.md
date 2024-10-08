@@ -1,3 +1,11 @@
+2024-10-08 Version: 3.2.0
+- Support API GetBuildRiskDefineRuleConfig.
+- Support API SetBuildRiskDefineRuleConfig.
+- Update API DescribeOnceTask: add param Source.
+- Update API DescribeOnceTask: update response param.
+- Update API ListSystemClientRules: update response param.
+
+
 2024-09-26 Version: 3.1.1
 - Update API DescribeExposedInstanceDetail: update response param.
 - Update API DescribeExposedInstanceList: add param AssetType.
