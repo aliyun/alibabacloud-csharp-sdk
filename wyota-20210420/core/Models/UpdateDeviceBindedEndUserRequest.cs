@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
     public class UpdateDeviceBindedEndUserRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SerialNo")]
         [Validation(Required=false)]

@@ -49,6 +49,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             [Validation(Required=false)]
             public string Ipv4 { get; set; }
 
+            /// <term><b>Obsolete</b></term>
             [NameInMap("LastLoginUser")]
             [Validation(Required=false)]
             [Obsolete]

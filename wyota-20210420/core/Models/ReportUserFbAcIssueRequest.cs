@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public List<ReportUserFbAcIssueRequestFileList> FileList { get; set; }
         public class ReportUserFbAcIssueRequestFileList : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public int? FileType { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("SessionId")]
             [Validation(Required=false)]

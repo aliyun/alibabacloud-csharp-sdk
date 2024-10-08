@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
     public class GetAppOtaLatestVersionRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BaseVersion")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public string ClientUid { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OsType")]
         [Validation(Required=false)]

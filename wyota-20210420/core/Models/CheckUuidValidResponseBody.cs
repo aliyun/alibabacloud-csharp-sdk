@@ -13,6 +13,16 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public CheckUuidValidResponseBodyData Data { get; set; }
+        public class CheckUuidValidResponseBodyData : TeaModel {
+            [NameInMap("NewUpgrade")]
+            [Validation(Required=false)]
+            public bool? NewUpgrade { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public long? AllDevices { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SecureNetworkType")]
         [Validation(Required=false)]

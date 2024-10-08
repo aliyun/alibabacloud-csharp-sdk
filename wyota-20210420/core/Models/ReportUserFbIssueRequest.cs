@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string FileMd5 { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]

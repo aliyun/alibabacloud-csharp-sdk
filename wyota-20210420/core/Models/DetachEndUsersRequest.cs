@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
     public class DetachEndUsersRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
         public string EndUserIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SerialNo")]
         [Validation(Required=false)]

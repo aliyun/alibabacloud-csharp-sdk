@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

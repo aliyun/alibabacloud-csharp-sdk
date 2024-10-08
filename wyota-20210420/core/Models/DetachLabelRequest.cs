@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public string LabelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SerialNo")]
         [Validation(Required=false)]
