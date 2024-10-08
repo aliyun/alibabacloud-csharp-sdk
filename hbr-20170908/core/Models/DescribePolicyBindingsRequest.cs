@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public List<DescribePolicyBindingsRequestFilters> Filters { get; set; }
         public class DescribePolicyBindingsRequestFilters : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>DataSourceType</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>IN</para>
+            /// </summary>
             [NameInMap("Operator")]
             [Validation(Required=false)]
             public string Operator { get; set; }
@@ -31,18 +39,34 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>po-000************hky</para>
+        /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>UDM_ECS</para>
+        /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
-    public class AttachNasFileSystemResponse : TeaModel {
+    public class DeleteUdmEcsInstanceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public AttachNasFileSystemResponseBody Body { get; set; }
+        public DeleteUdmEcsInstanceResponseBody Body { get; set; }
 
     }
 

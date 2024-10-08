@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class CreateTempFileUploadUrlRequest : TeaModel {
         /// <summary>
-        /// The name of the file to be uploaded.
+        /// <para>The name of the file to be uploaded.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>file-list.txt</para>
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]

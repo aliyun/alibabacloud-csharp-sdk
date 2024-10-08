@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the call is successful.
+        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+        /// <para>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The list of regions.
+        /// <para>The regions returned.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -35,42 +41,48 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// The name of the region.
+                /// <para>The region name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China (Hangzhou)</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
-
-                /// <summary>
-                /// The number of repositories in the region.
-                /// </summary>
-                [NameInMap("VaultCount")]
-                [Validation(Required=false)]
-                public int? VaultCount { get; set; }
 
             }
 
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B3395EC6-7A4A-5282-A9AB-7A442F2CFC90</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful.
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true: The call is successful.
-        /// *   false: The call fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

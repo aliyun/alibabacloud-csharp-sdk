@@ -10,47 +10,64 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class CreateReplicationVaultResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the request was successful.
+        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The message that is returned. If the request was successful, "successful" is returned. If the request failed, an error message is returned.
+        /// <para>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the initialization task used to initialize the backup vault.
+        /// <para>The ID of the job that is used to initialize the backup vault. You can call the DescribeTask operation to query the job status.</para>
         /// 
-        /// You can call the DescribeTask operation to query the status of an initialization task.
+        /// <b>Example:</b>
+        /// <para>t-*********************</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The ID of the backup vault.
+        /// <para>The ID of the backup vault.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v-*********************</para>
         /// </summary>
         [NameInMap("VaultId")]
         [Validation(Required=false)]

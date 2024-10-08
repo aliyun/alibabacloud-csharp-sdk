@@ -10,29 +10,36 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeBackupPlansRequest : TeaModel {
         /// <summary>
-        /// The filter.
+        /// <para>The filter.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<DescribeBackupPlansRequestFilters> Filters { get; set; }
         public class DescribeBackupPlansRequestFilters : TeaModel {
             /// <summary>
-            /// The keys in the filter. Valid values:
+            /// <para>The keys in the filter. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>regionId</b>: the ID of a region</description></item>
+            /// <item><description><b>planId</b>: the ID of a backup plan</description></item>
+            /// <item><description><b>sourceType</b>: the type of a data source</description></item>
+            /// <item><description><b>vaultId</b>: the ID of a backup vault</description></item>
+            /// <item><description><b>instanceName</b>: the name of an instance</description></item>
+            /// <item><description><b>instanceId</b>: the ID of an instance</description></item>
+            /// <item><description><b>planName</b>: the name of a backup plan</description></item>
+            /// </list>
             /// 
-            /// *   **regionId**: the ID of a region
-            /// *   **planId**: the ID of a backup plan
-            /// *   **sourceType**: the type of a data source
-            /// *   **vaultId**: the ID of a backup vault
-            /// *   **instanceName**: the name of an instance
-            /// *   **instanceId**: the ID of an instance
-            /// *   **planName**: the name of a backup plan
+            /// <b>Example:</b>
+            /// <para>vaultId</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The values that you want to match in the filter.
+            /// <para>The values that you want to match in the filter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[&quot;v-*********************&quot;]</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -41,27 +48,37 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.
+        /// <para>The number of entries per page. Valid values: 1 to 99. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The type of the data source. Valid values:
+        /// <para>The type of the data source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ECS_FILE</b>: Elastic Compute Service (ECS) files</description></item>
+        /// <item><description><b>OSS</b>: Object Storage Service (OSS) buckets</description></item>
+        /// <item><description><b>NAS</b>: Apsara File Storage NAS file systems</description></item>
+        /// <item><description><b>OTS</b>: Tablestore instances</description></item>
+        /// <item><description><b>UDM_ECS</b>: ECS instances</description></item>
+        /// </list>
         /// 
-        /// *   **ECS_FILE**: Elastic Compute Service (ECS) files
-        /// *   **OSS**: Object Storage Service (OSS) buckets
-        /// *   **NAS**: Apsara File Storage NAS file systems
-        /// *   **OTS**: Tablestore instances
-        /// *   **UDM_ECS**: ECS instances
+        /// <b>Example:</b>
+        /// <para>ECS_FILE</para>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeletePolicyV2Request : TeaModel {
         /// <summary>
-        /// The ID of the backup policy.
+        /// <para>The ID of the backup policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>po-000************2l6</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

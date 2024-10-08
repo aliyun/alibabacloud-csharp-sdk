@@ -8,17 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
-    public class DeleteBackupClientRequest : TeaModel {
+    public class DeleteUdmEcsInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Backup client.</para>
+        /// <para>The ID of the ECS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>c-*********************</para>
+        /// <para>i-2zed************tlrm</para>
         /// </summary>
-        [NameInMap("ClientId")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string ClientId { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

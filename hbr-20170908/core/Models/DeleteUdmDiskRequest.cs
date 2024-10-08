@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
-    public class DescribeRegionsRequest : TeaModel {
+    public class DeleteUdmDiskRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return detailed information. Default value: false.
+        /// <b>Example:</b>
+        /// <para>d-bp15************xy70</para>
         /// </summary>
-        [NameInMap("NeedVaultCount")]
+        [NameInMap("DiskId")]
         [Validation(Required=false)]
-        public bool? NeedVaultCount { get; set; }
+        public string DiskId { get; set; }
 
     }
 

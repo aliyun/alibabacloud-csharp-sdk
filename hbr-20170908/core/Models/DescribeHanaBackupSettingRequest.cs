@@ -10,21 +10,31 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeHanaBackupSettingRequest : TeaModel {
         /// <summary>
-        /// The ID of the SAP HANA instance.
+        /// <para>The ID of the SAP HANA instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cl-00068btz******oku</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SYSTEMDB</para>
         /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// The ID of the backup vault.
+        /// <para>The ID of the backup vault.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v-000css******za5uyqr</para>
         /// </summary>
         [NameInMap("VaultId")]
         [Validation(Required=false)]

@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteVaultRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmoiyerpacj4q</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The token.
+        /// <para>The token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a*</para>
         /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }
 
         /// <summary>
-        /// The ID of the backup vault.
+        /// <para>The ID of the backup vault.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v-*********************</para>
         /// </summary>
         [NameInMap("VaultId")]
         [Validation(Required=false)]

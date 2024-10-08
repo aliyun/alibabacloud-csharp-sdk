@@ -10,87 +10,135 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class CreatePolicyV2Request : TeaModel {
         /// <summary>
-        /// The description of the backup policy.
+        /// <para>The description of the backup policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Data is backed up at 10:00:00 every day and replicated to the China (Shanghai) region for geo-redundancy.</para>
         /// </summary>
         [NameInMap("PolicyDescription")]
         [Validation(Required=false)]
         public string PolicyDescription { get; set; }
 
         /// <summary>
-        /// The name of the backup policy.
+        /// <para>The name of the backup policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Daily Local Backup + Remote Backup</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
+        [NameInMap("PolicyType")]
+        [Validation(Required=false)]
+        public string PolicyType { get; set; }
+
         /// <summary>
-        /// The rules in the backup policy.
+        /// <para>The rules in the backup policy.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<CreatePolicyV2RequestRules> Rules { get; set; }
         public class CreatePolicyV2RequestRules : TeaModel {
             /// <summary>
-            /// This parameter is required only if you set the **RuleType** parameter to **BACKUP**. This parameter specifies the backup type. Valid value: **COMPLETE**, which indicates full backup.
+            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>BACKUP</b>. This parameter specifies the backup type. Valid value: <b>COMPLETE</b>, which indicates full backup.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>COMPLETE</para>
             /// </summary>
             [NameInMap("BackupType")]
             [Validation(Required=false)]
             public string BackupType { get; set; }
 
+            [NameInMap("DataSourceFilters")]
+            [Validation(Required=false)]
+            public List<CreatePolicyV2RequestRulesDataSourceFilters> DataSourceFilters { get; set; }
+            public class CreatePolicyV2RequestRulesDataSourceFilters : TeaModel {
+                [NameInMap("DataSourceIds")]
+                [Validation(Required=false)]
+                public List<string> DataSourceIds { get; set; }
+
+                [NameInMap("SourceType")]
+                [Validation(Required=false)]
+                public string SourceType { get; set; }
+
+            }
+
             /// <summary>
-            /// Specifies whether to enable the feature of keeping at least one backup version. Valid values:
+            /// <para>Specifies whether to enable the feature of keeping at least one backup version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: The feature is disabled.</description></item>
+            /// <item><description>1: The feature is enabled.</description></item>
+            /// </list>
             /// 
-            /// *   0: The feature is disabled.
-            /// *   1: The feature is enabled.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("KeepLatestSnapshots")]
             [Validation(Required=false)]
             public long? KeepLatestSnapshots { get; set; }
 
             /// <summary>
-            /// This parameter is required only if you set the **RuleType** parameter to **REPLICATION**. This parameter specifies the ID of the destination region.
+            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>REPLICATION</b>. This parameter specifies the ID of the destination region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-shanghai</para>
             /// </summary>
             [NameInMap("ReplicationRegionId")]
             [Validation(Required=false)]
             public string ReplicationRegionId { get; set; }
 
             /// <summary>
-            /// This parameter is required only if you set the **RuleType** parameter to **TRANSITION** or **REPLICATION**.
+            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>TRANSITION</b> or <b>REPLICATION</b>.</para>
+            /// <list type="bullet">
+            /// <item><description>If the <b>RuleType</b> parameter is set to <b>TRANSITION</b>, this parameter specifies the retention period of the backup data. Minimum value: 1. Maximum value: 364635. Unit: days.</description></item>
+            /// <item><description>If the <b>RuleType</b> parameter is set to <b>REPLICATION</b>, this parameter specifies the retention period of remote backups. Minimum value: 1. Maximum value: 364635. Unit: days.</description></item>
+            /// </list>
             /// 
-            /// *   If the **RuleType** parameter is set to **TRANSITION**, this parameter specifies the retention period of the backup data. Minimum value: 1. Maximum value: 364635. Unit: days.
-            /// *   If the **RuleType** parameter is set to **REPLICATION**, this parameter specifies the retention period of remote backups. Minimum value: 1. Maximum value: 364635. Unit: days.
+            /// <b>Example:</b>
+            /// <para>7</para>
             /// </summary>
             [NameInMap("Retention")]
             [Validation(Required=false)]
             public long? Retention { get; set; }
 
             /// <summary>
-            /// This parameter is required only if you set the **RuleType** parameter to **TRANSITION**. This parameter specifies the special retention rules.
+            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>TRANSITION</b>. This parameter specifies the special retention rules.</para>
             /// </summary>
             [NameInMap("RetentionRules")]
             [Validation(Required=false)]
             public List<CreatePolicyV2RequestRulesRetentionRules> RetentionRules { get; set; }
             public class CreatePolicyV2RequestRulesRetentionRules : TeaModel {
                 /// <summary>
-                /// The type of the special retention rule. Valid values:
+                /// <para>The type of the special retention rule. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>WEEKLY</b>: retains weekly backups</description></item>
+                /// <item><description><b>MONTHLY</b>: retains monthly backups</description></item>
+                /// <item><description><b>YEARLY</b>: retains yearly backups</description></item>
+                /// </list>
                 /// 
-                /// *   **WEEKLY**: weekly backups
-                /// *   **MONTHLY**: monthly backups
-                /// *   **YEARLY**: yearly backups
+                /// <b>Example:</b>
+                /// <para>YEARLY</para>
                 /// </summary>
                 [NameInMap("AdvancedRetentionType")]
                 [Validation(Required=false)]
                 public string AdvancedRetentionType { get; set; }
 
                 /// <summary>
-                /// The retention period of the backup data. Minimum value: 1. Unit: days.
+                /// <para>The special retention period of backups. Minimum value: 1. Unit: days.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>730</para>
                 /// </summary>
                 [NameInMap("Retention")]
                 [Validation(Required=false)]
                 public long? Retention { get; set; }
 
                 /// <summary>
-                /// Specifies which backup is retained based on the special retention rule. Only the first backup can be retained.
+                /// <para>Specifies which backup is retained based on the special retention rule. Only the first backup can be retained.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("WhichSnapshot")]
                 [Validation(Required=false)]
@@ -99,25 +147,56 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             }
 
             /// <summary>
-            /// The type of the rule. Each backup policy must have at least one rule of the **BACKUP** type and only one rule of the **TRANSITION** type.
+            /// <para>The type of the rule. Each backup policy must have at least one rule of the <b>BACKUP</b> type and only one rule of the <b>TRANSITION</b> type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>BACKUP</b>: backup rule</description></item>
+            /// <item><description><b>TRANSITION</b>: lifecycle rule</description></item>
+            /// <item><description><b>REPLICATION</b>: replication rule</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   **BACKUP**: backup rule
-            /// *   **TRANSITION**: lifecycle rule
-            /// *   **REPLICATION**: replication rule
+            /// <b>Example:</b>
+            /// <para>BACKUP</para>
             /// </summary>
             [NameInMap("RuleType")]
             [Validation(Required=false)]
             public string RuleType { get; set; }
 
             /// <summary>
-            /// This parameter is required only if you set the **RuleType** parameter to **BACKUP**. This parameter specifies the backup schedule settings. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, `I|1631685600|P1D` specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
+            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>BACKUP</b>. This parameter specifies the backup schedule settings. Format: <c>I|{startTime}|{interval}</c>. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <c>I|1631685600|P1D</c> specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</para>
+            /// <list type="bullet">
+            /// <item><description>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</description></item>
+            /// <item><description>interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of 1 hour. P1D specifies an interval of one day.</description></item>
+            /// </list>
             /// 
-            /// *   startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.
-            /// *   interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.
+            /// <b>Example:</b>
+            /// <para>I|1648647166|P1D</para>
             /// </summary>
             [NameInMap("Schedule")]
             [Validation(Required=false)]
             public string Schedule { get; set; }
+
+            [NameInMap("TagFilters")]
+            [Validation(Required=false)]
+            public List<CreatePolicyV2RequestRulesTagFilters> TagFilters { get; set; }
+            public class CreatePolicyV2RequestRulesTagFilters : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Operator")]
+                [Validation(Required=false)]
+                public string Operator { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            [NameInMap("VaultId")]
+            [Validation(Required=false)]
+            public string VaultId { get; set; }
 
         }
 

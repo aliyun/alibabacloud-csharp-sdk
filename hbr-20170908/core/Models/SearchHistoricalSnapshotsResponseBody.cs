@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class SearchHistoricalSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the call is successful.
+        /// <para>The HTTP status code. The status code 200 indicates that the call is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The number of historical backup snapshots that are displayed on the current page.
+        /// <para>The number of historical backup snapshots that are displayed on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+        /// <para>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The token that is required to obtain the next page of backup snapshots.
+        /// <para>The token that is required to obtain the next page of backup snapshots.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BE</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The historical backup snapshots.
+        /// <para>The historical backup snapshots.</para>
         /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
@@ -56,165 +71,243 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public List<SearchHistoricalSnapshotsResponseBodySnapshotsSnapshot> Snapshot { get; set; }
             public class SearchHistoricalSnapshotsResponseBodySnapshotsSnapshot : TeaModel {
                 /// <summary>
-                /// The actual data amount of backup snapshots after duplicates are removed. Unit: bytes.
+                /// <para>The actual data amount of backup snapshots after duplicates are removed. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>600</para>
                 /// </summary>
                 [NameInMap("ActualBytes")]
                 [Validation(Required=false)]
                 public long? ActualBytes { get; set; }
 
                 /// <summary>
-                /// The actual number of backup snapshots.
+                /// <para>The actual number of backup snapshots.</para>
+                /// <remarks>
+                /// <para> This parameter is available only for file backup.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is available only for file backup.
+                /// <b>Example:</b>
+                /// <para>6</para>
                 /// </summary>
                 [NameInMap("ActualItems")]
                 [Validation(Required=false)]
                 public long? ActualItems { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1640334062</para>
+                /// </summary>
                 [NameInMap("ArchiveTime")]
                 [Validation(Required=false)]
                 public long? ArchiveTime { get; set; }
 
                 /// <summary>
-                /// The backup type. Valid value: **COMPLETE**, which indicates full backup.
+                /// <para>The backup type. Valid value: <b>COMPLETE</b>, which indicates full backup.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>COMPLETE</para>
                 /// </summary>
                 [NameInMap("BackupType")]
                 [Validation(Required=false)]
                 public string BackupType { get; set; }
 
                 /// <summary>
-                /// This parameter is returned only if the **SourceType** parameter is set to **OSS**. This parameter indicates the name of the OSS bucket.
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>OSS</b>. This parameter indicates the name of the OSS bucket.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hbr-backup-oss</para>
                 /// </summary>
                 [NameInMap("Bucket")]
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
 
                 /// <summary>
-                /// The actual amount of data that is generated by incremental backups. Unit: bytes.
+                /// <para>The actual amount of data that is generated by incremental backups. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>800</para>
                 /// </summary>
                 [NameInMap("BytesDone")]
                 [Validation(Required=false)]
                 public long? BytesDone { get; set; }
 
                 /// <summary>
-                /// The total amount of data. Unit: bytes.
+                /// <para>The total amount of data. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1000</para>
                 /// </summary>
                 [NameInMap("BytesTotal")]
                 [Validation(Required=false)]
                 public long? BytesTotal { get; set; }
 
                 /// <summary>
-                /// This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the ID of the HBR client.
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter indicates the ID of the HBR client.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>c-*********************</para>
                 /// </summary>
                 [NameInMap("ClientId")]
                 [Validation(Required=false)]
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// The time when the backup snapshot was completed. The value is a UNIX timestamp. Unit: seconds.
+                /// <para>The time when the backup snapshot was completed. The value is a UNIX timestamp. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1554347313</para>
                 /// </summary>
                 [NameInMap("CompleteTime")]
                 [Validation(Required=false)]
                 public long? CompleteTime { get; set; }
 
                 /// <summary>
-                /// This parameter is returned only if the **SourceType** parameter is set to **NAS**. This parameter indicates the time when the file system was created. The value is a UNIX timestamp. Unit: seconds.
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>NAS</b>. This parameter indicates the time when the file system was created. The value is a UNIX timestamp. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1607436917</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.
+                /// <para>The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1554347313</para>
                 /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public long? CreatedTime { get; set; }
 
                 /// <summary>
-                /// The files that record the information about backup failures, including the information about partially completed backups.
+                /// <para>The files that record the information about backup failures, including the information about partially completed backups.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Item	Error Message C:\Program Files (x86)\Symantec\Symantec Endpoint Protection\14.3.558.0000.105\Bin\service.dat	Open: open \\?\C:\Program Files (x86)\Symantec\Symantec Endpoint Protection\14.3.558.0000.105\Bin\service.dat: The process cannot access the file because it is being used by another process. C:\ProgramData\McAfee\Agent\data\InstallerFiles\172e8a3b04b7ab0fd0215f4fb7707e3744b37d83b6743b3eacb94447c74dc9af_contrib.ini	Open: open \\?\C:\ProgramData\McAfee\Agent\data\InstallerFiles\172e8a3b04b7ab0fd0215f4fb7707e3744b37d83b6743b3eacb94447c74dc9af_contrib.ini: Access is denied.</para>
                 /// </summary>
                 [NameInMap("ErrorFile")]
                 [Validation(Required=false)]
                 public string ErrorFile { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>[\&quot;/test/example_cn-hangzhou_7.txt\&quot;, \&quot;/test/example_cn-hangzhou_1.txt\&quot;, \&quot;/test/example_cn-hangzhou_3.txt\&quot;, \&quot;/test/example_cn-hangzhou_9.txt\&quot;, \&quot;/test/example_cn-hangzhou_6.txt\&quot;]</para>
+                /// </summary>
                 [NameInMap("Exclude")]
                 [Validation(Required=false)]
                 public string Exclude { get; set; }
 
                 /// <summary>
-                /// The time when the snapshot expired. The value is a UNIX timestamp. Unit: seconds.
+                /// <para>The time when the snapshot expired. The value is a UNIX timestamp. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1640334062</para>
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
                 public long? ExpireTime { get; set; }
 
                 /// <summary>
-                /// This parameter is returned only if the **SourceType** parameter is set to **NAS**. This parameter indicates the ID of the NAS file system.
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>NAS</b>. This parameter indicates the ID of the NAS file system.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>005494</para>
                 /// </summary>
                 [NameInMap("FileSystemId")]
                 [Validation(Required=false)]
                 public string FileSystemId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>[\&quot;/test/example_cn-huhehaote_3.txt\&quot;, \&quot;/test/example_cn-huhehaote_9.txt\&quot;, \&quot;/test/example_cn-huhehaote_5.txt\&quot;, \&quot;/test/example_cn-huhehaote_1.txt\&quot;, \&quot;/test/example_cn-huhehaote_7.txt\&quot;]</para>
+                /// </summary>
                 [NameInMap("Include")]
                 [Validation(Required=false)]
                 public string Include { get; set; }
 
                 /// <summary>
-                /// This parameter is valid only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the ID of the ECS instance.
+                /// <para>This parameter is valid only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter indicates the ID of the ECS instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-*********************</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the Tablestore instance.
+                /// <para>The name of the Tablestore instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>instancename</para>
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// The number of objects that are backed up.
+                /// <para>The number of objects that are backed up.</para>
+                /// <remarks>
+                /// <para> This parameter is available only for file backup.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is available only for file backup.
+                /// <b>Example:</b>
+                /// <para>8</para>
                 /// </summary>
                 [NameInMap("ItemsDone")]
                 [Validation(Required=false)]
                 public long? ItemsDone { get; set; }
 
                 /// <summary>
-                /// The total number of objects in the data source.
+                /// <para>The total number of objects in the data source.</para>
+                /// <remarks>
+                /// <para> This parameter is available only for file backup.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is available only for file backup.
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("ItemsTotal")]
                 [Validation(Required=false)]
                 public long? ItemsTotal { get; set; }
 
                 /// <summary>
-                /// The ID of the backup job.
+                /// <para>The ID of the backup job.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>v-*********************</para>
                 /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public string JobId { get; set; }
 
                 /// <summary>
-                /// The hash value of the parent backup snapshot.
+                /// <para>The hash value of the parent backup snapshot.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>f2fe..</para>
                 /// </summary>
                 [NameInMap("ParentSnapshotHash")]
                 [Validation(Required=false)]
                 public string ParentSnapshotHash { get; set; }
 
                 /// <summary>
-                /// This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the path to the files that are backed up.
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter indicates the path to the files that are backed up.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;/home&quot;]</para>
                 /// </summary>
                 [NameInMap("Path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
 
                 /// <summary>
-                /// The source paths.
+                /// <para>The source paths.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;/home&quot;</para>
                 /// </summary>
                 [NameInMap("Paths")]
                 [Validation(Required=false)]
@@ -227,108 +320,162 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// This parameter is returned only if the **SourceType** parameter is set to **OSS**. This parameter indicates the prefix of objects that are backed up.
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>OSS</b>. This parameter indicates the prefix of objects that are backed up.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example/</para>
                 /// </summary>
                 [NameInMap("Prefix")]
                 [Validation(Required=false)]
                 public string Prefix { get; set; }
 
                 /// <summary>
-                /// The time when the backup job ended. The value is a UNIX timestamp. Unit: milliseconds.
+                /// <para>The time when the backup job ended. The value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1642521709966</para>
                 /// </summary>
                 [NameInMap("RangeEnd")]
                 [Validation(Required=false)]
                 public long? RangeEnd { get; set; }
 
                 /// <summary>
-                /// The time when the backup job started. The value is a UNIX timestamp. Unit: milliseconds.
+                /// <para>The time when the backup job started. The value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1642492553038</para>
                 /// </summary>
                 [NameInMap("RangeStart")]
                 [Validation(Required=false)]
                 public long? RangeStart { get; set; }
 
                 /// <summary>
-                /// The retention period of the backup snapshot. Unit: days.
+                /// <para>The retention period of the backup snapshot. Unit: days.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>7</para>
                 /// </summary>
                 [NameInMap("Retention")]
                 [Validation(Required=false)]
                 public long? Retention { get; set; }
 
                 /// <summary>
-                /// The hash value of the backup snapshot.
+                /// <para>The hash value of the backup snapshot.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>f2fe...</para>
                 /// </summary>
                 [NameInMap("SnapshotHash")]
                 [Validation(Required=false)]
                 public string SnapshotHash { get; set; }
 
                 /// <summary>
-                /// The ID of the backup snapshot.
+                /// <para>The ID of the backup snapshot.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>s-*********************</para>
                 /// </summary>
                 [NameInMap("SnapshotId")]
                 [Validation(Required=false)]
                 public string SnapshotId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>qwer***</para>
+                /// </summary>
                 [NameInMap("SourceParentSnapshotHash")]
                 [Validation(Required=false)]
                 public string SourceParentSnapshotHash { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>qwer***</para>
+                /// </summary>
                 [NameInMap("SourceSnapshotHash")]
                 [Validation(Required=false)]
                 public string SourceSnapshotHash { get; set; }
 
                 /// <summary>
-                /// The type of the data source. Valid values:
+                /// <para>The type of the data source. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>ECS_FILE</b>: backup snapshots for ECS files</description></item>
+                /// <item><description><b>OSS</b>: backup snapshots for OSS buckets</description></item>
+                /// <item><description><b>NAS</b>: backup snapshots for NAS file systems</description></item>
+                /// </list>
                 /// 
-                /// *   **ECS_FILE**: backup snapshots for ECS files
-                /// *   **OSS**: backup snapshots for OSS buckets
-                /// *   **NAS**: backup snapshots for NAS file systems
+                /// <b>Example:</b>
+                /// <para>ECS_FILE</para>
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// The time when the backup snapshot started. The value is a UNIX timestamp. Unit: seconds.
+                /// <para>The time when the backup snapshot started. The value is a UNIX timestamp. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1554347313</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public long? StartTime { get; set; }
 
                 /// <summary>
-                /// The status of the backup job. Valid values:
+                /// <para>The status of the backup job. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>COMPLETE</b>: The backup job is completed.</description></item>
+                /// <item><description><b>PARTIAL_COMPLETE</b>: The backup job is partially completed.</description></item>
+                /// <item><description><b>FAILED</b>: The backup job has failed.</description></item>
+                /// </list>
                 /// 
-                /// *   **COMPLETE**: The backup job is completed.
-                /// *   **PARTIAL_COMPLETE**: The backup job is partially completed.
-                /// *   **FAILED**: The backup job has failed.
+                /// <b>Example:</b>
+                /// <para>COMPLETE</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>STANDARD</para>
+                /// </summary>
                 [NameInMap("StorageClass")]
                 [Validation(Required=false)]
                 public string StorageClass { get; set; }
 
                 /// <summary>
-                /// The name of a table in the Tablestore instance.
+                /// <para>The name of a table in the Tablestore instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>table2</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// The time when the backup snapshot was updated. The value is a UNIX timestamp. Unit: seconds.
+                /// <para>The time when the backup snapshot was updated. The value is a UNIX timestamp. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1554347313</para>
                 /// </summary>
                 [NameInMap("UpdatedTime")]
                 [Validation(Required=false)]
                 public long? UpdatedTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("UseCommonNas")]
                 [Validation(Required=false)]
                 public bool? UseCommonNas { get; set; }
 
                 /// <summary>
-                /// The ID of the backup vault that stores the backup snapshot.
+                /// <para>The ID of the backup vault that stores the backup snapshot.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>v-0003rf9m17pap3ltpqx5</para>
                 /// </summary>
                 [NameInMap("VaultId")]
                 [Validation(Required=false)]
@@ -339,17 +486,24 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
+        /// </list>
         /// 
-        /// *   true: The call is successful.
-        /// *   false: The call fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of returned backup snapshots that meet the specified conditions.
+        /// <para>The total number of returned backup snapshots that meet the specified conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

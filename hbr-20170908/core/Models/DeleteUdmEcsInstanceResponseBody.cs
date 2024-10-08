@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
-    public class DeleteHanaBackupPlanResponseBody : TeaModel {
+    public class DeleteUdmEcsInstanceResponseBody : TeaModel {
         /// <summary>
         /// <para>The response code. The status code 200 indicates that the request was successful.</para>
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>071E4789-6256-526B-B22E-2A9CDDB9EB21</para>
+        /// <para>0497C0D3-82B5-56B2-8D64-D62E61B90E95</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

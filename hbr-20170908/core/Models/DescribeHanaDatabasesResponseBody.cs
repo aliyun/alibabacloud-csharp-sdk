@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeHanaDatabasesResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the call is successful.
+        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The information about SAP HANA databases.
+        /// <para>The information about SAP HANA databases.</para>
         /// </summary>
         [NameInMap("HanaDatabases")]
         [Validation(Required=false)]
@@ -28,45 +31,64 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public List<DescribeHanaDatabasesResponseBodyHanaDatabasesHanaDatabase> HanaDatabase { get; set; }
             public class DescribeHanaDatabasesResponseBodyHanaDatabasesHanaDatabase : TeaModel {
                 /// <summary>
-                /// Indicates whether the database is started. Valid values:
+                /// <para>Indicates whether the database is started. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>YES</b>: The database is started.</description></item>
+                /// <item><description><b>NO</b>: The database is not started.</description></item>
+                /// </list>
                 /// 
-                /// *   **YES**: The database is started.
-                /// *   **NO**: The database is not started.
+                /// <b>Example:</b>
+                /// <para>YES</para>
                 /// </summary>
                 [NameInMap("ActiveStatus")]
                 [Validation(Required=false)]
                 public string ActiveStatus { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The database name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SYSTEMDB</para>
                 /// </summary>
                 [NameInMap("DatabaseName")]
                 [Validation(Required=false)]
                 public string DatabaseName { get; set; }
 
                 /// <summary>
-                /// The detailed information.
+                /// <para>The detailed information.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>master</para>
                 /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
                 public string Detail { get; set; }
 
                 /// <summary>
-                /// The hostname.
+                /// <para>The hostname.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>izbp1jbf3zy******antqmz</para>
                 /// </summary>
                 [NameInMap("Host")]
                 [Validation(Required=false)]
                 public string Host { get; set; }
 
                 /// <summary>
-                /// The name of the service.
+                /// <para>The service name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>indexserver</para>
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// The port number.
+                /// <para>The port number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>30013</para>
                 /// </summary>
                 [NameInMap("SqlPort")]
                 [Validation(Required=false)]
@@ -77,45 +99,64 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+        /// <para>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The page number of the returned page. Pages start from page 1. Default value: 1.
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.
+        /// <para>The number of entries per page. Valid values: 1 to 99. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DAAB6A29-34EB-5F56-962F-D5BDBFE8A5C2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true: The call is successful.
-        /// *   false: The call fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
