@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class ExecuteMultiAccountSQLQueryResponseBody : TeaModel {
         /// <summary>
-        /// The columns.
+        /// <para>The columns.</para>
         /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public List<ExecuteMultiAccountSQLQueryResponseBodyColumns> Columns { get; set; }
         public class ExecuteMultiAccountSQLQueryResponseBodyColumns : TeaModel {
             /// <summary>
-            /// The name of the column.
+            /// <para>The name of the column.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>resource_id</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The type of the column.
+            /// <para>The type of the column.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>varchar</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -32,15 +38,26 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 
         }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>44C8A952-D6B0-5BC8-82D5-93BA02E26F2E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array of search results.
+        /// <para>An array of search results.</para>
         /// </summary>
         [NameInMap("Rows")]
         [Validation(Required=false)]

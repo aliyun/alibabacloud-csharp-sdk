@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAUDnubHKJbVTCdlIGYUPtsu3EoN3bfdgjDA****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>44C8A952-D6B0-5BC8-82D5-93BA02E26F2E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tag keys.
+        /// <para>The tag keys.</para>
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]

@@ -10,56 +10,74 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class ListMultiAccountTagValuesRequest : TeaModel {
         /// <summary>
-        /// The matching mode. Valid values:
+        /// <para>The matching mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Equals: equal match</description></item>
+        /// <item><description>Prefix: match by prefix</description></item>
+        /// </list>
         /// 
-        /// *   Equals: equal match
-        /// *   Prefix: match by prefix
+        /// <b>Example:</b>
+        /// <para>Equals</para>
         /// </summary>
         [NameInMap("MatchType")]
         [Validation(Required=false)]
         public string MatchType { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 20.</para>
         /// 
-        /// Valid values: 1 to 100.
-        /// 
-        /// Default value: 20.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>If the total number of entries returned for the current request exceeds the value of the <c>MaxResults</c> parameter, the entries are truncated. In this case, you can use the <c>token</c> to initiate another request and obtain the remaining entries.</para>
         /// 
-        /// If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the `token` to initiate another request and obtain the remaining entries.
+        /// <b>Example:</b>
+        /// <para>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The search scope. You can set the value to one of the following items:
+        /// <para>The search scope. You can set the value to one of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a> operation to obtain the ID.</description></item>
+        /// <item><description>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</description></item>
+        /// <item><description>ID of a folder: Resources within all members in the folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</description></item>
+        /// <item><description>ID of a member: Resources within the member are searched. You can call the <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a> operation to obtain the ID.</description></item>
+        /// </list>
         /// 
-        /// *   ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the [GetResourceDirectory](~~159995~~) operation to obtain the ID.
-        /// *   ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the [ListFoldersForParent](~~159997~~) operation to obtain the ID.
-        /// *   ID of a folder: Resources within all members in the folder are searched. You can call the [ListFoldersForParent](~~159997~~) operation to obtain the ID.
-        /// *   ID of a member: Resources within the member are searched. You can call the [ListAccounts](~~160016~~) operation to obtain the ID.
+        /// <b>Example:</b>
+        /// <para>rd-r4****</para>
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// The tag key.
+        /// <para>The tag key.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_key</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public string TagKey { get; set; }
 
         /// <summary>
-        /// The tag value.
+        /// <para>The tag value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_value</para>
         /// </summary>
         [NameInMap("TagValue")]
         [Validation(Required=false)]

@@ -10,27 +10,38 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class GetMultiAccountResourceCenterServiceStatusResponseBody : TeaModel {
         /// <summary>
-        /// The initialization status of the feature. Valid values:
+        /// <para>The initialization status of the feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Pending: The feature is being initialized.</description></item>
+        /// <item><description>Finished: The feature is initialized.</description></item>
+        /// </list>
         /// 
-        /// *   Pending: The feature is being initialized.
-        /// *   Finished: The feature is initialized.
+        /// <b>Example:</b>
+        /// <para>Pending</para>
         /// </summary>
         [NameInMap("InitialStatus")]
         [Validation(Required=false)]
         public string InitialStatus { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>81671397-1425-51F1-A144-4799E01BEBFF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status of the feature. Valid values:
+        /// <para>The status of the feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enabled: The feature is enabled.</description></item>
+        /// <item><description>Disabled: The feature is disabled.</description></item>
+        /// </list>
         /// 
-        /// *   Enabled: The feature is enabled.
-        /// *   Disabled: The feature is disabled.
+        /// <b>Example:</b>
+        /// <para>Enabled</para>
         /// </summary>
         [NameInMap("ServiceStatus")]
         [Validation(Required=false)]

@@ -10,42 +10,76 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class ListResourceTypesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E5556E4C-479A-5BBB-B325-F07563E7E917</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the resource types.
+        /// <para>The information about the resource types.</para>
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public List<ListResourceTypesResponseBodyResourceTypes> ResourceTypes { get; set; }
         public class ListResourceTypesResponseBodyResourceTypes : TeaModel {
             /// <summary>
-            /// The supported filter conditions.
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("Authorized")]
+            [Validation(Required=false)]
+            public bool? Authorized { get; set; }
+
+            [NameInMap("CodeMapping")]
+            [Validation(Required=false)]
+            public ListResourceTypesResponseBodyResourceTypesCodeMapping CodeMapping { get; set; }
+            public class ListResourceTypesResponseBodyResourceTypesCodeMapping : TeaModel {
+                [NameInMap("ResourceGroup")]
+                [Validation(Required=false)]
+                public string ResourceGroup { get; set; }
+
+                [NameInMap("Tag")]
+                [Validation(Required=false)]
+                public string Tag { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The supported filter conditions.</para>
             /// </summary>
             [NameInMap("FilterKeys")]
             [Validation(Required=false)]
             public List<string> FilterKeys { get; set; }
 
             /// <summary>
-            /// The name of the Alibaba Cloud service.
+            /// <para>The name of the Alibaba Cloud service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Container Service for Kubernetes</para>
             /// </summary>
             [NameInMap("ProductName")]
             [Validation(Required=false)]
             public string ProductName { get; set; }
 
             /// <summary>
-            /// The resource type.
+            /// <para>The resource type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ACS::ACK::Cluster</para>
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The name of the resource type.
+            /// <para>The name of the resource type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Cluster</para>
             /// </summary>
             [NameInMap("ResourceTypeName")]
             [Validation(Required=false)]

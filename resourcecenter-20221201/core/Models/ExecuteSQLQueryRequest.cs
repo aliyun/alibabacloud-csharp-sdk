@@ -10,22 +10,25 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class ExecuteSQLQueryRequest : TeaModel {
         /// <summary>
-        /// The SQL statement to be executed.
+        /// <para>The SQL statement to be executed.</para>
+        /// <para>The number of characters in the SQL statement must be less than 2,000.</para>
+        /// <para>For more information about the SQL syntax, see <a href="https://help.aliyun.com/document_detail/2539395.html">Basic SQL syntax</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The number of characters in the SQL statement must be less than 2,000.
-        /// 
-        /// For more information about the SQL syntax, see [Basic SQL syntax](~~2539395~~).
+        /// <b>Example:</b>
+        /// <para>SELECT * FROM resources LIMIT 100;</para>
         /// </summary>
         [NameInMap("Expression")]
         [Validation(Required=false)]
         public string Expression { get; set; }
 
         /// <summary>
-        /// The search scope.
+        /// <para>The search scope.</para>
+        /// <para>Set this parameter to the ID of a resource group.</para>
+        /// <para>For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</para>
         /// 
-        /// Set this parameter to the ID of a resource group.
-        /// 
-        /// For information about how to obtain the ID of a resource group, see [ListResourceGroups](~~158855~~).
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]

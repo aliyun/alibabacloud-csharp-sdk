@@ -10,9 +10,12 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class DeleteSavedQueryRequest : TeaModel {
         /// <summary>
-        /// The ID of the template.
+        /// <para>The ID of the template.</para>
+        /// <para>You can call the <a href="~~ListSavedQueries~~">ListSavedQueries</a> operation to obtain the template ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListSavedQueries](~~ListSavedQueries~~) operation to obtain the template ID.
+        /// <b>Example:</b>
+        /// <para>sq-GeAck****</para>
         /// </summary>
         [NameInMap("QueryId")]
         [Validation(Required=false)]

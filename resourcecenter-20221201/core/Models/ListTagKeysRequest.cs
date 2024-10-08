@@ -10,37 +10,47 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class ListTagKeysRequest : TeaModel {
         /// <summary>
-        /// The matching mode. Valid values:
+        /// <para>The matching mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Equals: equal match</description></item>
+        /// <item><description>Prefix: match by prefix</description></item>
+        /// </list>
         /// 
-        /// *   Equals: equal match
-        /// *   Prefix: match by prefix
+        /// <b>Example:</b>
+        /// <para>Equals</para>
         /// </summary>
         [NameInMap("MatchType")]
         [Validation(Required=false)]
         public string MatchType { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 20.</para>
         /// 
-        /// Valid values: 1 to 100.
-        /// 
-        /// Default value: 20.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>If the total number of entries returned for the current request exceeds the value of the <c>MaxResults</c> parameter, the entries are truncated. In this case, you can use the <c>token</c> to initiate another request and obtain the remaining entries.</para>
         /// 
-        /// If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the `token` to initiate another request and obtain the remaining entries.
+        /// <b>Example:</b>
+        /// <para>AAAAAUYb00R0gHZBE8FVDeoh2ME93VeeEPUHs****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The tag key.
+        /// <para>The tag key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_key</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

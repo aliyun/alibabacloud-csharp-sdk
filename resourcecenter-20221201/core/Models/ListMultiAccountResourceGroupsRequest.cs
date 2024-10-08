@@ -10,30 +10,39 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class ListMultiAccountResourceGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the management account or member of the resource directory.
+        /// <para>The ID of the management account or member of the resource directory.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1394339739****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>Maximum value: 100. Default value: 10.</para>
         /// 
-        /// Maximum value: 100. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAS2Nboi3t4xGrdlG5/Ks/Q1xPG9jzviYEuZydevXIkgF</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The IDs of resource groups.
+        /// <para>The IDs of resource groups.</para>
         /// </summary>
         [NameInMap("ResourceGroupIds")]
         [Validation(Required=false)]

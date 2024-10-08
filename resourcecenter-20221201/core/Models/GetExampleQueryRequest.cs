@@ -10,9 +10,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class GetExampleQueryRequest : TeaModel {
         /// <summary>
-        /// The ID of the template.
+        /// <para>The ID of the template.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListExampleQueries~~">ListExampleQueries</a> operation to obtain the template ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [ListExampleQueries](~~ListExampleQueries~~) operation to obtain the template ID.
+        /// <b>Example:</b>
+        /// <para>sq-0PfKy****</para>
         /// </summary>
         [NameInMap("QueryId")]
         [Validation(Required=false)]
