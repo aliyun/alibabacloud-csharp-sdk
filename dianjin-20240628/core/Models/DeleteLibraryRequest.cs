@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class DeleteLibraryRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>skdfefxxx</para>
         /// </summary>
         [NameInMap("libraryId")]
         [Validation(Required=false)]

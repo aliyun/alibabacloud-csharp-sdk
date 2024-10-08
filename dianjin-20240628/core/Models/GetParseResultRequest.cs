@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetParseResultRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>873648346573245</para>
         /// </summary>
         [NameInMap("docId")]
         [Validation(Required=false)]
         public string DocId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sjdgdsfg</para>
         /// </summary>
         [NameInMap("libraryId")]
         [Validation(Required=false)]

@@ -8,44 +8,48 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
-    public class UpdateDocumentRequest : TeaModel {
+    public class CreatePdfTranslateTaskRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123</para>
+        /// <para>873648346573245</para>
         /// </summary>
         [NameInMap("docId")]
         [Validation(Required=false)]
         public string DocId { get; set; }
 
+        [NameInMap("knowledge")]
+        [Validation(Required=false)]
+        public string Knowledge { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>abc123</para>
+        /// <para>cjshcxxxx</para>
         /// </summary>
         [NameInMap("libraryId")]
         [Validation(Required=false)]
         public string LibraryId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>{
-        ///         &quot;businessId&quot;: &quot;12321&quot;
-        ///     }</para>
+        /// <para>qwen-plus</para>
         /// </summary>
-        [NameInMap("meta")]
+        [NameInMap("modelId")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Meta { get; set; }
+        public string ModelId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>中文</para>
         /// </summary>
-        [NameInMap("title")]
+        [NameInMap("translateTo")]
         [Validation(Required=false)]
-        public string Title { get; set; }
+        public string TranslateTo { get; set; }
 
     }
 

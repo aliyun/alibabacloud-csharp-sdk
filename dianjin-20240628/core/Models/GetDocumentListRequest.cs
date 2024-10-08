@@ -10,16 +10,27 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetDocumentListRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3akzl28vap</para>
         /// </summary>
         [NameInMap("libraryId")]
         [Validation(Required=false)]
         public string LibraryId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

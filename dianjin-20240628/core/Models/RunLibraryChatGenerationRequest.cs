@@ -13,42 +13,68 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public List<string> DocIdList { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("enableFollowUp")]
         [Validation(Required=false)]
         public bool? EnableFollowUp { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("enableMultiQuery")]
         [Validation(Required=false)]
         public bool? EnableMultiQuery { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("enableOpenQa")]
         [Validation(Required=false)]
         public bool? EnableOpenQa { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>qwen-max</para>
+        /// </summary>
         [NameInMap("followUpLlm")]
         [Validation(Required=false)]
         public string FollowUpLlm { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3akzl28vap</para>
         /// </summary>
         [NameInMap("libraryId")]
         [Validation(Required=false)]
         public string LibraryId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>qwen-max</para>
         /// </summary>
         [NameInMap("llmType")]
         [Validation(Required=false)]
         public string LlmType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>qwen-max</para>
+        /// </summary>
         [NameInMap("multiQueryLlm")]
         [Validation(Required=false)]
         public string MultiQueryLlm { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
@@ -62,14 +88,26 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public List<RunLibraryChatGenerationRequestQueryCriteriaAnd> And { get; set; }
             public class RunLibraryChatGenerationRequestQueryCriteriaAnd : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.5</para>
+                /// </summary>
                 [NameInMap("boost")]
                 [Validation(Required=false)]
                 public float? Boost { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>city</para>
+                /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>eq</para>
+                /// </summary>
                 [NameInMap("operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
@@ -84,14 +122,26 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public List<RunLibraryChatGenerationRequestQueryCriteriaOr> Or { get; set; }
             public class RunLibraryChatGenerationRequestQueryCriteriaOr : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.5</para>
+                /// </summary>
                 [NameInMap("boost")]
                 [Validation(Required=false)]
                 public float? Boost { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>city</para>
+                /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>eq</para>
+                /// </summary>
                 [NameInMap("operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
@@ -104,17 +154,28 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>linear</para>
+        /// </summary>
         [NameInMap("rerankType")]
         [Validation(Required=false)]
         public string RerankType { get; set; }
 
         /// <summary>
-        /// sessionId
+        /// <para>sessionId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("sessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("stream")]
         [Validation(Required=false)]
         public bool? Stream { get; set; }
@@ -127,16 +188,28 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public RunLibraryChatGenerationRequestTextSearchParameter TextSearchParameter { get; set; }
         public class RunLibraryChatGenerationRequestTextSearchParameter : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("limit")]
             [Validation(Required=false)]
             public int? Limit { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>IkMaxWord</para>
+            /// </summary>
             [NameInMap("searchAnalyzerType")]
             [Validation(Required=false)]
             public string SearchAnalyzerType { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("topK")]
         [Validation(Required=false)]
         public int? TopK { get; set; }
@@ -145,12 +218,20 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public RunLibraryChatGenerationRequestVectorSearchParameter VectorSearchParameter { get; set; }
         public class RunLibraryChatGenerationRequestVectorSearchParameter : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("limit")]
             [Validation(Required=false)]
             public int? Limit { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("withDocumentReference")]
         [Validation(Required=false)]
         public bool? WithDocumentReference { get; set; }

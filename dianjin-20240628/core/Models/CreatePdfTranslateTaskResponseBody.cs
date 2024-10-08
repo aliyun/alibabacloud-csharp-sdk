@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
-    public class ReIndexResponseBody : TeaModel {
+    public class CreatePdfTranslateTaskResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>null</para>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>3284627354</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>32FFC91D-0A9F-585A-B84F-8A54C5187035</para>
+        /// <para>5E3FBAF1-17AF-53B7-AF0A-CDCEEB6DE658</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

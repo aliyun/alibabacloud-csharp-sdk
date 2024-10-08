@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetDocumentUrlRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12681367362</para>
         /// </summary>
         [NameInMap("documentId")]
         [Validation(Required=false)]

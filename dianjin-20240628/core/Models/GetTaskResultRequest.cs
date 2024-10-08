@@ -8,18 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
-    public class InvokePluginRequest : TeaModel {
-        [NameInMap("params")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Params { get; set; }
-
+    public class GetTaskResultRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>3mj87da7zr</para>
+        /// <para>17071319</para>
         /// </summary>
-        [NameInMap("pluginId")]
+        [NameInMap("taskId")]
         [Validation(Required=false)]
-        public string PluginId { get; set; }
+        public string TaskId { get; set; }
 
     }
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
-    public class ReIndexResponseBody : TeaModel {
+    public class GetTaskResultResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>null</para>
@@ -19,11 +19,13 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>{
+        ///   &quot;file_url&quot;: &quot;<a href="https://finllmworks.oss-cn-zhangjiakou.aliyuncs.com/render_pdf/5336180997111160501.pdf">https://finllmworks.oss-cn-zhangjiakou.aliyuncs.com/render_pdf/5336180997111160501.pdf</a>&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>32FFC91D-0A9F-585A-B84F-8A54C5187035</para>
+        /// <para>9D5D6BB5-BEAE-53C8-A70A-7275CC1F856C</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

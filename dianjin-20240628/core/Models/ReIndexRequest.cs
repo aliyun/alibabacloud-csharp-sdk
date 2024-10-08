@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class ReIndexRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8326472354762354</para>
         /// </summary>
         [NameInMap("documentId")]
         [Validation(Required=false)]

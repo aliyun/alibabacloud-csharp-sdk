@@ -9,19 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class RecognizeIntentionRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("analysis")]
         [Validation(Required=false)]
         public bool? Analysis { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>common</para>
         /// </summary>
         [NameInMap("bizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("conversation")]
         [Validation(Required=false)]
@@ -39,6 +46,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public string Intention { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1810566978021232640</para>
+            /// </summary>
             [NameInMap("intentionCode")]
             [Validation(Required=false)]
             public string IntentionCode { get; set; }
@@ -57,6 +68,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public string Intention { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1810929291010150400</para>
+            /// </summary>
             [NameInMap("intentionCode")]
             [Validation(Required=false)]
             public string IntentionCode { get; set; }
@@ -75,16 +90,28 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public string Intention { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1808766224000262144</para>
+            /// </summary>
             [NameInMap("intentionCode")]
             [Validation(Required=false)]
             public string IntentionCode { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>common</para>
+        /// </summary>
         [NameInMap("opType")]
         [Validation(Required=false)]
         public string OpType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("recommend")]
         [Validation(Required=false)]
         public bool? Recommend { get; set; }

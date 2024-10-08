@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetLibraryRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cjshcxxxx</para>
         /// </summary>
         [NameInMap("libraryId")]
         [Validation(Required=false)]

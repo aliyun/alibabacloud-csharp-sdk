@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetTaskStatusRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("taskId")]
         [Validation(Required=false)]

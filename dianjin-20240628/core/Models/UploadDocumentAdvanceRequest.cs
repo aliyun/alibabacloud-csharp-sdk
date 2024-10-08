@@ -14,21 +14,30 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test.pdf</para>
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://oss-xxx.hangzhou.com/test.pdf">https://oss-xxx.hangzhou.com/test.pdf</a></para>
         /// </summary>
         [NameInMap("fileUrl")]
         [Validation(Required=false)]
         public Stream FileUrlObject { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sjdhbcsj</para>
         /// </summary>
         [NameInMap("libraryId")]
         [Validation(Required=false)]
