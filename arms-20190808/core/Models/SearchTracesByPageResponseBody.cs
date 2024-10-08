@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
+                [NameInMap("SpanID")]
+                [Validation(Required=false)]
+                public string SpanID { get; set; }
+
                 /// <summary>
                 /// <para>The timestamp.</para>
                 /// 

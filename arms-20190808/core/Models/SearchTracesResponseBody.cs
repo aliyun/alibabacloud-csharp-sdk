@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The IP address of the host where the application resides.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><c>172.20.**.**</c></para>
+            /// <para>172.20.**.**</para>
             /// </summary>
             [NameInMap("ServiceIp")]
             [Validation(Required=false)]
@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
+
+            [NameInMap("SpanID")]
+            [Validation(Required=false)]
+            public string SpanID { get; set; }
 
             /// <summary>
             /// <para>The timestamp.</para>

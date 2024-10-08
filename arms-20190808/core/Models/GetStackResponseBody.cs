@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string Api { get; set; }
 
+            [NameInMap("CallCount")]
+            [Validation(Required=false)]
+            public string CallCount { get; set; }
+
             /// <summary>
             /// <para>The duration. Unit: milliseconds.</para>
             /// 

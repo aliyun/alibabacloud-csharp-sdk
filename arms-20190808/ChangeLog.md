@@ -1,3 +1,10 @@
+2024-10-08 Version: 7.1.5
+- Update API GetStack: add param SpanID.
+- Update API GetStack: update response param.
+- Update API SearchTraces: update response param.
+- Update API SearchTracesByPage: update response param.
+
+
 2024-09-29 Version: 7.1.4
 - Update API GetRumAppInfo: update response param.
 - Update API UpdateRumApp: add param BackendServiceTraceRegion.
