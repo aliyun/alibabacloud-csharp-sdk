@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeBenchmarkTaskReportRequest : TeaModel {
         /// <summary>
-        /// The report type of the stress testing task. Valid values: RAW and Report.
+        /// <para>The report type of the stress testing task. Valid values: RAW and Report.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>report</para>
         /// </summary>
         [NameInMap("ReportType")]
         [Validation(Required=false)]

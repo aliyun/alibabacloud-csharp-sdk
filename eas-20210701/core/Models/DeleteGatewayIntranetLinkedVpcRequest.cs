@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteGatewayIntranetLinkedVpcRequest : TeaModel {
         /// <summary>
-        /// The ID of the vSwitch.
+        /// <para>The ID of the vSwitch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-8vbqn2at0kljjxxxx****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The virtual private cloud (VPC) ID.
+        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-uf66uio7md****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

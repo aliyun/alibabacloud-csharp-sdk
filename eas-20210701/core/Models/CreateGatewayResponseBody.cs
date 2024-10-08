@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateGatewayResponseBody : TeaModel {
         /// <summary>
-        /// The region ID of the private gateway.
+        /// <para>The region ID of the private gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The private gateway ID.
+        /// <para>The private gateway ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-1uhcqmsc7x22******</para>
         /// </summary>
         [NameInMap("GatewayId")]
         [Validation(Required=false)]
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Successfully create gateway.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40325405-579C-4D82****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

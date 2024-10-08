@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceResponseBody : TeaModel {
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Succeed to update service [foo] in region [cn-shanghai]</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40325405-579C-4D82****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

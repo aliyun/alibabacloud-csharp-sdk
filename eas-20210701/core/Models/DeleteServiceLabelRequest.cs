@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteServiceLabelRequest : TeaModel {
         /// <summary>
-        /// The service tags that you want to delete.
-        /// 
-        /// This parameter is required.
+        /// <para>The service tags that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]

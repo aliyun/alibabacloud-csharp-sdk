@@ -10,85 +10,102 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateAppServiceRequest : TeaModel {
         /// <summary>
-        /// The quota ID.
+        /// <para>The quota ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abcdef</para>
         /// </summary>
         [NameInMap("QuotaId")]
         [Validation(Required=false)]
         public string QuotaId { get; set; }
 
         /// <summary>
-        /// The workspace ID.
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// The application service type.
+        /// <para>The application service type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>LLM</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   LLM
+        /// <!-- --></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>LLM</para>
         /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public string AppType { get; set; }
 
         /// <summary>
-        /// The application version.
+        /// <para>The application version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v1</para>
         /// </summary>
         [NameInMap("AppVersion")]
         [Validation(Required=false)]
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// The additional configurations that are required for service deployment.
+        /// <para>The additional configurations that are required for service deployment.</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public Dictionary<string, object> Config { get; set; }
 
         /// <summary>
-        /// The number of instances.
+        /// <para>The number of instances.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]
         public int? Replicas { get; set; }
 
         /// <summary>
-        /// The service name.
+        /// <para>The service name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>foo</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The service specifications. Valid values:
+        /// <para>The service specifications. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>llama_7b_fp16</description></item>
+        /// <item><description>llama_7b_int8</description></item>
+        /// <item><description>llama_13b_fp16</description></item>
+        /// <item><description>llama_7b_int8</description></item>
+        /// <item><description>chatglm_6b_fp16</description></item>
+        /// <item><description>chatglm_6b_int8</description></item>
+        /// <item><description>chatglm2_6b_fp16</description></item>
+        /// <item><description>baichuan_7b_int8</description></item>
+        /// <item><description>baichuan_13b_fp16</description></item>
+        /// <item><description>baichuan_7b_fp16</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   llama_7b_fp16
-        /// *   llama_7b_int8
-        /// *   llama_13b_fp16
-        /// *   llama_7b_int8
-        /// *   chatglm_6b_fp16
-        /// *   chatglm_6b_int8
-        /// *   chatglm2_6b_fp16
-        /// *   baichuan_7b_int8
-        /// *   baichuan_13b_fp16
-        /// *   baichuan_7b_fp16
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>llama_7b_fp16</para>
         /// </summary>
         [NameInMap("ServiceSpec")]
         [Validation(Required=false)]

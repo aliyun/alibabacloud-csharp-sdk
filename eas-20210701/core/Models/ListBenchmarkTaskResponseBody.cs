@@ -10,165 +10,192 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListBenchmarkTaskResponseBody : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40325405-579C-4D82****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The stress testing tasks.
+        /// <para>The stress testing tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ListBenchmarkTaskResponseBodyTasks> Tasks { get; set; }
         public class ListBenchmarkTaskResponseBodyTasks : TeaModel {
             /// <summary>
-            /// The number of instances that are available for stress testing.
+            /// <para>The number of instances that are available for stress testing.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("AvailableAgent")]
             [Validation(Required=false)]
             public long? AvailableAgent { get; set; }
 
             /// <summary>
-            /// The time when the stress testing task was created.
+            /// <para>The time when the stress testing task was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-12-04T02:43:15Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The returned message.
+            /// <para>The returned message.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Benchmark task [benchmark-larec-test-1076] is Running</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The region ID of the stress testing task.
+            /// <para>The region ID of the stress testing task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-shanghai</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The name of the service on which you want to perform a stress testing.
+            /// <para>The name of the service on which you want to perform a stress testing.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_quota</para>
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// The state of the stress testing task.
+            /// <para>The state of the stress testing task.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Creating</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Creating
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Starting</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>DeleteFailed</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Starting
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Running</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Stopping</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   DeleteFailed
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Error</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Updating</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Running
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Deleting</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>CreateFailed</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Stopping
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Error
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Updating
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Deleting
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   CreateFailed
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The ID of the stress testing task.
+            /// <para>The ID of the stress testing task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eas-b-gv4y86uvgt****i</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
             /// <summary>
-            /// The name of the stress testing task.
+            /// <para>The name of the stress testing task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>benchmark-larec-test-1076</para>
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
 
             /// <summary>
-            /// The time when the stress testing task was updated.
+            /// <para>The time when the stress testing task was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-06-24T03:11:30Z</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -177,7 +204,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

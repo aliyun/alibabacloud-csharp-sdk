@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteServiceInstancesRequest : TeaModel {
         /// <summary>
-        /// The name of the container whose process needs to be restarted. This parameter takes effect only if the SoftRestart parameter is set to true.
+        /// <para>The name of the container whose process needs to be restarted. This parameter takes effect only if the SoftRestart parameter is set to true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>worker0</para>
         /// </summary>
         [NameInMap("Container")]
         [Validation(Required=false)]
         public string Container { get; set; }
 
         /// <summary>
-        /// The instances that you want to restart. Separate multiple instance names with commas (,). For more information about how to query the instance name, see [ListServiceInstances](https://help.aliyun.com/document_detail/412108.html).
+        /// <para>The instances that you want to restart. Separate multiple instance names with commas (,). For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>foo-rdsbxxxx,foo-rdsaxxxx</para>
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public string InstanceList { get; set; }
 
         /// <summary>
-        /// Specifies whether to restart only the container process without recreating the instance. Default value: false. Valid values: true and false.
+        /// <para>Specifies whether to restart only the container process without recreating the instance. Default value: false. Valid values: true and false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("SoftRestart")]
         [Validation(Required=false)]

@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DevelopServiceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to exit development mode. Valid values:
+        /// <para>Specifies whether to exit development mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: exits development mode.</description></item>
+        /// <item><description>false (default): enters development mode.</description></item>
+        /// </list>
         /// 
-        /// *   true: exits development mode.
-        /// *   false (default): enters development mode.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Exit")]
         [Validation(Required=false)]

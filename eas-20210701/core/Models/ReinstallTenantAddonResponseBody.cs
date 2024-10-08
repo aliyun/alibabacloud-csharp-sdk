@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ReinstallTenantAddonResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Addon prometheus_discovery is successfully reinstalled</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40325405-579C-4D82****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

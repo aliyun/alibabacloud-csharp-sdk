@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeServiceLogResponseBody : TeaModel {
         /// <summary>
-        /// The returned logs.
+        /// <para>The returned logs.</para>
         /// </summary>
         [NameInMap("Logs")]
         [Validation(Required=false)]
         public List<string> Logs { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public long? PageNum { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40325405-579C-4D82********</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// The total number of pages returned.
+        /// <para>The total number of pages returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>500</para>
         /// </summary>
         [NameInMap("TotalPageNum")]
         [Validation(Required=false)]

@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeSpotDiscountHistoryRequest : TeaModel {
         /// <summary>
-        /// The type of the Elastic Algorithm Service (EAS) instance.
+        /// <para>The type of the Elastic Algorithm Service (EAS) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ecs.c6.4xlarge</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// Specifies whether the preemptible instance has a protection period. During the 1-hour protection period of the preemptible instance, the preemptible instance will not be released.
+        /// <para>Specifies whether the preemptible instance has a protection period. During the 1-hour protection period of the preemptible instance, the preemptible instance will not be released.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsProtect")]
         [Validation(Required=false)]

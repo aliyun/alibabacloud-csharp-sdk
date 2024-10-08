@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteBenchmarkTaskResponseBody : TeaModel {
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Benchmark task [benchmark-test-service-234c] is Deleting</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40325405-579C-4D82****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

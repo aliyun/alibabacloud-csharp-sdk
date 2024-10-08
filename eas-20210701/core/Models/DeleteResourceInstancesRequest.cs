@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteResourceInstancesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to delete all the instances that fail to be created. Valid values:
+        /// <para>Specifies whether to delete all the instances that fail to be created. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AllFailed")]
         [Validation(Required=false)]
         public bool? AllFailed { get; set; }
 
         /// <summary>
-        /// The instances. Separate multiple instances with commas (,), such as `instanceId1,instanceId2`. For more information about how to query the instances, see [ListResourceInstances](https://help.aliyun.com/document_detail/412129.html).
+        /// <para>The instances. Separate multiple instances with commas (,), such as <c>instanceId1,instanceId2</c>. For more information about how to query the instances, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eas-i-xxxxxxx,eas-i-xxxxxxx</para>
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]

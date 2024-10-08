@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServiceContainersResponseBody : TeaModel {
         /// <summary>
-        /// The containers of the service.
+        /// <para>The containers of the service.</para>
         /// </summary>
         [NameInMap("Containers")]
         [Validation(Required=false)]
         public List<ContainerInfo> Containers { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40325405-579C-4D82****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The service name.
+        /// <para>The service name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>foo</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]

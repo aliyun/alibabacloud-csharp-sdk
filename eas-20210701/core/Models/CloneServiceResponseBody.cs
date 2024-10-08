@@ -10,42 +10,60 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CloneServiceResponseBody : TeaModel {
         /// <summary>
-        /// The public endpoint of the service.
+        /// <para>The public endpoint of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo</a></para>
         /// </summary>
         [NameInMap("InternetEndpoint")]
         [Validation(Required=false)]
         public string InternetEndpoint { get; set; }
 
         /// <summary>
-        /// The private endpoint of the service.
+        /// <para>The private endpoint of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo</a></para>
         /// </summary>
         [NameInMap("IntranetEndpoint")]
         [Validation(Required=false)]
         public string IntranetEndpoint { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40325405-579C-4D82****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The service ID.
+        /// <para>The service ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eas-m-r9knx7n9guf2p*****</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// The service name.
+        /// <para>The service name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>foo</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The service status.
+        /// <para>The service status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Creating</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

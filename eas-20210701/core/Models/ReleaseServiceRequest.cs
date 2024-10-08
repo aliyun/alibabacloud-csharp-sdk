@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ReleaseServiceRequest : TeaModel {
         /// <summary>
-        /// The traffic state. Valid values:
+        /// <para>The traffic state. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>standalone: independent traffic.</description></item>
+        /// <item><description>grouping: grouped traffic.</description></item>
+        /// </list>
         /// 
-        /// *   standalone: independent traffic.
-        /// *   grouping: grouped traffic.
+        /// <b>Example:</b>
+        /// <para>grouping</para>
         /// </summary>
         [NameInMap("TrafficState")]
         [Validation(Required=false)]
         public string TrafficState { get; set; }
 
         /// <summary>
-        /// The weight of the canary release. Valid values: 0 to 100.
+        /// <para>The weight of the canary release. Valid values: 0 to 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

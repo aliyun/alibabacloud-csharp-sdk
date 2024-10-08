@@ -10,247 +10,244 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListResourceInstancesRequest : TeaModel {
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid: subscription.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// </list>
         /// 
-        /// *   PrePaid: subscription.
-        /// *   PostPaid: pay-as-you-go.
+        /// <b>Example:</b>
+        /// <para>PrePaid</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The keyword used to query instances. Instances can be queried by instance ID or instance IP address.
+        /// <para>The keyword used to query instances. Instances can be queried by instance ID or instance IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.224.xx.xx</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
 
         /// <summary>
-        /// The IP address of the instance.
+        /// <para>The IP address of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.224.xx.xx</para>
         /// </summary>
         [NameInMap("InstanceIP")]
         [Validation(Required=false)]
         public string InstanceIP { get; set; }
 
         /// <summary>
-        /// The instance ID. For more information about how to query the instance ID, see [ListResourceInstances](https://help.aliyun.com/document_detail/412129.html).
+        /// <para>The instance ID. For more information about how to query the instance ID, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-bp1jd6x3uotsv****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The instance name.
+        /// <para>The instance name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e-xxxx***</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The instance state.
+        /// <para>The instance state.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Ready-SchedulingDisabled</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        /// *   Ready-SchedulingDisabled
+        /// <para>The instance is available but unschedulable</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>.</para>
+        /// </description></item>
+        /// <item><description><para>Ready</para>
+        /// <!-- -->
         /// 
-        ///     :
+        /// <para>: The instance</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>is running</para>
+        /// <!-- -->
         /// 
-        ///     The instance is available but unschedulable
+        /// <para>.</para>
+        /// </description></item>
+        /// <item><description><para>NotReady</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>: The instance is unready.</para>
+        /// <!-- -->
         /// 
-        ///     .
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Stopped</para>
+        /// <!-- -->
         /// 
-        /// *   Ready
+        /// <para>: The instance has stopped.</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>NotReady-SchedulingDisabled</para>
+        /// <!-- -->
         /// 
-        ///     : The instance
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>The instance is unavailable and unschedulable</para>
+        /// <!-- -->
         /// 
-        ///     is running
+        /// <para>.</para>
+        /// </description></item>
+        /// <item><description><para>Attaching</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>: The instance</para>
+        /// <!-- -->
         /// 
-        ///     .
+        /// <para>is starting</para>
+        /// <!-- -->
         /// 
-        /// *   NotReady
+        /// <para>.</para>
+        /// </description></item>
+        /// <item><description><para>Deleting</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>: The instance is being deleted.</para>
+        /// <!-- -->
         /// 
-        ///     : The instance is unready.
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>CreateFailed: The instance failed to be created.</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        /// *   Stopped
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     : The instance has stopped.
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   NotReady-SchedulingDisabled
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     The instance is unavailable and unschedulable
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     .
-        /// 
-        /// *   Attaching
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     : The instance
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     is starting
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     .
-        /// 
-        /// *   Deleting
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     : The instance is being deleted.
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   CreateFailed: The instance failed to be created.
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>Ready</para>
         /// </summary>
         [NameInMap("InstanceStatus")]
         [Validation(Required=false)]
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// The sorting order.
+        /// <para>The sorting order.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>asc: The instances are sorted in ascending order.</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   asc: The instances are sorted in ascending order.
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>desc</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>: The instances are sorted in descending order.</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   desc
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     : The instances are sorted in descending order.
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>desc</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page 1. Default value: 1.
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 100.
+        /// <para>The number of entries per page. Default value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The field that you use to sort the query results.
+        /// <para>The field that you use to sort the query results.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>CreateTime</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <para>: The instances are sorted based on the time when the instances were created.</para>
+        /// <!-- -->
         /// 
-        /// *   CreateTime
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>MemoryUsed</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        ///     : The instances are sorted based on the time when the instances were created.
+        /// <para>The instances are sorted based on the memory usage of the instances</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>.</para>
+        /// </description></item>
+        /// <item><description><para>GpuUsed</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>: The instances are sorted based on the</para>
+        /// <!-- -->
         /// 
-        /// *   MemoryUsed
+        /// <para>GPU usage of the instances.</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ExpireTime: The instances are sorted based on the time when the instances expired.</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     :
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>CpuUsed</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        ///     The instances are sorted based on the memory usage of the instances
+        /// <para>The instances are sorted based on the CPU utilization of the instances.</para>
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     .
-        /// 
-        /// *   GpuUsed
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     : The instances are sorted based on the
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     GPU usage of the instances.
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   ExpireTime: The instances are sorted based on the time when the instances expired.
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   CpuUsed
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     The instances are sorted based on the CPU utilization of the instances.
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>CreateTime</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]

@@ -10,300 +10,329 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServicesShrinkRequest : TeaModel {
         /// <summary>
-        /// The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.
+        /// <para>The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>foo</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
 
         /// <summary>
-        /// The ID of the private gateway.
+        /// <para>The ID of the private gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-1uhcqmsc7x22******</para>
         /// </summary>
         [NameInMap("Gateway")]
         [Validation(Required=false)]
         public string Gateway { get; set; }
 
         /// <summary>
-        /// The name of the service group. For more information about how to query the name of a service group, see [ListServices](https://help.aliyun.com/document_detail/412109.html).
+        /// <para>The name of the service group. For more information about how to query the name of a service group, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>foo</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The tag that is used to filter services.
+        /// <para>The tag that is used to filter services.</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string LabelShrink { get; set; }
 
         /// <summary>
-        /// The sorting order. Valid values:
+        /// <para>The sorting order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>desc (default): The query results are sorted in descending order.</description></item>
+        /// <item><description>asc: The query results are sorted in ascending order.</description></item>
+        /// </list>
         /// 
-        /// *   desc (default): The query results are sorted in descending order.
-        /// *   asc: The query results are sorted in ascending order.
+        /// <b>Example:</b>
+        /// <para>asc</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
         /// <summary>
-        /// The page number. Default value: 1.
+        /// <para>The page number. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 100.
+        /// <para>The number of entries per page. Default value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the primary service that corresponds to the Band member service.
+        /// <para>The ID of the primary service that corresponds to the Band member service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eas-m-ijafy3c8cxxxx</para>
         /// </summary>
         [NameInMap("ParentServiceUid")]
         [Validation(Required=false)]
         public string ParentServiceUid { get; set; }
 
         /// <summary>
-        /// The quota ID.
+        /// <para>The quota ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>quota12345</para>
         /// </summary>
         [NameInMap("QuotaId")]
         [Validation(Required=false)]
         public string QuotaId { get; set; }
 
         /// <summary>
-        /// The name or ID of the resource group to which the service belongs.
+        /// <para>The name or ID of the resource group to which the service belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eas-r-hd0qwy8cxxxx</para>
         /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
+        [NameInMap("Role")]
+        [Validation(Required=false)]
+        public string Role { get; set; }
+
         /// <summary>
-        /// The service name.
+        /// <para>The service name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>echo_test</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The service state.
+        /// <para>The service state.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Creating</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   Creating
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Stopped</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Failed</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   Stopped
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Complete</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Cloning</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   Failed
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Stopping</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Updating</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   Complete
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Waiting</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>HotUpdate</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   Cloning
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Committing</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Starting</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   Stopping
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>DeleteFailed</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Running</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   Updating
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Developing</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Scaling</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   Waiting
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Deleted</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Pending</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   HotUpdate
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Deleting</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   Committing
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Starting
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   DeleteFailed
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Running
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Developing
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Scaling
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Deleted
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Pending
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Deleting
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>Running</para>
         /// </summary>
         [NameInMap("ServiceStatus")]
         [Validation(Required=false)]
         public string ServiceStatus { get; set; }
 
         /// <summary>
-        /// The service type. Valid values:
+        /// <para>The service type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Async</description></item>
+        /// <item><description>Standard</description></item>
+        /// <item><description>Offline Task</description></item>
+        /// <item><description>Proxima</description></item>
+        /// </list>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Async</para>
+        /// <!-- -->
         /// 
-        /// *   Async
-        /// *   Standard
-        /// *   Offline Task
-        /// *   Proxima
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Standard</para>
+        /// <!-- -->
         /// 
-        /// *   Async
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>OfflineTask</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Proxima</para>
+        /// <!-- -->
         /// 
-        /// *   Standard
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   OfflineTask
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Proxima
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>Standard</para>
         /// </summary>
         [NameInMap("ServiceType")]
         [Validation(Required=false)]
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// The user ID (UID) of the service.
+        /// <para>The user ID (UID) of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eas-m-c9iw3yitxxxx</para>
         /// </summary>
         [NameInMap("ServiceUid")]
         [Validation(Required=false)]
         public string ServiceUid { get; set; }
 
         /// <summary>
-        /// The sort field. By default, the query results are sorted by the timestamp type in descending order.
+        /// <para>The sort field. By default, the query results are sorted by the timestamp type in descending order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CreateTime</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string Sort { get; set; }
 
         /// <summary>
-        /// The workspace ID.
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

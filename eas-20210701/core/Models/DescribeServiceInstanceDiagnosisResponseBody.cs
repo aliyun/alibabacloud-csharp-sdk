@@ -10,28 +10,31 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeServiceInstanceDiagnosisResponseBody : TeaModel {
         /// <summary>
-        /// The diagnostics information.
+        /// <para>The diagnostics information.</para>
         /// </summary>
         [NameInMap("Diagnosis")]
         [Validation(Required=false)]
         public DescribeServiceInstanceDiagnosisResponseBodyDiagnosis Diagnosis { get; set; }
         public class DescribeServiceInstanceDiagnosisResponseBodyDiagnosis : TeaModel {
             /// <summary>
-            /// The solutions to the errors.
+            /// <para>The solutions to the errors.</para>
             /// </summary>
             [NameInMap("Advices")]
             [Validation(Required=false)]
             public List<string> Advices { get; set; }
 
             /// <summary>
-            /// The causes of the errors.
+            /// <para>The causes of the errors.</para>
             /// </summary>
             [NameInMap("Causes")]
             [Validation(Required=false)]
             public List<string> Causes { get; set; }
 
             /// <summary>
-            /// The error message.
+            /// <para>The error message.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Container worker0 failed to pull image.</para>
             /// </summary>
             [NameInMap("Error")]
             [Validation(Required=false)]
@@ -40,7 +43,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40325405-579C-4D82***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
