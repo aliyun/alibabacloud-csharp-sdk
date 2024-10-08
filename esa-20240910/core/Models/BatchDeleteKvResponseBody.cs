@@ -1,0 +1,32 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.ESA20240910.Models
+{
+    public class BatchDeleteKvResponseBody : TeaModel {
+        [NameInMap("FailKeys")]
+        [Validation(Required=false)]
+        public List<string> FailKeys { get; set; }
+
+        /// <summary>
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SuccessKeys")]
+        [Validation(Required=false)]
+        public List<string> SuccessKeys { get; set; }
+
+    }
+
+}

@@ -1,0 +1,24 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.ESA20240910.Models
+{
+    public class SetCertificateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A666D44F-19D6-490E-97CF-1A64AB962C57</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}

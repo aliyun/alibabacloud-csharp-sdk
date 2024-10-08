@@ -1,0 +1,24 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.ESA20240910.Models
+{
+    public class UpdateSiteDeliveryTaskResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34DCBC8A-<b><b>-</b></b>-****-6DAA11D7DDBD</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}
