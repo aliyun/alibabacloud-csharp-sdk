@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class Id2MetaVerifyIntlRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>429001********8211</para>
+        /// </summary>
         [NameInMap("IdentifyNum")]
         [Validation(Required=false)]
         public string IdentifyNum { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>normal</para>
+        /// </summary>
         [NameInMap("ParamType")]
         [Validation(Required=false)]
         public string ParamType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ID_2META</para>
+        /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }

@@ -21,6 +21,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string CallbackUrl { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("Crop")]
         [Validation(Required=false)]
         public string Crop { get; set; }
@@ -29,6 +35,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string DocScanMode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>01000000</para>
+        /// </summary>
         [NameInMap("DocType")]
         [Validation(Required=false)]
         public string DocType { get; set; }
@@ -45,14 +55,28 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string FacePictureBase64 { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
         [NameInMap("FacePictureUrl")]
         [Validation(Required=false)]
         public string FacePictureUrl { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("IdFaceQuality")]
         [Validation(Required=false)]
         public string IdFaceQuality { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
         [NameInMap("IdSpoof")]
         [Validation(Required=false)]
         public string IdSpoof { get; set; }
@@ -65,14 +89,26 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string LanguageConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>e0c34a***353888</para>
+        /// </summary>
         [NameInMap("MerchantBizId")]
         [Validation(Required=false)]
         public string MerchantBizId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1221****6543</para>
+        /// </summary>
         [NameInMap("MerchantUserId")]
         [Validation(Required=false)]
         public string MerchantUserId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{\&quot;bioMetaInfo\&quot;:\&quot;4.1.0:2916352,0\&quot;,\&quot;deviceType\&quot;:\&quot;web\&quot;,\&quot;ua\&quot;:\&quot;Mozilla/5.0 (Macintosh</para>
+        /// </summary>
         [NameInMap("MetaInfo")]
         [Validation(Required=false)]
         public string MetaInfo { get; set; }
@@ -82,12 +118,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// OCR。
+        /// <para>OCR。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Ocr")]
         [Validation(Required=false)]
         public string Ocr { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>eKYC</para>
+        /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
@@ -96,10 +141,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string ProductFlow { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>http*****</para>
+        /// </summary>
         [NameInMap("ReturnUrl")]
         [Validation(Required=false)]
         public string ReturnUrl { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PAY**</para>
+        /// </summary>
         [NameInMap("SceneCode")]
         [Validation(Required=false)]
         public string SceneCode { get; set; }
@@ -111,6 +164,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [NameInMap("ShowAlbumIcon")]
         [Validation(Required=false)]
         public string ShowAlbumIcon { get; set; }
+
+        [NameInMap("ShowGuidePage")]
+        [Validation(Required=false)]
+        public string ShowGuidePage { get; set; }
 
         [NameInMap("ShowOcrResult")]
         [Validation(Required=false)]
