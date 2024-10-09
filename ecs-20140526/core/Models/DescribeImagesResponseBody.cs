@@ -167,9 +167,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public class DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping : TeaModel {
                         /// <summary>
                         /// <para>The device name of the disk. Example: /dev/xvdb.</para>
-                        /// <remarks>
-                        /// <para> This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.</para>
-                        /// </remarks>
                         /// 
                         /// <b>Example:</b>
                         /// <para>/dev/xvda</para>

@@ -1,3 +1,9 @@
+2024-10-09 Version: 4.4.2
+- Update API DescribeInstanceTypes: update param InstanceTypes.
+- Update API ImportImage: add param DryRun.
+- Update API ImportImage: add param Features.
+
+
 2024-09-29 Version: 4.4.1
 - Generated csharp 2014-05-26 for Ecs.
 

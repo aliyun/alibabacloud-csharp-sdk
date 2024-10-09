@@ -647,7 +647,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The internal IP address to assign to the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><c>192.168.**.**</c></para>
+        /// <para>192.168.**.**</para>
         /// </summary>
         [NameInMap("InnerIpAddress")]
         [Validation(Required=false)]

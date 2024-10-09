@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The secondary private IP addresses to unassign.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><c>192.168.**.**</c></para>
+        /// <para>192.168.**.**</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

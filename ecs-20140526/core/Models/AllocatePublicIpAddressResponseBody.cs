@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The public IP address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><c>112.124.**.**</c></para>
+        /// <para>112.124.**.**</para>
         /// </summary>
         [NameInMap("IpAddress")]
         [Validation(Required=false)]

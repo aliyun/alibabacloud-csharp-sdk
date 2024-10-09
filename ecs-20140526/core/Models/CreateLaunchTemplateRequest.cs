@@ -716,7 +716,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para><c>192.168.**.**</c></para>
+            /// <para>192.168.**.**</para>
             /// </summary>
             [NameInMap("PrimaryIpAddress")]
             [Validation(Required=false)]
@@ -836,7 +836,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>To assign a private IP address to an instance that resides in a VPC, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the <c>VSwitchId</c> parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><c>10.1.**.**</c></para>
+        /// <para>10.1.**.**</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

@@ -649,7 +649,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <para>The private IP address to assign to the instance.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para><c>10.1.**.**</c></para>
+                    /// <para>10.1.**.**</para>
                     /// </summary>
                     [NameInMap("PrivateIpAddress")]
                     [Validation(Required=false)]

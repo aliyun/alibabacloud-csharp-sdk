@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><c>112.124.**.**</c></para>
+        /// <para>112.124.**.**</para>
         /// </summary>
         [NameInMap("IpAddress")]
         [Validation(Required=false)]

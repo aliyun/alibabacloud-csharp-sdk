@@ -283,9 +283,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>Specifies whether the subscription image has expired.</para>
-        /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -162,6 +162,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        [NameInMap("Features")]
+        [Validation(Required=false)]
+        public ImportImageRequestFeatures Features { get; set; }
+        public class ImportImageRequestFeatures : TeaModel {
+            [NameInMap("NvmeSupport")]
+            [Validation(Required=false)]
+            public string NvmeSupport { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The image name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>acs:</c> or <c>aliyun</c>. The name cannot contain <c>http://</c> or <c>https://</c>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
         /// 
