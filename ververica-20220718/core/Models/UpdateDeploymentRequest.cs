@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class UpdateDeploymentRequest : TeaModel {
         /// <summary>
-        /// The information about the deployment that you want to update.
-        /// 
-        /// This parameter is required.
+        /// <para>The information about the deployment that you want to update.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

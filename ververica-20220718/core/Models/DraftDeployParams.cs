@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public BriefDeploymentTarget DeploymentTarget { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("skipValidate")]
         [Validation(Required=false)]
         public bool? SkipValidate { get; set; }

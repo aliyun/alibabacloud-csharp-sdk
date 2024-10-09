@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetFolderRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>89097</para>
+        /// </summary>
         [NameInMap("folderId")]
         [Validation(Required=false)]
         public string FolderId { get; set; }

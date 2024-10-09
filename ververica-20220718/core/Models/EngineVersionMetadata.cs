@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class EngineVersionMetadata : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vvr-6.0.0-flink-1.15</para>
         /// </summary>
         [NameInMap("engineVersion")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public EngineVersionSupportedFeatures Features { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>STABLE</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

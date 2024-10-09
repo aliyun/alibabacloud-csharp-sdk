@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class DeleteUdfFunctionRequest : TeaModel {
         /// <summary>
-        /// The name of the class that corresponds to the UDF.
+        /// <para>The name of the class that corresponds to the UDF.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Category</para>
         /// </summary>
         [NameInMap("className")]
         [Validation(Required=false)]
         public string ClassName { get; set; }
 
         /// <summary>
-        /// The name of the resource that corresponds to the UDF that you want to delete.
+        /// <para>The name of the resource that corresponds to the UDF that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test-udf</para>
         /// </summary>
         [NameInMap("udfArtifactName")]
         [Validation(Required=false)]

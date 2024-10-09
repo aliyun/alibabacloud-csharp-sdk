@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class JobFailure : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1660120062</para>
+        /// </summary>
         [NameInMap("failedAt")]
         [Validation(Required=false)]
         public long? FailedAt { get; set; }

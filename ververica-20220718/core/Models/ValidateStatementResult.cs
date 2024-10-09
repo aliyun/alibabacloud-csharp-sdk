@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public ValidationErrorDetails ErrorDetails { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;there have some errors&quot;&quot;</para>
+        /// </summary>
         [NameInMap("validationResult")]
         [Validation(Required=false)]
         public string ValidationResult { get; set; }

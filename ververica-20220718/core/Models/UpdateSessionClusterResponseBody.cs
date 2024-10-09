@@ -13,22 +13,42 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public SessionCluster Data { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("httpCode")]
         [Validation(Required=false)]
         public int? HttpCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1EF03B0C-F44F-47AD-BB48-D002D0F7B8C9</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

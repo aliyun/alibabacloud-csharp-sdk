@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public List<string> AdditionalDependencies { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("batchMode")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public Dictionary<string, object> FlinkConfiguration { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("statement")]
         [Validation(Required=false)]

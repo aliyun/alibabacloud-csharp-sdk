@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetAppliedScheduledPlanRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5737ef81-d2f1-49cf-8752-30910809****</para>
         /// </summary>
         [NameInMap("deploymentId")]
         [Validation(Required=false)]

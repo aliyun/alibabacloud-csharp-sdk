@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]

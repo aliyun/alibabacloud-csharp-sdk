@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetDatabasesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>paimon-ods</para>
+        /// </summary>
         [NameInMap("databaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }

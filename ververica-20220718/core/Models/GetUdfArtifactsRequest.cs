@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetUdfArtifactsRequest : TeaModel {
         /// <summary>
-        /// The name of the JAR or Python file that corresponds to the UDF.
+        /// <para>The name of the JAR or Python file that corresponds to the UDF.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-udf</para>
         /// </summary>
         [NameInMap("udfArtifactName")]
         [Validation(Required=false)]

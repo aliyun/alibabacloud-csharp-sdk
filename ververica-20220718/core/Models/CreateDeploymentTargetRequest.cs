@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public ResourceSpec Body { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-dt</para>
         /// </summary>
         [NameInMap("deploymentTargetName")]
         [Validation(Required=false)]

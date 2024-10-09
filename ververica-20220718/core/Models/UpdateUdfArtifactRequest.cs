@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class UpdateUdfArtifactRequest : TeaModel {
         /// <summary>
-        /// The details of the JAR file of the UDF.
-        /// 
-        /// This parameter is required.
+        /// <para>The details of the JAR file of the UDF.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

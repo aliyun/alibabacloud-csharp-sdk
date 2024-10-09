@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GenerateResourcePlanWithFlinkConfAsyncRequest : TeaModel {
         /// <summary>
-        /// The Flink configuration that is used to generate a resource plan.
+        /// <para>The Flink configuration that is used to generate a resource plan.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

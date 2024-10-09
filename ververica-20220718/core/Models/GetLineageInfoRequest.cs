@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetLineageInfoRequest : TeaModel {
         /// <summary>
-        /// The parameters about the lineage information.
+        /// <para>The parameters about the lineage information.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

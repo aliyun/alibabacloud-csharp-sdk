@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetTablesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>item</para>
+        /// </summary>
         [NameInMap("tableName")]
         [Validation(Required=false)]
         public string TableName { get; set; }

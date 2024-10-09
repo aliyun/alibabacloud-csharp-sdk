@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ListSavepointsRequest : TeaModel {
         /// <summary>
-        /// The deployment ID. This parameter is optional.
+        /// <para>The deployment ID. This parameter is optional.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>88a8fc49-e090-430a-85d8-3ee8c79c****</para>
         /// </summary>
         [NameInMap("deploymentId")]
         [Validation(Required=false)]
         public string DeploymentId { get; set; }
 
         /// <summary>
-        /// The job ID. This parameter is optional.
+        /// <para>The job ID. This parameter is optional.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>99a8fc49-e090-430a-85d8-3ee8c79c****</para>
         /// </summary>
         [NameInMap("jobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// The page number. Minimum value: 1. Default value: 1.
+        /// <para>The page number. Minimum value: 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("pageIndex")]
         [Validation(Required=false)]
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: 1 to 100. Default value: 10.
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]

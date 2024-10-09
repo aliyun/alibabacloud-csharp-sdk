@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class RegisterCustomConnectorRequest : TeaModel {
         /// <summary>
-        /// The URL in which the JAR package of the custom connector is stored. The platform must be able to access this address.
+        /// <para>The URL in which the JAR package of the custom connector is stored. The platform must be able to access this address.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>oss://flink/connector/mysql123</para>
         /// </summary>
         [NameInMap("jarUrl")]
         [Validation(Required=false)]

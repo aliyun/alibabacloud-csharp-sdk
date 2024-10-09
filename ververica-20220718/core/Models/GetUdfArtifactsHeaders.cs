@@ -14,9 +14,11 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// The workspace ID.
+        /// <para>The workspace ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>710d6a64d8c34d</para>
         /// </summary>
         [NameInMap("workspace")]
         [Validation(Required=false)]

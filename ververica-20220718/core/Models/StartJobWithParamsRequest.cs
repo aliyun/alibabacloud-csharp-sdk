@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class StartJobWithParamsRequest : TeaModel {
         /// <summary>
-        /// The parameter that is used to start the job.
+        /// <para>The parameter that is used to start the job.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
