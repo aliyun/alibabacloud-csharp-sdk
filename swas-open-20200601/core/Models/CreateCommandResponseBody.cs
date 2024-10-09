@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class CreateCommandResponseBody : TeaModel {
         /// <summary>
-        /// The command ID.
+        /// <para>The command ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c-sh02yh0932w****</para>
         /// </summary>
         [NameInMap("CommandId")]
         [Validation(Required=false)]
         public string CommandId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20758A-585D-4A41-A9B2-28DA8F4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

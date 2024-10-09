@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DeleteFirewallRulesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20758A-585D-4A41-A9B2-28DA8F4F534F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

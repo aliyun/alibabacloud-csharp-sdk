@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class AllocatePublicConnectionResponseBody : TeaModel {
         /// <summary>
-        /// The public endpoint that is assigned to the Simple Database Service instance.
+        /// <para>The public endpoint that is assigned to the Simple Database Service instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>db-38263fa955774501a2ae1bdaed6f****.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("PublicConnection")]
         [Validation(Required=false)]
         public string PublicConnection { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30637AD6-D977-4833-A54C-CC89483E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

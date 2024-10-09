@@ -10,52 +10,67 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListImagesResponseBody : TeaModel {
         /// <summary>
-        /// The OS type of the image. Valid values:
-        /// 
-        /// *   Linux
-        /// *   Windows
+        /// <para>The OS type of the image. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Linux</description></item>
+        /// <item><description>Windows</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
         public List<ListImagesResponseBodyImages> Images { get; set; }
         public class ListImagesResponseBodyImages : TeaModel {
             /// <summary>
-            /// The description of the image.
+            /// <para>The description of the image.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the image.
+            /// <para>The ID of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>794c230fd3e64ea19f83f4d7a0ad****</para>
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The name of the image.
+            /// <para>The name of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>WordPress-4.8.1</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
 
             /// <summary>
-            /// The type of the image. Valid values:
+            /// <para>The type of the image. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>system</description></item>
+            /// <item><description>app</description></item>
+            /// <item><description>custom</description></item>
+            /// </list>
             /// 
-            /// *   system
-            /// *   app
-            /// *   custom
+            /// <b>Example:</b>
+            /// <para>app</para>
             /// </summary>
             [NameInMap("ImageType")]
             [Validation(Required=false)]
             public string ImageType { get; set; }
 
             /// <summary>
-            /// The operating system type of the image. Valid values:
+            /// <para>The operating system type of the image. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Linux</description></item>
+            /// <item><description>Windows</description></item>
+            /// </list>
             /// 
-            /// *   Linux
-            /// *   Windows
+            /// <b>Example:</b>
+            /// <para>Linux</para>
             /// </summary>
             [NameInMap("Platform")]
             [Validation(Required=false)]
@@ -64,7 +79,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20758A-585D-4A41-A9B2-28DA8F4F534F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

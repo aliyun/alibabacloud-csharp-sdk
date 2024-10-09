@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ApplyFirewallTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30637AD6-D977-4833-A54C-CC89483E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the execution to apply the template.
+        /// <para>The ID of the execution to apply the template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aft-ikgt0bynitvs3****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

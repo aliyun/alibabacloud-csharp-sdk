@@ -10,86 +10,116 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeFirewallTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The information about the queried firewall templates.
+        /// <para>The information about the queried firewall templates.</para>
         /// </summary>
         [NameInMap("FirewallTemplates")]
         [Validation(Required=false)]
         public List<DescribeFirewallTemplatesResponseBodyFirewallTemplates> FirewallTemplates { get; set; }
         public class DescribeFirewallTemplatesResponseBodyFirewallTemplates : TeaModel {
             /// <summary>
-            /// The time when the firewall template was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// <para>The time when the firewall template was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <remarks>
+            /// <para> The time displayed in the Simple Application Server console is in the format of UTC+8.</para>
+            /// </remarks>
             /// 
-            /// >  The time displayed in the Simple Application Server console is in the format of UTC+8.
+            /// <b>Example:</b>
+            /// <para>2024-04-29T02:01:38Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The time when the firewall template was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// <para>The time when the firewall template was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-04-10T02:10:14Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The description of the firewall template.
+            /// <para>The description of the firewall template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the firewall template.
+            /// <para>The ID of the firewall template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ft-bcf1a7hrdq717****</para>
             /// </summary>
             [NameInMap("FirewallTemplateId")]
             [Validation(Required=false)]
             public string FirewallTemplateId { get; set; }
 
             /// <summary>
-            /// The details of the firewall template rules.
+            /// <para>The details of the firewall template rules.</para>
             /// </summary>
             [NameInMap("FirewallTemplateRules")]
             [Validation(Required=false)]
             public List<DescribeFirewallTemplatesResponseBodyFirewallTemplatesFirewallTemplateRules> FirewallTemplateRules { get; set; }
             public class DescribeFirewallTemplatesResponseBodyFirewallTemplatesFirewallTemplateRules : TeaModel {
                 /// <summary>
-                /// The ID of the firewall template rule.
+                /// <para>The ID of the firewall template rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>eeea34d9867b4d55a4ff8d5fcfbd****</para>
                 /// </summary>
                 [NameInMap("FirewallTemplateRuleId")]
                 [Validation(Required=false)]
                 public string FirewallTemplateRuleId { get; set; }
 
                 /// <summary>
-                /// The port range. Valid values: 1 to 65535. Specify a port range in the format of \\<start port number>/\\<end port number>. Example: `1024/1055`, which indicates that the port range of 1024 to 1055.
+                /// <para>The port range. Valid values: 1 to 65535. Specify a port range in the format of \<start port number>/\<end port number>. Example: <c>1024/1055</c>, which indicates that the port range of 1024 to 1055.</para>
+                /// <remarks>
+                /// <para> If you set RuleProtocol to ICMP, you must set Port to -1/-1.</para>
+                /// </remarks>
                 /// 
-                /// >  If you set RuleProtocol to ICMP, you must set Port to -1/-1.
+                /// <b>Example:</b>
+                /// <para>8080</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
                 /// <summary>
-                /// The remarks of the firewall template rule.
+                /// <para>The remarks of the firewall template rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// The transport layer protocol that the rule supports. Valid values:
+                /// <para>The transport layer protocol that the rule supports. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>TCP</description></item>
+                /// <item><description>UDP</description></item>
+                /// <item><description>TCP+UDP</description></item>
+                /// <item><description>ICMP</description></item>
+                /// </list>
                 /// 
-                /// *   TCP
-                /// *   UDP
-                /// *   TCP+UDP
-                /// *   ICMP
+                /// <b>Example:</b>
+                /// <para>TCP</para>
                 /// </summary>
                 [NameInMap("RuleProtocol")]
                 [Validation(Required=false)]
                 public string RuleProtocol { get; set; }
 
                 /// <summary>
-                /// The source address to which you want to grant access permissions. CIDR blocks and IPv4 addresses are supported.
+                /// <para>The source address to which you want to grant access permissions. CIDR blocks and IPv4 addresses are supported.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>119.145.XX.XX</para>
                 /// </summary>
                 [NameInMap("SourceCidrIp")]
                 [Validation(Required=false)]
@@ -98,7 +128,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             }
 
             /// <summary>
-            /// The name of the firewall template.
+            /// <para>The name of the firewall template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -107,32 +140,42 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Pages start from page 1.
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 20.
+        /// <para>The number of entries per page. Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30637AD6-D977-4833-A54C-CC89483E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

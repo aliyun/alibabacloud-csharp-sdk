@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeInstancePasswordsSettingResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether a logon password is set for the simple application server.
+        /// <para>Indicates whether a logon password is set for the simple application server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("InstancePasswordSetting")]
         [Validation(Required=false)]
         public bool? InstancePasswordSetting { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20758A-585D-4A41-A9B2-28DA8F4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether a VNC connection password is set.
+        /// <para>Indicates whether a VNC connection password is set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("VncPasswordSetting")]
         [Validation(Required=false)]

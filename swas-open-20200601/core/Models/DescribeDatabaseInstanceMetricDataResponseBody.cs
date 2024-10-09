@@ -10,49 +10,67 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseInstanceMetricDataResponseBody : TeaModel {
         /// <summary>
-        /// The data format. Valid values:
+        /// <para>The data format. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cpuusage\&amp;memusage</description></item>
+        /// <item><description>active_session\&amp;total_session</description></item>
+        /// <item><description>ins_size\&amp;data_size\&amp;log_size\&amp;tmp_size\&amp;other_size</description></item>
+        /// <item><description>io</description></item>
+        /// </list>
         /// 
-        /// *   cpuusage\\&memusage
-        /// *   active_session\\&total_session
-        /// *   ins_size\\&data_size\\&log_size\\&tmp_size\\&other_size
-        /// *   io
+        /// <b>Example:</b>
+        /// <para>cpuusage&amp;memusage</para>
         /// </summary>
         [NameInMap("DataFormat")]
         [Validation(Required=false)]
         public string DataFormat { get; set; }
 
         /// <summary>
-        /// The monitoring data.
+        /// <para>The monitoring data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[  {     \&quot;date&quot;\: &quot; 2022-09-06T04:04:00Z&quot;,\&quot;value\&quot;:\&quot;0.77&amp;3.69\&quot;  } ]</para>
         /// </summary>
         [NameInMap("MetricData")]
         [Validation(Required=false)]
         public string MetricData { get; set; }
 
         /// <summary>
-        /// The name of the metric. Valid values:
+        /// <para>The name of the metric. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>MySQL_MemCpuUsage: The CPU utilization and memory usage of the instance within the entire operating system.</description></item>
+        /// <item><description>MySQL_DetailedSpaceUsage: The total space usage, data space, log space, temporary space, and system space of the instance.</description></item>
+        /// <item><description>MySQL_Sessions : The total number of active connections.</description></item>
+        /// <item><description>MySQL_IOPS: The IOPS of the instance.</description></item>
+        /// </list>
         /// 
-        /// *   MySQL_MemCpuUsage: The CPU utilization and memory usage of the instance within the entire operating system.
-        /// *   MySQL_DetailedSpaceUsage: The total space usage, data space, log space, temporary space, and system space of the instance.
-        /// *   MySQL_Sessions : The total number of active connections.
-        /// *   MySQL_IOPS: The IOPS of the instance.
+        /// <b>Example:</b>
+        /// <para>MySQL_MemCpuUsage</para>
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30637AD6-D977-4833-A54C-CC89483E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The unit of the monitoring metric.
+        /// <para>The unit of the monitoring metric.</para>
+        /// <list type="bullet">
+        /// <item><description>%</description></item>
+        /// <item><description>int</description></item>
+        /// <item><description>MB</description></item>
+        /// </list>
         /// 
-        /// *   %
-        /// *   int
-        /// *   MB
+        /// <b>Example:</b>
+        /// <para>%</para>
         /// </summary>
         [NameInMap("Unit")]
         [Validation(Required=false)]

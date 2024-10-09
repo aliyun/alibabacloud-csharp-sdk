@@ -10,52 +10,71 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class AttachKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// The total number of simple application servers to which the key pair failed to be bound.
+        /// <para>The total number of simple application servers to which the key pair failed to be bound.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("FailCount")]
         [Validation(Required=false)]
         public int? FailCount { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30637AD6-D977-4833-A54C-CC89483E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The results.
+        /// <para>The results.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<AttachKeyPairResponseBodyResults> Results { get; set; }
         public class AttachKeyPairResponseBodyResults : TeaModel {
             /// <summary>
-            /// The HTTP status code.
+            /// <para>The HTTP status code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The simple application server ID.
+            /// <para>The simple application server ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aa6e71ddb35c46679bc4753d6219d604</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The response message.
+            /// <para>The response message.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>success</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// Indicates whether the key pair is bound to the simple application server successfully. Valid values:
+            /// <para>Indicates whether the key pair is bound to the simple application server successfully. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
             /// 
-            /// *   true
-            /// *   false
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Success")]
             [Validation(Required=false)]
@@ -64,7 +83,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The total number of simple application servers to which the key pair is bound.
+        /// <para>The total number of simple application servers to which the key pair is bound.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

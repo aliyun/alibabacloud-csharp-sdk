@@ -10,82 +10,106 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeCloudAssistantAttributesResponseBody : TeaModel {
         /// <summary>
-        /// The Command Assistant information.
+        /// <para>The Command Assistant information.</para>
         /// </summary>
         [NameInMap("CloudAssistant")]
         [Validation(Required=false)]
         public List<DescribeCloudAssistantAttributesResponseBodyCloudAssistant> CloudAssistant { get; set; }
         public class DescribeCloudAssistantAttributesResponseBodyCloudAssistant : TeaModel {
             /// <summary>
-            /// The number of active tasks in Command Assistant.
+            /// <para>The number of active tasks in Command Assistant.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ActiveTaskCount")]
             [Validation(Required=false)]
             public long? ActiveTaskCount { get; set; }
 
             /// <summary>
-            /// Indicates whether Command Assistant is running. Valid values:
+            /// <para>Indicates whether Command Assistant is running. Valid values:</para>
+            /// <para>true: Heartbeats are detected in the last 2 minutes.</para>
+            /// <para>false: Heartbeats are not detected in the last 2 minutes.</para>
             /// 
-            /// true: Heartbeats are detected in the last 2 minutes.
-            /// 
-            /// false: Heartbeats are not detected in the last 2 minutes.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("CloudAssistantStatus")]
             [Validation(Required=false)]
             public string CloudAssistantStatus { get; set; }
 
             /// <summary>
-            /// The version number of the Command Assistant agent. Null is returned if the Command Assistant agent is not installed or is not running.
+            /// <para>The version number of the Command Assistant agent. Null is returned if the Command Assistant agent is not installed or is not running.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2.2.0.106</para>
             /// </summary>
             [NameInMap("CloudAssistantVersion")]
             [Validation(Required=false)]
             public string CloudAssistantVersion { get; set; }
 
             /// <summary>
-            /// The ID of the simple application server.
+            /// <para>The ID of the simple application server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>85dbe3e7cc7b49e1a3df4af3bfa4ebbf</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The number of completed tasks in Command Assistant.
+            /// <para>The number of completed tasks in Command Assistant.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("InvocationCount")]
             [Validation(Required=false)]
             public long? InvocationCount { get; set; }
 
             /// <summary>
-            /// The time when the last heartbeat of Command Assistant was detected. The value is updated every minute on average. The interval can be 55, 60, or 65 seconds.
+            /// <para>The time when the last heartbeat of Command Assistant was detected. The value is updated every minute on average. The interval can be 55, 60, or 65 seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-03-15T09:00:00Z</para>
             /// </summary>
             [NameInMap("LastHeartbeatTime")]
             [Validation(Required=false)]
             public string LastHeartbeatTime { get; set; }
 
             /// <summary>
-            /// The time when commands were last run.
+            /// <para>The time when commands were last run.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-03-15T08:00:00Z</para>
             /// </summary>
             [NameInMap("LastInvokedTime")]
             [Validation(Required=false)]
             public string LastInvokedTime { get; set; }
 
             /// <summary>
-            /// The OS type of the simple application server. Valid values:
+            /// <para>The OS type of the simple application server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Windows</description></item>
+            /// <item><description>Linux</description></item>
+            /// <item><description>FreeBSD</description></item>
+            /// </list>
             /// 
-            /// *   Windows
-            /// *   Linux
-            /// *   FreeBSD
+            /// <b>Example:</b>
+            /// <para>Linux</para>
             /// </summary>
             [NameInMap("OSType")]
             [Validation(Required=false)]
             public string OSType { get; set; }
 
             /// <summary>
-            /// Indicates whether Command Assistant supports session management. If Command Assistant does not support session management, the version of the Command Assistant agent is too earlier. We recommend that you update your Command Assistant agent to the latest version.
+            /// <para>Indicates whether Command Assistant supports session management. If Command Assistant does not support session management, the version of the Command Assistant agent is too earlier. We recommend that you update your Command Assistant agent to the latest version.</para>
+            /// <para>To use the session management feature, you must make sure that the version of your Command Assistant agent meets one of the following requirements:</para>
+            /// <para>If your simple application server runs Linux, the version of the Command Assistant agent on the server must be 2.2.3.189 or later. If your simple application server runs Windows, the version of the Command Assistant agent on the server must be 2.1.3.189 or later.</para>
             /// 
-            /// To use the session management feature, you must make sure that the version of your Command Assistant agent meets one of the following requirements:
-            /// 
-            /// If your simple application server runs Linux, the version of the Command Assistant agent on the server must be 2.2.3.189 or later. If your simple application server runs Windows, the version of the Command Assistant agent on the server must be 2.1.3.189 or later.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("SupportSessionManager")]
             [Validation(Required=false)]
@@ -94,28 +118,40 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30637AD6-D977-4833-A54C-CC89483E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// <para>The total number of entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

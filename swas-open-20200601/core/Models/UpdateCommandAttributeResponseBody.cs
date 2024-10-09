@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class UpdateCommandAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

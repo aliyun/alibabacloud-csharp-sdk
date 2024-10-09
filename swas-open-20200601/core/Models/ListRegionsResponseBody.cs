@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The regions.
+        /// <para>The regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<ListRegionsResponseBodyRegions> Regions { get; set; }
         public class ListRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// The name of the region.
+            /// <para>The name of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>China (hangzhou)</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// The endpoint of the region.
+            /// <para>The endpoint of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>swas.cn-hangzhou.aliyuncs.com</para>
             /// </summary>
             [NameInMap("RegionEndpoint")]
             [Validation(Required=false)]
             public string RegionEndpoint { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// <para>The ID of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -40,7 +49,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20758A-585D-4A41-A9B2-28DA8F4F534F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

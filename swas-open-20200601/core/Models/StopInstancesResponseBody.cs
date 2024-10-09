@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class StopInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C2DE174B-7196-5778-A00D-6EA2601B****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

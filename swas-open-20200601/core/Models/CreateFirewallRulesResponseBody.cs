@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class CreateFirewallRulesResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the firewall rules that you created.
+        /// <para>The IDs of the firewall rules that you created.</para>
         /// </summary>
         [NameInMap("FirewallRuleIds")]
         [Validation(Required=false)]
         public List<string> FirewallRuleIds { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20758A-585D-4A41-A9B2-28DA8F4F534F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
