@@ -8,20 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Marketing_event20210101.Models
 {
-    public class SyncSignInInfoRequest : TeaModel {
+    public class QuerySessionByActivityIdPopRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4546</para>
         /// </summary>
         [NameInMap("ActivityId")]
         [Validation(Required=false)]
-        public string ActivityId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("QRCode")]
-        [Validation(Required=false)]
-        public string QRCode { get; set; }
+        public long? ActivityId { get; set; }
 
     }
 

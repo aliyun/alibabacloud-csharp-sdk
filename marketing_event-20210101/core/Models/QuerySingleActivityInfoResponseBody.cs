@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Marketing_event20210101.Models
 {
     public class QuerySingleActivityInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,48 +21,92 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
         [Validation(Required=false)]
         public List<QuerySingleActivityInfoResponseBodyData> Data { get; set; }
         public class QuerySingleActivityInfoResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("ActivityId")]
             [Validation(Required=false)]
             public long? ActivityId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vip</para>
+            /// </summary>
             [NameInMap("ChannelName")]
             [Validation(Required=false)]
             public string ChannelName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>aliyun</para>
+            /// </summary>
             [NameInMap("CompanyName")]
             [Validation(Required=false)]
             public string CompanyName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxx</para>
+            /// </summary>
             [NameInMap("CustomerName")]
             [Validation(Required=false)]
             public string CustomerName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="mailto:xx@aliyun.com">xx@aliyun.com</a></para>
+            /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsVipCustomer")]
             [Validation(Required=false)]
             public string IsVipCustomer { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>234355**</para>
+            /// </summary>
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public string Mobile { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://xxx.com?a=xx">http://xxx.com?a=xx</a></para>
+            /// </summary>
             [NameInMap("QRCode")]
             [Validation(Required=false)]
             public string QRCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
             [NameInMap("ReportFields")]
             [Validation(Required=false)]
             public string ReportFields { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -67,6 +115,10 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

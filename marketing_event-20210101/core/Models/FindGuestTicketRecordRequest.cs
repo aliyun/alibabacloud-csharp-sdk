@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Marketing_event20210101.Models
 {
     public class FindGuestTicketRecordRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>34434</para>
+        /// </summary>
         [NameInMap("ActivityId")]
         [Validation(Required=false)]
         public string ActivityId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2023-09-04 15:14:00</para>
+        /// </summary>
         [NameInMap("DateTimeString")]
         [Validation(Required=false)]
         public string DateTimeString { get; set; }

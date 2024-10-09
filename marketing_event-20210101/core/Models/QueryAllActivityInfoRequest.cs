@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
 {
     public class QueryAllActivityInfoRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ActivityId")]
         [Validation(Required=false)]
