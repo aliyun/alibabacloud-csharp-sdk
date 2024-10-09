@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 
                 [NameInMap("VlContent")]
                 [Validation(Required=false)]
-                public Dictionary<string, object> VlContent { get; set; }
+                public string VlContent { get; set; }
 
             }
 
