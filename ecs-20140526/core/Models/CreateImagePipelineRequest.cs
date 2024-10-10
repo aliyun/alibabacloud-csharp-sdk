@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("ImageFamily")]
+        [Validation(Required=false)]
+        public string ImageFamily { get; set; }
+
         /// <summary>
         /// <para>The prefix of the image name. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (<c>ExecutionId</c>) in the format of <c>{ImageName}_{ExecutionId}</c>.</para>
@@ -162,6 +166,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("RepairMode")]
+        [Validation(Required=false)]
+        public string RepairMode { get; set; }
+
         /// <summary>
         /// <para>The ID of the resource group.</para>
         /// 
@@ -219,6 +227,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("TestContent")]
+        [Validation(Required=false)]
+        public string TestContent { get; set; }
 
         /// <summary>
         /// <para>The IDs of regions to which you want to distribute the image that is created based on the image template. You can specify up to 20 region IDs.</para>

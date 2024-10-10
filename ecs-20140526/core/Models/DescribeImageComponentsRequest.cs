@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageComponentsRequest : TeaModel {
+        [NameInMap("ComponentType")]
+        [Validation(Required=false)]
+        public string ComponentType { get; set; }
+
+        [NameInMap("ComponentVersion")]
+        [Validation(Required=false)]
+        public string ComponentVersion { get; set; }
+
         /// <summary>
         /// <para>The IDs of image components. Valid values of N: 1 to 20.</para>
         /// 
@@ -103,6 +111,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SystemType")]
+        [Validation(Required=false)]
+        public string SystemType { get; set; }
 
         /// <summary>
         /// <para>The tags of the image component.</para>

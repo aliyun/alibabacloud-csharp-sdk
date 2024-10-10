@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string ComponentType { get; set; }
 
+                [NameInMap("ComponentVersion")]
+                [Validation(Required=false)]
+                public string ComponentVersion { get; set; }
+
                 /// <summary>
                 /// <para>The content of the image component.</para>
                 /// 
@@ -93,6 +97,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
+
+                [NameInMap("Parameters")]
+                [Validation(Required=false)]
+                public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters Parameters { get; set; }
+                public class DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters : TeaModel {
+                    [NameInMap("Parameter")]
+                    [Validation(Required=false)]
+                    public List<DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter> Parameter { get; set; }
+                    public class DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter : TeaModel {
+                        [NameInMap("DefaultValue")]
+                        [Validation(Required=false)]
+                        public string DefaultValue { get; set; }
+
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// <para>The ID of the resource group to which the image component belongs.</para>

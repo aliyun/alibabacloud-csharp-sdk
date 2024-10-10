@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ComponentType { get; set; }
 
+        [NameInMap("ComponentVersion")]
+        [Validation(Required=false)]
+        public string ComponentVersion { get; set; }
+
         /// <summary>
         /// <para>The content of the image component. The content consists of up to 127 commands.</para>
         /// 

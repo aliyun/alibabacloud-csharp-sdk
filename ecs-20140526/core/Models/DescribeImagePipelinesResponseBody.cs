@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("ImageFamily")]
+                [Validation(Required=false)]
+                public string ImageFamily { get; set; }
+
                 /// <summary>
                 /// <para>The name prefix of the image to be created based on the image template.</para>
                 /// 
@@ -150,6 +154,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("RepairMode")]
+                [Validation(Required=false)]
+                public string RepairMode { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the resource group.</para>
@@ -205,6 +213,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("TestContent")]
+                [Validation(Required=false)]
+                public string TestContent { get; set; }
 
                 /// <summary>
                 /// <para>The IDs of regions to which to distribute the image that will be created based on the image template.</para>
