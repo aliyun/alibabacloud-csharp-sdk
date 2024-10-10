@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>A8A24108-2AD0-4F6E-81C7-A8A24C2C2AD0</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

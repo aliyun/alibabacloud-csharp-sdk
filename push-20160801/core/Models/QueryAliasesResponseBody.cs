@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<QueryAliasesResponseBodyAliasInfosAliasInfo> AliasInfo { get; set; }
             public class QueryAliasesResponseBodyAliasInfosAliasInfo : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>test_alias1</para>
+                /// </summary>
                 [NameInMap("AliasName")]
                 [Validation(Required=false)]
                 public string AliasName { get; set; }
@@ -25,6 +29,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>159E4422-6624-4750-8943-DFD98D34858C</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

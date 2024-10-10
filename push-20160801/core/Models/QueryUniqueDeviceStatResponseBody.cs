@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat> AppDeviceStat { get; set; }
             public class QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public long? Count { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2016-07-25T00:00:00Z</para>
+                /// </summary>
                 [NameInMap("Time")]
                 [Validation(Required=false)]
                 public string Time { get; set; }
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

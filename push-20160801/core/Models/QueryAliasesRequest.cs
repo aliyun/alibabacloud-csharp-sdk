@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryAliasesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23267207</para>
         /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public long? AppKey { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e2ba19de97604f55b165576****</para>
         /// </summary>
         [NameInMap("DeviceId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class CheckCertificateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23267207</para>
         /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]

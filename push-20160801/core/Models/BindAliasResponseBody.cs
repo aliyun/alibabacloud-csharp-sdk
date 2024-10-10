@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class BindAliasResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>159E4422-6624-4750-8943-DFD98D34858C</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
