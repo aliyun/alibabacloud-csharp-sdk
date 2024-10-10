@@ -14,18 +14,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
@@ -36,48 +37,56 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The resource type. Set the value to scalinggroup.
+        /// <para>The resource type. Set the value to scalinggroup.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>scalinggroup</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// Details of the tags.
-        /// 
-        /// This parameter is required.
+        /// <para>Details of the tags.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTags> Tags { get; set; }
         public class TagResourcesRequestTags : TeaModel {
             /// <summary>
-            /// The key of the tag that you want to add to the Auto Scaling resource.
+            /// <para>The key of the tag that you want to add to the Auto Scaling resource.</para>
+            /// <para>You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
             /// 
-            /// You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// Specifies whether to propagate the tag that you want to add. Valid values:
+            /// <para>Specifies whether to propagate the tag that you want to add. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: propagates the tag only to instances that are newly created and does not propagate the tag to instances that are already running in the scaling group.</description></item>
+            /// <item><description>false: does not propagate the tag to any instances.</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
-            /// *   true: propagates the tag only to instances that are newly created and does not propagate the tag to instances that are already running in the scaling group.
-            /// *   false: does not propagate the tag to any instances.
-            /// 
-            /// Default value: false.
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Propagate")]
             [Validation(Required=false)]
             public bool? Propagate { get; set; }
 
             /// <summary>
-            /// The value of the tag that you want to add to the Auto Scaling resource.
+            /// <para>The value of the tag that you want to add to the Auto Scaling resource.</para>
+            /// <para>You can specify empty strings as tag values. The tag value must be 0 to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c>.</para>
             /// 
-            /// You can specify empty strings as tag values. The tag value must be 0 to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

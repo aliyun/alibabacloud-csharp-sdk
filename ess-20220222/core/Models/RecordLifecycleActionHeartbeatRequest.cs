@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group.
+        /// <para>The region ID of the scaling group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -29,31 +32,36 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The time window during which the desired ECS instance stays in a Pending state. When the time window ends, Auto Scaling executes the default action. Valid values: 30 to 21600. Unit: seconds.
+        /// <para>The time window during which the desired ECS instance stays in a Pending state. When the time window ends, Auto Scaling executes the default action. Valid values: 30 to 21600. Unit: seconds.</para>
+        /// <para>After you create a lifecycle hook, you can call this operation to extend the time window during which the desired ECS instance stays in a Pending state. You can also call the <a href="https://help.aliyun.com/document_detail/459335.html">CompleteLifecycleAction</a> operation to remove the desired ECS instance from a Pending state ahead of schedule.</para>
+        /// <para>Default value: 600.</para>
         /// 
-        /// After you create a lifecycle hook, you can call this operation to extend the time window during which the desired ECS instance stays in a Pending state. You can also call the [CompleteLifecycleAction](https://help.aliyun.com/document_detail/459335.html) operation to remove the desired ECS instance from a Pending state ahead of schedule.
-        /// 
-        /// Default value: 600.
+        /// <b>Example:</b>
+        /// <para>600</para>
         /// </summary>
         [NameInMap("heartbeatTimeout")]
         [Validation(Required=false)]
         public int? HeartbeatTimeout { get; set; }
 
         /// <summary>
-        /// The action token of the lifecycle hook. You can obtain the token from the details page of the Message Service (MNS) queue specified for the lifecycle hook when the desired ECS instance enters a Pending state.\\
-        /// You can also call the [DescribeLifecycleActions](https://help.aliyun.com/document_detail/459333.html) operation to obtain the action token of the lifecycle hook.\\
-        /// If you specified an MNS topic for the lifecycle hook, you can obtain the token from the MNS topic.
+        /// <para>The action token of the lifecycle hook. You can obtain the token from the details page of the Message Service (MNS) queue specified for the lifecycle hook when the desired ECS instance enters a Pending state.\
+        /// You can also call the <a href="https://help.aliyun.com/document_detail/459333.html">DescribeLifecycleActions</a> operation to obtain the action token of the lifecycle hook.\
+        /// If you specified an MNS topic for the lifecycle hook, you can obtain the token from the MNS topic.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>F324B880-900E-4968-85DD-81691113****</para>
         /// </summary>
         [NameInMap("lifecycleActionToken")]
         [Validation(Required=false)]
         public string LifecycleActionToken { get; set; }
 
         /// <summary>
-        /// The ID of the lifecycle hook.
+        /// <para>The ID of the lifecycle hook.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ash-bp1fxuqyi98w0aib****</para>
         /// </summary>
         [NameInMap("lifecycleHookId")]
         [Validation(Required=false)]

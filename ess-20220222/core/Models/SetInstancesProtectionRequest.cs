@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class SetInstancesProtectionRequest : TeaModel {
         /// <summary>
-        /// The IDs of the ECS instances.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the ECS instances.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -23,12 +22,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to protect ECS instances from being stopped or removed from the scaling group during scale-ins. Valid values:
+        /// <para>Specifies whether to protect ECS instances from being stopped or removed from the scaling group during scale-ins. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   true
-        /// *   false
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ProtectedFromScaleIn")]
         [Validation(Required=false)]
@@ -39,9 +41,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The ID of the scaling group.
+        /// <para>The ID of the scaling group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>asg-bp18p2yfxow2dloq****</para>
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

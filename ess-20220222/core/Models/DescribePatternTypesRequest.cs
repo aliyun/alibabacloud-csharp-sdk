@@ -10,61 +10,72 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribePatternTypesRequest : TeaModel {
         /// <summary>
-        /// The architectures of instance types. Valid values:
-        /// 
-        /// *   X86: x86
-        /// *   Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated
-        /// *   BareMetal: ECS Bare Metal Instance
-        /// *   Arm: Arm
-        /// *   SuperComputeCluster: Super Computing Cluster
-        /// 
-        /// By default, all values are selected.
+        /// <para>The architectures of instance types. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>X86: x86</description></item>
+        /// <item><description>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</description></item>
+        /// <item><description>BareMetal: ECS Bare Metal Instance</description></item>
+        /// <item><description>Arm: Arm</description></item>
+        /// <item><description>SuperComputeCluster: Super Computing Cluster</description></item>
+        /// </list>
+        /// <para>By default, all values are selected.</para>
         /// </summary>
         [NameInMap("Architecture")]
         [Validation(Required=false)]
         public List<string> Architecture { get; set; }
 
         /// <summary>
-        /// Specifies whether to include burstable instance types. Valid values:
+        /// <para>Specifies whether to include burstable instance types. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Exclude: does not include burstable instance types.</description></item>
+        /// <item><description>Include: includes burstable instance types.</description></item>
+        /// <item><description>Required: includes only burstable instance types.</description></item>
+        /// </list>
+        /// <para>Default value: Include.</para>
         /// 
-        /// *   Exclude: does not include burstable instance types.
-        /// *   Include: includes burstable instance types.
-        /// *   Required: includes only burstable instance types.
-        /// 
-        /// Default value: Include.
+        /// <b>Example:</b>
+        /// <para>Include</para>
         /// </summary>
         [NameInMap("BurstablePerformance")]
         [Validation(Required=false)]
         public string BurstablePerformance { get; set; }
 
         /// <summary>
-        /// The channel ID. This parameter is not for public use.
+        /// <para>The channel ID. This parameter is not for public use.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>79425074</para>
         /// </summary>
         [NameInMap("ChannelId")]
         [Validation(Required=false)]
         public long? ChannelId { get; set; }
 
         /// <summary>
-        /// The number of vCPUs that you want to assign to the instance type.
+        /// <para>The number of vCPUs that you want to assign to the instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Cores")]
         [Validation(Required=false)]
         public int? Cores { get; set; }
 
         /// <summary>
-        /// The number of vCPUs that you want to assign to the instance type. You can specify multiple vCPUs.
+        /// <para>The number of vCPUs that you want to assign to the instance type. You can specify multiple vCPUs.</para>
         /// </summary>
         [NameInMap("CoresList")]
         [Validation(Required=false)]
         public List<int?> CoresList { get; set; }
 
         /// <summary>
-        /// The CPU architectures of the instance types. Valid values:
-        /// 
-        /// >  You can specify 1 to 2 CPU architectures.
-        /// 
-        /// *   x86
-        /// *   Arm
+        /// <para>The CPU architectures of the instance types. Valid values:</para>
+        /// <remarks>
+        /// <para> You can specify 1 to 2 CPU architectures.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>x86</description></item>
+        /// <item><description>Arm</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("CpuArchitectures")]
         [Validation(Required=false)]
@@ -75,183 +86,232 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> ExcludedInstanceType { get; set; }
 
         /// <summary>
-        /// The GPU models.
+        /// <para>The GPU models.</para>
         /// </summary>
         [NameInMap("GpuSpecs")]
         [Validation(Required=false)]
         public List<string> GpuSpecs { get; set; }
 
         /// <summary>
-        /// The categories of the instance types. Valid values:
-        /// 
-        /// *   General-purpose
-        /// *   Compute-optimized
-        /// *   Memory-optimized
-        /// *   Big data
-        /// *   Local SSDs
-        /// *   High Clock Speed
-        /// *   Enhanced
-        /// *   Shared
-        /// *   Compute-optimized with GPU
-        /// *   Visual Compute-optimized
-        /// *   Heterogeneous Service
-        /// *   Compute-optimized with FPGA
-        /// *   Compute-optimized with NPU
-        /// *   ECS Bare Metal
-        /// *   Super Computing Cluster
-        /// *   High Performance Compute
+        /// <para>The categories of the instance types. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>General-purpose</description></item>
+        /// <item><description>Compute-optimized</description></item>
+        /// <item><description>Memory-optimized</description></item>
+        /// <item><description>Big data</description></item>
+        /// <item><description>Local SSDs</description></item>
+        /// <item><description>High Clock Speed</description></item>
+        /// <item><description>Enhanced</description></item>
+        /// <item><description>Shared</description></item>
+        /// <item><description>Compute-optimized with GPU</description></item>
+        /// <item><description>Visual Compute-optimized</description></item>
+        /// <item><description>Heterogeneous Service</description></item>
+        /// <item><description>Compute-optimized with FPGA</description></item>
+        /// <item><description>Compute-optimized with NPU</description></item>
+        /// <item><description>ECS Bare Metal</description></item>
+        /// <item><description>Super Computing Cluster</description></item>
+        /// <item><description>High Performance Compute</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("InstanceCategories")]
         [Validation(Required=false)]
         public List<string> InstanceCategories { get; set; }
 
         /// <summary>
-        /// The level of the instance family. Valid values:
+        /// <para>The level of the instance family. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EntryLevel: entry level</description></item>
+        /// <item><description>EnterpriseLevel: enterprise level</description></item>
+        /// <item><description>CreditEntryLevel: credit-based entry level For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</description></item>
+        /// </list>
         /// 
-        /// *   EntryLevel: entry level
-        /// *   EnterpriseLevel: enterprise level
-        /// *   CreditEntryLevel: credit-based entry level For more information, see [Burstable instance families](https://help.aliyun.com/document_detail/59977.html).
+        /// <b>Example:</b>
+        /// <para>EnterpriseLevel</para>
         /// </summary>
         [NameInMap("InstanceFamilyLevel")]
         [Validation(Required=false)]
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// The instance families that you want to query. You can query 1 to 10 instance families in each call.
+        /// <para>The instance families that you want to query. You can query 1 to 10 instance families in each call.</para>
         /// </summary>
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
         public List<string> InstanceTypeFamilies { get; set; }
 
         /// <summary>
-        /// The maximum hourly price for pay-as-you-go or preemptible instances.
+        /// <para>The maximum hourly price for pay-as-you-go or preemptible instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("MaxPrice")]
         [Validation(Required=false)]
         public float? MaxPrice { get; set; }
 
         /// <summary>
-        /// The maximum number of vCPUs per instance type.
+        /// <para>The maximum number of vCPUs per instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("MaximumCpuCoreCount")]
         [Validation(Required=false)]
         public int? MaximumCpuCoreCount { get; set; }
 
         /// <summary>
-        /// The maximum number of GPUs per instance. The value must be a positive integer.
+        /// <para>The maximum number of GPUs per instance. The value must be a positive integer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("MaximumGpuAmount")]
         [Validation(Required=false)]
         public int? MaximumGpuAmount { get; set; }
 
         /// <summary>
-        /// The maximum memory size per instance. Unit: GiB.
+        /// <para>The maximum memory size per instance. Unit: GiB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("MaximumMemorySize")]
         [Validation(Required=false)]
         public float? MaximumMemorySize { get; set; }
 
         /// <summary>
-        /// The memory size that you want to assign to the instance type. Unit: GiB.
+        /// <para>The memory size that you want to assign to the instance type. Unit: GiB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public float? Memory { get; set; }
 
         /// <summary>
-        /// The memory size that you want to assign to the instance type. Unit: GiB. You can specify multiple memory sizes.
+        /// <para>The memory size that you want to assign to the instance type. Unit: GiB. You can specify multiple memory sizes.</para>
         /// </summary>
         [NameInMap("MemoryList")]
         [Validation(Required=false)]
         public List<float?> MemoryList { get; set; }
 
         /// <summary>
-        /// The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.
+        /// <para>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("MinimumBaselineCredit")]
         [Validation(Required=false)]
         public int? MinimumBaselineCredit { get; set; }
 
         /// <summary>
-        /// The minimum number of vCPUs per instance type.
+        /// <para>The minimum number of vCPUs per instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("MinimumCpuCoreCount")]
         [Validation(Required=false)]
         public int? MinimumCpuCoreCount { get; set; }
 
         /// <summary>
-        /// The minimum number of IPv6 addresses per ENI.
+        /// <para>The minimum number of IPv6 addresses per ENI.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MinimumEniIpv6AddressQuantity")]
         [Validation(Required=false)]
         public int? MinimumEniIpv6AddressQuantity { get; set; }
 
         /// <summary>
-        /// The minimum number of IPv4 addresses per ENI.
+        /// <para>The minimum number of IPv4 addresses per ENI.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("MinimumEniPrivateIpAddressQuantity")]
         [Validation(Required=false)]
         public int? MinimumEniPrivateIpAddressQuantity { get; set; }
 
         /// <summary>
-        /// The minimum number of elastic network interfaces (ENIs) per instance.
+        /// <para>The minimum number of elastic network interfaces (ENIs) per instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("MinimumEniQuantity")]
         [Validation(Required=false)]
         public int? MinimumEniQuantity { get; set; }
 
         /// <summary>
-        /// The minimum number of GPUs per instance. The value must be a positive integer.
+        /// <para>The minimum number of GPUs per instance. The value must be a positive integer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("MinimumGpuAmount")]
         [Validation(Required=false)]
         public int? MinimumGpuAmount { get; set; }
 
         /// <summary>
-        /// The initial vCPU credits per t5 or t6 burstable instance.
+        /// <para>The initial vCPU credits per t5 or t6 burstable instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("MinimumInitialCredit")]
         [Validation(Required=false)]
         public int? MinimumInitialCredit { get; set; }
 
         /// <summary>
-        /// The minimum memory size per instance. Unit: GiB.
+        /// <para>The minimum memory size per instance. Unit: GiB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("MinimumMemorySize")]
         [Validation(Required=false)]
         public float? MinimumMemorySize { get; set; }
 
         /// <summary>
-        /// The processor models of the instance types. You can specify 1 to 10 processor models.
+        /// <para>The processor models of the instance types. You can specify 1 to 10 processor models.</para>
         /// </summary>
         [NameInMap("PhysicalProcessorModels")]
         [Validation(Required=false)]
         public List<string> PhysicalProcessorModels { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The preemption policy that you want to apply to pay-as-you-go instances. Valid values:
+        /// <para>The preemption policy that you want to apply to pay-as-you-go instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NoSpot: The instances are created as regular pay-as-you-go instances.</description></item>
+        /// <item><description>SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.</description></item>
+        /// <item><description>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.</description></item>
+        /// </list>
+        /// <para>Default value: NoSpot.</para>
         /// 
-        /// *   NoSpot: The instances are created as regular pay-as-you-go instances.
-        /// *   SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.
-        /// *   SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.
-        /// 
-        /// Default value: NoSpot.
+        /// <b>Example:</b>
+        /// <para>NoSpot</para>
         /// </summary>
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// The IDs of the vSwitches.
+        /// <para>The IDs of the vSwitches.</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

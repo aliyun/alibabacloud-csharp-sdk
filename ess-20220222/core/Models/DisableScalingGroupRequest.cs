@@ -26,9 +26,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the scaling group.
+        /// <para>The ID of the scaling group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>asg-bp18p2yfxow2dloq****</para>
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

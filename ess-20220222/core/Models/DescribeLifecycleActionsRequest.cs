@@ -10,29 +10,37 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeLifecycleActionsRequest : TeaModel {
         /// <summary>
-        /// The status of the lifecycle action. Valid values:
+        /// <para>The status of the lifecycle action. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If a lifecycle action is in the Pending state, Elastic Compute Service (ECS) instances are waiting to be added to a scaling group or waiting to be removed from a scaling group.</description></item>
+        /// <item><description>If a lifecycle action is in the Timeout state, the lifecycle hook that triggers the lifecycle action ends, and ECS instances are added to or removed from the scaling group.</description></item>
+        /// <item><description>If a lifecycle action is in the Completed state, you manually end the lifecycle hook that triggers the lifecycle action ahead of schedule.</description></item>
+        /// </list>
         /// 
-        /// *   If a lifecycle action is in the Pending state, Elastic Compute Service (ECS) instances are waiting to be added to a scaling group or waiting to be removed from a scaling group.
-        /// *   If a lifecycle action is in the Timeout state, the lifecycle hook that triggers the lifecycle action ends, and ECS instances are added to or removed from the scaling group.
-        /// *   If a lifecycle action is in the Completed state, you manually end the lifecycle hook that triggers the lifecycle action ahead of schedule.
+        /// <b>Example:</b>
+        /// <para>Pending</para>
         /// </summary>
         [NameInMap("LifecycleActionStatus")]
         [Validation(Required=false)]
         public string LifecycleActionStatus { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page. Valid values: 1 to 50.
+        /// <para>The maximum number of entries to return on each page. Valid values: 1 to 50.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to specify the lifecycle action from which the query starts.
+        /// <para>The token that is used to specify the lifecycle action from which the query starts.</para>
+        /// <para>For example, after the first 10 lifecycle actions are queried, the query starts from the 11th lifecycle action. Set this parameter to the NextToken value that is returned in the previous API call. If you do not specify this parameter, the query starts from the beginning.</para>
         /// 
-        /// For example, after the first 10 lifecycle actions are queried, the query starts from the 11th lifecycle action. Set this parameter to the NextToken value that is returned in the previous API call. If you do not specify this parameter, the query starts from the beginning.
+        /// <b>Example:</b>
+        /// <para>AAAAAcSz4VTb1Nq****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -43,7 +51,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group.
+        /// <para>The region ID of the scaling group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-qingdao</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -54,9 +65,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The ID of the scaling activity.
+        /// <para>The ID of the scaling activity.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>asa-bp17mug9t0pegagw****</para>
         /// </summary>
         [NameInMap("ScalingActivityId")]
         [Validation(Required=false)]

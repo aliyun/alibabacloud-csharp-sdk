@@ -18,27 +18,33 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page 1.
+        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: 50.
+        /// <para>The number of entries per page. Maximum value: 50.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group to which the scaling configuration that you want to query belongs.
+        /// <para>The region ID of the scaling group to which the scaling configuration that you want to query belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-qingdao</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -53,25 +59,26 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The IDs of the scaling configurations that you want to query.
-        /// 
-        /// The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the `LifecycleState` parameter.
+        /// <para>The IDs of the scaling configurations that you want to query.</para>
+        /// <para>The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the <c>LifecycleState</c> parameter.</para>
         /// </summary>
         [NameInMap("ScalingConfigurationIds")]
         [Validation(Required=false)]
         public List<string> ScalingConfigurationIds { get; set; }
 
         /// <summary>
-        /// The names of the scaling configurations that you want to query.
-        /// 
-        /// The names of inactive scaling configurations are not displayed in the query results, and no error is reported.
+        /// <para>The names of the scaling configurations that you want to query.</para>
+        /// <para>The names of inactive scaling configurations are not displayed in the query results, and no error is reported.</para>
         /// </summary>
         [NameInMap("ScalingConfigurationNames")]
         [Validation(Required=false)]
         public List<string> ScalingConfigurationNames { get; set; }
 
         /// <summary>
-        /// The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.
+        /// <para>The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asg-bp17pelvl720x3v7****</para>
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

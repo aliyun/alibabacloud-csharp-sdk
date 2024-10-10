@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DeleteScalingGroupRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enforce the deletion of the scaling group, including the removal of the current ECS instances or elastic container instances from the scaling group and their subsequent release, even if the scaling group is actively undergoing scaling activities. Valid values:
+        /// <para>Specifies whether to enforce the deletion of the scaling group, including the removal of the current ECS instances or elastic container instances from the scaling group and their subsequent release, even if the scaling group is actively undergoing scaling activities. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: enforces the deletion of the scaling group. In this case, the scaling group first enters the Disabled state, ceasing acceptance of new scaling requests. Auto Scaling awaits the conclusion of all ongoing scaling activities in the scaling group before it automatically removes the current ECS instances or elastic container instances from the scaling group and enforces the deletion operation. Note that manually added instances are merely removed from the scaling group, whereas auto-provisioned instances are removed and deleted.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not enforce the deletion of the scaling group. The scaling group will be disabled and then deleted once all the following requirements are satisfied:</para>
+        /// <list type="bullet">
+        /// <item><description>The scaling group has no ongoing scaling activities.</description></item>
+        /// <item><description>The scaling group contains no ECS instances or elastic container instances (Total Capacity=0).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
-        /// *   true: enforces the deletion of the scaling group. In this case, the scaling group first enters the Disabled state, ceasing acceptance of new scaling requests. Auto Scaling awaits the conclusion of all ongoing scaling activities in the scaling group before it automatically removes the current ECS instances or elastic container instances from the scaling group and enforces the deletion operation. Note that manually added instances are merely removed from the scaling group, whereas auto-provisioned instances are removed and deleted.
-        /// 
-        /// *   false: does not enforce the deletion of the scaling group. The scaling group will be disabled and then deleted once all the following requirements are satisfied:
-        /// 
-        ///     *   The scaling group has no ongoing scaling activities.
-        ///     *   The scaling group contains no ECS instances or elastic container instances (Total Capacity=0).
-        /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ForceDelete")]
         [Validation(Required=false)]
@@ -34,7 +39,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group.
+        /// <para>The region ID of the scaling group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-qingdao</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -45,9 +53,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The ID of the scaling group.
+        /// <para>The ID of the scaling group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>asg-bp18p2yfxow2dloq****</para>
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

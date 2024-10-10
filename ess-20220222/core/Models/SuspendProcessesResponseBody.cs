@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class SuspendProcessesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3E2033F0-03B4-419D-BCE2-C2339DB51****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

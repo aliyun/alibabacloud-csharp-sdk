@@ -10,43 +10,57 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ModifyScalingRuleRequest : TeaModel {
         /// <summary>
-        /// The adjustment method of the scaling rule. This is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. Valid values:
+        /// <para>The adjustment method of the scaling rule. This is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</description></item>
+        /// <item><description>PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</description></item>
+        /// <item><description>TotalCapacity: adjusts the number of ECS instances in the scaling group to the specified number.</description></item>
+        /// </list>
         /// 
-        /// *   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.
-        /// *   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.
-        /// *   TotalCapacity: adjusts the number of ECS instances in the scaling group to the specified number.
+        /// <b>Example:</b>
+        /// <para>QuantityChangeInCapacity</para>
         /// </summary>
         [NameInMap("AdjustmentType")]
         [Validation(Required=false)]
         public string AdjustmentType { get; set; }
 
         /// <summary>
-        /// The target value specified in the scaling rule. This parameter is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. The number of ECS instances that are scaled in a single scaling activity cannot exceed 1,000.
+        /// <para>The target value specified in the scaling rule. This parameter is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. The number of ECS instances that are scaled in a single scaling activity cannot exceed 1,000.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</description></item>
+        /// <item><description>Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</description></item>
+        /// <item><description>Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</description></item>
+        /// </list>
         /// 
-        /// *   Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.
-        /// *   Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.
-        /// *   Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("AdjustmentValue")]
         [Validation(Required=false)]
         public int? AdjustmentValue { get; set; }
 
         /// <summary>
-        /// The dimensions. This parameter is applicable to target tracking scaling rules. You can specify this parameter if your predefined metric requires extra dimensions. For example, if you predefine the LoadBalancerRealServerAverageQps metric, you must use this parameter to specify the rulePool dimension.
+        /// <para>The dimensions. This parameter is applicable to target tracking scaling rules. You can specify this parameter if your predefined metric requires extra dimensions. For example, if you predefine the LoadBalancerRealServerAverageQps metric, you must use this parameter to specify the rulePool dimension.</para>
         /// </summary>
         [NameInMap("AlarmDimensions")]
         [Validation(Required=false)]
         public List<ModifyScalingRuleRequestAlarmDimensions> AlarmDimensions { get; set; }
         public class ModifyScalingRuleRequestAlarmDimensions : TeaModel {
             /// <summary>
-            /// The dimension key of the metric.
+            /// <para>The dimension key of the metric.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rulePool</para>
             /// </summary>
             [NameInMap("DimensionKey")]
             [Validation(Required=false)]
             public string DimensionKey { get; set; }
 
             /// <summary>
-            /// The dimension value of the metric.
+            /// <para>The dimension value of the metric.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sgp-l1cbirz451yxu2dxxx</para>
             /// </summary>
             [NameInMap("DimensionValue")]
             [Validation(Required=false)]
@@ -55,27 +69,35 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule.
+        /// <para>The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule.</para>
+        /// <para>Valid values: 0 to 86400. Unit: seconds.</para>
         /// 
-        /// Valid values: 0 to 86400. Unit: seconds.
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("Cooldown")]
         [Validation(Required=false)]
         public int? Cooldown { get; set; }
 
         /// <summary>
-        /// Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.
+        /// <para>Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DisableScaleIn")]
         [Validation(Required=false)]
         public bool? DisableScaleIn { get; set; }
 
         /// <summary>
-        /// The warmup period of an instance. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the warmup state to a scaling group but does not report monitoring data to CloudMonitor during the warmup period.
+        /// <para>The warmup period of an instance. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the warmup state to a scaling group but does not report monitoring data to CloudMonitor during the warmup period.</para>
+        /// <remarks>
+        /// <para>Auto Scaling calculates the number of ECS instances that need to be scaled. ECS instances in the warmup state are not counted towards the current capacity of the scaling group.</para>
+        /// </remarks>
+        /// <para>Valid values: 0 to 86400. Unit: seconds.</para>
         /// 
-        /// > Auto Scaling calculates the number of ECS instances that need to be scaled. ECS instances in the warmup state are not counted towards the current capacity of the scaling group.
-        /// 
-        /// Valid values: 0 to 86400. Unit: seconds.
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("EstimatedInstanceWarmup")]
         [Validation(Required=false)]
@@ -122,30 +144,36 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string HybridMonitorNamespace { get; set; }
 
         /// <summary>
-        /// The maximum number of ECS instances that can be contained in the scaling group. If you specify InitialMaxSize, you must specify `PredictiveValueBehavior`.
+        /// <para>The maximum number of ECS instances that can be contained in the scaling group. If you specify InitialMaxSize, you must specify <c>PredictiveValueBehavior</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("InitialMaxSize")]
         [Validation(Required=false)]
         public int? InitialMaxSize { get; set; }
 
         /// <summary>
-        /// The predefined metric. This parameter is required only if you create a target tracking scaling rule or predictive scaling rule.
+        /// <para>The predefined metric. This parameter is required only if you create a target tracking scaling rule or predictive scaling rule.</para>
+        /// <para>Valid values if you create a target tracking scaling rule:</para>
+        /// <list type="bullet">
+        /// <item><description>CpuUtilization: the average CPU utilization.</description></item>
+        /// <item><description>IntranetTx: the outbound traffic over an internal network.</description></item>
+        /// <item><description>IntranetRx: the inbound traffic over an internal network.</description></item>
+        /// <item><description>VpcInternetTx: the outbound traffic from a virtual private cloud (VPC) to the Internet.</description></item>
+        /// <item><description>VpcInternetRx: the inbound traffic from the Internet to a VPC.</description></item>
+        /// <item><description>MemoryUtilization: the memory usage.</description></item>
+        /// <item><description>LoadBalancerRealServerAverageQps: the queries per second (QPS) per Application Load Balancer (ALB) server group.</description></item>
+        /// </list>
+        /// <para>Valid values if you create a predictive scaling rule:</para>
+        /// <list type="bullet">
+        /// <item><description>CpuUtilization: the average CPU utilization.</description></item>
+        /// <item><description>IntranetRx: the inbound traffic over an internal network.</description></item>
+        /// <item><description>IntranetTx: the outbound traffic over an internal network.</description></item>
+        /// </list>
         /// 
-        /// Valid values if you create a target tracking scaling rule:
-        /// 
-        /// *   CpuUtilization: the average CPU utilization.
-        /// *   IntranetTx: the outbound traffic over an internal network.
-        /// *   IntranetRx: the inbound traffic over an internal network.
-        /// *   VpcInternetTx: the outbound traffic from a virtual private cloud (VPC) to the Internet.
-        /// *   VpcInternetRx: the inbound traffic from the Internet to a VPC.
-        /// *   MemoryUtilization: the memory usage.
-        /// *   LoadBalancerRealServerAverageQps: the queries per second (QPS) per Application Load Balancer (ALB) server group.
-        /// 
-        /// Valid values if you create a predictive scaling rule:
-        /// 
-        /// *   CpuUtilization: the average CPU utilization.
-        /// *   IntranetRx: the inbound traffic over an internal network.
-        /// *   IntranetTx: the outbound traffic over an internal network.
+        /// <b>Example:</b>
+        /// <para>CpuUtilization</para>
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -156,7 +184,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MetricType { get; set; }
 
         /// <summary>
-        /// The minimum number of instances to scale. This parameter takes effect only if you create a simple scaling rule or step scaling rule and set `AdjustmentType` to `PercentChangeInCapacity`.
+        /// <para>The minimum number of instances to scale. This parameter takes effect only if you create a simple scaling rule or step scaling rule and set <c>AdjustmentType</c> to <c>PercentChangeInCapacity</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MinAdjustmentMagnitude")]
         [Validation(Required=false)]
@@ -171,35 +202,49 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The mode of the predictive scaling rule. Valid values:
+        /// <para>The mode of the predictive scaling rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PredictAndScale: produces predictions and creates prediction tasks.</description></item>
+        /// <item><description>PredictOnly: produces predictions but does not create prediction tasks.</description></item>
+        /// </list>
         /// 
-        /// *   PredictAndScale: produces predictions and creates prediction tasks.
-        /// *   PredictOnly: produces predictions but does not create prediction tasks.
+        /// <b>Example:</b>
+        /// <para>PredictAndScale</para>
         /// </summary>
         [NameInMap("PredictiveScalingMode")]
         [Validation(Required=false)]
         public string PredictiveScalingMode { get; set; }
 
         /// <summary>
-        /// The amount of buffer time before the prediction task is executed. By default, all prediction tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify an amount of buffer time for resource preparation before the prediction tasks are executed. Valid values: 0 to 60.
+        /// <para>The amount of buffer time before the prediction task is executed. By default, all prediction tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify an amount of buffer time for resource preparation before the prediction tasks are executed. Valid values: 0 to 60.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PredictiveTaskBufferTime")]
         [Validation(Required=false)]
         public int? PredictiveTaskBufferTime { get; set; }
 
         /// <summary>
-        /// Specifies which one of the initial maximum capacity and the predicted value can be used as the maximum value for prediction tasks. Valid values:
+        /// <para>Specifies which one of the initial maximum capacity and the predicted value can be used as the maximum value for prediction tasks. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.</description></item>
+        /// <item><description>PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks when the predicted value is greater than the initial maximum capacity.</description></item>
+        /// <item><description>PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.</description></item>
+        /// </list>
         /// 
-        /// *   MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.
-        /// *   PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks when the predicted value is greater than the initial maximum capacity.
-        /// *   PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.
+        /// <b>Example:</b>
+        /// <para>MaxOverridePredictiveValue</para>
         /// </summary>
         [NameInMap("PredictiveValueBehavior")]
         [Validation(Required=false)]
         public string PredictiveValueBehavior { get; set; }
 
         /// <summary>
-        /// The ratio based on which the predicted value is increased when `PredictiveValueBehavior` is set to `PredictiveValueOverrideMaxWithBuffer`. If the predicted value increased by this ratio is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.
+        /// <para>The ratio based on which the predicted value is increased when <c>PredictiveValueBehavior</c> is set to <c>PredictiveValueOverrideMaxWithBuffer</c>. If the predicted value increased by this ratio is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PredictiveValueBuffer")]
         [Validation(Required=false)]
@@ -214,60 +259,79 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.
+        /// <para>The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15</para>
         /// </summary>
         [NameInMap("ScaleInEvaluationCount")]
         [Validation(Required=false)]
         public int? ScaleInEvaluationCount { get; set; }
 
         /// <summary>
-        /// The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.
+        /// <para>The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ScaleOutEvaluationCount")]
         [Validation(Required=false)]
         public int? ScaleOutEvaluationCount { get; set; }
 
         /// <summary>
-        /// The ID of the scaling rule that you want to modify.
+        /// <para>The ID of the scaling rule that you want to modify.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>asr-bp1dvirgwkoowxk7****</para>
         /// </summary>
         [NameInMap("ScalingRuleId")]
         [Validation(Required=false)]
         public string ScalingRuleId { get; set; }
 
         /// <summary>
-        /// The name of the scaling rule. The name must be 2 to 64 letters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or digit.
+        /// <para>The name of the scaling rule. The name must be 2 to 64 letters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or digit.</para>
+        /// <para>The name of each scaling rule must be unique under the same account within the same region.</para>
         /// 
-        /// The name of each scaling rule must be unique under the same account within the same region.
+        /// <b>Example:</b>
+        /// <para>scalingrule****</para>
         /// </summary>
         [NameInMap("ScalingRuleName")]
         [Validation(Required=false)]
         public string ScalingRuleName { get; set; }
 
         /// <summary>
-        /// Details of the step adjustments.
+        /// <para>Details of the step adjustments.</para>
         /// </summary>
         [NameInMap("StepAdjustments")]
         [Validation(Required=false)]
         public List<ModifyScalingRuleRequestStepAdjustments> StepAdjustments { get; set; }
         public class ModifyScalingRuleRequestStepAdjustments : TeaModel {
             /// <summary>
-            /// The lower limit that is specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.
+            /// <para>The lower limit that is specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0</para>
             /// </summary>
             [NameInMap("MetricIntervalLowerBound")]
             [Validation(Required=false)]
             public float? MetricIntervalLowerBound { get; set; }
 
             /// <summary>
-            /// The upper limit specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.
+            /// <para>The upper limit specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5.0</para>
             /// </summary>
             [NameInMap("MetricIntervalUpperBound")]
             [Validation(Required=false)]
             public float? MetricIntervalUpperBound { get; set; }
 
             /// <summary>
-            /// The number of ECS instances that you want to scale in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule.
+            /// <para>The number of ECS instances that you want to scale in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ScalingAdjustment")]
             [Validation(Required=false)]
@@ -276,7 +340,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can have up to three decimal places.
+        /// <para>The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can have up to three decimal places.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.125</para>
         /// </summary>
         [NameInMap("TargetValue")]
         [Validation(Required=false)]

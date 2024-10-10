@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CreateAlarmResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the event-triggered task.
+        /// <para>The ID of the event-triggered task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asg-bp1hvbnmkl10vll5****_f95ce797-dc2e-4bad-9618-14fee7d1****</para>
         /// </summary>
         [NameInMap("AlarmTaskId")]
         [Validation(Required=false)]
         public string AlarmTaskId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group to which you want to move the scaling group.
+        /// <para>The ID of the resource group to which you want to move the scaling group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rg-aek2ckjqe3*****</para>
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
@@ -23,18 +25,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group.
+        /// <para>The region ID of the scaling group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the scaling group that you want to move from the current resource group to another resource group.
+        /// <para>The ID of the scaling group that you want to move from the current resource group to another resource group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>asg-bp17xb4x1vr29lgt****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -45,7 +51,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The resource type. Set the value to scalinggroup.
+        /// <para>The resource type. Set the value to scalinggroup.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>scalinggroup</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

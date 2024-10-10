@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group.
+        /// <para>The region ID of the scaling group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-qingdao</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -29,9 +32,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The ID of the scaling rule that you want to delete.
+        /// <para>The ID of the scaling rule that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>asr-bp163l21e07uhnyt****</para>
         /// </summary>
         [NameInMap("ScalingRuleId")]
         [Validation(Required=false)]

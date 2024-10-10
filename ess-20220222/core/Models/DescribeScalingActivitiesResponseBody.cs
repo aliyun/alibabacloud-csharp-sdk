@@ -10,119 +10,161 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivitiesResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CC107349-57B7-4405-B1BF-9BF5AF7F2A46</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the scaling activities.
+        /// <para>The information about the scaling activities.</para>
         /// </summary>
         [NameInMap("ScalingActivities")]
         [Validation(Required=false)]
         public List<DescribeScalingActivitiesResponseBodyScalingActivities> ScalingActivities { get; set; }
         public class DescribeScalingActivitiesResponseBodyScalingActivities : TeaModel {
             /// <summary>
-            /// The metadata of the scaling activity.
+            /// <para>The metadata of the scaling activity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;goatscaler.io/managed\&quot;:\&quot;true\&quot;}</para>
             /// </summary>
             [NameInMap("ActivityMetadata")]
             [Validation(Required=false)]
             public string ActivityMetadata { get; set; }
 
             /// <summary>
-            /// The total number of instances that are manually added to the scaling group after the scaling activity was complete.
+            /// <para>The total number of instances that are manually added to the scaling group after the scaling activity was complete.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("AttachedCapacity")]
             [Validation(Required=false)]
             public string AttachedCapacity { get; set; }
 
             /// <summary>
-            /// The total number of instances that are created by Auto Scaling after the scaling activity was complete.
+            /// <para>The total number of instances that are created by Auto Scaling after the scaling activity was complete.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("AutoCreatedCapacity")]
             [Validation(Required=false)]
             public string AutoCreatedCapacity { get; set; }
 
             /// <summary>
-            /// The reason why the scaling activity was triggered.
+            /// <para>The reason why the scaling activity was triggered.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>A user requests to execute scaling rule \&quot;asr-bp12tcnol686y1ik****\&quot;, changing the Total Capacity from \&quot;1\&quot; to \&quot;2\&quot;.</para>
             /// </summary>
             [NameInMap("Cause")]
             [Validation(Required=false)]
             public string Cause { get; set; }
 
             /// <summary>
-            /// The number of instances that are created during the scale-out event.
+            /// <para>The number of instances that are created during the scale-out event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CreatedCapacity")]
             [Validation(Required=false)]
             public int? CreatedCapacity { get; set; }
 
             /// <summary>
-            /// The instances that are created during the scale-out event.
+            /// <para>The instances that are created during the scale-out event.</para>
             /// </summary>
             [NameInMap("CreatedInstances")]
             [Validation(Required=false)]
             public List<string> CreatedInstances { get; set; }
 
             /// <summary>
-            /// The description of the scaling activity.
+            /// <para>The description of the scaling activity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Add \&quot;1\&quot; ECS instance</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The number of instances that are released during the scale-in event.
+            /// <para>The number of instances that are released during the scale-in event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("DestroyedCapacity")]
             [Validation(Required=false)]
             public int? DestroyedCapacity { get; set; }
 
             /// <summary>
-            /// The instances that are released during the scale-in event.
+            /// <para>The instances that are released during the scale-in event.</para>
             /// </summary>
             [NameInMap("DestroyedInstances")]
             [Validation(Required=false)]
             public List<string> DestroyedInstances { get; set; }
 
             /// <summary>
-            /// Details of the scaling activity.
+            /// <para>Details of the scaling activity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;new ECS instances &quot;i-j6c8ilerw, i-j6c8iler4mx&quot; are created.&quot;</para>
             /// </summary>
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public string Detail { get; set; }
 
             /// <summary>
-            /// The time when the scaling activity was complete.
+            /// <para>The time when the scaling activity was complete.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-09-10T09:54Z</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
             /// <summary>
-            /// The error code that is returned when the scaling activity failed.
+            /// <para>The error code that is returned when the scaling activity failed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OperationDenied.NoStock</para>
             /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// The error message that is returned when the scaling activity failed.
+            /// <para>The error message that is returned when the scaling activity failed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The specified ECS resource is out of stock in this region. Please try again later.</para>
             /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
@@ -133,24 +175,28 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceRefreshTaskId { get; set; }
 
             /// <summary>
-            /// The context of the lifecycle hook.
+            /// <para>The context of the lifecycle hook.</para>
             /// </summary>
             [NameInMap("LifecycleHookContext")]
             [Validation(Required=false)]
             public DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext LifecycleHookContext { get; set; }
             public class DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext : TeaModel {
                 /// <summary>
-                /// Indicates whether all lifecycle hooks are disabled. Valid values:
+                /// <para>Indicates whether all lifecycle hooks are disabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
                 /// 
-                /// *   true
-                /// *   false
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("DisableLifecycleHook")]
                 [Validation(Required=false)]
                 public bool? DisableLifecycleHook { get; set; }
 
                 /// <summary>
-                /// The IDs of the lifecycle hooks that are disabled.
+                /// <para>The IDs of the lifecycle hooks that are disabled.</para>
                 /// </summary>
                 [NameInMap("IgnoredLifecycleHookIds")]
                 [Validation(Required=false)]
@@ -159,114 +205,152 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// The execution progress of the scaling activity.
+            /// <para>The execution progress of the scaling activity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public int? Progress { get; set; }
 
             /// <summary>
-            /// The ID of the scaling activity.
+            /// <para>The ID of the scaling activity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>asa-bp161xudmuxdzofe****</para>
             /// </summary>
             [NameInMap("ScalingActivityId")]
             [Validation(Required=false)]
             public string ScalingActivityId { get; set; }
 
             /// <summary>
-            /// The ID of the scaling group.
+            /// <para>The ID of the scaling group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>asg-bp18p2yfxow2dloq****</para>
             /// </summary>
             [NameInMap("ScalingGroupId")]
             [Validation(Required=false)]
             public string ScalingGroupId { get; set; }
 
             /// <summary>
-            /// If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out event.
+            /// <para>If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out event.</para>
+            /// <para>If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in event.</para>
             /// 
-            /// If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in event.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ScalingInstanceNumber")]
             [Validation(Required=false)]
             public int? ScalingInstanceNumber { get; set; }
 
             /// <summary>
-            /// The time when the scaling activity was started.
+            /// <para>The time when the scaling activity was started.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-09-10T09:54Z</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// The number of instances that are started from the Economical Mode during the scale-out event.
+            /// <para>The number of instances that are started from the Economical Mode during the scale-out event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("StartedCapacity")]
             [Validation(Required=false)]
             public int? StartedCapacity { get; set; }
 
             /// <summary>
-            /// The instances that are started from the Economical Mode during the scale-out event.
+            /// <para>The instances that are started from the Economical Mode during the scale-out event.</para>
             /// </summary>
             [NameInMap("StartedInstances")]
             [Validation(Required=false)]
             public List<string> StartedInstances { get; set; }
 
             /// <summary>
-            /// The status of the scaling activity. Valid values:
+            /// <para>The status of the scaling activity. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Successful: The scaling activity is successful.</description></item>
+            /// <item><description>Warning: The scaling activity is partially successful.</description></item>
+            /// <item><description>Failed: The scaling activity failed.</description></item>
+            /// <item><description>InProgress: The scaling activity is in progress.</description></item>
+            /// <item><description>Rejected: The request to trigger the scaling activity is rejected.</description></item>
+            /// </list>
             /// 
-            /// *   Successful: The scaling activity is successful.
-            /// *   Warning: The scaling activity is partially successful.
-            /// *   Failed: The scaling activity failed.
-            /// *   InProgress: The scaling activity is in progress.
-            /// *   Rejected: The request to trigger the scaling activity is rejected.
+            /// <b>Example:</b>
+            /// <para>Successful</para>
             /// </summary>
             [NameInMap("StatusCode")]
             [Validation(Required=false)]
             public string StatusCode { get; set; }
 
             /// <summary>
-            /// The status message of the scaling activity.
+            /// <para>The status message of the scaling activity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>\&quot;1\&quot; ECS instances are added</para>
             /// </summary>
             [NameInMap("StatusMessage")]
             [Validation(Required=false)]
             public string StatusMessage { get; set; }
 
             /// <summary>
-            /// The number of instances that are stopped in the Economical Mode during the scale-in event.
+            /// <para>The number of instances that are stopped in the Economical Mode during the scale-in event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("StoppedCapacity")]
             [Validation(Required=false)]
             public int? StoppedCapacity { get; set; }
 
             /// <summary>
-            /// The instances that are stopped in the Economical Mode during the scale-in event.
+            /// <para>The instances that are stopped in the Economical Mode during the scale-in event.</para>
             /// </summary>
             [NameInMap("StoppedInstances")]
             [Validation(Required=false)]
             public List<string> StoppedInstances { get; set; }
 
             /// <summary>
-            /// The total number of instances in the scaling group after the scaling activity was complete.
+            /// <para>The total number of instances in the scaling group after the scaling activity was complete.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("TotalCapacity")]
             [Validation(Required=false)]
             public string TotalCapacity { get; set; }
 
             /// <summary>
-            /// The ID of the trigger source of the scaling activity.
+            /// <para>The ID of the trigger source of the scaling activity.</para>
+            /// <list type="bullet">
+            /// <item><description>If TriggerSourceType is set to Cms, the ID of the trigger source is the ID of an event-triggered task.</description></item>
+            /// <item><description>If TriggerSourceType is set to Api, the ID of the trigger source is the ID of an Alibaba Cloud account or a RAM user.</description></item>
+            /// <item><description>If TriggerSourceType is set to Api, the ID of the trigger source is null.</description></item>
+            /// </list>
             /// 
-            /// *   If TriggerSourceType is set to Cms, the ID of the trigger source is the ID of an event-triggered task.
-            /// *   If TriggerSourceType is set to Api, the ID of the trigger source is the ID of an Alibaba Cloud account or a RAM user.
-            /// *   If TriggerSourceType is set to Api, the ID of the trigger source is null.
+            /// <b>Example:</b>
+            /// <para>2346366580*****</para>
             /// </summary>
             [NameInMap("TriggerSourceId")]
             [Validation(Required=false)]
             public string TriggerSourceId { get; set; }
 
             /// <summary>
-            /// The type of the trigger source of the scaling activity.
+            /// <para>The type of the trigger source of the scaling activity.</para>
+            /// <list type="bullet">
+            /// <item><description>Cms: triggered by an event-triggered task</description></item>
+            /// <item><description>APIs: triggered by API calling</description></item>
+            /// <item><description>Ess: triggered by a system task</description></item>
+            /// </list>
             /// 
-            /// *   Cms: triggered by an event-triggered task
-            /// *   APIs: triggered by API calling
-            /// *   Ess: triggered by a system task
+            /// <b>Example:</b>
+            /// <para>Api</para>
             /// </summary>
             [NameInMap("TriggerSourceType")]
             [Validation(Required=false)]
@@ -275,7 +359,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// The total number of scaling activities.
+        /// <para>The total number of scaling activities.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

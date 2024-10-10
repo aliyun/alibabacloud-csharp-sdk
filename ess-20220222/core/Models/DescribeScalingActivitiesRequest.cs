@@ -22,27 +22,33 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1.
+        /// <para>The number of the page to return. Pages start from page 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 50.
+        /// <para>The number of entries to return on each page. Maximum value: 50.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group to which the scaling activity that you want to query belongs.
+        /// <para>The region ID of the scaling group to which the scaling activity that you want to query belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -57,31 +63,40 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The IDs of the scaling activities that you want to query.
-        /// 
-        /// > When you call this operation, you must specify one of the `ScalingGroupId` and `ScalingActivityId.N` parameters. Otherwise, an error is reported.
+        /// <para>The IDs of the scaling activities that you want to query.</para>
+        /// <remarks>
+        /// <para>When you call this operation, you must specify one of the <c>ScalingGroupId</c> and <c>ScalingActivityId.N</c> parameters. Otherwise, an error is reported.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("ScalingActivityIds")]
         [Validation(Required=false)]
         public List<string> ScalingActivityIds { get; set; }
 
         /// <summary>
-        /// The ID of the scaling group.
+        /// <para>The ID of the scaling group.</para>
+        /// <remarks>
+        /// <para>When you call this operation, you must specify one of the <c>ScalingGroupId</c> and <c>ScalingActivityId.N</c> parameters. Otherwise, an error is reported.</para>
+        /// </remarks>
         /// 
-        /// > When you call this operation, you must specify one of the `ScalingGroupId` and `ScalingActivityId.N` parameters. Otherwise, an error is reported.
+        /// <b>Example:</b>
+        /// <para>asg-bp18p2yfxow2dloq****</para>
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// The status of the scaling activity. Valid values:
+        /// <para>The status of the scaling activity. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Successful: The scaling activity is successful.</description></item>
+        /// <item><description>Warning: The scaling activity is partially successful.</description></item>
+        /// <item><description>Failed: The scaling activity failed.</description></item>
+        /// <item><description>InProgress: The scaling activity is in progress.</description></item>
+        /// <item><description>Rejected: The request to trigger the scaling activity is rejected.</description></item>
+        /// </list>
         /// 
-        /// *   Successful: The scaling activity is successful.
-        /// *   Warning: The scaling activity is partially successful.
-        /// *   Failed: The scaling activity failed.
-        /// *   InProgress: The scaling activity is in progress.
-        /// *   Rejected: The request to trigger the scaling activity is rejected.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("StatusCode")]
         [Validation(Required=false)]

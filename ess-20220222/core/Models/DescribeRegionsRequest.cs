@@ -10,13 +10,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The language for the response. For more information, see [RFC7231](https://tools.ietf.org/html/rfc7231). Valid values:
+        /// <para>The language for the response. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC7231</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN: Chinese</description></item>
+        /// <item><description>en-US: English</description></item>
+        /// <item><description>ja: Japanese</description></item>
+        /// </list>
+        /// <para>Default value: zh-CN.</para>
         /// 
-        /// *   zh-CN: Chinese
-        /// *   en-US: English
-        /// *   ja: Japanese
-        /// 
-        /// Default value: zh-CN.
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

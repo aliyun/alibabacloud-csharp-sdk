@@ -18,27 +18,33 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1.
+        /// <para>The number of the page to return. Pages start from page 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 50.
+        /// <para>The number of entries to return on each page. Maximum value: 50.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group to which the scaling rules that you want to query belong.
+        /// <para>The region ID of the scaling group to which the scaling rules that you want to query belong.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-qingdao</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -53,52 +59,62 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the scaling group.
+        /// <para>The ID of the scaling group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asg-bp1ffogfdauy0jw0****</para>
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// The unique identifiers of the scaling rules that you want to query.
+        /// <para>The unique identifiers of the scaling rules that you want to query.</para>
         /// </summary>
         [NameInMap("ScalingRuleAris")]
         [Validation(Required=false)]
         public List<string> ScalingRuleAris { get; set; }
 
         /// <summary>
-        /// The IDs of the scaling rules that you want to query.
+        /// <para>The IDs of the scaling rules that you want to query.</para>
         /// </summary>
         [NameInMap("ScalingRuleIds")]
         [Validation(Required=false)]
         public List<string> ScalingRuleIds { get; set; }
 
         /// <summary>
-        /// The names of the scaling rules that you want to query.
+        /// <para>The names of the scaling rules that you want to query.</para>
         /// </summary>
         [NameInMap("ScalingRuleNames")]
         [Validation(Required=false)]
         public List<string> ScalingRuleNames { get; set; }
 
         /// <summary>
-        /// The type of the scaling rule. Valid values:
+        /// <para>The type of the scaling rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SimpleScalingRule: adjusts the number of ECS instances based on the values of the AdjustmentType and AdjustmentValue parameters.</description></item>
+        /// <item><description>TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of the TargetValue parameter.</description></item>
+        /// <item><description>StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.</description></item>
+        /// <item><description>PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to adjust the boundary values for the scaling group.</description></item>
+        /// </list>
         /// 
-        /// *   SimpleScalingRule: adjusts the number of ECS instances based on the values of the AdjustmentType and AdjustmentValue parameters.
-        /// *   TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of the TargetValue parameter.
-        /// *   StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.
-        /// *   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to adjust the boundary values for the scaling group.
+        /// <b>Example:</b>
+        /// <para>SimpleScalingRule</para>
         /// </summary>
         [NameInMap("ScalingRuleType")]
         [Validation(Required=false)]
         public string ScalingRuleType { get; set; }
 
         /// <summary>
-        /// Specifies whether to return CloudMonitor event-triggered tasks associated with scaling rules. Valid values:
+        /// <para>Specifies whether to return CloudMonitor event-triggered tasks associated with scaling rules. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
-        /// *   true
-        /// *   false
-        /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ShowAlarmRules")]
         [Validation(Required=false)]

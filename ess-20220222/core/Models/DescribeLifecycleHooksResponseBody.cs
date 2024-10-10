@@ -10,87 +10,116 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeLifecycleHooksResponseBody : TeaModel {
         /// <summary>
-        /// The details of the lifecycle hooks.
+        /// <para>The details of the lifecycle hooks.</para>
         /// </summary>
         [NameInMap("LifecycleHooks")]
         [Validation(Required=false)]
         public List<DescribeLifecycleHooksResponseBodyLifecycleHooks> LifecycleHooks { get; set; }
         public class DescribeLifecycleHooksResponseBodyLifecycleHooks : TeaModel {
             /// <summary>
-            /// The next action that is performed after the lifecycle hook times out.
+            /// <para>The next action that is performed after the lifecycle hook times out.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CONTINUE</para>
             /// </summary>
             [NameInMap("DefaultResult")]
             [Validation(Required=false)]
             public string DefaultResult { get; set; }
 
             /// <summary>
-            /// The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult.
+            /// <para>The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>60</para>
             /// </summary>
             [NameInMap("HeartbeatTimeout")]
             [Validation(Required=false)]
             public int? HeartbeatTimeout { get; set; }
 
             /// <summary>
-            /// The ID of the lifecycle hook.
+            /// <para>The ID of the lifecycle hook.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ash-bp19d1032y9kij96****</para>
             /// </summary>
             [NameInMap("LifecycleHookId")]
             [Validation(Required=false)]
             public string LifecycleHookId { get; set; }
 
             /// <summary>
-            /// The name of the lifecycle hook.
+            /// <para>The name of the lifecycle hook.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>lifecyclehook****</para>
             /// </summary>
             [NameInMap("LifecycleHookName")]
             [Validation(Required=false)]
             public string LifecycleHookName { get; set; }
 
             /// <summary>
-            /// The status of the lifecycle hook. Valid values:
+            /// <para>The status of the lifecycle hook. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Active: The lifecycle hook is enabled.</description></item>
+            /// <item><description>InActive: The lifecycle hook is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   Active: The lifecycle hook is enabled.
-            /// *   InActive: The lifecycle hook is disabled.
+            /// <b>Example:</b>
+            /// <para>Active</para>
             /// </summary>
             [NameInMap("LifecycleHookStatus")]
             [Validation(Required=false)]
             public string LifecycleHookStatus { get; set; }
 
             /// <summary>
-            /// The type of the scaling activity to which the lifecycle hook applies.
+            /// <para>The type of the scaling activity to which the lifecycle hook applies.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SCALE_OUT</para>
             /// </summary>
             [NameInMap("LifecycleTransition")]
             [Validation(Required=false)]
             public string LifecycleTransition { get; set; }
 
             /// <summary>
-            /// The ARN of the notification recipient when the lifecycle hook takes effect. The value of this parameter is in one of the following formats:
+            /// <para>The ARN of the notification recipient when the lifecycle hook takes effect. The value of this parameter is in one of the following formats:</para>
+            /// <list type="bullet">
+            /// <item><description>If you did not specify this parameter, the return value is in the <c>acs:ess:{region-id}:{account-id}:null/null</c> format.</description></item>
+            /// <item><description>If you specified a Message Service (MNS) queue as the notification recipient, the return value is in the <c>acs:mns:{region-id}:{account-id}:queue/{queuename}</c> format.</description></item>
+            /// <item><description>If you specified an MNS topic as the notification recipient, the return value is in the <c>acs:mns:{region-id}:{account-id}:topic/{topicname}</c> format.</description></item>
+            /// <item><description>If you specified a CloudOps Orchestration Service (OOS) template as the notification recipient, the return value is in the <c>acs:oos:{region-id}:{account-id}:template/{templatename}</c> format.</description></item>
+            /// <item><description>If you specified an event bus as the notification recipient, the return value is in the <c>acs:eventbridge:{region-id}:{account-id}:eventbus/default</c> format.</description></item>
+            /// </list>
+            /// <para>The variables in the preceding formats have the following meanings:</para>
+            /// <list type="bullet">
+            /// <item><description>region-id: the region ID of your scaling group.</description></item>
+            /// <item><description>account-id: the ID of your Alibaba Cloud.</description></item>
+            /// <item><description>queuename: the name of the MNS queue.</description></item>
+            /// <item><description>topicname: the name of the MNS topic.</description></item>
+            /// <item><description>templatename: the name of the OOS template.</description></item>
+            /// </list>
             /// 
-            /// *   If you did not specify this parameter, the return value is in the `acs:ess:{region-id}:{account-id}:null/null` format.
-            /// *   If you specified a Message Service (MNS) queue as the notification recipient, the return value is in the `acs:mns:{region-id}:{account-id}:queue/{queuename}` format.
-            /// *   If you specified an MNS topic as the notification recipient, the return value is in the `acs:mns:{region-id}:{account-id}:topic/{topicname}` format.
-            /// *   If you specified a CloudOps Orchestration Service (OOS) template as the notification recipient, the return value is in the `acs:oos:{region-id}:{account-id}:template/{templatename}` format.
-            /// *   If you specified an event bus as the notification recipient, the return value is in the `acs:eventbridge:{region-id}:{account-id}:eventbus/default` format.
-            /// 
-            /// The variables in the preceding formats have the following meanings:
-            /// 
-            /// *   region-id: the region ID of your scaling group.
-            /// *   account-id: the ID of your Alibaba Cloud.
-            /// *   queuename: the name of the MNS queue.
-            /// *   topicname: the name of the MNS topic.
-            /// *   templatename: the name of the OOS template.
+            /// <b>Example:</b>
+            /// <para>acs:ess:cn-beijing:161456884340****:null/null</para>
             /// </summary>
             [NameInMap("NotificationArn")]
             [Validation(Required=false)]
             public string NotificationArn { get; set; }
 
             /// <summary>
-            /// The fixed string that is included in a notification that Auto Scaling sends when the lifecycle hook takes effect.
+            /// <para>The fixed string that is included in a notification that Auto Scaling sends when the lifecycle hook takes effect.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test Lifecycle Hook.</para>
             /// </summary>
             [NameInMap("NotificationMetadata")]
             [Validation(Required=false)]
             public string NotificationMetadata { get; set; }
 
             /// <summary>
-            /// The ID of the scaling group.
+            /// <para>The ID of the scaling group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>asg-bp1igpak5ft1flyp****</para>
             /// </summary>
             [NameInMap("ScalingGroupId")]
             [Validation(Required=false)]
@@ -99,28 +128,40 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of lifecycle hooks.
+        /// <para>The total number of lifecycle hooks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

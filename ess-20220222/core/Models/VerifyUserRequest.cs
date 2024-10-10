@@ -14,9 +14,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where Auto Scaling is required.
+        /// <para>The ID of the region where Auto Scaling is required.</para>
+        /// <para>Examples: <c>cn-hangzhou</c> and <c>cn-shanghai</c>. For more information, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// 
-        /// Examples: `cn-hangzhou` and `cn-shanghai`. For more information, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

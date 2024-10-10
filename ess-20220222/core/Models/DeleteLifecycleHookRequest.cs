@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DeleteLifecycleHookRequest : TeaModel {
         /// <summary>
-        /// The ID of the lifecycle hook.
+        /// <para>The ID of the lifecycle hook.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ash-bp14g3ee6bt3sc98****</para>
         /// </summary>
         [NameInMap("LifecycleHookId")]
         [Validation(Required=false)]
         public string LifecycleHookId { get; set; }
 
         /// <summary>
-        /// The name of the lifecycle hook.
+        /// <para>The name of the lifecycle hook.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lifecyclehook****</para>
         /// </summary>
         [NameInMap("LifecycleHookName")]
         [Validation(Required=false)]
@@ -32,7 +38,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group.
+        /// <para>The region ID of the scaling group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -43,7 +52,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The ID of the scaling group.
+        /// <para>The ID of the scaling group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asg-bp18p2yfxow2dloq****</para>
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

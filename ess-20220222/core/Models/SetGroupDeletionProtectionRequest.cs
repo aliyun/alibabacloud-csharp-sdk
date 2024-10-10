@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class SetGroupDeletionProtectionRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable deletion protection for the scaling group. Valid values:
+        /// <para>Specifies whether to enable deletion protection for the scaling group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enables deletion protection. In this case, you cannot delete the scaling group by using the Auto Scaling console or calling an API operation. You must disable deletion protection before you can delete the scaling group.</description></item>
+        /// <item><description>false: disables deletion protection.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   true: enables deletion protection. In this case, you cannot delete the scaling group by using the Auto Scaling console or calling an API operation. You must disable deletion protection before you can delete the scaling group.
-        /// *   false: disables deletion protection.
-        /// 
-        /// Default value: false.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("GroupDeletionProtection")]
         [Validation(Required=false)]
@@ -28,7 +30,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-qingdao</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -39,9 +44,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The ID of the scaling group.
+        /// <para>The ID of the scaling group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>asg-bp1igpak5ft1flyp****</para>
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

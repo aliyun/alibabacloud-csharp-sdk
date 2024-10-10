@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class StartInstanceRefreshRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-42665544****</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -17,20 +21,36 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public StartInstanceRefreshRequestDesiredConfiguration DesiredConfiguration { get; set; }
         public class StartInstanceRefreshRequestDesiredConfiguration : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>m-2ze8cqacj7opnf***</para>
+            /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>asc-2zed7lqn4ts4****</para>
+            /// </summary>
             [NameInMap("ScalingConfigurationId")]
             [Validation(Required=false)]
             public string ScalingConfigurationId { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("MaxHealthyPercentage")]
         [Validation(Required=false)]
         public int? MaxHealthyPercentage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>80</para>
+        /// </summary>
         [NameInMap("MinHealthyPercentage")]
         [Validation(Required=false)]
         public int? MinHealthyPercentage { get; set; }
@@ -40,7 +60,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -51,7 +74,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asg-bp18p2yfxow2dloq****</para>
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

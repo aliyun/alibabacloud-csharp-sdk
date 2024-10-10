@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ApplyEciScalingConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the scaling configuration.
+        /// <para>The ID of the scaling configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asc-bp16har3jpj6fjbx****</para>
         /// </summary>
         [NameInMap("ScalingConfigurationId")]
         [Validation(Required=false)]

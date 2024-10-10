@@ -22,9 +22,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The ID of the scaling configuration that you want to delete.
+        /// <para>The ID of the scaling configuration that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>asc-bp1bx8mzur534edp****</para>
         /// </summary>
         [NameInMap("ScalingConfigurationId")]
         [Validation(Required=false)]

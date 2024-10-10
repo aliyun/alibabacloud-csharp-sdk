@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivityDetailResponseBody : TeaModel {
         /// <summary>
-        /// The details of the scaling activity. If the status of the scaling activity is Rejected, no result is displayed.
+        /// <para>The details of the scaling activity. If the status of the scaling activity is Rejected, no result is displayed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>new ECS instances \&quot;i-bp16t2cgmiiymeqv****\&quot; are created.</para>
         /// </summary>
         [NameInMap("Detail")]
         [Validation(Required=false)]
         public string Detail { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B13527BF-1FBD-4334-A512-20F5E9D3FB4D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the scaling activity.
+        /// <para>The ID of the scaling activity.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asa-bp1c9djwrgxjyk31****</para>
         /// </summary>
         [NameInMap("ScalingActivityId")]
         [Validation(Required=false)]
