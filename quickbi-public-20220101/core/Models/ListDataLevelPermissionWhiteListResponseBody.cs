@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListDataLevelPermissionWhiteListResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public ListDataLevelPermissionWhiteListResponseBodyResult Result { get; set; }
         public class ListDataLevelPermissionWhiteListResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>7c7223ae-****-3c744528014b</para>
+            /// </summary>
             [NameInMap("CubeId")]
             [Validation(Required=false)]
             public string CubeId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ROW_LEVEL</para>
+            /// </summary>
             [NameInMap("RuleType")]
             [Validation(Required=false)]
             public string RuleType { get; set; }
@@ -41,6 +53,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

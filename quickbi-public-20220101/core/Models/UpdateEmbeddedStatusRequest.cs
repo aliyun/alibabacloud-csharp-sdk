@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateEmbeddedStatusRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ThirdPartAuthFlag")]
         [Validation(Required=false)]
         public bool? ThirdPartAuthFlag { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>897ce25e-f993-4abd-af84-d13c5610****</para>
         /// </summary>
         [NameInMap("WorksId")]
         [Validation(Required=false)]

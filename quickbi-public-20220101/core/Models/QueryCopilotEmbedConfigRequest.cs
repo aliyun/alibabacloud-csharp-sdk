@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryCopilotEmbedConfigRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>06-ELive</para>
+        /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }

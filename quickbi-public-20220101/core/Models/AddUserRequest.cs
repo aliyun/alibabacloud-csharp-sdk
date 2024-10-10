@@ -10,25 +10,38 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddUserRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:xxxxxx@163.com">xxxxxx@163.com</a></para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// Add organization members.
+        /// <para>Add organization members.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
         [NameInMap("AdminUser")]
         [Validation(Required=false)]
         public bool? AdminUser { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AuthAdminUser")]
         [Validation(Required=false)]
         public bool? AuthAdminUser { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NickName")]
         [Validation(Required=false)]
@@ -39,7 +52,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RoleIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

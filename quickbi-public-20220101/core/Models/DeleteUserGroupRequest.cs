@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DeleteUserGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the user group.
+        /// <para>The ID of the user group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>f5eeb52e-d9c2-4a8b-80e3-47ab55c2****</para>
         /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]

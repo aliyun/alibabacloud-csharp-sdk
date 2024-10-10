@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryUserTagMetaListResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public string TagDescription { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pop_001</para>
+            /// </summary>
             [NameInMap("TagId")]
             [Validation(Required=false)]
             public string TagId { get; set; }
@@ -32,7 +40,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// Queries the metadata list of member tags in an organization.
+        /// <para>Queries the metadata list of member tags in an organization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

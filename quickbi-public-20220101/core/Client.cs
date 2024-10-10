@@ -37,15 +37,28 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary Add selected groups of people incrementally for a single row and column permission rule.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.\\n
-         *
-         * @param request AddDataLevelPermissionRuleUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddDataLevelPermissionRuleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add selected groups of people incrementally for a single row and column permission rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.\n</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddDataLevelPermissionRuleUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataLevelPermissionRuleUsersResponse
+        /// </returns>
         public AddDataLevelPermissionRuleUsersResponse AddDataLevelPermissionRuleUsersWithOptions(AddDataLevelPermissionRuleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -73,15 +86,28 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddDataLevelPermissionRuleUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Add selected groups of people incrementally for a single row and column permission rule.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.\\n
-         *
-         * @param request AddDataLevelPermissionRuleUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddDataLevelPermissionRuleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add selected groups of people incrementally for a single row and column permission rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.\n</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddDataLevelPermissionRuleUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataLevelPermissionRuleUsersResponse
+        /// </returns>
         public async Task<AddDataLevelPermissionRuleUsersResponse> AddDataLevelPermissionRuleUsersWithOptionsAsync(AddDataLevelPermissionRuleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -109,43 +135,76 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddDataLevelPermissionRuleUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Add selected groups of people incrementally for a single row and column permission rule.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.\\n
-         *
-         * @param request AddDataLevelPermissionRuleUsersRequest
-         * @return AddDataLevelPermissionRuleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add selected groups of people incrementally for a single row and column permission rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.\n</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddDataLevelPermissionRuleUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataLevelPermissionRuleUsersResponse
+        /// </returns>
         public AddDataLevelPermissionRuleUsersResponse AddDataLevelPermissionRuleUsers(AddDataLevelPermissionRuleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddDataLevelPermissionRuleUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Add selected groups of people incrementally for a single row and column permission rule.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.\\n
-         *
-         * @param request AddDataLevelPermissionRuleUsersRequest
-         * @return AddDataLevelPermissionRuleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add selected groups of people incrementally for a single row and column permission rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.\n</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddDataLevelPermissionRuleUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataLevelPermissionRuleUsersResponse
+        /// </returns>
         public async Task<AddDataLevelPermissionRuleUsersResponse> AddDataLevelPermissionRuleUsersAsync(AddDataLevelPermissionRuleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddDataLevelPermissionRuleUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 43342***435,1553a****41231
-         *
-         * @description ROW_LEVEL
-         *
-         * @param request AddDataLevelPermissionWhiteListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>43342<em><b>435,1553a</b></em>*41231</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ROW_LEVEL</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataLevelPermissionWhiteListResponse
+        /// </returns>
         public AddDataLevelPermissionWhiteListResponse AddDataLevelPermissionWhiteListWithOptions(AddDataLevelPermissionWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -189,15 +248,26 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddDataLevelPermissionWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 43342***435,1553a****41231
-         *
-         * @description ROW_LEVEL
-         *
-         * @param request AddDataLevelPermissionWhiteListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>43342<em><b>435,1553a</b></em>*41231</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ROW_LEVEL</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataLevelPermissionWhiteListResponse
+        /// </returns>
         public async Task<AddDataLevelPermissionWhiteListResponse> AddDataLevelPermissionWhiteListWithOptionsAsync(AddDataLevelPermissionWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -241,41 +311,67 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddDataLevelPermissionWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 43342***435,1553a****41231
-         *
-         * @description ROW_LEVEL
-         *
-         * @param request AddDataLevelPermissionWhiteListRequest
-         * @return AddDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>43342<em><b>435,1553a</b></em>*41231</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ROW_LEVEL</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataLevelPermissionWhiteListResponse
+        /// </returns>
         public AddDataLevelPermissionWhiteListResponse AddDataLevelPermissionWhiteList(AddDataLevelPermissionWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddDataLevelPermissionWhiteListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 43342***435,1553a****41231
-         *
-         * @description ROW_LEVEL
-         *
-         * @param request AddDataLevelPermissionWhiteListRequest
-         * @return AddDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>43342<em><b>435,1553a</b></em>*41231</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ROW_LEVEL</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataLevelPermissionWhiteListResponse
+        /// </returns>
         public async Task<AddDataLevelPermissionWhiteListResponse> AddDataLevelPermissionWhiteListAsync(AddDataLevelPermissionWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddDataLevelPermissionWhiteListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Add a sharing configuration for data works.
-         *
-         * @param request AddShareReportRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddShareReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a sharing configuration for data works.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddShareReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddShareReportResponse
+        /// </returns>
         public AddShareReportResponse AddShareReportWithOptions(AddShareReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -319,13 +415,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddShareReportResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Add a sharing configuration for data works.
-         *
-         * @param request AddShareReportRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddShareReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a sharing configuration for data works.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddShareReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddShareReportResponse
+        /// </returns>
         public async Task<AddShareReportResponse> AddShareReportWithOptionsAsync(AddShareReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -369,37 +473,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddShareReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Add a sharing configuration for data works.
-         *
-         * @param request AddShareReportRequest
-         * @return AddShareReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a sharing configuration for data works.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddShareReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddShareReportResponse
+        /// </returns>
         public AddShareReportResponse AddShareReport(AddShareReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddShareReportWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Add a sharing configuration for data works.
-         *
-         * @param request AddShareReportRequest
-         * @return AddShareReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a sharing configuration for data works.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddShareReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddShareReportResponse
+        /// </returns>
         public async Task<AddShareReportResponse> AddShareReportAsync(AddShareReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddShareReportWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request AddUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserResponse
+        /// </returns>
         public AddUserResponse AddUserWithOptions(AddUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -449,13 +573,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request AddUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserResponse
+        /// </returns>
         public async Task<AddUserResponse> AddUserWithOptionsAsync(AddUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -505,37 +637,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request AddUserRequest
-         * @return AddUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserResponse
+        /// </returns>
         public AddUserResponse AddUser(AddUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddUserWithOptions(request, runtime);
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request AddUserRequest
-         * @return AddUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserResponse
+        /// </returns>
         public async Task<AddUserResponse> AddUserAsync(AddUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddUserWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request AddUserGroupMemberRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserGroupMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMemberResponse
+        /// </returns>
         public AddUserGroupMemberResponse AddUserGroupMemberWithOptions(AddUserGroupMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -567,13 +719,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddUserGroupMemberResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request AddUserGroupMemberRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserGroupMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMemberResponse
+        /// </returns>
         public async Task<AddUserGroupMemberResponse> AddUserGroupMemberWithOptionsAsync(AddUserGroupMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -605,37 +765,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddUserGroupMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request AddUserGroupMemberRequest
-         * @return AddUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserGroupMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMemberResponse
+        /// </returns>
         public AddUserGroupMemberResponse AddUserGroupMember(AddUserGroupMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddUserGroupMemberWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request AddUserGroupMemberRequest
-         * @return AddUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserGroupMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMemberResponse
+        /// </returns>
         public async Task<AddUserGroupMemberResponse> AddUserGroupMemberAsync(AddUserGroupMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddUserGroupMemberWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Add users to a specified user group at a time.
-         *
-         * @param request AddUserGroupMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddUserGroupMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add users to a specified user group at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserGroupMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMembersResponse
+        /// </returns>
         public AddUserGroupMembersResponse AddUserGroupMembersWithOptions(AddUserGroupMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -667,13 +847,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddUserGroupMembersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Add users to a specified user group at a time.
-         *
-         * @param request AddUserGroupMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddUserGroupMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add users to a specified user group at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserGroupMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMembersResponse
+        /// </returns>
         public async Task<AddUserGroupMembersResponse> AddUserGroupMembersWithOptionsAsync(AddUserGroupMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -705,37 +893,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddUserGroupMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Add users to a specified user group at a time.
-         *
-         * @param request AddUserGroupMembersRequest
-         * @return AddUserGroupMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add users to a specified user group at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserGroupMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMembersResponse
+        /// </returns>
         public AddUserGroupMembersResponse AddUserGroupMembers(AddUserGroupMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddUserGroupMembersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Add users to a specified user group at a time.
-         *
-         * @param request AddUserGroupMembersRequest
-         * @return AddUserGroupMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add users to a specified user group at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserGroupMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMembersResponse
+        /// </returns>
         public async Task<AddUserGroupMembersResponse> AddUserGroupMembersAsync(AddUserGroupMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddUserGroupMembersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Add the metadata of an organization member tag.
-         *
-         * @param request AddUserTagMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add the metadata of an organization member tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserTagMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserTagMetaResponse
+        /// </returns>
         public AddUserTagMetaResponse AddUserTagMetaWithOptions(AddUserTagMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -767,13 +975,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddUserTagMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Add the metadata of an organization member tag.
-         *
-         * @param request AddUserTagMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add the metadata of an organization member tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserTagMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserTagMetaResponse
+        /// </returns>
         public async Task<AddUserTagMetaResponse> AddUserTagMetaWithOptionsAsync(AddUserTagMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -805,37 +1021,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddUserTagMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Add the metadata of an organization member tag.
-         *
-         * @param request AddUserTagMetaRequest
-         * @return AddUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add the metadata of an organization member tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserTagMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserTagMetaResponse
+        /// </returns>
         public AddUserTagMetaResponse AddUserTagMeta(AddUserTagMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddUserTagMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Add the metadata of an organization member tag.
-         *
-         * @param request AddUserTagMetaRequest
-         * @return AddUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add the metadata of an organization member tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserTagMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserTagMetaResponse
+        /// </returns>
         public async Task<AddUserTagMetaResponse> AddUserTagMetaAsync(AddUserTagMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddUserTagMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 添加成员到指定工作空间。
-         *
-         * @param request AddUserToWorkspaceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddUserToWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加成员到指定工作空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserToWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserToWorkspaceResponse
+        /// </returns>
         public AddUserToWorkspaceResponse AddUserToWorkspaceWithOptions(AddUserToWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -871,13 +1107,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddUserToWorkspaceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 添加成员到指定工作空间。
-         *
-         * @param request AddUserToWorkspaceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddUserToWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加成员到指定工作空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserToWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserToWorkspaceResponse
+        /// </returns>
         public async Task<AddUserToWorkspaceResponse> AddUserToWorkspaceWithOptionsAsync(AddUserToWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -913,37 +1157,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddUserToWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 添加成员到指定工作空间。
-         *
-         * @param request AddUserToWorkspaceRequest
-         * @return AddUserToWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加成员到指定工作空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserToWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserToWorkspaceResponse
+        /// </returns>
         public AddUserToWorkspaceResponse AddUserToWorkspace(AddUserToWorkspaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddUserToWorkspaceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 添加成员到指定工作空间。
-         *
-         * @param request AddUserToWorkspaceRequest
-         * @return AddUserToWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加成员到指定工作空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddUserToWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserToWorkspaceResponse
+        /// </returns>
         public async Task<AddUserToWorkspaceResponse> AddUserToWorkspaceAsync(AddUserToWorkspaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddUserToWorkspaceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 批量添加成员到工作空间。
-         *
-         * @param request AddWorkspaceUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddWorkspaceUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加成员到工作空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorkspaceUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorkspaceUsersResponse
+        /// </returns>
         public AddWorkspaceUsersResponse AddWorkspaceUsersWithOptions(AddWorkspaceUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -979,13 +1243,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddWorkspaceUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量添加成员到工作空间。
-         *
-         * @param request AddWorkspaceUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddWorkspaceUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加成员到工作空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorkspaceUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorkspaceUsersResponse
+        /// </returns>
         public async Task<AddWorkspaceUsersResponse> AddWorkspaceUsersWithOptionsAsync(AddWorkspaceUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1021,37 +1293,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddWorkspaceUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量添加成员到工作空间。
-         *
-         * @param request AddWorkspaceUsersRequest
-         * @return AddWorkspaceUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加成员到工作空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorkspaceUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorkspaceUsersResponse
+        /// </returns>
         public AddWorkspaceUsersResponse AddWorkspaceUsers(AddWorkspaceUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddWorkspaceUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 批量添加成员到工作空间。
-         *
-         * @param request AddWorkspaceUsersRequest
-         * @return AddWorkspaceUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加成员到工作空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorkspaceUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorkspaceUsersResponse
+        /// </returns>
         public async Task<AddWorkspaceUsersResponse> AddWorkspaceUsersAsync(AddWorkspaceUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddWorkspaceUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 触发数据集抽取加速。
-         *
-         * @param request AllotDatasetAccelerationTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllotDatasetAccelerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发数据集抽取加速。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllotDatasetAccelerationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllotDatasetAccelerationTaskResponse
+        /// </returns>
         public AllotDatasetAccelerationTaskResponse AllotDatasetAccelerationTaskWithOptions(AllotDatasetAccelerationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1079,13 +1371,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AllotDatasetAccelerationTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 触发数据集抽取加速。
-         *
-         * @param request AllotDatasetAccelerationTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllotDatasetAccelerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发数据集抽取加速。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllotDatasetAccelerationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllotDatasetAccelerationTaskResponse
+        /// </returns>
         public async Task<AllotDatasetAccelerationTaskResponse> AllotDatasetAccelerationTaskWithOptionsAsync(AllotDatasetAccelerationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1113,37 +1413,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AllotDatasetAccelerationTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 触发数据集抽取加速。
-         *
-         * @param request AllotDatasetAccelerationTaskRequest
-         * @return AllotDatasetAccelerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发数据集抽取加速。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllotDatasetAccelerationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllotDatasetAccelerationTaskResponse
+        /// </returns>
         public AllotDatasetAccelerationTaskResponse AllotDatasetAccelerationTask(AllotDatasetAccelerationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AllotDatasetAccelerationTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 触发数据集抽取加速。
-         *
-         * @param request AllotDatasetAccelerationTaskRequest
-         * @return AllotDatasetAccelerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发数据集抽取加速。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllotDatasetAccelerationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllotDatasetAccelerationTaskResponse
+        /// </returns>
         public async Task<AllotDatasetAccelerationTaskResponse> AllotDatasetAccelerationTaskAsync(AllotDatasetAccelerationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AllotDatasetAccelerationTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Batch authorization of BI portal menu will be skipped automatically.
-         *
-         * @param request AuthorizeMenuRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AuthorizeMenuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch authorization of BI portal menu will be skipped automatically.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeMenuRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeMenuResponse
+        /// </returns>
         public AuthorizeMenuResponse AuthorizeMenuWithOptions(AuthorizeMenuRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1187,13 +1507,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AuthorizeMenuResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Batch authorization of BI portal menu will be skipped automatically.
-         *
-         * @param request AuthorizeMenuRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AuthorizeMenuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch authorization of BI portal menu will be skipped automatically.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeMenuRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeMenuResponse
+        /// </returns>
         public async Task<AuthorizeMenuResponse> AuthorizeMenuWithOptionsAsync(AuthorizeMenuRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1237,37 +1565,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AuthorizeMenuResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Batch authorization of BI portal menu will be skipped automatically.
-         *
-         * @param request AuthorizeMenuRequest
-         * @return AuthorizeMenuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch authorization of BI portal menu will be skipped automatically.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeMenuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeMenuResponse
+        /// </returns>
         public AuthorizeMenuResponse AuthorizeMenu(AuthorizeMenuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AuthorizeMenuWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Batch authorization of BI portal menu will be skipped automatically.
-         *
-         * @param request AuthorizeMenuRequest
-         * @return AuthorizeMenuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch authorization of BI portal menu will be skipped automatically.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeMenuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeMenuResponse
+        /// </returns>
         public async Task<AuthorizeMenuResponse> AuthorizeMenuAsync(AuthorizeMenuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AuthorizeMenuWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 批量添加飞书用户。
-         *
-         * @param request BatchAddFeishuUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchAddFeishuUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加飞书用户。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAddFeishuUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAddFeishuUsersResponse
+        /// </returns>
         public BatchAddFeishuUsersResponse BatchAddFeishuUsersWithOptions(BatchAddFeishuUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1311,13 +1659,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<BatchAddFeishuUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量添加飞书用户。
-         *
-         * @param request BatchAddFeishuUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchAddFeishuUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加飞书用户。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAddFeishuUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAddFeishuUsersResponse
+        /// </returns>
         public async Task<BatchAddFeishuUsersResponse> BatchAddFeishuUsersWithOptionsAsync(BatchAddFeishuUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1361,37 +1717,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<BatchAddFeishuUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量添加飞书用户。
-         *
-         * @param request BatchAddFeishuUsersRequest
-         * @return BatchAddFeishuUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加飞书用户。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAddFeishuUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAddFeishuUsersResponse
+        /// </returns>
         public BatchAddFeishuUsersResponse BatchAddFeishuUsers(BatchAddFeishuUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchAddFeishuUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 批量添加飞书用户。
-         *
-         * @param request BatchAddFeishuUsersRequest
-         * @return BatchAddFeishuUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加飞书用户。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAddFeishuUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAddFeishuUsersResponse
+        /// </returns>
         public async Task<BatchAddFeishuUsersResponse> BatchAddFeishuUsersAsync(BatchAddFeishuUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchAddFeishuUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 根据门户菜单ID，取消指定用户、用户组的授权记录。
-         *
-         * @param request CancelAuthorizationMenuRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelAuthorizationMenuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据门户菜单ID，取消指定用户、用户组的授权记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelAuthorizationMenuRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAuthorizationMenuResponse
+        /// </returns>
         public CancelAuthorizationMenuResponse CancelAuthorizationMenuWithOptions(CancelAuthorizationMenuRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1431,13 +1807,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CancelAuthorizationMenuResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据门户菜单ID，取消指定用户、用户组的授权记录。
-         *
-         * @param request CancelAuthorizationMenuRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelAuthorizationMenuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据门户菜单ID，取消指定用户、用户组的授权记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelAuthorizationMenuRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAuthorizationMenuResponse
+        /// </returns>
         public async Task<CancelAuthorizationMenuResponse> CancelAuthorizationMenuWithOptionsAsync(CancelAuthorizationMenuRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1477,37 +1861,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CancelAuthorizationMenuResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据门户菜单ID，取消指定用户、用户组的授权记录。
-         *
-         * @param request CancelAuthorizationMenuRequest
-         * @return CancelAuthorizationMenuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据门户菜单ID，取消指定用户、用户组的授权记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelAuthorizationMenuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAuthorizationMenuResponse
+        /// </returns>
         public CancelAuthorizationMenuResponse CancelAuthorizationMenu(CancelAuthorizationMenuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelAuthorizationMenuWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 根据门户菜单ID，取消指定用户、用户组的授权记录。
-         *
-         * @param request CancelAuthorizationMenuRequest
-         * @return CancelAuthorizationMenuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据门户菜单ID，取消指定用户、用户组的授权记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelAuthorizationMenuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAuthorizationMenuResponse
+        /// </returns>
         public async Task<CancelAuthorizationMenuResponse> CancelAuthorizationMenuAsync(CancelAuthorizationMenuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelAuthorizationMenuWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Cancel the data works from the user\\"s collection.
-         *
-         * @param request CancelCollectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelCollectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancel the data works from the user\&quot;s collection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelCollectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCollectionResponse
+        /// </returns>
         public CancelCollectionResponse CancelCollectionWithOptions(CancelCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1539,13 +1943,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CancelCollectionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancel the data works from the user\\"s collection.
-         *
-         * @param request CancelCollectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelCollectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancel the data works from the user\&quot;s collection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelCollectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCollectionResponse
+        /// </returns>
         public async Task<CancelCollectionResponse> CancelCollectionWithOptionsAsync(CancelCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1577,37 +1989,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CancelCollectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancel the data works from the user\\"s collection.
-         *
-         * @param request CancelCollectionRequest
-         * @return CancelCollectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancel the data works from the user\&quot;s collection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelCollectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCollectionResponse
+        /// </returns>
         public CancelCollectionResponse CancelCollection(CancelCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelCollectionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Cancel the data works from the user\\"s collection.
-         *
-         * @param request CancelCollectionRequest
-         * @return CancelCollectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancel the data works from the user\&quot;s collection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelCollectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCollectionResponse
+        /// </returns>
         public async Task<CancelCollectionResponse> CancelCollectionAsync(CancelCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelCollectionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Delete a share authorization for a data work.
-         *
-         * @param request CancelReportShareRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelReportShareResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a share authorization for a data work.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelReportShareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelReportShareResponse
+        /// </returns>
         public CancelReportShareResponse CancelReportShareWithOptions(CancelReportShareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1643,13 +2075,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CancelReportShareResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Delete a share authorization for a data work.
-         *
-         * @param request CancelReportShareRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelReportShareResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a share authorization for a data work.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelReportShareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelReportShareResponse
+        /// </returns>
         public async Task<CancelReportShareResponse> CancelReportShareWithOptionsAsync(CancelReportShareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1685,37 +2125,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CancelReportShareResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Delete a share authorization for a data work.
-         *
-         * @param request CancelReportShareRequest
-         * @return CancelReportShareResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a share authorization for a data work.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelReportShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelReportShareResponse
+        /// </returns>
         public CancelReportShareResponse CancelReportShare(CancelReportShareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelReportShareWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Delete a share authorization for a data work.
-         *
-         * @param request CancelReportShareRequest
-         * @return CancelReportShareResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a share authorization for a data work.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelReportShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelReportShareResponse
+        /// </returns>
         public async Task<CancelReportShareResponse> CancelReportShareAsync(CancelReportShareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelReportShareWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request ChangeVisibilityModelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeVisibilityModelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeVisibilityModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeVisibilityModelResponse
+        /// </returns>
         public ChangeVisibilityModelResponse ChangeVisibilityModelWithOptions(ChangeVisibilityModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1751,13 +2211,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ChangeVisibilityModelResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request ChangeVisibilityModelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeVisibilityModelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeVisibilityModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeVisibilityModelResponse
+        /// </returns>
         public async Task<ChangeVisibilityModelResponse> ChangeVisibilityModelWithOptionsAsync(ChangeVisibilityModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1793,37 +2261,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ChangeVisibilityModelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request ChangeVisibilityModelRequest
-         * @return ChangeVisibilityModelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeVisibilityModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeVisibilityModelResponse
+        /// </returns>
         public ChangeVisibilityModelResponse ChangeVisibilityModel(ChangeVisibilityModelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeVisibilityModelWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request ChangeVisibilityModelRequest
-         * @return ChangeVisibilityModelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeVisibilityModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeVisibilityModelResponse
+        /// </returns>
         public async Task<ChangeVisibilityModelResponse> ChangeVisibilityModelAsync(ChangeVisibilityModelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChangeVisibilityModelWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries whether a user has permissions to view data works, such as dashboards and workbooks.
-         *
-         * @param request CheckReadableRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckReadableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a user has permissions to view data works, such as dashboards and workbooks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckReadableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckReadableResponse
+        /// </returns>
         public CheckReadableResponse CheckReadableWithOptions(CheckReadableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1855,13 +2343,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CheckReadableResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether a user has permissions to view data works, such as dashboards and workbooks.
-         *
-         * @param request CheckReadableRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckReadableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a user has permissions to view data works, such as dashboards and workbooks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckReadableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckReadableResponse
+        /// </returns>
         public async Task<CheckReadableResponse> CheckReadableWithOptionsAsync(CheckReadableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1893,37 +2389,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CheckReadableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether a user has permissions to view data works, such as dashboards and workbooks.
-         *
-         * @param request CheckReadableRequest
-         * @return CheckReadableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a user has permissions to view data works, such as dashboards and workbooks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckReadableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckReadableResponse
+        /// </returns>
         public CheckReadableResponse CheckReadable(CheckReadableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckReadableWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether a user has permissions to view data works, such as dashboards and workbooks.
-         *
-         * @param request CheckReadableRequest
-         * @return CheckReadableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a user has permissions to view data works, such as dashboards and workbooks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckReadableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckReadableResponse
+        /// </returns>
         public async Task<CheckReadableResponse> CheckReadableAsync(CheckReadableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckReadableWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 生成三方嵌入的ticket。
-         *
-         * @param request CreateTicketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成三方嵌入的ticket。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicketResponse
+        /// </returns>
         public CreateTicketResponse CreateTicketWithOptions(CreateTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1983,13 +2499,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CreateTicketResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 生成三方嵌入的ticket。
-         *
-         * @param request CreateTicketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成三方嵌入的ticket。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicketResponse
+        /// </returns>
         public async Task<CreateTicketResponse> CreateTicketWithOptionsAsync(CreateTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2049,37 +2573,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CreateTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 生成三方嵌入的ticket。
-         *
-         * @param request CreateTicketRequest
-         * @return CreateTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成三方嵌入的ticket。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicketResponse
+        /// </returns>
         public CreateTicketResponse CreateTicket(CreateTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTicketWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 生成三方嵌入的ticket。
-         *
-         * @param request CreateTicketRequest
-         * @return CreateTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成三方嵌入的ticket。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicketResponse
+        /// </returns>
         public async Task<CreateTicketResponse> CreateTicketAsync(CreateTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTicketWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 生成智能小Q嵌入ticket。
-         *
-         * @param request CreateTicket4CopilotRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTicket4CopilotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成智能小Q嵌入ticket。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicket4CopilotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicket4CopilotResponse
+        /// </returns>
         public CreateTicket4CopilotResponse CreateTicket4CopilotWithOptions(CreateTicket4CopilotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2127,13 +2671,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CreateTicket4CopilotResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 生成智能小Q嵌入ticket。
-         *
-         * @param request CreateTicket4CopilotRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTicket4CopilotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成智能小Q嵌入ticket。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicket4CopilotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicket4CopilotResponse
+        /// </returns>
         public async Task<CreateTicket4CopilotResponse> CreateTicket4CopilotWithOptionsAsync(CreateTicket4CopilotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2181,37 +2733,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CreateTicket4CopilotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 生成智能小Q嵌入ticket。
-         *
-         * @param request CreateTicket4CopilotRequest
-         * @return CreateTicket4CopilotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成智能小Q嵌入ticket。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicket4CopilotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicket4CopilotResponse
+        /// </returns>
         public CreateTicket4CopilotResponse CreateTicket4Copilot(CreateTicket4CopilotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTicket4CopilotWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 生成智能小Q嵌入ticket。
-         *
-         * @param request CreateTicket4CopilotRequest
-         * @return CreateTicket4CopilotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成智能小Q嵌入ticket。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicket4CopilotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicket4CopilotResponse
+        /// </returns>
         public async Task<CreateTicket4CopilotResponse> CreateTicket4CopilotAsync(CreateTicket4CopilotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTicket4CopilotWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Create a user group. You can specify a parent user group.
-         *
-         * @param request CreateUserGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a user group. You can specify a parent user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
         public CreateUserGroupResponse CreateUserGroupWithOptions(CreateUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2251,13 +2823,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CreateUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Create a user group. You can specify a parent user group.
-         *
-         * @param request CreateUserGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a user group. You can specify a parent user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
         public async Task<CreateUserGroupResponse> CreateUserGroupWithOptionsAsync(CreateUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2297,37 +2877,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<CreateUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Create a user group. You can specify a parent user group.
-         *
-         * @param request CreateUserGroupRequest
-         * @return CreateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a user group. You can specify a parent user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
         public CreateUserGroupResponse CreateUserGroup(CreateUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateUserGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Create a user group. You can specify a parent user group.
-         *
-         * @param request CreateUserGroupRequest
-         * @return CreateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a user group. You can specify a parent user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
         public async Task<CreateUserGroupResponse> CreateUserGroupAsync(CreateUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUserGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询引用指定数据集下的作品信息。
-         *
-         * @param request DataSetBloodRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DataSetBloodResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询引用指定数据集下的作品信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DataSetBloodRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DataSetBloodResponse
+        /// </returns>
         public DataSetBloodResponse DataSetBloodWithOptions(DataSetBloodRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2363,13 +2963,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DataSetBloodResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询引用指定数据集下的作品信息。
-         *
-         * @param request DataSetBloodRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DataSetBloodResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询引用指定数据集下的作品信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DataSetBloodRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DataSetBloodResponse
+        /// </returns>
         public async Task<DataSetBloodResponse> DataSetBloodWithOptionsAsync(DataSetBloodRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2405,37 +3013,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DataSetBloodResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询引用指定数据集下的作品信息。
-         *
-         * @param request DataSetBloodRequest
-         * @return DataSetBloodResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询引用指定数据集下的作品信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DataSetBloodRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DataSetBloodResponse
+        /// </returns>
         public DataSetBloodResponse DataSetBlood(DataSetBloodRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DataSetBloodWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询引用指定数据集下的作品信息。
-         *
-         * @param request DataSetBloodRequest
-         * @return DataSetBloodResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询引用指定数据集下的作品信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DataSetBloodRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DataSetBloodResponse
+        /// </returns>
         public async Task<DataSetBloodResponse> DataSetBloodAsync(DataSetBloodRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DataSetBloodWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询引用指定数据源下的数据集信息。
-         *
-         * @param request DataSourceBloodRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DataSourceBloodResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询引用指定数据源下的数据集信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DataSourceBloodRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DataSourceBloodResponse
+        /// </returns>
         public DataSourceBloodResponse DataSourceBloodWithOptions(DataSourceBloodRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2463,13 +3091,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DataSourceBloodResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询引用指定数据源下的数据集信息。
-         *
-         * @param request DataSourceBloodRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DataSourceBloodResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询引用指定数据源下的数据集信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DataSourceBloodRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DataSourceBloodResponse
+        /// </returns>
         public async Task<DataSourceBloodResponse> DataSourceBloodWithOptionsAsync(DataSourceBloodRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2497,37 +3133,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DataSourceBloodResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询引用指定数据源下的数据集信息。
-         *
-         * @param request DataSourceBloodRequest
-         * @return DataSourceBloodResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询引用指定数据源下的数据集信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DataSourceBloodRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DataSourceBloodResponse
+        /// </returns>
         public DataSourceBloodResponse DataSourceBlood(DataSourceBloodRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DataSourceBloodWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询引用指定数据源下的数据集信息。
-         *
-         * @param request DataSourceBloodRequest
-         * @return DataSourceBloodResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询引用指定数据源下的数据集信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DataSourceBloodRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DataSourceBloodResponse
+        /// </returns>
         public async Task<DataSourceBloodResponse> DataSourceBloodAsync(DataSourceBloodRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DataSourceBloodWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Update the expiration time of the ticket embedded in the report.
-         *
-         * @param request DelayTicketExpireTimeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DelayTicketExpireTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the expiration time of the ticket embedded in the report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DelayTicketExpireTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DelayTicketExpireTimeResponse
+        /// </returns>
         public DelayTicketExpireTimeResponse DelayTicketExpireTimeWithOptions(DelayTicketExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2559,13 +3215,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DelayTicketExpireTimeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Update the expiration time of the ticket embedded in the report.
-         *
-         * @param request DelayTicketExpireTimeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DelayTicketExpireTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the expiration time of the ticket embedded in the report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DelayTicketExpireTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DelayTicketExpireTimeResponse
+        /// </returns>
         public async Task<DelayTicketExpireTimeResponse> DelayTicketExpireTimeWithOptionsAsync(DelayTicketExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2597,39 +3261,62 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DelayTicketExpireTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Update the expiration time of the ticket embedded in the report.
-         *
-         * @param request DelayTicketExpireTimeRequest
-         * @return DelayTicketExpireTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the expiration time of the ticket embedded in the report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DelayTicketExpireTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DelayTicketExpireTimeResponse
+        /// </returns>
         public DelayTicketExpireTimeResponse DelayTicketExpireTime(DelayTicketExpireTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DelayTicketExpireTimeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Update the expiration time of the ticket embedded in the report.
-         *
-         * @param request DelayTicketExpireTimeRequest
-         * @return DelayTicketExpireTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the expiration time of the ticket embedded in the report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DelayTicketExpireTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DelayTicketExpireTimeResponse
+        /// </returns>
         public async Task<DelayTicketExpireTimeResponse> DelayTicketExpireTimeAsync(DelayTicketExpireTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DelayTicketExpireTimeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary { "ruleId": "a5bb24da- ***-a891683e14da", // The ID of the row-column permission rule. "cubeId": "7c7223ae- ***-3c744528014b", // The ID of the dataset. "delModel": { "userGroups": [ "0d5fb19b- ***-1248 fc27ca51", // Delete the user group ID of the user group. "3d2c23d4-***-f6390f325c2d" ], "users": [ "4334 ***358", // Delete the UserID of the user group. "Huang***3fa822" ] } }
-         *
-         * @description {"ruleId":"a5bb24da-***-a891683e14da","cubeId":"7c7223ae-***-3c744528014b","delModel":{"userGroups":["0d5fb19b-***-1248fc27ca51","3d2c23d4-***-f6390f325c2d"],"users":["4334***358","Huang***3fa822"]}}
-         *
-         * @param request DeleteDataLevelPermissionRuleUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDataLevelPermissionRuleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>{ &quot;ruleId&quot;: &quot;a5bb24da- ***-a891683e14da&quot;, // The ID of the row-column permission rule. &quot;cubeId&quot;: &quot;7c7223ae- ***-3c744528014b&quot;, // The ID of the dataset. &quot;delModel&quot;: { &quot;userGroups&quot;: [ &quot;0d5fb19b- <em><b>-1248 fc27ca51&quot;, // Delete the user group ID of the user group. &quot;3d2c23d4-</b></em>-f6390f325c2d&quot; ], &quot;users&quot;: [ &quot;4334 <em><b>358&quot;, // Delete the UserID of the user group. &quot;Huang</b></em>3fa822&quot; ] } }</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>{&quot;ruleId&quot;:&quot;a5bb24da-<em><b>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</b></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><b>-1248fc27ca51&quot;,&quot;3d2c23d4-</b></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><b>358&quot;,&quot;Huang</b></em>3fa822&quot;]}}</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataLevelPermissionRuleUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataLevelPermissionRuleUsersResponse
+        /// </returns>
         public DeleteDataLevelPermissionRuleUsersResponse DeleteDataLevelPermissionRuleUsersWithOptions(DeleteDataLevelPermissionRuleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2657,15 +3344,26 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteDataLevelPermissionRuleUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary { "ruleId": "a5bb24da- ***-a891683e14da", // The ID of the row-column permission rule. "cubeId": "7c7223ae- ***-3c744528014b", // The ID of the dataset. "delModel": { "userGroups": [ "0d5fb19b- ***-1248 fc27ca51", // Delete the user group ID of the user group. "3d2c23d4-***-f6390f325c2d" ], "users": [ "4334 ***358", // Delete the UserID of the user group. "Huang***3fa822" ] } }
-         *
-         * @description {"ruleId":"a5bb24da-***-a891683e14da","cubeId":"7c7223ae-***-3c744528014b","delModel":{"userGroups":["0d5fb19b-***-1248fc27ca51","3d2c23d4-***-f6390f325c2d"],"users":["4334***358","Huang***3fa822"]}}
-         *
-         * @param request DeleteDataLevelPermissionRuleUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDataLevelPermissionRuleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>{ &quot;ruleId&quot;: &quot;a5bb24da- ***-a891683e14da&quot;, // The ID of the row-column permission rule. &quot;cubeId&quot;: &quot;7c7223ae- ***-3c744528014b&quot;, // The ID of the dataset. &quot;delModel&quot;: { &quot;userGroups&quot;: [ &quot;0d5fb19b- <em><b>-1248 fc27ca51&quot;, // Delete the user group ID of the user group. &quot;3d2c23d4-</b></em>-f6390f325c2d&quot; ], &quot;users&quot;: [ &quot;4334 <em><b>358&quot;, // Delete the UserID of the user group. &quot;Huang</b></em>3fa822&quot; ] } }</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>{&quot;ruleId&quot;:&quot;a5bb24da-<em><b>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</b></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><b>-1248fc27ca51&quot;,&quot;3d2c23d4-</b></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><b>358&quot;,&quot;Huang</b></em>3fa822&quot;]}}</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataLevelPermissionRuleUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataLevelPermissionRuleUsersResponse
+        /// </returns>
         public async Task<DeleteDataLevelPermissionRuleUsersResponse> DeleteDataLevelPermissionRuleUsersWithOptionsAsync(DeleteDataLevelPermissionRuleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2693,43 +3391,72 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteDataLevelPermissionRuleUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary { "ruleId": "a5bb24da- ***-a891683e14da", // The ID of the row-column permission rule. "cubeId": "7c7223ae- ***-3c744528014b", // The ID of the dataset. "delModel": { "userGroups": [ "0d5fb19b- ***-1248 fc27ca51", // Delete the user group ID of the user group. "3d2c23d4-***-f6390f325c2d" ], "users": [ "4334 ***358", // Delete the UserID of the user group. "Huang***3fa822" ] } }
-         *
-         * @description {"ruleId":"a5bb24da-***-a891683e14da","cubeId":"7c7223ae-***-3c744528014b","delModel":{"userGroups":["0d5fb19b-***-1248fc27ca51","3d2c23d4-***-f6390f325c2d"],"users":["4334***358","Huang***3fa822"]}}
-         *
-         * @param request DeleteDataLevelPermissionRuleUsersRequest
-         * @return DeleteDataLevelPermissionRuleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>{ &quot;ruleId&quot;: &quot;a5bb24da- ***-a891683e14da&quot;, // The ID of the row-column permission rule. &quot;cubeId&quot;: &quot;7c7223ae- ***-3c744528014b&quot;, // The ID of the dataset. &quot;delModel&quot;: { &quot;userGroups&quot;: [ &quot;0d5fb19b- <em><b>-1248 fc27ca51&quot;, // Delete the user group ID of the user group. &quot;3d2c23d4-</b></em>-f6390f325c2d&quot; ], &quot;users&quot;: [ &quot;4334 <em><b>358&quot;, // Delete the UserID of the user group. &quot;Huang</b></em>3fa822&quot; ] } }</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>{&quot;ruleId&quot;:&quot;a5bb24da-<em><b>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</b></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><b>-1248fc27ca51&quot;,&quot;3d2c23d4-</b></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><b>358&quot;,&quot;Huang</b></em>3fa822&quot;]}}</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataLevelPermissionRuleUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataLevelPermissionRuleUsersResponse
+        /// </returns>
         public DeleteDataLevelPermissionRuleUsersResponse DeleteDataLevelPermissionRuleUsers(DeleteDataLevelPermissionRuleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDataLevelPermissionRuleUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary { "ruleId": "a5bb24da- ***-a891683e14da", // The ID of the row-column permission rule. "cubeId": "7c7223ae- ***-3c744528014b", // The ID of the dataset. "delModel": { "userGroups": [ "0d5fb19b- ***-1248 fc27ca51", // Delete the user group ID of the user group. "3d2c23d4-***-f6390f325c2d" ], "users": [ "4334 ***358", // Delete the UserID of the user group. "Huang***3fa822" ] } }
-         *
-         * @description {"ruleId":"a5bb24da-***-a891683e14da","cubeId":"7c7223ae-***-3c744528014b","delModel":{"userGroups":["0d5fb19b-***-1248fc27ca51","3d2c23d4-***-f6390f325c2d"],"users":["4334***358","Huang***3fa822"]}}
-         *
-         * @param request DeleteDataLevelPermissionRuleUsersRequest
-         * @return DeleteDataLevelPermissionRuleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>{ &quot;ruleId&quot;: &quot;a5bb24da- ***-a891683e14da&quot;, // The ID of the row-column permission rule. &quot;cubeId&quot;: &quot;7c7223ae- ***-3c744528014b&quot;, // The ID of the dataset. &quot;delModel&quot;: { &quot;userGroups&quot;: [ &quot;0d5fb19b- <em><b>-1248 fc27ca51&quot;, // Delete the user group ID of the user group. &quot;3d2c23d4-</b></em>-f6390f325c2d&quot; ], &quot;users&quot;: [ &quot;4334 <em><b>358&quot;, // Delete the UserID of the user group. &quot;Huang</b></em>3fa822&quot; ] } }</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>{&quot;ruleId&quot;:&quot;a5bb24da-<em><b>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</b></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><b>-1248fc27ca51&quot;,&quot;3d2c23d4-</b></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><b>358&quot;,&quot;Huang</b></em>3fa822&quot;]}}</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataLevelPermissionRuleUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataLevelPermissionRuleUsersResponse
+        /// </returns>
         public async Task<DeleteDataLevelPermissionRuleUsersResponse> DeleteDataLevelPermissionRuleUsersAsync(DeleteDataLevelPermissionRuleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDataLevelPermissionRuleUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @description The ID of the training dataset that you want to remove from the specified custom linguistic model.
-         *
-         * @param request DeleteDataLevelRuleConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDataLevelRuleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataLevelRuleConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataLevelRuleConfigResponse
+        /// </returns>
         public DeleteDataLevelRuleConfigResponse DeleteDataLevelRuleConfigWithOptions(DeleteDataLevelRuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2761,15 +3488,26 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteDataLevelRuleConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @description The ID of the training dataset that you want to remove from the specified custom linguistic model.
-         *
-         * @param request DeleteDataLevelRuleConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDataLevelRuleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataLevelRuleConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataLevelRuleConfigResponse
+        /// </returns>
         public async Task<DeleteDataLevelRuleConfigResponse> DeleteDataLevelRuleConfigWithOptionsAsync(DeleteDataLevelRuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2801,41 +3539,67 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteDataLevelRuleConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @description The ID of the training dataset that you want to remove from the specified custom linguistic model.
-         *
-         * @param request DeleteDataLevelRuleConfigRequest
-         * @return DeleteDataLevelRuleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataLevelRuleConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataLevelRuleConfigResponse
+        /// </returns>
         public DeleteDataLevelRuleConfigResponse DeleteDataLevelRuleConfig(DeleteDataLevelRuleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDataLevelRuleConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @description The ID of the training dataset that you want to remove from the specified custom linguistic model.
-         *
-         * @param request DeleteDataLevelRuleConfigRequest
-         * @return DeleteDataLevelRuleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataLevelRuleConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataLevelRuleConfigResponse
+        /// </returns>
         public async Task<DeleteDataLevelRuleConfigResponse> DeleteDataLevelRuleConfigAsync(DeleteDataLevelRuleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDataLevelRuleConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request DeleteTicketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTicketResponse
+        /// </returns>
         public DeleteTicketResponse DeleteTicketWithOptions(DeleteTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2863,13 +3627,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteTicketResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request DeleteTicketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTicketResponse
+        /// </returns>
         public async Task<DeleteTicketResponse> DeleteTicketWithOptionsAsync(DeleteTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2897,37 +3669,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request DeleteTicketRequest
-         * @return DeleteTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTicketResponse
+        /// </returns>
         public DeleteTicketResponse DeleteTicket(DeleteTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTicketWithOptions(request, runtime);
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request DeleteTicketRequest
-         * @return DeleteTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTicketResponse
+        /// </returns>
         public async Task<DeleteTicketResponse> DeleteTicketAsync(DeleteTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTicketWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request DeleteUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserResponse
+        /// </returns>
         public DeleteUserResponse DeleteUserWithOptions(DeleteUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2959,13 +3751,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request DeleteUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserResponse
+        /// </returns>
         public async Task<DeleteUserResponse> DeleteUserWithOptionsAsync(DeleteUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2997,37 +3797,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request DeleteUserRequest
-         * @return DeleteUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserResponse
+        /// </returns>
         public DeleteUserResponse DeleteUser(DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserWithOptions(request, runtime);
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request DeleteUserRequest
-         * @return DeleteUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserResponse
+        /// </returns>
         public async Task<DeleteUserResponse> DeleteUserAsync(DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除指定工作空间的成员。
-         *
-         * @param request DeleteUserFromWorkspaceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserFromWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作空间的成员。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserFromWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserFromWorkspaceResponse
+        /// </returns>
         public DeleteUserFromWorkspaceResponse DeleteUserFromWorkspaceWithOptions(DeleteUserFromWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3059,13 +3879,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserFromWorkspaceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除指定工作空间的成员。
-         *
-         * @param request DeleteUserFromWorkspaceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserFromWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作空间的成员。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserFromWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserFromWorkspaceResponse
+        /// </returns>
         public async Task<DeleteUserFromWorkspaceResponse> DeleteUserFromWorkspaceWithOptionsAsync(DeleteUserFromWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3097,37 +3925,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserFromWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除指定工作空间的成员。
-         *
-         * @param request DeleteUserFromWorkspaceRequest
-         * @return DeleteUserFromWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作空间的成员。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserFromWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserFromWorkspaceResponse
+        /// </returns>
         public DeleteUserFromWorkspaceResponse DeleteUserFromWorkspace(DeleteUserFromWorkspaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserFromWorkspaceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除指定工作空间的成员。
-         *
-         * @param request DeleteUserFromWorkspaceRequest
-         * @return DeleteUserFromWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作空间的成员。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserFromWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserFromWorkspaceResponse
+        /// </returns>
         public async Task<DeleteUserFromWorkspaceResponse> DeleteUserFromWorkspaceAsync(DeleteUserFromWorkspaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserFromWorkspaceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a user group in an organization.
-         *
-         * @param request DeleteUserGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user group in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupResponse
+        /// </returns>
         public DeleteUserGroupResponse DeleteUserGroupWithOptions(DeleteUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3155,13 +4003,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a user group in an organization.
-         *
-         * @param request DeleteUserGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user group in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupResponse
+        /// </returns>
         public async Task<DeleteUserGroupResponse> DeleteUserGroupWithOptionsAsync(DeleteUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3189,37 +4045,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a user group in an organization.
-         *
-         * @param request DeleteUserGroupRequest
-         * @return DeleteUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user group in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupResponse
+        /// </returns>
         public DeleteUserGroupResponse DeleteUserGroup(DeleteUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a user group in an organization.
-         *
-         * @param request DeleteUserGroupRequest
-         * @return DeleteUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user group in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupResponse
+        /// </returns>
         public async Task<DeleteUserGroupResponse> DeleteUserGroupAsync(DeleteUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a specified member from a specified user group.
-         *
-         * @param request DeleteUserGroupMemberRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified member from a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupMemberResponse
+        /// </returns>
         public DeleteUserGroupMemberResponse DeleteUserGroupMemberWithOptions(DeleteUserGroupMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3251,13 +4127,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserGroupMemberResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a specified member from a specified user group.
-         *
-         * @param request DeleteUserGroupMemberRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified member from a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupMemberResponse
+        /// </returns>
         public async Task<DeleteUserGroupMemberResponse> DeleteUserGroupMemberWithOptionsAsync(DeleteUserGroupMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3289,39 +4173,61 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserGroupMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a specified member from a specified user group.
-         *
-         * @param request DeleteUserGroupMemberRequest
-         * @return DeleteUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified member from a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupMemberResponse
+        /// </returns>
         public DeleteUserGroupMemberResponse DeleteUserGroupMember(DeleteUserGroupMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserGroupMemberWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a specified member from a specified user group.
-         *
-         * @param request DeleteUserGroupMemberRequest
-         * @return DeleteUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified member from a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupMemberResponse
+        /// </returns>
         public async Task<DeleteUserGroupMemberResponse> DeleteUserGroupMemberAsync(DeleteUserGroupMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserGroupMemberWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Indicates whether the request is successful. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @param request DeleteUserGroupMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserGroupMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupMembersResponse
+        /// </returns>
         public DeleteUserGroupMembersResponse DeleteUserGroupMembersWithOptions(DeleteUserGroupMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3353,15 +4259,25 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserGroupMembersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Indicates whether the request is successful. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @param request DeleteUserGroupMembersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserGroupMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupMembersResponse
+        /// </returns>
         public async Task<DeleteUserGroupMembersResponse> DeleteUserGroupMembersWithOptionsAsync(DeleteUserGroupMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3393,41 +4309,65 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserGroupMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Indicates whether the request is successful. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @param request DeleteUserGroupMembersRequest
-         * @return DeleteUserGroupMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupMembersResponse
+        /// </returns>
         public DeleteUserGroupMembersResponse DeleteUserGroupMembers(DeleteUserGroupMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserGroupMembersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Indicates whether the request is successful. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @param request DeleteUserGroupMembersRequest
-         * @return DeleteUserGroupMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupMembersResponse
+        /// </returns>
         public async Task<DeleteUserGroupMembersResponse> DeleteUserGroupMembersAsync(DeleteUserGroupMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserGroupMembersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes the tag metadata of an organization member.
-         *
-         * @param request DeleteUserTagMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the tag metadata of an organization member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserTagMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserTagMetaResponse
+        /// </returns>
         public DeleteUserTagMetaResponse DeleteUserTagMetaWithOptions(DeleteUserTagMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3455,13 +4395,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserTagMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes the tag metadata of an organization member.
-         *
-         * @param request DeleteUserTagMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the tag metadata of an organization member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserTagMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserTagMetaResponse
+        /// </returns>
         public async Task<DeleteUserTagMetaResponse> DeleteUserTagMetaWithOptionsAsync(DeleteUserTagMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3489,37 +4437,185 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteUserTagMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes the tag metadata of an organization member.
-         *
-         * @param request DeleteUserTagMetaRequest
-         * @return DeleteUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the tag metadata of an organization member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserTagMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserTagMetaResponse
+        /// </returns>
         public DeleteUserTagMetaResponse DeleteUserTagMeta(DeleteUserTagMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserTagMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes the tag metadata of an organization member.
-         *
-         * @param request DeleteUserTagMetaRequest
-         * @return DeleteUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the tag metadata of an organization member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserTagMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserTagMetaResponse
+        /// </returns>
         public async Task<DeleteUserTagMetaResponse> DeleteUserTagMetaAsync(DeleteUserTagMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserTagMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Test description
-         *
-         * @param request GetUserGroupInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetUserGroupInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>组织内查看邮件任务运行状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMailTaskStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMailTaskStatusResponse
+        /// </returns>
+        public GetMailTaskStatusResponse GetMailTaskStatusWithOptions(GetMailTaskStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailId))
+            {
+                query["MailId"] = request.MailId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMailTaskStatus",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMailTaskStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>组织内查看邮件任务运行状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMailTaskStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMailTaskStatusResponse
+        /// </returns>
+        public async Task<GetMailTaskStatusResponse> GetMailTaskStatusWithOptionsAsync(GetMailTaskStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailId))
+            {
+                query["MailId"] = request.MailId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMailTaskStatus",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMailTaskStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>组织内查看邮件任务运行状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMailTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMailTaskStatusResponse
+        /// </returns>
+        public GetMailTaskStatusResponse GetMailTaskStatus(GetMailTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMailTaskStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>组织内查看邮件任务运行状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMailTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMailTaskStatusResponse
+        /// </returns>
+        public async Task<GetMailTaskStatusResponse> GetMailTaskStatusAsync(GetMailTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMailTaskStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Test description</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupInfoResponse
+        /// </returns>
         public GetUserGroupInfoResponse GetUserGroupInfoWithOptions(GetUserGroupInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3547,13 +4643,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<GetUserGroupInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Test description
-         *
-         * @param request GetUserGroupInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetUserGroupInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Test description</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupInfoResponse
+        /// </returns>
         public async Task<GetUserGroupInfoResponse> GetUserGroupInfoWithOptionsAsync(GetUserGroupInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3581,37 +4685,209 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<GetUserGroupInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Test description
-         *
-         * @param request GetUserGroupInfoRequest
-         * @return GetUserGroupInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Test description</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupInfoResponse
+        /// </returns>
         public GetUserGroupInfoResponse GetUserGroupInfo(GetUserGroupInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetUserGroupInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Test description
-         *
-         * @param request GetUserGroupInfoRequest
-         * @return GetUserGroupInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Test description</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupInfoResponse
+        /// </returns>
         public async Task<GetUserGroupInfoResponse> GetUserGroupInfoAsync(GetUserGroupInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUserGroupInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询API数据源列表。
-         *
-         * @param request ListApiDatasourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListApiDatasourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询已嵌入报表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorksEmbedListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorksEmbedListResponse
+        /// </returns>
+        public GetWorksEmbedListResponse GetWorksEmbedListWithOptions(GetWorksEmbedListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorksType))
+            {
+                query["WorksType"] = request.WorksType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WsId))
+            {
+                query["WsId"] = request.WsId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorksEmbedList",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorksEmbedListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询已嵌入报表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorksEmbedListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorksEmbedListResponse
+        /// </returns>
+        public async Task<GetWorksEmbedListResponse> GetWorksEmbedListWithOptionsAsync(GetWorksEmbedListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorksType))
+            {
+                query["WorksType"] = request.WorksType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WsId))
+            {
+                query["WsId"] = request.WsId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorksEmbedList",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorksEmbedListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询已嵌入报表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorksEmbedListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorksEmbedListResponse
+        /// </returns>
+        public GetWorksEmbedListResponse GetWorksEmbedList(GetWorksEmbedListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWorksEmbedListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询已嵌入报表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorksEmbedListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorksEmbedListResponse
+        /// </returns>
+        public async Task<GetWorksEmbedListResponse> GetWorksEmbedListAsync(GetWorksEmbedListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWorksEmbedListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询API数据源列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApiDatasourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiDatasourceResponse
+        /// </returns>
         public ListApiDatasourceResponse ListApiDatasourceWithOptions(ListApiDatasourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3651,13 +4927,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListApiDatasourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询API数据源列表。
-         *
-         * @param request ListApiDatasourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListApiDatasourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询API数据源列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApiDatasourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiDatasourceResponse
+        /// </returns>
         public async Task<ListApiDatasourceResponse> ListApiDatasourceWithOptionsAsync(ListApiDatasourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3697,37 +4981,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListApiDatasourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询API数据源列表。
-         *
-         * @param request ListApiDatasourceRequest
-         * @return ListApiDatasourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询API数据源列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApiDatasourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiDatasourceResponse
+        /// </returns>
         public ListApiDatasourceResponse ListApiDatasource(ListApiDatasourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListApiDatasourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询API数据源列表。
-         *
-         * @param request ListApiDatasourceRequest
-         * @return ListApiDatasourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询API数据源列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApiDatasourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiDatasourceResponse
+        /// </returns>
         public async Task<ListApiDatasourceResponse> ListApiDatasourceAsync(ListApiDatasourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListApiDatasourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries user group information at a time by user group ID.
-         *
-         * @param request ListByUserGroupIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListByUserGroupIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user group information at a time by user group ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListByUserGroupIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListByUserGroupIdResponse
+        /// </returns>
         public ListByUserGroupIdResponse ListByUserGroupIdWithOptions(ListByUserGroupIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3755,13 +5059,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListByUserGroupIdResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries user group information at a time by user group ID.
-         *
-         * @param request ListByUserGroupIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListByUserGroupIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user group information at a time by user group ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListByUserGroupIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListByUserGroupIdResponse
+        /// </returns>
         public async Task<ListByUserGroupIdResponse> ListByUserGroupIdWithOptionsAsync(ListByUserGroupIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3789,37 +5101,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListByUserGroupIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries user group information at a time by user group ID.
-         *
-         * @param request ListByUserGroupIdRequest
-         * @return ListByUserGroupIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user group information at a time by user group ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListByUserGroupIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListByUserGroupIdResponse
+        /// </returns>
         public ListByUserGroupIdResponse ListByUserGroupId(ListByUserGroupIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListByUserGroupIdWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries user group information at a time by user group ID.
-         *
-         * @param request ListByUserGroupIdRequest
-         * @return ListByUserGroupIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user group information at a time by user group ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListByUserGroupIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListByUserGroupIdResponse
+        /// </returns>
         public async Task<ListByUserGroupIdResponse> ListByUserGroupIdAsync(ListByUserGroupIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListByUserGroupIdWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The ID of the work.
-         *
-         * @param request ListCollectionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListCollectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the work.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCollectionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCollectionsResponse
+        /// </returns>
         public ListCollectionsResponse ListCollectionsWithOptions(ListCollectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3847,13 +5179,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListCollectionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The ID of the work.
-         *
-         * @param request ListCollectionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListCollectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the work.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCollectionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCollectionsResponse
+        /// </returns>
         public async Task<ListCollectionsResponse> ListCollectionsWithOptionsAsync(ListCollectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3881,39 +5221,64 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListCollectionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The ID of the work.
-         *
-         * @param request ListCollectionsRequest
-         * @return ListCollectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the work.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCollectionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCollectionsResponse
+        /// </returns>
         public ListCollectionsResponse ListCollections(ListCollectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCollectionsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The ID of the work.
-         *
-         * @param request ListCollectionsRequest
-         * @return ListCollectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the work.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCollectionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCollectionsResponse
+        /// </returns>
         public async Task<ListCollectionsResponse> ListCollectionsAsync(ListCollectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCollectionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can this operation to obtain a list of row and column permission configurations for a specified dataset.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
-         *
-         * @param request ListCubeDataLevelPermissionConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListCubeDataLevelPermissionConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can this operation to obtain a list of row and column permission configurations for a specified dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCubeDataLevelPermissionConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCubeDataLevelPermissionConfigResponse
+        /// </returns>
         public ListCubeDataLevelPermissionConfigResponse ListCubeDataLevelPermissionConfigWithOptions(ListCubeDataLevelPermissionConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3945,15 +5310,28 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListCubeDataLevelPermissionConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can this operation to obtain a list of row and column permission configurations for a specified dataset.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
-         *
-         * @param request ListCubeDataLevelPermissionConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListCubeDataLevelPermissionConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can this operation to obtain a list of row and column permission configurations for a specified dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCubeDataLevelPermissionConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCubeDataLevelPermissionConfigResponse
+        /// </returns>
         public async Task<ListCubeDataLevelPermissionConfigResponse> ListCubeDataLevelPermissionConfigWithOptionsAsync(ListCubeDataLevelPermissionConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3985,41 +5363,71 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListCubeDataLevelPermissionConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can this operation to obtain a list of row and column permission configurations for a specified dataset.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
-         *
-         * @param request ListCubeDataLevelPermissionConfigRequest
-         * @return ListCubeDataLevelPermissionConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can this operation to obtain a list of row and column permission configurations for a specified dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCubeDataLevelPermissionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCubeDataLevelPermissionConfigResponse
+        /// </returns>
         public ListCubeDataLevelPermissionConfigResponse ListCubeDataLevelPermissionConfig(ListCubeDataLevelPermissionConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCubeDataLevelPermissionConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can this operation to obtain a list of row and column permission configurations for a specified dataset.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
-         *
-         * @param request ListCubeDataLevelPermissionConfigRequest
-         * @return ListCubeDataLevelPermissionConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can this operation to obtain a list of row and column permission configurations for a specified dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCubeDataLevelPermissionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCubeDataLevelPermissionConfigResponse
+        /// </returns>
         public async Task<ListCubeDataLevelPermissionConfigResponse> ListCubeDataLevelPermissionConfigAsync(ListCubeDataLevelPermissionConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCubeDataLevelPermissionConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 根据行列权限种类，获取数据集行列权限的白名单列表。
-         *
-         * @param request ListDataLevelPermissionWhiteListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据行列权限种类，获取数据集行列权限的白名单列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataLevelPermissionWhiteListResponse
+        /// </returns>
         public ListDataLevelPermissionWhiteListResponse ListDataLevelPermissionWhiteListWithOptions(ListDataLevelPermissionWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4051,13 +5459,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListDataLevelPermissionWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据行列权限种类，获取数据集行列权限的白名单列表。
-         *
-         * @param request ListDataLevelPermissionWhiteListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据行列权限种类，获取数据集行列权限的白名单列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataLevelPermissionWhiteListResponse
+        /// </returns>
         public async Task<ListDataLevelPermissionWhiteListResponse> ListDataLevelPermissionWhiteListWithOptionsAsync(ListDataLevelPermissionWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4089,37 +5505,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListDataLevelPermissionWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据行列权限种类，获取数据集行列权限的白名单列表。
-         *
-         * @param request ListDataLevelPermissionWhiteListRequest
-         * @return ListDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据行列权限种类，获取数据集行列权限的白名单列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataLevelPermissionWhiteListResponse
+        /// </returns>
         public ListDataLevelPermissionWhiteListResponse ListDataLevelPermissionWhiteList(ListDataLevelPermissionWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDataLevelPermissionWhiteListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 根据行列权限种类，获取数据集行列权限的白名单列表。
-         *
-         * @param request ListDataLevelPermissionWhiteListRequest
-         * @return ListDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据行列权限种类，获取数据集行列权限的白名单列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataLevelPermissionWhiteListResponse
+        /// </returns>
         public async Task<ListDataLevelPermissionWhiteListResponse> ListDataLevelPermissionWhiteListAsync(ListDataLevelPermissionWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDataLevelPermissionWhiteListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取指定用户在首页看板中展示的收藏作品列表。
-         *
-         * @param request ListFavoriteReportsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListFavoriteReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定用户在首页看板中展示的收藏作品列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFavoriteReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFavoriteReportsResponse
+        /// </returns>
         public ListFavoriteReportsResponse ListFavoriteReportsWithOptions(ListFavoriteReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4159,13 +5595,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListFavoriteReportsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定用户在首页看板中展示的收藏作品列表。
-         *
-         * @param request ListFavoriteReportsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListFavoriteReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定用户在首页看板中展示的收藏作品列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFavoriteReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFavoriteReportsResponse
+        /// </returns>
         public async Task<ListFavoriteReportsResponse> ListFavoriteReportsWithOptionsAsync(ListFavoriteReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4205,37 +5649,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListFavoriteReportsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定用户在首页看板中展示的收藏作品列表。
-         *
-         * @param request ListFavoriteReportsRequest
-         * @return ListFavoriteReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定用户在首页看板中展示的收藏作品列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFavoriteReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFavoriteReportsResponse
+        /// </returns>
         public ListFavoriteReportsResponse ListFavoriteReports(ListFavoriteReportsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListFavoriteReportsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取指定用户在首页看板中展示的收藏作品列表。
-         *
-         * @param request ListFavoriteReportsRequest
-         * @return ListFavoriteReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定用户在首页看板中展示的收藏作品列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFavoriteReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFavoriteReportsResponse
+        /// </returns>
         public async Task<ListFavoriteReportsResponse> ListFavoriteReportsAsync(ListFavoriteReportsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListFavoriteReportsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取指定组织角色下的用户列表。
-         *
-         * @param request ListOrganizationRoleUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListOrganizationRoleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定组织角色下的用户列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOrganizationRoleUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOrganizationRoleUsersResponse
+        /// </returns>
         public ListOrganizationRoleUsersResponse ListOrganizationRoleUsersWithOptions(ListOrganizationRoleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4275,13 +5739,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListOrganizationRoleUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定组织角色下的用户列表。
-         *
-         * @param request ListOrganizationRoleUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListOrganizationRoleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定组织角色下的用户列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOrganizationRoleUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOrganizationRoleUsersResponse
+        /// </returns>
         public async Task<ListOrganizationRoleUsersResponse> ListOrganizationRoleUsersWithOptionsAsync(ListOrganizationRoleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4321,37 +5793,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListOrganizationRoleUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定组织角色下的用户列表。
-         *
-         * @param request ListOrganizationRoleUsersRequest
-         * @return ListOrganizationRoleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定组织角色下的用户列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOrganizationRoleUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOrganizationRoleUsersResponse
+        /// </returns>
         public ListOrganizationRoleUsersResponse ListOrganizationRoleUsers(ListOrganizationRoleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListOrganizationRoleUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取指定组织角色下的用户列表。
-         *
-         * @param request ListOrganizationRoleUsersRequest
-         * @return ListOrganizationRoleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定组织角色下的用户列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOrganizationRoleUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOrganizationRoleUsersResponse
+        /// </returns>
         public async Task<ListOrganizationRoleUsersResponse> ListOrganizationRoleUsersAsync(ListOrganizationRoleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListOrganizationRoleUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取组织级别自定义角色列表。
-         *
-         * @param request ListOrganizationRolesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListOrganizationRolesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取组织级别自定义角色列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOrganizationRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOrganizationRolesResponse
+        /// </returns>
         public ListOrganizationRolesResponse ListOrganizationRolesWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -4370,13 +5862,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListOrganizationRolesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取组织级别自定义角色列表。
-         *
-         * @param request ListOrganizationRolesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListOrganizationRolesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取组织级别自定义角色列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOrganizationRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOrganizationRolesResponse
+        /// </returns>
         public async Task<ListOrganizationRolesResponse> ListOrganizationRolesWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -4395,35 +5895,49 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListOrganizationRolesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取组织级别自定义角色列表。
-         *
-         * @return ListOrganizationRolesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取组织级别自定义角色列表。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListOrganizationRolesResponse
+        /// </returns>
         public ListOrganizationRolesResponse ListOrganizationRoles()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListOrganizationRolesWithOptions(runtime);
         }
 
-        /**
-         * @summary 获取组织级别自定义角色列表。
-         *
-         * @return ListOrganizationRolesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取组织级别自定义角色列表。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListOrganizationRolesResponse
+        /// </returns>
         public async Task<ListOrganizationRolesResponse> ListOrganizationRolesAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListOrganizationRolesWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Obtains the list of authorization details for a BI portal menu.
-         *
-         * @param request ListPortalMenuAuthorizationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPortalMenuAuthorizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the list of authorization details for a BI portal menu.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPortalMenuAuthorizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPortalMenuAuthorizationResponse
+        /// </returns>
         public ListPortalMenuAuthorizationResponse ListPortalMenuAuthorizationWithOptions(ListPortalMenuAuthorizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4451,13 +5965,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListPortalMenuAuthorizationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the list of authorization details for a BI portal menu.
-         *
-         * @param request ListPortalMenuAuthorizationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPortalMenuAuthorizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the list of authorization details for a BI portal menu.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPortalMenuAuthorizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPortalMenuAuthorizationResponse
+        /// </returns>
         public async Task<ListPortalMenuAuthorizationResponse> ListPortalMenuAuthorizationWithOptionsAsync(ListPortalMenuAuthorizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4485,37 +6007,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListPortalMenuAuthorizationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the list of authorization details for a BI portal menu.
-         *
-         * @param request ListPortalMenuAuthorizationRequest
-         * @return ListPortalMenuAuthorizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the list of authorization details for a BI portal menu.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPortalMenuAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPortalMenuAuthorizationResponse
+        /// </returns>
         public ListPortalMenuAuthorizationResponse ListPortalMenuAuthorization(ListPortalMenuAuthorizationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListPortalMenuAuthorizationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Obtains the list of authorization details for a BI portal menu.
-         *
-         * @param request ListPortalMenuAuthorizationRequest
-         * @return ListPortalMenuAuthorizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the list of authorization details for a BI portal menu.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPortalMenuAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPortalMenuAuthorizationResponse
+        /// </returns>
         public async Task<ListPortalMenuAuthorizationResponse> ListPortalMenuAuthorizationAsync(ListPortalMenuAuthorizationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPortalMenuAuthorizationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Gets a hierarchical list of menus under a specific BI portal.
-         *
-         * @param request ListPortalMenusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPortalMenusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets a hierarchical list of menus under a specific BI portal.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPortalMenusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPortalMenusResponse
+        /// </returns>
         public ListPortalMenusResponse ListPortalMenusWithOptions(ListPortalMenusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4547,13 +6089,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListPortalMenusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Gets a hierarchical list of menus under a specific BI portal.
-         *
-         * @param request ListPortalMenusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPortalMenusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets a hierarchical list of menus under a specific BI portal.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPortalMenusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPortalMenusResponse
+        /// </returns>
         public async Task<ListPortalMenusResponse> ListPortalMenusWithOptionsAsync(ListPortalMenusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4585,37 +6135,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListPortalMenusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Gets a hierarchical list of menus under a specific BI portal.
-         *
-         * @param request ListPortalMenusRequest
-         * @return ListPortalMenusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets a hierarchical list of menus under a specific BI portal.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPortalMenusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPortalMenusResponse
+        /// </returns>
         public ListPortalMenusResponse ListPortalMenus(ListPortalMenusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListPortalMenusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Gets a hierarchical list of menus under a specific BI portal.
-         *
-         * @param request ListPortalMenusRequest
-         * @return ListPortalMenusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets a hierarchical list of menus under a specific BI portal.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPortalMenusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPortalMenusResponse
+        /// </returns>
         public async Task<ListPortalMenusResponse> ListPortalMenusAsync(ListPortalMenusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPortalMenusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取首页看板常看和足迹列表。
-         *
-         * @param request ListRecentViewReportsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRecentViewReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取首页看板常看和足迹列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecentViewReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentViewReportsResponse
+        /// </returns>
         public ListRecentViewReportsResponse ListRecentViewReportsWithOptions(ListRecentViewReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4663,13 +6233,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListRecentViewReportsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取首页看板常看和足迹列表。
-         *
-         * @param request ListRecentViewReportsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRecentViewReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取首页看板常看和足迹列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecentViewReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentViewReportsResponse
+        /// </returns>
         public async Task<ListRecentViewReportsResponse> ListRecentViewReportsWithOptionsAsync(ListRecentViewReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4717,37 +6295,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListRecentViewReportsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取首页看板常看和足迹列表。
-         *
-         * @param request ListRecentViewReportsRequest
-         * @return ListRecentViewReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取首页看板常看和足迹列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecentViewReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentViewReportsResponse
+        /// </returns>
         public ListRecentViewReportsResponse ListRecentViewReports(ListRecentViewReportsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListRecentViewReportsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取首页看板常看和足迹列表。
-         *
-         * @param request ListRecentViewReportsRequest
-         * @return ListRecentViewReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取首页看板常看和足迹列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecentViewReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentViewReportsResponse
+        /// </returns>
         public async Task<ListRecentViewReportsResponse> ListRecentViewReportsAsync(ListRecentViewReportsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListRecentViewReportsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取指定用户在首页看板中展示的被授权的作品列表。
-         *
-         * @param request ListSharedReportsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSharedReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定用户在首页看板中展示的被授权的作品列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSharedReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSharedReportsResponse
+        /// </returns>
         public ListSharedReportsResponse ListSharedReportsWithOptions(ListSharedReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4787,13 +6385,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListSharedReportsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定用户在首页看板中展示的被授权的作品列表。
-         *
-         * @param request ListSharedReportsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSharedReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定用户在首页看板中展示的被授权的作品列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSharedReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSharedReportsResponse
+        /// </returns>
         public async Task<ListSharedReportsResponse> ListSharedReportsWithOptionsAsync(ListSharedReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4833,37 +6439,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListSharedReportsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定用户在首页看板中展示的被授权的作品列表。
-         *
-         * @param request ListSharedReportsRequest
-         * @return ListSharedReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定用户在首页看板中展示的被授权的作品列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSharedReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSharedReportsResponse
+        /// </returns>
         public ListSharedReportsResponse ListSharedReports(ListSharedReportsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSharedReportsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取指定用户在首页看板中展示的被授权的作品列表。
-         *
-         * @param request ListSharedReportsRequest
-         * @return ListSharedReportsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定用户在首页看板中展示的被授权的作品列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSharedReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSharedReportsResponse
+        /// </returns>
         public async Task<ListSharedReportsResponse> ListSharedReportsAsync(ListSharedReportsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSharedReportsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Description
-         *
-         * @param request ListUserGroupsByUserIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListUserGroupsByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Description</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsByUserIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsByUserIdResponse
+        /// </returns>
         public ListUserGroupsByUserIdResponse ListUserGroupsByUserIdWithOptions(ListUserGroupsByUserIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4891,13 +6517,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListUserGroupsByUserIdResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Description
-         *
-         * @param request ListUserGroupsByUserIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListUserGroupsByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Description</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsByUserIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsByUserIdResponse
+        /// </returns>
         public async Task<ListUserGroupsByUserIdResponse> ListUserGroupsByUserIdWithOptionsAsync(ListUserGroupsByUserIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4925,37 +6559,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListUserGroupsByUserIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Description
-         *
-         * @param request ListUserGroupsByUserIdRequest
-         * @return ListUserGroupsByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Description</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsByUserIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsByUserIdResponse
+        /// </returns>
         public ListUserGroupsByUserIdResponse ListUserGroupsByUserId(ListUserGroupsByUserIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUserGroupsByUserIdWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Description
-         *
-         * @param request ListUserGroupsByUserIdRequest
-         * @return ListUserGroupsByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Description</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsByUserIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsByUserIdResponse
+        /// </returns>
         public async Task<ListUserGroupsByUserIdResponse> ListUserGroupsByUserIdAsync(ListUserGroupsByUserIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUserGroupsByUserIdWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取指定空间角色下的用户列表。
-         *
-         * @param request ListWorkspaceRoleUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkspaceRoleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定空间角色下的用户列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceRoleUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceRoleUsersResponse
+        /// </returns>
         public ListWorkspaceRoleUsersResponse ListWorkspaceRoleUsersWithOptions(ListWorkspaceRoleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4999,13 +6653,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListWorkspaceRoleUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定空间角色下的用户列表。
-         *
-         * @param request ListWorkspaceRoleUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkspaceRoleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定空间角色下的用户列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceRoleUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceRoleUsersResponse
+        /// </returns>
         public async Task<ListWorkspaceRoleUsersResponse> ListWorkspaceRoleUsersWithOptionsAsync(ListWorkspaceRoleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5049,37 +6711,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListWorkspaceRoleUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定空间角色下的用户列表。
-         *
-         * @param request ListWorkspaceRoleUsersRequest
-         * @return ListWorkspaceRoleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定空间角色下的用户列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceRoleUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceRoleUsersResponse
+        /// </returns>
         public ListWorkspaceRoleUsersResponse ListWorkspaceRoleUsers(ListWorkspaceRoleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListWorkspaceRoleUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取指定空间角色下的用户列表。
-         *
-         * @param request ListWorkspaceRoleUsersRequest
-         * @return ListWorkspaceRoleUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定空间角色下的用户列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceRoleUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceRoleUsersResponse
+        /// </returns>
         public async Task<ListWorkspaceRoleUsersResponse> ListWorkspaceRoleUsersAsync(ListWorkspaceRoleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListWorkspaceRoleUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取空间角色列表。
-         *
-         * @param request ListWorkspaceRolesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkspaceRolesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取空间角色列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceRolesResponse
+        /// </returns>
         public ListWorkspaceRolesResponse ListWorkspaceRolesWithOptions(ListWorkspaceRolesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5107,13 +6789,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListWorkspaceRolesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取空间角色列表。
-         *
-         * @param request ListWorkspaceRolesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkspaceRolesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取空间角色列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceRolesResponse
+        /// </returns>
         public async Task<ListWorkspaceRolesResponse> ListWorkspaceRolesWithOptionsAsync(ListWorkspaceRolesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5141,37 +6831,177 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListWorkspaceRolesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取空间角色列表。
-         *
-         * @param request ListWorkspaceRolesRequest
-         * @return ListWorkspaceRolesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取空间角色列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceRolesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceRolesResponse
+        /// </returns>
         public ListWorkspaceRolesResponse ListWorkspaceRoles(ListWorkspaceRolesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListWorkspaceRolesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取空间角色列表。
-         *
-         * @param request ListWorkspaceRolesRequest
-         * @return ListWorkspaceRolesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取空间角色列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceRolesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceRolesResponse
+        /// </returns>
         public async Task<ListWorkspaceRolesResponse> ListWorkspaceRolesAsync(ListWorkspaceRolesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListWorkspaceRolesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改指定API数据源参数值。
-         *
-         * @param request ModifyApiDatasourceParametersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyApiDatasourceParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动执行邮件任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManualRunMailTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManualRunMailTaskResponse
+        /// </returns>
+        public ManualRunMailTaskResponse ManualRunMailTaskWithOptions(ManualRunMailTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailId))
+            {
+                query["MailId"] = request.MailId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManualRunMailTask",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManualRunMailTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动执行邮件任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManualRunMailTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManualRunMailTaskResponse
+        /// </returns>
+        public async Task<ManualRunMailTaskResponse> ManualRunMailTaskWithOptionsAsync(ManualRunMailTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailId))
+            {
+                query["MailId"] = request.MailId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManualRunMailTask",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManualRunMailTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动执行邮件任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManualRunMailTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManualRunMailTaskResponse
+        /// </returns>
+        public ManualRunMailTaskResponse ManualRunMailTask(ManualRunMailTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ManualRunMailTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动执行邮件任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManualRunMailTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManualRunMailTaskResponse
+        /// </returns>
+        public async Task<ManualRunMailTaskResponse> ManualRunMailTaskAsync(ManualRunMailTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ManualRunMailTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改指定API数据源参数值。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApiDatasourceParametersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApiDatasourceParametersResponse
+        /// </returns>
         public ModifyApiDatasourceParametersResponse ModifyApiDatasourceParametersWithOptions(ModifyApiDatasourceParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5207,13 +7037,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ModifyApiDatasourceParametersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改指定API数据源参数值。
-         *
-         * @param request ModifyApiDatasourceParametersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyApiDatasourceParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改指定API数据源参数值。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApiDatasourceParametersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApiDatasourceParametersResponse
+        /// </returns>
         public async Task<ModifyApiDatasourceParametersResponse> ModifyApiDatasourceParametersWithOptionsAsync(ModifyApiDatasourceParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5249,37 +7087,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ModifyApiDatasourceParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改指定API数据源参数值。
-         *
-         * @param request ModifyApiDatasourceParametersRequest
-         * @return ModifyApiDatasourceParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改指定API数据源参数值。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApiDatasourceParametersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApiDatasourceParametersResponse
+        /// </returns>
         public ModifyApiDatasourceParametersResponse ModifyApiDatasourceParameters(ModifyApiDatasourceParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyApiDatasourceParametersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改指定API数据源参数值。
-         *
-         * @param request ModifyApiDatasourceParametersRequest
-         * @return ModifyApiDatasourceParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改指定API数据源参数值。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApiDatasourceParametersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApiDatasourceParametersResponse
+        /// </returns>
         public async Task<ModifyApiDatasourceParametersResponse> ModifyApiDatasourceParametersAsync(ModifyApiDatasourceParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyApiDatasourceParametersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改智能问数嵌入配置。
-         *
-         * @param request ModifyCopilotEmbedConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyCopilotEmbedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改智能问数嵌入配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCopilotEmbedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCopilotEmbedConfigResponse
+        /// </returns>
         public ModifyCopilotEmbedConfigResponse ModifyCopilotEmbedConfigWithOptions(ModifyCopilotEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5319,13 +7177,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ModifyCopilotEmbedConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改智能问数嵌入配置。
-         *
-         * @param request ModifyCopilotEmbedConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyCopilotEmbedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改智能问数嵌入配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCopilotEmbedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCopilotEmbedConfigResponse
+        /// </returns>
         public async Task<ModifyCopilotEmbedConfigResponse> ModifyCopilotEmbedConfigWithOptionsAsync(ModifyCopilotEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5365,37 +7231,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ModifyCopilotEmbedConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改智能问数嵌入配置。
-         *
-         * @param request ModifyCopilotEmbedConfigRequest
-         * @return ModifyCopilotEmbedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改智能问数嵌入配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCopilotEmbedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCopilotEmbedConfigResponse
+        /// </returns>
         public ModifyCopilotEmbedConfigResponse ModifyCopilotEmbedConfig(ModifyCopilotEmbedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCopilotEmbedConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改智能问数嵌入配置。
-         *
-         * @param request ModifyCopilotEmbedConfigRequest
-         * @return ModifyCopilotEmbedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改智能问数嵌入配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCopilotEmbedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCopilotEmbedConfigResponse
+        /// </returns>
         public async Task<ModifyCopilotEmbedConfigResponse> ModifyCopilotEmbedConfigAsync(ModifyCopilotEmbedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCopilotEmbedConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 根据审批人获取相应的审批流信息。
-         *
-         * @param request QueryApprovalInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryApprovalInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据审批人获取相应的审批流信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApprovalInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApprovalInfoResponse
+        /// </returns>
         public QueryApprovalInfoResponse QueryApprovalInfoWithOptions(QueryApprovalInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5435,13 +7321,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryApprovalInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据审批人获取相应的审批流信息。
-         *
-         * @param request QueryApprovalInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryApprovalInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据审批人获取相应的审批流信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApprovalInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApprovalInfoResponse
+        /// </returns>
         public async Task<QueryApprovalInfoResponse> QueryApprovalInfoWithOptionsAsync(QueryApprovalInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5481,37 +7375,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryApprovalInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据审批人获取相应的审批流信息。
-         *
-         * @param request QueryApprovalInfoRequest
-         * @return QueryApprovalInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据审批人获取相应的审批流信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApprovalInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApprovalInfoResponse
+        /// </returns>
         public QueryApprovalInfoResponse QueryApprovalInfo(QueryApprovalInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryApprovalInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 根据审批人获取相应的审批流信息。
-         *
-         * @param request QueryApprovalInfoRequest
-         * @return QueryApprovalInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据审批人获取相应的审批流信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApprovalInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApprovalInfoResponse
+        /// </returns>
         public async Task<QueryApprovalInfoResponse> QueryApprovalInfoAsync(QueryApprovalInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryApprovalInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询审计日志信息。
-         *
-         * @param request QueryAuditLogRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryAuditLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审计日志信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAuditLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAuditLogResponse
+        /// </returns>
         public QueryAuditLogResponse QueryAuditLogWithOptions(QueryAuditLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5563,13 +7477,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryAuditLogResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询审计日志信息。
-         *
-         * @param request QueryAuditLogRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryAuditLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审计日志信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAuditLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAuditLogResponse
+        /// </returns>
         public async Task<QueryAuditLogResponse> QueryAuditLogWithOptionsAsync(QueryAuditLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5621,37 +7543,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryAuditLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询审计日志信息。
-         *
-         * @param request QueryAuditLogRequest
-         * @return QueryAuditLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审计日志信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAuditLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAuditLogResponse
+        /// </returns>
         public QueryAuditLogResponse QueryAuditLog(QueryAuditLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryAuditLogWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询审计日志信息。
-         *
-         * @param request QueryAuditLogRequest
-         * @return QueryAuditLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审计日志信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAuditLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAuditLogResponse
+        /// </returns>
         public async Task<QueryAuditLogResponse> QueryAuditLogAsync(QueryAuditLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryAuditLogWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询组件性能列表。
-         *
-         * @param request QueryComponentPerformanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryComponentPerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询组件性能列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryComponentPerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryComponentPerformanceResponse
+        /// </returns>
         public QueryComponentPerformanceResponse QueryComponentPerformanceWithOptions(QueryComponentPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5703,13 +7645,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryComponentPerformanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询组件性能列表。
-         *
-         * @param request QueryComponentPerformanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryComponentPerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询组件性能列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryComponentPerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryComponentPerformanceResponse
+        /// </returns>
         public async Task<QueryComponentPerformanceResponse> QueryComponentPerformanceWithOptionsAsync(QueryComponentPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5761,37 +7711,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryComponentPerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询组件性能列表。
-         *
-         * @param request QueryComponentPerformanceRequest
-         * @return QueryComponentPerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询组件性能列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryComponentPerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryComponentPerformanceResponse
+        /// </returns>
         public QueryComponentPerformanceResponse QueryComponentPerformance(QueryComponentPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryComponentPerformanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询组件性能列表。
-         *
-         * @param request QueryComponentPerformanceRequest
-         * @return QueryComponentPerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询组件性能列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryComponentPerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryComponentPerformanceResponse
+        /// </returns>
         public async Task<QueryComponentPerformanceResponse> QueryComponentPerformanceAsync(QueryComponentPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryComponentPerformanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取开通小Q嵌入的配置列表。
-         *
-         * @param request QueryCopilotEmbedConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryCopilotEmbedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取开通小Q嵌入的配置列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopilotEmbedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopilotEmbedConfigResponse
+        /// </returns>
         public QueryCopilotEmbedConfigResponse QueryCopilotEmbedConfigWithOptions(QueryCopilotEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5819,13 +7789,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryCopilotEmbedConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取开通小Q嵌入的配置列表。
-         *
-         * @param request QueryCopilotEmbedConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryCopilotEmbedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取开通小Q嵌入的配置列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopilotEmbedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopilotEmbedConfigResponse
+        /// </returns>
         public async Task<QueryCopilotEmbedConfigResponse> QueryCopilotEmbedConfigWithOptionsAsync(QueryCopilotEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5853,37 +7831,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryCopilotEmbedConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取开通小Q嵌入的配置列表。
-         *
-         * @param request QueryCopilotEmbedConfigRequest
-         * @return QueryCopilotEmbedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取开通小Q嵌入的配置列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopilotEmbedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopilotEmbedConfigResponse
+        /// </returns>
         public QueryCopilotEmbedConfigResponse QueryCopilotEmbedConfig(QueryCopilotEmbedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryCopilotEmbedConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取开通小Q嵌入的配置列表。
-         *
-         * @param request QueryCopilotEmbedConfigRequest
-         * @return QueryCopilotEmbedConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取开通小Q嵌入的配置列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopilotEmbedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopilotEmbedConfigResponse
+        /// </returns>
         public async Task<QueryCopilotEmbedConfigResponse> QueryCopilotEmbedConfigAsync(QueryCopilotEmbedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryCopilotEmbedConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询数据集优化建议。
-         *
-         * @param request QueryCubeOptimizationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryCubeOptimizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据集优化建议。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCubeOptimizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCubeOptimizationResponse
+        /// </returns>
         public QueryCubeOptimizationResponse QueryCubeOptimizationWithOptions(QueryCubeOptimizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5911,13 +7909,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryCubeOptimizationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据集优化建议。
-         *
-         * @param request QueryCubeOptimizationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryCubeOptimizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据集优化建议。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCubeOptimizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCubeOptimizationResponse
+        /// </returns>
         public async Task<QueryCubeOptimizationResponse> QueryCubeOptimizationWithOptionsAsync(QueryCubeOptimizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5945,37 +7951,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryCubeOptimizationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据集优化建议。
-         *
-         * @param request QueryCubeOptimizationRequest
-         * @return QueryCubeOptimizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据集优化建议。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCubeOptimizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCubeOptimizationResponse
+        /// </returns>
         public QueryCubeOptimizationResponse QueryCubeOptimization(QueryCubeOptimizationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryCubeOptimizationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询数据集优化建议。
-         *
-         * @param request QueryCubeOptimizationRequest
-         * @return QueryCubeOptimizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据集优化建议。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCubeOptimizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCubeOptimizationResponse
+        /// </returns>
         public async Task<QueryCubeOptimizationResponse> QueryCubeOptimizationAsync(QueryCubeOptimizationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryCubeOptimizationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询数据集性能。
-         *
-         * @param request QueryCubePerformanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryCubePerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据集性能。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCubePerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCubePerformanceResponse
+        /// </returns>
         public QueryCubePerformanceResponse QueryCubePerformanceWithOptions(QueryCubePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6023,13 +8049,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryCubePerformanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据集性能。
-         *
-         * @param request QueryCubePerformanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryCubePerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据集性能。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCubePerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCubePerformanceResponse
+        /// </returns>
         public async Task<QueryCubePerformanceResponse> QueryCubePerformanceWithOptionsAsync(QueryCubePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6077,37 +8111,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryCubePerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据集性能。
-         *
-         * @param request QueryCubePerformanceRequest
-         * @return QueryCubePerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据集性能。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCubePerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCubePerformanceResponse
+        /// </returns>
         public QueryCubePerformanceResponse QueryCubePerformance(QueryCubePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryCubePerformanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询数据集性能。
-         *
-         * @param request QueryCubePerformanceRequest
-         * @return QueryCubePerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据集性能。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCubePerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCubePerformanceResponse
+        /// </returns>
         public async Task<QueryCubePerformanceResponse> QueryCubePerformanceAsync(QueryCubePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryCubePerformanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 调用开放数据服务API。
-         *
-         * @param request QueryDataRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用开放数据服务API。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataResponse
+        /// </returns>
         public QueryDataResponse QueryDataWithOptions(QueryDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6147,13 +8201,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDataResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用开放数据服务API。
-         *
-         * @param request QueryDataRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用开放数据服务API。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataResponse
+        /// </returns>
         public async Task<QueryDataResponse> QueryDataWithOptionsAsync(QueryDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6193,37 +8255,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用开放数据服务API。
-         *
-         * @param request QueryDataRequest
-         * @return QueryDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用开放数据服务API。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataResponse
+        /// </returns>
         public QueryDataResponse QueryData(QueryDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDataWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 调用开放数据服务API。
-         *
-         * @param request QueryDataRequest
-         * @return QueryDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用开放数据服务API。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataResponse
+        /// </returns>
         public async Task<QueryDataResponse> QueryDataAsync(QueryDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDataWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取数据范围目录列表。
-         *
-         * @param request QueryDataRangeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDataRangeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据范围目录列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataRangeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataRangeResponse
+        /// </returns>
         public QueryDataRangeResponse QueryDataRangeWithOptions(QueryDataRangeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6255,13 +8337,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDataRangeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取数据范围目录列表。
-         *
-         * @param request QueryDataRangeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDataRangeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据范围目录列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataRangeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataRangeResponse
+        /// </returns>
         public async Task<QueryDataRangeResponse> QueryDataRangeWithOptionsAsync(QueryDataRangeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6293,39 +8383,62 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDataRangeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取数据范围目录列表。
-         *
-         * @param request QueryDataRangeRequest
-         * @return QueryDataRangeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据范围目录列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataRangeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataRangeResponse
+        /// </returns>
         public QueryDataRangeResponse QueryDataRange(QueryDataRangeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDataRangeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取数据范围目录列表。
-         *
-         * @param request QueryDataRangeRequest
-         * @return QueryDataRangeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据范围目录列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataRangeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataRangeResponse
+        /// </returns>
         public async Task<QueryDataRangeResponse> QueryDataRangeAsync(QueryDataRangeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDataRangeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The operator for the aggregate operation. Metric fields are available, such as SUM, AVG, and MAX.
-         *
-         * @description f4cc43bc3***
-         *
-         * @param request QueryDataServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDataServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The operator for the aggregate operation. Metric fields are available, such as SUM, AVG, and MAX.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>f4cc43bc3***</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDataServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataServiceResponse
+        /// </returns>
         public QueryDataServiceResponse QueryDataServiceWithOptions(QueryDataServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6361,15 +8474,26 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDataServiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The operator for the aggregate operation. Metric fields are available, such as SUM, AVG, and MAX.
-         *
-         * @description f4cc43bc3***
-         *
-         * @param request QueryDataServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDataServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The operator for the aggregate operation. Metric fields are available, such as SUM, AVG, and MAX.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>f4cc43bc3***</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDataServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataServiceResponse
+        /// </returns>
         public async Task<QueryDataServiceResponse> QueryDataServiceWithOptionsAsync(QueryDataServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6405,41 +8529,67 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDataServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The operator for the aggregate operation. Metric fields are available, such as SUM, AVG, and MAX.
-         *
-         * @description f4cc43bc3***
-         *
-         * @param request QueryDataServiceRequest
-         * @return QueryDataServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The operator for the aggregate operation. Metric fields are available, such as SUM, AVG, and MAX.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>f4cc43bc3***</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDataServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataServiceResponse
+        /// </returns>
         public QueryDataServiceResponse QueryDataService(QueryDataServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDataServiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The operator for the aggregate operation. Metric fields are available, such as SUM, AVG, and MAX.
-         *
-         * @description f4cc43bc3***
-         *
-         * @param request QueryDataServiceRequest
-         * @return QueryDataServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The operator for the aggregate operation. Metric fields are available, such as SUM, AVG, and MAX.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>f4cc43bc3***</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDataServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataServiceResponse
+        /// </returns>
         public async Task<QueryDataServiceResponse> QueryDataServiceAsync(QueryDataServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDataServiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询数据服务API列表。
-         *
-         * @param request QueryDataServiceListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDataServiceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据服务API列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataServiceListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataServiceListResponse
+        /// </returns>
         public QueryDataServiceListResponse QueryDataServiceListWithOptions(QueryDataServiceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6479,13 +8629,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDataServiceListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据服务API列表。
-         *
-         * @param request QueryDataServiceListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDataServiceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据服务API列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataServiceListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataServiceListResponse
+        /// </returns>
         public async Task<QueryDataServiceListResponse> QueryDataServiceListWithOptionsAsync(QueryDataServiceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6525,39 +8683,62 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDataServiceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据服务API列表。
-         *
-         * @param request QueryDataServiceListRequest
-         * @return QueryDataServiceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据服务API列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataServiceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataServiceListResponse
+        /// </returns>
         public QueryDataServiceListResponse QueryDataServiceList(QueryDataServiceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDataServiceListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询数据服务API列表。
-         *
-         * @param request QueryDataServiceListRequest
-         * @return QueryDataServiceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据服务API列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDataServiceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDataServiceListResponse
+        /// </returns>
         public async Task<QueryDataServiceListResponse> QueryDataServiceListAsync(QueryDataServiceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDataServiceListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a specified dataset, including the data source, directory, and dataset model.
-         *
-         * @description The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).
-         *
-         * @param request QueryDatasetDetailInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDatasetDetailInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified dataset, including the data source, directory, and dataset model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetDetailInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetDetailInfoResponse
+        /// </returns>
         public QueryDatasetDetailInfoResponse QueryDatasetDetailInfoWithOptions(QueryDatasetDetailInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6585,15 +8766,26 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDatasetDetailInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a specified dataset, including the data source, directory, and dataset model.
-         *
-         * @description The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).
-         *
-         * @param request QueryDatasetDetailInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDatasetDetailInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified dataset, including the data source, directory, and dataset model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetDetailInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetDetailInfoResponse
+        /// </returns>
         public async Task<QueryDatasetDetailInfoResponse> QueryDatasetDetailInfoWithOptionsAsync(QueryDatasetDetailInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6621,43 +8813,71 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDatasetDetailInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a specified dataset, including the data source, directory, and dataset model.
-         *
-         * @description The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).
-         *
-         * @param request QueryDatasetDetailInfoRequest
-         * @return QueryDatasetDetailInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified dataset, including the data source, directory, and dataset model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetDetailInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetDetailInfoResponse
+        /// </returns>
         public QueryDatasetDetailInfoResponse QueryDatasetDetailInfo(QueryDatasetDetailInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDatasetDetailInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a specified dataset, including the data source, directory, and dataset model.
-         *
-         * @description The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).
-         *
-         * @param request QueryDatasetDetailInfoRequest
-         * @return QueryDatasetDetailInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified dataset, including the data source, directory, and dataset model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetDetailInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetDetailInfoResponse
+        /// </returns>
         public async Task<QueryDatasetDetailInfoResponse> QueryDatasetDetailInfoAsync(QueryDatasetDetailInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDatasetDetailInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Indicates whether the table is a custom SQL table. Valid values:
-         * *   true: custom SQL table
-         * *   false: non-custom SQL table
-         *
-         * @param request QueryDatasetInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDatasetInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the table is a custom SQL table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: custom SQL table</description></item>
+        /// <item><description>false: non-custom SQL table</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetInfoResponse
+        /// </returns>
         public QueryDatasetInfoResponse QueryDatasetInfoWithOptions(QueryDatasetInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6685,15 +8905,25 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDatasetInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Indicates whether the table is a custom SQL table. Valid values:
-         * *   true: custom SQL table
-         * *   false: non-custom SQL table
-         *
-         * @param request QueryDatasetInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDatasetInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the table is a custom SQL table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: custom SQL table</description></item>
+        /// <item><description>false: non-custom SQL table</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetInfoResponse
+        /// </returns>
         public async Task<QueryDatasetInfoResponse> QueryDatasetInfoWithOptionsAsync(QueryDatasetInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6721,41 +8951,65 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDatasetInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Indicates whether the table is a custom SQL table. Valid values:
-         * *   true: custom SQL table
-         * *   false: non-custom SQL table
-         *
-         * @param request QueryDatasetInfoRequest
-         * @return QueryDatasetInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the table is a custom SQL table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: custom SQL table</description></item>
+        /// <item><description>false: non-custom SQL table</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetInfoResponse
+        /// </returns>
         public QueryDatasetInfoResponse QueryDatasetInfo(QueryDatasetInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDatasetInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Indicates whether the table is a custom SQL table. Valid values:
-         * *   true: custom SQL table
-         * *   false: non-custom SQL table
-         *
-         * @param request QueryDatasetInfoRequest
-         * @return QueryDatasetInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the table is a custom SQL table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: custom SQL table</description></item>
+        /// <item><description>false: non-custom SQL table</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetInfoResponse
+        /// </returns>
         public async Task<QueryDatasetInfoResponse> QueryDatasetInfoAsync(QueryDatasetInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDatasetInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The name of the training dataset.
-         *
-         * @param request QueryDatasetListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDatasetListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the training dataset.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetListResponse
+        /// </returns>
         public QueryDatasetListResponse QueryDatasetListWithOptions(QueryDatasetListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6803,13 +9057,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDatasetListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The name of the training dataset.
-         *
-         * @param request QueryDatasetListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDatasetListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the training dataset.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetListResponse
+        /// </returns>
         public async Task<QueryDatasetListResponse> QueryDatasetListWithOptionsAsync(QueryDatasetListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6857,37 +9119,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDatasetListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The name of the training dataset.
-         *
-         * @param request QueryDatasetListRequest
-         * @return QueryDatasetListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the training dataset.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetListResponse
+        /// </returns>
         public QueryDatasetListResponse QueryDatasetList(QueryDatasetListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDatasetListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The name of the training dataset.
-         *
-         * @param request QueryDatasetListRequest
-         * @return QueryDatasetListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the training dataset.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetListResponse
+        /// </returns>
         public async Task<QueryDatasetListResponse> QueryDatasetListAsync(QueryDatasetListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDatasetListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取指定数据集的行级权限开关状态。
-         *
-         * @param request QueryDatasetSwitchInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDatasetSwitchInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集的行级权限开关状态。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetSwitchInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetSwitchInfoResponse
+        /// </returns>
         public QueryDatasetSwitchInfoResponse QueryDatasetSwitchInfoWithOptions(QueryDatasetSwitchInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6915,13 +9197,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDatasetSwitchInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定数据集的行级权限开关状态。
-         *
-         * @param request QueryDatasetSwitchInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDatasetSwitchInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集的行级权限开关状态。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetSwitchInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetSwitchInfoResponse
+        /// </returns>
         public async Task<QueryDatasetSwitchInfoResponse> QueryDatasetSwitchInfoWithOptionsAsync(QueryDatasetSwitchInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6949,37 +9239,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDatasetSwitchInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定数据集的行级权限开关状态。
-         *
-         * @param request QueryDatasetSwitchInfoRequest
-         * @return QueryDatasetSwitchInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集的行级权限开关状态。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetSwitchInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetSwitchInfoResponse
+        /// </returns>
         public QueryDatasetSwitchInfoResponse QueryDatasetSwitchInfo(QueryDatasetSwitchInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDatasetSwitchInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取指定数据集的行级权限开关状态。
-         *
-         * @param request QueryDatasetSwitchInfoRequest
-         * @return QueryDatasetSwitchInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集的行级权限开关状态。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDatasetSwitchInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDatasetSwitchInfoResponse
+        /// </returns>
         public async Task<QueryDatasetSwitchInfoResponse> QueryDatasetSwitchInfoAsync(QueryDatasetSwitchInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDatasetSwitchInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The number of reports that are currently embedded.
-         *
-         * @param request QueryEmbeddedInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryEmbeddedInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The number of reports that are currently embedded.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEmbeddedInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEmbeddedInfoResponse
+        /// </returns>
         public QueryEmbeddedInfoResponse QueryEmbeddedInfoWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -6998,13 +9308,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryEmbeddedInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The number of reports that are currently embedded.
-         *
-         * @param request QueryEmbeddedInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryEmbeddedInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The number of reports that are currently embedded.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEmbeddedInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEmbeddedInfoResponse
+        /// </returns>
         public async Task<QueryEmbeddedInfoResponse> QueryEmbeddedInfoWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -7023,35 +9341,49 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryEmbeddedInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The number of reports that are currently embedded.
-         *
-         * @return QueryEmbeddedInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The number of reports that are currently embedded.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// QueryEmbeddedInfoResponse
+        /// </returns>
         public QueryEmbeddedInfoResponse QueryEmbeddedInfo()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryEmbeddedInfoWithOptions(runtime);
         }
 
-        /**
-         * @summary The number of reports that are currently embedded.
-         *
-         * @return QueryEmbeddedInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The number of reports that are currently embedded.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// QueryEmbeddedInfoResponse
+        /// </returns>
         public async Task<QueryEmbeddedInfoResponse> QueryEmbeddedInfoAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryEmbeddedInfoWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Queries whether embedding is enabled for a report.
-         *
-         * @param request QueryEmbeddedStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryEmbeddedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether embedding is enabled for a report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEmbeddedStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEmbeddedStatusResponse
+        /// </returns>
         public QueryEmbeddedStatusResponse QueryEmbeddedStatusWithOptions(QueryEmbeddedStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7079,13 +9411,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryEmbeddedStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether embedding is enabled for a report.
-         *
-         * @param request QueryEmbeddedStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryEmbeddedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether embedding is enabled for a report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEmbeddedStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEmbeddedStatusResponse
+        /// </returns>
         public async Task<QueryEmbeddedStatusResponse> QueryEmbeddedStatusWithOptionsAsync(QueryEmbeddedStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7113,37 +9453,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryEmbeddedStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether embedding is enabled for a report.
-         *
-         * @param request QueryEmbeddedStatusRequest
-         * @return QueryEmbeddedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether embedding is enabled for a report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEmbeddedStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEmbeddedStatusResponse
+        /// </returns>
         public QueryEmbeddedStatusResponse QueryEmbeddedStatus(QueryEmbeddedStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryEmbeddedStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether embedding is enabled for a report.
-         *
-         * @param request QueryEmbeddedStatusRequest
-         * @return QueryEmbeddedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether embedding is enabled for a report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEmbeddedStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEmbeddedStatusResponse
+        /// </returns>
         public async Task<QueryEmbeddedStatusResponse> QueryEmbeddedStatusAsync(QueryEmbeddedStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryEmbeddedStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取指定组织角色的配置信息
-         *
-         * @param request QueryOrganizationRoleConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryOrganizationRoleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定组织角色的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryOrganizationRoleConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryOrganizationRoleConfigResponse
+        /// </returns>
         public QueryOrganizationRoleConfigResponse QueryOrganizationRoleConfigWithOptions(QueryOrganizationRoleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7171,13 +9531,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryOrganizationRoleConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定组织角色的配置信息
-         *
-         * @param request QueryOrganizationRoleConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryOrganizationRoleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定组织角色的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryOrganizationRoleConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryOrganizationRoleConfigResponse
+        /// </returns>
         public async Task<QueryOrganizationRoleConfigResponse> QueryOrganizationRoleConfigWithOptionsAsync(QueryOrganizationRoleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7205,37 +9573,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryOrganizationRoleConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定组织角色的配置信息
-         *
-         * @param request QueryOrganizationRoleConfigRequest
-         * @return QueryOrganizationRoleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定组织角色的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryOrganizationRoleConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryOrganizationRoleConfigResponse
+        /// </returns>
         public QueryOrganizationRoleConfigResponse QueryOrganizationRoleConfig(QueryOrganizationRoleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryOrganizationRoleConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取指定组织角色的配置信息
-         *
-         * @param request QueryOrganizationRoleConfigRequest
-         * @return QueryOrganizationRoleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定组织角色的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryOrganizationRoleConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryOrganizationRoleConfigResponse
+        /// </returns>
         public async Task<QueryOrganizationRoleConfigResponse> QueryOrganizationRoleConfigAsync(QueryOrganizationRoleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryOrganizationRoleConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取当前组织下的工作空间列表信息。
-         *
-         * @param request QueryOrganizationWorkspaceListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryOrganizationWorkspaceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前组织下的工作空间列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryOrganizationWorkspaceListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryOrganizationWorkspaceListResponse
+        /// </returns>
         public QueryOrganizationWorkspaceListResponse QueryOrganizationWorkspaceListWithOptions(QueryOrganizationWorkspaceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7275,13 +9663,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryOrganizationWorkspaceListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取当前组织下的工作空间列表信息。
-         *
-         * @param request QueryOrganizationWorkspaceListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryOrganizationWorkspaceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前组织下的工作空间列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryOrganizationWorkspaceListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryOrganizationWorkspaceListResponse
+        /// </returns>
         public async Task<QueryOrganizationWorkspaceListResponse> QueryOrganizationWorkspaceListWithOptionsAsync(QueryOrganizationWorkspaceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7321,37 +9717,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryOrganizationWorkspaceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取当前组织下的工作空间列表信息。
-         *
-         * @param request QueryOrganizationWorkspaceListRequest
-         * @return QueryOrganizationWorkspaceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前组织下的工作空间列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryOrganizationWorkspaceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryOrganizationWorkspaceListResponse
+        /// </returns>
         public QueryOrganizationWorkspaceListResponse QueryOrganizationWorkspaceList(QueryOrganizationWorkspaceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryOrganizationWorkspaceListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取当前组织下的工作空间列表信息。
-         *
-         * @param request QueryOrganizationWorkspaceListRequest
-         * @return QueryOrganizationWorkspaceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前组织下的工作空间列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryOrganizationWorkspaceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryOrganizationWorkspaceListResponse
+        /// </returns>
         public async Task<QueryOrganizationWorkspaceListResponse> QueryOrganizationWorkspaceListAsync(QueryOrganizationWorkspaceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryOrganizationWorkspaceListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The Alibaba Cloud account name of the owner.
-         *
-         * @param request QueryReadableResourcesListByUserIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryReadableResourcesListByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The Alibaba Cloud account name of the owner.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReadableResourcesListByUserIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReadableResourcesListByUserIdResponse
+        /// </returns>
         public QueryReadableResourcesListByUserIdResponse QueryReadableResourcesListByUserIdWithOptions(QueryReadableResourcesListByUserIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7379,13 +9795,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryReadableResourcesListByUserIdResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The Alibaba Cloud account name of the owner.
-         *
-         * @param request QueryReadableResourcesListByUserIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryReadableResourcesListByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The Alibaba Cloud account name of the owner.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReadableResourcesListByUserIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReadableResourcesListByUserIdResponse
+        /// </returns>
         public async Task<QueryReadableResourcesListByUserIdResponse> QueryReadableResourcesListByUserIdWithOptionsAsync(QueryReadableResourcesListByUserIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7413,37 +9837,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryReadableResourcesListByUserIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The Alibaba Cloud account name of the owner.
-         *
-         * @param request QueryReadableResourcesListByUserIdRequest
-         * @return QueryReadableResourcesListByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The Alibaba Cloud account name of the owner.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReadableResourcesListByUserIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReadableResourcesListByUserIdResponse
+        /// </returns>
         public QueryReadableResourcesListByUserIdResponse QueryReadableResourcesListByUserId(QueryReadableResourcesListByUserIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryReadableResourcesListByUserIdWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The Alibaba Cloud account name of the owner.
-         *
-         * @param request QueryReadableResourcesListByUserIdRequest
-         * @return QueryReadableResourcesListByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The Alibaba Cloud account name of the owner.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReadableResourcesListByUserIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReadableResourcesListByUserIdResponse
+        /// </returns>
         public async Task<QueryReadableResourcesListByUserIdResponse> QueryReadableResourcesListByUserIdAsync(QueryReadableResourcesListByUserIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryReadableResourcesListByUserIdWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询报表性能列表
-         *
-         * @param request QueryReportPerformanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryReportPerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询报表性能列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReportPerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReportPerformanceResponse
+        /// </returns>
         public QueryReportPerformanceResponse QueryReportPerformanceWithOptions(QueryReportPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7495,13 +9939,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryReportPerformanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询报表性能列表
-         *
-         * @param request QueryReportPerformanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryReportPerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询报表性能列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReportPerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReportPerformanceResponse
+        /// </returns>
         public async Task<QueryReportPerformanceResponse> QueryReportPerformanceWithOptionsAsync(QueryReportPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7553,37 +10005,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryReportPerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询报表性能列表
-         *
-         * @param request QueryReportPerformanceRequest
-         * @return QueryReportPerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询报表性能列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReportPerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReportPerformanceResponse
+        /// </returns>
         public QueryReportPerformanceResponse QueryReportPerformance(QueryReportPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryReportPerformanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询报表性能列表
-         *
-         * @param request QueryReportPerformanceRequest
-         * @return QueryReportPerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询报表性能列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReportPerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReportPerformanceResponse
+        /// </returns>
         public async Task<QueryReportPerformanceResponse> QueryReportPerformanceAsync(QueryReportPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryReportPerformanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Xiao Zhang
-         *
-         * @param request QueryShareListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryShareListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Xiao Zhang</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryShareListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryShareListResponse
+        /// </returns>
         public QueryShareListResponse QueryShareListWithOptions(QueryShareListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7611,13 +10083,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryShareListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Xiao Zhang
-         *
-         * @param request QueryShareListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryShareListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Xiao Zhang</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryShareListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryShareListResponse
+        /// </returns>
         public async Task<QueryShareListResponse> QueryShareListWithOptionsAsync(QueryShareListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7645,37 +10125,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryShareListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Xiao Zhang
-         *
-         * @param request QueryShareListRequest
-         * @return QueryShareListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Xiao Zhang</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryShareListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryShareListResponse
+        /// </returns>
         public QueryShareListResponse QueryShareList(QueryShareListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryShareListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Xiao Zhang
-         *
-         * @param request QueryShareListRequest
-         * @return QueryShareListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Xiao Zhang</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryShareListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryShareListResponse
+        /// </returns>
         public async Task<QueryShareListResponse> QueryShareListAsync(QueryShareListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryShareListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to query the list of works authorized to a user.
-         *
-         * @param request QuerySharesToUserListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QuerySharesToUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the list of works authorized to a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySharesToUserListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySharesToUserListResponse
+        /// </returns>
         public QuerySharesToUserListResponse QuerySharesToUserListWithOptions(QuerySharesToUserListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7703,13 +10203,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QuerySharesToUserListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to query the list of works authorized to a user.
-         *
-         * @param request QuerySharesToUserListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QuerySharesToUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the list of works authorized to a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySharesToUserListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySharesToUserListResponse
+        /// </returns>
         public async Task<QuerySharesToUserListResponse> QuerySharesToUserListWithOptionsAsync(QuerySharesToUserListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7737,37 +10245,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QuerySharesToUserListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to query the list of works authorized to a user.
-         *
-         * @param request QuerySharesToUserListRequest
-         * @return QuerySharesToUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the list of works authorized to a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySharesToUserListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySharesToUserListResponse
+        /// </returns>
         public QuerySharesToUserListResponse QuerySharesToUserList(QuerySharesToUserListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QuerySharesToUserListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to query the list of works authorized to a user.
-         *
-         * @param request QuerySharesToUserListRequest
-         * @return QuerySharesToUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the list of works authorized to a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySharesToUserListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySharesToUserListResponse
+        /// </returns>
         public async Task<QuerySharesToUserListResponse> QuerySharesToUserListAsync(QuerySharesToUserListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QuerySharesToUserListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request QueryTicketInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTicketInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTicketInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTicketInfoResponse
+        /// </returns>
         public QueryTicketInfoResponse QueryTicketInfoWithOptions(QueryTicketInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7795,13 +10323,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryTicketInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request QueryTicketInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTicketInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTicketInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTicketInfoResponse
+        /// </returns>
         public async Task<QueryTicketInfoResponse> QueryTicketInfoWithOptionsAsync(QueryTicketInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7829,37 +10365,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryTicketInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request QueryTicketInfoRequest
-         * @return QueryTicketInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTicketInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTicketInfoResponse
+        /// </returns>
         public QueryTicketInfoResponse QueryTicketInfo(QueryTicketInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryTicketInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request QueryTicketInfoRequest
-         * @return QueryTicketInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTicketInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTicketInfoResponse
+        /// </returns>
         public async Task<QueryTicketInfoResponse> QueryTicketInfoAsync(QueryTicketInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryTicketInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can this operation to obtain information about child user groups under a specified parent user group.
-         *
-         * @param request QueryUserGroupListByParentIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserGroupListByParentIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can this operation to obtain information about child user groups under a specified parent user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserGroupListByParentIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserGroupListByParentIdResponse
+        /// </returns>
         public QueryUserGroupListByParentIdResponse QueryUserGroupListByParentIdWithOptions(QueryUserGroupListByParentIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7887,13 +10443,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserGroupListByParentIdResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can this operation to obtain information about child user groups under a specified parent user group.
-         *
-         * @param request QueryUserGroupListByParentIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserGroupListByParentIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can this operation to obtain information about child user groups under a specified parent user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserGroupListByParentIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserGroupListByParentIdResponse
+        /// </returns>
         public async Task<QueryUserGroupListByParentIdResponse> QueryUserGroupListByParentIdWithOptionsAsync(QueryUserGroupListByParentIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7921,37 +10485,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserGroupListByParentIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can this operation to obtain information about child user groups under a specified parent user group.
-         *
-         * @param request QueryUserGroupListByParentIdRequest
-         * @return QueryUserGroupListByParentIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can this operation to obtain information about child user groups under a specified parent user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserGroupListByParentIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserGroupListByParentIdResponse
+        /// </returns>
         public QueryUserGroupListByParentIdResponse QueryUserGroupListByParentId(QueryUserGroupListByParentIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryUserGroupListByParentIdWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can this operation to obtain information about child user groups under a specified parent user group.
-         *
-         * @param request QueryUserGroupListByParentIdRequest
-         * @return QueryUserGroupListByParentIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can this operation to obtain information about child user groups under a specified parent user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserGroupListByParentIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserGroupListByParentIdResponse
+        /// </returns>
         public async Task<QueryUserGroupListByParentIdResponse> QueryUserGroupListByParentIdAsync(QueryUserGroupListByParentIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryUserGroupListByParentIdWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取用户组下的成员列表信息。
-         *
-         * @param request QueryUserGroupMemberRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户组下的成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserGroupMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserGroupMemberResponse
+        /// </returns>
         public QueryUserGroupMemberResponse QueryUserGroupMemberWithOptions(QueryUserGroupMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7983,13 +10567,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserGroupMemberResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取用户组下的成员列表信息。
-         *
-         * @param request QueryUserGroupMemberRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户组下的成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserGroupMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserGroupMemberResponse
+        /// </returns>
         public async Task<QueryUserGroupMemberResponse> QueryUserGroupMemberWithOptionsAsync(QueryUserGroupMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8021,37 +10613,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserGroupMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取用户组下的成员列表信息。
-         *
-         * @param request QueryUserGroupMemberRequest
-         * @return QueryUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户组下的成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserGroupMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserGroupMemberResponse
+        /// </returns>
         public QueryUserGroupMemberResponse QueryUserGroupMember(QueryUserGroupMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryUserGroupMemberWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取用户组下的成员列表信息。
-         *
-         * @param request QueryUserGroupMemberRequest
-         * @return QueryUserGroupMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户组下的成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserGroupMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserGroupMemberResponse
+        /// </returns>
         public async Task<QueryUserGroupMemberResponse> QueryUserGroupMemberAsync(QueryUserGroupMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryUserGroupMemberWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.
-         *
-         * @param request QueryUserInfoByAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserInfoByAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserInfoByAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserInfoByAccountResponse
+        /// </returns>
         public QueryUserInfoByAccountResponse QueryUserInfoByAccountWithOptions(QueryUserInfoByAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8083,13 +10695,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserInfoByAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.
-         *
-         * @param request QueryUserInfoByAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserInfoByAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserInfoByAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserInfoByAccountResponse
+        /// </returns>
         public async Task<QueryUserInfoByAccountResponse> QueryUserInfoByAccountWithOptionsAsync(QueryUserInfoByAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8121,37 +10741,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserInfoByAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.
-         *
-         * @param request QueryUserInfoByAccountRequest
-         * @return QueryUserInfoByAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserInfoByAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserInfoByAccountResponse
+        /// </returns>
         public QueryUserInfoByAccountResponse QueryUserInfoByAccount(QueryUserInfoByAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryUserInfoByAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.
-         *
-         * @param request QueryUserInfoByAccountRequest
-         * @return QueryUserInfoByAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserInfoByAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserInfoByAccountResponse
+        /// </returns>
         public async Task<QueryUserInfoByAccountResponse> QueryUserInfoByAccountAsync(QueryUserInfoByAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryUserInfoByAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries user information based on the user ID.
-         *
-         * @param request QueryUserInfoByUserIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserInfoByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user information based on the user ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserInfoByUserIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserInfoByUserIdResponse
+        /// </returns>
         public QueryUserInfoByUserIdResponse QueryUserInfoByUserIdWithOptions(QueryUserInfoByUserIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8179,13 +10819,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserInfoByUserIdResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries user information based on the user ID.
-         *
-         * @param request QueryUserInfoByUserIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserInfoByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user information based on the user ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserInfoByUserIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserInfoByUserIdResponse
+        /// </returns>
         public async Task<QueryUserInfoByUserIdResponse> QueryUserInfoByUserIdWithOptionsAsync(QueryUserInfoByUserIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8213,37 +10861,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserInfoByUserIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries user information based on the user ID.
-         *
-         * @param request QueryUserInfoByUserIdRequest
-         * @return QueryUserInfoByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user information based on the user ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserInfoByUserIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserInfoByUserIdResponse
+        /// </returns>
         public QueryUserInfoByUserIdResponse QueryUserInfoByUserId(QueryUserInfoByUserIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryUserInfoByUserIdWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries user information based on the user ID.
-         *
-         * @param request QueryUserInfoByUserIdRequest
-         * @return QueryUserInfoByUserIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user information based on the user ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserInfoByUserIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserInfoByUserIdResponse
+        /// </returns>
         public async Task<QueryUserInfoByUserIdResponse> QueryUserInfoByUserIdAsync(QueryUserInfoByUserIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryUserInfoByUserIdWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询组织成员列表信息。
-         *
-         * @param request QueryUserListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询组织成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserListResponse
+        /// </returns>
         public QueryUserListResponse QueryUserListWithOptions(QueryUserListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8267,13 +10935,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询组织成员列表信息。
-         *
-         * @param request QueryUserListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询组织成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserListResponse
+        /// </returns>
         public async Task<QueryUserListResponse> QueryUserListWithOptionsAsync(QueryUserListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8297,37 +10973,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询组织成员列表信息。
-         *
-         * @param request QueryUserListRequest
-         * @return QueryUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询组织成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserListResponse
+        /// </returns>
         public QueryUserListResponse QueryUserList(QueryUserListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryUserListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询组织成员列表信息。
-         *
-         * @param request QueryUserListRequest
-         * @return QueryUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询组织成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserListResponse
+        /// </returns>
         public async Task<QueryUserListResponse> QueryUserListAsync(QueryUserListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryUserListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取指定工作空间成员的预置空间角色信息。
-         *
-         * @param request QueryUserRoleInfoInWorkspaceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserRoleInfoInWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定工作空间成员的预置空间角色信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserRoleInfoInWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserRoleInfoInWorkspaceResponse
+        /// </returns>
         public QueryUserRoleInfoInWorkspaceResponse QueryUserRoleInfoInWorkspaceWithOptions(QueryUserRoleInfoInWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8359,13 +11055,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserRoleInfoInWorkspaceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定工作空间成员的预置空间角色信息。
-         *
-         * @param request QueryUserRoleInfoInWorkspaceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserRoleInfoInWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定工作空间成员的预置空间角色信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserRoleInfoInWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserRoleInfoInWorkspaceResponse
+        /// </returns>
         public async Task<QueryUserRoleInfoInWorkspaceResponse> QueryUserRoleInfoInWorkspaceWithOptionsAsync(QueryUserRoleInfoInWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8397,37 +11101,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserRoleInfoInWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定工作空间成员的预置空间角色信息。
-         *
-         * @param request QueryUserRoleInfoInWorkspaceRequest
-         * @return QueryUserRoleInfoInWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定工作空间成员的预置空间角色信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserRoleInfoInWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserRoleInfoInWorkspaceResponse
+        /// </returns>
         public QueryUserRoleInfoInWorkspaceResponse QueryUserRoleInfoInWorkspace(QueryUserRoleInfoInWorkspaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryUserRoleInfoInWorkspaceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取指定工作空间成员的预置空间角色信息。
-         *
-         * @param request QueryUserRoleInfoInWorkspaceRequest
-         * @return QueryUserRoleInfoInWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定工作空间成员的预置空间角色信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserRoleInfoInWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserRoleInfoInWorkspaceResponse
+        /// </returns>
         public async Task<QueryUserRoleInfoInWorkspaceResponse> QueryUserRoleInfoInWorkspaceAsync(QueryUserRoleInfoInWorkspaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryUserRoleInfoInWorkspaceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request QueryUserTagMetaListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserTagMetaListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserTagMetaListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserTagMetaListResponse
+        /// </returns>
         public QueryUserTagMetaListResponse QueryUserTagMetaListWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -8446,13 +11170,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserTagMetaListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary auditing
-         *
-         * @param request QueryUserTagMetaListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserTagMetaListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserTagMetaListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserTagMetaListResponse
+        /// </returns>
         public async Task<QueryUserTagMetaListResponse> QueryUserTagMetaListWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -8471,35 +11203,49 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserTagMetaListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary auditing
-         *
-         * @return QueryUserTagMetaListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// QueryUserTagMetaListResponse
+        /// </returns>
         public QueryUserTagMetaListResponse QueryUserTagMetaList()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryUserTagMetaListWithOptions(runtime);
         }
 
-        /**
-         * @summary auditing
-         *
-         * @return QueryUserTagMetaListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>auditing</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// QueryUserTagMetaListResponse
+        /// </returns>
         public async Task<QueryUserTagMetaListResponse> QueryUserTagMetaListAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryUserTagMetaListWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Queries the list of tag values for a specific user.
-         *
-         * @param request QueryUserTagValueListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserTagValueListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of tag values for a specific user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserTagValueListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserTagValueListResponse
+        /// </returns>
         public QueryUserTagValueListResponse QueryUserTagValueListWithOptions(QueryUserTagValueListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8523,13 +11269,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserTagValueListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of tag values for a specific user.
-         *
-         * @param request QueryUserTagValueListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryUserTagValueListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of tag values for a specific user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserTagValueListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserTagValueListResponse
+        /// </returns>
         public async Task<QueryUserTagValueListResponse> QueryUserTagValueListWithOptionsAsync(QueryUserTagValueListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8553,37 +11307,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryUserTagValueListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of tag values for a specific user.
-         *
-         * @param request QueryUserTagValueListRequest
-         * @return QueryUserTagValueListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of tag values for a specific user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserTagValueListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserTagValueListResponse
+        /// </returns>
         public QueryUserTagValueListResponse QueryUserTagValueList(QueryUserTagValueListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryUserTagValueListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the list of tag values for a specific user.
-         *
-         * @param request QueryUserTagValueListRequest
-         * @return QueryUserTagValueListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of tag values for a specific user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryUserTagValueListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserTagValueListResponse
+        /// </returns>
         public async Task<QueryUserTagValueListResponse> QueryUserTagValueListAsync(QueryUserTagValueListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryUserTagValueListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取报表详情
-         *
-         * @param request QueryWorksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取报表详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksResponse
+        /// </returns>
         public QueryWorksResponse QueryWorksWithOptions(QueryWorksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8611,13 +11385,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取报表详情
-         *
-         * @param request QueryWorksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取报表详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksResponse
+        /// </returns>
         public async Task<QueryWorksResponse> QueryWorksWithOptionsAsync(QueryWorksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8645,37 +11427,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取报表详情
-         *
-         * @param request QueryWorksRequest
-         * @return QueryWorksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取报表详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksResponse
+        /// </returns>
         public QueryWorksResponse QueryWorks(QueryWorksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryWorksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取报表详情
-         *
-         * @param request QueryWorksRequest
-         * @return QueryWorksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取报表详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksResponse
+        /// </returns>
         public async Task<QueryWorksResponse> QueryWorksAsync(QueryWorksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryWorksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary abcd****
-         *
-         * @param request QueryWorksBloodRelationshipRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorksBloodRelationshipResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>abcd****</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksBloodRelationshipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksBloodRelationshipResponse
+        /// </returns>
         public QueryWorksBloodRelationshipResponse QueryWorksBloodRelationshipWithOptions(QueryWorksBloodRelationshipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8703,13 +11505,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorksBloodRelationshipResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary abcd****
-         *
-         * @param request QueryWorksBloodRelationshipRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorksBloodRelationshipResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>abcd****</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksBloodRelationshipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksBloodRelationshipResponse
+        /// </returns>
         public async Task<QueryWorksBloodRelationshipResponse> QueryWorksBloodRelationshipWithOptionsAsync(QueryWorksBloodRelationshipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8737,37 +11547,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorksBloodRelationshipResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary abcd****
-         *
-         * @param request QueryWorksBloodRelationshipRequest
-         * @return QueryWorksBloodRelationshipResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>abcd****</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksBloodRelationshipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksBloodRelationshipResponse
+        /// </returns>
         public QueryWorksBloodRelationshipResponse QueryWorksBloodRelationship(QueryWorksBloodRelationshipRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryWorksBloodRelationshipWithOptions(request, runtime);
         }
 
-        /**
-         * @summary abcd****
-         *
-         * @param request QueryWorksBloodRelationshipRequest
-         * @return QueryWorksBloodRelationshipResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>abcd****</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksBloodRelationshipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksBloodRelationshipResponse
+        /// </returns>
         public async Task<QueryWorksBloodRelationshipResponse> QueryWorksBloodRelationshipAsync(QueryWorksBloodRelationshipRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryWorksBloodRelationshipWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The total number of rows in the table.
-         *
-         * @param request QueryWorksByOrganizationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorksByOrganizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The total number of rows in the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksByOrganizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksByOrganizationResponse
+        /// </returns>
         public QueryWorksByOrganizationResponse QueryWorksByOrganizationWithOptions(QueryWorksByOrganizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8811,13 +11641,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorksByOrganizationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The total number of rows in the table.
-         *
-         * @param request QueryWorksByOrganizationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorksByOrganizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The total number of rows in the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksByOrganizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksByOrganizationResponse
+        /// </returns>
         public async Task<QueryWorksByOrganizationResponse> QueryWorksByOrganizationWithOptionsAsync(QueryWorksByOrganizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8861,37 +11699,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorksByOrganizationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The total number of rows in the table.
-         *
-         * @param request QueryWorksByOrganizationRequest
-         * @return QueryWorksByOrganizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The total number of rows in the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksByOrganizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksByOrganizationResponse
+        /// </returns>
         public QueryWorksByOrganizationResponse QueryWorksByOrganization(QueryWorksByOrganizationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryWorksByOrganizationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The total number of rows in the table.
-         *
-         * @param request QueryWorksByOrganizationRequest
-         * @return QueryWorksByOrganizationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The total number of rows in the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksByOrganizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksByOrganizationResponse
+        /// </returns>
         public async Task<QueryWorksByOrganizationResponse> QueryWorksByOrganizationAsync(QueryWorksByOrganizationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryWorksByOrganizationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The name of the directory.
-         *
-         * @param request QueryWorksByWorkspaceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorksByWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksByWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksByWorkspaceResponse
+        /// </returns>
         public QueryWorksByWorkspaceResponse QueryWorksByWorkspaceWithOptions(QueryWorksByWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8939,13 +11797,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorksByWorkspaceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The name of the directory.
-         *
-         * @param request QueryWorksByWorkspaceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorksByWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksByWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksByWorkspaceResponse
+        /// </returns>
         public async Task<QueryWorksByWorkspaceResponse> QueryWorksByWorkspaceWithOptionsAsync(QueryWorksByWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8993,37 +11859,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorksByWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The name of the directory.
-         *
-         * @param request QueryWorksByWorkspaceRequest
-         * @return QueryWorksByWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksByWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksByWorkspaceResponse
+        /// </returns>
         public QueryWorksByWorkspaceResponse QueryWorksByWorkspace(QueryWorksByWorkspaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryWorksByWorkspaceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The name of the directory.
-         *
-         * @param request QueryWorksByWorkspaceRequest
-         * @return QueryWorksByWorkspaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the directory.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorksByWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorksByWorkspaceResponse
+        /// </returns>
         public async Task<QueryWorksByWorkspaceResponse> QueryWorksByWorkspaceAsync(QueryWorksByWorkspaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryWorksByWorkspaceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取指定空间角色的配置信息
-         *
-         * @param request QueryWorkspaceRoleConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorkspaceRoleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定空间角色的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorkspaceRoleConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorkspaceRoleConfigResponse
+        /// </returns>
         public QueryWorkspaceRoleConfigResponse QueryWorkspaceRoleConfigWithOptions(QueryWorkspaceRoleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9051,13 +11937,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorkspaceRoleConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定空间角色的配置信息
-         *
-         * @param request QueryWorkspaceRoleConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorkspaceRoleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定空间角色的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorkspaceRoleConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorkspaceRoleConfigResponse
+        /// </returns>
         public async Task<QueryWorkspaceRoleConfigResponse> QueryWorkspaceRoleConfigWithOptionsAsync(QueryWorkspaceRoleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9085,37 +11979,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorkspaceRoleConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定空间角色的配置信息
-         *
-         * @param request QueryWorkspaceRoleConfigRequest
-         * @return QueryWorkspaceRoleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定空间角色的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorkspaceRoleConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorkspaceRoleConfigResponse
+        /// </returns>
         public QueryWorkspaceRoleConfigResponse QueryWorkspaceRoleConfig(QueryWorkspaceRoleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryWorkspaceRoleConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取指定空间角色的配置信息
-         *
-         * @param request QueryWorkspaceRoleConfigRequest
-         * @return QueryWorkspaceRoleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定空间角色的配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorkspaceRoleConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorkspaceRoleConfigResponse
+        /// </returns>
         public async Task<QueryWorkspaceRoleConfigResponse> QueryWorkspaceRoleConfigAsync(QueryWorkspaceRoleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryWorkspaceRoleConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询指定工作空间下的成员列表信息。
-         *
-         * @param request QueryWorkspaceUserListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorkspaceUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定工作空间下的成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorkspaceUserListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorkspaceUserListResponse
+        /// </returns>
         public QueryWorkspaceUserListResponse QueryWorkspaceUserListWithOptions(QueryWorkspaceUserListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9155,13 +12069,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorkspaceUserListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询指定工作空间下的成员列表信息。
-         *
-         * @param request QueryWorkspaceUserListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryWorkspaceUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定工作空间下的成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorkspaceUserListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorkspaceUserListResponse
+        /// </returns>
         public async Task<QueryWorkspaceUserListResponse> QueryWorkspaceUserListWithOptionsAsync(QueryWorkspaceUserListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9201,37 +12123,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryWorkspaceUserListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询指定工作空间下的成员列表信息。
-         *
-         * @param request QueryWorkspaceUserListRequest
-         * @return QueryWorkspaceUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定工作空间下的成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorkspaceUserListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorkspaceUserListResponse
+        /// </returns>
         public QueryWorkspaceUserListResponse QueryWorkspaceUserList(QueryWorkspaceUserListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryWorkspaceUserListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询指定工作空间下的成员列表信息。
-         *
-         * @param request QueryWorkspaceUserListRequest
-         * @return QueryWorkspaceUserListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定工作空间下的成员列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryWorkspaceUserListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWorkspaceUserListResponse
+        /// </returns>
         public async Task<QueryWorkspaceUserListResponse> QueryWorkspaceUserListAsync(QueryWorkspaceUserListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryWorkspaceUserListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 第三方资源审批回调接口
-         *
-         * @param request ResultCallbackRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResultCallbackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>第三方资源审批回调接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResultCallbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResultCallbackResponse
+        /// </returns>
         public ResultCallbackResponse ResultCallbackWithOptions(ResultCallbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9267,13 +12209,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ResultCallbackResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 第三方资源审批回调接口
-         *
-         * @param request ResultCallbackRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResultCallbackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>第三方资源审批回调接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResultCallbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResultCallbackResponse
+        /// </returns>
         public async Task<ResultCallbackResponse> ResultCallbackWithOptionsAsync(ResultCallbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9309,37 +12259,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ResultCallbackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 第三方资源审批回调接口
-         *
-         * @param request ResultCallbackRequest
-         * @return ResultCallbackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>第三方资源审批回调接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResultCallbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResultCallbackResponse
+        /// </returns>
         public ResultCallbackResponse ResultCallback(ResultCallbackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResultCallbackWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 第三方资源审批回调接口
-         *
-         * @param request ResultCallbackRequest
-         * @return ResultCallbackResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>第三方资源审批回调接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResultCallbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResultCallbackResponse
+        /// </returns>
         public async Task<ResultCallbackResponse> ResultCallbackAsync(ResultCallbackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResultCallbackWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Add the user\\"s collection data works.
-         *
-         * @param request SaveFavoritesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SaveFavoritesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add the user\&quot;s collection data works.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveFavoritesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveFavoritesResponse
+        /// </returns>
         public SaveFavoritesResponse SaveFavoritesWithOptions(SaveFavoritesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9371,13 +12341,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SaveFavoritesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Add the user\\"s collection data works.
-         *
-         * @param request SaveFavoritesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SaveFavoritesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add the user\&quot;s collection data works.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveFavoritesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveFavoritesResponse
+        /// </returns>
         public async Task<SaveFavoritesResponse> SaveFavoritesWithOptionsAsync(SaveFavoritesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9409,37 +12387,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SaveFavoritesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Add the user\\"s collection data works.
-         *
-         * @param request SaveFavoritesRequest
-         * @return SaveFavoritesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add the user\&quot;s collection data works.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveFavoritesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveFavoritesResponse
+        /// </returns>
         public SaveFavoritesResponse SaveFavorites(SaveFavoritesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SaveFavoritesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Add the user\\"s collection data works.
-         *
-         * @param request SaveFavoritesRequest
-         * @return SaveFavoritesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add the user\&quot;s collection data works.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveFavoritesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveFavoritesResponse
+        /// </returns>
         public async Task<SaveFavoritesResponse> SaveFavoritesAsync(SaveFavoritesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SaveFavoritesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 设置行列权限的额外配置
-         *
-         * @param request SetDataLevelPermissionExtraConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetDataLevelPermissionExtraConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置行列权限的额外配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionExtraConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionExtraConfigResponse
+        /// </returns>
         public SetDataLevelPermissionExtraConfigResponse SetDataLevelPermissionExtraConfigWithOptions(SetDataLevelPermissionExtraConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9475,13 +12473,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionExtraConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 设置行列权限的额外配置
-         *
-         * @param request SetDataLevelPermissionExtraConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetDataLevelPermissionExtraConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置行列权限的额外配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionExtraConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionExtraConfigResponse
+        /// </returns>
         public async Task<SetDataLevelPermissionExtraConfigResponse> SetDataLevelPermissionExtraConfigWithOptionsAsync(SetDataLevelPermissionExtraConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9517,37 +12523,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionExtraConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 设置行列权限的额外配置
-         *
-         * @param request SetDataLevelPermissionExtraConfigRequest
-         * @return SetDataLevelPermissionExtraConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置行列权限的额外配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionExtraConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionExtraConfigResponse
+        /// </returns>
         public SetDataLevelPermissionExtraConfigResponse SetDataLevelPermissionExtraConfig(SetDataLevelPermissionExtraConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDataLevelPermissionExtraConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 设置行列权限的额外配置
-         *
-         * @param request SetDataLevelPermissionExtraConfigRequest
-         * @return SetDataLevelPermissionExtraConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置行列权限的额外配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionExtraConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionExtraConfigResponse
+        /// </returns>
         public async Task<SetDataLevelPermissionExtraConfigResponse> SetDataLevelPermissionExtraConfigAsync(SetDataLevelPermissionExtraConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDataLevelPermissionExtraConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 设置单条数据集行列权限配置信息（新增和更新）
-         *
-         * @param request SetDataLevelPermissionRuleConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetDataLevelPermissionRuleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置单条数据集行列权限配置信息（新增和更新）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionRuleConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionRuleConfigResponse
+        /// </returns>
         public SetDataLevelPermissionRuleConfigResponse SetDataLevelPermissionRuleConfigWithOptions(SetDataLevelPermissionRuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9575,13 +12601,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionRuleConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 设置单条数据集行列权限配置信息（新增和更新）
-         *
-         * @param request SetDataLevelPermissionRuleConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetDataLevelPermissionRuleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置单条数据集行列权限配置信息（新增和更新）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionRuleConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionRuleConfigResponse
+        /// </returns>
         public async Task<SetDataLevelPermissionRuleConfigResponse> SetDataLevelPermissionRuleConfigWithOptionsAsync(SetDataLevelPermissionRuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9609,39 +12643,64 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionRuleConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 设置单条数据集行列权限配置信息（新增和更新）
-         *
-         * @param request SetDataLevelPermissionRuleConfigRequest
-         * @return SetDataLevelPermissionRuleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置单条数据集行列权限配置信息（新增和更新）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionRuleConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionRuleConfigResponse
+        /// </returns>
         public SetDataLevelPermissionRuleConfigResponse SetDataLevelPermissionRuleConfig(SetDataLevelPermissionRuleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDataLevelPermissionRuleConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 设置单条数据集行列权限配置信息（新增和更新）
-         *
-         * @param request SetDataLevelPermissionRuleConfigRequest
-         * @return SetDataLevelPermissionRuleConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置单条数据集行列权限配置信息（新增和更新）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionRuleConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionRuleConfigResponse
+        /// </returns>
         public async Task<SetDataLevelPermissionRuleConfigResponse> SetDataLevelPermissionRuleConfigAsync(SetDataLevelPermissionRuleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDataLevelPermissionRuleConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Sets the whitelist for the specified row-level permissions.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
-         *
-         * @param request SetDataLevelPermissionWhiteListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the whitelist for the specified row-level permissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionWhiteListResponse
+        /// </returns>
         public SetDataLevelPermissionWhiteListResponse SetDataLevelPermissionWhiteListWithOptions(SetDataLevelPermissionWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9669,15 +12728,28 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Sets the whitelist for the specified row-level permissions.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
-         *
-         * @param request SetDataLevelPermissionWhiteListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the whitelist for the specified row-level permissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionWhiteListResponse
+        /// </returns>
         public async Task<SetDataLevelPermissionWhiteListResponse> SetDataLevelPermissionWhiteListWithOptionsAsync(SetDataLevelPermissionWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9705,47 +12777,84 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Sets the whitelist for the specified row-level permissions.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
-         *
-         * @param request SetDataLevelPermissionWhiteListRequest
-         * @return SetDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the whitelist for the specified row-level permissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionWhiteListResponse
+        /// </returns>
         public SetDataLevelPermissionWhiteListResponse SetDataLevelPermissionWhiteList(SetDataLevelPermissionWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDataLevelPermissionWhiteListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Sets the whitelist for the specified row-level permissions.
-         *
-         * @description > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
-         *
-         * @param request SetDataLevelPermissionWhiteListRequest
-         * @return SetDataLevelPermissionWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the whitelist for the specified row-level permissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetDataLevelPermissionWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDataLevelPermissionWhiteListResponse
+        /// </returns>
         public async Task<SetDataLevelPermissionWhiteListResponse> SetDataLevelPermissionWhiteListAsync(SetDataLevelPermissionWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDataLevelPermissionWhiteListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Indicates whether the request is successful. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @description The execution result of the interface. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @param request UpdateDataLevelPermissionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDataLevelPermissionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The execution result of the interface. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataLevelPermissionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataLevelPermissionStatusResponse
+        /// </returns>
         public UpdateDataLevelPermissionStatusResponse UpdateDataLevelPermissionStatusWithOptions(UpdateDataLevelPermissionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9781,19 +12890,34 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateDataLevelPermissionStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Indicates whether the request is successful. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @description The execution result of the interface. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @param request UpdateDataLevelPermissionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDataLevelPermissionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The execution result of the interface. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataLevelPermissionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataLevelPermissionStatusResponse
+        /// </returns>
         public async Task<UpdateDataLevelPermissionStatusResponse> UpdateDataLevelPermissionStatusWithOptionsAsync(UpdateDataLevelPermissionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9829,49 +12953,83 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateDataLevelPermissionStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Indicates whether the request is successful. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @description The execution result of the interface. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @param request UpdateDataLevelPermissionStatusRequest
-         * @return UpdateDataLevelPermissionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The execution result of the interface. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataLevelPermissionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataLevelPermissionStatusResponse
+        /// </returns>
         public UpdateDataLevelPermissionStatusResponse UpdateDataLevelPermissionStatus(UpdateDataLevelPermissionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateDataLevelPermissionStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Indicates whether the request is successful. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @description The execution result of the interface. Valid values:
-         * *   true: The request was successful.
-         * *   false: The request failed.
-         *
-         * @param request UpdateDataLevelPermissionStatusRequest
-         * @return UpdateDataLevelPermissionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The execution result of the interface. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataLevelPermissionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataLevelPermissionStatusResponse
+        /// </returns>
         public async Task<UpdateDataLevelPermissionStatusResponse> UpdateDataLevelPermissionStatusAsync(UpdateDataLevelPermissionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDataLevelPermissionStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request UpdateEmbeddedStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateEmbeddedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEmbeddedStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEmbeddedStatusResponse
+        /// </returns>
         public UpdateEmbeddedStatusResponse UpdateEmbeddedStatusWithOptions(UpdateEmbeddedStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9903,13 +13061,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateEmbeddedStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request UpdateEmbeddedStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateEmbeddedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEmbeddedStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEmbeddedStatusResponse
+        /// </returns>
         public async Task<UpdateEmbeddedStatusResponse> UpdateEmbeddedStatusWithOptionsAsync(UpdateEmbeddedStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9941,37 +13107,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateEmbeddedStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request UpdateEmbeddedStatusRequest
-         * @return UpdateEmbeddedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEmbeddedStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEmbeddedStatusResponse
+        /// </returns>
         public UpdateEmbeddedStatusResponse UpdateEmbeddedStatus(UpdateEmbeddedStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateEmbeddedStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary The ID of the request.
-         *
-         * @param request UpdateEmbeddedStatusRequest
-         * @return UpdateEmbeddedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEmbeddedStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEmbeddedStatusResponse
+        /// </returns>
         public async Task<UpdateEmbeddedStatusResponse> UpdateEmbeddedStatusAsync(UpdateEmbeddedStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateEmbeddedStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新三方嵌入ticket的票据数量
-         *
-         * @param request UpdateTicketNumRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateTicketNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新三方嵌入ticket的票据数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTicketNumRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTicketNumResponse
+        /// </returns>
         public UpdateTicketNumResponse UpdateTicketNumWithOptions(UpdateTicketNumRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10003,13 +13189,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateTicketNumResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新三方嵌入ticket的票据数量
-         *
-         * @param request UpdateTicketNumRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateTicketNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新三方嵌入ticket的票据数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTicketNumRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTicketNumResponse
+        /// </returns>
         public async Task<UpdateTicketNumResponse> UpdateTicketNumWithOptionsAsync(UpdateTicketNumRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10041,37 +13235,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateTicketNumResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新三方嵌入ticket的票据数量
-         *
-         * @param request UpdateTicketNumRequest
-         * @return UpdateTicketNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新三方嵌入ticket的票据数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTicketNumRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTicketNumResponse
+        /// </returns>
         public UpdateTicketNumResponse UpdateTicketNum(UpdateTicketNumRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTicketNumWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新三方嵌入ticket的票据数量
-         *
-         * @param request UpdateTicketNumRequest
-         * @return UpdateTicketNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新三方嵌入ticket的票据数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTicketNumRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTicketNumResponse
+        /// </returns>
         public async Task<UpdateTicketNumResponse> UpdateTicketNumAsync(UpdateTicketNumRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTicketNumWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates the information of a specified member in an organization.
-         *
-         * @param request UpdateUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a specified member in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public UpdateUserResponse UpdateUserWithOptions(UpdateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10123,13 +13337,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the information of a specified member in an organization.
-         *
-         * @param request UpdateUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a specified member in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public async Task<UpdateUserResponse> UpdateUserWithOptionsAsync(UpdateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10181,37 +13403,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the information of a specified member in an organization.
-         *
-         * @param request UpdateUserRequest
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a specified member in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public UpdateUserResponse UpdateUser(UpdateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateUserWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates the information of a specified member in an organization.
-         *
-         * @param request UpdateUserRequest
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a specified member in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public async Task<UpdateUserResponse> UpdateUserAsync(UpdateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateUserWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates information about a specified user group in an organization.
-         *
-         * @param request UpdateUserGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a specified user group in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserGroupResponse
+        /// </returns>
         public UpdateUserGroupResponse UpdateUserGroupWithOptions(UpdateUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10247,13 +13489,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates information about a specified user group in an organization.
-         *
-         * @param request UpdateUserGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a specified user group in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserGroupResponse
+        /// </returns>
         public async Task<UpdateUserGroupResponse> UpdateUserGroupWithOptionsAsync(UpdateUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10289,37 +13539,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates information about a specified user group in an organization.
-         *
-         * @param request UpdateUserGroupRequest
-         * @return UpdateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a specified user group in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserGroupResponse
+        /// </returns>
         public UpdateUserGroupResponse UpdateUserGroup(UpdateUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateUserGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates information about a specified user group in an organization.
-         *
-         * @param request UpdateUserGroupRequest
-         * @return UpdateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a specified user group in an organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserGroupResponse
+        /// </returns>
         public async Task<UpdateUserGroupResponse> UpdateUserGroupAsync(UpdateUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateUserGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 用于更新组织成员标签元信息
-         *
-         * @param request UpdateUserTagMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新组织成员标签元信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserTagMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserTagMetaResponse
+        /// </returns>
         public UpdateUserTagMetaResponse UpdateUserTagMetaWithOptions(UpdateUserTagMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10355,13 +13625,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateUserTagMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 用于更新组织成员标签元信息
-         *
-         * @param request UpdateUserTagMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新组织成员标签元信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserTagMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserTagMetaResponse
+        /// </returns>
         public async Task<UpdateUserTagMetaResponse> UpdateUserTagMetaWithOptionsAsync(UpdateUserTagMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10397,37 +13675,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateUserTagMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 用于更新组织成员标签元信息
-         *
-         * @param request UpdateUserTagMetaRequest
-         * @return UpdateUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新组织成员标签元信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserTagMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserTagMetaResponse
+        /// </returns>
         public UpdateUserTagMetaResponse UpdateUserTagMeta(UpdateUserTagMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateUserTagMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 用于更新组织成员标签元信息
-         *
-         * @param request UpdateUserTagMetaRequest
-         * @return UpdateUserTagMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新组织成员标签元信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserTagMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserTagMetaResponse
+        /// </returns>
         public async Task<UpdateUserTagMetaResponse> UpdateUserTagMetaAsync(UpdateUserTagMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateUserTagMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新组织成员标签值
-         *
-         * @param request UpdateUserTagValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserTagValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新组织成员标签值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserTagValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserTagValueResponse
+        /// </returns>
         public UpdateUserTagValueResponse UpdateUserTagValueWithOptions(UpdateUserTagValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10463,13 +13761,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateUserTagValueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新组织成员标签值
-         *
-         * @param request UpdateUserTagValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserTagValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新组织成员标签值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserTagValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserTagValueResponse
+        /// </returns>
         public async Task<UpdateUserTagValueResponse> UpdateUserTagValueWithOptionsAsync(UpdateUserTagValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10505,37 +13811,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateUserTagValueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新组织成员标签值
-         *
-         * @param request UpdateUserTagValueRequest
-         * @return UpdateUserTagValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新组织成员标签值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserTagValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserTagValueResponse
+        /// </returns>
         public UpdateUserTagValueResponse UpdateUserTagValue(UpdateUserTagValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateUserTagValueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新组织成员标签值
-         *
-         * @param request UpdateUserTagValueRequest
-         * @return UpdateUserTagValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新组织成员标签值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserTagValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserTagValueResponse
+        /// </returns>
         public async Task<UpdateUserTagValueResponse> UpdateUserTagValueAsync(UpdateUserTagValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateUserTagValueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改工作空间下指定成员的角色，已有的角色会被覆盖
-         *
-         * @param request UpdateWorkspaceUserRoleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateWorkspaceUserRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改工作空间下指定成员的角色，已有的角色会被覆盖</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUserRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUserRoleResponse
+        /// </returns>
         public UpdateWorkspaceUserRoleResponse UpdateWorkspaceUserRoleWithOptions(UpdateWorkspaceUserRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10571,13 +13897,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateWorkspaceUserRoleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改工作空间下指定成员的角色，已有的角色会被覆盖
-         *
-         * @param request UpdateWorkspaceUserRoleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateWorkspaceUserRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改工作空间下指定成员的角色，已有的角色会被覆盖</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUserRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUserRoleResponse
+        /// </returns>
         public async Task<UpdateWorkspaceUserRoleResponse> UpdateWorkspaceUserRoleWithOptionsAsync(UpdateWorkspaceUserRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10613,37 +13947,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateWorkspaceUserRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改工作空间下指定成员的角色，已有的角色会被覆盖
-         *
-         * @param request UpdateWorkspaceUserRoleRequest
-         * @return UpdateWorkspaceUserRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改工作空间下指定成员的角色，已有的角色会被覆盖</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUserRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUserRoleResponse
+        /// </returns>
         public UpdateWorkspaceUserRoleResponse UpdateWorkspaceUserRole(UpdateWorkspaceUserRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateWorkspaceUserRoleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改工作空间下指定成员的角色，已有的角色会被覆盖
-         *
-         * @param request UpdateWorkspaceUserRoleRequest
-         * @return UpdateWorkspaceUserRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改工作空间下指定成员的角色，已有的角色会被覆盖</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUserRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUserRoleResponse
+        /// </returns>
         public async Task<UpdateWorkspaceUserRoleResponse> UpdateWorkspaceUserRoleAsync(UpdateWorkspaceUserRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateWorkspaceUserRoleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 批量更新工作空间成员的角色信息，已有角色会被覆盖
-         *
-         * @param request UpdateWorkspaceUsersRoleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateWorkspaceUsersRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量更新工作空间成员的角色信息，已有角色会被覆盖</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUsersRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUsersRoleResponse
+        /// </returns>
         public UpdateWorkspaceUsersRoleResponse UpdateWorkspaceUsersRoleWithOptions(UpdateWorkspaceUsersRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10679,13 +14033,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateWorkspaceUsersRoleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量更新工作空间成员的角色信息，已有角色会被覆盖
-         *
-         * @param request UpdateWorkspaceUsersRoleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateWorkspaceUsersRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量更新工作空间成员的角色信息，已有角色会被覆盖</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUsersRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUsersRoleResponse
+        /// </returns>
         public async Task<UpdateWorkspaceUsersRoleResponse> UpdateWorkspaceUsersRoleWithOptionsAsync(UpdateWorkspaceUsersRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10721,37 +14083,57 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateWorkspaceUsersRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量更新工作空间成员的角色信息，已有角色会被覆盖
-         *
-         * @param request UpdateWorkspaceUsersRoleRequest
-         * @return UpdateWorkspaceUsersRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量更新工作空间成员的角色信息，已有角色会被覆盖</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUsersRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUsersRoleResponse
+        /// </returns>
         public UpdateWorkspaceUsersRoleResponse UpdateWorkspaceUsersRole(UpdateWorkspaceUsersRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateWorkspaceUsersRoleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 批量更新工作空间成员的角色信息，已有角色会被覆盖
-         *
-         * @param request UpdateWorkspaceUsersRoleRequest
-         * @return UpdateWorkspaceUsersRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量更新工作空间成员的角色信息，已有角色会被覆盖</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUsersRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUsersRoleResponse
+        /// </returns>
         public async Task<UpdateWorkspaceUsersRoleResponse> UpdateWorkspaceUsersRoleAsync(UpdateWorkspaceUsersRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateWorkspaceUsersRoleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Make the user exit all user groups. This process is irreversible. Exercise caution when performing this operation.
-         *
-         * @param request WithdrawAllUserGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return WithdrawAllUserGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Make the user exit all user groups. This process is irreversible. Exercise caution when performing this operation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WithdrawAllUserGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WithdrawAllUserGroupsResponse
+        /// </returns>
         public WithdrawAllUserGroupsResponse WithdrawAllUserGroupsWithOptions(WithdrawAllUserGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10779,13 +14161,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<WithdrawAllUserGroupsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Make the user exit all user groups. This process is irreversible. Exercise caution when performing this operation.
-         *
-         * @param request WithdrawAllUserGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return WithdrawAllUserGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Make the user exit all user groups. This process is irreversible. Exercise caution when performing this operation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WithdrawAllUserGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WithdrawAllUserGroupsResponse
+        /// </returns>
         public async Task<WithdrawAllUserGroupsResponse> WithdrawAllUserGroupsWithOptionsAsync(WithdrawAllUserGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10813,24 +14203,36 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<WithdrawAllUserGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Make the user exit all user groups. This process is irreversible. Exercise caution when performing this operation.
-         *
-         * @param request WithdrawAllUserGroupsRequest
-         * @return WithdrawAllUserGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Make the user exit all user groups. This process is irreversible. Exercise caution when performing this operation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WithdrawAllUserGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WithdrawAllUserGroupsResponse
+        /// </returns>
         public WithdrawAllUserGroupsResponse WithdrawAllUserGroups(WithdrawAllUserGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return WithdrawAllUserGroupsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Make the user exit all user groups. This process is irreversible. Exercise caution when performing this operation.
-         *
-         * @param request WithdrawAllUserGroupsRequest
-         * @return WithdrawAllUserGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Make the user exit all user groups. This process is irreversible. Exercise caution when performing this operation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WithdrawAllUserGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WithdrawAllUserGroupsResponse
+        /// </returns>
         public async Task<WithdrawAllUserGroupsResponse> WithdrawAllUserGroupsAsync(WithdrawAllUserGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

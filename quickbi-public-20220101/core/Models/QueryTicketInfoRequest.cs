@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryTicketInfoRequest : TeaModel {
         /// <summary>
-        /// Obtains the details of a specified ticket for a report that is not embedded in the report.
+        /// <para>Obtains the details of a specified ticket for a report that is not embedded in the report.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>a27a9aec-<b><b>-</b></b>-bd40-1a21ea41d7c5</para>
         /// </summary>
         [NameInMap("Ticket")]
         [Validation(Required=false)]

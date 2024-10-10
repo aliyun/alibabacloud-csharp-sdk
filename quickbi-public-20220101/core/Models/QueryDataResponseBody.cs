@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDataResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>a4d1a221d-41za1-****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public List<QueryDataResponseBodyResultHeaders> Headers { get; set; }
             public class QueryDataResponseBodyResultHeaders : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>SUM</para>
+                /// </summary>
                 [NameInMap("Aggregator")]
                 [Validation(Required=false)]
                 public string Aggregator { get; set; }
@@ -29,18 +37,34 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public string Column { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>string</para>
+                /// </summary>
                 [NameInMap("DataType")]
                 [Validation(Required=false)]
                 public string DataType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>REGION</para>
+                /// </summary>
                 [NameInMap("Granularity")]
                 [Validation(Required=false)]
                 public string Granularity { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>area</para>
+                /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Dimension</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -57,6 +81,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

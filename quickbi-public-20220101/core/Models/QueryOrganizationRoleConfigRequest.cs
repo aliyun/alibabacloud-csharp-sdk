@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryOrganizationRoleConfigRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>111111111</para>
         /// </summary>
         [NameInMap("RoleId")]
         [Validation(Required=false)]

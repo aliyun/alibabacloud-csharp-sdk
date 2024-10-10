@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class WithdrawAllUserGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the user. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
+        /// <para>The ID of the user. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>46e5374665ba4b679ee22e2a2927****</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

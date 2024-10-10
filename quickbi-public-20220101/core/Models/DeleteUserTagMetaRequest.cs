@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DeleteUserTagMetaRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pop_001</para>
         /// </summary>
         [NameInMap("TagId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListUserGroupsByUserIdRequest : TeaModel {
         /// <summary>
-        /// The ID of the user group.
+        /// <para>The ID of the user group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>46e5374665ba4b679ee22e2a2927****</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

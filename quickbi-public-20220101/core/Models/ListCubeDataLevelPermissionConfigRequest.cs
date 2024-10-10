@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListCubeDataLevelPermissionConfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the training dataset that you want to remove from the specified custom linguistic model.
+        /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>7c7223ae-****-3c744528014b</para>
         /// </summary>
         [NameInMap("CubeId")]
         [Validation(Required=false)]
         public string CubeId { get; set; }
 
         /// <summary>
-        /// The type of the dataset row and column permission. Valid values:
+        /// <para>The type of the dataset row and column permission. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ROW_LEVEL: row-level permissions</description></item>
+        /// <item><description>COLUMN_LEVEL: column-level permissions</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   ROW_LEVEL: row-level permissions
-        /// *   COLUMN_LEVEL: column-level permissions
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ROW_LEVEL</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]

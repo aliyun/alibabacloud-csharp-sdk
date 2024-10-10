@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>llmCube</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

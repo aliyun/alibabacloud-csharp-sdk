@@ -10,27 +10,38 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DeleteUserGroupMemberResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DC4E1E63-B337-44F8-8C22-6F00DF67E2C3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Returns the result of deleting a user group member. Valid values:
+        /// <para>Returns the result of deleting a user group member. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The task is deleted.</description></item>
+        /// <item><description>false: The deletion failed.</description></item>
+        /// </list>
         /// 
-        /// *   true: The task is deleted.
-        /// *   false: The deletion failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public bool? Result { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

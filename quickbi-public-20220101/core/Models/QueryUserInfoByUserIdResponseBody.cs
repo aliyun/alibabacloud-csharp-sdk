@@ -10,69 +10,95 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryUserInfoByUserIdResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned organization user information.
+        /// <para>The returned organization user information.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public QueryUserInfoByUserIdResponseBodyResult Result { get; set; }
         public class QueryUserInfoByUserIdResponseBodyResult : TeaModel {
             /// <summary>
-            /// The ID of the Alibaba Cloud account.
+            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>135****5848</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
             /// <summary>
-            /// The name of the Alibaba Cloud account that corresponds to the member.
+            /// <para>The name of the Alibaba Cloud account that corresponds to the member.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1386587****@163.com</para>
             /// </summary>
             [NameInMap("AccountName")]
             [Validation(Required=false)]
             public string AccountName { get; set; }
 
             /// <summary>
-            /// Whether you are an administrator of the organization. Valid values:
+            /// <para>Whether you are an administrator of the organization. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
             /// 
-            /// *   true
-            /// *   false
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("AdminUser")]
             [Validation(Required=false)]
             public bool? AdminUser { get; set; }
 
             /// <summary>
-            /// Whether you are a permission administrator. Valid values:
+            /// <para>Whether you are a permission administrator. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
             /// 
-            /// *   true
-            /// *   false
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("AuthAdminUser")]
             [Validation(Required=false)]
             public bool? AuthAdminUser { get; set; }
 
             /// <summary>
-            /// The email address of the user.
+            /// <para>The email address of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1386587****@163.com</para>
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
             /// <summary>
-            /// The nickname of the account.
+            /// <para>The nickname of the account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test user</para>
             /// </summary>
             [NameInMap("NickName")]
             [Validation(Required=false)]
             public string NickName { get; set; }
 
             /// <summary>
-            /// The phone number of the alert contact.
+            /// <para>The phone number of the alert contact.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1386587****</para>
             /// </summary>
             [NameInMap("Phone")]
             [Validation(Required=false)]
@@ -83,18 +109,25 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public List<long?> RoleIdList { get; set; }
 
             /// <summary>
-            /// The UserID in the Quick BI.
+            /// <para>The UserID in the Quick BI.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fe67f61a35a94b7da1a34ba174a7****</para>
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
             /// <summary>
-            /// The role type of the organization member. Valid values:
+            /// <para>The role type of the organization member. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1 : developer</description></item>
+            /// <item><description>2 : visitors</description></item>
+            /// <item><description>3 : Analyst</description></item>
+            /// </list>
             /// 
-            /// *   1 : developer
-            /// *   2 : visitors
-            /// *   3 : Analyst
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("UserType")]
             [Validation(Required=false)]
@@ -103,10 +136,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

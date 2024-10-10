@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ChangeVisibilityModelRequest : TeaModel {
         /// <summary>
-        /// The number of menus that are successfully modified.
+        /// <para>The number of menus that are successfully modified.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0d173abb53e84c8ca7495429163b****</para>
         /// </summary>
         [NameInMap("DataPortalId")]
         [Validation(Required=false)]
         public string DataPortalId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>54kqgoa****,pg1n135****</para>
         /// </summary>
         [NameInMap("MenuIds")]
         [Validation(Required=false)]
         public string MenuIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ShowOnlyWithAccess")]
         [Validation(Required=false)]

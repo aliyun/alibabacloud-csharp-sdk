@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddDataLevelPermissionRuleUsersResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The execution result of the interface. Valid values:\\n\\n*   true: The request was successful.\\n*   false: The request failed.\\n
+        /// <para>The execution result of the interface. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public bool? Result { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:\\n\\n*   true: The request was successful.\\n*   false: The request failed.\\n
+        /// <para>Indicates whether the request is successful. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

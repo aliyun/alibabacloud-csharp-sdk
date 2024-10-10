@@ -13,16 +13,27 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PAGE</para>
+        /// </summary>
         [NameInMap("TreeType")]
         [Validation(Required=false)]
         public string TreeType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b5d8fd9348cc4327****afb604</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

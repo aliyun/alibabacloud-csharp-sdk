@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DataSourceBloodRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>44051300991327000048</para>
         /// </summary>
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]

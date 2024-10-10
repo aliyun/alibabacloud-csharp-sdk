@@ -14,12 +14,24 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string AgentName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccd3428c-dd2xxxxxxxxxxxxdffee</para>
         /// </summary>
         [NameInMap("CopilotId")]
         [Validation(Required=false)]
         public string CopilotId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Map&lt;String,Object&gt; data=new HashMap&lt;&gt;();
+        ///         data.put(&quot;allTheme&quot;,true);
+        ///         //data.put(&quot;allCube&quot;,true);
+        ///         //data.put(&quot;themes&quot;,Lists.newArrayList(&quot;1111&quot;,&quot;22222&quot;));
+        ///         //data.put(&quot;llmCubes&quot;,Lists.newArrayList(&quot;33333&quot;,&quot;44444&quot;));
+        ///         request.setDataRange(JSON.toJSONString(data));</para>
+        /// </summary>
         [NameInMap("DataRange")]
         [Validation(Required=false)]
         public string DataRange { get; set; }
