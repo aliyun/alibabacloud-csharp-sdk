@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             [Validation(Required=false)]
             public string Attribute { get; set; }
 
+            [NameInMap("Error")]
+            [Validation(Required=false)]
+            public string Error { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1726645341000</para>
