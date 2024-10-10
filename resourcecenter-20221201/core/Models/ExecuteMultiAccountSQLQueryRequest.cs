@@ -22,6 +22,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         [Validation(Required=false)]
         public string Expression { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The search scope. The value of this parameter can be one of the following items:</para>
         /// <list type="bullet">

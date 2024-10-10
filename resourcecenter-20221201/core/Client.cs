@@ -1174,6 +1174,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
             {
                 query["Expression"] = request.Expression;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
                 query["Scope"] = request.Scope;
@@ -1219,6 +1227,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expression))
             {
                 query["Expression"] = request.Expression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
@@ -1302,6 +1318,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
             {
                 query["Expression"] = request.Expression;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
                 query["Scope"] = request.Scope;
@@ -1347,6 +1371,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expression))
             {
                 query["Expression"] = request.Expression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
