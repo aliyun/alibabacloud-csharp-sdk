@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        [NameInMap("RelationKey")]
+        [Validation(Required=false)]
+        public string RelationKey { get; set; }
+
         [NameInMap("RepairTempParam")]
         [Validation(Required=false)]
         public List<SubmitOperationTaskRequestRepairTempParam> RepairTempParam { get; set; }

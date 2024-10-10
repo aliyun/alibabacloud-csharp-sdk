@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string OperateCode { get; set; }
 
+            [NameInMap("ThrottlingTimeSecond")]
+            [Validation(Required=false)]
+            public int? ThrottlingTimeSecond { get; set; }
+
         }
 
         /// <summary>

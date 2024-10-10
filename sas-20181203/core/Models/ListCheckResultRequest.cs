@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("OperationTypes")]
+        [Validation(Required=false)]
+        public List<string> OperationTypes { get; set; }
+
         /// <summary>
         /// <para>The number of entries per page. Maximum value: 100.</para>
         /// 

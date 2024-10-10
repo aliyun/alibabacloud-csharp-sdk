@@ -218,6 +218,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? LastCheckTime { get; set; }
 
+            [NameInMap("OperationType")]
+            [Validation(Required=false)]
+            public string OperationType { get; set; }
+
             /// <summary>
             /// <para>The risk level of the check item. Valid values:</para>
             /// <list type="bullet">

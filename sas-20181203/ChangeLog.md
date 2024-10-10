@@ -1,3 +1,17 @@
+2024-10-10 Version: 3.3.0
+- Support API GetBuildRiskDefineRuleConfig.
+- Support API SetBuildRiskDefineRuleConfig.
+- Update API DescribeOnceTask: add param Source.
+- Update API DescribeOnceTask: update response param.
+- Update API ListCheckResult: add param OperationTypes.
+- Update API ListCheckResult: update response param.
+- Update API ListSystemClientRules: update response param.
+- Update API SubmitCheck: update response param.
+- Update API SubmitOperationTask: add param RelationKey.
+- Update API SubmitOperationTask: update param DimensionType.
+- Update API VerifyCheckResult: update response param.
+
+
 2024-10-08 Version: 3.2.0
 - Support API GetBuildRiskDefineRuleConfig.
 - Support API SetBuildRiskDefineRuleConfig.
