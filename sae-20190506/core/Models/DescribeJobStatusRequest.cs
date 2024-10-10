@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeJobStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the job template.
+        /// <para>The ID of the job template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>e1a7a07-abcb-4652-a1d3-2d57f415****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The job ID.
+        /// <para>The job ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>event-b798157b-40a2-4388-b578-71fb897103**-**</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

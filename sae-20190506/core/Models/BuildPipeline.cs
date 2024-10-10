@@ -10,41 +10,56 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class BuildPipeline : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BuildConfig")]
         [Validation(Required=false)]
         public BuildPipelineBuildConfig BuildConfig { get; set; }
         public class BuildPipelineBuildConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>mvn clean package</para>
+            /// </summary>
             [NameInMap("BeforeBuildCommand")]
             [Validation(Required=false)]
             public string BeforeBuildCommand { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>buildpacks/dockerfile</para>
             /// </summary>
             [NameInMap("BuildType")]
             [Validation(Required=false)]
             public string BuildType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>code/Dockerfile</para>
+            /// </summary>
             [NameInMap("DockerfilePath")]
             [Validation(Required=false)]
             public string DockerfilePath { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>java -jar target/app.jar</para>
+            /// </summary>
             [NameInMap("RunCommand")]
             [Validation(Required=false)]
             public string RunCommand { get; set; }
@@ -61,6 +76,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public TomcatConfig TomcatConfig { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>code</para>
+            /// </summary>
             [NameInMap("WorkingDir")]
             [Validation(Required=false)]
             public string WorkingDir { get; set; }
@@ -68,21 +87,27 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CodeConfig")]
         [Validation(Required=false)]
         public BuildPipelineCodeConfig CodeConfig { get; set; }
         public class BuildPipelineCodeConfig : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>master</para>
             /// </summary>
             [NameInMap("BranchName")]
             [Validation(Required=false)]
@@ -101,21 +126,30 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string OrganizationId { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>github/gitee/gitlab等</para>
             /// </summary>
             [NameInMap("Provider")]
             [Validation(Required=false)]
             public string Provider { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sae-samples/java-maven-demo</para>
             /// </summary>
             [NameInMap("RepoFullName")]
             [Validation(Required=false)]
             public string RepoFullName { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3001</para>
             /// </summary>
             [NameInMap("RepoId")]
             [Validation(Required=false)]
@@ -157,6 +191,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public BuildPipelineImageConfig ImageConfig { get; set; }
         public class BuildPipelineImageConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ACR/ACREE</para>
+            /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
@@ -179,14 +217,26 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string PackageName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>war/jar/zip</para>
+            /// </summary>
             [NameInMap("PackageType")]
             [Validation(Required=false)]
             public string PackageType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar</a></para>
+            /// </summary>
             [NameInMap("PackageUrl")]
             [Validation(Required=false)]
             public string PackageUrl { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1.0.0</para>
+            /// </summary>
             [NameInMap("PackageVersion")]
             [Validation(Required=false)]
             public string PackageVersion { get; set; }
@@ -194,22 +244,33 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TriggerConfig")]
         [Validation(Required=false)]
         public BuildPipelineTriggerConfig TriggerConfig { get; set; }
         public class BuildPipelineTriggerConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>master</para>
+            /// </summary>
             [NameInMap("BranchName")]
             [Validation(Required=false)]
             public string BranchName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>v1</para>
+            /// </summary>
             [NameInMap("TagName")]
             [Validation(Required=false)]
             public string TagName { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PUSH</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

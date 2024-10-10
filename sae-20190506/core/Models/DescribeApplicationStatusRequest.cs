@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeApplicationStatusRequest : TeaModel {
         /// <summary>
-        /// 0099b7be-5f5b-4512-a7fc-56049ef1\\*\\*\\*\\*
+        /// <para>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0099b7be-5f5b-4512-a7fc-56049ef1****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

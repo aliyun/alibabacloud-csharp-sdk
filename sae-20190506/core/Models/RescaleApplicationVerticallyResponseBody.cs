@@ -10,26 +10,33 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class RescaleApplicationVerticallyResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. Take note of the following rules:
+        /// <para>The HTTP status code. Take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// </list>
         /// 
-        /// *   **2xx**: The call was successful.
-        /// *   **3xx**: The call was redirected.
-        /// *   **4xx**: The call failed.
-        /// *   **5xx**: A server error occurred.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The response.
+        /// <para>The response.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RescaleApplicationVerticallyResponseBodyData Data { get; set; }
         public class RescaleApplicationVerticallyResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the change order.
+            /// <para>The ID of the change order.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ffd8cd45-2b5f-415d-b4d0-1003e80b****</para>
             /// </summary>
             [NameInMap("ChangeOrderId")]
             [Validation(Required=false)]
@@ -38,41 +45,58 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The error code returned if the request failed. Take note of the following rules:
+        /// <para>The error code returned if the request failed. Take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>The <b>ErrorCode</b> parameter is not returned if the request succeeds.</description></item>
+        /// <item><description>The <b>ErrorCode</b> parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// </list>
         /// 
-        /// *   The **ErrorCode** parameter is not returned if the request succeeds.
-        /// *   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.
+        /// <b>Example:</b>
+        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The message returned for the operation.
+        /// <para>The message returned for the operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AB521DBB-FA78-42E6-803F-A862EA4F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the instance specifications are changed. Take note of the following rules:
+        /// <para>Indicates whether the instance specifications are changed. Take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The trace ID that is used to query the details of the request.
+        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bc3b6f315637273629117900d****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

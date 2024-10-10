@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateSecretRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing:test</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SecretData")]
         [Validation(Required=false)]
         public CreateSecretRequestSecretData SecretData { get; set; }
         public class CreateSecretRequestSecretData : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("SecretData")]
             [Validation(Required=false)]
@@ -33,14 +36,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>registry-auth-acree</para>
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>kubernetes.io/dockerconfigjson</para>
         /// </summary>
         [NameInMap("SecretType")]
         [Validation(Required=false)]

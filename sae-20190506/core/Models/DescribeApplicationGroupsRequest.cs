@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeApplicationGroupsRequest : TeaModel {
         /// <summary>
-        /// d700e680-aa4d-4ec1-afc2-6566b5ff\\*\\*\\*\\*
+        /// <para>d700e680-aa4d-4ec1-afc2-6566b5ff\<em>\</em>\<em>\</em></para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>d700e680-aa4d-4ec1-afc2-6566b5ff****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// 1
+        /// <para>1</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// 10
+        /// <para>10</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

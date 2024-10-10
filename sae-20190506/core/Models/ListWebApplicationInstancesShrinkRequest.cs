@@ -13,16 +13,27 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>c-667d143a-17b4e0fa-46d3a2******</para>
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIdsShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public string Limit { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
@@ -36,6 +47,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string StatusesShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>001</para>
+        /// </summary>
         [NameInMap("VersionIds")]
         [Validation(Required=false)]
         public string VersionIdsShrink { get; set; }

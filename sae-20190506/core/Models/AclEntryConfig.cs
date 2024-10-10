@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class AclEntryConfig : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.2.3.4/32</para>
         /// </summary>
         [NameInMap("entry")]
         [Validation(Required=false)]

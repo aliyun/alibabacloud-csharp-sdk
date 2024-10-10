@@ -22,7 +22,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the trace. The ID is used to query the details of a request.
+        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -32,6 +35,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0a98a02315955564772843261e****</para>
+        /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }

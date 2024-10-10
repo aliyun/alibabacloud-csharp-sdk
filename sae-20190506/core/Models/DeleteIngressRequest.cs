@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeleteIngressRequest : TeaModel {
         /// <summary>
-        /// 87
+        /// <para>87</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>87</para>
         /// </summary>
         [NameInMap("IngressId")]
         [Validation(Required=false)]

@@ -10,59 +10,78 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// Queries applications.
+        /// <para>Queries applications.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// 20
+        /// <para>20</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The queried applications.
+        /// <para>The queried applications.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListApplicationsResponseBodyData Data { get; set; }
         public class ListApplicationsResponseBodyData : TeaModel {
             /// <summary>
-            /// The applications.
+            /// <para>The applications.</para>
             /// </summary>
             [NameInMap("Applications")]
             [Validation(Required=false)]
             public List<ListApplicationsResponseBodyDataApplications> Applications { get; set; }
             public class ListApplicationsResponseBodyDataApplications : TeaModel {
                 /// <summary>
-                /// Indicates whether the application is being deleted. Valid values:
+                /// <para>Indicates whether the application is being deleted. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The application is being deleted.</description></item>
+                /// <item><description><b>false</b>: The application is not being deleted.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The application is being deleted.
-                /// *   **false**: The application is not being deleted.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("AppDeletingStatus")]
                 [Validation(Required=false)]
                 public bool? AppDeletingStatus { get; set; }
 
                 /// <summary>
-                /// The description of the application.
+                /// <para>The description of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>description</para>
                 /// </summary>
                 [NameInMap("AppDescription")]
                 [Validation(Required=false)]
                 public string AppDescription { get; set; }
 
                 /// <summary>
-                /// The application ID.
+                /// <para>The application ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>f7730764-d88f-4b9a-8d8e-cd8efbfe****</para>
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The application name.
+                /// <para>The application name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>demo-app</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
@@ -153,15 +172,19 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:
+                /// <para>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>500</b></description></item>
+                /// <item><description><b>1000</b></description></item>
+                /// <item><description><b>2000</b></description></item>
+                /// <item><description><b>4000</b></description></item>
+                /// <item><description><b>8000</b></description></item>
+                /// <item><description><b>16000</b></description></item>
+                /// <item><description><b>32000</b></description></item>
+                /// </list>
                 /// 
-                /// *   **500**
-                /// *   **1000**
-                /// *   **2000**
-                /// *   **4000**
-                /// *   **8000**
-                /// *   **16000**
-                /// *   **32000**
+                /// <b>Example:</b>
+                /// <para>1000</para>
                 /// </summary>
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
@@ -172,25 +195,32 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ImageUrl { get; set; }
 
                 /// <summary>
-                /// The number of application instances.
+                /// <para>The number of application instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Instances")]
                 [Validation(Required=false)]
                 public int? Instances { get; set; }
 
                 /// <summary>
-                /// The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:
+                /// <para>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</para>
+                /// <list type="bullet">
+                /// <item><description>This parameter is set to <b>1024</b> if the Cpu parameter is set to 500 or 1000.</description></item>
+                /// <item><description>This parameter is set to <b>2048</b> if the Cpu parameter is set to 500, 1000, or 2000.</description></item>
+                /// <item><description>This parameter is set to <b>4096</b> if the Cpu parameter is set to 1000, 2000, or 4000.</description></item>
+                /// <item><description>This parameter is set to <b>8192</b> if the Cpu parameter is set to 2000, 4000, or 8000.</description></item>
+                /// <item><description>This parameter is set to <b>12288</b> if the Cpu parameter is set to 12000.</description></item>
+                /// <item><description>This parameter is set to <b>16384</b> if the Cpu parameter is set to 4000, 8000, or 16000.</description></item>
+                /// <item><description>This parameter is set to <b>24576</b> if the Cpu parameter is set to 12000.</description></item>
+                /// <item><description>This parameter is set to <b>32768</b> if the Cpu parameter is set to 16000.</description></item>
+                /// <item><description>This parameter is set to <b>65536</b> if the Cpu parameter is set to 8000, 16000, or 32000.</description></item>
+                /// <item><description>This parameter is set to <b>131072</b> if the Cpu parameter is set to 32000.</description></item>
+                /// </list>
                 /// 
-                /// *   This parameter is set to **1024** if the Cpu parameter is set to 500 or 1000.
-                /// *   This parameter is set to **2048** if the Cpu parameter is set to 500, 1000, or 2000.
-                /// *   This parameter is set to **4096** if the Cpu parameter is set to 1000, 2000, or 4000.
-                /// *   This parameter is set to **8192** if the Cpu parameter is set to 2000, 4000, or 8000.
-                /// *   This parameter is set to **12288** if the Cpu parameter is set to 12000.
-                /// *   This parameter is set to **16384** if the Cpu parameter is set to 4000, 8000, or 16000.
-                /// *   This parameter is set to **24576** if the Cpu parameter is set to 12000.
-                /// *   This parameter is set to **32768** if the Cpu parameter is set to 16000.
-                /// *   This parameter is set to **65536** if the Cpu parameter is set to 8000, 16000, or 32000.
-                /// *   This parameter is set to **131072** if the Cpu parameter is set to 32000.
+                /// <b>Example:</b>
+                /// <para>1024</para>
                 /// </summary>
                 [NameInMap("Mem")]
                 [Validation(Required=false)]
@@ -205,7 +235,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string MseNamespaceId { get; set; }
 
                 /// <summary>
-                /// The namespace ID.
+                /// <para>The namespace ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-beijing:demo</para>
                 /// </summary>
                 [NameInMap("NamespaceId")]
                 [Validation(Required=false)]
@@ -220,35 +253,47 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ProgrammingLanguage { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-beijing</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The number of running instances.
+                /// <para>The number of running instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("RunningInstances")]
                 [Validation(Required=false)]
                 public int? RunningInstances { get; set; }
 
                 /// <summary>
-                /// The tags of the application.
+                /// <para>The tags of the application.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<ListApplicationsResponseBodyDataApplicationsTags> Tags { get; set; }
                 public class ListApplicationsResponseBodyDataApplicationsTags : TeaModel {
                     /// <summary>
-                    /// The key of the tag.
+                    /// <para>The key of the tag.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>key</para>
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// The value of the tag.
+                    /// <para>The value of the tag.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>value</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -259,21 +304,30 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// The number of application instances.
+            /// <para>The number of application instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The tags of the application.
+            /// <para>The tags of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The information about applications.
+            /// <para>The information about applications.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("TotalSize")]
             [Validation(Required=false)]
@@ -282,42 +336,60 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// <para>The number of entries returned on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The ID of the request.</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// 20
+        /// <para>20</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// cn-beijing:demo
+        /// <para>cn-beijing:demo</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// <para>The number of entries returned on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B4D805CA-926D-41B1-8E63-7AD0C1ED****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 1
+        /// <para>1</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// demo-app
+        /// <para>demo-app</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalSize")]
         [Validation(Required=false)]

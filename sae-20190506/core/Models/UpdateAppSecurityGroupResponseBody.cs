@@ -10,53 +10,73 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateAppSecurityGroupResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the security group of the application is successfully updated. Valid values:
+        /// <para>Indicates whether the security group of the application is successfully updated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The HTTP status code. Valid values:
-        /// 
-        /// *   **2xx**: indicates that the request was successful.
-        /// *   **3xx**: indicates that the request was redirected.
-        /// *   **4xx**: indicates that the request was invalid.
-        /// *   **5xx**: indicates that a server error occurred.
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
+        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
+        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
+        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The ID of the trace. It can be used to query details of a request.
+        /// <para>The ID of the trace. It can be used to query details of a request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <list type="bullet">
+        /// <item><description>If the request is successful, <b>success</b> is returned.</description></item>
+        /// <item><description>An error code is returned when the request fails.</description></item>
+        /// </list>
         /// 
-        /// *   If the request is successful, **success** is returned.
-        /// *   An error code is returned when the request fails.
+        /// <b>Example:</b>
+        /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// <list type="bullet">
+        /// <item><description>If the request is successful, this parameter is not returned.****</description></item>
+        /// <item><description>This parameter is returned only if the request failed.**** For more information, see the &quot;<b>Error codes</b>&quot; section in this topic.</description></item>
+        /// </list>
         /// 
-        /// *   If the request is successful, this parameter is not returned.****
-        /// *   This parameter is returned only if the request failed.**** For more information, see the "**Error codes**" section in this topic.
+        /// <b>Example:</b>
+        /// <para>0a98a02315955564772843261e****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

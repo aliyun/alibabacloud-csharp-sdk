@@ -10,57 +10,73 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class GetWarningEventMetricRequest : TeaModel {
         /// <summary>
-        /// The SAE application type. Valid values:
+        /// <para>The SAE application type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>micro_service</b></description></item>
+        /// <item><description><b>web</b></description></item>
+        /// <item><description><b>job</b></description></item>
+        /// </list>
         /// 
-        /// *   **micro_service**
-        /// *   **web**
-        /// *   **job**
+        /// <b>Example:</b>
+        /// <para>micro_service</para>
         /// </summary>
         [NameInMap("AppSource")]
         [Validation(Required=false)]
         public string AppSource { get; set; }
 
         /// <summary>
-        /// The CPU allocation policy. Valid values:
+        /// <para>The CPU allocation policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>request</b>: CPU cores are allocated only when a request is initiated.</description></item>
+        /// <item><description><b>always</b>: Fixed CPU cores are always allocated.</description></item>
+        /// </list>
         /// 
-        /// *   **request**: CPU cores are allocated only when a request is initiated.
-        /// *   **always**: Fixed CPU cores are always allocated.
+        /// <b>Example:</b>
+        /// <para>always</para>
         /// </summary>
         [NameInMap("CpuStrategy")]
         [Validation(Required=false)]
         public string CpuStrategy { get; set; }
 
         /// <summary>
-        /// The end of the time range to query.
+        /// <para>The end of the time range to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1675824035951</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The number of entries to return. Valid values: 0 to 100.
+        /// <para>The number of entries to return. Valid values: 0 to 100.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public long? Limit { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query.
+        /// <para>The beginning of the time range to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1675823135951</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

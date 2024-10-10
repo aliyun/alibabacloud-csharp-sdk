@@ -10,44 +10,61 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListChangeOrdersRequest : TeaModel {
         /// <summary>
-        /// 1
+        /// <para>1</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>145341c-9708-4967-b3ec-24933767****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("CoStatus")]
         [Validation(Required=false)]
         public string CoStatus { get; set; }
 
         /// <summary>
-        /// 2
+        /// <para>2</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CoCreateApp</para>
         /// </summary>
         [NameInMap("CoType")]
         [Validation(Required=false)]
         public string CoType { get; set; }
 
         /// <summary>
-        /// 20
+        /// <para>20</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// CoCreateApp
+        /// <para>CoCreateApp</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// test
+        /// <para>test</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

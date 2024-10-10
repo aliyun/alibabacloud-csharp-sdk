@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateConfigMapResponseBody : TeaModel {
         /// <summary>
-        /// Empty
+        /// <para>Empty</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The trace ID that is used to query the details of the request.
+        /// <para>The trace ID that is used to query the details of the request.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateConfigMapResponseBodyData Data { get; set; }
         public class CreateConfigMapResponseBodyData : TeaModel {
             /// <summary>
-            /// The returned result.
+            /// <para>The returned result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ConfigMapId")]
             [Validation(Required=false)]
@@ -33,40 +39,60 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The ID of the ConfigMap that was created.
+        /// <para>The ID of the ConfigMap that was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The error code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
+        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The HTTP status code. Valid values:
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// </list>
         /// 
-        /// *   **2xx**: The call was successful.
-        /// *   **3xx**: The call was redirected.
-        /// *   **4xx**: The call failed.
-        /// *   **5xx**: A server error occurred.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0a98a02315955564772843261e****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

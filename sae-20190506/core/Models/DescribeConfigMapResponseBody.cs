@@ -10,83 +10,112 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeConfigMapResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the details of the ConfigMap instance were obtained. Valid values:
+        /// <para>Indicates whether the details of the ConfigMap instance were obtained. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The details were obtained.</description></item>
+        /// <item><description><b>false</b>: The details failed to be obtained.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The details were obtained.
-        /// *   **false**: The details failed to be obtained.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The time when the instance was last modified.
+        /// <para>The time when the instance was last modified.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeConfigMapResponseBodyData Data { get; set; }
         public class DescribeConfigMapResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the ConfigMap instance.
+            /// <para>The name of the ConfigMap instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ConfigMapId")]
             [Validation(Required=false)]
             public long? ConfigMapId { get; set; }
 
             /// <summary>
-            /// The application that is associated with the instance.
+            /// <para>The application that is associated with the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1593746835111</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the namespace to which the instance belongs.
+            /// <para>The ID of the namespace to which the instance belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public Dictionary<string, object> Data { get; set; }
 
             /// <summary>
-            /// The time when the instance was created.
+            /// <para>The time when the instance was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-desc</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The returned error code. Valid values:
+            /// <para>The returned error code. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
+            /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
+            /// </list>
             /// 
-            /// *   If the call is successful, the **ErrorCode** parameter is not returned.
-            /// *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+            /// <b>Example:</b>
+            /// <para>test-configmap</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The description of the instance.
+            /// <para>The description of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("NamespaceId")]
             [Validation(Required=false)]
             public string NamespaceId { get; set; }
 
             /// <summary>
-            /// The name of the application.
+            /// <para>The name of the application.</para>
             /// </summary>
             [NameInMap("RelateApps")]
             [Validation(Required=false)]
             public List<DescribeConfigMapResponseBodyDataRelateApps> RelateApps { get; set; }
             public class DescribeConfigMapResponseBodyDataRelateApps : TeaModel {
                 /// <summary>
-                /// The ID of the ConfigMap instance.
+                /// <para>The ID of the ConfigMap instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>f16b4000-9058-4c22-a49d-49a28f0b****</para>
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The ID of the application.
+                /// <para>The ID of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test-app</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
@@ -95,11 +124,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// The data of ConfigMap key-value pairs. Format:
+            /// <para>The data of ConfigMap key-value pairs. Format:</para>
+            /// <para>{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}</para>
+            /// <para>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configurations</a>.</para>
             /// 
-            /// {"k1":"v1", "k2":"v2"}
-            /// 
-            /// k specifies a key and v specifies a value. For more information, see [Manage and use configurations](https://help.aliyun.com/document_detail/171326.html).
+            /// <b>Example:</b>
+            /// <para>1593747274195</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -108,40 +138,55 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The HTTP status code. Valid values:
-        /// 
-        /// *   **2xx**: indicates that the call was successful.
-        /// *   **3xx**: indicates that the call was redirected.
-        /// *   **4xx**: indicates that the call failed.
-        /// *   **5xx**: indicates that a server error occurred.
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: indicates that the call was successful.</description></item>
+        /// <item><description><b>3xx</b>: indicates that the call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: indicates that the call failed.</description></item>
+        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The ID of the trace. The ID is used to query the details of a request.
+        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The returned information. Valid values:
+        /// <para>The returned information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the call is successful, <b>success</b> is returned.</description></item>
+        /// <item><description>If the call fails, an error code is returned.</description></item>
+        /// </list>
         /// 
-        /// *   If the call is successful, **success** is returned.
-        /// *   If the call fails, an error code is returned.
+        /// <b>Example:</b>
+        /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The returned result.
+        /// <para>The returned result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0a98a02315955564772843261e****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

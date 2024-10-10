@@ -10,64 +10,84 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeInstanceSpecificationsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. Valid values:
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
+        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
+        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
+        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// </list>
         /// 
-        /// *   **2xx**: indicates that the request was successful.
-        /// *   **3xx**: indicates that the request was redirected.
-        /// *   **4xx**: indicates that the request was invalid.
-        /// *   **5xx**: indicates that a server error occurred.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Information of instance types.
+        /// <para>Information of instance types.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeInstanceSpecificationsResponseBodyData> Data { get; set; }
         public class DescribeInstanceSpecificationsResponseBodyData : TeaModel {
             /// <summary>
-            /// The CPU specification of the instance type. Unit: millicore.
+            /// <para>The CPU specification of the instance type. Unit: millicore.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2000</para>
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// Indicates whether the instance type is available. Valid values:
+            /// <para>Indicates whether the instance type is available. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// The ID of the instance type.
+            /// <para>The ID of the instance type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public int? Id { get; set; }
 
             /// <summary>
-            /// The memory size of the instance type. Unit: MB.
+            /// <para>The memory size of the instance type. Unit: MB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4096</para>
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public int? Memory { get; set; }
 
             /// <summary>
-            /// The name of the instance type.
+            /// <para>The name of the instance type.</para>
             /// </summary>
             [NameInMap("SpecInfo")]
             [Validation(Required=false)]
             public string SpecInfo { get; set; }
 
             /// <summary>
-            /// The version number of the instance type.
+            /// <para>The version number of the instance type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -76,44 +96,59 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The error code.
-        /// 
-        /// *   If the request is successful, this parameter is not returned.****
-        /// *   This parameter is returned only if the request failed.**** For more information, see **Error codes** in this topic.
+        /// <para>The error code.</para>
+        /// <list type="bullet">
+        /// <item><description>If the request is successful, this parameter is not returned.****</description></item>
+        /// <item><description>This parameter is returned only if the request failed.**** For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The returned message. Valid values:
+        /// <para>The returned message. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>success</b> is returned when the request succeeds.</description></item>
+        /// <item><description>An error code is returned when the request fails.</description></item>
+        /// </list>
         /// 
-        /// *   **success** is returned when the request succeeds.
-        /// *   An error code is returned when the request fails.
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether information of the instance types is successfully obtained. Valid values:
+        /// <para>Indicates whether information of the instance types is successfully obtained. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the trace. It is used to query the details of a request.
+        /// <para>The ID of the trace. It is used to query the details of a request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0a98a02315955564772843261e****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class SuspendJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the job template.
+        /// <para>The ID of the job template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ee1a7a07-abcb-4652-a1d3-2d57f415****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// Specifies whether to suspend the job template.
+        /// <para>Specifies whether to suspend the job template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Suspend")]
         [Validation(Required=false)]

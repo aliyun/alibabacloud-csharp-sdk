@@ -10,19 +10,29 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeConfigurationPriceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2000</para>
         /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public int? Cpu { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4096</para>
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Web</para>
+        /// </summary>
         [NameInMap("Workload")]
         [Validation(Required=false)]
         public string Workload { get; set; }

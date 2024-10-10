@@ -10,39 +10,52 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeApplicationInstancesRequest : TeaModel {
         /// <summary>
-        /// d700e680-aa4d-4ec1-afc2-6566b5ff\\*\\*\\*\\*
+        /// <para>d700e680-aa4d-4ec1-afc2-6566b5ff\<em>\</em>\<em>\</em></para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>d700e680-aa4d-4ec1-afc2-6566b5ff****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// 1
+        /// <para>1</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// b2a8a925-477a-4ed7-b825-d5e22500\\*\\*\\*\\*
+        /// <para>b2a8a925-477a-4ed7-b825-d5e22500\<em>\</em>\<em>\</em></para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>b2a8a925-477a-4ed7-b825-d5e22500****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// 10
+        /// <para>10</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// true
+        /// <para>true</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Reverse")]
         [Validation(Required=false)]

@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateWebApplicationInput : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sae-app</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>my sae app</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RevisionConfig")]
         [Validation(Required=false)]

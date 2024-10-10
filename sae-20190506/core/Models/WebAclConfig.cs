@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class WebAclConfig : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("WebAclEntries")]
         [Validation(Required=false)]

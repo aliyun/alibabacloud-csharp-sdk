@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateWebApplicationInput : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sae-app</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

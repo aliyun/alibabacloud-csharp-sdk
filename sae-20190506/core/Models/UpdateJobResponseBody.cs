@@ -10,33 +10,43 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateJobResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. Valid values:
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// </list>
         /// 
-        /// *   **2xx**: The call was successful.
-        /// *   **3xx**: The call was redirected.
-        /// *   **4xx**: The call failed.
-        /// *   **5xx**: A server error occurred.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The response.
+        /// <para>The response.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateJobResponseBodyData Data { get; set; }
         public class UpdateJobResponseBodyData : TeaModel {
             /// <summary>
-            /// The application ID.
+            /// <para>The application ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69****</para>
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
             /// <summary>
-            /// The ID of the change order. It can be used to query the task status.
+            /// <para>The ID of the change order. It can be used to query the task status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>01db03d3-3ee9-48b3-b3d0-dfce2d88****</para>
             /// </summary>
             [NameInMap("ChangeOrderId")]
             [Validation(Required=false)]
@@ -45,44 +55,62 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The error code returned. Valid values:
+        /// <para>The error code returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>The <b>ErrorCode</b> parameter is not returned if the request succeeds.</description></item>
+        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
+        /// </list>
         /// 
-        /// *   The **ErrorCode** parameter is not returned if the request succeeds.
-        /// *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+        /// <b>Example:</b>
+        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The additional information that is returned. Valid values:
+        /// <para>The additional information that is returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
+        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+        /// </list>
         /// 
-        /// *   success: If the call is successful, **success** is returned.
-        /// *   An error code: If the call fails, an error code is returned.
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>01CF26C7-00A3-4AA6-BA76-7E95F2A3***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the application deployment is successful. Valid values:
+        /// <para>Indicates whether the application deployment is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The trace ID that is used to query the details of the request.
+        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ac1a0b2215622246421415014e****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

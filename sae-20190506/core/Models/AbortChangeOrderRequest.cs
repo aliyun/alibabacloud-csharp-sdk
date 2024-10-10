@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class AbortChangeOrderRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>be2e1c76-682b-4897-98d3-1d8d6478****</para>
         /// </summary>
         [NameInMap("ChangeOrderId")]
         [Validation(Required=false)]

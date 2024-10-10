@@ -10,39 +10,52 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// A2RN
+        /// <para>A2RN</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A2RN</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// cn-beijing
+        /// <para>cn-beijing</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// ["d42921c4-5433-4abd-8075-0e536f8b\\*\\*\\*\\*"]
+        /// <para>[&quot;d42921c4-5433-4abd-8075-0e536f8b\<em>\</em>\<em>\</em>&quot;]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;d42921c4-5433-4abd-8075-0e536f8b****&quot;]</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// application
+        /// <para>application</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>application</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// [{"key":"k1","value":"v1"}]
+        /// <para>[{&quot;key&quot;:&quot;k1&quot;,&quot;value&quot;:&quot;v1&quot;}]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;key&quot;:&quot;k1&quot;,&quot;value&quot;:&quot;v1&quot;}]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeAppServiceDetailRequest : TeaModel {
         /// <summary>
-        /// 6dcc8c9e-d3da-478a-a066-86dcf820\\*\\*\\*\\*
+        /// <para>6dcc8c9e-d3da-478a-a066-86dcf820\<em>\</em>\<em>\</em></para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>6dcc8c9e-d3da-478a-a066-86dcf820****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -27,28 +29,40 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NacosNamespaceId { get; set; }
 
         /// <summary>
-        /// springCloud
+        /// <para>springCloud</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>springCloud</para>
         /// </summary>
         [NameInMap("ServiceGroup")]
         [Validation(Required=false)]
         public string ServiceGroup { get; set; }
 
         /// <summary>
-        /// edas.service.provider
+        /// <para>edas.service.provider</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>edas.service.provider</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// springCloud
+        /// <para>springCloud</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>springCloud</para>
         /// </summary>
         [NameInMap("ServiceType")]
         [Validation(Required=false)]
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// 1.0.0
+        /// <para>1.0.0</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.0.0</para>
         /// </summary>
         [NameInMap("ServiceVersion")]
         [Validation(Required=false)]

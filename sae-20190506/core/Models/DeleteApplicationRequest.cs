@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeleteApplicationRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>017f39b8-dfa4-4e16-a84b-1dcee4b1****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

@@ -10,44 +10,61 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListNamespaceChangeOrdersRequest : TeaModel {
         /// <summary>
-        /// 2
+        /// <para>2</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("CoStatus")]
         [Validation(Required=false)]
         public string CoStatus { get; set; }
 
         /// <summary>
-        /// CoBatchStartApplication
+        /// <para>CoBatchStartApplication</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CoBatchStartApplication</para>
         /// </summary>
         [NameInMap("CoType")]
         [Validation(Required=false)]
         public string CoType { get; set; }
 
         /// <summary>
-        /// 1
+        /// <para>1</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// test
+        /// <para>test</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// cn-shanghai:test
+        /// <para>cn-shanghai:test</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shanghai:test</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// 20
+        /// <para>20</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -10,94 +10,126 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeJobHistoryResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned. Valid values:
+        /// <para>The HTTP status code returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// </list>
         /// 
-        /// *   **2xx**: The call was successful.
-        /// *   **3xx**: The call was redirected.
-        /// *   **4xx**: The call failed.
-        /// *   **5xx**: A server error occurred.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeJobHistoryResponseBodyData Data { get; set; }
         public class DescribeJobHistoryResponseBodyData : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public long? CurrentPage { get; set; }
 
             /// <summary>
-            /// The jobs.
+            /// <para>The jobs.</para>
             /// </summary>
             [NameInMap("Jobs")]
             [Validation(Required=false)]
             public List<DescribeJobHistoryResponseBodyDataJobs> Jobs { get; set; }
             public class DescribeJobHistoryResponseBodyDataJobs : TeaModel {
                 /// <summary>
-                /// The number of running instances.
+                /// <para>The number of running instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Active")]
                 [Validation(Required=false)]
                 public long? Active { get; set; }
 
                 /// <summary>
-                /// The time when the job was executed.
+                /// <para>The time when the job was executed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1657522839</para>
                 /// </summary>
                 [NameInMap("CompletionTime")]
                 [Validation(Required=false)]
                 public long? CompletionTime { get; set; }
 
                 /// <summary>
-                /// The number of instances that failed to run.
+                /// <para>The number of instances that failed to run.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Failed")]
                 [Validation(Required=false)]
                 public long? Failed { get; set; }
 
                 /// <summary>
-                /// The job ID.
+                /// <para>The job ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>manual-3db7a8fa-5d40-4edc-92e4-49d50eab****</para>
                 /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public string JobId { get; set; }
 
                 /// <summary>
-                /// The message returned if exceptions occur during job running.
+                /// <para>The message returned if exceptions occur during job running.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Null</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// The time when the job was created.
+                /// <para>The time when the job was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1657522800</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public long? StartTime { get; set; }
 
                 /// <summary>
-                /// The status of the job. Valid values:
+                /// <para>The status of the job. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: The job was not executed.</description></item>
+                /// <item><description><b>1</b>: The job was executed.</description></item>
+                /// <item><description><b>2</b>: The job failed to be executed.</description></item>
+                /// <item><description><b>3</b>: The job is being executed.</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: The job was not executed.
-                /// *   **1**: The job was executed.
-                /// *   **2**: The job failed to be executed.
-                /// *   **3**: The job is being executed.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public string State { get; set; }
 
                 /// <summary>
-                /// The number of instances that are successfully run.
+                /// <para>The number of instances that are successfully run.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Succeeded")]
                 [Validation(Required=false)]
@@ -106,14 +138,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// The number of entries to return on each page. Valid values: 0 to 10000.
+            /// <para>The number of entries to return on each page. Valid values: 0 to 10000.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of jobs.
+            /// <para>The total number of jobs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("TotalSize")]
             [Validation(Required=false)]
@@ -122,44 +160,62 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The error code returned. Take note of the following rules:
+        /// <para>The error code returned. Take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
+        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section in this topic.</description></item>
+        /// </list>
         /// 
-        /// *   If the call is successful, the **ErrorCode** parameter is not returned.
-        /// *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section in this topic.
+        /// <b>Example:</b>
+        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The message returned. Take note of the following rules:
+        /// <para>The message returned. Take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>If the call is successful, <b>success</b> is returned.</description></item>
+        /// <item><description>If the call fails, an error code is returned.</description></item>
+        /// </list>
         /// 
-        /// *   If the call is successful, **success** is returned.
-        /// *   If the call fails, an error code is returned.
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>53F15A18-8079-5992-810C-0211A5AE****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The trace ID that is used to query the details of the request.
+        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0b1639af16575057857241351e****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

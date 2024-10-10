@@ -10,61 +10,80 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. Valid values:
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
+        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
+        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
+        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// </list>
         /// 
-        /// *   **2xx**: indicates that the request was successful.
-        /// *   **3xx**: indicates that the request was redirected.
-        /// *   **4xx**: indicates that the request was invalid.
-        /// *   **5xx**: indicates that a server error occurred.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyData Data { get; set; }
         public class ListTagResourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// A maximum of 50 entries can be returned for a query. If a query generates more than 50 entries, the NextToken parameter is returned with the first 50 entries. You can use the NextToken parameter value to retrieve the subsequent entries that are not returned in the current query result.
+            /// <para>A maximum of 50 entries can be returned for a query. If a query generates more than 50 entries, the NextToken parameter is returned with the first 50 entries. You can use the NextToken parameter value to retrieve the subsequent entries that are not returned in the current query result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
             /// <summary>
-            /// The mapping relationships between applications and tags.
+            /// <para>The mapping relationships between applications and tags.</para>
             /// </summary>
             [NameInMap("TagResources")]
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyDataTagResources> TagResources { get; set; }
             public class ListTagResourcesResponseBodyDataTagResources : TeaModel {
                 /// <summary>
-                /// The ID of the application.
+                /// <para>The ID of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>d42921c4-5433-4abd-8075-0e536f8b****</para>
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource. Set the value to `application`.
+                /// <para>The type of the resource. Set the value to <c>application</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALIYUN::SAE::APPLICATION</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>k1</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>v1</para>
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -75,41 +94,55 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The error code. 
-        /// 
-        /// - The **ErrorCode** parameter is not returned when the request succeeds.
-        /// - The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+        /// <para>The error code. </para>
+        /// <list type="bullet">
+        /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
+        /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7414187F-4F59-4585-9BCF-5F0804E4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether mapping relationships between applications and tags were queried successfully. Valid values:
+        /// <para>Indicates whether mapping relationships between applications and tags were queried successfully. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The query was successful.</description></item>
+        /// <item><description><b>false</b>: The query failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The query was successful.
-        /// *   **false**: The query failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the trace. It can be used to query the details of a request.
+        /// <para>The ID of the trace. It can be used to query the details of a request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bc5f84e15916043198032146d****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

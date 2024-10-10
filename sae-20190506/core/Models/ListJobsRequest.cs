@@ -10,82 +10,116 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListJobsRequest : TeaModel {
         /// <summary>
-        /// The name of the job template.
+        /// <para>The name of the job template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo-app</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The parameter value is a positive integer that is greater than or equal to 1.
+        /// <para>The number of the page to return. The parameter value is a positive integer that is greater than or equal to 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The dimension by which applications are filtered. Valid values:
+        /// <para>The dimension by which applications are filtered. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>appName</b>: Applications are filtered by job template name.</description></item>
+        /// <item><description><b>appIds</b>: Applications are filtered by job template ID.</description></item>
+        /// </list>
         /// 
-        /// *   **appName**: Applications are filtered by job template name.
-        /// *   **appIds**: Applications are filtered by job template ID.
+        /// <b>Example:</b>
+        /// <para>appName</para>
         /// </summary>
         [NameInMap("FieldType")]
         [Validation(Required=false)]
         public string FieldType { get; set; }
 
         /// <summary>
-        /// Enter the name and ID of the job template.
+        /// <para>Enter the name and ID of the job template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo-app</para>
         /// </summary>
         [NameInMap("FieldValue")]
         [Validation(Required=false)]
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// The namespace ID.
+        /// <para>The namespace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing:demo</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// Specifies how applications are sorted. Valid values:
+        /// <para>Specifies how applications are sorted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>running</b>: The applications are sorted based on the number of running instances.</description></item>
+        /// <item><description><b>instances</b>: The applications are sorted based on the number of destination instances.</description></item>
+        /// </list>
         /// 
-        /// *   **running**: The applications are sorted based on the number of running instances.
-        /// *   **instances**: The applications are sorted based on the number of destination instances.
+        /// <b>Example:</b>
+        /// <para>running</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid value: 0 to 200.
+        /// <para>The number of entries to return on each page. Valid value: 0 to 200.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Specifies whether to sort the field names that are passed by **OrderBy** in ascending order. Valid values:
+        /// <para>Specifies whether to sort the field names that are passed by <b>OrderBy</b> in ascending order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: in ascending order</description></item>
+        /// <item><description><b>false</b>: in descending order</description></item>
+        /// </list>
         /// 
-        /// *   **true**: in ascending order
-        /// *   **false**: in descending order
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Reverse")]
         [Validation(Required=false)]
         public bool? Reverse { get; set; }
 
         /// <summary>
-        /// The tags that are displayed in a JSON string. Valid values:
+        /// <para>The tags that are displayed in a JSON string. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>key</b>: the tag key</description></item>
+        /// <item><description><b>value</b>: the tag value</description></item>
+        /// </list>
         /// 
-        /// *   **key**: the tag key
-        /// *   **value**: the tag value
+        /// <b>Example:</b>
+        /// <para>[{&quot;key&quot;:&quot;key&quot;,&quot;value&quot;:&quot;value&quot;}]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
 
         /// <summary>
-        /// Set the value to `job`.
+        /// <para>Set the value to <c>job</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>job</para>
         /// </summary>
         [NameInMap("Workload")]
         [Validation(Required=false)]

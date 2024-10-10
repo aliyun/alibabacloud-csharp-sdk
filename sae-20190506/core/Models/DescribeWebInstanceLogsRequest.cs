@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeWebInstanceLogsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

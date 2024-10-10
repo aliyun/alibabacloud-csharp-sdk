@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class OpenSaeServiceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the order.
+        /// <para>The ID of the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20485646575****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>559B4247-C41C-4D9E-B866-B55D378B****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

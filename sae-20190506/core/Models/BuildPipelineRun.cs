@@ -13,21 +13,36 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public BuildPipelineRunBuildConfig BuildConfig { get; set; }
         public class BuildPipelineRunBuildConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>mvn clean package</para>
+            /// </summary>
             [NameInMap("BeforeBuildCommand")]
             [Validation(Required=false)]
             public string BeforeBuildCommand { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>buildpacks/dockerfile</para>
             /// </summary>
             [NameInMap("BuildType")]
             [Validation(Required=false)]
             public string BuildType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>code/Dockerfile</para>
+            /// </summary>
             [NameInMap("DockerfilePath")]
             [Validation(Required=false)]
             public string DockerfilePath { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>java -jar target/app.jar</para>
+            /// </summary>
             [NameInMap("RunCommand")]
             [Validation(Required=false)]
             public string RunCommand { get; set; }
@@ -45,22 +60,33 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public TomcatConfig TomcatConfig { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Trigger")]
             [Validation(Required=false)]
             public BuildPipelineRunBuildConfigTrigger Trigger { get; set; }
             public class BuildPipelineRunBuildConfigTrigger : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>master</para>
+                /// </summary>
                 [NameInMap("BranchName")]
                 [Validation(Required=false)]
                 public string BranchName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>v1</para>
+                /// </summary>
                 [NameInMap("TagName")]
                 [Validation(Required=false)]
                 public string TagName { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PUSH</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -68,6 +94,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>code</para>
+            /// </summary>
             [NameInMap("WorkingDir")]
             [Validation(Required=false)]
             public string WorkingDir { get; set; }
@@ -83,14 +113,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public BuildPipelineRunCodeConfig CodeConfig { get; set; }
         public class BuildPipelineRunCodeConfig : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>master</para>
             /// </summary>
             [NameInMap("BranchName")]
             [Validation(Required=false)]
@@ -109,21 +145,30 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string OrganizationId { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>github/gitee/gitlab等</para>
             /// </summary>
             [NameInMap("Provider")]
             [Validation(Required=false)]
             public string Provider { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sae-samples/java-maven-demo</para>
             /// </summary>
             [NameInMap("RepoFullName")]
             [Validation(Required=false)]
             public string RepoFullName { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3001</para>
             /// </summary>
             [NameInMap("RepoId")]
             [Validation(Required=false)]

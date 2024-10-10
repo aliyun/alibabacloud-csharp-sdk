@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeNamespaceResourcesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("NameSpaceShortId")]
         [Validation(Required=false)]
         public string NameSpaceShortId { get; set; }
 
         /// <summary>
-        /// cn-shanghai:test
+        /// <para>cn-shanghai:test</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai:test</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListNamespacedConfigMapsRequest : TeaModel {
         /// <summary>
-        /// cn-hangzhou
+        /// <para>cn-hangzhou</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

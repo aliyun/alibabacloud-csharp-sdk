@@ -10,103 +10,137 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeAppServiceDetailResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. Valid values:
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: indicates that the call was successful.</description></item>
+        /// <item><description><b>3xx</b>: indicates that the call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: indicates that the call failed.</description></item>
+        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// </list>
         /// 
-        /// - **2xx**: indicates that the call was successful.
-        /// - **3xx**: indicates that the call was redirected.
-        /// - **4xx**: indicates that the call failed.
-        /// - **5xx**: indicates that a server error occurred.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeAppServiceDetailResponseBodyData Data { get; set; }
         public class DescribeAppServiceDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the Dubbo application.
+            /// <para>The name of the Dubbo application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>service-consumer</para>
             /// </summary>
             [NameInMap("DubboApplicationName")]
             [Validation(Required=false)]
             public string DubboApplicationName { get; set; }
 
             /// <summary>
-            /// The name of the application.
+            /// <para>The name of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-zhangjiakou-micro-service-******</para>
             /// </summary>
             [NameInMap("EdasAppName")]
             [Validation(Required=false)]
             public string EdasAppName { get; set; }
 
             /// <summary>
-            /// The group to which the service belongs. You can create a custom group.
+            /// <para>The group to which the service belongs. You can create a custom group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>springCloud</para>
             /// </summary>
             [NameInMap("Group")]
             [Validation(Required=false)]
             public string Group { get; set; }
 
             /// <summary>
-            /// The metadata. Example: `{side: "provider", port: "18081", preserved: {register: {source: "SPRING_CLOUD"}},…}`.
+            /// <para>The metadata. Example: <c>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</para>
             /// </summary>
             [NameInMap("Metadata")]
             [Validation(Required=false)]
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// The methods.
+            /// <para>The methods.</para>
             /// </summary>
             [NameInMap("Methods")]
             [Validation(Required=false)]
             public List<DescribeAppServiceDetailResponseBodyDataMethods> Methods { get; set; }
             public class DescribeAppServiceDetailResponseBodyDataMethods : TeaModel {
                 /// <summary>
-                /// The class to which the method belongs.
+                /// <para>The class to which the method belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>com.serverless.sae.controller.EchoController</para>
                 /// </summary>
                 [NameInMap("MethodController")]
                 [Validation(Required=false)]
                 public string MethodController { get; set; }
 
                 /// <summary>
-                /// The name of the method.
+                /// <para>The name of the method.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>echo</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The details of the method.
+                /// <para>The details of the method.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>description</para>
                 /// </summary>
                 [NameInMap("NameDetail")]
                 [Validation(Required=false)]
                 public string NameDetail { get; set; }
 
                 /// <summary>
-                /// The definition of the parameter.
+                /// <para>The definition of the parameter.</para>
                 /// </summary>
                 [NameInMap("ParameterDefinitions")]
                 [Validation(Required=false)]
                 public List<DescribeAppServiceDetailResponseBodyDataMethodsParameterDefinitions> ParameterDefinitions { get; set; }
                 public class DescribeAppServiceDetailResponseBodyDataMethodsParameterDefinitions : TeaModel {
                     /// <summary>
-                    /// The description of the parameter.
+                    /// <para>The description of the parameter.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>description</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// The name of the parameter.
+                    /// <para>The name of the parameter.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>arg0</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The type of the parameter.
+                    /// <para>The type of the parameter.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>java.lang.String</para>
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -115,47 +149,53 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// The details of the parameters.
+                /// <para>The details of the parameters.</para>
                 /// </summary>
                 [NameInMap("ParameterDetails")]
                 [Validation(Required=false)]
                 public List<string> ParameterDetails { get; set; }
 
                 /// <summary>
-                /// The types of the parameters.
+                /// <para>The types of the parameters.</para>
                 /// </summary>
                 [NameInMap("ParameterTypes")]
                 [Validation(Required=false)]
                 public List<string> ParameterTypes { get; set; }
 
                 /// <summary>
-                /// The request paths. Format:
-                /// 
-                /// `/path`
+                /// <para>The request paths. Format:</para>
+                /// <para><c>/path</c></para>
                 /// </summary>
                 [NameInMap("Paths")]
                 [Validation(Required=false)]
                 public List<string> Paths { get; set; }
 
                 /// <summary>
-                /// The request methods. Valid values:
-                /// 
-                /// *   **GET**
-                /// *   **ALL**
+                /// <para>The request methods. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>GET</b></description></item>
+                /// <item><description><b>ALL</b></description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("RequestMethods")]
                 [Validation(Required=false)]
                 public List<string> RequestMethods { get; set; }
 
                 /// <summary>
-                /// The details of the response.
+                /// <para>The details of the response.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("ReturnDetails")]
                 [Validation(Required=false)]
                 public string ReturnDetails { get; set; }
 
                 /// <summary>
-                /// The data format of the response.
+                /// <para>The data format of the response.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>java.lang.String</para>
                 /// </summary>
                 [NameInMap("ReturnType")]
                 [Validation(Required=false)]
@@ -164,7 +204,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// The name of the service.
+            /// <para>The name of the service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>service-provider</para>
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
@@ -183,24 +226,34 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public List<string> ServiceTags { get; set; }
 
             /// <summary>
-            /// The type of the service. Valid values:
+            /// <para>The type of the service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>dubbo</b></description></item>
+            /// <item><description><b>springCloud</b></description></item>
+            /// </list>
             /// 
-            /// *   **dubbo**
-            /// *   **springCloud**
+            /// <b>Example:</b>
+            /// <para>springCloud</para>
             /// </summary>
             [NameInMap("ServiceType")]
             [Validation(Required=false)]
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// The name of the Spring Cloud application.
+            /// <para>The name of the Spring Cloud application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>service-provider</para>
             /// </summary>
             [NameInMap("SpringApplicationName")]
             [Validation(Required=false)]
             public string SpringApplicationName { get; set; }
 
             /// <summary>
-            /// The version of the service. You can create a custom version.
+            /// <para>The version of the service. You can create a custom version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0.0</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -209,41 +262,55 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The returned error code. Valid values:
-        /// 
-        /// - If the call is successful, the **ErrorCode** parameter is not returned.
-        /// - If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+        /// <para>The returned error code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
+        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The returned information.
+        /// <para>The returned information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B2C7874F-F109-5B34-8618-2C10BBA2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the meta data was obtained. Valid values:
+        /// <para>Indicates whether the meta data was obtained. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The metadata was obtained.</description></item>
+        /// <item><description><b>false</b>: The metadata failed to be obtained.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The metadata was obtained.
-        /// *   **false**: The metadata failed to be obtained.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the trace. The ID is used to query the details of a request.
+        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0b16399316402420740034918e****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateAppSecurityGroupRequest : TeaModel {
         /// <summary>
-        /// sg-wz969ngg2e49q5i4\\*\\*\\*\\*
+        /// <para>sg-wz969ngg2e49q5i4\<em>\</em>\<em>\</em></para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>017f39b8-dfa4-4e16-a84b-1dcee4b1****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sg-wz969ngg2e49q5i4****</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

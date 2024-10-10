@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class WebApplication : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]

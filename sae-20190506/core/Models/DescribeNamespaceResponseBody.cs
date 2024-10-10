@@ -10,64 +10,87 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. Valid values:
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// </list>
         /// 
-        /// *   **2xx**: The call was successful.
-        /// *   **3xx**: The call was redirected.
-        /// *   **4xx**: The call failed.
-        /// *   **5xx**: A server error occurred.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The information about the namespace.
+        /// <para>The information about the namespace.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeNamespaceResponseBodyData Data { get; set; }
         public class DescribeNamespaceResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether the SAE built-in registry is enabled. Valid values:
+            /// <para>Indicates whether the SAE built-in registry is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("EnableMicroRegistration")]
             [Validation(Required=false)]
             public bool? EnableMicroRegistration { get; set; }
 
             /// <summary>
-            /// The short ID of the namespace.
+            /// <para>The short ID of the namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("NameSpaceShortId")]
             [Validation(Required=false)]
             public string NameSpaceShortId { get; set; }
 
             /// <summary>
-            /// The description of the namespace.
+            /// <para>The description of the namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>desc</para>
             /// </summary>
             [NameInMap("NamespaceDescription")]
             [Validation(Required=false)]
             public string NamespaceDescription { get; set; }
 
             /// <summary>
-            /// The ID of the namespace. The information about the default namespace cannot be queried or modified. The default namespace cannot be deleted.
+            /// <para>The ID of the namespace. The information about the default namespace cannot be queried or modified. The default namespace cannot be deleted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-beijing:test</para>
             /// </summary>
             [NameInMap("NamespaceId")]
             [Validation(Required=false)]
             public string NamespaceId { get; set; }
 
             /// <summary>
-            /// The name of the namespace.
+            /// <para>The name of the namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>name</para>
             /// </summary>
             [NameInMap("NamespaceName")]
             [Validation(Required=false)]
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// <para>The region ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-beijing</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -76,44 +99,62 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The error code returned. Take note of the following rules:
+        /// <para>The error code returned. Take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>The <b>ErrorCode</b> parameter is not returned if the request succeeds.</description></item>
+        /// <item><description>The <b>ErrorCode</b> parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// </list>
         /// 
-        /// *   The **ErrorCode** parameter is not returned if the request succeeds.
-        /// *   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.
+        /// <b>Example:</b>
+        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The additional information that is returned. Valid values:
+        /// <para>The additional information that is returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
+        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+        /// </list>
         /// 
-        /// *   success: If the call is successful, **success** is returned.
-        /// *   An error code: If the call fails, an error code is returned.
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the information about the namespace was queried successfully. Valid values:
+        /// <para>Indicates whether the information about the namespace was queried successfully. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The information was queried.</description></item>
+        /// <item><description><b>false</b>: The image failed to be found.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The information was queried.
-        /// *   **false**: The image failed to be found.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The trace ID that is used to query the details of the request.
+        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0a981dd515966966104121683d****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

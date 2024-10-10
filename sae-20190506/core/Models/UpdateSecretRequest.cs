@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateSecretRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing:test</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SecretData")]
         [Validation(Required=false)]
         public UpdateSecretRequestSecretData SecretData { get; set; }
         public class UpdateSecretRequestSecretData : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("SecretData")]
             [Validation(Required=false)]
@@ -33,7 +36,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16</para>
         /// </summary>
         [NameInMap("SecretId")]
         [Validation(Required=false)]

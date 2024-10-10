@@ -10,26 +10,33 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. Valid values:
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// </list>
         /// 
-        /// - **2xx**: The call was successful.
-        /// - **3xx**: The call was redirected.
-        /// - **4xx**: The call failed.
-        /// - **5xx**: A server error occurred.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// No request parameters are required.
+        /// <para>No request parameters are required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -40,24 +47,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// The list of regions.
+                /// <para>The list of regions.</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The ID of the region. Valid values:
-                /// 
-                /// *   **cn-hangzhou**: the ID of the China (Hangzhou) region
-                /// *   **cn-shanghai**: the ID of the China (Shanghai) region
-                /// *   **cn-beijing**: the ID of the China (Beijing) region
-                /// *   **cn-zhangjiakou**: the ID of the China (Zhangjiakou) region
-                /// *   **cn-shenzhen**: the ID of the China (Shenzhen) region
-                /// *   **cn-guangzhou**: the ID of the China (Guangzhou) region
-                /// *   **cn-hongkong**: the ID of the China (Hong Kong) region
-                /// *   **ap-southeast-1**: the ID of the Singapore region
-                /// *   **us-west-1**: the ID of the US (Silicon Valley) region
+                /// <para>The ID of the region. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>cn-hangzhou</b>: the ID of the China (Hangzhou) region</description></item>
+                /// <item><description><b>cn-shanghai</b>: the ID of the China (Shanghai) region</description></item>
+                /// <item><description><b>cn-beijing</b>: the ID of the China (Beijing) region</description></item>
+                /// <item><description><b>cn-zhangjiakou</b>: the ID of the China (Zhangjiakou) region</description></item>
+                /// <item><description><b>cn-shenzhen</b>: the ID of the China (Shenzhen) region</description></item>
+                /// <item><description><b>cn-guangzhou</b>: the ID of the China (Guangzhou) region</description></item>
+                /// <item><description><b>cn-hongkong</b>: the ID of the China (Hong Kong) region</description></item>
+                /// <item><description><b>ap-southeast-1</b>: the ID of the Singapore region</description></item>
+                /// <item><description><b>us-west-1</b>: the ID of the US (Silicon Valley) region</description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("RecommendZones")]
                 [Validation(Required=false)]
@@ -70,34 +78,42 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// The name of the region. Valid values:
+                /// <para>The name of the region. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>China (Hangzhou)</b></description></item>
+                /// <item><description><b>China (Shanghai)</b></description></item>
+                /// <item><description><b>China (Beijing)</b></description></item>
+                /// <item><description><b>China (Zhangjiakou)</b></description></item>
+                /// <item><description><b>China (Shenzhen)</b></description></item>
+                /// <item><description><b>China (Guangzhou)</b></description></item>
+                /// <item><description><b>China (Hong Kong)</b></description></item>
+                /// <item><description><b>Singapore (Singapore)</b></description></item>
+                /// <item><description><b>US (Silicon Valley)</b></description></item>
+                /// </list>
                 /// 
-                /// *   **China (Hangzhou)**
-                /// *   **China (Shanghai)**
-                /// *   **China (Beijing)**
-                /// *   **China (Zhangjiakou)**
-                /// *   **China (Shenzhen)**
-                /// *   **China (Guangzhou)**
-                /// *   **China (Hong Kong)**
-                /// *   **Singapore (Singapore)**
-                /// *   **US (Silicon Valley)**
+                /// <b>Example:</b>
+                /// <para>sae.cn-shanghai.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
-                /// The endpoint of the region. Valid values:
+                /// <para>The endpoint of the region. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>sae.cn-hangzhou.aliyuncs.com</b></description></item>
+                /// <item><description><b>sae.cn-shanghai.aliyuncs.com</b></description></item>
+                /// <item><description><b>sae.cn-beijing.aliyuncs.com</b></description></item>
+                /// <item><description><b>sae.cn-zhangjiakou.aliyuncs.com</b></description></item>
+                /// <item><description><b>sae.cn-shenzhen.aliyuncs.com</b></description></item>
+                /// <item><description><b>sae.cn-guangzhou.aliyuncs.com</b></description></item>
+                /// <item><description><b>sae.cn-hongkong.aliyuncs.com</b></description></item>
+                /// <item><description><b>sae.ap-southeast-1.aliyuncs.com</b></description></item>
+                /// <item><description><b>sae.us-west-1.aliyuncs.com</b></description></item>
+                /// </list>
                 /// 
-                /// *   **sae.cn-hangzhou.aliyuncs.com**
-                /// *   **sae.cn-shanghai.aliyuncs.com**
-                /// *   **sae.cn-beijing.aliyuncs.com**
-                /// *   **sae.cn-zhangjiakou.aliyuncs.com**
-                /// *   **sae.cn-shenzhen.aliyuncs.com**
-                /// *   **sae.cn-guangzhou.aliyuncs.com**
-                /// *   **sae.cn-hongkong.aliyuncs.com**
-                /// *   **sae.ap-southeast-1.aliyuncs.com**
-                /// *   **sae.us-west-1.aliyuncs.com**
+                /// <b>Example:</b>
+                /// <para>cn-shanghai</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -108,7 +124,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The returned information.
+        /// <para>The returned information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DDE85827-B0B3-4E56-86E8-17C42009****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UnbindSlbRequest : TeaModel {
         /// <summary>
-        /// true
+        /// <para>true</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0099b7be-5f5b-4512-a7fc-56049ef1****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// true
+        /// <para>true</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Internet")]
         [Validation(Required=false)]
         public bool? Internet { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Intranet")]
         [Validation(Required=false)]

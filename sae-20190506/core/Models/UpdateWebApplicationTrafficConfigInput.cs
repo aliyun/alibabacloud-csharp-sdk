@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateWebApplicationTrafficConfigInput : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Anonymous</para>
+        /// </summary>
         [NameInMap("AuthType")]
         [Validation(Required=false)]
         public string AuthType { get; set; }

@@ -10,20 +10,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeNamespaceListRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return custom namespaces. Valid values:
+        /// <para>Specifies whether to return custom namespaces. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The system returns custom namespaces.</description></item>
+        /// <item><description><b>false</b>: The system does not return custom namespaces.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The system returns custom namespaces.
-        /// *   **false**: The system does not return custom namespaces.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ContainCustom")]
         [Validation(Required=false)]
         public bool? ContainCustom { get; set; }
 
         /// <summary>
-        /// Specifies whether to exclude hybrid cloud namespaces from the result. Valid values:
+        /// <para>Specifies whether to exclude hybrid cloud namespaces from the result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The system excludes hybrid cloud namespaces from the result.</description></item>
+        /// <item><description><b>false</b>: The system does not exclude hybrid cloud namespaces from the result.</description></item>
+        /// </list>
         /// 
-        /// - **true**: The system excludes hybrid cloud namespaces from the result.
-        /// - **false**: The system does not exclude hybrid cloud namespaces from the result.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("HybridCloudExclude")]
         [Validation(Required=false)]

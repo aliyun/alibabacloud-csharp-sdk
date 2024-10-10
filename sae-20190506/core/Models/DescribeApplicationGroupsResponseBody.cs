@@ -10,123 +10,166 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeApplicationGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. Valid values:
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
+        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
+        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
+        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// </list>
         /// 
-        /// *   **2xx**: indicates that the request was successful.
-        /// *   **3xx**: indicates that the request was redirected.
-        /// *   **4xx**: indicates that the request was invalid.
-        /// *   **5xx**: indicates that a server error occurred.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The information about the instance groups of the application.
+        /// <para>The information about the instance groups of the application.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApplicationGroupsResponseBodyData> Data { get; set; }
         public class DescribeApplicationGroupsResponseBodyData : TeaModel {
             /// <summary>
-            /// The version of the container, such as Ali-Tomcat, in which a High-speed Service Framework (HSF) application runs.
+            /// <para>The version of the container, such as Ali-Tomcat, in which a High-speed Service Framework (HSF) application runs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3.5.3</para>
             /// </summary>
             [NameInMap("EdasContainerVersion")]
             [Validation(Required=false)]
             public string EdasContainerVersion { get; set; }
 
             /// <summary>
-            /// The ID of the group.
+            /// <para>The ID of the group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>b2a8a925-477a-eswa-b823-d5e22500****</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
             /// <summary>
-            /// The name of the group.
+            /// <para>The name of the group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>_DEFAULT_GROUP</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
             /// <summary>
-            /// The type of the group.
+            /// <para>The type of the group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("GroupType")]
             [Validation(Required=false)]
             public int? GroupType { get; set; }
 
             /// <summary>
-            /// The address of the image. This parameter is required when the **PackageType** parameter is set to **Image**.
+            /// <para>The address of the image. This parameter is required when the <b>PackageType</b> parameter is set to <b>Image</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/demo/nginx:latest</para>
             /// </summary>
             [NameInMap("ImageUrl")]
             [Validation(Required=false)]
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// The version of the Java development kit (JDK) on which the deployment package of the application depends. This parameter is invalid when the **PackageType** parameter is set to **Image**.
+            /// <para>The version of the Java development kit (JDK) on which the deployment package of the application depends. This parameter is invalid when the <b>PackageType</b> parameter is set to <b>Image</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Open JDK 8</para>
             /// </summary>
             [NameInMap("Jdk")]
             [Validation(Required=false)]
             public string Jdk { get; set; }
 
             /// <summary>
-            /// The type of the application deployment package. Valid values:
+            /// <para>The type of the application deployment package. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>When you use a Java package, set this value to <b>FatJar</b>, <b>War</b>, or <b>Image</b>.</para>
+            /// </description></item>
+            /// <item><description><para>When you use a PHP package, the following values are valid:</para>
+            /// <list type="bullet">
+            /// <item><description><b>PhpZip</b></description></item>
+            /// <item><description><b>IMAGE_PHP_5_4</b></description></item>
+            /// <item><description><b>IMAGE_PHP_5_4_ALPINE</b></description></item>
+            /// <item><description><b>IMAGE_PHP_5_5</b></description></item>
+            /// <item><description><b>IMAGE_PHP_5_5_ALPINE</b></description></item>
+            /// <item><description><b>IMAGE_PHP_5_6</b></description></item>
+            /// <item><description><b>IMAGE_PHP_5_6_ALPINE</b></description></item>
+            /// <item><description><b>IMAGE_PHP_7_0</b></description></item>
+            /// <item><description><b>IMAGE_PHP_7_0_ALPINE</b></description></item>
+            /// <item><description><b>IMAGE_PHP_7_1</b></description></item>
+            /// <item><description><b>IMAGE_PHP_7_1_ALPINE</b></description></item>
+            /// <item><description><b>IMAGE_PHP_7_2</b></description></item>
+            /// <item><description><b>IMAGE_PHP_7_2_ALPINE</b></description></item>
+            /// <item><description><b>IMAGE_PHP_7_3</b></description></item>
+            /// <item><description><b>IMAGE_PHP_7_3_ALPINE</b></description></item>
+            /// </list>
+            /// </description></item>
+            /// </list>
             /// 
-            /// *   When you use a Java package, set this value to **FatJar**, **War**, or **Image**.
-            /// 
-            /// *   When you use a PHP package, the following values are valid:
-            /// 
-            ///     *   **PhpZip**
-            ///     *   **IMAGE_PHP_5_4**
-            ///     *   **IMAGE_PHP_5_4_ALPINE**
-            ///     *   **IMAGE_PHP_5_5**
-            ///     *   **IMAGE_PHP_5_5_ALPINE**
-            ///     *   **IMAGE_PHP_5_6**
-            ///     *   **IMAGE_PHP_5_6_ALPINE**
-            ///     *   **IMAGE_PHP_7_0**
-            ///     *   **IMAGE_PHP_7_0_ALPINE**
-            ///     *   **IMAGE_PHP_7_1**
-            ///     *   **IMAGE_PHP_7_1_ALPINE**
-            ///     *   **IMAGE_PHP_7_2**
-            ///     *   **IMAGE_PHP_7_2_ALPINE**
-            ///     *   **IMAGE_PHP_7_3**
-            ///     *   **IMAGE_PHP_7_3_ALPINE**
+            /// <b>Example:</b>
+            /// <para>Image</para>
             /// </summary>
             [NameInMap("PackageType")]
             [Validation(Required=false)]
             public string PackageType { get; set; }
 
             /// <summary>
-            /// The address of the deployment package. This parameter is required when the **PackageType** parameter is set to **FatJar**, **War**, or **PhpZip**.
+            /// <para>The address of the deployment package. This parameter is required when the <b>PackageType</b> parameter is set to <b>FatJar</b>, <b>War</b>, or <b>PhpZip</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/demo/nginx:latest</para>
             /// </summary>
             [NameInMap("PackageUrl")]
             [Validation(Required=false)]
             public string PackageUrl { get; set; }
 
             /// <summary>
-            /// The version of the deployment package. This parameter is required when the **PackageType** parameter is set to **FatJar**, **War**, or **PhpZip**. The parameter value will be automatically generated when you use an image to deploy the application and specify the **ImageUrl** parameter.
+            /// <para>The version of the deployment package. This parameter is required when the <b>PackageType</b> parameter is set to <b>FatJar</b>, <b>War</b>, or <b>PhpZip</b>. The parameter value will be automatically generated when you use an image to deploy the application and specify the <b>ImageUrl</b> parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0.0</para>
             /// </summary>
             [NameInMap("PackageVersion")]
             [Validation(Required=false)]
             public string PackageVersion { get; set; }
 
             /// <summary>
-            /// The total number of instances.
+            /// <para>The total number of instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("Replicas")]
             [Validation(Required=false)]
             public int? Replicas { get; set; }
 
             /// <summary>
-            /// The number of running instances.
+            /// <para>The number of running instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RunningInstances")]
             [Validation(Required=false)]
             public int? RunningInstances { get; set; }
 
             /// <summary>
-            /// The version of the Apache Tomcat container on which the deployment package of the application depends. This parameter is invalid when the **PackageType** parameter is set to **Image**.
+            /// <para>The version of the Apache Tomcat container on which the deployment package of the application depends. This parameter is invalid when the <b>PackageType</b> parameter is set to <b>Image</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Apache Tomcat 7</para>
             /// </summary>
             [NameInMap("WebContainer")]
             [Validation(Required=false)]
@@ -135,41 +178,55 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The error code.
-        /// 
-        /// *   The **ErrorCode** parameter is not returned when the request succeeds.
-        /// *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+        /// <para>The error code.</para>
+        /// <list type="bullet">
+        /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
+        /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the information about instance groups of an application was obtained. Valid values:
+        /// <para>Indicates whether the information about instance groups of an application was obtained. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: indicates that the information was obtained.</description></item>
+        /// <item><description><b>false</b>: indicates that the information could not be obtained.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: indicates that the information was obtained.
-        /// *   **false**: indicates that the information could not be obtained.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the trace. It is used to query the details of a request.
+        /// <para>The ID of the trace. It is used to query the details of a request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0a98a02315955564772843261e****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

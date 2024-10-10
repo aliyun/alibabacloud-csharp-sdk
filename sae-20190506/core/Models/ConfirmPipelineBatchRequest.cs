@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ConfirmPipelineBatchRequest : TeaModel {
         /// <summary>
-        /// true
+        /// <para>true</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Confirm")]
         [Validation(Required=false)]
         public bool? Confirm { get; set; }
 
         /// <summary>
-        /// e2e-vds-feh-\\*\\*\\*
+        /// <para>e2e-vds-feh-\<em>\</em>\*</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>e2e-vds-feh-***</para>
         /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]

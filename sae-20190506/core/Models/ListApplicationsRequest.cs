@@ -10,82 +10,115 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListApplicationsRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code. Valid values:
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
+        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
+        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
+        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// </list>
         /// 
-        /// *   **2xx**: indicates that the request was successful.
-        /// *   **3xx**: indicates that the request was redirected.
-        /// *   **4xx**: indicates that the request was invalid.
-        /// *   **5xx**: indicates that a server error occurred.
+        /// <b>Example:</b>
+        /// <para>demo-app</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// The SAE application type. Valid values:
+        /// <para>The SAE application type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>micro_service</b></description></item>
+        /// <item><description><b>web</b></description></item>
+        /// <item><description><b>job</b></description></item>
+        /// </list>
         /// 
-        /// - **micro_service**
-        /// - **web**
-        /// - **job**
+        /// <b>Example:</b>
+        /// <para>micro_service</para>
         /// </summary>
         [NameInMap("AppSource")]
         [Validation(Required=false)]
         public string AppSource { get; set; }
 
         /// <summary>
-        /// The number of the returned page.
+        /// <para>The number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// true
+        /// <para>true</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>appName</para>
         /// </summary>
         [NameInMap("FieldType")]
         [Validation(Required=false)]
         public string FieldType { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo-app</para>
         /// </summary>
         [NameInMap("FieldValue")]
         [Validation(Required=false)]
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// 1
+        /// <para>1</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing:demo</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// runnings
+        /// <para>runnings</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>running</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// Indicates whether the application is being deleted. Valid values:
+        /// <para>Indicates whether the application is being deleted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The application is being deleted.</description></item>
+        /// <item><description><b>false</b>: The application is not being deleted.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The application is being deleted.
-        /// *   **false**: The application is not being deleted.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Reverse")]
         [Validation(Required=false)]
         public bool? Reverse { get; set; }
 
         /// <summary>
-        /// The list of applications.
+        /// <para>The list of applications.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;key&quot;:&quot;key&quot;,&quot;value&quot;:&quot;value&quot;}]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

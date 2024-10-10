@@ -10,98 +10,129 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateJobRequest : TeaModel {
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see [Grant permissions across Alibaba Cloud accounts by using a RAM role](https://help.aliyun.com/document_detail/223585.html).
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::123456789012****:role/adminrole</para>
         /// </summary>
         [NameInMap("AcrAssumeRoleArn")]
         [Validation(Required=false)]
         public string AcrAssumeRoleArn { get; set; }
 
         /// <summary>
-        /// The ID of Container Registry Enterprise Edition instance N. This parameter is required when the **ImageUrl** parameter is set to the URL of an image in an ACR Enterprise Edition instance.
+        /// <para>The ID of Container Registry Enterprise Edition instance N. This parameter is required when the <b>ImageUrl</b> parameter is set to the URL of an image in an ACR Enterprise Edition instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xxxxxx</para>
         /// </summary>
         [NameInMap("AcrInstanceId")]
         [Validation(Required=false)]
         public string AcrInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the application.
+        /// <para>The ID of the application.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The number of times the job is retried.
+        /// <para>The number of times the job is retried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("BackoffLimit")]
         [Validation(Required=false)]
         public long? BackoffLimit { get; set; }
 
         /// <summary>
-        /// The command that is used to start the image. The command must be an existing executable object in the container. Example:
+        /// <para>The command that is used to start the image. The command must be an existing executable object in the container. Example:</para>
+        /// <pre><c>command:
+        ///       - echo
+        ///       - abc
+        ///       - &gt;
+        ///       - file0
+        /// </c></pre>
+        /// <para>In this example, the Command parameter is set to <c>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c>.</para>
         /// 
-        ///     command:
-        ///           - echo
-        ///           - abc
-        ///           - >
-        ///           - file0
-        /// 
-        /// In this example, the Command parameter is set to `Command="echo", CommandArgs=["abc", ">", "file0"]`.
+        /// <b>Example:</b>
+        /// <para>echo</para>
         /// </summary>
         [NameInMap("Command")]
         [Validation(Required=false)]
         public string Command { get; set; }
 
         /// <summary>
-        /// The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the **Command** parameter. The name must meet the following format requirements:
+        /// <para>The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the <b>Command</b> parameter. The name must meet the following format requirements:</para>
+        /// <para><c>[&quot;a&quot;,&quot;b&quot;]</c></para>
+        /// <para>In the preceding example, the CommandArgs parameter is set to <c>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c>. The data type of <c>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c> must be an array of strings in the JSON format. This parameter is optional.</para>
         /// 
-        /// `["a","b"]`
-        /// 
-        /// In the preceding example, the CommandArgs parameter is set to `CommandArgs=["abc", ">", "file0"]`. The data type of `["abc", ">", "file0"]` must be an array of strings in the JSON format. This parameter is optional.
+        /// <b>Example:</b>
+        /// <para>[&quot;a&quot;,&quot;b&quot;]</para>
         /// </summary>
         [NameInMap("CommandArgs")]
         [Validation(Required=false)]
         public string CommandArgs { get; set; }
 
         /// <summary>
-        /// The concurrency policy of the job. Valid values:
+        /// <para>The concurrency policy of the job. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Forbid</b>: Prohibits concurrent running. If the previous job is not completed, no new job is created.</description></item>
+        /// <item><description><b>Allow</b>: Allows concurrent running.</description></item>
+        /// <item><description><b>Replace</b>: If the previous job is not completed when the time to create a new job is reached, the new job replaces the previous job.</description></item>
+        /// </list>
         /// 
-        /// *   **Forbid**: Prohibits concurrent running. If the previous job is not completed, no new job is created.
-        /// *   **Allow**: Allows concurrent running.
-        /// *   **Replace**: If the previous job is not completed when the time to create a new job is reached, the new job replaces the previous job.
+        /// <b>Example:</b>
+        /// <para>Allow</para>
         /// </summary>
         [NameInMap("ConcurrencyPolicy")]
         [Validation(Required=false)]
         public string ConcurrencyPolicy { get; set; }
 
         /// <summary>
-        /// The description of the **ConfigMap** instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following parameters are involved:
+        /// <para>The description of the <b>ConfigMap</b> instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following parameters are involved:</para>
+        /// <list type="bullet">
+        /// <item><description><b>congfigMapId</b>: the ID of the ConfigMap instance. You can call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID.</description></item>
+        /// <item><description><b>key</b>: the key.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You can use the <c>sae-sys-configmap-all</c> key to mount all keys.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><b>mountPath</b>: the mount path.</description></item>
+        /// </list>
         /// 
-        /// *   **congfigMapId**: the ID of the ConfigMap instance. You can call the [ListNamespacedConfigMaps](https://help.aliyun.com/document_detail/176917.html) operation to obtain the ID.
-        /// *   **key**: the key.
-        /// 
-        /// > You can use the `sae-sys-configmap-all` key to mount all keys.
-        /// 
-        /// *   **mountPath**: the mount path.
+        /// <b>Example:</b>
+        /// <para>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</para>
         /// </summary>
         [NameInMap("ConfigMapMountDesc")]
         [Validation(Required=false)]
         public string ConfigMapMountDesc { get; set; }
 
         /// <summary>
-        /// The custom mappings between hostnames and IP addresses in the container. Valid values:
+        /// <para>The custom mappings between hostnames and IP addresses in the container. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>hostName</b>: the domain name or hostname.</description></item>
+        /// <item><description><b>ip</b>: the IP address.</description></item>
+        /// </list>
         /// 
-        /// *   **hostName**: the domain name or hostname.
-        /// *   **ip**: the IP address.
+        /// <b>Example:</b>
+        /// <para>[{&quot;hostName&quot;:&quot;samplehost&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;}]</para>
         /// </summary>
         [NameInMap("CustomHostAlias")]
         [Validation(Required=false)]
         public string CustomHostAlias { get; set; }
 
         /// <summary>
-        /// The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.
+        /// <para>The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3.5.3</para>
         /// </summary>
         [NameInMap("EdasContainerVersion")]
         [Validation(Required=false)]
@@ -112,270 +143,372 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableImageAccl { get; set; }
 
         /// <summary>
-        /// The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](https://help.aliyun.com/document_detail/176914.html). Valid values:
+        /// <para>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Configure custom environment variables</para>
+        /// <list type="bullet">
+        /// <item><description><b>name</b>: the name of the environment variable.</description></item>
+        /// <item><description><b>value</b>: the value of the environment variable.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Reference ConfigMap</para>
+        /// <list type="bullet">
+        /// <item><description><b>name</b>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <c>sae-sys-configmap-all-&lt;ConfigMap name&gt;</c>. Example: <c>sae-sys-configmap-all-test1</c>.</description></item>
+        /// <item><description><b>valueFrom</b>: the reference of the environment variable. Set the value to <c>configMapRef</c>.</description></item>
+        /// <item><description><b>configMapId</b>: the ConfigMap ID.</description></item>
+        /// <item><description><b>key</b>: the key. If you want to reference all keys, do not configure this parameter.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   Configure custom environment variables
-        /// 
-        ///     *   **name**: the name of the environment variable.
-        ///     *   **value**: the value of the environment variable.
-        /// 
-        /// *   Reference ConfigMap
-        /// 
-        ///     *   **name**: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify `sae-sys-configmap-all-<ConfigMap name>`. Example: `sae-sys-configmap-all-test1`.
-        ///     *   **valueFrom**: the reference of the environment variable. Set the value to `configMapRef`.
-        ///     *   **configMapId**: the ConfigMap ID.
-        ///     *   **key**: the key. If you want to reference all keys, do not configure this parameter.
+        /// <b>Example:</b>
+        /// <para>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</para>
         /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]
         public string Envs { get; set; }
 
         /// <summary>
-        /// The ID of the corresponding Secret.
+        /// <para>The ID of the corresponding Secret.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("ImagePullSecrets")]
         [Validation(Required=false)]
         public string ImagePullSecrets { get; set; }
 
         /// <summary>
-        /// The URL of the image. This parameter is returned only if the **PackageType** parameter is set to **Image**.
+        /// <para>The URL of the image. This parameter is returned only if the <b>PackageType</b> parameter is set to <b>Image</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</para>
         /// </summary>
         [NameInMap("ImageUrl")]
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// The arguments in the JAR package. The arguments are used to start the application container. The default startup command is `$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS "$package_path" $JarStartArgs`.
+        /// <para>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-Xms4G -Xmx4G</para>
         /// </summary>
         [NameInMap("JarStartArgs")]
         [Validation(Required=false)]
         public string JarStartArgs { get; set; }
 
         /// <summary>
-        /// The option settings in the JAR package. The settings are used to start the application container. The default startup command for application deployment is `$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS "$package_path" $JarStartArgs`.
+        /// <para>The option settings in the JAR package. The settings are used to start the application container. The default startup command for application deployment is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>custom-option</para>
         /// </summary>
         [NameInMap("JarStartOptions")]
         [Validation(Required=false)]
         public string JarStartOptions { get; set; }
 
         /// <summary>
-        /// The version of the Java development kit (JDK) on which the deployment package of the application depends. The following versions are supported:
+        /// <para>The version of the Java development kit (JDK) on which the deployment package of the application depends. The following versions are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Open JDK 8</b></description></item>
+        /// <item><description><b>Open JDK 7</b></description></item>
+        /// <item><description><b>Dragonwell 11</b></description></item>
+        /// <item><description><b>Dragonwell 8</b></description></item>
+        /// <item><description><b>openjdk-8u191-jdk-alpine3.9</b></description></item>
+        /// <item><description><b>openjdk-7u201-jdk-alpine3.9</b></description></item>
+        /// </list>
+        /// <para>This parameter is not returned if the <b>PackageType</b> parameter is set to <b>Image</b>.</para>
         /// 
-        /// *   **Open JDK 8**
-        /// *   **Open JDK 7**
-        /// *   **Dragonwell 11**
-        /// *   **Dragonwell 8**
-        /// *   **openjdk-8u191-jdk-alpine3.9**
-        /// *   **openjdk-7u201-jdk-alpine3.9**
-        /// 
-        /// This parameter is not returned if the **PackageType** parameter is set to **Image**.
+        /// <b>Example:</b>
+        /// <para>Open JDK 8</para>
         /// </summary>
         [NameInMap("Jdk")]
         [Validation(Required=false)]
         public string Jdk { get; set; }
 
         /// <summary>
-        /// The configurations for mounting the NAS file system. If you do not need to modify the NAS configurations when you deploy the application, configure **MountDesc** only in the first request. If you no longer need to use NAS, leave **MountDesc** empty in the request.
+        /// <para>The configurations for mounting the NAS file system. If you do not need to modify the NAS configurations when you deploy the application, configure <b>MountDesc</b> only in the first request. If you no longer need to use NAS, leave <b>MountDesc</b> empty in the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</para>
         /// </summary>
         [NameInMap("MountDesc")]
         [Validation(Required=false)]
         public string MountDesc { get; set; }
 
         /// <summary>
-        /// The mount target of the NAS file system in the VPC where the application is deployed. If you do not need to modify this configuration during the deployment, configure the **MountHost** parameter only in the first request. You do not need to include this parameter in subsequent requests. If you need to remove this configuration, leave the **MountHost** parameter empty in the request.
+        /// <para>The mount target of the NAS file system in the VPC where the application is deployed. If you do not need to modify this configuration during the deployment, configure the <b>MountHost</b> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you need to remove this configuration, leave the <b>MountHost</b> parameter empty in the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10d3b4bc9****.com</para>
         /// </summary>
         [NameInMap("MountHost")]
         [Validation(Required=false)]
         public string MountHost { get; set; }
 
         /// <summary>
-        /// The ID of the Apsara File Storage NAS file system. If you do not need to modify the NAS configurations when you deploy the application, configure **NasId** only in the first request. If you no longer need to use NAS, leave **NasId** empty in the request.
+        /// <para>The ID of the Apsara File Storage NAS file system. If you do not need to modify the NAS configurations when you deploy the application, configure <b>NasId</b> only in the first request. If you no longer need to use NAS, leave <b>NasId</b> empty in the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10d3b4****</para>
         /// </summary>
         [NameInMap("NasId")]
         [Validation(Required=false)]
         public string NasId { get; set; }
 
         /// <summary>
-        /// The AccessKey ID that is used to read data from and write data to OSS.
+        /// <para>The AccessKey ID that is used to read data from and write data to OSS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("OssAkId")]
         [Validation(Required=false)]
         public string OssAkId { get; set; }
 
         /// <summary>
-        /// The AccessKey secret that is used to read data from and write data to OSS.
+        /// <para>The AccessKey secret that is used to read data from and write data to OSS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("OssAkSecret")]
         [Validation(Required=false)]
         public string OssAkSecret { get; set; }
 
         /// <summary>
-        /// The information about the mounted Object Storage Service (OSS) bucket. The following parameters are involved:
+        /// <para>The information about the mounted Object Storage Service (OSS) bucket. The following parameters are involved:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>bucketName</b>: the name of the OSS bucket.</para>
+        /// </description></item>
+        /// <item><description><para><b>bucketPath</b>: the directory or object in OSS. If the specified directory or object does not exist, an error is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>mountPath</b>: the directory of the container in SAE. If the path already exists, the newly specified path overwrites the previous one. If the path does not exist, it is created.</para>
+        /// </description></item>
+        /// <item><description><para><b>readOnly</b>: specifies whether to only allow the container path to read data from the OSS directory. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The container path only has read permission on the OSS directory.</description></item>
+        /// <item><description><b>false</b>: The application has read and write permissions.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **bucketName**: the name of the OSS bucket.
-        /// 
-        /// *   **bucketPath**: the directory or object in OSS. If the specified directory or object does not exist, an error is returned.
-        /// 
-        /// *   **mountPath**: the directory of the container in SAE. If the path already exists, the newly specified path overwrites the previous one. If the path does not exist, it is created.
-        /// 
-        /// *   **readOnly**: specifies whether to only allow the container path to read data from the OSS directory. Valid values:
-        /// 
-        ///     *   **true**: The container path only has read permission on the OSS directory.
-        ///     *   **false**: The application has read and write permissions.
+        /// <b>Example:</b>
+        /// <para>[{&quot;bucketName&quot;: &quot;oss-bucket&quot;, &quot;bucketPath&quot;: &quot;data/user.data&quot;, &quot;mountPath&quot;: &quot;/usr/data/user.data&quot;, &quot;readOnly&quot;: true}]</para>
         /// </summary>
         [NameInMap("OssMountDescs")]
         [Validation(Required=false)]
         public string OssMountDescs { get; set; }
 
         /// <summary>
-        /// The address of the deployment package. This parameter is required if you set **PackageType** to **FatJar**, **War**, or **PythonZip**.
+        /// <para>The address of the deployment package. This parameter is required if you set <b>PackageType</b> to <b>FatJar</b>, <b>War</b>, or <b>PythonZip</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/****.jar</a></para>
         /// </summary>
         [NameInMap("PackageUrl")]
         [Validation(Required=false)]
         public string PackageUrl { get; set; }
 
         /// <summary>
-        /// The version of the deployment package. This parameter is required if you set **PackageType** to **FatJar**, **War**, or **PythonZip**.
+        /// <para>The version of the deployment package. This parameter is required if you set <b>PackageType</b> to <b>FatJar</b>, <b>War</b>, or <b>PythonZip</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.0.1</para>
         /// </summary>
         [NameInMap("PackageVersion")]
         [Validation(Required=false)]
         public string PackageVersion { get; set; }
 
         /// <summary>
-        /// The ID of Container Registry Enterprise Edition instance N.
+        /// <para>The ID of Container Registry Enterprise Edition instance N.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xxxxxx</para>
         /// </summary>
         [NameInMap("Php")]
         [Validation(Required=false)]
         public string Php { get; set; }
 
         /// <summary>
-        /// The details of the PHP configuration file.
+        /// <para>The details of the PHP configuration file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>k1=v1</para>
         /// </summary>
         [NameInMap("PhpConfig")]
         [Validation(Required=false)]
         public string PhpConfig { get; set; }
 
         /// <summary>
-        /// The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.
+        /// <para>The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/usr/local/etc/php/php.ini</para>
         /// </summary>
         [NameInMap("PhpConfigLocation")]
         [Validation(Required=false)]
         public string PhpConfigLocation { get; set; }
 
         /// <summary>
-        /// The script to be run after the container is started. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`
+        /// <para>The script to be run after the container is started. Example: <c>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;\\]}}</c></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</para>
         /// </summary>
         [NameInMap("PostStart")]
         [Validation(Required=false)]
         public string PostStart { get; set; }
 
         /// <summary>
-        /// The script that is run before the container is stopped. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`
+        /// <para>The script that is run before the container is stopped. Example: <c>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;\\]}}</c></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</para>
         /// </summary>
         [NameInMap("PreStop")]
         [Validation(Required=false)]
         public string PreStop { get; set; }
 
         /// <summary>
-        /// The programming language. Valid values: **java**, **php**, **python**, and **shell**.
+        /// <para>The programming language. Valid values: <b>java</b>, <b>php</b>, <b>python</b>, and <b>shell</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>java</para>
         /// </summary>
         [NameInMap("ProgrammingLanguage")]
         [Validation(Required=false)]
         public string ProgrammingLanguage { get; set; }
 
         /// <summary>
-        /// The Python environment. Set the value to **PYTHON 3.9.15**.
+        /// <para>The Python environment. Set the value to <b>PYTHON 3.9.15</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PYTHON 3.9.15</para>
         /// </summary>
         [NameInMap("Python")]
         [Validation(Required=false)]
         public string Python { get; set; }
 
         /// <summary>
-        /// The configurations for installing custom module dependencies. By default, the dependencies defined by the requirements.txt file in the root directory are installed. If the package does not contain this file and you do not configure custom dependencies in the package, specify the dependencies that you want to install in the text box.
+        /// <para>The configurations for installing custom module dependencies. By default, the dependencies defined by the requirements.txt file in the root directory are installed. If the package does not contain this file and you do not configure custom dependencies in the package, specify the dependencies that you want to install in the text box.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Flask==2.0</para>
         /// </summary>
         [NameInMap("PythonModules")]
         [Validation(Required=false)]
         public string PythonModules { get; set; }
 
         /// <summary>
-        /// The ID of the job that you reference.
+        /// <para>The ID of the job that you reference.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69****</para>
         /// </summary>
         [NameInMap("RefAppId")]
         [Validation(Required=false)]
         public string RefAppId { get; set; }
 
         /// <summary>
-        /// The number of concurrent instances.
+        /// <para>The number of concurrent instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]
         public string Replicas { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable job sharding.
+        /// <para>Specifies whether to enable job sharding.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Slice")]
         [Validation(Required=false)]
         public bool? Slice { get; set; }
 
         /// <summary>
-        /// The parameters of job sharding.
+        /// <para>The parameters of job sharding.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[0,1,2]</para>
         /// </summary>
         [NameInMap("SliceEnvs")]
         [Validation(Required=false)]
         public string SliceEnvs { get; set; }
 
         /// <summary>
-        /// The configurations of Log Service.
+        /// <para>The configurations of Log Service.</para>
+        /// <list type="bullet">
+        /// <item><description>To use Log Service resources that are automatically created by SAE, set this parameter to <c>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</c>.</description></item>
+        /// <item><description>To use custom Log Service resources, set this parameter to <c>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</c>.</description></item>
+        /// </list>
+        /// <para>The following parameters are involved:</para>
+        /// <list type="bullet">
+        /// <item><description><b>projectName</b>: the name of the Log Service project.</description></item>
+        /// <item><description><b>logDir</b>: the path in which logs are stored.</description></item>
+        /// <item><description><b>logType</b>: the log type. <b>stdout</b>: the standard output log of the container. You can specify only one stdout value for this parameter. If you leave this parameter empty, file logs are collected.</description></item>
+        /// <item><description><b>logstoreName</b>: the name of the Logstore in Log Service.</description></item>
+        /// <item><description><b>logtailName</b>: the name of the Logtail configuration in Log Service. If you do not configure this parameter, a new Logtail configuration is created.</description></item>
+        /// </list>
+        /// <para>If you do not need to modify the logging configurations when you deploy the application, configure the <b>SlsConfigs</b> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you no longer need to use Log Service, leave the <b>SlsConfigs</b> parameter empty in the request.</para>
+        /// <remarks>
+        /// <para>A Log Service project that is automatically created by SAE when you create an application is deleted when the application is deleted. Therefore, when you create an application, you cannot select a Log Service project that is automatically created by SAE for log collection.</para>
+        /// </remarks>
         /// 
-        /// *   To use Log Service resources that are automatically created by SAE, set this parameter to `[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]`.
-        /// *   To use custom Log Service resources, set this parameter to `[{"projectName":"test-sls","logType":"stdout","logDir":"","logstoreName":"sae","logtailName":""},{"projectName":"test","logDir":"/tmp/a.log","logstoreName":"sae","logtailName":""}]`.
-        /// 
-        /// The following parameters are involved:
-        /// 
-        /// *   **projectName**: the name of the Log Service project.
-        /// *   **logDir**: the path in which logs are stored.
-        /// *   **logType**: the log type. **stdout**: the standard output log of the container. You can specify only one stdout value for this parameter. If you leave this parameter empty, file logs are collected.
-        /// *   **logstoreName**: the name of the Logstore in Log Service.
-        /// *   **logtailName**: the name of the Logtail configuration in Log Service. If you do not configure this parameter, a new Logtail configuration is created.
-        /// 
-        /// If you do not need to modify the logging configurations when you deploy the application, configure the **SlsConfigs** parameter only in the first request. You do not need to include this parameter in subsequent requests. If you no longer need to use Log Service, leave the **SlsConfigs** parameter empty in the request.
-        /// 
-        /// > A Log Service project that is automatically created by SAE when you create an application is deleted when the application is deleted. Therefore, when you create an application, you cannot select a Log Service project that is automatically created by SAE for log collection.
+        /// <b>Example:</b>
+        /// <para>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</para>
         /// </summary>
         [NameInMap("SlsConfigs")]
         [Validation(Required=false)]
         public string SlsConfigs { get; set; }
 
         /// <summary>
-        /// The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.
+        /// <para>The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TerminationGracePeriodSeconds")]
         [Validation(Required=false)]
         public int? TerminationGracePeriodSeconds { get; set; }
 
         /// <summary>
-        /// The timeout period. Unit: seconds.
+        /// <para>The timeout period. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3600</para>
         /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]
         public long? Timeout { get; set; }
 
         /// <summary>
-        /// The time zone. Default value: **Asia/Shanghai**.
+        /// <para>The time zone. Default value: <b>Asia/Shanghai</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Asia/Shanghai</para>
         /// </summary>
         [NameInMap("Timezone")]
         [Validation(Required=false)]
         public string Timezone { get; set; }
 
         /// <summary>
-        /// The Tomcat configuration. If you want to delete the configuration, set this parameter to {} or leave this parameter empty. Valid values:
+        /// <para>The Tomcat configuration. If you want to delete the configuration, set this parameter to {} or leave this parameter empty. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>port</b>: the port number. The port number ranges from 1024 to 65535. Though the admin permissions are configured for the container, the root permissions are required to perform operations on ports whose number is smaller than 1024. Enter a value that ranges from 1025 to 65535 because the container has only the admin permissions. If you do not specify this parameter, the default port number 8080 is used.</description></item>
+        /// <item><description><b>contextPath</b>: the path. Default value: /. This value indicates the root directory.</description></item>
+        /// <item><description><b>maxThreads</b>: the maximum number of connections in the connection pool. Default value: 400.</description></item>
+        /// <item><description><b>uriEncoding</b>: the URI encoding scheme in the Tomcat container. Valid values: <b>UTF-8</b>, <b>ISO-8859-1</b>, <b>GBK</b>, and GB2312. If you do not specify this parameter, the default value <b>ISO-8859-1</b> is used.</description></item>
+        /// <item><description><b>useBodyEncoding</b>: specifies whether to use the encoding scheme that is specified by <b>BodyEncoding for URL</b>. Default value: <b>true</b>.</description></item>
+        /// </list>
         /// 
-        /// *   **port**: the port number. The port number ranges from 1024 to 65535. Though the admin permissions are configured for the container, the root permissions are required to perform operations on ports whose number is smaller than 1024. Enter a value that ranges from 1025 to 65535 because the container has only the admin permissions. If you do not specify this parameter, the default port number 8080 is used.
-        /// *   **contextPath**: the path. Default value: /. This value indicates the root directory.
-        /// *   **maxThreads**: the maximum number of connections in the connection pool. Default value: 400.
-        /// *   **uriEncoding**: the URI encoding scheme in the Tomcat container. Valid values: **UTF-8**, **ISO-8859-1**, **GBK**, and GB2312. If you do not specify this parameter, the default value **ISO-8859-1** is used.
-        /// *   **useBodyEncoding**: specifies whether to use the encoding scheme that is specified by **BodyEncoding for URL**. Default value: **true**.
+        /// <b>Example:</b>
+        /// <para>{&quot;port&quot;:8080,&quot;contextPath&quot;:&quot;/&quot;,&quot;maxThreads&quot;:400,&quot;uriEncoding&quot;:&quot;ISO-8859-1&quot;,&quot;useBodyEncodingForUri&quot;:true}</para>
         /// </summary>
         [NameInMap("TomcatConfig")]
         [Validation(Required=false)]
@@ -386,19 +519,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string TriggerConfig { get; set; }
 
         /// <summary>
-        /// The startup command of the WAR package. For information about how to configure the startup command, see [Configure startup commands](https://help.aliyun.com/document_detail/96677.html).
+        /// <para>The startup command of the WAR package. For information about how to configure the startup command, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure startup commands</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</para>
         /// </summary>
         [NameInMap("WarStartOptions")]
         [Validation(Required=false)]
         public string WarStartOptions { get; set; }
 
         /// <summary>
-        /// The version of the Tomcat container on which the deployment package depends. The following versions are supported:
+        /// <para>The version of the Tomcat container on which the deployment package depends. The following versions are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><b>apache-tomcat-7.0.91</b></description></item>
+        /// <item><description><b>apache-tomcat-8.5.42</b></description></item>
+        /// </list>
+        /// <para>This parameter is not returned if the <b>PackageType</b> parameter is set to <b>Image</b>.</para>
         /// 
-        /// *   **apache-tomcat-7.0.91**
-        /// *   **apache-tomcat-8.5.42**
-        /// 
-        /// This parameter is not returned if the **PackageType** parameter is set to **Image**.
+        /// <b>Example:</b>
+        /// <para>apache-tomcat-7.0.91</para>
         /// </summary>
         [NameInMap("WebContainer")]
         [Validation(Required=false)]

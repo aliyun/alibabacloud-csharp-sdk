@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListPublishedServicesRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>b2a8a925-477a-4ed7-b825-d5e22500****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

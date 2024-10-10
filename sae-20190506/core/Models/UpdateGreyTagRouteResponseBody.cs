@@ -10,26 +10,33 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateGreyTagRouteResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. Valid values:
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// </list>
         /// 
-        /// *   **2xx**: The call was successful.
-        /// *   **3xx**: The call was redirected.
-        /// *   **4xx**: The call failed.
-        /// *   **5xx**: A server error occurred.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The information about the canary release rule.
+        /// <para>The information about the canary release rule.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateGreyTagRouteResponseBodyData Data { get; set; }
         public class UpdateGreyTagRouteResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the canary release rule. The ID is globally unique.
+            /// <para>The ID of the canary release rule. The ID is globally unique.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("GreyTagRouteId")]
             [Validation(Required=false)]
@@ -38,41 +45,55 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The returned error code. Valid values:
-        /// 
-        /// *   If the call is successful, the **ErrorCode** parameter is not returned.
-        /// *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+        /// <para>The returned error code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
+        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The returned information.
+        /// <para>The returned information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9D29CBD0-45D3-410B-9826-52F86F90****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the information of the change order was queried. Valid values:
+        /// <para>Indicates whether the information of the change order was queried. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The information was queried.</description></item>
+        /// <item><description><b>false</b>: The information failed to be queried.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The information was queried.
-        /// *   **false**: The information failed to be queried.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The trace ID that is used to query the details of the request.
+        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0a98a02315955564772843261e****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

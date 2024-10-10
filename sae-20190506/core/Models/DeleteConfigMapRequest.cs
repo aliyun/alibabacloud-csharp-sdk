@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeleteConfigMapRequest : TeaModel {
         /// <summary>
-        /// 1
+        /// <para>1</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ConfigMapId")]
         [Validation(Required=false)]

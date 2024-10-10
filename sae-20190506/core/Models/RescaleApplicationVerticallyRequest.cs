@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class RescaleApplicationVerticallyRequest : TeaModel {
         /// <summary>
-        /// The application ID.
+        /// <para>The application ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0099b7be-5f5b-4512-a7fc-56049ef1****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The destination CPU specification. Unit: millicore.
+        /// <para>The destination CPU specification. Unit: millicore.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public string Cpu { get; set; }
 
         /// <summary>
-        /// The destination memory size. Unit: MB.
+        /// <para>The destination memory size. Unit: MB.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2048</para>
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]

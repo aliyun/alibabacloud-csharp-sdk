@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string DefaultForwardingAppName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>HTTP</para>
+        /// </summary>
         [NameInMap("Protocol")]
         [Validation(Required=false)]
         public string Protocol { get; set; }

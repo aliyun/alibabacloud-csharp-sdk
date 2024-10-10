@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class StopWebApplicationRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing:test</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

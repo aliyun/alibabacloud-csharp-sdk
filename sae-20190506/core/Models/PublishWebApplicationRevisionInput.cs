@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class PublishWebApplicationRevisionInput : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Containers")]
         [Validation(Required=false)]
         public List<Container> Containers { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test version</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

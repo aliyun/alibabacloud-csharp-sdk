@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListIngressesRequest : TeaModel {
         /// <summary>
-        /// The list of routing rules.
+        /// <para>The list of routing rules.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bbf3a590-6d13-46fe-8ca9-c947a20b****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateApplicationRequest : TeaModel {
         /// <summary>
-        /// acs:ram::123456789012\\*\\*\\*\\*:role/adminrole
+        /// <para>acs:ram::123456789012\<em>\</em>\<em>\</em>:role/adminrole</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::123456789012****:role/adminrole</para>
         /// </summary>
         [NameInMap("AcrAssumeRoleArn")]
         [Validation(Required=false)]
         public string AcrAssumeRoleArn { get; set; }
 
         /// <summary>
-        /// cri-xxxxxx
+        /// <para>cri-xxxxxx</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xxxxxx</para>
         /// </summary>
         [NameInMap("AcrInstanceId")]
         [Validation(Required=false)]
         public string AcrInstanceId { get; set; }
 
         /// <summary>
-        /// This is a test description.
+        /// <para>This is a test description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a test description.</para>
         /// </summary>
         [NameInMap("AppDescription")]
         [Validation(Required=false)]
         public string AppDescription { get; set; }
 
         /// <summary>
-        /// test
+        /// <para>test</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -44,14 +55,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppSource { get; set; }
 
         /// <summary>
-        /// true
+        /// <para>true</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AssociateEip")]
         [Validation(Required=false)]
         public bool? AssociateEip { get; set; }
 
         /// <summary>
-        /// true
+        /// <para>true</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoConfig")]
         [Validation(Required=false)]
@@ -62,42 +79,60 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string BaseAppId { get; set; }
 
         /// <summary>
-        /// sleep
+        /// <para>sleep</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>echo</para>
         /// </summary>
         [NameInMap("Command")]
         [Validation(Required=false)]
         public string Command { get; set; }
 
         /// <summary>
-        /// 1d
+        /// <para>1d</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;a&quot;,&quot;b&quot;]</para>
         /// </summary>
         [NameInMap("CommandArgs")]
         [Validation(Required=false)]
         public string CommandArgs { get; set; }
 
         /// <summary>
-        /// [{"configMapId":16,"key":"test","mountPath":"/tmp"}]
+        /// <para>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</para>
         /// </summary>
         [NameInMap("ConfigMapMountDesc")]
         [Validation(Required=false)]
         public string ConfigMapMountDesc { get; set; }
 
         /// <summary>
-        /// 1000
+        /// <para>1000</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public int? Cpu { get; set; }
 
         /// <summary>
-        /// [{"hostName":"samplehost","ip":"127.0.0.1"}]
+        /// <para>[{&quot;hostName&quot;:&quot;samplehost&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;}]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;hostName&quot;:&quot;samplehost&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;}]</para>
         /// </summary>
         [NameInMap("CustomHostAlias")]
         [Validation(Required=false)]
         public string CustomHostAlias { get; set; }
 
         /// <summary>
-        /// true
+        /// <para>true</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Deploy")]
         [Validation(Required=false)]
@@ -108,7 +143,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Dotnet { get; set; }
 
         /// <summary>
-        /// 3.5.3
+        /// <para>3.5.3</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3.5.3</para>
         /// </summary>
         [NameInMap("EdasContainerVersion")]
         [Validation(Required=false)]
@@ -123,62 +161,95 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableNewArms { get; set; }
 
         /// <summary>
-        /// [{"name":"envtmp","value":"0"}]
+        /// <para>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</para>
         /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]
         public string Envs { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("ImagePullSecrets")]
         [Validation(Required=false)]
         public string ImagePullSecrets { get; set; }
 
         /// <summary>
-        /// registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1
+        /// <para>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</para>
         /// </summary>
         [NameInMap("ImageUrl")]
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// custom-args
+        /// <para>custom-args</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>custom-args</para>
         /// </summary>
         [NameInMap("JarStartArgs")]
         [Validation(Required=false)]
         public string JarStartArgs { get; set; }
 
         /// <summary>
-        /// \\-Xms4G -Xmx4G
+        /// <para>\-Xms4G -Xmx4G</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-Xms4G -Xmx4G</para>
         /// </summary>
         [NameInMap("JarStartOptions")]
         [Validation(Required=false)]
         public string JarStartOptions { get; set; }
 
         /// <summary>
-        /// Open JDK 8
+        /// <para>Open JDK 8</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Open JDK 8</para>
         /// </summary>
         [NameInMap("Jdk")]
         [Validation(Required=false)]
         public string Jdk { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;kafkaEndpoint&quot;:&quot;10.0.X.XXX:XXXX,10.0.X.XXX:XXXX,10.0.X.XXX:XXXX\&quot;,&quot;kafkaInstanceId&quot;:&quot;alikafka_pre-cn-7pp2l8kr****&quot;,&quot;kafkaConfigs&quot;:[{&quot;logType&quot;:&quot;file_log&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;kafkaTopic&quot;:&quot;test2&quot;},{&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;kafkaTopic&quot;:&quot;test&quot;}]}</para>
+        /// </summary>
         [NameInMap("KafkaConfigs")]
         [Validation(Required=false)]
         public string KafkaConfigs { get; set; }
 
         /// <summary>
-        /// {"exec":{"command":["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
+        /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</para>
         /// </summary>
         [NameInMap("Liveness")]
         [Validation(Required=false)]
         public string Liveness { get; set; }
 
         /// <summary>
-        /// 1024
+        /// <para>1024</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1024</para>
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;0&quot;</para>
+        /// </summary>
         [NameInMap("MicroRegistration")]
         [Validation(Required=false)]
         public string MicroRegistration { get; set; }
@@ -188,147 +259,220 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string MicroRegistrationConfig { get; set; }
 
         /// <summary>
-        /// [{mountPath: "/tmp", nasPath: "/"}]
+        /// <para>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</para>
         /// </summary>
         [NameInMap("MountDesc")]
         [Validation(Required=false)]
         public string MountDesc { get; set; }
 
         /// <summary>
-        /// example.com
+        /// <para>example.com</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("MountHost")]
         [Validation(Required=false)]
         public string MountHost { get; set; }
 
         /// <summary>
-        /// cn-beijing:test
+        /// <para>cn-beijing:test</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing:test</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[{&quot;mountPath&quot;:&quot;/test1&quot;,&quot;readOnly&quot;:false,&quot;nasId&quot;:&quot;nasId1&quot;,&quot;mountDomain&quot;:&quot;nasId1.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;nasPath&quot;:&quot;/test1&quot;},{&quot;nasId&quot;:&quot;nasId2&quot;,&quot;mountDomain&quot;:&quot;nasId2.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;readOnly&quot;:false,&quot;nasPath&quot;:&quot;/test2&quot;,&quot;mountPath&quot;:&quot;/test2&quot;}]</para>
+        /// </summary>
         [NameInMap("NasConfigs")]
         [Validation(Required=false)]
         public string NasConfigs { get; set; }
 
         /// <summary>
-        /// KSAK\\*\\*\\*\\*
+        /// <para>KSAK\<em>\</em>\<em>\</em></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>KSAK****</para>
         /// </summary>
         [NameInMap("NasId")]
         [Validation(Required=false)]
         public string NasId { get; set; }
 
         /// <summary>
-        /// xxxxxx
+        /// <para>xxxxxx</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("OssAkId")]
         [Validation(Required=false)]
         public string OssAkId { get; set; }
 
         /// <summary>
-        /// xxxxxx
+        /// <para>xxxxxx</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("OssAkSecret")]
         [Validation(Required=false)]
         public string OssAkSecret { get; set; }
 
         /// <summary>
-        /// [{"bucketName": "oss-bucket", "bucketPath": "data/user.data", "mountPath": "/usr/data/user.data", "readOnly": true}]
+        /// <para>[{&quot;bucketName&quot;: &quot;oss-bucket&quot;, &quot;bucketPath&quot;: &quot;data/user.data&quot;, &quot;mountPath&quot;: &quot;/usr/data/user.data&quot;, &quot;readOnly&quot;: true}]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;bucketName&quot;: &quot;oss-bucket&quot;, &quot;bucketPath&quot;: &quot;data/user.data&quot;, &quot;mountPath&quot;: &quot;/usr/data/user.data&quot;, &quot;readOnly&quot;: true}]</para>
         /// </summary>
         [NameInMap("OssMountDescs")]
         [Validation(Required=false)]
         public string OssMountDescs { get; set; }
 
         /// <summary>
-        /// FatJar
+        /// <para>FatJar</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>FatJar</para>
         /// </summary>
         [NameInMap("PackageType")]
         [Validation(Required=false)]
         public string PackageType { get; set; }
 
         /// <summary>
-        /// http://myoss.oss-cn-\\*\\*\\*\\*.aliyuncs.com/my-buc/2019-06-30/\\*\\*\\*\\*.jar
+        /// <para><a href="http://myoss.oss-cn-%5C%5C*%5C%5C*%5C%5C*%5C%5C*.aliyuncs.com/my-buc/2019-06-30/%5C%5C*%5C%5C*%5C%5C*%5C%5C*.jar">http://myoss.oss-cn-\\*\\*\\*\\*.aliyuncs.com/my-buc/2019-06-30/\\*\\*\\*\\*.jar</a></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar</a></para>
         /// </summary>
         [NameInMap("PackageUrl")]
         [Validation(Required=false)]
         public string PackageUrl { get; set; }
 
         /// <summary>
-        /// 1.0.0
+        /// <para>1.0.0</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.0.0</para>
         /// </summary>
         [NameInMap("PackageVersion")]
         [Validation(Required=false)]
         public string PackageVersion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PHP-FPM 7.0</para>
+        /// </summary>
         [NameInMap("Php")]
         [Validation(Required=false)]
         public string Php { get; set; }
 
         /// <summary>
-        /// /usr/local/etc/php/conf.d/arms.ini
+        /// <para>/usr/local/etc/php/conf.d/arms.ini</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/usr/local/etc/php/conf.d/arms.ini</para>
         /// </summary>
         [NameInMap("PhpArmsConfigLocation")]
         [Validation(Required=false)]
         public string PhpArmsConfigLocation { get; set; }
 
         /// <summary>
-        /// k1=v1
+        /// <para>k1=v1</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>k1=v1</para>
         /// </summary>
         [NameInMap("PhpConfig")]
         [Validation(Required=false)]
         public string PhpConfig { get; set; }
 
         /// <summary>
-        /// /usr/local/etc/php/php.ini
+        /// <para>/usr/local/etc/php/php.ini</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/usr/local/etc/php/php.ini</para>
         /// </summary>
         [NameInMap("PhpConfigLocation")]
         [Validation(Required=false)]
         public string PhpConfigLocation { get; set; }
 
         /// <summary>
-        /// {"exec":{"command":["cat","/etc/group"]}}
+        /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</para>
         /// </summary>
         [NameInMap("PostStart")]
         [Validation(Required=false)]
         public string PostStart { get; set; }
 
         /// <summary>
-        /// {"exec":{"command":["cat","/etc/group"]}}
+        /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</para>
         /// </summary>
         [NameInMap("PreStop")]
         [Validation(Required=false)]
         public string PreStop { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>java</para>
+        /// </summary>
         [NameInMap("ProgrammingLanguage")]
         [Validation(Required=false)]
         public string ProgrammingLanguage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;serviceName&quot;:&quot;bwm-poc-sc-gateway-cn-beijing-front&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:front&quot;,&quot;portAndProtocol&quot;:{&quot;18012&quot;:&quot;TCP&quot;},&quot;enable&quot;:true}</para>
+        /// </summary>
         [NameInMap("PvtzDiscoverySvc")]
         [Validation(Required=false)]
         public string PvtzDiscoverySvc { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PYTHON 3.9.15</para>
+        /// </summary>
         [NameInMap("Python")]
         [Validation(Required=false)]
         public string Python { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Flask==2.0</para>
+        /// </summary>
         [NameInMap("PythonModules")]
         [Validation(Required=false)]
         public string PythonModules { get; set; }
 
         /// <summary>
-        /// {"exec":{"command":["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
+        /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</para>
         /// </summary>
         [NameInMap("Readiness")]
         [Validation(Required=false)]
         public string Readiness { get; set; }
 
         /// <summary>
-        /// 1
+        /// <para>1</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]
@@ -339,7 +483,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string SaeVersion { get; set; }
 
         /// <summary>
-        /// sg-wz969ngg2e49q5i4\\*\\*\\*\\*
+        /// <para>sg-wz969ngg2e49q5i4\<em>\</em>\<em>\</em></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-wz969ngg2e49q5i4****</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
@@ -350,56 +497,80 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ServiceTags { get; set; }
 
         /// <summary>
-        /// [{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]
+        /// <para>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</para>
         /// </summary>
         [NameInMap("SlsConfigs")]
         [Validation(Required=false)]
         public string SlsConfigs { get; set; }
 
         /// <summary>
-        /// 30
+        /// <para>30</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("TerminationGracePeriodSeconds")]
         [Validation(Required=false)]
         public int? TerminationGracePeriodSeconds { get; set; }
 
         /// <summary>
-        /// Asia/Shanghai
+        /// <para>Asia/Shanghai</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Asia/Shanghai</para>
         /// </summary>
         [NameInMap("Timezone")]
         [Validation(Required=false)]
         public string Timezone { get; set; }
 
         /// <summary>
-        /// {"port":8080,"contextPath":"/","maxThreads":400,"uriEncoding":"ISO-8859-1","useBodyEncodingForUri":true}
+        /// <para>{&quot;port&quot;:8080,&quot;contextPath&quot;:&quot;/&quot;,&quot;maxThreads&quot;:400,&quot;uriEncoding&quot;:&quot;ISO-8859-1&quot;,&quot;useBodyEncodingForUri&quot;:true}</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;port&quot;:8080,&quot;contextPath&quot;:&quot;/&quot;,&quot;maxThreads&quot;:400,&quot;uriEncoding&quot;:&quot;ISO-8859-1&quot;,&quot;useBodyEncodingForUri&quot;:true}</para>
         /// </summary>
         [NameInMap("TomcatConfig")]
         [Validation(Required=false)]
         public string TomcatConfig { get; set; }
 
         /// <summary>
-        /// vsw-bp12mw1f8k3jgygk9\\*\\*\\*\\*
+        /// <para>vsw-bp12mw1f8k3jgygk9\<em>\</em>\<em>\</em></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-bp12mw1f8k3jgygk9****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// vpc-bp1aevy8sofi8mh1q\\*\\*\\*\\*
+        /// <para>vpc-bp1aevy8sofi8mh1q\<em>\</em>\<em>\</em></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1aevy8sofi8mh1q****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// CATALINA_OPTS=\\\\"$CATALINA_OPTS $Options\\\\" catalina.sh run
+        /// <para>CATALINA_OPTS=\\&quot;$CATALINA_OPTS $Options\\&quot; catalina.sh run</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</para>
         /// </summary>
         [NameInMap("WarStartOptions")]
         [Validation(Required=false)]
         public string WarStartOptions { get; set; }
 
         /// <summary>
-        /// apache-tomcat-7.0.91
+        /// <para>apache-tomcat-7.0.91</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>apache-tomcat-7.0.91</para>
         /// </summary>
         [NameInMap("WebContainer")]
         [Validation(Required=false)]
