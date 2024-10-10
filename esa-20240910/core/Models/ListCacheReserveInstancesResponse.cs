@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class AddUserBusinessFormResponse : TeaModel {
+    public class ListCacheReserveInstancesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public AddUserBusinessFormResponseBody Body { get; set; }
+        public ListCacheReserveInstancesResponseBody Body { get; set; }
 
     }
 

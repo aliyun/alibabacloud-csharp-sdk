@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class PutKvAccountResponse : TeaModel {
+    public class ListInstanceQuotasWithUsageResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public PutKvAccountResponseBody Body { get; set; }
+        public ListInstanceQuotasWithUsageResponseBody Body { get; set; }
 
     }
 
