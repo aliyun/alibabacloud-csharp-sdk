@@ -43,6 +43,160 @@ namespace AlibabaCloud.SDK.DianJin20240628
         /// </summary>
         /// 
         /// <param name="request">
+        /// CreateDocsSummaryTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocsSummaryTaskResponse
+        /// </returns>
+        public CreateDocsSummaryTaskResponse CreateDocsSummaryTaskWithOptions(string workspaceId, CreateDocsSummaryTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocInfos))
+            {
+                body["docInfos"] = request.DocInfos;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableTable))
+            {
+                body["enableTable"] = request.EnableTable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instruction))
+            {
+                body["instruction"] = request.Instruction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDocsSummaryTask",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/task/summary/docs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDocsSummaryTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建财报总结任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDocsSummaryTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocsSummaryTaskResponse
+        /// </returns>
+        public async Task<CreateDocsSummaryTaskResponse> CreateDocsSummaryTaskWithOptionsAsync(string workspaceId, CreateDocsSummaryTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocInfos))
+            {
+                body["docInfos"] = request.DocInfos;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableTable))
+            {
+                body["enableTable"] = request.EnableTable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instruction))
+            {
+                body["instruction"] = request.Instruction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDocsSummaryTask",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/task/summary/docs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDocsSummaryTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建财报总结任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDocsSummaryTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocsSummaryTaskResponse
+        /// </returns>
+        public CreateDocsSummaryTaskResponse CreateDocsSummaryTask(string workspaceId, CreateDocsSummaryTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDocsSummaryTaskWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建财报总结任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDocsSummaryTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocsSummaryTaskResponse
+        /// </returns>
+        public async Task<CreateDocsSummaryTaskResponse> CreateDocsSummaryTaskAsync(string workspaceId, CreateDocsSummaryTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDocsSummaryTaskWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建财报总结任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
         /// CreateFinReportSummaryTaskRequest
         /// </param>
         /// <param name="headers">
@@ -683,6 +837,176 @@ namespace AlibabaCloud.SDK.DianJin20240628
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreatePredefinedDocumentWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建财报总结的任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQualityCheckTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQualityCheckTaskResponse
+        /// </returns>
+        public CreateQualityCheckTaskResponse CreateQualityCheckTaskWithOptions(string workspaceId, CreateQualityCheckTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationList))
+            {
+                body["conversationList"] = request.ConversationList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtService))
+            {
+                body["gmtService"] = request.GmtService;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaData))
+            {
+                body["metaData"] = request.MetaData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualityGroup))
+            {
+                body["qualityGroup"] = request.QualityGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateQualityCheckTask",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/qualitycheck/task/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateQualityCheckTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建财报总结的任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQualityCheckTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQualityCheckTaskResponse
+        /// </returns>
+        public async Task<CreateQualityCheckTaskResponse> CreateQualityCheckTaskWithOptionsAsync(string workspaceId, CreateQualityCheckTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationList))
+            {
+                body["conversationList"] = request.ConversationList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtService))
+            {
+                body["gmtService"] = request.GmtService;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaData))
+            {
+                body["metaData"] = request.MetaData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualityGroup))
+            {
+                body["qualityGroup"] = request.QualityGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateQualityCheckTask",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/qualitycheck/task/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateQualityCheckTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建财报总结的任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQualityCheckTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQualityCheckTaskResponse
+        /// </returns>
+        public CreateQualityCheckTaskResponse CreateQualityCheckTask(string workspaceId, CreateQualityCheckTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateQualityCheckTaskWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建财报总结的任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQualityCheckTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQualityCheckTaskResponse
+        /// </returns>
+        public async Task<CreateQualityCheckTaskResponse> CreateQualityCheckTaskAsync(string workspaceId, CreateQualityCheckTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateQualityCheckTaskWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2399,6 +2723,136 @@ namespace AlibabaCloud.SDK.DianJin20240628
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetParseResultWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步任务的结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQualityCheckTaskResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQualityCheckTaskResultResponse
+        /// </returns>
+        public GetQualityCheckTaskResultResponse GetQualityCheckTaskResultWithOptions(string workspaceId, GetQualityCheckTaskResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetQualityCheckTaskResult",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/qualitycheck/task/query",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetQualityCheckTaskResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步任务的结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQualityCheckTaskResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQualityCheckTaskResultResponse
+        /// </returns>
+        public async Task<GetQualityCheckTaskResultResponse> GetQualityCheckTaskResultWithOptionsAsync(string workspaceId, GetQualityCheckTaskResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetQualityCheckTaskResult",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/qualitycheck/task/query",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetQualityCheckTaskResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步任务的结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQualityCheckTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQualityCheckTaskResultResponse
+        /// </returns>
+        public GetQualityCheckTaskResultResponse GetQualityCheckTaskResult(string workspaceId, GetQualityCheckTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetQualityCheckTaskResultWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步任务的结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQualityCheckTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQualityCheckTaskResultResponse
+        /// </returns>
+        public async Task<GetQualityCheckTaskResultResponse> GetQualityCheckTaskResultAsync(string workspaceId, GetQualityCheckTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetQualityCheckTaskResultWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
