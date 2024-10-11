@@ -10,20 +10,35 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceClassRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc-xxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>32</para>
+        /// </summary>
         [NameInMap("ScaleMax")]
         [Validation(Required=false)]
         public long? ScaleMax { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("ScaleMin")]
         [Validation(Required=false)]
         public long? ScaleMin { get; set; }

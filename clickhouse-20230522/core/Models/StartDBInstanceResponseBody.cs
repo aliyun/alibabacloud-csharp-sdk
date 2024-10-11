@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public StartDBInstanceResponseBodyData Data { get; set; }
         public class StartDBInstanceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cc-bp100p4q1g9z3****</para>
+            /// </summary>
             [NameInMap("DBInstanceID")]
             [Validation(Required=false)]
             public long? DBInstanceID { get; set; }
@@ -21,12 +25,20 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100000837</para>
+            /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public long? TaskId { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F5178C10-1407-4987-9133-DE4DC9119F76</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

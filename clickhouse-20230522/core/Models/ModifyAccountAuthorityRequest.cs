@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyAccountAuthorityRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test1</para>
         /// </summary>
         [NameInMap("Account")]
         [Validation(Required=false)]
         public string Account { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc-bp100p4q1g9z3****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DmlAuthSetting")]
         [Validation(Required=false)]
@@ -39,14 +45,20 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<string> AllowDictionaries { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("DdlAuthority")]
             [Validation(Required=false)]
             public bool? DdlAuthority { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("DmlAuthority")]
             [Validation(Required=false)]
@@ -55,7 +67,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

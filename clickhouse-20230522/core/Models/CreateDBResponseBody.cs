@@ -13,16 +13,28 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public CreateDBResponseBodyData Data { get; set; }
         public class CreateDBResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cc-bp100p4q1g9z3****</para>
+            /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
             public string DBInstanceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>testdb001</para>
+            /// </summary>
             [NameInMap("DBName")]
             [Validation(Required=false)]
             public string DBName { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>94F92113-FF63-5E57-8401-6FE123AD11DD</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

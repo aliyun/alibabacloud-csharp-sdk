@@ -9,26 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateDBRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc-bp100p4q1g9z3****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testdb001</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

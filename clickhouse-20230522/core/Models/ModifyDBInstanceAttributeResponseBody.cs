@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxx-xxx-xxx</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
