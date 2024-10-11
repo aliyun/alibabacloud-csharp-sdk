@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class AllocateClusterPublicConnectionResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

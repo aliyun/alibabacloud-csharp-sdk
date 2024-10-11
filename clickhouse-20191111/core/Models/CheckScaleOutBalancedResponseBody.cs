@@ -10,42 +10,56 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CheckScaleOutBalancedResponseBody : TeaModel {
         /// <summary>
-        /// The check result. Valid values:
+        /// <para>The check result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>400</b>: The cluster failed the check.</description></item>
+        /// <item><description><b>200</b>: The cluster passed the check.</description></item>
+        /// </list>
         /// 
-        /// *   **400**: The cluster failed the check.
-        /// *   **200**: The cluster passed the check.
+        /// <b>Example:</b>
+        /// <para>400</para>
         /// </summary>
         [NameInMap("CheckCode")]
         [Validation(Required=false)]
         public string CheckCode { get; set; }
 
         /// <summary>
-        /// The total number of returned pages.
+        /// <para>The total number of returned pages.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page. Valid values:
+        /// <para>The number of entries returned per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
         /// 
-        /// *   **30** (default)
-        /// *   **50**
-        /// *   **100**
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F5178C10-1407-4987-9133-DE4DC9119F75</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The error information returned for a check failure.
+        /// <para>The error information returned for a check failure.</para>
         /// </summary>
         [NameInMap("TableDetails")]
         [Validation(Required=false)]
@@ -56,31 +70,44 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public List<CheckScaleOutBalancedResponseBodyTableDetailsTableDetail> TableDetail { get; set; }
             public class CheckScaleOutBalancedResponseBodyTableDetailsTableDetail : TeaModel {
                 /// <summary>
-                /// The cluster. The value is fixed as **default**.
+                /// <para>The cluster. The value is fixed as <b>default</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("Cluster")]
                 [Validation(Required=false)]
                 public string Cluster { get; set; }
 
                 /// <summary>
-                /// The database name.
+                /// <para>The database name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>db_name</para>
                 /// </summary>
                 [NameInMap("Database")]
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
                 /// <summary>
-                /// The error details. Valid values:
+                /// <para>The error details. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: The unique distributed table is missing.</description></item>
+                /// <item><description><b>2</b>: More than one distributed table exists for the local table.</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: The unique distributed table is missing.
-                /// *   **2**: More than one distributed table exists for the local table.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
                 public int? Detail { get; set; }
 
                 /// <summary>
-                /// The name of the local table.
+                /// <para>The name of the local table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
@@ -91,14 +118,20 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
-        /// The amount of time that is required for the migration and scale-out. Unit: minutes.
+        /// <para>The amount of time that is required for the migration and scale-out. Unit: minutes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21</para>
         /// </summary>
         [NameInMap("TimeDuration")]
         [Validation(Required=false)]
         public string TimeDuration { get; set; }
 
         /// <summary>
-        /// The total number of entries that are returned.
+        /// <para>The total number of entries that are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

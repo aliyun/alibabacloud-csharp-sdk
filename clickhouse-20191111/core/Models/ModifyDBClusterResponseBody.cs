@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyDBClusterResponseBody : TeaModel {
         /// <summary>
-        /// The information about the cluster.
+        /// <para>The information about the cluster.</para>
         /// </summary>
         [NameInMap("DBCluster")]
         [Validation(Required=false)]
         public ModifyDBClusterResponseBodyDBCluster DBCluster { get; set; }
         public class ModifyDBClusterResponseBodyDBCluster : TeaModel {
             /// <summary>
-            /// The cluster ID.
+            /// <para>The cluster ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cc-bp19lo45sy98x****</para>
             /// </summary>
             [NameInMap("dbClusterId")]
             [Validation(Required=false)]
             public string DbClusterId { get; set; }
 
             /// <summary>
-            /// The order ID.
+            /// <para>The order ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>21417210003****</para>
             /// </summary>
             [NameInMap("orderId")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BA30A000-3A4D-5B97-9420-E5D0D49F7016</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

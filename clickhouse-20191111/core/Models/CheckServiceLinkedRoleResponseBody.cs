@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CheckServiceLinkedRoleResponseBody : TeaModel {
         /// <summary>
-        /// The role.
+        /// <para>The role.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxx</para>
         /// </summary>
         [NameInMap("HasServiceLinkedRole")]
         [Validation(Required=false)]
         public bool? HasServiceLinkedRole { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

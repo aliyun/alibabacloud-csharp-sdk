@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeTablesRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc-bp108z124a8o7****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -35,9 +37,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The database name.
+        /// <para>The database name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>database</para>
         /// </summary>
         [NameInMap("SchemaName")]
         [Validation(Required=false)]

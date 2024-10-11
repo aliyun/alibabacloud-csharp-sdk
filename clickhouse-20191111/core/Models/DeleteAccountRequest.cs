@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
-        /// The name of the database account.
+        /// <para>The name of the database account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc-bp108z124a8o7****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

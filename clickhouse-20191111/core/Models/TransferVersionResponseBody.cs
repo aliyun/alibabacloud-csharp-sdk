@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class TransferVersionResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7084CDB5-308F-5D0B-8F9B-5F7D83E09738</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

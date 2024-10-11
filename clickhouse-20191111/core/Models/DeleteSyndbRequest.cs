@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DeleteSyndbRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc-bp158i5wvj436****</para>
         /// </summary>
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]
@@ -35,9 +37,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The name of the database in the ApsaraDB RDS for MySQL instance. The database is used for data synchronization.
+        /// <para>The name of the database in the ApsaraDB RDS for MySQL instance. The database is used for data synchronization.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>database</para>
         /// </summary>
         [NameInMap("SynDb")]
         [Validation(Required=false)]

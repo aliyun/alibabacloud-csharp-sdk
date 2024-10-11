@@ -10,41 +10,53 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CreateRDSToClickhouseDbRequest : TeaModel {
         /// <summary>
-        /// The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
+        /// <para>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456Aa</para>
         /// </summary>
         [NameInMap("CkPassword")]
         [Validation(Required=false)]
         public string CkPassword { get; set; }
 
         /// <summary>
-        /// The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
+        /// <para>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>user1</para>
         /// </summary>
         [NameInMap("CkUserName")]
         [Validation(Required=false)]
         public string CkUserName { get; set; }
 
         /// <summary>
-        /// The port number of the ApsaraDB for ClickHouse cluster.
+        /// <para>The port number of the ApsaraDB for ClickHouse cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8123</para>
         /// </summary>
         [NameInMap("ClickhousePort")]
         [Validation(Required=false)]
         public long? ClickhousePort { get; set; }
 
         /// <summary>
-        /// The ID of the ApsaraDB for ClickHouse cluster.
+        /// <para>The ID of the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc-2ze5zeyl72188****</para>
         /// </summary>
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]
         public string DbClusterId { get; set; }
 
         /// <summary>
-        /// The maximum number of rows that can be synchronized per second.
+        /// <para>The maximum number of rows that can be synchronized per second.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50000</para>
         /// </summary>
         [NameInMap("LimitUpper")]
         [Validation(Required=false)]
@@ -59,48 +71,63 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the ApsaraDB RDS for MySQL instance.
+        /// <para>The ID of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-8vb989qj9roh0****</para>
         /// </summary>
         [NameInMap("RdsId")]
         [Validation(Required=false)]
         public string RdsId { get; set; }
 
         /// <summary>
-        /// The password of the account that is used to log on to the ApsaraDB RDS for MySQL instance.
+        /// <para>The password of the account that is used to log on to the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456Rr</para>
         /// </summary>
         [NameInMap("RdsPassword")]
         [Validation(Required=false)]
         public string RdsPassword { get; set; }
 
         /// <summary>
-        /// The port number of the ApsaraDB RDS for MySQL instance.
+        /// <para>The port number of the ApsaraDB RDS for MySQL instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("RdsPort")]
         [Validation(Required=false)]
         public long? RdsPort { get; set; }
 
         /// <summary>
-        /// The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.
+        /// <para>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>user2</para>
         /// </summary>
         [NameInMap("RdsUserName")]
         [Validation(Required=false)]
         public string RdsUserName { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) to which the ApsaraDB RDS for MySQL instance belongs.
+        /// <para>The ID of the virtual private cloud (VPC) to which the ApsaraDB RDS for MySQL instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-2zen93xryil99jsfy****</para>
         /// </summary>
         [NameInMap("RdsVpcId")]
         [Validation(Required=false)]
         public string RdsVpcId { get; set; }
 
         /// <summary>
-        /// The private endpoint of the ApsaraDB RDS for MySQL instance.
+        /// <para>The private endpoint of the ApsaraDB RDS for MySQL instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-bp16t9h3999xb0a7****.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("RdsVpcUrl")]
         [Validation(Required=false)]
@@ -115,21 +142,26 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to ignore the table schemas that do not support synchronization. Valid values:
+        /// <para>Specifies whether to ignore the table schemas that do not support synchronization. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **true**
-        /// *   **false**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("SkipUnsupported")]
         [Validation(Required=false)]
         public bool? SkipUnsupported { get; set; }
 
         /// <summary>
-        /// The tables whose data you want to synchronize.
+        /// <para>The tables whose data you want to synchronize.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{&quot;Schema&quot;:&quot;recommend&quot;,&quot;Tables&quot;:[&quot;mr_platform_cpm&quot;,&quot;mr_platform_ecpm&quot;,&quot;p_monitor_record&quot;]}]</para>
         /// </summary>
         [NameInMap("SynDbTables")]
         [Validation(Required=false)]

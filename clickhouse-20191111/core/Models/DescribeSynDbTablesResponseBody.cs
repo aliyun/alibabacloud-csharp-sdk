@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeSynDbTablesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>851D11EA-681C-5B38-A065-C3F90BBD49DE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The queried tables.
+        /// <para>The queried tables.</para>
         /// </summary>
         [NameInMap("Tables")]
         [Validation(Required=false)]

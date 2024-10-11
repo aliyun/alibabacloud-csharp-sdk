@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CheckClickhouseToRDSRequest : TeaModel {
         /// <summary>
-        /// The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
+        /// <para>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456Aa</para>
         /// </summary>
         [NameInMap("CkPassword")]
         [Validation(Required=false)]
         public string CkPassword { get; set; }
 
         /// <summary>
-        /// The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
+        /// <para>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>user1</para>
         /// </summary>
         [NameInMap("CkUserName")]
         [Validation(Required=false)]
         public string CkUserName { get; set; }
 
         /// <summary>
-        /// The port number of the ApsaraDB for ClickHouse cluster.
+        /// <para>The port number of the ApsaraDB for ClickHouse cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8123</para>
         /// </summary>
         [NameInMap("ClickhousePort")]
         [Validation(Required=false)]
         public long? ClickhousePort { get; set; }
 
         /// <summary>
-        /// The ID of the ApsaraDB for ClickHouse cluster.
+        /// <para>The ID of the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc-2zeyy362b5sbm****</para>
         /// </summary>
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]
@@ -52,52 +61,65 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the ApsaraDB RDS for MySQL instance.
+        /// <para>The ID of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-bp13v4bnwlu8j****</para>
         /// </summary>
         [NameInMap("RdsId")]
         [Validation(Required=false)]
         public string RdsId { get; set; }
 
         /// <summary>
-        /// The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.
+        /// <para>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456Rr</para>
         /// </summary>
         [NameInMap("RdsPassword")]
         [Validation(Required=false)]
         public string RdsPassword { get; set; }
 
         /// <summary>
-        /// The port number of the ApsaraDB RDS for MySQL instance.
+        /// <para>The port number of the ApsaraDB RDS for MySQL instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("RdsPort")]
         [Validation(Required=false)]
         public long? RdsPort { get; set; }
 
         /// <summary>
-        /// The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.
+        /// <para>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>user2</para>
         /// </summary>
         [NameInMap("RdsUserName")]
         [Validation(Required=false)]
         public string RdsUserName { get; set; }
 
         /// <summary>
-        /// The ID of the VPC in which the ApsaraDB RDS for MySQL instance is deployed.
+        /// <para>The ID of the VPC in which the ApsaraDB RDS for MySQL instance is deployed.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-wz9mm0qka0winfl47****</para>
         /// </summary>
         [NameInMap("RdsVpcId")]
         [Validation(Required=false)]
         public string RdsVpcId { get; set; }
 
         /// <summary>
-        /// The internal endpoint of the ApsaraDB RDS for MySQL instance.
+        /// <para>The internal endpoint of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-bp16t9h3999xb0a7****.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("RdsVpcUrl")]
         [Validation(Required=false)]

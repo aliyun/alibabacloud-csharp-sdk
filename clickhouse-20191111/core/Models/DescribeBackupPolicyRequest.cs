@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc-bp1qx68m06981****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

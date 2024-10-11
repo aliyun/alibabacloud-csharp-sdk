@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeTransferHistoryResponseBody : TeaModel {
         /// <summary>
-        /// The migration information.
+        /// <para>The migration information.</para>
         /// </summary>
         [NameInMap("HistoryDetails")]
         [Validation(Required=false)]
@@ -20,12 +20,19 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public List<DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail> HistoryDetail { get; set; }
             public class DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail : TeaModel {
+                /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>false</c>
+                /// </summary>
                 [NameInMap("DisableWriteWindows")]
                 [Validation(Required=false)]
                 public string DisableWriteWindows { get; set; }
 
                 /// <summary>
-                /// The progress of the data migration.
+                /// <para>The progress of the data migration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100%</para>
                 /// </summary>
                 [NameInMap("Progress")]
                 [Validation(Required=false)]
@@ -36,17 +43,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public string SourceControlVersion { get; set; }
 
                 /// <summary>
-                /// The ID of the source cluster.
+                /// <para>The ID of the source cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cc-bp108z124a8o7****</para>
                 /// </summary>
                 [NameInMap("SourceDBCluster")]
                 [Validation(Required=false)]
                 public string SourceDBCluster { get; set; }
 
                 /// <summary>
-                /// The status of the data migration task. Valid values:
+                /// <para>The status of the data migration task. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Finished</b>: The data migration task is complete.</description></item>
+                /// <item><description><b>Processing</b>: The data migration task is in progress.</description></item>
+                /// </list>
                 /// 
-                /// *   **Finished**: The data migration task is complete.
-                /// *   **Processing**: The data migration task is in progress.
+                /// <b>Example:</b>
+                /// <para>Finished</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -57,7 +71,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public string TargetControlVersion { get; set; }
 
                 /// <summary>
-                /// The ID of the destination cluster.
+                /// <para>The ID of the destination cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cc-bp13zkh9uw523****</para>
                 /// </summary>
                 [NameInMap("TargetDBCluster")]
                 [Validation(Required=false)]
@@ -68,7 +85,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>05321590-BB65-4720-8CB6-8218E041CDD0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

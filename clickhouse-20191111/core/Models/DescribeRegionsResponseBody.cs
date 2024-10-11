@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The queried regions.
+        /// <para>The queried regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,14 +21,17 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The zones.
+                /// <para>The zones.</para>
                 /// </summary>
                 [NameInMap("Zones")]
                 [Validation(Required=false)]
@@ -39,17 +42,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                     public List<DescribeRegionsResponseBodyRegionsRegionZonesZone> Zone { get; set; }
                     public class DescribeRegionsResponseBodyRegionsRegionZonesZone : TeaModel {
                         /// <summary>
-                        /// Indicates whether Virtual Private Cloud (VPC) is supported in the zone. Valid values:
+                        /// <para>Indicates whether Virtual Private Cloud (VPC) is supported in the zone. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b></description></item>
+                        /// <item><description><b>false</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **true**
-                        /// *   **false**
+                        /// <b>Example:</b>
+                        /// <para>true</para>
                         /// </summary>
                         [NameInMap("VpcEnabled")]
                         [Validation(Required=false)]
                         public bool? VpcEnabled { get; set; }
 
                         /// <summary>
-                        /// The zone ID.
+                        /// <para>The zone ID.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cn-hangzhou-h</para>
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -64,7 +74,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F5178C10-1407-4987-9133-DE4DC9119F75</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

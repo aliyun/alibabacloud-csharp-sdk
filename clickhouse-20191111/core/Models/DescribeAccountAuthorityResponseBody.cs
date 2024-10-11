@@ -10,62 +10,76 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeAccountAuthorityResponseBody : TeaModel {
         /// <summary>
-        /// The name of the database account.
+        /// <para>The name of the database account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// Databases to which permissions have been granted.
+        /// <para>Databases to which permissions have been granted.</para>
         /// </summary>
         [NameInMap("AllowDatabases")]
         [Validation(Required=false)]
         public List<string> AllowDatabases { get; set; }
 
         /// <summary>
-        /// Dictionaries to which permissions have been granted.
+        /// <para>Dictionaries to which permissions have been granted.</para>
         /// </summary>
         [NameInMap("AllowDictionaries")]
         [Validation(Required=false)]
         public List<string> AllowDictionaries { get; set; }
 
         /// <summary>
-        /// Indicates whether the database account has DDL permissions. Valid values:
+        /// <para>Indicates whether the database account has DDL permissions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: has DDL permissions.</description></item>
+        /// <item><description><b>false</b>: does not have DDL permissions.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: has DDL permissions.
-        /// *   **false**: does not have DDL permissions.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DdlAuthority")]
         [Validation(Required=false)]
         public bool? DdlAuthority { get; set; }
 
         /// <summary>
-        /// Indicates whether the database account has DML permissions. Valid values:
+        /// <para>Indicates whether the database account has DML permissions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>all</b></description></item>
+        /// <item><description><b>readOnly,modify</b></description></item>
+        /// </list>
         /// 
-        /// *   **all**
-        /// *   **readOnly,modify**
+        /// <b>Example:</b>
+        /// <para>all</para>
         /// </summary>
         [NameInMap("DmlAuthority")]
         [Validation(Required=false)]
         public string DmlAuthority { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F5178C10-1407-4987-9133-DE4DC9119F75</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// All databases.
+        /// <para>All databases.</para>
         /// </summary>
         [NameInMap("TotalDatabases")]
         [Validation(Required=false)]
         public List<string> TotalDatabases { get; set; }
 
         /// <summary>
-        /// All dictionaries.
+        /// <para>All dictionaries.</para>
         /// </summary>
         [NameInMap("TotalDictionaries")]
         [Validation(Required=false)]

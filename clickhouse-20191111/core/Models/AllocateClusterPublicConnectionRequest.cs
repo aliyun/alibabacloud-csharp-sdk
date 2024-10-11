@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,16 +10,21 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class AllocateClusterPublicConnectionRequest : TeaModel {
         /// <summary>
-        /// The prefix of the endpoint that is used to connect to the database. Set the value to the cluster ID.
+        /// <para>The prefix of the endpoint that is used to connect to the database. Set the value to the cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc-bp108z124a8o7****</para>
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc-bp108z124a8o7****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

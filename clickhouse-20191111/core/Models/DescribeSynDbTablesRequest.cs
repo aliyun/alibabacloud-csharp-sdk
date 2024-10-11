@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeSynDbTablesRequest : TeaModel {
         /// <summary>
-        /// The ID of the ApsaraDB for ClickHouse cluster.
+        /// <para>The ID of the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc-bp158i5wvj436****</para>
         /// </summary>
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]
@@ -35,9 +37,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The name of the ApsaraDB RDS for MySQL instance.
+        /// <para>The name of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>database</para>
         /// </summary>
         [NameInMap("SynDb")]
         [Validation(Required=false)]

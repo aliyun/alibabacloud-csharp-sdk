@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeDBClusterAccessWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// The details about the IP address whitelist.
+        /// <para>The details about the IP address whitelist.</para>
         /// </summary>
         [NameInMap("DBClusterAccessWhiteList")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public List<DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray> IPArray { get; set; }
             public class DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray : TeaModel {
                 /// <summary>
-                /// The attribute of the IP address whitelist.
+                /// <para>The attribute of the IP address whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("DBClusterIPArrayAttribute")]
                 [Validation(Required=false)]
                 public string DBClusterIPArrayAttribute { get; set; }
 
                 /// <summary>
-                /// The name of the IP address whitelist.
+                /// <para>The name of the IP address whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("DBClusterIPArrayName")]
                 [Validation(Required=false)]
                 public string DBClusterIPArrayName { get; set; }
 
                 /// <summary>
-                /// The IP addresses in the IP address whitelist.
+                /// <para>The IP addresses in the IP address whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.xx.xx,192.168.xx.xx</para>
                 /// </summary>
                 [NameInMap("SecurityIPList")]
                 [Validation(Required=false)]
@@ -46,7 +55,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>905F13A4-5097-4897-A84D-527EC75FFF4F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyDBClusterConfigInXMLResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BDD29EB1-BE76-5CFA-9068-D34B696310BF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

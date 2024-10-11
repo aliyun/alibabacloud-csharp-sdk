@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CreateSQLAccountResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F5178C10-1407-4987-9133-DE4DC9119F76</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

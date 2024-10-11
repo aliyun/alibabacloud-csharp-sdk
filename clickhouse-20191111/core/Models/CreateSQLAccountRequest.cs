@@ -10,58 +10,70 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CreateSQLAccountRequest : TeaModel {
         /// <summary>
-        /// The description of the database account.
-        /// 
-        /// *   The description cannot start with http:// or https://.
-        /// *   The description can be up to 256 characters in length or be an empty string.
+        /// <para>The description of the database account.</para>
+        /// <list type="bullet">
+        /// <item><description>The description cannot start with http:// or https://.</description></item>
+        /// <item><description>The description can be up to 256 characters in length or be an empty string.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// The name of the database account.
+        /// <para>The name of the database account.</para>
+        /// <list type="bullet">
+        /// <item><description>The name must be unique in the cluster.</description></item>
+        /// <item><description>The name can contain lowercase letters, digits, or underscores (_).</description></item>
+        /// <item><description>The name must start with a lowercase letter and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>The name must be 2 to 64 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The name must be unique in the cluster.
-        /// *   The name can contain lowercase letters, digits, or underscores (_).
-        /// *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
-        /// *   The name must be 2 to 64 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The password of the database account.
+        /// <para>The password of the database account.</para>
+        /// <list type="bullet">
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>Special characters include ! @ # $ % ^ &amp; \* ( ) _ + - =</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-        /// *   Special characters include ! @ # $ % ^ & \\* ( ) _ + - =
-        /// *   The password must be 8 to 32 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Test1234</para>
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// The type of the database account. Valid values:
+        /// <para>The type of the database account. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Super</b>: privileged account.</description></item>
+        /// <item><description><b>Normal</b>: standard account.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Super**: privileged account.
-        /// *   **Normal**: standard account.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Super</para>
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc-bp1p816075e21****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

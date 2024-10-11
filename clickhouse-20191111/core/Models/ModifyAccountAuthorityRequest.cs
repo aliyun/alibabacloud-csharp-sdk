@@ -10,60 +10,74 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyAccountAuthorityRequest : TeaModel {
         /// <summary>
-        /// The name of the database account.
+        /// <para>The name of the database account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The databases to which you want to grant permissions. Separate databases with commas (,).
+        /// <para>The databases to which you want to grant permissions. Separate databases with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>db1</para>
         /// </summary>
         [NameInMap("AllowDatabases")]
         [Validation(Required=false)]
         public string AllowDatabases { get; set; }
 
         /// <summary>
-        /// The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).
+        /// <para>The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dt1</para>
         /// </summary>
         [NameInMap("AllowDictionaries")]
         [Validation(Required=false)]
         public string AllowDictionaries { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cc-bp108z124a8o7****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to grant DDL permissions to the database account. Valid values:
+        /// <para>Specifies whether to grant DDL permissions to the database account. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: grants DDL permissions to the database account.</description></item>
+        /// <item><description><b>false</b>: does not grant DDL permissions to the database account.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **true**: grants DDL permissions to the database account.
-        /// *   **false**: does not grant DDL permissions to the database account.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DdlAuthority")]
         [Validation(Required=false)]
         public bool? DdlAuthority { get; set; }
 
         /// <summary>
-        /// Specifies whether to grant DML permissions to the database account. Valid values:
+        /// <para>Specifies whether to grant DML permissions to the database account. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>all</b></description></item>
+        /// <item><description><b>readonly,modify</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **all**
-        /// *   **readonly,modify**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>all</para>
         /// </summary>
         [NameInMap("DmlAuthority")]
         [Validation(Required=false)]
@@ -78,7 +92,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -93,14 +110,20 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// All databases. Separate databases with commas (,).
+        /// <para>All databases. Separate databases with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>db1,db2</para>
         /// </summary>
         [NameInMap("TotalDatabases")]
         [Validation(Required=false)]
         public string TotalDatabases { get; set; }
 
         /// <summary>
-        /// All dictionaries. Separate dictionaries with commas (,).
+        /// <para>All dictionaries. Separate dictionaries with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dt1,dt2</para>
         /// </summary>
         [NameInMap("TotalDictionaries")]
         [Validation(Required=false)]

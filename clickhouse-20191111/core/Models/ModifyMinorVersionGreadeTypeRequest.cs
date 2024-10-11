@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyMinorVersionGreadeTypeRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc-bp1qx68m06981****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("MaintainAutoType")]
         [Validation(Required=false)]
