@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class ListTagKeysRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
