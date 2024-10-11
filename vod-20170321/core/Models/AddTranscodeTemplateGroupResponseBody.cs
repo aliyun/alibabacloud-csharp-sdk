@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddTranscodeTemplateGroupResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25818875-5F78-4AF6-D7393642CA58****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the transcoding template group.
+        /// <para>The ID of the transcoding template group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34e908aa4024af7821c31f93a2a****</para>
         /// </summary>
         [NameInMap("TranscodeTemplateGroupId")]
         [Validation(Required=false)]

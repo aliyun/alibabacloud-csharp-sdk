@@ -10,48 +10,63 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainBpsDataByLayerRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. You can specify a maximum of 500 accelerated domain names. Separate multiple domain names with commas (,).
+        /// <para>The accelerated domain name. You can specify a maximum of 500 accelerated domain names. Separate multiple domain names with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query.
+        /// <para>The end of the time range to query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <b>Example:</b>
+        /// <para>2019-01-23T12:40:12Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The time interval between the data entries. Unit: seconds.
+        /// <para>The time interval between the data entries. Unit: seconds.</para>
+        /// <para>The time granularity varies based on the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see the supported time granularity described in Usage notes.</para>
         /// 
-        /// The time granularity varies based on the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see the supported time granularity described in Usage notes.
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public string Interval { get; set; }
 
         /// <summary>
-        /// The name of the Internet service provider (ISP).
+        /// <para>The name of the Internet service provider (ISP).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>unicom</para>
         /// </summary>
         [NameInMap("IspNameEn")]
         [Validation(Required=false)]
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// The layer at which you want to query the data.
+        /// <para>The layer at which you want to query the data.</para>
+        /// <para>Network layer: IPv4 and IPv6. Application layer: http, https, and quic. all: specifies that both the network and application layers are included. Default value: all.</para>
         /// 
-        /// Network layer: IPv4 and IPv6. Application layer: http, https, and quic. all: specifies that both the network and application layers are included. Default value: all.
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
         /// </summary>
         [NameInMap("Layer")]
         [Validation(Required=false)]
         public string Layer { get; set; }
 
         /// <summary>
-        /// The name of the region.
+        /// <para>The name of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>beijing</para>
         /// </summary>
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]
@@ -62,9 +77,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query.
+        /// <para>The beginning of the time range to query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <b>Example:</b>
+        /// <para>2019-01-23T12:35:12Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

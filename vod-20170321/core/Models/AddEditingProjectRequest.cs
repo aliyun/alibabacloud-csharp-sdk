@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddEditingProjectRequest : TeaModel {
         /// <summary>
-        /// The thumbnail URL of the online editing project. If you leave this parameter empty and materials exist on the video track in the timeline, the thumbnail of the first material is used by default.
+        /// <para>The thumbnail URL of the online editing project. If you leave this parameter empty and materials exist on the video track in the timeline, the thumbnail of the first material is used by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://demo.aliyundoc.com/6AB4D0E1E1C74468883516C2349D1FC2-6-2.png">https://demo.aliyundoc.com/6AB4D0E1E1C74468883516C2349D1FC2-6-2.png</a></para>
         /// </summary>
         [NameInMap("CoverURL")]
         [Validation(Required=false)]
         public string CoverURL { get; set; }
 
         /// <summary>
-        /// The description of the online editing project.
+        /// <para>The description of the online editing project.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testtimeline001desciption</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The region in which ApsaraVideo VOD is activated.
+        /// <para>The region in which ApsaraVideo VOD is activated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("Division")]
         [Validation(Required=false)]
@@ -47,18 +56,22 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The timeline of the online editing project in JSON format. For more information about the structure, see [Timeline](https://help.aliyun.com/document_detail/52839.html).
+        /// <para>The timeline of the online editing project in JSON format. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">Timeline</a>.</para>
+        /// <para>If you leave this parameter empty, an empty timeline is created and the duration of the online editing project is zero.</para>
         /// 
-        /// If you leave this parameter empty, an empty timeline is created and the duration of the online editing project is zero.
+        /// <b>Example:</b>
+        /// <para>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;cc3308ac5006aed55a54328bc3443****&quot;},{&quot;MediaId&quot;:&quot;95948ddba24446b6aed5db985e78****&quot;}]}]}</para>
         /// </summary>
         [NameInMap("Timeline")]
         [Validation(Required=false)]
         public string Timeline { get; set; }
 
         /// <summary>
-        /// The title of the online editing project.
+        /// <para>The title of the online editing project.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testtimeline</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

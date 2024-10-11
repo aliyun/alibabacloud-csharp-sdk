@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetVodDomainCertificateRequest : TeaModel {
         /// <summary>
-        /// The name of the certificate.
+        /// <para>The name of the certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cert_name</para>
         /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
 
         /// <summary>
-        /// The domain name that is secured by the certificate. The domain name must use HTTPS acceleration.
+        /// <para>The domain name that is secured by the certificate. The domain name must use HTTPS acceleration.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -30,26 +35,35 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The private key. This parameter is required only if you enable the SSL certificate.
+        /// <para>The private key. This parameter is required only if you enable the SSL certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("SSLPri")]
         [Validation(Required=false)]
         public string SSLPri { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the SSL certificate. Default value: off. Valid values:
+        /// <para>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **on**
-        /// *   **off**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>off</para>
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]
         public string SSLProtocol { get; set; }
 
         /// <summary>
-        /// The content of the certificate. This parameter is required only if you enable the SSL certificate.
+        /// <para>The content of the certificate. This parameter is required only if you enable the SSL certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("SSLPub")]
         [Validation(Required=false)]

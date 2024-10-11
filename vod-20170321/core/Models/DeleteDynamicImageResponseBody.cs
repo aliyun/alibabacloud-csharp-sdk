@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteDynamicImageResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0C8F0FDD-A99F-4188-B41934C97A54****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

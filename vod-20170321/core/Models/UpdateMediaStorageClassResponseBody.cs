@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateMediaStorageClassResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the media assets that failed to be processed.
+        /// <para>The IDs of the media assets that failed to be processed.</para>
         /// </summary>
         [NameInMap("ForbiddenList")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<UpdateMediaStorageClassResponseBodyForbiddenListMediaForbiddenReasonDTO> MediaForbiddenReasonDTO { get; set; }
             public class UpdateMediaStorageClassResponseBodyForbiddenListMediaForbiddenReasonDTO : TeaModel {
                 /// <summary>
-                /// The ID of the media asset.
+                /// <para>The ID of the media asset.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>19e231ee6e3e417fbf2e92ec2680****</para>
                 /// </summary>
                 [NameInMap("MediaId")]
                 [Validation(Required=false)]
                 public string MediaId { get; set; }
 
                 /// <summary>
-                /// The reason for the failure.
+                /// <para>The reason for the failure.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TargetStorageClassInconsistent</para>
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
@@ -39,7 +45,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The IDs of the media assets that failed to be obtained.
+        /// <para>The IDs of the media assets that failed to be obtained.</para>
         /// </summary>
         [NameInMap("IgnoredList")]
         [Validation(Required=false)]
@@ -52,17 +58,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30FA0B7C-3A81-5449-93CD-ACA149E6****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The state of the task. Valid values:
+        /// <para>The state of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Processing</b></description></item>
+        /// <item><description><b>Failed</b></description></item>
+        /// </list>
         /// 
-        /// *   **Processing**
-        /// *   **Failed**
+        /// <b>Example:</b>
+        /// <para>Processing</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -10,43 +10,57 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAttachedMediaInfoRequest : TeaModel {
         /// <summary>
-        /// The validity period of the URL. Unit: seconds.
+        /// <para>The validity period of the URL. Unit: seconds.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If you set the OutputType parameter to <b>cdn</b>:</para>
+        /// <list type="bullet">
+        /// <item><description>The URL of the auxiliary media asset has a validity period only if URL signing is enabled. Otherwise, the URL of the auxiliary media asset is permanently valid.</description></item>
+        /// <item><description>Minimum value: <b>1</b>.</description></item>
+        /// <item><description>Maximum value: unlimited.</description></item>
+        /// <item><description>Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>If you set the OutputType parameter to <b>oss</b>:</para>
+        /// <list type="bullet">
+        /// <item><description>The URL of the auxiliary media asset has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the URL of the auxiliary media asset is permanently valid.</description></item>
+        /// <item><description>Minimum value: <b>1</b>.</description></item>
+        /// <item><description>The maximum value for a media asset stored in the VOD bucket is <b>2592000</b> (30 days) and the maximum value for a media asset stored in an OSS bucket is <b>129600</b> (36 hours). The maximum value is limited to reduce security risks of the origin.</description></item>
+        /// <item><description>Default value: If you do not set this parameter, the default value <b>3600</b> is used.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   If you set the OutputType parameter to **cdn**:
-        /// 
-        ///     *   The URL of the auxiliary media asset has a validity period only if URL signing is enabled. Otherwise, the URL of the auxiliary media asset is permanently valid.
-        ///     *   Minimum value: **1**.
-        ///     *   Maximum value: unlimited.
-        ///     *   Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.
-        /// 
-        /// *   If you set the OutputType parameter to **oss**:
-        /// 
-        ///     *   The URL of the auxiliary media asset has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the URL of the auxiliary media asset is permanently valid.
-        ///     *   Minimum value: **1**.
-        ///     *   The maximum value for a media asset stored in the VOD bucket is **2592000** (30 days) and the maximum value for a media asset stored in an OSS bucket is **129600** (36 hours). The maximum value is limited to reduce security risks of the origin.
-        ///     *   Default value: If you do not set this parameter, the default value **3600** is used.
+        /// <b>Example:</b>
+        /// <para>3600</para>
         /// </summary>
         [NameInMap("AuthTimeout")]
         [Validation(Required=false)]
         public long? AuthTimeout { get; set; }
 
         /// <summary>
-        /// The ID of the auxiliary media asset.
+        /// <para>The ID of the auxiliary media asset.</para>
+        /// <list type="bullet">
+        /// <item><description>Separate multiple IDs with commas (,). You can specify up to 20 IDs.</description></item>
+        /// <item><description>You can obtain the ID from the response to the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation that you call to obtain the upload URL and credential.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Separate multiple IDs with commas (,). You can specify up to 20 IDs.
-        /// *   You can obtain the ID from the response to the [CreateUploadAttachedMedia](~~CreateUploadAttachedMedia~~) operation that you call to obtain the upload URL and credential.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>eb1861d2c9a842340e989dd56****,0222e203cf80f9c22870a4d2c****</para>
         /// </summary>
         [NameInMap("MediaIds")]
         [Validation(Required=false)]
         public string MediaIds { get; set; }
 
         /// <summary>
-        /// The type of the media asset URL. Valid values:
+        /// <para>The type of the media asset URL. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>oss</b></description></item>
+        /// <item><description><b>cdn</b> (default)</description></item>
+        /// </list>
         /// 
-        /// *   **oss**
-        /// *   **cdn** (default)
+        /// <b>Example:</b>
+        /// <para>oss</para>
         /// </summary>
         [NameInMap("OutputType")]
         [Validation(Required=false)]

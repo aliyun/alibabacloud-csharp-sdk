@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitPreprocessJobsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the job.
+        /// <para>The information about the job.</para>
         /// </summary>
         [NameInMap("PreprocessJobs")]
         [Validation(Required=false)]
@@ -21,7 +21,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<SubmitPreprocessJobsResponseBodyPreprocessJobsPreprocessJob> PreprocessJob { get; set; }
             public class SubmitPreprocessJobsResponseBodyPreprocessJobsPreprocessJob : TeaModel {
                 /// <summary>
-                /// The ID of the job.
+                /// <para>The ID of the job.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>bb396607fd11fee9effbb99c4****</para>
                 /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
@@ -32,7 +35,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

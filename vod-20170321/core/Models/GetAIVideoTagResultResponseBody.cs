@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAIVideoTagResultResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8829B4DB-AFD9-4FF6-12965DBFFA14****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned result.
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("VideoTagResult")]
         [Validation(Required=false)]
         public GetAIVideoTagResultResponseBodyVideoTagResult VideoTagResult { get; set; }
         public class GetAIVideoTagResultResponseBodyVideoTagResult : TeaModel {
             /// <summary>
-            /// The video categories.
+            /// <para>The video categories.</para>
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public List<GetAIVideoTagResultResponseBodyVideoTagResultCategory> Category { get; set; }
             public class GetAIVideoTagResultResponseBodyVideoTagResultCategory : TeaModel {
                 /// <summary>
-                /// The tag string.
+                /// <para>The tag string.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Retouching</para>
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
@@ -40,21 +46,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The keyword tags.
+            /// <para>The keyword tags.</para>
             /// </summary>
             [NameInMap("Keyword")]
             [Validation(Required=false)]
             public List<GetAIVideoTagResultResponseBodyVideoTagResultKeyword> Keyword { get; set; }
             public class GetAIVideoTagResultResponseBodyVideoTagResultKeyword : TeaModel {
                 /// <summary>
-                /// The tag string.
+                /// <para>The tag string.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Cushion</para>
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// The points in time when the tags are displayed. Unit: milliseconds.
+                /// <para>The points in time when the tags are displayed. Unit: milliseconds.</para>
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]
@@ -63,21 +72,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The location tags.
+            /// <para>The location tags.</para>
             /// </summary>
             [NameInMap("Location")]
             [Validation(Required=false)]
             public List<GetAIVideoTagResultResponseBodyVideoTagResultLocation> Location { get; set; }
             public class GetAIVideoTagResultResponseBodyVideoTagResultLocation : TeaModel {
                 /// <summary>
-                /// The tag string.
+                /// <para>The tag string.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Asia</para>
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// The points in time when the tags are displayed. Unit: milliseconds.
+                /// <para>The points in time when the tags are displayed. Unit: milliseconds.</para>
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]
@@ -86,30 +98,37 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The figure tags.
+            /// <para>The figure tags.</para>
             /// </summary>
             [NameInMap("Person")]
             [Validation(Required=false)]
             public List<GetAIVideoTagResultResponseBodyVideoTagResultPerson> Person { get; set; }
             public class GetAIVideoTagResultResponseBodyVideoTagResultPerson : TeaModel {
                 /// <summary>
-                /// The URL of the profile photo.
+                /// <para>The URL of the profile photo.</para>
+                /// <remarks>
+                /// <para>This parameter is returned only when a figure tag was used.</para>
+                /// </remarks>
                 /// 
-                /// > This parameter is returned only when a figure tag was used.
+                /// <b>Example:</b>
+                /// <para><a href="http://example.com/aivideotag/8829B4DB-AFD9-4F*****F6-12965DBFFA14/Index_****.jpg">http://example.com/aivideotag/8829B4DB-AFD9-4F*****F6-12965DBFFA14/Index_****.jpg</a></para>
                 /// </summary>
                 [NameInMap("FaceUrl")]
                 [Validation(Required=false)]
                 public string FaceUrl { get; set; }
 
                 /// <summary>
-                /// The tag string.
+                /// <para>The tag string.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>John</para>
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// The points in time when the tags are displayed. Unit: milliseconds.
+                /// <para>The points in time when the tags are displayed. Unit: milliseconds.</para>
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]
@@ -118,21 +137,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The time tags.
+            /// <para>The time tags.</para>
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
             public List<GetAIVideoTagResultResponseBodyVideoTagResultTime> Time { get; set; }
             public class GetAIVideoTagResultResponseBodyVideoTagResultTime : TeaModel {
                 /// <summary>
-                /// The tag string.
+                /// <para>The tag string.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Milliseconds</para>
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// The points in time when the tags are displayed. Unit: milliseconds.
+                /// <para>The points in time when the tags are displayed. Unit: milliseconds.</para>
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]

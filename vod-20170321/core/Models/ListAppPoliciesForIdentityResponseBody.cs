@@ -10,61 +10,84 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAppPoliciesForIdentityResponseBody : TeaModel {
         /// <summary>
-        /// The details of each policy.
-        /// 
-        /// > A maximum of 100 entries can be returned.
+        /// <para>The details of each policy.</para>
+        /// <remarks>
+        /// <para>A maximum of 100 entries can be returned.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("AppPolicyList")]
         [Validation(Required=false)]
         public List<ListAppPoliciesForIdentityResponseBodyAppPolicyList> AppPolicyList { get; set; }
         public class ListAppPoliciesForIdentityResponseBodyAppPolicyList : TeaModel {
             /// <summary>
-            /// The ID of the application.
+            /// <para>The ID of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>app-****</para>
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
             /// <summary>
-            /// The time when the application policy was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// <para>The time when the application policy was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2019-01-01T01:01:01Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The description of the policy.
+            /// <para>The description of the policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>App full access permission</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The last time when the application policy was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// <para>The last time when the application policy was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2019-01-01T01:08:01Z</para>
             /// </summary>
             [NameInMap("ModificationTime")]
             [Validation(Required=false)]
             public string ModificationTime { get; set; }
 
             /// <summary>
-            /// The name of the policy.
+            /// <para>The name of the policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VODAppFullAccess</para>
             /// </summary>
             [NameInMap("PolicyName")]
             [Validation(Required=false)]
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// The type of the policy. Valid values:
+            /// <para>The type of the policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>System</b></description></item>
+            /// <item><description><b>Custom</b></description></item>
+            /// </list>
             /// 
-            /// *   **System**
-            /// *   **Custom**
+            /// <b>Example:</b>
+            /// <para>System</para>
             /// </summary>
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// The content of the policy.
+            /// <para>The content of the policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <hr>
             /// </summary>
             [NameInMap("PolicyValue")]
             [Validation(Required=false)]
@@ -73,7 +96,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C9F3E715-B3B8-4D*****27-3A70346F0E04</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

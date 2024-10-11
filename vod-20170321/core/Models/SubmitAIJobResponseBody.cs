@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIJobResponseBody : TeaModel {
         /// <summary>
-        /// The information about the AI jobs.
+        /// <para>The information about the AI jobs.</para>
         /// </summary>
         [NameInMap("AIJobList")]
         [Validation(Required=false)]
@@ -21,24 +21,34 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<SubmitAIJobResponseBodyAIJobListAIJob> AIJob { get; set; }
             public class SubmitAIJobResponseBodyAIJobListAIJob : TeaModel {
                 /// <summary>
-                /// The ID of the AI job.
+                /// <para>The ID of the AI job.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9e82640c85114bf5af23edfaf****</para>
                 /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public string JobId { get; set; }
 
                 /// <summary>
-                /// The ID of the video.
+                /// <para>The ID of the video.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3D3D12340d92c641401fab46a0b847****</para>
                 /// </summary>
                 [NameInMap("MediaId")]
                 [Validation(Required=false)]
                 public string MediaId { get; set; }
 
                 /// <summary>
-                /// The type of the AI job. Valid values:
+                /// <para>The type of the AI job. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>AIMediaDNA</b>: The media fingerprinting job.</description></item>
+                /// <item><description><b>AIVideoTag</b>: The smart tagging job.</description></item>
+                /// </list>
                 /// 
-                /// *   **AIMediaDNA**: The media fingerprinting job.
-                /// *   **AIVideoTag**: The smart tagging job.
+                /// <b>Example:</b>
+                /// <para>AIVideoTag</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -49,7 +59,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25818875-5F78-4A13-BEF6-D73936****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

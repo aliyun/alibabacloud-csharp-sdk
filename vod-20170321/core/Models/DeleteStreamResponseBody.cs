@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteStreamResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25818875-5F78-4A7U43F6-D7393642****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

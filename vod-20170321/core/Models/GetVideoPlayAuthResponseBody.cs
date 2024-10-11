@@ -10,56 +10,77 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetVideoPlayAuthResponseBody : TeaModel {
         /// <summary>
-        /// The credential for media playback.
+        /// <para>The credential for media playback.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sstyYuew6789000000xtt7TYUh****</para>
         /// </summary>
         [NameInMap("PlayAuth")]
         [Validation(Required=false)]
         public string PlayAuth { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The metadata of the audio or video file.
+        /// <para>The metadata of the audio or video file.</para>
         /// </summary>
         [NameInMap("VideoMeta")]
         [Validation(Required=false)]
         public GetVideoPlayAuthResponseBodyVideoMeta VideoMeta { get; set; }
         public class GetVideoPlayAuthResponseBodyVideoMeta : TeaModel {
             /// <summary>
-            /// The thumbnail URL of the media file.
+            /// <para>The thumbnail URL of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://example.aliyundoc.com/****.jpg">https://example.aliyundoc.com/****.jpg</a></para>
             /// </summary>
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
             public string CoverURL { get; set; }
 
             /// <summary>
-            /// The duration of the media file. Unit: seconds.
+            /// <para>The duration of the media file. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>120.0</para>
             /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public float? Duration { get; set; }
 
             /// <summary>
-            /// The status of the media file. For more information about the value range and description, see [Status: the status of a video](~~52839#title-vqg-8cz-7p8~~).
+            /// <para>The status of the media file. For more information about the value range and description, see <a href="~~52839#title-vqg-8cz-7p8~~">Status: the status of a video</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Normal</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The title of the media file.
+            /// <para>The title of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VOD</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// The ID of the media file.
+            /// <para>The ID of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dfde02284a5c46622a097adaf44a****</para>
             /// </summary>
             [NameInMap("VideoId")]
             [Validation(Required=false)]

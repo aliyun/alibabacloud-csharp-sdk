@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetTranscodeTemplateGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the transcoding template group.
+        /// <para>The ID of the transcoding template group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>a591f697c7167*****6ae1502142d0</para>
         /// </summary>
         [NameInMap("TranscodeTemplateGroupId")]
         [Validation(Required=false)]

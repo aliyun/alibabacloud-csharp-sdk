@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitDynamicImageJobResponseBody : TeaModel {
         /// <summary>
-        /// The information about the animated image job.
+        /// <para>The information about the animated image job.</para>
         /// </summary>
         [NameInMap("DynamicImageJob")]
         [Validation(Required=false)]
         public SubmitDynamicImageJobResponseBodyDynamicImageJob DynamicImageJob { get; set; }
         public class SubmitDynamicImageJobResponseBodyDynamicImageJob : TeaModel {
             /// <summary>
-            /// The ID of the animated image job.
+            /// <para>The ID of the animated image job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ad90a501b1bfb72374ad0050746****</para>
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
@@ -26,7 +29,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25818875-5F78-74A6-BEF6-D7393642****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

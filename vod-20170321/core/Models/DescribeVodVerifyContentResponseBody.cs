@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodVerifyContentResponseBody : TeaModel {
         /// <summary>
-        /// The verification content.
+        /// <para>The verification content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>verify_dffeb661*****3a59c31cd91f</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34AB41F1-04A5-4688-634BDBE6****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

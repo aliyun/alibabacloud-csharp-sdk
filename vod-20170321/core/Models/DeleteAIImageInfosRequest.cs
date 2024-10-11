@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteAIImageInfosRequest : TeaModel {
         /// <summary>
-        /// The IDs of the images that are submitted for AI processing. You can obtain the value of AIImageInfoId from the response to the [ListAIImageInfo](~~ListAIImageInfo~~) operation.
+        /// <para>The IDs of the images that are submitted for AI processing. You can obtain the value of AIImageInfoId from the response to the <a href="~~ListAIImageInfo~~">ListAIImageInfo</a> operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can specify a maximum of 10 IDs.</description></item>
+        /// <item><description>Separate multiple IDs with commas (,).</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// - You can specify a maximum of 10 IDs.
-        /// - Separate multiple IDs with commas (,).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>b89a6aabf144*****6197ebd6fe6cf29</para>
         /// </summary>
         [NameInMap("AIImageInfoIds")]
         [Validation(Required=false)]

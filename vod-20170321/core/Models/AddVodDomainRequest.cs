@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddVodDomainRequest : TeaModel {
         /// <summary>
-        /// The URL that is used for health checks.
+        /// <para>The URL that is used for health checks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com/test.html">www.example.com/test.html</a></para>
         /// </summary>
         [NameInMap("CheckUrl")]
         [Validation(Required=false)]
         public string CheckUrl { get; set; }
 
         /// <summary>
-        /// The domain name that you want to accelerate. Wildcard domain names that start with periods (.) are supported. Example: .example.com.
+        /// <para>The domain name that you want to accelerate. Wildcard domain names that start with periods (.) are supported. Example: .example.com.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -34,11 +39,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is applicable to users of level 3 or higher in the Chinese mainland and users outside the Chinese mainland. Default value: domestic. Valid values:
+        /// <para>This parameter is applicable to users of level 3 or higher in the Chinese mainland and users outside the Chinese mainland. Default value: domestic. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>domestic</b>: Chinese mainland</description></item>
+        /// <item><description><b>overseas</b>: outside the Chinese mainland</description></item>
+        /// <item><description><b>global</b>: regions in and outside the Chinese mainland</description></item>
+        /// </list>
         /// 
-        /// *   **domestic**: Chinese mainland
-        /// *   **overseas**: outside the Chinese mainland
-        /// *   **global**: regions in and outside the Chinese mainland
+        /// <b>Example:</b>
+        /// <para>domestic</para>
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
@@ -49,16 +58,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The information about the addresses of origin servers. For more information, see the **Sources** table in this topic.
+        /// <para>The information about the addresses of origin servers. For more information, see the <b>Sources</b> table in this topic.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{&quot;content&quot;:&quot;1.1.1.1&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</para>
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string Sources { get; set; }
 
         /// <summary>
-        /// The top-level domain.
+        /// <para>The top-level domain.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("TopLevelDomain")]
         [Validation(Required=false)]

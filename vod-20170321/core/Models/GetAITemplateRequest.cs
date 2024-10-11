@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAITemplateRequest : TeaModel {
         /// <summary>
-        /// The ID of the AI template. You can use one of the following methods to obtain the ID:
+        /// <para>The ID of the AI template. You can use one of the following methods to obtain the ID:</para>
+        /// <list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation to add an AI template if no AI template exists. The value of TemplateId in the response is the ID of the AI template.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation if the template already exists. The value of TemplateId in the response is the ID of the AI template.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Call the [AddAITemplate](https://help.aliyun.com/document_detail/102930.html) operation to add an AI template if no AI template exists. The value of TemplateId in the response is the ID of the AI template.
-        /// *   Call the [ListAITemplate](https://help.aliyun.com/document_detail/102936.html) operation if the template already exists. The value of TemplateId in the response is the ID of the AI template.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1706a0063dd733f6a823ef32e0a5****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

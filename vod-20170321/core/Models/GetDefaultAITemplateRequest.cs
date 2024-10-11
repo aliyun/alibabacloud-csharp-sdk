@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetDefaultAITemplateRequest : TeaModel {
         /// <summary>
-        /// The type of the AI template. Set the value to **AIMediaAudit**, which specifies the automated review.
+        /// <para>The type of the AI template. Set the value to <b>AIMediaAudit</b>, which specifies the automated review.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>AIMediaAudit</para>
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

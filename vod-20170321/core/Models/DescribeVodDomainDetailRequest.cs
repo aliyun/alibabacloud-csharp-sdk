@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainDetailRequest : TeaModel {
         /// <summary>
-        /// The domain name for CDN.
+        /// <para>The domain name for CDN.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

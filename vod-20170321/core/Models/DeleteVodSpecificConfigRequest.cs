@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteVodSpecificConfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the configuration.
+        /// <para>The ID of the configuration.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2317****</para>
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// The accelerated domain name.
+        /// <para>The accelerated domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The environment from which the domain name configurations are deleted. Valid values:
+        /// <para>The environment from which the domain name configurations are deleted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>online: production environment</description></item>
+        /// <item><description>gray: simulation environment</description></item>
+        /// </list>
         /// 
-        /// *   online: production environment
-        /// *   gray: simulation environment
+        /// <b>Example:</b>
+        /// <para>online</para>
         /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainConfigsRequest : TeaModel {
         /// <summary>
-        /// The domain name for CDN.
+        /// <para>The domain name for CDN.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The feature name. Separate multiple names with commas (,). For more information, see **Feature description**.
+        /// <para>The feature name. Separate multiple names with commas (,). For more information, see <b>Feature description</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>filetype_based_ttl_set,set_req_host_header</para>
         /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]

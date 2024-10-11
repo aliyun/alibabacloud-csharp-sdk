@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListDynamicImageRequest : TeaModel {
         /// <summary>
-        /// The ID of the video.
+        /// <para>The ID of the video.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2e114f1100590c3193918fd449a****</para>
         /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]

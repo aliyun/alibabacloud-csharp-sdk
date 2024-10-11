@@ -10,49 +10,66 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddCategoryResponseBody : TeaModel {
         /// <summary>
-        /// The information about the category.
+        /// <para>The information about the category.</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public AddCategoryResponseBodyCategory Category { get; set; }
         public class AddCategoryResponseBodyCategory : TeaModel {
             /// <summary>
-            /// The ID of the category. You can use the value of this parameter when you call the [UpdateCategory](~~UpdateCategory~~), [DeleteCategory](~~DeleteCategory~~), and [GetCategories](~~GetCategories~~) operations.
+            /// <para>The ID of the category. You can use the value of this parameter when you call the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10020</para>
             /// </summary>
             [NameInMap("CateId")]
             [Validation(Required=false)]
             public long? CateId { get; set; }
 
             /// <summary>
-            /// The name of the category.
+            /// <para>The name of the category.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("CateName")]
             [Validation(Required=false)]
             public string CateName { get; set; }
 
             /// <summary>
-            /// The level of the category. Valid values:
+            /// <para>The level of the category. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: level 1 category</description></item>
+            /// <item><description><b>1</b>: level 2 category</description></item>
+            /// <item><description><b>1</b>: level 3 category</description></item>
+            /// </list>
             /// 
-            /// *   **0**: level 1 category
-            /// *   **1**: level 2 category
-            /// *   **1**: level 3 category
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
             public long? Level { get; set; }
 
             /// <summary>
-            /// The ID of the parent category.
+            /// <para>The ID of the parent category.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100012</para>
             /// </summary>
             [NameInMap("ParentId")]
             [Validation(Required=false)]
             public long? ParentId { get; set; }
 
             /// <summary>
-            /// The type of the category. Valid values:
+            /// <para>The type of the category. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>default</b>: audio, video, and image files</description></item>
+            /// <item><description><b>material</b>: short video materials</description></item>
+            /// </list>
             /// 
-            /// *   **default**: audio, video, and image files
-            /// *   **material**: short video materials
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -61,7 +78,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25818875-5F78-4AF6-D7393642CA58****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

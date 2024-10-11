@@ -10,44 +10,58 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetImageInfoRequest : TeaModel {
         /// <summary>
-        /// The time when the image URL expires. Unit: seconds.
+        /// <para>The time when the image URL expires. Unit: seconds.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If you set OutputType to cdn:</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter takes effect only if URL authentication is enabled. Otherwise, the image URL does not expire.</description></item>
+        /// <item><description>Minimum value: 1.</description></item>
+        /// <item><description>Maximum value: unlimited.</description></item>
+        /// <item><description>Default value: If you leave this parameter empty, the default validity period that is specified in URL signing is used.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>If you set OutputType to oss:</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter takes effect only when the ACL of the Object Storage Service (OSS) bucket is private. Otherwise, the image URL does not expire.</description></item>
+        /// <item><description>Minimum value: 1.</description></item>
+        /// <item><description>If you store the image in the VOD bucket, the maximum value of this parameter is <b>2592000</b> (30 days). If you store the image in an OSS bucket, the maximum value of this parameter is <b>129600</b> (36 hours). The maximum value is limited to reduce security risks of the origin.</description></item>
+        /// <item><description>Default value: 3600.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   If you set OutputType to cdn:
-        /// 
-        ///     *   This parameter takes effect only if URL authentication is enabled. Otherwise, the image URL does not expire.
-        ///     *   Minimum value: 1.
-        ///     *   Maximum value: unlimited.
-        ///     *   Default value: If you leave this parameter empty, the default validity period that is specified in URL signing is used.
-        /// 
-        /// *   If you set OutputType to oss:
-        /// 
-        ///     *   This parameter takes effect only when the ACL of the Object Storage Service (OSS) bucket is private. Otherwise, the image URL does not expire.
-        ///     *   Minimum value: 1.
-        ///     *   If you store the image in the VOD bucket, the maximum value of this parameter is **2592000** (30 days). If you store the image in an OSS bucket, the maximum value of this parameter is **129600** (36 hours). The maximum value is limited to reduce security risks of the origin.
-        ///     *   Default value: 3600.
+        /// <b>Example:</b>
+        /// <para>3600</para>
         /// </summary>
         [NameInMap("AuthTimeout")]
         [Validation(Required=false)]
         public long? AuthTimeout { get; set; }
 
         /// <summary>
-        /// The ID of the image. You can use one of the following methods to obtain the ID:
+        /// <para>The ID of the image. You can use one of the following methods to obtain the ID:</para>
+        /// <list type="bullet">
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com/">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose Media Files &gt; Image. On the Image page, view the image ID.</description></item>
+        /// <item><description>Obtain the image ID from the response to the <a href="~~CreateUploadImage~~">CreateUploadImage</a> operation that you call to obtain the upload URL and credential.</description></item>
+        /// <item><description>Obtain the image ID from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation that you call to query the image.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/). In the left-side navigation pane, choose Media Files > Image. On the Image page, view the image ID.
-        /// *   Obtain the image ID from the response to the [CreateUploadImage](~~CreateUploadImage~~) operation that you call to obtain the upload URL and credential.
-        /// *   Obtain the image ID from the response to the [SearchMedia](~~SearchMedia~~) operation that you call to query the image.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3e34733b40b9a96ccf5c1ff6f69****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The type of the output image URL. Valid values:
+        /// <para>The type of the output image URL. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>oss: OSS URL</description></item>
+        /// <item><description>cdn: CDN URL</description></item>
+        /// </list>
         /// 
-        /// *   oss: OSS URL
-        /// *   cdn: CDN URL
+        /// <b>Example:</b>
+        /// <para>cdn</para>
         /// </summary>
         [NameInMap("OutputType")]
         [Validation(Required=false)]

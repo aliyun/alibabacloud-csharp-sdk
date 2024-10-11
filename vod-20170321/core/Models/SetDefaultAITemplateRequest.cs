@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetDefaultAITemplateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The ID of the AI template.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1706a0063dd733f6a823ef32e0a5****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -10,24 +10,30 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddEditingProjectMaterialsRequest : TeaModel {
         /// <summary>
-        /// The ID of the material. Separate multiple material IDs with commas (,). You can specify up to 10 IDs.
+        /// <para>Separate multiple material IDs with commas (,). You can specify up to 10 IDs.</para>
+        /// <remarks>
+        /// <para> If you specify multiple materials, make sure that the materials are of the same type as specified in MaterialType.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  If you specify multiple materials, make sure that the materials are of the same type as specified in MaterialType.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>d3251979f9fd41f2acb29ccda5a6f772</para>
         /// </summary>
         [NameInMap("MaterialIds")]
         [Validation(Required=false)]
         public string MaterialIds { get; set; }
 
         /// <summary>
-        /// The type of the material. Valid values:
+        /// <para>The type of the material. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>video</b></description></item>
+        /// <item><description><b>audio</b></description></item>
+        /// <item><description><b>image</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **video**
-        /// *   **audio**
-        /// *   **image**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>video</para>
         /// </summary>
         [NameInMap("MaterialType")]
         [Validation(Required=false)]
@@ -42,9 +48,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the online editing project.
+        /// <para>The ID of the online editing project.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>afa31b483b5c41609185de0e1b790579</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

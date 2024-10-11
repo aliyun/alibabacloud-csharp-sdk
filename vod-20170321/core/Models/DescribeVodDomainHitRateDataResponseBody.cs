@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainHitRateDataResponseBody : TeaModel {
         /// <summary>
-        /// The time interval at which data is returned, which is the time granularity. Unit: seconds.
+        /// <para>The time interval at which data is returned, which is the time granularity. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// The accelerated domain name.
+        /// <para>The accelerated domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range.
+        /// <para>The end of the time range.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-01-20T14:59:58Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The byte hit rate data at each time interval.
+        /// <para>The byte hit rate data at each time interval.</para>
         /// </summary>
         [NameInMap("HitRateInterval")]
         [Validation(Required=false)]
@@ -42,21 +51,30 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribeVodDomainHitRateDataResponseBodyHitRateIntervalDataModule> DataModule { get; set; }
             public class DescribeVodDomainHitRateDataResponseBodyHitRateIntervalDataModule : TeaModel {
                 /// <summary>
-                /// The HTTPS byte hit rate.
+                /// <para>The HTTPS byte hit rate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>50</para>
                 /// </summary>
                 [NameInMap("HttpsValue")]
                 [Validation(Required=false)]
                 public string HttpsValue { get; set; }
 
                 /// <summary>
-                /// The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+                /// <para>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2024-01-20T13:59:58Z</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// The total byte hit rate.
+                /// <para>The total byte hit rate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -67,14 +85,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D94E471F-1A27-442E-552D-D4D2000C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range.
+        /// <para>The beginning of the time range.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-01-20T13:59:58Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

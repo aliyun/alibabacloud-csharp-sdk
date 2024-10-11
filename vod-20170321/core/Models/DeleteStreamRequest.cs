@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteStreamRequest : TeaModel {
         /// <summary>
-        /// The job IDs for deleting media streams.
+        /// <para>The job IDs for deleting media streams.</para>
+        /// <list type="bullet">
+        /// <item><description>Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified for one video.</description></item>
+        /// <item><description>You can obtain job IDs from the PlayInfo parameter that is returned after you call the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation. Each media stream has a unique job ID.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified for one video.
-        /// *   You can obtain job IDs from the PlayInfo parameter that is returned after you call the [GetPlayInfo](https://help.aliyun.com/document_detail/56124.html) operation. Each media stream has a unique job ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>35eb4dbda18c49cc0025df374b46****</para>
         /// </summary>
         [NameInMap("JobIds")]
         [Validation(Required=false)]
         public string JobIds { get; set; }
 
         /// <summary>
-        /// The ID of the video.
+        /// <para>The ID of the video.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>95948ddba24446b6aed5db985e78****</para>
         /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]

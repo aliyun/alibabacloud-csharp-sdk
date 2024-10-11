@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditResultRequest : TeaModel {
         /// <summary>
-        /// The ID of the video or image.
+        /// <para>The ID of the video or image.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>93ab850b4f6f*****54b6e91d24d81d4</para>
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]

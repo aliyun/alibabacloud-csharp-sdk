@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class VerifyVodDomainOwnerRequest : TeaModel {
         /// <summary>
-        /// The domain name of which you want to verify the ownership. You can specify only one domain name in each call.
+        /// <para>The domain name of which you want to verify the ownership. You can specify only one domain name in each call.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -23,12 +25,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The verification method. Valid values:
+        /// <para>The verification method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>dnsCheck</b>: uses a Domain Name System (DNS) record</description></item>
+        /// <item><description><b>fileCheck</b>: uses a verification file</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **dnsCheck**: uses a Domain Name System (DNS) record
-        /// *   **fileCheck**: uses a verification file
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dnsCheck</para>
         /// </summary>
         [NameInMap("VerifyType")]
         [Validation(Required=false)]

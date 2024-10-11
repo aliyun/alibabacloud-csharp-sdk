@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListVodTemplateRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. Set the value to **app-1000000**. For more information, see [Overview](https://help.aliyun.com/document_detail/113600.html).
+        /// <para>The ID of the application. Set the value to <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>app-****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The type of the template. Set the value to **Snapshot**.
+        /// <para>The type of the template. Set the value to <b>Snapshot</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Snapshot</para>
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

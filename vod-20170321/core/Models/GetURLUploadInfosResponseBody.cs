@@ -10,93 +10,127 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetURLUploadInfosResponseBody : TeaModel {
         /// <summary>
-        /// The job IDs or upload URLs that do not exist.
+        /// <para>The job IDs or upload URLs that do not exist.</para>
         /// </summary>
         [NameInMap("NonExists")]
         [Validation(Required=false)]
         public List<string> NonExists { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25818875-5F78-4AF6-D7393642CA58****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about URL-based upload jobs. For more information, see the "URLUploadInfo: the information about a URL-based upload job" section of the [Basic structures](https://help.aliyun.com/document_detail/52839.html) topic.
+        /// <para>The information about URL-based upload jobs. For more information, see the &quot;URLUploadInfo: the information about a URL-based upload job&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</para>
         /// </summary>
         [NameInMap("URLUploadInfoList")]
         [Validation(Required=false)]
         public List<GetURLUploadInfosResponseBodyURLUploadInfoList> URLUploadInfoList { get; set; }
         public class GetURLUploadInfosResponseBodyURLUploadInfoList : TeaModel {
             /// <summary>
-            /// The time when the upload job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// <para>The time when the upload job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2019-01-01T01:11:01Z</para>
             /// </summary>
             [NameInMap("CompleteTime")]
             [Validation(Required=false)]
             public string CompleteTime { get; set; }
 
             /// <summary>
-            /// The time when the upload job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// <para>The time when the upload job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2019-01-01T01:01:01Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The error code returned.
+            /// <para>The error code returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// The error message returned.
+            /// <para>The error message returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>error_message</para>
             /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// The size of the uploaded media file. Unit: byte.
+            /// <para>The size of the uploaded media file. Unit: byte.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>24</para>
             /// </summary>
             [NameInMap("FileSize")]
             [Validation(Required=false)]
             public string FileSize { get; set; }
 
             /// <summary>
-            /// The ID of the upload job.
+            /// <para>The ID of the upload job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>86c1925fba0****</para>
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
 
             /// <summary>
-            /// The ID of the uploaded media file.
+            /// <para>The ID of the uploaded media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>93ab850b4f6f54b6e91d24d81d4****</para>
             /// </summary>
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
 
             /// <summary>
-            /// The status of the URL-based upload job. For more information about the valid values and value description of the parameter, see the "Status: the status of a video" section of the [Basic structures](https://help.aliyun.com/document_detail/52839.html) topic.
+            /// <para>The status of the URL-based upload job. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a video&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SUCCESS</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The upload URL of the source file.
+            /// <para>The upload URL of the source file.</para>
+            /// <remarks>
+            /// <para>A maximum of 100 URLs can be returned.</para>
+            /// </remarks>
             /// 
-            /// > A maximum of 100 URLs can be returned.
+            /// <b>Example:</b>
+            /// <para>http://****.mp4</para>
             /// </summary>
             [NameInMap("UploadURL")]
             [Validation(Required=false)]
             public string UploadURL { get; set; }
 
             /// <summary>
-            /// The custom configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](https://help.aliyun.com/document_detail/86952.html) topic.
+            /// <para>The custom configurations. The value is a JSON string. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;MessageCallback&quot;:&quot;{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>&quot;, &quot;Extend&quot;:&quot;{&quot;localId&quot;:&quot;***&quot;, &quot;test&quot;:&quot;www&quot;}&quot;}</para>
             /// </summary>
             [NameInMap("UserData")]
             [Validation(Required=false)]

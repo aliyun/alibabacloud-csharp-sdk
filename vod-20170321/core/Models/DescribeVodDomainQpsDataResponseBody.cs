@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainQpsDataResponseBody : TeaModel {
         /// <summary>
-        /// The time interval between the data entries returned. Unit: seconds.
+        /// <para>The time interval between the data entries returned. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// The accelerated domain name.
+        /// <para>The accelerated domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *YYYY-MM-DD**Thh:mm:ss* format. The time is displayed in UTC.
+        /// <para>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-05-02T15:59:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The list of QPS records at each interval.
+        /// <para>The list of QPS records at each interval.</para>
         /// </summary>
         [NameInMap("QpsDataInterval")]
         [Validation(Required=false)]
@@ -42,91 +51,130 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribeVodDomainQpsDataResponseBodyQpsDataIntervalDataModule> DataModule { get; set; }
             public class DescribeVodDomainQpsDataResponseBodyQpsDataIntervalDataModule : TeaModel {
                 /// <summary>
-                /// The number of requests in the Chinese mainland.
+                /// <para>The number of requests in the Chinese mainland.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("AccDomesticValue")]
                 [Validation(Required=false)]
                 public string AccDomesticValue { get; set; }
 
                 /// <summary>
-                /// The number of requests outside the Chinese mainland.
+                /// <para>The number of requests outside the Chinese mainland.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("AccOverseasValue")]
                 [Validation(Required=false)]
                 public string AccOverseasValue { get; set; }
 
                 /// <summary>
-                /// The total number of requests.
+                /// <para>The total number of requests.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("AccValue")]
                 [Validation(Required=false)]
                 public string AccValue { get; set; }
 
                 /// <summary>
-                /// The QPS data in the Chinese mainland.
+                /// <para>The QPS data in the Chinese mainland.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("DomesticValue")]
                 [Validation(Required=false)]
                 public string DomesticValue { get; set; }
 
                 /// <summary>
-                /// The QPS that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.
+                /// <para>The QPS that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("HttpsAccDomesticValue")]
                 [Validation(Required=false)]
                 public string HttpsAccDomesticValue { get; set; }
 
                 /// <summary>
-                /// The number of HTTPS requests sent to POPs outside the Chinese mainland.
+                /// <para>The number of HTTPS requests sent to POPs outside the Chinese mainland.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("HttpsAccOverseasValue")]
                 [Validation(Required=false)]
                 public string HttpsAccOverseasValue { get; set; }
 
                 /// <summary>
-                /// The number of HTTPS requests sent to POPs.
+                /// <para>The number of HTTPS requests sent to POPs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("HttpsAccValue")]
                 [Validation(Required=false)]
                 public string HttpsAccValue { get; set; }
 
                 /// <summary>
-                /// The QPS that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.
+                /// <para>The QPS that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("HttpsDomesticValue")]
                 [Validation(Required=false)]
                 public string HttpsDomesticValue { get; set; }
 
                 /// <summary>
-                /// The QPS that is calculated based on the HTTPS requests sent to POPs outside the Chinese mainland.
+                /// <para>The QPS that is calculated based on the HTTPS requests sent to POPs outside the Chinese mainland.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("HttpsOverseasValue")]
                 [Validation(Required=false)]
                 public string HttpsOverseasValue { get; set; }
 
                 /// <summary>
-                /// The QPS that is calculated based on the HTTPS requests sent to points of presence (POPs).
+                /// <para>The QPS that is calculated based on the HTTPS requests sent to points of presence (POPs).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("HttpsValue")]
                 [Validation(Required=false)]
                 public string HttpsValue { get; set; }
 
                 /// <summary>
-                /// The QPS data outside the Chinese mainland.
+                /// <para>The QPS data outside the Chinese mainland.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("OverseasValue")]
                 [Validation(Required=false)]
                 public string OverseasValue { get; set; }
 
                 /// <summary>
-                /// The timestamp of the data returned. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+                /// <para>The timestamp of the data returned. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2023-06-27 10:10:58</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// The total QPS.
+                /// <para>The total QPS.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -137,14 +185,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25818875-5F78-4AF6-D7393642CA58*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *YYYY-MM-DD**Thh:mm:ss* format. The time is displayed in UTC.
+        /// <para>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-05-02T15:50:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

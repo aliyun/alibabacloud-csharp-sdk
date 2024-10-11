@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateVodDomainRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -24,10 +28,22 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// <para>The information about the addresses of origin servers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;content&quot;:&quot;1.1.1.1&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</para>
+        /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string Sources { get; set; }
 
+        /// <summary>
+        /// <para>The top-level domain.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("TopLevelDomain")]
         [Validation(Required=false)]
         public string TopLevelDomain { get; set; }

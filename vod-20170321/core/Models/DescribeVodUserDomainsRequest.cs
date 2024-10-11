@@ -10,33 +10,44 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodUserDomainsRequest : TeaModel {
         /// <summary>
-        /// The domain name. The value of this parameter is used as a filter condition for a fuzzy match.
+        /// <para>The domain name. The value of this parameter is used as a filter condition for a fuzzy match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.aliyundoc.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The search method. Valid values:
+        /// <para>The search method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>fuzzy_match</b> (default): fuzzy match.</description></item>
+        /// <item><description><b>pre_match</b>: prefix match</description></item>
+        /// <item><description><b>suf_match</b>: suffix match</description></item>
+        /// <item><description><b>full_match</b>: exact match</description></item>
+        /// </list>
         /// 
-        /// *   **fuzzy_match** (default): fuzzy match.
-        /// *   **pre_match**: prefix match
-        /// *   **suf_match**: suffix match
-        /// *   **full_match**: exact match
+        /// <b>Example:</b>
+        /// <para>fuzzy_match</para>
         /// </summary>
         [NameInMap("DomainSearchType")]
         [Validation(Required=false)]
         public string DomainSearchType { get; set; }
 
         /// <summary>
-        /// The status of the domain name. Value values:
+        /// <para>The status of the domain name. Value values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>online</b>: indicates that the domain name is enabled.</description></item>
+        /// <item><description><b>offline</b>: indicates that the domain name is disabled.</description></item>
+        /// <item><description><b>configuring</b>: indicates that the domain name is being configured.</description></item>
+        /// <item><description><b>configure_failed</b>: indicates that the domain name failed to be configured.</description></item>
+        /// <item><description><b>checking</b>: indicates that the domain name is under review.</description></item>
+        /// <item><description><b>check_failed</b>: indicates that the domain name failed the review.</description></item>
+        /// </list>
         /// 
-        /// *   **online**: indicates that the domain name is enabled.
-        /// *   **offline**: indicates that the domain name is disabled.
-        /// *   **configuring**: indicates that the domain name is being configured.
-        /// *   **configure_failed**: indicates that the domain name failed to be configured.
-        /// *   **checking**: indicates that the domain name is under review.
-        /// *   **check_failed**: indicates that the domain name failed the review.
+        /// <b>Example:</b>
+        /// <para>online</para>
         /// </summary>
         [NameInMap("DomainStatus")]
         [Validation(Required=false)]
@@ -47,14 +58,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: **20**. Maximum value: **50**. Valid values: **1** to **50**.
+        /// <para>The number of entries per page. Default value: <b>20</b>. Maximum value: <b>50</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -65,25 +82,29 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeVodUserDomainsRequestTag> Tag { get; set; }
         public class DescribeVodUserDomainsRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N. Valid values of N: **1** to **20**.
+            /// <para>The key of tag N. Valid values of N: <b>1</b> to <b>20</b>.</para>
+            /// <para>By default, all tag keys are queried.</para>
             /// 
-            /// By default, all tag keys are queried.
+            /// <b>Example:</b>
+            /// <para>key</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N. Valid values of N: **1** to **20**.
+            /// <para>The value of tag N. Valid values of N: <b>1</b> to <b>20</b>.</para>
+            /// <para>By default, all tag values are queried.</para>
             /// 
-            /// By default, all tag values are queried.
+            /// <b>Example:</b>
+            /// <para>value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

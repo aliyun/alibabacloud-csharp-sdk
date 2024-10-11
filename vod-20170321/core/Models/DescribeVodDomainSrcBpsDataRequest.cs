@@ -10,32 +10,43 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainSrcBpsDataRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name.
+        /// <para>The accelerated domain name.</para>
+        /// <list type="bullet">
+        /// <item><description>If you leave this parameter empty, the merged data of all your accelerated domain names is returned.</description></item>
+        /// <item><description>You can specify a maximum of 500 accelerated domain names. Separate multiple domain names with commas (,).</description></item>
+        /// </list>
         /// 
-        /// *   If you leave this parameter empty, the merged data of all your accelerated domain names is returned.
-        /// *   You can specify a maximum of 500 accelerated domain names. Separate multiple domain names with commas (,).
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query.
+        /// <para>The end of the time range to query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para> The end time must be later than the start time.</para>
+        /// </remarks>
         /// 
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-        /// 
-        /// >  The end time must be later than the start time.
+        /// <b>Example:</b>
+        /// <para>2022-04-26T15:59:59Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The time granularity. Unit: seconds. Valid values: **300**, **3600**, and **86400**. If you leave this parameter empty or specify an invalid value, the default value is used. The supported time granularity varies based on the time range specified by `EndTime` and `StartTime`. The following content describes the supported time granularity.
+        /// <para>The time granularity. Unit: seconds. Valid values: <b>300</b>, <b>3600</b>, and <b>86400</b>. If you leave this parameter empty or specify an invalid value, the default value is used. The supported time granularity varies based on the time range specified by <c>EndTime</c> and <c>StartTime</c>. The following content describes the supported time granularity.</para>
+        /// <list type="bullet">
+        /// <item><description>Time range per query &lt; 3 days: <b>300</b> (default), <b>3600</b>, and <b>86400</b></description></item>
+        /// <item><description>3 days ≤ Time range per query &lt; 31 days: <b>3600</b> (default) and <b>86400</b></description></item>
+        /// <item><description>31 days ≤ Time range per query ≤ 366 days: <b>86400</b> (default)</description></item>
+        /// </list>
         /// 
-        /// *   Time range per query < 3 days: **300** (default), **3600**, and **86400**
-        /// *   3 days ≤ Time range per query < 31 days: **3600** (default) and **86400**
-        /// *   31 days ≤ Time range per query ≤ 366 days: **86400** (default)
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
@@ -46,7 +57,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <para>The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-04-25T16:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

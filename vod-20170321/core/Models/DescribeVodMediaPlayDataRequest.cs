@@ -10,100 +10,133 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodMediaPlayDataRequest : TeaModel {
         /// <summary>
-        /// The ID of the media file (VideoId). You can specify this parameter to query all playback data of a media file. You can specify only one media ID. You can use one of the following methods to obtain the ID:
+        /// <para>The ID of the media file (VideoId). You can specify this parameter to query all playback data of a media file. You can specify only one media ID. You can use one of the following methods to obtain the ID:</para>
+        /// <list type="bullet">
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <b>Media Files</b> &gt; <b>Audio/Video</b>. On the page that appears, view the media ID.</description></item>
+        /// <item><description>Obtain the value of the VideoId parameter in the response to the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation that you called to upload the audio or video file.</description></item>
+        /// <item><description>Obtain the value of VideoId by calling the <a href="~~SearchMedia~~">SearchMedia</a> operation. This method is applicable to files that have been uploaded.</description></item>
+        /// </list>
         /// 
-        /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the page that appears, view the media ID.
-        /// *   Obtain the value of the VideoId parameter in the response to the [CreateUploadVideo](~~CreateUploadVideo~~) operation that you called to upload the audio or video file.
-        /// *   Obtain the value of VideoId by calling the [SearchMedia](~~SearchMedia~~) operation. This method is applicable to files that have been uploaded.
+        /// <b>Example:</b>
+        /// <para>9ae2af636ca6c10412f44891fc****</para>
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
         /// <summary>
-        /// The name of the metric. This parameter must be specified together with the `OrderType` parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:
+        /// <para>The name of the metric. This parameter must be specified together with the <c>OrderType</c> parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PlaySuccessVv</b>: the total number of views.</description></item>
+        /// <item><description><b>PlayPerVv</b>: the average views per viewer.</description></item>
+        /// <item><description><b>PlayDuration</b>: the total playback duration.</description></item>
+        /// <item><description><b>PlayDurationPerUv</b>: the average playback duration per viewer.</description></item>
+        /// </list>
         /// 
-        /// *   **PlaySuccessVv**: the total number of views.
-        /// *   **PlayPerVv**: the average views per viewer.
-        /// *   **PlayDuration**: the total playback duration.
-        /// *   **PlayDurationPerUv**: the average playback duration per viewer.
+        /// <b>Example:</b>
+        /// <para>PlaySuccessVv</para>
         /// </summary>
         [NameInMap("OrderName")]
         [Validation(Required=false)]
         public string OrderName { get; set; }
 
         /// <summary>
-        /// The sort type. This parameter must be specified together with the `OrderName` parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:
+        /// <para>The sort type. This parameter must be specified together with the <c>OrderName</c> parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ASC</b>: The returned data is sorted in ascending order.</description></item>
+        /// <item><description><b>DESC</b>: The returned data is sorted in descending order.</description></item>
+        /// </list>
         /// 
-        /// *   **ASC**: The returned data is sorted in ascending order.
-        /// *   **DESC**: The returned data is sorted in descending order.
+        /// <b>Example:</b>
+        /// <para>ASC</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
         /// <summary>
-        /// The operating system of the player. You can specify this parameter to query all playback data generated on a specific operating system. Valid values:
+        /// <para>The operating system of the player. You can specify this parameter to query all playback data generated on a specific operating system. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Android</b></description></item>
+        /// <item><description><b>iOS</b></description></item>
+        /// <item><description><b>Windows</b></description></item>
+        /// <item><description><b>macOS</b></description></item>
+        /// <item><description><b>Linux</b></description></item>
+        /// </list>
         /// 
-        /// *   **Android**
-        /// *   **iOS**
-        /// *   **Windows**
-        /// *   **macOS**
-        /// *   **Linux**
+        /// <b>Example:</b>
+        /// <para>Android</para>
         /// </summary>
         [NameInMap("Os")]
         [Validation(Required=false)]
         public string Os { get; set; }
 
         /// <summary>
-        /// The number of the page. You can specify a page number to return data from the specified page.
+        /// <para>The number of the page. You can specify a page number to return data from the specified page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: 100.
+        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The playback time. Specify the value in the yyyyMMdd format.
+        /// <para>The playback time. Specify the value in the yyyyMMdd format.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can query data only by day.</description></item>
+        /// <item><description>You can query only data within the last 30 days.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > *   You can query data only by day.
-        /// > *   You can query only data within the last 30 days.
+        /// <b>Example:</b>
+        /// <para>20240322</para>
         /// </summary>
         [NameInMap("PlayDate")]
         [Validation(Required=false)]
         public string PlayDate { get; set; }
 
         /// <summary>
-        /// The region in which ApsaraVideo VOD is activated. You can specify this parameter to query all playback data generated only in a specific region. Valid values:
+        /// <para>The region in which ApsaraVideo VOD is activated. You can specify this parameter to query all playback data generated only in a specific region. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cn-beijing</b>: China (Beijing)</description></item>
+        /// <item><description><b>cn-shanghai</b>: China (Shanghai)</description></item>
+        /// <item><description><b>cn-shenzhen</b>: China (Shenzhen)</description></item>
+        /// <item><description><b>ap-northeast-1</b>: Japan (Tokyo)</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Singapore</description></item>
+        /// <item><description><b>ap-southeast-5</b>: Indonesia (Jakarta)</description></item>
+        /// <item><description><b>eu-central-1</b>: Germany (Frankfurt)</description></item>
+        /// </list>
         /// 
-        /// *   **cn-beijing**: China (Beijing)
-        /// *   **cn-shanghai**: China (Shanghai)
-        /// *   **cn-shenzhen**: China (Shenzhen)
-        /// *   **ap-northeast-1**: Japan (Tokyo)
-        /// *   **ap-southeast-1**: Singapore
-        /// *   **ap-southeast-5**: Indonesia (Jakarta)
-        /// *   **eu-central-1**: Germany (Frankfurt)
-        /// *   **ap-south-1**: India (Mumbai) (disabled)
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The type of the player SDK. You can specify this parameter to query all playback data generated by using a specific type of player SDK. Valid values:
+        /// <para>The type of the player SDK. You can specify this parameter to query all playback data generated by using a specific type of player SDK. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Native</b>: ApsaraVideo Player SDK for Android or ApsaraVideo Player SDK for iOS</description></item>
+        /// <item><description><b>Web</b>: ApsaraVideo Player SDK for Web</description></item>
+        /// </list>
         /// 
-        /// *   **Native**: ApsaraVideo Player SDK for Android or ApsaraVideo Player SDK for iOS
-        /// *   **Web**: ApsaraVideo Player SDK for Web
+        /// <b>Example:</b>
+        /// <para>Native</para>
         /// </summary>
         [NameInMap("TerminalType")]
         [Validation(Required=false)]

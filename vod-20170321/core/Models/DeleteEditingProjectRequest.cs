@@ -18,9 +18,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the online editing project. Separate multiple IDs with commas (,).
+        /// <para>The ID of the online editing project. Separate multiple IDs with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>fb2101bf24bf41*****cb318787dc</para>
         /// </summary>
         [NameInMap("ProjectIds")]
         [Validation(Required=false)]

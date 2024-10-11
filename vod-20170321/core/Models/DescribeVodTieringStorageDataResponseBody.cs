@@ -10,49 +10,67 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodTieringStorageDataResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25818875-5F78-4AF6-D7393642CA58****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The storage usage data returned.
+        /// <para>The storage usage data returned.</para>
         /// </summary>
         [NameInMap("StorageData")]
         [Validation(Required=false)]
         public List<DescribeVodTieringStorageDataResponseBodyStorageData> StorageData { get; set; }
         public class DescribeVodTieringStorageDataResponseBodyStorageData : TeaModel {
             /// <summary>
-            /// The data that is stored less than a month. Unit: bytes.
+            /// <para>The data that is stored less than a month. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("LessthanMonthDatasize")]
             [Validation(Required=false)]
             public long? LessthanMonthDatasize { get; set; }
 
             /// <summary>
-            /// The region in which data is queried.
+            /// <para>The region in which data is queried.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-beijing</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The storage type.
+            /// <para>The storage type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IA</para>
             /// </summary>
             [NameInMap("StorageClass")]
             [Validation(Required=false)]
             public string StorageClass { get; set; }
 
             /// <summary>
-            /// The storage usage. Unit: bytes.
+            /// <para>The storage usage. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234</para>
             /// </summary>
             [NameInMap("StorageUtilization")]
             [Validation(Required=false)]
             public long? StorageUtilization { get; set; }
 
             /// <summary>
-            /// The timestamp of the data returned. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// <para>The timestamp of the data returned. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-05-29T01:00:00Z</para>
             /// </summary>
             [NameInMap("TimeStamp")]
             [Validation(Required=false)]

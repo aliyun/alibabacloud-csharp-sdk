@@ -10,84 +10,116 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetEditingProjectResponseBody : TeaModel {
         /// <summary>
-        /// The information about the online editing project.
+        /// <para>The information about the online editing project.</para>
         /// </summary>
         [NameInMap("Project")]
         [Validation(Required=false)]
         public GetEditingProjectResponseBodyProject Project { get; set; }
         public class GetEditingProjectResponseBodyProject : TeaModel {
             /// <summary>
-            /// The thumbnail URL of the online editing project.
+            /// <para>The thumbnail URL of the online editing project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>https://<b><b>.com/6AB4D0E1E1C74468883516C2349</b></b>.png</para>
             /// </summary>
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
             public string CoverURL { get; set; }
 
             /// <summary>
-            /// The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// <para>The time when the online editing project was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2017-10-23T13:33:40Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The description of the online editing project.
+            /// <para>The description of the online editing project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testdescription</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// <para>The last time when the online editing project was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2017-10-23T14:27:26Z</para>
             /// </summary>
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// The ID of the online editing project.
+            /// <para>The ID of the online editing project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fb2101bf24b27*****54cb318787dc</para>
             /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// The region where the online editing project was created.
+            /// <para>The region where the online editing project was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-shanghai</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects were queried. Valid values:
+            /// <para>The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects were queried. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Normal</b>: indicates that the online editing project is in draft.</description></item>
+            /// <item><description><b>Producing</b>: indicates that the video is being produced.</description></item>
+            /// <item><description><b>Produced</b>: indicates that the video was produced.</description></item>
+            /// <item><description><b>ProduceFailed</b>: indicates that the video failed to be produced.</description></item>
+            /// </list>
             /// 
-            /// *   **Normal**: indicates that the online editing project is in draft.
-            /// *   **Producing**: indicates that the video is being produced.
-            /// *   **Produced**: indicates that the video was produced.
-            /// *   **ProduceFailed**: indicates that the video failed to be produced.
+            /// <b>Example:</b>
+            /// <para>Normal</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The path of the Object Storage Service (OSS) bucket where the online editing project is stored.
+            /// <para>The path of the Object Storage Service (OSS) bucket where the online editing project is stored.</para>
+            /// <remarks>
+            /// <para>To view the path of the OSS bucket, log on to the <a href="https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored">ApsaraVideo VOD console</a>, and choose <b>Configuration Management</b> &gt; <b>Media Management</b> &gt; <b>Storage</b>. On the Storage page, you can view the path of the OSS bucket.</para>
+            /// </remarks>
             /// 
-            /// > To view the path of the OSS bucket, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored), and choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, you can view the path of the OSS bucket.
+            /// <b>Example:</b>
+            /// <para>location_s</para>
             /// </summary>
             [NameInMap("StorageLocation")]
             [Validation(Required=false)]
             public string StorageLocation { get; set; }
 
             /// <summary>
-            /// The timeline of the online editing project.
+            /// <para>The timeline of the online editing project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;TimelineIn\&quot;:0,\&quot;TimelineOut\&quot;:9.42}</para>
             /// </summary>
             [NameInMap("Timeline")]
             [Validation(Required=false)]
             public string Timeline { get; set; }
 
             /// <summary>
-            /// The title of the online editing project.
+            /// <para>The title of the online editing project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>video_1508736815000</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -96,7 +128,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>63E8B7C7-4812-46*****AD-0FA56029AC86</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

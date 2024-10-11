@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainConfigsResponseBody : TeaModel {
         /// <summary>
-        /// The configurations of the domain name.
+        /// <para>The configurations of the domain name.</para>
         /// </summary>
         [NameInMap("DomainConfigs")]
         [Validation(Required=false)]
@@ -21,14 +21,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig> DomainConfig { get; set; }
             public class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig : TeaModel {
                 /// <summary>
-                /// The configuration ID.
+                /// <para>The configuration ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5003576</para>
                 /// </summary>
                 [NameInMap("ConfigId")]
                 [Validation(Required=false)]
                 public string ConfigId { get; set; }
 
                 /// <summary>
-                /// The feature parameters.
+                /// <para>The feature parameters.</para>
                 /// </summary>
                 [NameInMap("FunctionArgs")]
                 [Validation(Required=false)]
@@ -39,14 +42,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public List<DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg> FunctionArg { get; set; }
                     public class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg : TeaModel {
                         /// <summary>
-                        /// The parameter name.
+                        /// <para>The parameter name.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>file_type</para>
                         /// </summary>
                         [NameInMap("ArgName")]
                         [Validation(Required=false)]
                         public string ArgName { get; set; }
 
                         /// <summary>
-                        /// The parameter value.
+                        /// <para>The parameter value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>txt</para>
                         /// </summary>
                         [NameInMap("ArgValue")]
                         [Validation(Required=false)]
@@ -57,19 +66,26 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
                 /// <summary>
-                /// The feature name.
+                /// <para>The feature name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>set_req_host_header</para>
                 /// </summary>
                 [NameInMap("FunctionName")]
                 [Validation(Required=false)]
                 public string FunctionName { get; set; }
 
                 /// <summary>
-                /// The configuration status. Valid values:
+                /// <para>The configuration status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>success</b></description></item>
+                /// <item><description><b>testing</b></description></item>
+                /// <item><description><b>failed</b></description></item>
+                /// <item><description><b>configuring</b></description></item>
+                /// </list>
                 /// 
-                /// *   **success**
-                /// *   **testing**
-                /// *   **failed**
-                /// *   **configuring**
+                /// <b>Example:</b>
+                /// <para>success</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -80,7 +96,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F8AA0364-0FDB-4AD5-****-D69FAB8924ED</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

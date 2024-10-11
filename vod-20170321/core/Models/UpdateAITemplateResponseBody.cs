@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateAITemplateResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25818875-5F78-4A13-BEF6-****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the template.
+        /// <para>The ID of the template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1706a0063dd733f6a823ef32e0a5****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

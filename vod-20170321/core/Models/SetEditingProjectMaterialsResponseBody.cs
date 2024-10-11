@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetEditingProjectMaterialsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>746FFA07-8BBB-46*****B1-3E94E3B2915E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

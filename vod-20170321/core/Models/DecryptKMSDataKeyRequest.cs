@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DecryptKMSDataKeyRequest : TeaModel {
         /// <summary>
-        /// The ciphertext to be decrypted.
+        /// <para>The ciphertext to be decrypted.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmaaSl+TztSIMe43nbTH/Z1Wr4XfLftKhAciUmDQXuMRl4WTvKhxjMThjK****</para>
         /// </summary>
         [NameInMap("CipherText")]
         [Validation(Required=false)]

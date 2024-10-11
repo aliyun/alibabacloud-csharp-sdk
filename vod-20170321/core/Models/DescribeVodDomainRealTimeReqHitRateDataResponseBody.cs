@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainRealTimeReqHitRateDataResponseBody : TeaModel {
         /// <summary>
-        /// The returned results.
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribeVodDomainRealTimeReqHitRateDataResponseBodyDataReqHitRateDataModel> ReqHitRateDataModel { get; set; }
             public class DescribeVodDomainRealTimeReqHitRateDataResponseBodyDataReqHitRateDataModel : TeaModel {
                 /// <summary>
-                /// The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.
+                /// <para>The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.8956940476262277</para>
                 /// </summary>
                 [NameInMap("ReqHitRate")]
                 [Validation(Required=false)]
                 public float? ReqHitRate { get; set; }
 
                 /// <summary>
-                /// The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.
+                /// <para>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2024-01-02T11:26:00Z</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -39,7 +45,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>70A26B11-3673-479C-AEA8-E03FC5D3496D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

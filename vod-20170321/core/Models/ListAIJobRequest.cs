@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAIJobRequest : TeaModel {
         /// <summary>
-        /// The list of job IDs. You can obtain the job ID from the PlayInfo parameter in the response to the [GetPlayInfo](https://help.aliyun.com/document_detail/56124.html) operation.
+        /// <para>The list of job IDs. You can obtain the job ID from the PlayInfo parameter in the response to the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation.</para>
+        /// <remarks>
+        /// <para> You can specify a maximum of 10 job IDs in a request. Separate multiple IDs with commas (,).</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can specify a maximum of 10 job IDs in a request. Separate multiple IDs with commas (,).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>a718a3a1e8bb42ee3bc88921e94****,aasdcsfg782740asd3****,k2l3ibaskod98wrns9d****</para>
         /// </summary>
         [NameInMap("JobIds")]
         [Validation(Required=false)]

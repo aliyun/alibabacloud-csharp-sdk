@@ -10,28 +10,44 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAppInfoRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. By default, pages start from page 1.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
+        /// <para>The number of entries per page. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekzko7fsuj****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The status of the application. After an application is created, it enters the **Normal** state. Valid values:
+        /// <para>The status of the application. You can specify the status of the applications that you want to query. After an application is created, it enters the <b>Normal</b> state. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Normal</b></description></item>
+        /// <item><description><b>Disable</b></description></item>
+        /// </list>
         /// 
-        /// *   **Normal**
-        /// *   **Disable**
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

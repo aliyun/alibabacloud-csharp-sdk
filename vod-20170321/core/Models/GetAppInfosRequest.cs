@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAppInfosRequest : TeaModel {
         /// <summary>
-        /// The IDs of applications. You can obtain application IDs from the response to the [CreateAppInfo](https://help.aliyun.com/document_detail/113266.html) or [ListAppInfo](https://help.aliyun.com/document_detail/114000.html) operation.
+        /// <para>The IDs of applications. You can obtain application IDs from the response to the <a href="https://help.aliyun.com/document_detail/113266.html">CreateAppInfo</a> or <a href="https://help.aliyun.com/document_detail/114000.html">ListAppInfo</a> operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can specify a maximum of 10 application IDs.</description></item>
+        /// <item><description>Separate application IDs with commas (,).</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   You can specify a maximum of 10 application IDs.
-        /// *   Separate application IDs with commas (,).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>app-****</para>
         /// </summary>
         [NameInMap("AppIds")]
         [Validation(Required=false)]
