@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class CreateCallTagsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;TagA&quot;,&quot;TagB&quot;]</para>
         /// </summary>
         [NameInMap("CallTagNameList")]
         [Validation(Required=false)]
         public string CallTagNameList { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccc-test</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

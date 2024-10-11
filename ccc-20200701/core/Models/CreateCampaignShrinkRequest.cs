@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class CreateCampaignShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;beginTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:00:00&quot; }]</para>
         /// </summary>
         [NameInMap("CallableTime")]
         [Validation(Required=false)]
         public string CallableTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ccc-test/namelist.csv</para>
+        /// </summary>
         [NameInMap("CaseFileKey")]
         [Validation(Required=false)]
         public string CaseFileKey { get; set; }
@@ -25,14 +32,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string CaseListShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c1f2bc75-422e-43c7-9c9d9d95633a</para>
         /// </summary>
         [NameInMap("ContactFlowId")]
         [Validation(Required=false)]
         public string ContactFlowId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1634313600000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -43,35 +56,50 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? ExecutingUntilTimeout { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccc-test</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MaxAttemptCount")]
         [Validation(Required=false)]
         public long? MaxAttemptCount { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MinAttemptInterval")]
         [Validation(Required=false)]
         public long? MinAttemptInterval { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-campaign</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>skillgroup@ccc-test</para>
         /// </summary>
         [NameInMap("QueueId")]
         [Validation(Required=false)]
@@ -86,21 +114,30 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SimulationParameters { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1634140800000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;ratio&quot;:1}</para>
         /// </summary>
         [NameInMap("StrategyParameters")]
         [Validation(Required=false)]
         public string StrategyParameters { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PACING</para>
         /// </summary>
         [NameInMap("StrategyType")]
         [Validation(Required=false)]

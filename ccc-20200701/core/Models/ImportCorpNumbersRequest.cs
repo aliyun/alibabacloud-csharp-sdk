@@ -18,14 +18,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string CorpName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[\&quot;02912345678\&quot;]</para>
         /// </summary>
         [NameInMap("NumberList")]
         [Validation(Required=false)]
         public string NumberList { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Provider")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetConversationDetailRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>job-25884193037652****</para>
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccc-test</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

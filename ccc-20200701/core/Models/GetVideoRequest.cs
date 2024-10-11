@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetVideoRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

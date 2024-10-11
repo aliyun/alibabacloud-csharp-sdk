@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AddCasesShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c58b9719-3bc3-441d-a4d3-fc0309ef7066</para>
         /// </summary>
         [NameInMap("CampaignId")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string CaseListShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccc-test</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

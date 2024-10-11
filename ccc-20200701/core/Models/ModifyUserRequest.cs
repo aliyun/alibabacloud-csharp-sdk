@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string AvatarUrl { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1001</para>
+        /// </summary>
         [NameInMap("DisplayId")]
         [Validation(Required=false)]
         public string DisplayId { get; set; }
@@ -26,12 +30,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccc-test</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1382114****</para>
+        /// </summary>
         [NameInMap("Mobile")]
         [Validation(Required=false)]
         public string Mobile { get; set; }
@@ -40,19 +51,29 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Nickname { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Admin@ccc-test</para>
+        /// </summary>
         [NameInMap("RoleId")]
         [Validation(Required=false)]
         public string RoleId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user-test@ccc-test</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ON_SITE</para>
         /// </summary>
         [NameInMap("WorkMode")]
         [Validation(Required=false)]

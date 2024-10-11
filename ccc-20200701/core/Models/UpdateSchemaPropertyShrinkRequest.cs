@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class UpdateSchemaPropertyShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b0eb2742-f37e-4c67-82d4-25c651c1xxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -20,14 +23,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string PropertyShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>BC976D32-AC4C-4E0F-8AA9-F4BC6C4E2B3E</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// schema id
+        /// <para>schema id</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>profile</para>
         /// </summary>
         [NameInMap("SchemaId")]
         [Validation(Required=false)]

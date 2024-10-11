@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AddSchemaPropertyRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b0eb2742-f37e-4c67-82d4-25c651c1xxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -20,6 +23,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public AddSchemaPropertyRequestProperty Property { get; set; }
         public class AddSchemaPropertyRequestProperty : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("Array")]
             [Validation(Required=false)]
             public bool? Array { get; set; }
@@ -29,55 +36,105 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Attributes { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>string</para>
             /// </summary>
             [NameInMap("DataType")]
             [Validation(Required=false)]
             public string DataType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>False</para>
+            /// </summary>
             [NameInMap("Disabled")]
             [Validation(Required=false)]
             public bool? Disabled { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>name</para>
+            /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("DisplayOrder")]
             [Validation(Required=false)]
             public int? DisplayOrder { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>textbox</para>
+            /// </summary>
             [NameInMap("EditorType")]
             [Validation(Required=false)]
             public string EditorType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("MaxLength")]
             [Validation(Required=false)]
             public int? MaxLength { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Maximum")]
             [Validation(Required=false)]
             public double? Maximum { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("MinLength")]
             [Validation(Required=false)]
             public int? MinLength { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Minimum")]
             [Validation(Required=false)]
             public double? Minimum { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("Pattern")]
             [Validation(Required=false)]
             public string Pattern { get; set; }
@@ -86,24 +143,38 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string PatternErrorMessage { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("ReadOnly")]
             [Validation(Required=false)]
             public bool? ReadOnly { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("Required")]
             [Validation(Required=false)]
             public bool? Required { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>03C67DAD-EB26-41D8-949D-9B0C470FB716</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// schema id
+        /// <para>schema id</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>profile</para>
         /// </summary>
         [NameInMap("SchemaId")]
         [Validation(Required=false)]

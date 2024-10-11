@@ -10,32 +10,48 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AssignUsersRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccc-test</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;28036411123456****&quot;,&quot;29234301123456****&quot;]</para>
         /// </summary>
         [NameInMap("RamIdList")]
         [Validation(Required=false)]
         public string RamIdList { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Agent@ccc-test</para>
         /// </summary>
         [NameInMap("RoleId")]
         [Validation(Required=false)]
         public string RoleId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[{&quot;skillGroupId&quot;:&quot;skillgroup@ccc-test&quot;,&quot;skillLevel&quot;:5}]</para>
+        /// </summary>
         [NameInMap("SkillLevelList")]
         [Validation(Required=false)]
         public string SkillLevelList { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ON_SITE</para>
         /// </summary>
         [NameInMap("WorkMode")]
         [Validation(Required=false)]
