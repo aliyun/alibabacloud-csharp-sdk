@@ -910,6 +910,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["EdasContainerVersion"] = request.EdasContainerVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCpuBurst))
+            {
+                query["EnableCpuBurst"] = request.EnableCpuBurst;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableEbpf))
             {
                 query["EnableEbpf"] = request.EnableEbpf;
@@ -1200,6 +1204,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EdasContainerVersion))
             {
                 query["EdasContainerVersion"] = request.EdasContainerVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCpuBurst))
+            {
+                query["EnableCpuBurst"] = request.EnableCpuBurst;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableEbpf))
             {
@@ -5015,6 +5023,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["EnableAhas"] = request.EnableAhas;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCpuBurst))
+            {
+                query["EnableCpuBurst"] = request.EnableCpuBurst;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGreyTagRoute))
             {
                 query["EnableGreyTagRoute"] = request.EnableGreyTagRoute;
@@ -5306,6 +5318,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAhas))
             {
                 query["EnableAhas"] = request.EnableAhas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCpuBurst))
+            {
+                query["EnableCpuBurst"] = request.EnableCpuBurst;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGreyTagRoute))
             {

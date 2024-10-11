@@ -197,6 +197,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string EnableAhas { get; set; }
 
+        [NameInMap("EnableCpuBurst")]
+        [Validation(Required=false)]
+        public bool? EnableCpuBurst { get; set; }
+
         /// <summary>
         /// <para>Indicates whether canary release rules are enabled. Canary release rules apply only to applications in Spring Cloud and Dubbo frameworks. Take note of the following rules:</para>
         /// <list type="bullet">

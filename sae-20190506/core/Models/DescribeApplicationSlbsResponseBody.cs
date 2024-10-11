@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// <para>The ID of the Internet-facing SLB instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>59.74.**.**</para>
+            /// <para><c>59.74.**.**</c></para>
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]

@@ -152,6 +152,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string EdasContainerVersion { get; set; }
 
+        [NameInMap("EnableCpuBurst")]
+        [Validation(Required=false)]
+        public bool? EnableCpuBurst { get; set; }
+
         [NameInMap("EnableEbpf")]
         [Validation(Required=false)]
         public string EnableEbpf { get; set; }
