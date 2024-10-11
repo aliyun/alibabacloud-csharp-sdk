@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 {
-    public class CreateConversationAnalysisTaskResponseBody : TeaModel {
+    public class CreateTaskResponseBody : TeaModel {
         [NameInMap("data")]
         [Validation(Required=false)]
-        public CreateConversationAnalysisTaskResponseBodyData Data { get; set; }
-        public class CreateConversationAnalysisTaskResponseBodyData : TeaModel {
+        public CreateTaskResponseBodyData Data { get; set; }
+        public class CreateTaskResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>20240905-********-93E9-5D45-B4EF-045743A34071</para>

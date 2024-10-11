@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 根据类型调用大模型
-         *
-         * @param request AnalyzeConversationRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AnalyzeConversationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据类型调用大模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AnalyzeConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeConversationResponse
+        /// </returns>
         public AnalyzeConversationResponse AnalyzeConversationWithOptions(string workspaceId, string appId, AnalyzeConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -109,14 +119,24 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return TeaModel.ToObject<AnalyzeConversationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据类型调用大模型
-         *
-         * @param request AnalyzeConversationRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AnalyzeConversationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据类型调用大模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AnalyzeConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeConversationResponse
+        /// </returns>
         public async Task<AnalyzeConversationResponse> AnalyzeConversationWithOptionsAsync(string workspaceId, string appId, AnalyzeConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -181,12 +201,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return TeaModel.ToObject<AnalyzeConversationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据类型调用大模型
-         *
-         * @param request AnalyzeConversationRequest
-         * @return AnalyzeConversationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据类型调用大模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AnalyzeConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeConversationResponse
+        /// </returns>
         public AnalyzeConversationResponse AnalyzeConversation(string workspaceId, string appId, AnalyzeConversationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -194,12 +220,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return AnalyzeConversationWithOptions(workspaceId, appId, request, headers, runtime);
         }
 
-        /**
-         * @summary 根据类型调用大模型
-         *
-         * @param request AnalyzeConversationRequest
-         * @return AnalyzeConversationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据类型调用大模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AnalyzeConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeConversationResponse
+        /// </returns>
         public async Task<AnalyzeConversationResponse> AnalyzeConversationAsync(string workspaceId, string appId, AnalyzeConversationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -207,14 +239,24 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return await AnalyzeConversationWithOptionsAsync(workspaceId, appId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建语音文件调用llm任务
-         *
-         * @param request CreateConversationAnalysisTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConversationAnalysisTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音文件调用llm任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConversationAnalysisTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConversationAnalysisTaskResponse
+        /// </returns>
         public CreateConversationAnalysisTaskResponse CreateConversationAnalysisTaskWithOptions(string workspaceId, string appId, CreateConversationAnalysisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -291,14 +333,24 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return TeaModel.ToObject<CreateConversationAnalysisTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建语音文件调用llm任务
-         *
-         * @param request CreateConversationAnalysisTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConversationAnalysisTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音文件调用llm任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConversationAnalysisTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConversationAnalysisTaskResponse
+        /// </returns>
         public async Task<CreateConversationAnalysisTaskResponse> CreateConversationAnalysisTaskWithOptionsAsync(string workspaceId, string appId, CreateConversationAnalysisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -375,12 +427,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return TeaModel.ToObject<CreateConversationAnalysisTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建语音文件调用llm任务
-         *
-         * @param request CreateConversationAnalysisTaskRequest
-         * @return CreateConversationAnalysisTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音文件调用llm任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConversationAnalysisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConversationAnalysisTaskResponse
+        /// </returns>
         public CreateConversationAnalysisTaskResponse CreateConversationAnalysisTask(string workspaceId, string appId, CreateConversationAnalysisTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -388,12 +446,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return CreateConversationAnalysisTaskWithOptions(workspaceId, appId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建语音文件调用llm任务
-         *
-         * @param request CreateConversationAnalysisTaskRequest
-         * @return CreateConversationAnalysisTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音文件调用llm任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConversationAnalysisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConversationAnalysisTaskResponse
+        /// </returns>
         public async Task<CreateConversationAnalysisTaskResponse> CreateConversationAnalysisTaskAsync(string workspaceId, string appId, CreateConversationAnalysisTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -401,14 +465,218 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return await CreateConversationAnalysisTaskWithOptionsAsync(workspaceId, appId, request, headers, runtime);
         }
 
-        /**
-         * @summary 语音文件调用大模型获取结果
-         *
-         * @param request GetTaskResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTaskResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音文件调用llm任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskResponse
+        /// </returns>
+        public CreateTaskResponse CreateTaskWithOptions(string workspaceId, string appId, CreateTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dialogue))
+            {
+                body["dialogue"] = request.Dialogue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Examples))
+            {
+                body["examples"] = request.Examples;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCode))
+            {
+                body["modelCode"] = request.ModelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultTypes))
+            {
+                body["resultTypes"] = request.ResultTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInspection))
+            {
+                body["serviceInspection"] = request.ServiceInspection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["taskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateIds))
+            {
+                body["templateIds"] = request.TemplateIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transcription))
+            {
+                body["transcription"] = request.Transcription;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTask",
+                Version = "2024-06-03",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ccai/app/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appId) + "/createTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音文件调用llm任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskResponse
+        /// </returns>
+        public async Task<CreateTaskResponse> CreateTaskWithOptionsAsync(string workspaceId, string appId, CreateTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dialogue))
+            {
+                body["dialogue"] = request.Dialogue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Examples))
+            {
+                body["examples"] = request.Examples;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCode))
+            {
+                body["modelCode"] = request.ModelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultTypes))
+            {
+                body["resultTypes"] = request.ResultTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInspection))
+            {
+                body["serviceInspection"] = request.ServiceInspection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["taskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateIds))
+            {
+                body["templateIds"] = request.TemplateIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transcription))
+            {
+                body["transcription"] = request.Transcription;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTask",
+                Version = "2024-06-03",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ccai/app/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appId) + "/createTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音文件调用llm任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskResponse
+        /// </returns>
+        public CreateTaskResponse CreateTask(string workspaceId, string appId, CreateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateTaskWithOptions(workspaceId, appId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音文件调用llm任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskResponse
+        /// </returns>
+        public async Task<CreateTaskResponse> CreateTaskAsync(string workspaceId, string appId, CreateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateTaskWithOptionsAsync(workspaceId, appId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语音文件调用大模型获取结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResultResponse
+        /// </returns>
         public GetTaskResultResponse GetTaskResultWithOptions(GetTaskResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -437,14 +705,24 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return TeaModel.ToObject<GetTaskResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 语音文件调用大模型获取结果
-         *
-         * @param request GetTaskResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTaskResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语音文件调用大模型获取结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResultResponse
+        /// </returns>
         public async Task<GetTaskResultResponse> GetTaskResultWithOptionsAsync(GetTaskResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -473,12 +751,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return TeaModel.ToObject<GetTaskResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 语音文件调用大模型获取结果
-         *
-         * @param request GetTaskResultRequest
-         * @return GetTaskResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语音文件调用大模型获取结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResultResponse
+        /// </returns>
         public GetTaskResultResponse GetTaskResult(GetTaskResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -486,12 +770,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return GetTaskResultWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 语音文件调用大模型获取结果
-         *
-         * @param request GetTaskResultRequest
-         * @return GetTaskResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语音文件调用大模型获取结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResultResponse
+        /// </returns>
         public async Task<GetTaskResultResponse> GetTaskResultAsync(GetTaskResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -499,14 +789,24 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return await GetTaskResultWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary CCAI服务面API
-         *
-         * @param request RunCompletionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunCompletionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CCAI服务面API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunCompletionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionResponse
+        /// </returns>
         public RunCompletionResponse RunCompletionWithOptions(string workspaceId, string appId, RunCompletionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -555,14 +855,24 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return TeaModel.ToObject<RunCompletionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary CCAI服务面API
-         *
-         * @param request RunCompletionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunCompletionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CCAI服务面API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunCompletionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionResponse
+        /// </returns>
         public async Task<RunCompletionResponse> RunCompletionWithOptionsAsync(string workspaceId, string appId, RunCompletionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -611,12 +921,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return TeaModel.ToObject<RunCompletionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary CCAI服务面API
-         *
-         * @param request RunCompletionRequest
-         * @return RunCompletionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CCAI服务面API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunCompletionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionResponse
+        /// </returns>
         public RunCompletionResponse RunCompletion(string workspaceId, string appId, RunCompletionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -624,12 +940,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return RunCompletionWithOptions(workspaceId, appId, request, headers, runtime);
         }
 
-        /**
-         * @summary CCAI服务面API
-         *
-         * @param request RunCompletionRequest
-         * @return RunCompletionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CCAI服务面API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunCompletionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionResponse
+        /// </returns>
         public async Task<RunCompletionResponse> RunCompletionAsync(string workspaceId, string appId, RunCompletionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -637,14 +959,24 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return await RunCompletionWithOptionsAsync(workspaceId, appId, request, headers, runtime);
         }
 
-        /**
-         * @summary CCAI服务面API
-         *
-         * @param request RunCompletionMessageRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunCompletionMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CCAI服务面API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunCompletionMessageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionMessageResponse
+        /// </returns>
         public RunCompletionMessageResponse RunCompletionMessageWithOptions(string workspaceId, string appId, RunCompletionMessageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -681,14 +1013,24 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return TeaModel.ToObject<RunCompletionMessageResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary CCAI服务面API
-         *
-         * @param request RunCompletionMessageRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunCompletionMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CCAI服务面API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunCompletionMessageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionMessageResponse
+        /// </returns>
         public async Task<RunCompletionMessageResponse> RunCompletionMessageWithOptionsAsync(string workspaceId, string appId, RunCompletionMessageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -725,12 +1067,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return TeaModel.ToObject<RunCompletionMessageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary CCAI服务面API
-         *
-         * @param request RunCompletionMessageRequest
-         * @return RunCompletionMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CCAI服务面API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunCompletionMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionMessageResponse
+        /// </returns>
         public RunCompletionMessageResponse RunCompletionMessage(string workspaceId, string appId, RunCompletionMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -738,12 +1086,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             return RunCompletionMessageWithOptions(workspaceId, appId, request, headers, runtime);
         }
 
-        /**
-         * @summary CCAI服务面API
-         *
-         * @param request RunCompletionMessageRequest
-         * @return RunCompletionMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CCAI服务面API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunCompletionMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionMessageResponse
+        /// </returns>
         public async Task<RunCompletionMessageResponse> RunCompletionMessageAsync(string workspaceId, string appId, RunCompletionMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

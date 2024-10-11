@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 {
     public class RunCompletionRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Dialogue")]
         [Validation(Required=false)]
@@ -25,14 +25,17 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
                 public string ChatId { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>user</para>
                 /// </summary>
                 [NameInMap("Role")]
                 [Validation(Required=false)]
                 public string Role { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]
@@ -40,6 +43,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>d25zc9c7004f8dad2b454d</para>
+            /// </summary>
             [NameInMap("SessionId")]
             [Validation(Required=false)]
             public string SessionId { get; set; }
@@ -50,6 +57,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public List<RunCompletionRequestFields> Fields { get; set; }
         public class RunCompletionRequestFields : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>phoneNumber</para>
+            /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
@@ -67,7 +78,7 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
                 public string Desc { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("EnumValue")]
                 [Validation(Required=false)]
@@ -76,7 +87,7 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -84,6 +95,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ccai-14b</para>
+        /// </summary>
         [NameInMap("ModelCode")]
         [Validation(Required=false)]
         public string ModelCode { get; set; }
@@ -101,7 +116,7 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -119,12 +134,16 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Stream")]
         [Validation(Required=false)]
         public bool? Stream { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TemplateIds")]
         [Validation(Required=false)]

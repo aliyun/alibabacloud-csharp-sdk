@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public GetTaskResultResponseBodyData Data { get; set; }
         public class GetTaskResultResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>20240905-********-93E9-5D45-B4EF-045743A34071</para>
+            /// </summary>
             [NameInMap("taskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>FINISH</para>
+            /// </summary>
             [NameInMap("taskStatus")]
             [Validation(Required=false)]
             public string TaskStatus { get; set; }
@@ -27,10 +35,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>968A8634-FA2C-5381-9B3E-C552DED7E8BF</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public string Success { get; set; }

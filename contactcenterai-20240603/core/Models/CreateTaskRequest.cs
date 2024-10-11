@@ -8,35 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 {
-    public class AnalyzeConversationRequest : TeaModel {
-        [NameInMap("categoryTags")]
-        [Validation(Required=false)]
-        public List<AnalyzeConversationRequestCategoryTags> CategoryTags { get; set; }
-        public class AnalyzeConversationRequestCategoryTags : TeaModel {
-            [NameInMap("tagDesc")]
-            [Validation(Required=false)]
-            public string TagDesc { get; set; }
-
-            [NameInMap("tagName")]
-            [Validation(Required=false)]
-            public string TagName { get; set; }
-
-        }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+    public class CreateTaskRequest : TeaModel {
         [NameInMap("dialogue")]
         [Validation(Required=false)]
-        public AnalyzeConversationRequestDialogue Dialogue { get; set; }
-        public class AnalyzeConversationRequestDialogue : TeaModel {
+        public CreateTaskRequestDialogue Dialogue { get; set; }
+        public class CreateTaskRequestDialogue : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("sentences")]
             [Validation(Required=false)]
-            public List<AnalyzeConversationRequestDialogueSentences> Sentences { get; set; }
-            public class AnalyzeConversationRequestDialogueSentences : TeaModel {
+            public List<CreateTaskRequestDialogueSentences> Sentences { get; set; }
+            public class CreateTaskRequestDialogueSentences : TeaModel {
                 /// <summary>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -68,11 +51,8 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         [NameInMap("examples")]
         [Validation(Required=false)]
-        public List<AnalyzeConversationRequestExamples> Examples { get; set; }
-        public class AnalyzeConversationRequestExamples : TeaModel {
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
+        public CreateTaskRequestExamples Examples { get; set; }
+        public class CreateTaskRequestExamples : TeaModel {
             [NameInMap("output")]
             [Validation(Required=false)]
             public string Output { get; set; }
@@ -82,14 +62,13 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             /// </summary>
             [NameInMap("sentences")]
             [Validation(Required=false)]
-            public List<AnalyzeConversationRequestExamplesSentences> Sentences { get; set; }
-            public class AnalyzeConversationRequestExamplesSentences : TeaModel {
-                [NameInMap("chatId")]
-                [Validation(Required=false)]
-                public string ChatId { get; set; }
-
+            public List<CreateTaskRequestExamplesSentences> Sentences { get; set; }
+            public class CreateTaskRequestExamplesSentences : TeaModel {
                 /// <summary>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>user</para>
                 /// </summary>
                 [NameInMap("role")]
                 [Validation(Required=false)]
@@ -108,8 +87,8 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         [NameInMap("fields")]
         [Validation(Required=false)]
-        public List<AnalyzeConversationRequestFields> Fields { get; set; }
-        public class AnalyzeConversationRequestFields : TeaModel {
+        public List<CreateTaskRequestFields> Fields { get; set; }
+        public class CreateTaskRequestFields : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>phoneNumber</para>
@@ -125,10 +104,13 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [Validation(Required=false)]
             public string Desc { get; set; }
 
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// </summary>
             [NameInMap("enumValues")]
             [Validation(Required=false)]
-            public List<AnalyzeConversationRequestFieldsEnumValues> EnumValues { get; set; }
-            public class AnalyzeConversationRequestFieldsEnumValues : TeaModel {
+            public List<CreateTaskRequestFieldsEnumValues> EnumValues { get; set; }
+            public class CreateTaskRequestFieldsEnumValues : TeaModel {
                 /// <summary>
                 /// <para>This parameter is required.</para>
                 /// </summary>
@@ -155,6 +137,8 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tyxmTurbo</para>
         /// </summary>
@@ -162,28 +146,21 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public string ModelCode { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("resultTypes")]
         [Validation(Required=false)]
         public List<string> ResultTypes { get; set; }
 
-        [NameInMap("sceneName")]
-        [Validation(Required=false)]
-        public string SceneName { get; set; }
-
         [NameInMap("serviceInspection")]
         [Validation(Required=false)]
-        public AnalyzeConversationRequestServiceInspection ServiceInspection { get; set; }
-        public class AnalyzeConversationRequestServiceInspection : TeaModel {
+        public CreateTaskRequestServiceInspection ServiceInspection { get; set; }
+        public class CreateTaskRequestServiceInspection : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("inspectionContents")]
             [Validation(Required=false)]
-            public List<AnalyzeConversationRequestServiceInspectionInspectionContents> InspectionContents { get; set; }
-            public class AnalyzeConversationRequestServiceInspectionInspectionContents : TeaModel {
+            public List<CreateTaskRequestServiceInspectionInspectionContents> InspectionContents { get; set; }
+            public class CreateTaskRequestServiceInspectionInspectionContents : TeaModel {
                 /// <summary>
                 /// <para>This parameter is required.</para>
                 /// </summary>
@@ -220,23 +197,67 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>text</para>
         /// </summary>
-        [NameInMap("stream")]
+        [NameInMap("taskType")]
         [Validation(Required=false)]
-        public bool? Stream { get; set; }
+        public string TaskType { get; set; }
 
-        [NameInMap("userProfiles")]
+        [NameInMap("templateIds")]
         [Validation(Required=false)]
-        public List<AnalyzeConversationRequestUserProfiles> UserProfiles { get; set; }
-        public class AnalyzeConversationRequestUserProfiles : TeaModel {
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
+        public List<string> TemplateIds { get; set; }
 
-            [NameInMap("value")]
+        [NameInMap("transcription")]
+        [Validation(Required=false)]
+        public CreateTaskRequestTranscription Transcription { get; set; }
+        public class CreateTaskRequestTranscription : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("autoSplit")]
             [Validation(Required=false)]
-            public string Value { get; set; }
+            public int? AutoSplit { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("clientChannel")]
+            [Validation(Required=false)]
+            public int? ClientChannel { get; set; }
+
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sss.mp3</para>
+            /// </summary>
+            [NameInMap("fileName")]
+            [Validation(Required=false)]
+            public string FileName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("serviceChannel")]
+            [Validation(Required=false)]
+            public int? ServiceChannel { get; set; }
+
+            [NameInMap("serviceChannelKeywords")]
+            [Validation(Required=false)]
+            public List<string> ServiceChannelKeywords { get; set; }
+
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://1111.com/sss.mp3">http://1111.com/sss.mp3</a></para>
+            /// </summary>
+            [NameInMap("voiceFileUrl")]
+            [Validation(Required=false)]
+            public string VoiceFileUrl { get; set; }
 
         }
 
